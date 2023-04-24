@@ -61,10 +61,25 @@ font-style: italic;
   font-weight: 400;
 }
 
+
 */
+
+@font-face {
+  font-family: Inter;
+  src: url("/assets/fonts/Inter-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Barlow;
+  src: url("/assets/fonts/Barlow-Regular.ttf");
+  font-weight: 400;
+}
 
 *,
 *::before,
 *::after {
   font-family: Barlow, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: $color-carbon;
 }
