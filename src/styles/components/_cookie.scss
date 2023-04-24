@@ -1,5 +1,8 @@
 .cookie {
-  background-color: $color-black;
+  background-color: $color-blue;
+  font-weight: 400;
+  font-size: 1.0625rem;
+  line-height: 1.625rem;
 
   &.hidden {
     display: none;
@@ -7,11 +10,11 @@
 
   &__content {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-between;
-    @include flex-gap(2rem);
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    @include flex-gap(3rem);
+    padding-top: 1.125rem;
+    padding-bottom: 1.125rem;
 
     @media screen and (min-width: 1200px) {
       @include flex-gap(6.25rem);
@@ -21,9 +24,11 @@
 
   &__text {
     color: $color-white;
-    font-size: .75rem;
-    font-weight: 300;
-    line-height: .8125rem;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 1.0625rem;
+    line-height: 1.625rem;
+    padding-top: 0.5rem;
 
     @media screen and (min-width: 1200px) {
       font-size: 1.125rem;
@@ -31,7 +36,7 @@
     }
 
     a {
-      color: $color-red;
+      color: $color-white;
       font-weight: 600;
       text-decoration: underline;
     }
@@ -40,17 +45,19 @@
 
   &__button {
     position: relative;
-    color: $color-red;
+    top: -1rem;
+    right: -0.25rem;
+    color: $color-white;
     cursor: pointer;
     height: 30px;
-    padding: 4px;
-    padding-bottom: 0;
+    padding-right: 5px;
+    padding-left: 5px;
 
     .line {
-      background-color: $color-red;
+      background-color: $color-white;
       display: block;
       height: 3px;
-      width: 1.5rem;
+      width: 1.3rem;
     }
 
     .line:first-of-type {
