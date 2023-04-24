@@ -1,41 +1,69 @@
-/* // Roboto / Custom Font
-@font-face {
-  font-family: Roboto;
-  src: url("/assets/fonts/Roboto-Thin.ttf");
-  font-weight: 100;
-}
+/* Custom Fonts: 
+
+Oswald Regular
+font-family: "oswald", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+Oswald Medium
+font-family: "oswald", sans-serif;
+font-weight: 500;
+font-style: normal;
+
+Oswald SemiBold
+font-family: "oswald", sans-serif;
+font-weight: 600;
+font-style: normal;
+
+Oswald Bold
+font-family: "oswald", sans-serif;
+font-weight: 700;
+font-style: normal;
+
+Oswald Heavy Regular
+font-family: "oswald", sans-serif;
+font-weight: 900;
+font-style: normal;
+
+Veneer Regular
+font-family: "veneer", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+Veneer Regular Italic
+font-family: "veneer", sans-serif;
+font-weight: 400;
+font-style: italic;
+
+Veneer TwoRegular
+font-family: "veneer-two", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+Veneer Two Regular Italic
+font-family: "veneer-two", sans-serif;
+font-weight: 400;
+font-style: italic;
+
+Veneer ThreeRegular
+font-family: "veneer-three", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+Veneer Three Regular Italic
+font-family: "veneer-three", sans-serif;
+font-weight: 400;
+font-style: italic;
 
 @font-face {
-  font-family: Roboto;
-  src: url("/assets/fonts/Roboto-Light.ttf");
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: Roboto;
-  src: url("/assets/fonts/Roboto-Regular.ttf");
+  font-family: Barlow;
+  src: url("/assets/fonts/Barlow-Regular.ttf");
   font-weight: 400;
 }
 
-@font-face {
-  font-family: Roboto;
-  src: url("/assets/fonts/Roboto-Medium.ttf");
-  font-weight: 500;
-}
 
-@font-face {
-  font-family: Roboto;
-  src: url("/assets/fonts/Roboto-Bold.ttf");
-  font-weight: 600;
-}
+*/
 
-@font-face {
-  font-family: Roboto;
-  src: url("/assets/fonts/Roboto-Black.ttf");
-  font-weight: 700, bold;
-}
-
-// Inter Font
 @font-face {
   font-family: Inter;
   src: url("/assets/fonts/Inter-Regular.ttf");
@@ -43,19 +71,15 @@
 }
 
 @font-face {
-  font-family: Inter;
-  src: url("/assets/fonts/Inter-Regular.ttf");
+  font-family: Barlow;
+  src: url("/assets/fonts/Barlow-Regular.ttf");
   font-weight: 400;
 }
-
-@font-face {
-  font-family: Inter;
-  src: url("/assets/fonts/Inter-Black.ttf");
-  font-weight: 900;
-} */
 
 *,
 *::before,
 *::after {
-  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-family: Barlow, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: $color-carbon;
 }

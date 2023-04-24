@@ -1,19 +1,37 @@
 ---
 import FooterNavigation from "./Navigation/FooterNavigation.astro";
+const currentYear = new Date().getFullYear();
 ---
 
 <footer class="footer">
-  <div class="wrapper">
+  <div class="footer__grid">
     <!-- Footer Logo -->
-    <div class="footer__branding">
-      <a href="#" class="footer__logo">
-        Logo Here.
-        <!-- <img src="/assets/images/Footer-Logo.png" alt="Footer Logo" /> -->
+    <div class="footer__logo">
+      <a href="/" class="footer__logo_link">
+        <img src="/assets/images/footer-logo.png" alt="ALPD" />
       </a>
+    </div>
+    <!-- Footer Finger Print Image -->
+    <div class="footer__finger_print">
+      <img src="/assets/images/footer-finger-print.png" alt="Finger Print" />
     </div>
     <!-- Footer Navigation -->
     <div class="footer__links">
       <FooterNavigation />
+    </div>
+    <!-- Footer Alexion -->
+    <div class="footer__alexion">
+      <a href="https://alexion.com" target="_blank" rel="noopener noreferrer">
+        <img src="/assets/images/footer-alexion-logo.png" alt="Alexion" />
+      </a>
+    </div>
+    <!-- Footer Text -->
+    <div class="footer__text">
+      <p>This website is intended for US healthcare professionals only.</p>
+      <p>
+        &copy; {currentYear}, Alexion Pharmaceuticals, Inc. All rights reserved.
+        US/UNB-H/0470 V1 03/2023
+      </p>
     </div>
   </div>
 </footer>
