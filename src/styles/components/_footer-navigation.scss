@@ -1,0 +1,17 @@
+.footer__nav_menu {
+
+  &_item {
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.3125rem;
+    margin-bottom: 0.75rem;
+
+    &:last-of-type {
+      margin-bottom: 0.25rem;
+    }
+
+    &_link {}
+
+  }
+
+}
