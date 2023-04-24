@@ -1,7 +1,7 @@
 # Clone Repository
 
 ```
-git clone https://github.com/HackMort/jdk-boilerplate.git
+git clone https://github.com/HackMort/ALPD.git
 ```
 
 ## Install
