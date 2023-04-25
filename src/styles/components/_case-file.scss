@@ -18,7 +18,8 @@
         margin: auto;
         margin-bottom: .75rem;
         max-width: 19.5rem;
-        
+        color: #1F1511;
+
         @media screen and (min-width:1000px) {  
             font-size: 1.125rem;
             line-height: 1.5625rem;
@@ -41,7 +42,7 @@
         line-height: 1.5rem;
         text-decoration-line: underline;
         color: $color-blue;
-
+        text-underline-offset: 3px;
         @media screen and (min-width:1000px) {  
             font-size: 21px;
             line-height: 1.8125rem;
@@ -67,29 +68,37 @@
     }
 }
 
-.files-heading{
-    font-family: 'Oswald';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 1.875rem;
-    text-align: center;
-    text-transform: uppercase;
-    color: $color-blue;
-
-    @media screen and (min-width:1000px) {
-        font-size: 2.25rem;
-        line-height: 2.8125rem;
-        margin-bottom: 2rem;
-    }
-}
 
 .alp-files{
     padding-top: 2rem;
     padding-bottom: 3rem;
+    background: #E5E5E5!important;
+    
+    
     @media screen and (min-width:768px) {
-    padding-bottom: 12.2369rem;
-    padding-top: 12.2369rem;
+        padding-bottom: 12.2369rem;
+        padding-top: 12.2369rem;
+    }
+    .files-heading{
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 1.875rem;
+        text-align: center;
+        text-transform: uppercase;
+        color: $color-blue;
+        max-width: 19.4375rem;
+        margin: auto;
+        
+        @media screen and (min-width:768px) {
+            max-width: unset;
+        }
+        @media screen and (min-width:1000px) {
+            font-size: 2.25rem;
+            line-height: 2.8125rem;
+            margin-bottom: 2rem;
+        }
     }
 
     .case-file__first,
