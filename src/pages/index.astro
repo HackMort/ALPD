@@ -1,38 +1,45 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import CaseFile from "../components/CaseFile.astro";
 import Card from "../components/Card.astro";
 ---
 
 <Layout title="Welcome" showHeader={false} showISI={false}>
   <main>
-    <h1>Project <span class="text-gradient">Started</span></h1>
-    <p class="instructions">
-      To get started, open the directory <code>src/pages</code> in your project.<br
-      />
-    </p>
-    <ul role="list" class="link-card-grid">
-      <Card
-        href="https://tech.dev-jdoutstanding.com/en/introduction/"
-        title="JDK Workflow"
-        body="Learn about our company workflow."
-      />
-      <Card
-        href="/design"
-        target="_self"
-        title="Design System"
-        body="Check out our design system page."
-      />
-      <Card
-        href="https://docs.astro.build/"
-        title="Astro Docs"
-        body="Learn how Astro works and explore the official API docs."
-      />
-    </ul>
+
+    <section class="alp-files">
+
+      <h2 class="files-heading">Read THE case files and collect evidence</h2>
+      
+      <div class="case-file__first">
+      <CaseFile imgSrc="alp-folder" imgAlt="alpd file" link="#">
+        Study the role of alkaline phosphatase and the dangers associated with low activity.
+      </CaseFile>
+      
+      <CaseFile imgSrc="hpp-folder" imgAlt="hpp folder" link="#">
+        View the rap sheet on hypophosphatasia and the harm it may be causing your patients.
+      </CaseFile>
+    </div>
+    
+    <div class="case-file__second">
+      <CaseFile imgSrc="usual-folder" imgAlt="usual suspect folder" link="#" className="modifier">
+        Keep your eyes peeled for common misdiagnoses and risks associated with them.
+      </CaseFile>
+      
+      <CaseFile imgSrc="identifying-folder" imgAlt="identifying suspect folder" link="#">
+        Get the drop on identifying hypophosphatasia and the tests that can help point you in the right direction.
+      </CaseFile>
+    </div>
+
+
+    <div class="red-string"></div>
+  </section>
+    
   </main>
 </Layout>
 
 <style>
-  main {
+  /* main {
     margin: auto;
     padding: 1.5rem;
     max-width: 60ch;
@@ -75,3 +82,4 @@ import Card from "../components/Card.astro";
     padding: 0;
   }
 </style>
+ */

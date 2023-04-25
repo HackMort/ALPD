@@ -1,0 +1,29 @@
+---
+type Props = {
+  imgSrc: string;
+  path?: string;
+  imgAlt?: string;
+  link: string;
+  LinkTarget?: string;
+  className?: string;
+};
+
+const {
+  imgSrc,
+  path = "/assets/images/" + imgSrc + ".svg",
+  imgAlt,
+  link,
+  LinkTarget,
+  className
+} = Astro.props;
+---
+
+
+<div class="case-file">
+    <img src={path} alt={imgAlt ? imgAlt : " "} class="case-file__image">
+    <p class={`case-file__text ${className ? className : ' '}`}><slot /></p>
+    <div class="case-file__anchor-container">
+        <a href={link} target={LinkTarget ? LinkTarget : "_self"} class="case-file__anchor">Learn more</a>
+        <span>&gt;</span>
+    </div>
+</div>
