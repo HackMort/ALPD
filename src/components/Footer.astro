@@ -1,5 +1,6 @@
 ---
-import FooterNavigation from "./Navigation/FooterNavigation.astro";
+import FooterPrimaryNav from "./Navigation/FooterPrimaryNav.astro";
+import FooterSecondaryNav from "./Navigation/FooterSecondaryNav.astro";
 const currentYear = new Date().getFullYear();
 ---
 
@@ -11,17 +12,29 @@ const currentYear = new Date().getFullYear();
         <img src="/assets/images/footer-logo.png" alt="ALPD" />
       </a>
     </div>
+    <div class="footer__empty_cell"></div>
     <!-- Footer Finger Print Image -->
     <div class="footer__finger_print">
-      <img src="/assets/images/footer-finger-print.png" alt="Finger Print" />
+      <picture>
+        <source
+          media="(min-width: 768px)"
+          srcset="/assets/images/footer-finger-print-2x.png"
+        />
+        <img src="/assets/images/footer-finger-print.png" alt="Finger Print" />
+      </picture>
     </div>
     <!-- Footer Navigation -->
-    <div class="footer__links">
-      <FooterNavigation />
+    <div class="footer__navs">
+      <div class="footer__primary_nav">
+        <FooterPrimaryNav />
+      </div>
+      <div class="footer__secondary_nav">
+        <FooterSecondaryNav />
+      </div>
     </div>
     <!-- Footer Alexion -->
     <div class="footer__alexion">
-      <a href="https://alexion.com" target="_blank" rel="noopener noreferrer">
+      <a href="https://alexion.com" target="_blank">
         <img src="/assets/images/footer-alexion-logo.png" alt="Alexion" />
       </a>
     </div>

@@ -1,5 +1,5 @@
 .cookie {
-  background-color: $color-blue;
+  background-color: $color-carbon;
   font-weight: 400;
   font-size: 1.0625rem;
   line-height: 1.625rem;
@@ -16,8 +16,12 @@
     padding-top: 1.125rem;
     padding-bottom: 1.125rem;
 
+    @media screen and (min-width: 1024px) {
+      align-items: center;
+    }
+
     @media screen and (min-width: 1200px) {
-      @include flex-gap(6.25rem);
+      @include flex-gap(2rem);
     }
 
   }
@@ -28,7 +32,7 @@
     font-weight: 400;
     font-size: 1.0625rem;
     line-height: 1.625rem;
-    padding-top: 0.5rem;
+    padding-top: 0.25rem;
 
     @media screen and (min-width: 1200px) {
       font-size: 1.125rem;
@@ -37,36 +41,47 @@
 
     a {
       color: $color-white;
-      font-weight: 600;
-      text-decoration: underline;
+      font-weight: 700;
+      text-decoration: none;
     }
 
   }
 
   &__button {
     position: relative;
-    top: -1rem;
-    right: -0.25rem;
+    top: -0.5rem;
+    right: -0.5rem;
     color: $color-white;
     cursor: pointer;
     height: 30px;
     padding-right: 5px;
     padding-left: 5px;
 
+    @media screen and (min-width: 1024px) {
+      top: 0;
+      right: 0;
+    }
+
+    @media screen and (min-width: 1440px) {
+      top: .3125rem;
+    }
+
     .line {
       background-color: $color-white;
       display: block;
       height: 3px;
-      width: 1.3rem;
+      width: 1.75rem;
     }
 
     .line:first-of-type {
+      position: relative;
+      top: -1px;
       transform: rotate(45deg);
     }
 
     .line:last-of-type {
       position: relative;
-      top: -3px;
+      top: -4px;
       transform: rotate(-45deg);
     }
 
