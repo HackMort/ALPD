@@ -1,5 +1,5 @@
 .case-file{
-    margin-top: 1rem;
+    margin-top: 2rem;
 
     &__image{
         max-width: 201px;
@@ -17,19 +17,20 @@
         text-align: center;
         margin: auto;
         margin-bottom: .75rem;
-        max-width: 19.5rem;
-        color: #1F1511;
+        max-width: 15.5rem;
+        color: $color-white;
 
         @media screen and (min-width:1000px) {  
             font-size: 1.125rem;
             line-height: 1.5625rem;
-            max-width: 21.625rem;
-            margin-top: -19px;
+            max-width: 352.154px;
+            position: relative;
+            z-index: 2;
 
         &.modifier{
             max-width: 19.75rem;
             @media screen and (min-width:768px) {  
-            max-width: 17rem;
+            max-width: 23rem;
             }
         }
         }
@@ -41,11 +42,13 @@
         font-size: 1rem;
         line-height: 1.5rem;
         text-decoration-line: underline;
-        color: $color-blue;
+        color: $color-white;
         text-underline-offset: 3px;
         @media screen and (min-width:1000px) {  
             font-size: 21px;
             line-height: 1.8125rem;
+            position: relative;
+            z-index: 2;
         }
     }
 
@@ -56,9 +59,9 @@
         span{
             font-weight: 700;
             font-size: 1rem;
-            line-height: 1.5rem;
+            line-height: 1.5rem; 
             margin-left: .3125rem;
-            color: $color-blue;
+            color: $color-white;
 
             @media screen and (min-width:1000px) {  
                 font-size: 21px;
@@ -70,10 +73,12 @@
 
 
 .alp-files{
+    background-image: url('/assets/images/background-stars.png');
+    background-color: $color-black;
     padding-top: 2rem;
     padding-bottom: 3rem;
     
-    @media screen and (min-width:768px) {
+    @media screen and (min-width:600px) {
         padding-bottom: 12.2369rem;
         
     }
@@ -85,7 +90,7 @@
         line-height: 1.875rem;
         text-align: center;
         text-transform: uppercase;
-        color: $color-blue;
+        color: $color-white;
         max-width: 19.4375rem;
         margin: auto;
         
@@ -98,38 +103,39 @@
             margin-bottom: 2rem;
         }
     }
-
+    
+    
     .case-file__first,
     .case-file__second{
-    @media screen and (min-width:768px) {
-        margin: auto;
-        display: flex;
-        justify-content: space-between;
-        max-width: 42.1875rem;
+        @media screen and (min-width:600px) {
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            max-width: 42.1875rem;
+        }
+        @media screen and (min-width:1100px) {
+            max-width: 54.1875rem;
+        }
     }
-    @media screen and (min-width:1100px) {
-        max-width: 54.1875rem;
-    }
-}
 
 .red-string{
-    @media screen and (min-width:768px) {
+    @media screen and (min-width:600px) {
     position: absolute;
     width: 1666.19px;
     height: 327.14px;
     left: -151px;
-    top: 21.1875rem;
+    top: 27.1875rem;
     border-bottom: 2px solid #CF1C0A;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     transform: rotate(-364.88deg);
     }
 
     @media screen and (min-width:1000px) {
-    top: 38.0625rem;
+    top: 41.0625rem;
     }
 
     @media screen and (min-width:1100px) {
-    top: 44.625rem;
+    top: 49.625rem;
     }
     
     @media screen and (min-width:1490px) {
