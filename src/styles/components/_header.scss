@@ -382,6 +382,11 @@
 
         &_link {
           color: $color-white;
+          font-family: 'Oswald';
+          font-size: 1rem;
+          font-weight: 700;
+          line-height: 1.5rem;
+          text-transform: uppercase;
           padding-top: 0.5rem;
           padding-bottom: 0.5rem;
         }
@@ -413,6 +418,9 @@
 
         &_link {
           color: $color-white;
+          font-size: .875rem;
+          font-weight: 600;
+          line-height: 1.375rem;
         }
       }
     }
