@@ -1,0 +1,47 @@
+---
+type Props = {
+    classes?: string;
+    id?: string;
+}
+
+const { classes = '', id } = Astro.props
+---
+
+<section class={`main-hero ${classes}`} id={id}>
+    <div class="main-hero__container">
+        <div class="main-hero__image-container">
+            <picture>
+                <source srcset="/assets/images/main-hero/main-hero-image-desktop.png" media="(min-width: 1024px)">
+                <img src="/assets/images/main-hero/main-hero-image-mobile.png" alt="">
+            </picture>
+        </div>
+        <div class="main-hero__postit-container">
+            <div class="main-hero__postit">
+                <div class="red-string main-hero__postit-red-string"></div>
+                <div class="main-hero__postit-content">
+                    <div class="main-hero__postit-content-wrapper">
+                        <h2 class="main-hero__title">Sometimes the culprit is right in front of you</h2>
+                        <p class="main-hero__description">
+                            Join the ALPD: Internal Investigations Unit and solve the case of hypophosphatasia (HPP) before it can potentially cause more harm to your patients.
+                        </p>
+                        <p class="main-hero__description">Be on the lookout for low alkaline phosphatase (ALP).</p>
+                        <div class="main-hero__button-wrapper">
+                            <button class="button">
+                                Why Low ALP Matters
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <picture>
+                    <source srcset="/assets/images/main-hero/main-hero-post-it-desktop.png" media="(min-width: 1024px)">
+                    <img src="/assets/images/main-hero/main-hero-post-it-mobile.png" alt="">
+                </picture>
+                <picture class="main-hero__postit-mask">
+                    <source srcset="/assets/images/main-hero/main-hero-post-it-mask-desktop.png" media="(min-width: 1024px)">
+                    <img src="/assets/images/main-hero/main-hero-post-it-mask-mobile.png" alt="">
+                </picture>
+            </div>
+        </div>
+    </div>
+    <div class="red-string main-hero__red-string"></div>
+</section>
