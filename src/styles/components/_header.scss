@@ -337,7 +337,7 @@
   }
 
   @media screen and (min-width: 1250px) {
-    grid-template-columns: 280px 1fr;
+    // grid-template-columns: 280px 1fr;
     grid-column-gap: 1rem;
   }
 
@@ -364,9 +364,26 @@
         text-align: center;
         width: calc(100% / 5);
 
+        @media screen and (min-width: 1250px) {
+
+          &:nth-child(4),
+          &:nth-child(5) {
+            padding-left: 2.5rem;
+          }
+        }
+
+        @media screen and (min-width: 1300px) {
+
+          &:nth-child(4),
+          &:nth-child(5) {
+            padding-left: 3.75rem;
+          }
+        }
+
         &_link {
           color: $color-white;
-          padding: 0.5rem;
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
         }
       }
     }
