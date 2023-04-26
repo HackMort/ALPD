@@ -1,31 +1,54 @@
-// This is just an example of how to use the wrapper, we should modify it to fit our needs
-.wrapper {
-  position: relative;
-  margin: 0 auto;
-  width: 100%;
-  max-width: calc(100% - 2rem);
+:root {
+    --wrapper-margin: 1.5rem;
+    --wrapper-max-width: calc(100% - var(--wrapper-margin));
 
-  @media screen and (min-width: 428px) {
-    max-width: calc(100% - 2.5rem);
-  }
+    @media screen and (min-width: 428px) {
+        --wrapper-margin: 2rem;
+    }
 
-  @media screen and (min-width: 768px) {
-    max-width: calc(100% - 4rem);
-  }
+    @media screen and (min-width: 768px) {
+        --wrapper-margin: 4rem;
+    }
 
-  @media screen and (min-width: 1024px) {
-    max-width: calc(100% - 4.2813rem);
-  }
+    @media screen and (min-width: 1024px) {
+        --wrapper-margin: 4.2813rem;
+    }
 
-  @media screen and (min-width: 1366px) {
-    max-width: calc(100% - 5.2813rem);
-  }
+    @media screen and (min-width: 1366px) {
+        --wrapper-margin: 5.2813rem;
+    }
 
-  @media screen and (min-width: 1366px) {
-    max-width: calc(100% - 8.2813rem);
-  }
-
-  @media screen and (min-width: 1600px) {
-    max-width: 90rem
-  }
+    @media screen and (min-width: 1400px) {
+        --wrapper-margin: 8.5625rem;
+    }
 }
+
+.wrapper {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: var(--wrapper-max-width);
+
+    &--only-left {
+        max-width: calc(100% - (var(--wrapper-margin) / 2));
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    &--only-right {
+        max-width: calc(100% - (var(--wrapper-margin) / 2));
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    @media screen and (min-width: 1600px) {
+        max-width: 90rem;
+
+        &--only-left,
+        &--only-right {
+            max-width: calc(100% - ((100vw - 90rem) / 2));
+        }
+    }
+}
+
+// TODO Add utilities for common screen sizes. Eg: md:only-left

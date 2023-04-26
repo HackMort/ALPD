@@ -61,25 +61,212 @@ font-style: italic;
   font-weight: 400;
 }
 
+####################################################################################################
+How to implement. Learn more: https://use.typekit.net/hfp3usx.css
+
+@import url("https://p.typekit.net/p.css?s=1&k=hfp3usx&ht=tk&f=15815.15818.37504.37505.37506.52107.52108.52109.52110.52111.52112&a=126417213&app=typekit&e=css");
+
+@font-face {
+font-family:"oswald";
+src:url("https://use.typekit.net/af/d81a8f/00000000000000007735a0e3/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/d81a8f/00000000000000007735a0e3/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/d81a8f/00000000000000007735a0e3/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"oswald";
+src:url("https://use.typekit.net/af/43f61b/00000000000000007735a0ec/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/43f61b/00000000000000007735a0ec/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/43f61b/00000000000000007735a0ec/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+}
+
+@font-face {
+font-family:"oswald";
+src:url("https://use.typekit.net/af/bed39a/00000000000000007735a0f4/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/bed39a/00000000000000007735a0f4/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/bed39a/00000000000000007735a0f4/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:500;font-stretch:normal;
+}
+
+@font-face {
+font-family:"oswald";
+src:url("https://use.typekit.net/af/b46243/00000000000000007735a0f7/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff2"),url("https://use.typekit.net/af/b46243/00000000000000007735a0f7/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff"),url("https://use.typekit.net/af/b46243/00000000000000007735a0f7/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:600;font-stretch:normal;
+}
+
+@font-face {
+font-family:"oswald";
+src:url("https://use.typekit.net/af/e3a2bf/00000000000000007735a0fd/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3") format("woff2"),url("https://use.typekit.net/af/e3a2bf/00000000000000007735a0fd/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3") format("woff"),url("https://use.typekit.net/af/e3a2bf/00000000000000007735a0fd/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:900;font-stretch:normal;
+}
+
+@font-face {
+font-family:"veneer";
+src:url("https://use.typekit.net/af/f9f9de/0000000000000000774ba0e2/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/f9f9de/0000000000000000774ba0e2/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/f9f9de/0000000000000000774ba0e2/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"veneer";
+src:url("https://use.typekit.net/af/be7eaf/0000000000000000774ba0e3/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/be7eaf/0000000000000000774ba0e3/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/be7eaf/0000000000000000774ba0e3/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+font-display:auto;font-style:italic;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"veneer-two";
+src:url("https://use.typekit.net/af/36aaa2/0000000000000000774ba0e5/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/36aaa2/0000000000000000774ba0e5/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/36aaa2/0000000000000000774ba0e5/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+font-display:auto;font-style:italic;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"veneer-two";
+src:url("https://use.typekit.net/af/ae874d/0000000000000000774ba0e4/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/ae874d/0000000000000000774ba0e4/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/ae874d/0000000000000000774ba0e4/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"veneer-three";
+src:url("https://use.typekit.net/af/f93692/0000000000000000774ba0e6/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/f93692/0000000000000000774ba0e6/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/f93692/0000000000000000774ba0e6/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+font-display:auto;font-style:italic;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"veneer-three";
+src:url("https://use.typekit.net/af/3962ab/0000000000000000774ba0e7/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/3962ab/0000000000000000774ba0e7/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/3962ab/0000000000000000774ba0e7/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+####################################################################################################
+
 
 */
 
+// Inter
 @font-face {
-  font-family: Inter;
-  src: url("/assets/fonts/Inter-Regular.ttf");
-  font-weight: 400;
+    font-family: Inter;
+    src: url("/assets/fonts/Inter-Thin.ttf");
+    font-weight: 300;
 }
 
 @font-face {
-  font-family: Barlow;
-  src: url("/assets/fonts/Barlow-Regular.ttf");
-  font-weight: 400;
+    font-family: Inter;
+    src: url("/assets/fonts/Inter-Regular.ttf");
+    font-weight: 400;
 }
+
+@font-face {
+    font-family: Inter;
+    src: url("/assets/fonts/Inter-Medium.ttf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url("/assets/fonts/Inter-SemiBold.ttf");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url("/assets/fonts/Inter-Bold.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url("/assets/fonts/Inter-Black.ttf");
+    font-weight: 900;
+}
+
+// Barlow
+@font-face {
+    font-family: Barlow;
+    src: url("/assets/fonts/Barlow-Thin.ttf");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Barlow;
+    src: url("/assets/fonts/Barlow-Regular.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Barlow;
+    src: url("/assets/fonts/Barlow-Medium.ttf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Barlow;
+    src: url("/assets/fonts/Barlow-SemiBold.ttf");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Barlow;
+    src: url("/assets/fonts/Barlow-Bold.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Barlow;
+    src: url("/assets/fonts/Barlow-Black.ttf");
+    font-weight: 900;
+}
+
+
 
 *,
 *::before,
 *::after {
-  font-family: Barlow, Arial, Helvetica, sans-serif;
-  font-weight: 400;
-  color: $color-carbon;
+    font-family: Barlow, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    color: $color-carbon;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 24px;
+    font-weight: 500;
+
+    &.paragraph--14px {
+        font-size: .875rem;
+        line-height: 18.2px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        font-size: 1.125rem;
+        line-height: 25.2px;
+    }
+}
+
+h1 {
+    font-family: "oswald",sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 30px;
+
+    @media screen and (min-width: 1024px) {
+        font-size: 2.25rem;
+        line-height: 45px;
+    }
+}
+
+h2 {
+    font-family: "veneer",sans-serif;
+    font-size: 1.875rem;
+    font-weight: 400;
+    line-height: 33px;
+
+    @media screen and (min-width: 1024px) {
+        font-size: 2.875rem;
+        line-height: 56px;
+    }
+}
+
+h5 {
+    font-weight: 600;
+    font-size: .9375rem;
+    line-height: 25.2px;
+
+    @media screen and (min-width: 1024px) {
+        font-size: 1.375rem;
+        line-height: 30.8px;
+    }
 }
