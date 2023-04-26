@@ -2,35 +2,46 @@
 import Layout from "../layouts/Layout.astro";
 import CaseFile from "../components/CaseFile.astro";
 import Card from "../components/Card.astro";
-import MainHero from '../components/MainHero.astro';
+import MainHero from "../components/MainHero.astro";
 ---
 
-<Layout title="Welcome" showHeader={false} showISI={false}>
-    <MainHero/>
-    <section class="alp-files">
+<Layout title="Welcome" showHeader={true} showISI={false}>
+  <MainHero />
+  <section class="alp-files">
+    <h2 class="files-heading">Read THE case files and collect evidence</h2>
 
-      <h2 class="files-heading">Read THE case files and collect evidence</h2>
-      
-      <div class="case-file__first">
+    <div class="case-file__first">
       <CaseFile imgSrc="alp-folder" imgAlt="alpd file" link="#">
-        Study the role of alkaline phosphatase and the dangers associated with low activity.
+        Study the role of alkaline phosphatase and the dangers associated with
+        low activity.
       </CaseFile>
-      
+
       <CaseFile imgSrc="hpp-folder" imgAlt="hpp folder" link="#">
-        View the rap sheet on hypophosphatasia and the harm it may be causing your patients.
-      </CaseFile>
-    </div>
-    
-    <div class="case-file__second">
-      <CaseFile imgSrc="usual-folder" imgAlt="usual suspect folder" link="#" className="modifier">
-        Keep your eyes peeled for common misdiagnoses and risks associated with them.
-      </CaseFile>
-      
-      <CaseFile imgSrc="identifying-folder" imgAlt="identifying suspect folder" link="#">
-        Get the drop on identifying hypophosphatasia and the tests that can help point you in the right direction.
+        View the rap sheet on hypophosphatasia and the harm it may be causing
+        your patients.
       </CaseFile>
     </div>
 
+    <div class="case-file__second">
+      <CaseFile
+        imgSrc="usual-folder"
+        imgAlt="usual suspect folder"
+        link="#"
+        className="modifier"
+      >
+        Keep your eyes peeled for common misdiagnoses and risks associated with
+        them.
+      </CaseFile>
+
+      <CaseFile
+        imgSrc="identifying-folder"
+        imgAlt="identifying suspect folder"
+        link="#"
+      >
+        Get the drop on identifying hypophosphatasia and the tests that can help
+        point you in the right direction.
+      </CaseFile>
+    </div>
 
     <div class="red-string"></div>
   </section>
