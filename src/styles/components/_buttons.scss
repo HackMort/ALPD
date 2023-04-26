@@ -29,6 +29,7 @@
 
     &:hover,
     &:focus {
+      background:none; 
       border:1px solid $color-red;
       color: $color-red;
     }
@@ -42,6 +43,7 @@
 
     &:hover,
     &:focus {
+      background:none; 
       color: $color-black;
     }
 
