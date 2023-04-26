@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', function (e) {
    * @see public/assets/js/validation.js
    * Call the function from validation.js
   */
-  cookieValidation()
-  cookieFormValidation()
+  // cookieValidation()
+  // cookieFormValidation()
   /**
    * Tabs
    * @see public/assets/js/tabs.js
