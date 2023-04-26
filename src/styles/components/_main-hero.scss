@@ -100,7 +100,11 @@
 
         .main-hero__image-container {
             overflow: hidden;
-            picture, img { height: inherit; }
+
+            picture,
+            img {
+                height: inherit;
+            }
 
             @media screen and (min-width: 425px) {
                 img {
@@ -153,6 +157,10 @@
                     margin: initial;
                     object-fit: initial;
                     transform: none;
+                }
+
+                @media screen and (min-width: 768px) and (max-width: 1024px) {
+                    height: 110%;
                 }
             }
 
