@@ -72,12 +72,10 @@
 .alp-files{
     padding-top: 2rem;
     padding-bottom: 3rem;
-    background: #E5E5E5!important;
-    
     
     @media screen and (min-width:768px) {
         padding-bottom: 12.2369rem;
-        padding-top: 12.2369rem;
+        
     }
     .files-heading{
         font-family: 'Oswald';
@@ -120,19 +118,18 @@
     width: 1666.19px;
     height: 327.14px;
     left: -151px;
-    top: 451px;
+    top: 21.1875rem;
     border-bottom: 2px solid #CF1C0A;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    transform: rotate(-367.88deg);
+    transform: rotate(-364.88deg);
     }
 
     @media screen and (min-width:1000px) {
-    top: 705px;
-    transform: rotate(-365.88deg);
+    top: 38.0625rem;
     }
 
     @media screen and (min-width:1100px) {
-    top: 875px;
+    top: 44.625rem;
     }
     
     @media screen and (min-width:1490px) {
