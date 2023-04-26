@@ -119,7 +119,10 @@
     }
 
 .red-string{
-    @media screen and (min-width:600px) {
+    display: none;
+
+    @media screen and (min-width:768px) {
+    display: block;
     position: absolute;
     width: 1666.19px;
     height: 327.14px;
