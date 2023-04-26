@@ -5,7 +5,9 @@
   // background-position: center;
   background-size: cover;
 
-
+  @media screen and (min-width: 1100px) {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
 
 
   &::before {
@@ -31,7 +33,9 @@
 
     @media screen and (min-width: 1100px) {
       background-image: url('/assets/images/header-bg-desktop.png');
-      background-size: 100%;
+      background-size: 100% 85px;
+      box-shadow: none;
+      top: 1rem;
     }
 
   }
@@ -316,11 +320,15 @@
   @media screen and (min-width: 1100px) {
     display: grid;
     grid-template-columns: 240px 1fr;
-    grid-template-rows: repeat(2, 44px);
+    grid-template-rows: repeat(2, 50px);
     grid-column-gap: 2rem;
     grid-row-gap: 0px;
-    align-items: flex-start;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1100px;
   }
+
+  @media screen and (min-width: 1440px) {}
 
   .header__primary_nav {
     grid-row-start: 2;
@@ -339,6 +347,7 @@
 
         &_link {
           color: $color-white;
+          padding: 0.5rem;
         }
       }
     }
