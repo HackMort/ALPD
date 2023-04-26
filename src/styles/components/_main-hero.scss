@@ -1,7 +1,10 @@
 .main-hero {
     position: relative;
     height: 35.5rem;
-    overflow: hidden;
+
+    @media screen and (min-width: 1024px) {
+        height: 38.9375rem;
+    }
 
     .main-hero__title {
         text-transform: uppercase;
@@ -9,11 +12,48 @@
 
     .main-hero__description {
         margin-bottom: .625rem;
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: 0;
+
+            &:last-of-type {
+                margin-bottom: 2rem;
+            }
+        }
     }
 
     .main-hero__button-wrapper {
         .button {
             margin: 0 auto;
+        }
+    }
+
+    .main-hero__red-string {
+        position: absolute;
+        z-index: 3;
+        width: calc(100vw + 31.25rem);
+        height: 0.5rem;
+        bottom: 11%;
+        right: 50%;
+        transform: translateX(50%) rotate(-28deg);
+
+        @media screen and (min-width: 768px) {
+            bottom: 21%;
+            transform: translateX(50%) rotate(-24deg);
+        }
+
+        @media screen and (min-width: 1024px) {
+            transform: translateX(50%) rotate(-18deg);
+        }
+
+        @media screen and (min-width: 1440px) {
+            bottom: 28%;
+            transform: translateX(50%) rotate(-16deg);
+        }
+
+        @media screen and (min-width: 1800px) {
+            bottom: 36%;
+            transform: translateX(50%) rotate(-14deg);
         }
     }
 
@@ -30,10 +70,42 @@
             height: 100%;
         }
 
+        .main-hero__postit-container {
+            @media screen and (min-width: 768px) {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .main-hero__image-container {
+            overflow: hidden;
+            picture, img { height: inherit; }
+
+            @media screen and (min-width: 425px) {
+                img {
+                    object-fit: cover;
+                    object-position: left;
+                }
+            }
+        }
+
         .main-hero__postit {
             position: relative;
             width: 23.4375rem;
             height: 100%;
+
+            margin: 0 auto;
+
+            @media screen and (min-width: 768px) {
+                width: 35rem;
+                height: 27.6619rem;
+                margin-left: 0rem;
+            }
+
+            @media screen and (min-width: 1024px) {
+                width: 43rem;
+                height: 31.6619rem;
+            }
 
             .main-hero__postit-red-string,
             .main-hero__postit-content,
@@ -44,7 +116,7 @@
             }
 
             .main-hero__postit-content {
-                z-index: 2;
+                z-index: 3;
             }
 
             .main-hero__postit-mask {
@@ -58,11 +130,28 @@
                 top: 9%;
                 right: 50%;
                 transform: translateX(50%) rotate(10deg);
+
+                @media screen and (min-width: 768px) {
+                    top: 17%;
+                }
+
+                @media screen and (min-width: 1024px) {
+                    top: 19%;
+                    width: 200vw;
+                }
             }
 
             .main-hero__postit-content-wrapper {
                 margin: 5.61125rem 2rem 0;
                 text-align: center;
+
+                @media screen and (min-width: 768px) {
+                    margin: 7.61125rem 4.5rem 0;
+                }
+
+                @media screen and (min-width: 1024px) {
+                    margin: 8.61125rem 8.5rem 0;
+                }
             }
         }
     }

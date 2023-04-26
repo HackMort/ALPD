@@ -12,6 +12,7 @@ const { classes = '', id } = Astro.props
         <div class="main-hero__image-container">
             <picture>
                 <source srcset="/assets/images/main-hero/main-hero-image-desktop.png" media="(min-width: 1024px)">
+                <source srcset="/assets/images/main-hero/main-hero-image-tablet.png" media="(min-width: 425px)">
                 <img src="/assets/images/main-hero/main-hero-image-mobile.png" alt="">
             </picture>
         </div>
@@ -33,11 +34,11 @@ const { classes = '', id } = Astro.props
                     </div>
                 </div>
                 <picture>
-                    <source srcset="/assets/images/main-hero/main-hero-post-it-desktop.png" media="(min-width: 1024px)">
+                    <source srcset="/assets/images/main-hero/main-hero-post-it-desktop.png" media="(min-width: 768px)">
                     <img src="/assets/images/main-hero/main-hero-post-it-mobile.png" alt="">
                 </picture>
                 <picture class="main-hero__postit-mask">
-                    <source srcset="/assets/images/main-hero/main-hero-post-it-mask-desktop.png" media="(min-width: 1024px)">
+                    <source srcset="/assets/images/main-hero/main-hero-post-it-mask-desktop.png" media="(min-width: 768px)">
                     <img src="/assets/images/main-hero/main-hero-post-it-mask-mobile.png" alt="">
                 </picture>
             </div>
