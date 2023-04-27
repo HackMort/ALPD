@@ -2,6 +2,8 @@
 
   .grid {
 
+    position: relative;
+
     &__content {
       background-image: url('/assets/images/enter-site/background.png');
       background-size: cover;
@@ -51,7 +53,7 @@
       }
 
       &_buttons,
-      &_form {
+      .grid__form {
         display: none;
         height: 100%;
         transition: display 0.5s ease-in-out;
@@ -112,7 +114,14 @@
 
       }
 
-      &_form {}
+      .grid__form {
+        margin-top: 1rem;
+        height: auto;
+
+        img {
+          margin-bottom: 1rem;
+        }
+      }
 
       .continue__text {
 
@@ -133,22 +142,66 @@
         }
       }
 
+    }
 
-      .hidden {
-        display: none;
-      }
+    .hidden {
+      display: none;
+    }
 
-      .visible {
-        display: block;
-      }
-
-
-
+    .visible {
+      display: block;
     }
 
     &__media {
       display: none;
+      background-color: $color-black;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      transition: display 0.5s ease-in-out;
+      width: 100%;
+
+      &.visible {
+        display: grid;
+        place-content: center;
+      }
+
+      .button--close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        color: $color-white;
+        cursor: pointer;
+        height: 30px;
+        padding-right: 5px;
+        padding-left: 5px;
+        z-index: 2;
+
+        .line {
+          background-color: #FFFFFF;
+          display: block;
+          height: 3px;
+          width: 1.75rem;
+
+          &:first-of-type {
+            position: relative;
+            top: -1px;
+            transform: rotate(45deg);
+          }
+
+          &:last-of-type {
+            position: relative;
+            top: -4px;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+
+
     }
+
+
 
   }
 
