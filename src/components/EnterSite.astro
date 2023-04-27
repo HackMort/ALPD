@@ -1,0 +1,58 @@
+<div class="enter__site">
+  <div class="grid">
+    <div class="grid__content">
+      <h1 class="grid__content_title">THE ALpD:</h1>
+      <h2 class="grid__content_sub-title">
+        Internal investigations unit <br />
+        <span class="color--red">needs <u>your help</u> solving a case.</span>
+      </h2>
+      <h3 class="grid__content_text">
+        Enter your info below to immerse yourself into the investigation and
+        find the culprit.
+      </h3>
+      <div class="grid__content_buttons visible">
+        <ul class="buttons__list">
+          <li class="buttons__list_item">
+            <button class="button button--form">Customize Video</button>
+          </li>
+          <li class="buttons__list_item">or</li>
+          <li class="buttons__list_item">
+            <button class="button button--video">Play Video</button>
+          </li>
+        </ul>
+        <h6 class="continue__text">
+          Prefer to catch the culprit later? <br />
+          <a href="/">Continue to the full site.</a>
+        </h6>
+        <div class="badge"></div>
+      </div><!-- buttons -->
+      <div class="grid__form">
+        <h3>Form here.</h3>
+        <h6 class="continue__text">
+          Prefer to catch the culprit later? <br />
+          <a href="/">Continue to the full site.</a>
+        </h6>
+      </div><!-- Form -->
+    </div>
+    <div class="grid__media">
+      <h3>Image/Video Here.</h3>
+    </div><!-- Media -->
+  </div><!-- Grid -->
+</div><!-- Enter Site -->
+
+<script>
+  const formButton = document.querySelector(".button--form");
+  const videoButton = document.querySelector(".button--video");
+  const buttonsContent = document.querySelector(".grid__content_buttons");
+  const formContent = document.querySelector(".grid__form");
+
+  formButton.addEventListener("click", () => {
+    buttonsContent.classList.remove("visible");
+    formContent.classList.add("visible");
+  });
+
+  videoButton.addEventListener("click", () => {
+    buttonsContent.classList.remove("visible");
+    formContent.classList.add("visible");
+  });
+</script>
