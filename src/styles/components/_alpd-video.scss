@@ -2,13 +2,26 @@
     width: 100%;
     position: relative;
 
+    .alpd-video__wrapper {
+        height: calc(217px + ((537 - 217) * ((100vw - 320px) / (768 - 320))));
+
+        @media screen and (min-width: 768px) {
+            height: 30.5625rem;
+        }
+    }
+
     .alpd-video__assets-container {
         position: absolute;
-        top: 0;
+        top: -12px;
         left: 0;
         width: 100%;
         height: 100%;
         z-index: 1;
+        overflow: hidden;
+
+        @media screen and (min-width: 768px) {
+            overflow: initial;
+        }
 
         picture {
             position: absolute;
@@ -25,21 +38,97 @@
         .asset__notebook,
         .asset__backpack {
             display: none;
+
+            @media screen and (min-width: 768px) {
+                display: block;
+            }
+        }
+
+        .asset__notebook {
+            @media screen and (min-width: 768px) {
+                top: 20%;
+
+                img {
+                    height: 26.25rem;
+                }
+            }
+        }
+
+        .asset__backpack {
+            @media screen and (min-width: 768px) {
+                top: 50%;
+                transform: translateY(-37%);
+
+                img {
+                    width: 71%;
+                    margin-left: auto;
+                }
+            }
         }
 
         .asset__pic {
-            top: -23px;
+            top: 3px;
 
             img {
                 height: 15.625rem;
+            }
+
+            @media screen and (min-width: 768px) {
+                top: 50%;
+                transform: translateY(-65%);
+
+                img {
+                    height: 19.625rem;
+                }
             }
         }
     }
 
     .alpd-video__container {
         width: 100%;
-        height: 13.5rem;
+        height: 100%;
         position: relative;
         z-index: 2;
+
+        .video {
+            position: absolute;
+            height: max-content;
+            bottom: 0;
+            left: 0;
+
+            width: 100%;
+
+            @media screen and (min-width: 768px) {
+                width: 97%;
+                margin-left: auto;
+                margin-right: auto;
+                left: 50%;
+                top: 50%;
+                bottom: auto;
+                transform: translate(-50%, -50%);
+            }
+
+            .video__play-button {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+
+                transform: translate(-50%, -50%);
+
+                width: 2.0625rem;
+                height: 2.0625rem;
+                border-radius: 100%;
+
+                border: .125rem solid $color-white;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &::before {
+                    content: url("/assets/icons/play-white.svg");
+                }
+            }
+        }
     }
 }
