@@ -1,0 +1,155 @@
+.enter__site {
+
+  .grid {
+
+    &__content {
+      background-image: url('/assets/images/enter-site/background.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      // height: 100vh;
+      height: 812px;
+      overflow: hidden;
+      padding-top: 1rem;
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+      padding-bottom: 1rem;
+      width: 100vw;
+
+      &_title,
+      &_sub-title {
+        color: $color-blue;
+        text-transform: uppercase;
+      }
+
+      &_title {
+        font-family: "veneer", sans-serif;
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 2.25rem;
+      }
+
+      &_sub-title {
+        font-size: 1.65rem;
+        line-height: 1.85rem;
+        margin-bottom: 0.75rem;
+
+        * {
+          font-family: inherit;
+        }
+
+        u {
+          text-decoration: underline;
+        }
+      }
+
+      &_text {
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.3125rem;
+        line-height: 1.625rem;
+      }
+
+      &_buttons,
+      &_form {
+        display: none;
+        height: 100%;
+        transition: display 0.5s ease-in-out;
+      }
+
+      &_buttons {
+        position: relative;
+
+        >* {
+          position: relative;
+          z-index: 2;
+        }
+
+        .badge {
+          background-image: url('/assets/images/enter-site/badge.png');
+          background-size: auto;
+          background-position: center;
+          background-repeat: no-repeat;
+          content: '';
+          position: absolute;
+          width: 642.45px;
+          height: 100%;
+          left: -190px;
+          top: 20px;
+          transform: rotate(-13.1deg);
+          z-index: 1;
+
+        }
+
+
+        .buttons__list {
+          margin-top: 2.5rem;
+          margin-bottom: 2.5rem;
+
+          &_item {
+            font-family: 'Barlow';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 1.25rem;
+            line-height: 1.5rem;
+            list-style-type: none;
+            margin-bottom: 1rem;
+            text-align: center;
+            width: 10.9375rem;
+
+            &::marker {
+              display: none;
+            }
+
+            .button {
+              width: 100%;
+              justify-content: center;
+            }
+          }
+        }
+
+
+
+      }
+
+      &_form {}
+
+      .continue__text {
+
+        font-family: 'Barlow';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.5rem;
+
+        a {
+          font-weight: 600;
+          text-decoration: underline;
+
+          &:focus,
+          &:hover {
+            color: $color-red;
+          }
+        }
+      }
+
+
+      .hidden {
+        display: none;
+      }
+
+      .visible {
+        display: block;
+      }
+
+
+
+    }
+
+    &__media {
+      display: none;
+    }
+
+  }
+
+}
