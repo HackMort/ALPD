@@ -30,49 +30,54 @@
   }
 
   [aria-expanded="true"] {
-    background-color: #d5d5d5;
+    background: none;
 
     .accordion__item_content {
       max-height: 500px;
     }
 
     .accordion__item_title::after {
-      transform: rotate(180deg);
+      background-image: url('/assets/images/acc-minus.png');
+      transition: .5s;
     }
   }
 
   &__item {
-    background-color: $color-white;
+    background: none;
     border: 1px solid $color-black;
-    margin-bottom: 0.25rem;
-    //padding-top: 1rem;
-    padding-right: 1.25rem;
-    //padding-bottom: 1rem;
-    padding-left: 1.25rem;
+  
+    padding-top: .9331rem;
+    padding-right: 1.6875rem;
+    padding-left: 1.6875rem;
   }
+
+ 
+  
 
   &__item_title {
     color: $color-black;
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
     cursor: pointer;
-    //font-size: 1.375rem;
-    line-height: 1.5588rem;
     text-align: center;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    &::after {
+     &::after {
       content: "";
       display: block;
-      // Arrow icon
-      background-image: url("/assets/images/acc-plus");
+      background-image: url('/assets/images/acc-plus.png');
       background-repeat: no-repeat;
       background-position: center;
-      background-size: contain;
-      margin-top: .5rem;
-      margin-right: auto;
-      margin-left: auto;
-      height: .8087rem;
-      width: 1.3313rem;
-    }
+      background-size: cover;
+      height: 34px;
+      width: 34px;
+      transition: .5s;
+    } 
 
 
   }
