@@ -1,0 +1,45 @@
+.alpd-video {
+    width: 100%;
+    position: relative;
+
+    .alpd-video__assets-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+
+        picture {
+            position: absolute;
+            object-fit: contain;
+            width: fit-content;
+            height: fit-content;
+
+            img {
+                object-fit: contain;
+                width: fit-content;
+            }
+        }
+
+        .asset__notebook,
+        .asset__backpack {
+            display: none;
+        }
+
+        .asset__pic {
+            top: -23px;
+
+            img {
+                height: 15.625rem;
+            }
+        }
+    }
+
+    .alpd-video__container {
+        width: 100%;
+        height: 13.5rem;
+        position: relative;
+        z-index: 2;
+    }
+}

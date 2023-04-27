@@ -1,19 +1,27 @@
 ---
-import HeaderNavigation from "./Navigation/HeaderNavigation.astro";
+import HeaderLogo from "./HeaderLogo.astro";
+import HeaderMobileMenuToggle from "./HeaderMobileMenuToggle.astro";
+import HeaderPrimaryNavigation from "./Navigation/HeaderPrimaryNavigation.astro";
+import HeaderSecondaryNavigation from "./Navigation/HeaderSecondaryNavigation.astro";
 ---
 
 <header class="site__header">
   <div class="header__inner">
     <div class="wrapper">
-      <div class="logo">
-        <a href="/">
-          Logo Here
-          <!-- <img src="/assets/images/LOGO.png" alt="ALT" /> -->
-        </a>
+      <div class="header__mobile">
+        <HeaderLogo />
+        <HeaderMobileMenuToggle />
       </div>
-      <div class="navigation">
-        <HeaderNavigation />
+
+      <div class="header__desktop">
+        <HeaderLogo />
+        <HeaderPrimaryNavigation />
+        <HeaderSecondaryNavigation />
       </div>
+    </div>
+    <div class="header__mobile mobile__menu">
+      <HeaderPrimaryNavigation />
+      <HeaderSecondaryNavigation />
     </div>
   </div>
 </header>
