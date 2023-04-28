@@ -157,8 +157,29 @@ main {
   font-weight: 500;
 }
 
+
 .design{
 main{
   background: unset;
 }
+
+.elements{
+  width: 100%;
+  display: flex;
+
+  @media screen and (max-width:795px) {
+    display: block;
+  }
+  
+}
+}
+
+
+.fingerprint{
+  max-width: 11.0625rem;
+}
+
+.red-frame{
+  max-width: 38.1563rem;
+  
 }
