@@ -3,7 +3,8 @@
         What should we call you, Detective?
     </p>
 
-    <div
+    <div class="form__control-group">
+        <div
         class="form__control"
         data-touched="false"
         data-required="true"
@@ -41,13 +42,14 @@
         />
         <p class="form__control-error">Please enter last name</p>
     </div>
+    </div>
 
     <p class="detective-form__control-label">
         Where should we send your case files?
     </p>
 
     <div
-        class="form__control"
+        class="form__control form__control--email"
         data-touched="false"
         data-required="false"
         data-is-valid="false"
@@ -65,7 +67,7 @@
     </div>
 
     <div
-        class="form__control"
+        class="form__control form__control--files"
         data-touched="false"
         data-required="false"
         data-is-valid="false"
@@ -90,7 +92,7 @@
     </div>
 
     <div
-        class="form__control"
+        class="form__control form__control--checkbox"
         data-touched="false"
         data-required="true"
         data-is-valid="false"
@@ -111,7 +113,7 @@
     </div>
 
     <div
-        class="form__control"
+        class="form__control form__control--checkbox"
         data-touched="false"
         data-required="true"
         data-is-valid="false"

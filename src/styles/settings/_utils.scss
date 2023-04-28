@@ -15,6 +15,12 @@ $color-value in $colors {
     }
 }
 
+.md\:color--black {
+    @media screen and (min-width: 768px) {
+        color: $color-black;
+    }
+}
+
 .text--underline {
     text-decoration: underline;
 }
@@ -22,4 +28,20 @@ $color-value in $colors {
 .mx-1 {
     margin-left: 1rem;
     margin-right: 1rem;
+}
+
+.font-size--34px {
+    font-size: 2.125rem;
+}
+
+.md\:font-size--36px {
+    @media screen and (min-width: 768px) {
+        font-size: 2.25rem;
+    }
+}
+
+.md\:hidden {
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
 }

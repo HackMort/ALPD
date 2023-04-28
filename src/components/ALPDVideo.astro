@@ -2,7 +2,7 @@
 import DetectiveForm from './DetectiveForm.astro';
 ---
 
-<article class="alpd-video alpd-video--showing-form">
+<article class="alpd-video">
     <div class="alpd-video__wrapper">
         <div class="alpd-video__assets-container">
             <picture class="asset__notebook">
@@ -34,14 +34,13 @@ import DetectiveForm from './DetectiveForm.astro';
                     <div class="alpd-form__container-header">
                         <button class="alpd-form__close">x</button>
                         <h2 class="alpd-form__title">
-                            <span class="">THE ALPD:</span><br> Internal investigations unit<br><span class="color--red">needs <span class="text--underline">your help</span> solving a case.</span>
+                            <span class="font-size--34px md:font-size--36px">THE ALPD:</span><br class="md:hidden"> Internal investigations unit<br><span class="color--red md:color--black">needs <span class="text--underline">your help</span> solving a case.</span>
                         </h2>
                         <h3 class="alpd-form__subtitle">
                             Enter your info below to immerse yourself into the investigation and find the culprit.
                         </h3>
-
-                        <DetectiveForm />
                     </div>
+                    <DetectiveForm />
                 </div>
             </div>
         </div>
@@ -54,7 +53,14 @@ import DetectiveForm from './DetectiveForm.astro';
 
         playButton.addEventListener('click', () => {
             const component = document.querySelector('.alpd-video')
-            component.classList.toggle('alpd-video--playing')
+            // component.classList.toggle('alpd-video--playing')
+            component.classList.toggle('alpd-video--showing-form')
+
+            const closeForm = document.querySelector('.alpd-form__close')
+
+            closeForm.addEventListener('click', () => {
+                component.classList.remove('alpd-video--showing-form')
+            })
         })
     })
 </script>

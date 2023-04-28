@@ -1,5 +1,6 @@
 input {
   width: 100%;
+  outline: none;
 
   &[type="submit"] {
     cursor: pointer;
@@ -75,6 +76,13 @@ input {
   }
 }
 
+.form__control-group {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        @include flex-gap(1.5rem)
+    }
+}
+
 .form__control {
   display: block;
   position: relative;
@@ -121,7 +129,7 @@ input {
 
     color: $color-black;
     font-size: 1.125rem;
-    font-weight: 300;
+    font-weight: 400;
 
     &::placeholder {
       color: $color-granite-grey;
@@ -234,6 +242,10 @@ input {
             display: none;
         }
 
+        @media screen and (min-width: 768px) {
+            height: 2.9375rem;
+        }
+
         label {
             font-family: Inter, Arial, Helvetica, sans-serif;
             font-weight: 600;
@@ -244,6 +256,11 @@ input {
             line-height: 13px;
 
             align-items: center;
+
+            @media screen and (min-width: 768px) {
+                font-size: 1.125rem;
+                line-height: 18px;
+            }
 
             &::after {
                 margin-left: .5rem;

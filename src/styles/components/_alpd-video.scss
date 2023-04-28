@@ -156,10 +156,26 @@
         .alpd-form__container {
             display: none;
             background-image: url("/assets/images/alpd-video/form-background-mobile.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right bottom;
             padding: 1.0625rem 0;
+
+            @media screen and (min-width: 768px) {
+                background-image: url("/assets/images/alpd-video/form-background-desktop.png");
+                background-color: $color-folder;
+
+                .detective-form {
+                    max-width: 32.875rem;
+                }
+            }
 
             .alpd-form__container-header {
                 position: relative;
+
+                @media screen and (min-width: 768px) {
+                    margin-bottom: 1.5rem;
+                }
 
                 .alpd-form__close {
                     position: absolute;
@@ -171,7 +187,7 @@
                     cursor: pointer;
 
                     @media screen and (min-width: 768px) {
-                        font-size: 42px;
+                        font-size: 2.625rem;
                     }
                 }
 
@@ -179,6 +195,12 @@
                     text-transform: uppercase;
                     font-weight: 400;
                     color: $color-blue;
+                    font-size: 1.75rem;
+
+                    @media screen and (min-width: 768px) {
+                        font-size: 2.25rem;
+                        line-height: 45px;
+                    }
 
                     * {
                         font-family: "veneer",sans-serif;
@@ -192,6 +214,10 @@
                     line-height: 26.25px;
 
                     margin-bottom: 3rem;
+
+                    @media screen and (min-width: 768px) {
+                        display: none;
+                    }
                 }
             }
         }
@@ -212,14 +238,33 @@
         .alpd-video__assets-container,
         .alpd-video__container .video {
             display: none;
+
+            @media screen and (min-width: 768px) {
+                display: initial;
+            }
         }
 
         .alpd-video__wrapper {
-            height: auto;
+            height: calc(660px + ((800 - 660) * ((100vw - 768px) / (1440 - 768))));
         }
 
         .alpd-video__container .alpd-form__container {
             display: block;
+            height: 50.75rem;
+
+            @media screen and (min-width: 768px) {
+                position: absolute;
+                z-index: 2;
+                height: 39.75rem;
+
+                width: calc(745px + ((1120 - 745) * ((100vw - 768px) / (1440 - 768))));
+                margin-left: auto;
+                margin-right: auto;
+                left: 50%;
+                top: 50%;
+                bottom: auto;
+                transform: translate(-50%, -50%);
+            }
         }
     }
 }
