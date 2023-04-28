@@ -17,24 +17,91 @@
 
   &:hover,
   &:focus {
-    background-color: $color-red;
+    background-color: $color-black;
     color: $color-white;
   }
 
 
   &--secondary{
     background:none; 
-    border:1px solid $color-red;
+    border:2px solid $color-red;
     color: $color-red;
+    font-weight: 700;
 
     &:hover,
     &:focus {
       background:none; 
-      border:1px solid $color-red;
-      color: $color-red;
+      border:2px solid $color-blue;
+      color: $color-blue;
     }
+
   }
 
+  
+  &--take-photo{
+    background:none; 
+    border:2px solid $color-red;
+    color: $color-red;
+    font-weight: 700;
+
+    &::after{
+      content: "";
+      display: block;
+      background-image: url('/assets/images/red-camera.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 18px;
+      width: 22px;
+      margin-left: .625rem;
+      transition: .5s;
+    }
+
+    &:hover,
+    &:focus {
+      background:none; 
+      border:2px solid $color-blue;
+      color: $color-blue;
+      
+      &::after{
+        content: "";
+        background-image: url('/assets/images/blue-camera.png');
+    }
+  }
+}
+
+    &--upload-photo{
+      background:none; 
+    border:2px solid $color-red;
+    color: $color-red;
+    font-weight: 700;
+
+    &::after{
+      content: "";
+      display: block;
+      background-image: url('/assets/images/red-upload.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 18px;
+      width: 18px;
+      margin-left: .625rem;
+      transition: .5s;
+    }
+
+    &:hover,
+    &:focus {
+      background:none; 
+      border:2px solid $color-blue;
+      color: $color-blue;
+
+      &::after{
+        content: "";
+        background-image: url('/assets/images/blue-upload.png');
+    }
+    }
+
+  }
   &--tertiary{
     background: none;
     color: $color-black;
