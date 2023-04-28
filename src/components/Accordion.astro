@@ -9,20 +9,22 @@ const { header, id, expanded } = Astro.props;
 ---
 
 <article id={id} role="tab" class="accordion__item" aria-expanded={expanded}>
-  <div class="accordion__item_header">
+  <!-- <div class="accordion__item_header"> -->
+    <div class="title-container">
     <h6
-      class="accordion__item_title"
-      role="button"
-      tabindex="0"
-      aria-controls={id}
+    class="accordion__item_title"
+    role="button"
+    tabindex="0"
+    aria-controls={id}
     >
-      {header}
-    </h6>
+    {header}
+  </h6>
+ <!--  <img src="/assets/images/acc-plus.png" alt="" class="accordion-icon">
+  </div> -->
   </div>
 
   <div
     class="accordion__item_content"
-    role="tabpanel"
     aria-labelledby={id}
     tabindex="0"
   >
