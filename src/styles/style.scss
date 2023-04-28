@@ -12,6 +12,7 @@
 @import './components/_isi.scss';
 @import './components/_tabs.scss';
 @import './components/_main-hero.scss';
+@import './components/_enter-site.scss';
 @import './components/_forms.scss';
 @import './components/_accordions.scss';
 @import './components/_exit-modal.scss';
@@ -19,3 +20,16 @@
 @import './components/_footer.scss';
 @import './components/_footer-navigation.scss';
 @import './components/case-file';
+@import './components/alpd-video';
+
+
+.section__home-video {
+    margin-top: 3.25rem;
+
+    .section__home-video-title {
+        text-transform: uppercase;
+        color: $color-cinnabar;
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+}

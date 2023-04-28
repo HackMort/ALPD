@@ -1,0 +1,45 @@
+---
+import Buttons from "./Enter-Site/Buttons.astro";
+import Form from "./Enter-Site/Form.astro";
+import Headings from "./Enter-Site/Headings.astro";
+import Media from "./Enter-Site/Media.astro";
+---
+
+<div class="enter__site">
+  <div class="grid">
+    <div class="grid__content">
+      <Headings />
+      <Buttons />
+      <Form />
+    </div><!-- Content -->
+    <div class="grid__media">
+      <Media />
+    </div><!-- Media -->
+  </div><!-- Grid -->
+</div><!-- Enter Site -->
+
+<script>
+  const formButton = document.querySelector(".button--form");
+  const videoButton = document.querySelector(".button--video");
+  const buttonsContent = document.querySelector(".grid__content_buttons");
+  const formContent = document.querySelector(".grid__form");
+  const mediaContent = document.querySelector(".grid__media");
+  const closeButton = document.querySelector(".button--close");
+
+  formButton.addEventListener("click", () => {
+    buttonsContent.classList.remove("visible");
+    formContent.classList.add("visible");
+  });
+
+  videoButton.addEventListener("click", () => {
+    buttonsContent.classList.remove("visible");
+    formContent.classList.remove("visible");
+    mediaContent.classList.add("visible");
+  });
+
+  closeButton.addEventListener("click", () => {
+    buttonsContent.classList.add("visible");
+    formContent.classList.remove("visible");
+    mediaContent.classList.remove("visible");
+  });
+</script>
