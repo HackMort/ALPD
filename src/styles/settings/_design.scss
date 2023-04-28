@@ -167,7 +167,7 @@ main{
   width: 100%;
   display: flex;
 
-  @media screen and (max-width:795px) {
+  @media screen and (max-width:890px) {
     display: block;
   }
   
@@ -177,6 +177,10 @@ main{
 
 .fingerprint{
   max-width: 11.0625rem;
+  margin-right: 5rem;
+  @media screen and (max-width:890px) {
+    margin-right: 0;
+  }
 }
 
 .red-frame{
