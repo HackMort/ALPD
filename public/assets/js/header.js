@@ -8,7 +8,7 @@
  **/
 function ToggleMobileMenu (buttonID, menuClass, toggleClass = 'is--open') {
   if (!buttonID || !menuClass) {
-    console.error('Element ID or Class is missing.')
+    console.error('Button ID or Menu Class not found or invalid')
     return
   }
   const mobileMenuToogleBtn = document.getElementById(buttonID)
@@ -26,6 +26,10 @@ function ToggleMobileMenu (buttonID, menuClass, toggleClass = 'is--open') {
  * Menu('.primary__navigation', 'current-page')
  **/
 function MainMenu (menuClass = 'main__navigation', currentPageClass = 'current-page') {
+  if (!menuClass) {
+    console.error('Menu Class not found or invalid')
+    return
+  }
   const menuItems = document.querySelectorAll(`.${menuClass} li a`)
   const mobileQuery = window.matchMedia('(max-width: 1199px)')
   const currentPage = window.location.pathname.replace(/\/+$/, '') // Remove trailing slash if any, this is needed in order to work in the Dev Server.
@@ -57,6 +61,10 @@ function MainMenu (menuClass = 'main__navigation', currentPageClass = 'current-p
   })
 }
 function StickyHeader (headerClass = 'site__header', stickyClass = 'is--sticky') {
+  if (!headerClass) {
+    console.error('Header Class not found or invalid')
+    return
+  }
   const header = document.querySelector(`.${headerClass}`)
   const headerHeight = header.offsetHeight
   const stickyHeader = () => {
