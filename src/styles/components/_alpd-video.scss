@@ -6,7 +6,7 @@
         height: calc(217px + ((537 - 217) * ((100vw - 320px) / (768 - 320))));
 
         @media screen and (min-width: 768px) {
-            height: 30.5625rem;
+            height: calc(550px + ((800 - 550) * ((100vw - 768px) / (1440 - 768))));
         }
     }
 
@@ -21,6 +21,7 @@
 
         @media screen and (min-width: 768px) {
             overflow: initial;
+            top: initial;
         }
 
         picture {
@@ -49,7 +50,7 @@
                 top: 20%;
 
                 img {
-                    height: 26.25rem;
+                    height: calc(440px + ((635 - 420) * ((100vw - 768px) / (1440 - 768))));
                 }
             }
         }
@@ -57,11 +58,24 @@
         .asset__backpack {
             @media screen and (min-width: 768px) {
                 top: 50%;
+                right: 0;
                 transform: translateY(-37%);
 
                 img {
-                    width: 71%;
-                    margin-left: auto;
+                    width: calc(536px + ((892 - 536) * ((100vw - 768px) / (1440 - 768))));
+                }
+            }
+
+            @media screen and (min-width: 1300px) {
+                transform: translateY(-43%);
+            }
+        }
+
+        .asset__folder {
+            @media screen and (min-width: 768px) {
+
+                img {
+                    width: calc(768px + ((892 - 768) * ((100vw - 768px) / (1440 - 768))));
                 }
             }
         }
@@ -75,7 +89,7 @@
 
             @media screen and (min-width: 768px) {
                 top: 50%;
-                transform: translateY(-65%);
+                transform: translateY(-75%);
 
                 img {
                     height: 19.625rem;
@@ -90,6 +104,8 @@
         position: relative;
         z-index: 2;
 
+        @media screen and (min-width: 768px) {}
+
         .video {
             position: absolute;
             height: max-content;
@@ -99,7 +115,8 @@
             width: 100%;
 
             @media screen and (min-width: 768px) {
-                width: 97%;
+                // width: 46.5625rem;
+                width: calc(745px + ((1197 - 745) * ((100vw - 768px) / (1440 - 768))));
                 margin-left: auto;
                 margin-right: auto;
                 left: 50%;
@@ -128,7 +145,81 @@
                 &::before {
                     content: url("/assets/icons/play-white.svg");
                 }
+
+                @media screen and (min-width: 768px) {
+                    width: 4.875rem;
+                    height: 4.875rem;
+                }
             }
+        }
+
+        .alpd-form__container {
+            display: none;
+            background-image: url("/assets/images/alpd-video/form-background-mobile.png");
+            padding: 1.0625rem 0;
+
+            .alpd-form__container-header {
+                position: relative;
+
+                .alpd-form__close {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    font-weight: 600;
+                    font-size: 30px;
+                    line-height: 45%;
+                    cursor: pointer;
+
+                    @media screen and (min-width: 768px) {
+                        font-size: 42px;
+                    }
+                }
+
+                .alpd-form__title {
+                    text-transform: uppercase;
+                    font-weight: 400;
+                    color: $color-blue;
+
+                    * {
+                        font-family: "veneer",sans-serif;
+                    }
+                }
+
+                .alpd-form__subtitle {
+                    font-family: "oswald",sans-serif;
+                    font-weight: 700;
+                    font-size: 1.3125rem;
+                    line-height: 26.25px;
+
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+    }
+
+    &--playing {
+        .alpd-video__assets-container {
+            display: none;
+        }
+
+        .alpd-video__container .video {
+            width: 100%;
+        }
+    }
+
+    &--showing-form {
+
+        .alpd-video__assets-container,
+        .alpd-video__container .video {
+            display: none;
+        }
+
+        .alpd-video__wrapper {
+            height: auto;
+        }
+
+        .alpd-video__container .alpd-form__container {
+            display: block;
         }
     }
 }

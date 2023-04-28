@@ -1,4 +1,8 @@
-<article class="alpd-video">
+---
+import DetectiveForm from './DetectiveForm.astro';
+---
+
+<article class="alpd-video alpd-video--showing-form">
     <div class="alpd-video__wrapper">
         <div class="alpd-video__assets-container">
             <picture class="asset__notebook">
@@ -18,13 +22,39 @@
         </div>
         <div class="alpd-video__container">
             <div class="video">
-                <button class="video__play-button"></button>
+                <button class="video__play-button" data-playing="false"></button>
                 <picture>
                     <source srcset="/assets/images/alpd-video/video-poster-desktop.png" media="(min-width: 768px)">
                     <source srcset="/assets/images/alpd-video/video-poster-tablet.png" media="(min-width: 500px)">
                     <img src="/assets/images/alpd-video/video-poster-mobile.png" alt="">
                 </picture>
             </div>
+            <div class="alpd-form__container">
+                <div class="wrapper">
+                    <div class="alpd-form__container-header">
+                        <button class="alpd-form__close">x</button>
+                        <h2 class="alpd-form__title">
+                            <span class="">THE ALPD:</span><br> Internal investigations unit<br><span class="color--red">needs <span class="text--underline">your help</span> solving a case.</span>
+                        </h2>
+                        <h3 class="alpd-form__subtitle">
+                            Enter your info below to immerse yourself into the investigation and find the culprit.
+                        </h3>
+
+                        <DetectiveForm />
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </article>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const playButton = document.querySelector('.video__play-button');
+
+        playButton.addEventListener('click', () => {
+            const component = document.querySelector('.alpd-video')
+            component.classList.toggle('alpd-video--playing')
+        })
+    })
+</script>

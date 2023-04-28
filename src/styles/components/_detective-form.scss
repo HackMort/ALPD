@@ -1,0 +1,16 @@
+.detective-form {
+    .detective-form__control-label {
+        font-weight: 600;
+        line-height: 20.8px;
+
+        margin-bottom: .5rem;
+
+        &:last-of-type {
+            margin-top: 1.25rem;
+        }
+    }
+
+    .form__control .form__control-input {
+        width: 75%;
+    }
+}

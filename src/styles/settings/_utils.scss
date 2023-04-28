@@ -15,4 +15,11 @@ $color-value in $colors {
     }
 }
 
-;
+.text--underline {
+    text-decoration: underline;
+}
+
+.mx-1 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
