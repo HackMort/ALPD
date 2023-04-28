@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+import { ToggleMobileMenu, MainMenu, StickyHeader } from './header.js'
 import { Tabs } from './tabs.js'
 import { cookieValidation, cookieFormValidation } from './validate.js'
 import { Accordions } from './accordions.js'
@@ -10,6 +12,40 @@ document.addEventListener('DOMContentLoaded', function (e) {
   */
   // cookieValidation()
   // cookieFormValidation()
+
+  /**
+   * Toggle Mobile Menu
+   * @see public/assets/js/header.js
+   * Call the function from header.js
+   * @example
+   * ToggleMobileMenu('toggle-menu-button', '.mobile__menu')
+   * Where 'toggle-menu-button' is the ID of the button that will toggle the menu
+   * and '.mobile__menu' is the class of the menu that will be toggled
+   */
+  ToggleMobileMenu('toggle-menu-button', '.mobile__menu')
+
+  /**
+   * Main Menu
+   * @see public/assets/js/header.js
+   * Call the function from header.js
+   * @example
+   * MainMenu('main__navigation', 'current-page')
+   * Where 'main__navigation' is the class of the menu
+   * and 'current-page' is the class that will be added to the current item with the same href as the current page
+   */
+  MainMenu('main__navigation', 'current-page')
+
+  /**
+   * Sticky Header
+   * @see public/assets/js/header.js
+   * Call the function from header.js
+   * @example
+   * StickyHeader('site__header', 'is--sticky')
+   * Where 'site__header' is the class of the header
+   * and 'is--sticky' is the class that will be added to the header when the page is scrolled
+   */
+  StickyHeader('site__header', 'is--sticky')
+
   /**
    * Tabs
    * @see public/assets/js/tabs.js
@@ -22,41 +58,4 @@ document.addEventListener('DOMContentLoaded', function (e) {
    * Call the function from accordions.js
   */
   Accordions()
-
-  // Toggle Menu Button
-  const mobileMenuToogleBtn = document.getElementById('toggle-menu-button')
-  const mobileNav = document.querySelector('.mobile__menu')
-  if (mobileMenuToogleBtn) {
-    mobileMenuToogleBtn.addEventListener('click', () => {
-      mobileMenuToogleBtn.classList.toggle('is--open')
-      mobileNav.classList.toggle('is--open')
-    })
-  }
-
-  // Menu Dropdown
-  const menuItems = document.querySelectorAll('.primary__navigation li a')
-  const mobileQuery = window.matchMedia('(max-width: 1024px)')
-  const currentPage = window.location.pathname.replace(/\/+$/, '') // Remove trailing slash if any, this is needed in order to work in the Dev Server.
-  menuItems.forEach((item) => {
-    if (item.getAttribute('href') === currentPage) {
-      item.classList.add('current-page')
-      if (item.classList.contains('nav__sub_menu_item_link')) {
-        const parent = item.closest('.has__sub_menu')
-        parent.classList.add('current-page')
-      }
-    }
-    item.addEventListener('click', (e) => {
-      if (!mobileQuery.matches) {
-        return
-      }
-      if (item.parentElement.classList.contains('has__sub_menu')) {
-        e.preventDefault()
-        item.parentElement.classList.toggle('is--open')
-        // const subNav = item.nextElementSibling
-        // if (subNav) {
-        //   subNav.classList.toggle('is--open')
-        // }
-      }
-    })
-  })
 })
