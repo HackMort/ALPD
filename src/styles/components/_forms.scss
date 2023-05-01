@@ -9,8 +9,8 @@ input {
   &[type="checkbox"],
   &[type="radio"] {
     color: currentColor;
-    width: 2rem;
-    height: 2rem;
+    width: 1.25rem;
+    height: 1.25rem;
     border: 2px solid currentColor;
     transform: translateY(-0.075em);
 
@@ -125,7 +125,7 @@ input {
     background-color: transparent;
     width: 100%;
 
-    border-bottom: 1px solid $color-envelop;
+    border-bottom: 1px solid $color-black;
 
     color: $color-black;
     font-size: 1.125rem;
@@ -184,7 +184,7 @@ input {
 
   .form__control-checkbox {
 
-    align-items: center;
+    align-items: flex-start;
 
     .form__control-label {
       font-size: 1rem;
@@ -201,9 +201,9 @@ input {
   &.form__control--invalid {
     &[data-touched="true"][data-required="true"][data-is-valid="false"] {
 
-      .form__control-label {
-        color: $color-red;
-      }
+    //   .form__control-label {
+    //     color: $color-red;
+    //   }
 
       .form__control-input,
       .form__control-select-wrapper {
@@ -215,6 +215,14 @@ input {
       }
     }
   }
+}
+
+.form__control--checkbox {
+    margin-bottom: 1.75rem;
+
+    .form__control-error {
+        top: 90%;
+    }
 }
 
 .form__control-files {
