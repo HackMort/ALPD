@@ -1,8 +1,12 @@
 .references{
     margin: auto;
-    max-width: 20rem;
     margin-bottom: 1.5625rem;
-    
+    max-width: 18rem;
+
+    @media screen and (min-width:375px) {
+        
+    max-width: 20rem;
+    }
     
     @media screen and (min-width:600px) {
         max-width: 75rem;
@@ -13,11 +17,21 @@
     }
 
     p, a{
+        font-size: .75rem;
         font-family: 'Barlow';
         font-style: normal;
         font-weight: 400;
-        font-size: .875rem;
         line-height: 1.3125rem;
+        
+        
+        @media screen and (min-width:375px) {
+        font-size: .875rem;
+        }
+    }
+
+    p{
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     span{
