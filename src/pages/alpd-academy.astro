@@ -4,85 +4,122 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="ALPD Academy" pageClass="alpd__academy">
   <section class="section alpd-academy__role" id="role-of-alpd">
-    <h2 class="alpd-academy__role-title">
-        What you may not know about alkaline phosphatase (ALP)
-    </h2>
-    <h4 class="alpd-academy__role-subtitle">
-        Why is it important to have sufficient levels of alkaline phosphatase?
-    </h4>
-    <p class="alpd-academy__role-description">
-        Alkaline phosphatase is a ubiquitous enzyme essential to multiple systems of the body, including the skeletal system where it is responsible for healthy mineralization of bones and teeth.1-4
-    </p>
+    <div class="wrapper alpd-academy__role-header">
+        <h2 class="alpd-academy__role-title">
+            What you may not know about alkaline phosphatase (ALP)
+        </h2>
+        <h4 class="alpd-academy__role-subtitle">
+            Why is it important to have sufficient levels of alkaline phosphatase?
+        </h4>
+        <p class="alpd-academy__role-description">
+            Alkaline phosphatase is a ubiquitous enzyme essential to multiple systems of the body, including the skeletal system where it is responsible for healthy mineralization of bones and teeth.<sup>1-4</sup>
+        </p>
+    </div>
 
     <article class="alpd-academy__role-alkaline">
-        <div class="red-string"></div>
-        <picture class="alpd-academy__alkaline-manillafolder">
-            <source srcset="/assets/images/alpd-academy/manilla-folder-desktop.png" media="(min-width: 1024px)">
-            <source srcset="/assets/images/alpd-academy/manilla-folder-tablet.png" media="(min-width: 768px)">
-            <img src="/assets/images/alpd-academy/manilla-folder-mobile.png" alt="">
-        </picture>
-        <div class="alpd-academy__alkaline-content">
+        <div class="alpd-academy__alkaline-wrapper">
             
             <div class="alpd-academy__alkaline-row">
-                <div class="alpd-academy__alkaline-image">
-                    <picture>
-                        <source srcset="/assets/images/alpd-academy/Artboard 3@2x 1-desktop.png" media="(min-width: 1024px)">
-                        <source srcset="/assets/images/alpd-academy/KMobile-NormalALP@2x 1-tablet.png" media="(min-width: 500px)">
-                        <img src="/assets/images/alpd-academy/KMobile-NormalALP@2x 1-mobile.png" alt="">
-    
-                        <figcaption>Image created for Alexion Pharmaceuticals, Inc. for illustrative purposes.</figcaption>
-                    </picture>
-                </div>
-    
-                <div class="alpd-academy__alkaline-in-bone-and-teeth">
-                    <div class="alpd-academy__alkaline-legend">
-                        <div class="alpd-academy__alkaline-legend-content">
-                            <p class="alpd-academy__alkaline-legend-title">
-                                LEGEND
-                            </p>
-                            <ul class="alpd-academy__alkaline-legend-list">
-                                <li><strong>Ca2+:</strong> Calcium</li>
-                                <li><strong>CNS:</strong> Central nervous system</li>
-                                <li><strong>GABA:</strong> Gamma-aminobutyric acid</li>
-                                <li><strong>Pi:</strong> Inorganic phosphate</li>
-                                <li><strong>PL:</strong> Pyroxidal</li>
-                                <li><strong>PLP:</strong> Pyridoxal 5’-phosphate</li>
-                                <li><strong>PPi:</strong> Inorganic pyrophosphate</li>
-                            </ul>
-                        </div>
+                <div class="wrapper">
+                    <div class="alpd-academy__alkaline-image">
+                        <picture>
+                            <source srcset="/assets/images/alpd-academy/k-alp-normal-desktop.png" media="(min-width: 768px)">
+                            <source srcset="/assets/images/alpd-academy/k-alp-normal-tablet.png" media="(min-width: 500px)">
+                            <img src="/assets/images/alpd-academy/k-alp-normal-mobile.png" alt="">
+        
+                            <figcaption class="lg:hidden">Image created for Alexion Pharmaceuticals, Inc. for illustrative purposes.</figcaption>
+                        </picture>
                     </div>
-                    <div class="alpd-academy__alkaline-content">
-                        <h4 class="alpd-academy__alkaline-title">
-                            Alkaline phosphatase in bone and teeth
-                        </h4>
-                        <p class="alpd-academy__alkaline-description">
-                            Under normal conditions, alkaline phosphatase dephosphorylates inorganic pyrophosphate (PPi) and releases inorganic phosphate (Pi), which then binds with calcium to form hydroxyapatite crystals—the building blocks of strong bones.1,4,5
-                        </p>
+        
+                    <div class="alpd-academy__alkaline-in-bone-and-teeth">
+                        <div class="alpd-academy__alkaline-legend">
+                            <div class="alpd-academy__alkaline-legend-content">
+                                <p class="alpd-academy__alkaline-legend-title">
+                                    LEGEND
+                                </p>
+                                <ul class="alpd-academy__alkaline-legend-list">
+                                    <li><strong>Ca<sup>2+</sup>:</strong> Calcium</li>
+                                    <li><strong>CNS:</strong> Central nervous system</li>
+                                    <li><strong>GABA:</strong> Gamma-aminobutyric acid</li>
+                                    <li><strong>Pi:</strong> Inorganic phosphate</li>
+                                    <li><strong>PL:</strong> Pyroxidal</li>
+                                    <li><strong>PLP:</strong> Pyridoxal 5’-phosphate</li>
+                                    <li><strong>PPi:</strong> Inorganic pyrophosphate</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="alpd-academy__alkaline-content alkaline-bone">
+                            <p class="hidden lg:block paragraph-caption">Image created for Alexion Pharmaceuticals, Inc. for illustrative purposes.</p>
+                            <h4 class="alpd-academy__alkaline-title">
+                                Alkaline phosphatase in bone and teeth
+                            </h4>
+                            <p class="alpd-academy__alkaline-description">
+                                Under normal conditions, alkaline phosphatase dephosphorylates inorganic pyrophosphate (PPi) and releases inorganic phosphate (Pi), which then binds with calcium to form hydroxyapatite crystals—the building blocks of strong bones.<sup>1,4,5</sup>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="alpd-academy__alkaline-row">
-                <div class="alpd-academy__alkaline-image">
-                    <picture>
-                        <source srcset="/assets/images/alpd-academy/KDesktop-neurologic_normal@2x 1-desktop.png" media="(min-width: 1024px)">
-                        <source srcset="/assets/images/alpd-academy/KMobile-Neurologic_normal@2x 1-tablet.png" media="(min-width: 500px)">
-                        <img src="/assets/images/alpd-academy/KMobile-Neurologic_normal@2x 1-mobile.png" alt="">
-    
-                        <figcaption>Image created for Alexion Pharmaceuticals, Inc. for illustrative purposes.</figcaption>
-                    </picture>
-                </div>
-                <div class="alpd-academy__alkaline-nervous-system">
-                    <div class="alpd-academy__alkaline-content">
-                        <h4 class="alpd-academy__alkaline-title">
-                            Alkaline phosphatase in the central nervous system
-                        </h4>
-                        <p class="alpd-academy__alkaline-description">
-                            Alkaline phosphatase is also responsible for dephosphorylating pyridoxal 5’-phosphate (PLP, the active form of vitamin B6) to pyridoxal (PL), allowing PL to cross the blood–brain barrier where it is regenerated as PLP. The buildup of PLP in systemic circulation leads to deficiency of vitamin B6 in the central nervous system, which results in seizures in infants.1
-                        </p>
+                <div class="wrapper">
+                    <div class="alpd-academy__alkaline-image">
+                        <picture>
+                            <source srcset="/assets/images/alpd-academy/k-neurologic-normal-desktop.png" media="(min-width: 768px)">
+                            <source srcset="/assets/images/alpd-academy/k-neurologic-normal-tablet.png" media="(min-width: 500px)">
+                            <img src="/assets/images/alpd-academy/k-neurologic-normal-mobile.png" alt="">
+        
+                            <figcaption class="lg:text--center lg:mb-1">Image created for Alexion Pharmaceuticals, Inc. for illustrative purposes.</figcaption>
+                        </picture>
+                    </div>
+                    <div class="alpd-academy__alkaline-nervous-system">
+                        <div class="alpd-academy__alkaline-content">
+                            <h4 class="alpd-academy__alkaline-title lg:text--center lg:mb-1">
+                                Alkaline phosphatase in the central nervous system
+                            </h4>
+                            <p class="alpd-academy__alkaline-description mb-0 lg:text--center alpd-academy__alkaline-description--compact">
+                                Alkaline phosphatase is also responsible for dephosphorylating pyridoxal 5’-phosphate (PLP, the active form of vitamin B<sub>6</sub>) to pyridoxal (PL), allowing PL to cross the blood–brain barrier where it is regenerated as PLP. The buildup of PLP in systemic circulation leads to deficiency of vitamin B<sub>6</sub> in the central nervous system, which results in seizures in infants.<sup>1</sup>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </article>
+    
+    <div class="red-string alpd-academy__role-red-string"></div>
   </section>
+  <section class="section alpd-academy__low">
+    <div class="wrapper alpd-academy__low-header">
+        <h1 class="alpd-academy__low-title">MENACING Mutations</h1>
+        <p class="alpd-academy__low-description">
+            In hypophosphatasia, loss of function mutations in the ALPL gene result in deficient alkaline phosphatase enzyme activity, which leads to accumulation of ALP-phosphorylated substrates: inorganic pyrophosphate (PPi), pyridoxal 5’-phosphate (PLP), and phosphoethanolamine (PEA).<sup>1,5</sup>
+        </p>
+        <table class="alpd-academy__mutations-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>ALP</th>
+                    <th>PPi<sup>a</sup></th>
+                    <th>PLP<sup>b</sup></th>
+                    <th>PEA<sup>c</sup></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>HPP</td>
+                    <td><img src="/assets/icons/arrow-down-orange.svg" alt=""></td>
+                    <td><img src="/assets/icons/arrow-up-blue.svg" alt=""></td>
+                    <td><img src="/assets/icons/arrow-up-blue.svg" alt=""></td>
+                    <td><img src="/assets/icons/arrow-up-blue.svg" alt=""></td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="alpd-academy__mutations-table-footnote">
+            <sup>a</sup>PPi tests are done in research settings only and are not commercially available.<sup>9</sup>
+            <sup>b</sup>PLP levels may be elevated in individuals taking supplements containing vitamin B<sup>6</sup>. PLP levels may also appear as normal or low in patients with HPP. This does not invalidate the HPP diagnosis.<sup>13</sup>
+            <sup>c</sup>PEA levels may be normal in some patients with hypophosphatasia.
+        </p>
+    </div>
+  </section>
+
 </Layout>

@@ -15,6 +15,14 @@ $color-value in $colors {
     }
 }
 
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.lg\:mb-1 {
+    margin-bottom: 1rem !important;
+}
+
 .md\:color--black {
     @media screen and (min-width: 768px) {
         color: $color-black;
@@ -40,8 +48,30 @@ $color-value in $colors {
     }
 }
 
+.hidden {
+    display: none;
+}
+
 .md\:hidden {
     @media screen and (min-width: 768px) {
         display: none;
+    }
+}
+
+.lg\:hidden {
+    @media screen and (min-width: 1024px) {
+        display: none;
+    }
+}
+
+.lg\:block {
+    @media screen and (min-width: 1024px) {
+        display: block;
+    }
+}
+
+.lg\:text--center {
+    @media screen and (min-width: 1024px) {
+        text-align: center !important;
     }
 }

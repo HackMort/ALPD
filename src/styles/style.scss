@@ -36,53 +36,250 @@
 }
 
 // -------------------------- ALPD Academy page ---------------------------------------------------
+.alpd__academy {
+    width: 100%;
+    max-width: 90rem;
+    margin: auto;
+}
 
-.alpd-academy__role-alkaline {
+.alpd-academy__role {
     position: relative;
-    
-    .red-string {
+
+    .alpd-academy__role-red-string {
         position: absolute;
+        width: calc(100vw + 31.25rem);
+        height: 0.5rem;
+        z-index: 1;
+
+        bottom: .25rem;
+        right: 50%;
+        transform: translateX(50%) rotate(12deg);
+
+        @media screen and (min-width: 768px) {
+            transform: translateX(50%) rotate(-12deg);
+        }
     }
 
-    .alpd-academy__alkaline-manillafolder {
-
+    .alpd-academy__role-header {
+        @media screen and (min-width: 768px) {
+            text-align: center;
+            max-width: 39.625rem;
+        }
     }
 
-    .alpd-academy__alkaline-content {
+    .alpd-academy__role-title {
+        color: $color-red;
+        text-transform: uppercase;
+        margin-bottom: 1.25rem;
 
+        @media screen and (min-width: 768px) {
+            font-size: 3.5rem;
+            line-height: 56px;
+        }
+    }
+
+    .alpd-academy__role-subtitle {
+        font-size: 1.125rem;
+        line-height: 25.2px;
+        font-weight: 600;
+        color: $color-white;
+        margin-bottom: 1rem;
+
+        @media screen and (min-width: 768px) {
+            font-size: 1.375rem;
+            line-height: 30.8px;
+        }
+    }
+
+    .alpd-academy__role-description {
+        color: $color-white;
+        font-weight: 500;
+        margin-bottom: 2.5rem;
+
+        @media screen and (min-width: 768px) {
+            font-size: 1.125rem;
+            line-height: 25.2px;
+        }
+    }
+
+    .alpd-academy__role-alkaline {
+        position: relative;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        background-image: url("/assets/images/alpd-academy/manilla-folder-mobile.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+
+        @media screen and (min-width: 768px) {
+            z-index: 2;
+        }
+
+        @media screen and (min-width: 1024px) {
+            background-image: url("/assets/images/alpd-academy/manilla-folder-desktop.png");
+        }
+
+        figcaption,
+        .paragraph-caption {
+            font-size: 14px;
+            line-height: 18.2px;
+            text-align: center;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+
+            @media screen and (min-width: 1024px) {
+                margin-top: 0;
+                margin-bottom: 0;
+                text-align: left;
+            }
+        }
+
+        .alpd-academy__alkaline-wrapper {
+            position: relative;
+            z-index: 2;
+            background-image: url("/assets/images/alpd-academy/content-background.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+
+            @media screen and (min-width: 1024px) {
+                max-width: 56.25rem;
+                margin-left: auto;
+                margin-right: auto;
+
+                padding: 1rem;
+
+                background-color: #fafafa;
+
+                .wrapper {
+                    max-width: max-content;
+                }
+            }
+
+            @media screen and (min-width: 1366px) {
+                max-width: 68.5rem;
+                padding: 2.8937rem 0;
+                transform: translate(5.5rem, .625rem);
+            }
+        }
+
+        .alpd-academy__alkaline-in-bone-and-teeth {
+            @media screen and (min-width: 768px) {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        .alpd-academy__alkaline-legend {
+            width: 16.6288rem;
+            margin: 1.75rem auto;
+            height: fit-content;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            transform: matrix(0.99, -0.12, 0.1, 0.99, 0, 0);
+
+            @media screen and (min-width: 768px) {
+                flex: 0 0 auto;
+                margin: 0;
+                position: relative;
+                z-index: -1;
+            }
+
+            @media screen and (min-width: 1024px) {
+                transform: matrix(0.99, -0.12, 0.1, 0.99, 0, -18);
+                position: initial;
+                z-index: initial;
+            }
+
+
+            .alpd-academy__alkaline-legend-content {
+                background: $color-floral-white;
+                padding: 0.5rem 1rem;
+            }
+
+            .alpd-academy__alkaline-legend-title {
+                text-align: center;
+                text-transform: uppercase;
+                font-size: .875rem;
+                font-weight: 700;
+                line-height: 19.6px;
+            }
+
+            .alpd-academy__alkaline-legend-list {
+
+                li {
+                    list-style: none;
+                    font-size: .875rem;
+                    line-height: 19.6px;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .alpd-academy__alkaline-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            line-height: 25.2px;
+            margin-bottom: 1.5rem;
+        }
+
+        .alpd-academy__alkaline-content {
+            @media screen and (min-width: 1024px) {
+                &.alkaline-bone {
+                    max-width: 32.5rem;
+                    margin-left: 2rem;
+                }
+            }
+        }
+
+        .alpd-academy__alkaline-description {
+            font-weight: 400;
+            line-height: 22.4px;
+            margin-bottom: 3rem;
+
+            @media screen and (min-width: 768px) {
+                font-weight: 500;
+            }
+
+            @media screen and (min-width: 1024px) {
+                &--compact {
+                    max-width: 48.125rem;
+                    margin: auto;
+                }
+            }
+        }
     }
 }
 
 // -------------------------- ALPD Academy page ---------------------------------------------------
 
 /* 404 */
-.page__not_found{
+.page__not_found {
     text-align: center;
-    
-    &__title{
+
+    &__title {
         width: 9rem;
         margin: auto;
         margin-top: 9.2363rem;
         position: relative;
         z-index: 2;
-        
+
         /* @media screen and (min-width:700px) {
             width: 11.1875rem;
             margin-top: 14.5006rem;
         } */
-        
+
     }
-    &__text{
+
+    &__text {
         color: $color-white;
         margin-top: 1.9125rem;
         margin-bottom: 1.99rem;
         position: relative;
         z-index: 2;
+
         @media screen and (min-width:700px) {
             margin-bottom: 3rem;
         }
 
-        p{
+        p {
             font-family: 'Barlow';
             font-style: normal;
             font-weight: 600;
@@ -90,32 +287,33 @@
             line-height: 1.5625rem;
             max-width: 17.125rem;
             margin: auto;
+
             @media screen and (min-width:700px) {
-            max-width: 36.3125rem;
-            font-size: 1.3125rem;
-            line-height: 1.8125rem;
+                max-width: 36.3125rem;
+                font-size: 1.3125rem;
+                line-height: 1.8125rem;
             }
         }
 
-        :first-child{
+        :first-child {
             margin-bottom: 2rem;
         }
     }
 
-    .button{
+    .button {
         margin: auto;
         margin-bottom: 8.0938rem;
         position: relative;
         z-index: 2;
     }
 
-    .reference{
+    .reference {
         position: relative;
         max-width: 90rem;
         margin: auto;
     }
 
-    &__image{
+    &__image {
         position: absolute;
         min-width: 27.6944rem;
         max-width: 27.6944rem;
@@ -125,18 +323,20 @@
         @media screen and (min-width:500px) {
             left: 0;
         }
+
         @media screen and (min-width:800px) {
             max-width: 51.5356rem;
             /* top: -23.3125rem; */
             top: -19.3125rem;
             left: -3.875rem;
         }
+
         @media screen and (min-width:1200px) {
             left: 0;
         }
     }
 
-    .red-string{
+    .red-string {
         position: absolute;
         transform: rotate(7.51deg);
         top: 22.4375rem;
@@ -146,33 +346,39 @@
             transform: rotate(5.51deg);
             top: 21.6875rem;
         }
+
         @media screen and (min-width:700px) {
             transform: rotate(-4.49deg);
             top: 20.8125rem;
             left: -1.8125rem;
             width: 105vw;
         }
+
         @media screen and (min-width:1500px) {
             transform: rotate(-3.49deg);
             top: 14.375rem;
             left: -21rem;
             width: 362vw;
         }
+
         @media screen and (min-width:1690px) {
             transform: rotate(-2.49deg);
             top: 15.6875rem;
             left: -21rem;
             width: 362vw;
         }
+
         @media screen and (min-width:2020px) {
             top: 12.5rem;
             left: -43.1875rem;
             width: 423vw;
         }
+
         @media screen and (min-width:2340px) {
             top: 14.4375rem;
             transform: rotate(-1.49deg);
         }
     }
-} 
+}
+
 /* 404 */
