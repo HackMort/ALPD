@@ -1,0 +1,26 @@
+.references{
+    margin: auto;
+    max-width: 20rem;
+    margin-bottom: 1.5625rem;
+    
+    
+    @media screen and (min-width:600px) {
+        max-width: 75rem;
+        margin-bottom: 7.1212rem;
+    }
+    span,p,a{
+        color: white;
+    }
+
+    p, a{
+        font-family: 'Barlow';
+        font-style: normal;
+        font-weight: 400;
+        font-size: .875rem;
+        line-height: 1.3125rem;
+    }
+
+    span{
+        font-weight: 900;
+    }
+}
