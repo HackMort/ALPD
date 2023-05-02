@@ -3,10 +3,86 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="ALPD Academy" pageClass="alpd__academy">
-  <h1>ALPD PAGE</h1>
-  <p>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellat
-    aliquam sed assumenda inventore, accusamus dolorem? Ratione, eos architecto!
-    Atque repellendus saepe inventore voluptates illum, totam in illo quo. In?
-  </p>
+  <section class="section alpd-academy__role" id="role-of-alpd">
+    <h2 class="alpd-academy__role-title">
+        What you may not know about alkaline phosphatase (ALP)
+    </h2>
+    <h4 class="alpd-academy__role-subtitle">
+        Why is it important to have sufficient levels of alkaline phosphatase?
+    </h4>
+    <p class="alpd-academy__role-description">
+        Alkaline phosphatase is a ubiquitous enzyme essential to multiple systems of the body, including the skeletal system where it is responsible for healthy mineralization of bones and teeth.1-4
+    </p>
+
+    <article class="alpd-academy__role-alkaline">
+        <div class="red-string"></div>
+        <picture class="alpd-academy__alkaline-manillafolder">
+            <source srcset="/assets/images/alpd-academy/manilla-folder-desktop.png" media="(min-width: 1024px)">
+            <source srcset="/assets/images/alpd-academy/manilla-folder-tablet.png" media="(min-width: 768px)">
+            <img src="/assets/images/alpd-academy/manilla-folder-mobile.png" alt="">
+        </picture>
+        <div class="alpd-academy__alkaline-content">
+            
+            <div class="alpd-academy__alkaline-row">
+                <div class="alpd-academy__alkaline-image">
+                    <picture>
+                        <source srcset="/assets/images/alpd-academy/Artboard 3@2x 1-desktop.png" media="(min-width: 1024px)">
+                        <source srcset="/assets/images/alpd-academy/KMobile-NormalALP@2x 1-tablet.png" media="(min-width: 500px)">
+                        <img src="/assets/images/alpd-academy/KMobile-NormalALP@2x 1-mobile.png" alt="">
+    
+                        <figcaption>Image created for Alexion Pharmaceuticals, Inc. for illustrative purposes.</figcaption>
+                    </picture>
+                </div>
+    
+                <div class="alpd-academy__alkaline-in-bone-and-teeth">
+                    <div class="alpd-academy__alkaline-legend">
+                        <div class="alpd-academy__alkaline-legend-content">
+                            <p class="alpd-academy__alkaline-legend-title">
+                                LEGEND
+                            </p>
+                            <ul class="alpd-academy__alkaline-legend-list">
+                                <li><strong>Ca2+:</strong> Calcium</li>
+                                <li><strong>CNS:</strong> Central nervous system</li>
+                                <li><strong>GABA:</strong> Gamma-aminobutyric acid</li>
+                                <li><strong>Pi:</strong> Inorganic phosphate</li>
+                                <li><strong>PL:</strong> Pyroxidal</li>
+                                <li><strong>PLP:</strong> Pyridoxal 5’-phosphate</li>
+                                <li><strong>PPi:</strong> Inorganic pyrophosphate</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="alpd-academy__alkaline-content">
+                        <h4 class="alpd-academy__alkaline-title">
+                            Alkaline phosphatase in bone and teeth
+                        </h4>
+                        <p class="alpd-academy__alkaline-description">
+                            Under normal conditions, alkaline phosphatase dephosphorylates inorganic pyrophosphate (PPi) and releases inorganic phosphate (Pi), which then binds with calcium to form hydroxyapatite crystals—the building blocks of strong bones.1,4,5
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="alpd-academy__alkaline-row">
+                <div class="alpd-academy__alkaline-image">
+                    <picture>
+                        <source srcset="/assets/images/alpd-academy/KDesktop-neurologic_normal@2x 1-desktop.png" media="(min-width: 1024px)">
+                        <source srcset="/assets/images/alpd-academy/KMobile-Neurologic_normal@2x 1-tablet.png" media="(min-width: 500px)">
+                        <img src="/assets/images/alpd-academy/KMobile-Neurologic_normal@2x 1-mobile.png" alt="">
+    
+                        <figcaption>Image created for Alexion Pharmaceuticals, Inc. for illustrative purposes.</figcaption>
+                    </picture>
+                </div>
+                <div class="alpd-academy__alkaline-nervous-system">
+                    <div class="alpd-academy__alkaline-content">
+                        <h4 class="alpd-academy__alkaline-title">
+                            Alkaline phosphatase in the central nervous system
+                        </h4>
+                        <p class="alpd-academy__alkaline-description">
+                            Alkaline phosphatase is also responsible for dephosphorylating pyridoxal 5’-phosphate (PLP, the active form of vitamin B6) to pyridoxal (PL), allowing PL to cross the blood–brain barrier where it is regenerated as PLP. The buildup of PLP in systemic circulation leads to deficiency of vitamin B6 in the central nervous system, which results in seizures in infants.1
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+  </section>
 </Layout>
