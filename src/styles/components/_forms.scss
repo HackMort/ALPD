@@ -1,5 +1,6 @@
 input {
   width: 100%;
+  outline: none;
 
   &[type="submit"] {
     cursor: pointer;
@@ -8,9 +9,9 @@ input {
   &[type="checkbox"],
   &[type="radio"] {
     color: currentColor;
-    width: 2rem;
-    height: 2rem;
-    border: 3px solid currentColor;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 2px solid currentColor;
     transform: translateY(-0.075em);
 
     display: flex;
@@ -45,17 +46,48 @@ input {
     position: relative;
 
     &:checked {
-      background-color: currentColor;
-      border-color: currentColor;
+        background-color: currentColor;
+        border-color: currentColor;
+      }
+
+    &::before {
+        content: "";
+        position: absolute;
+        transition: 120ms transform ease-in-out;
+        border: solid transparent;
+
+        right: 50%;
+        top: 45%;
+        width: 7px;
+        height: 15px;
+
+        border-width: 0 2px 2px 0;
+        margin: -1px -1px 0 -1px;
+        transform: rotate(45deg) translate(-50%, -50%);
+        z-index: 2;
     }
+
+    &:checked {
+        &::before {
+          border: solid $color-white;
+          border-width: 0 2px 2px 0;
+        }
+      }
   }
+}
+
+.form__control-group {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        @include flex-gap(1.5rem)
+    }
 }
 
 .form__control {
   display: block;
   position: relative;
   padding-bottom: 0;
-  margin-bottom: 2rem;
+  margin-bottom: .75rem;
 
   transition: all 100ms ease-in-out;
 
@@ -87,33 +119,22 @@ input {
     }
   }
 
-  &[data-required="true"] {
-
-    .form__control-label::after,
-    .form__control-legend::after {
-      content: '*';
-      color: $color-red;
-      display: inline-block;
-      margin-left: .25rem;
-    }
-  }
-
   .form__control-input {
-    height: 2.9375rem;
-    padding: .625rem 1.875rem;
-    background-color: $color-white;
+    height: 2rem;
+    padding: .3125rem 0;
+    background-color: transparent;
     width: 100%;
 
-    outline: 1px solid $color-black;
+    border-bottom: 1px solid $color-black;
 
     color: $color-black;
     font-size: 1.125rem;
-    font-weight: 300;
+    font-weight: 400;
 
     &::placeholder {
-      color: $color-black;
+      color: $color-granite-grey;
       font-size: 1.125rem;
-      font-weight: 300;
+      font-weight: 500;
     }
   }
 
@@ -163,11 +184,11 @@ input {
 
   .form__control-checkbox {
 
-    align-items: center;
+    align-items: flex-start;
 
     .form__control-label {
       font-size: 1rem;
-      font-weight: 300;
+      font-weight: 400;
       line-height: 17.5px;
       cursor: pointer;
 
@@ -180,9 +201,9 @@ input {
   &.form__control--invalid {
     &[data-touched="true"][data-required="true"][data-is-valid="false"] {
 
-      .form__control-label {
-        color: $color-red;
-      }
+    //   .form__control-label {
+    //     color: $color-red;
+    //   }
 
       .form__control-input,
       .form__control-select-wrapper {
@@ -194,4 +215,85 @@ input {
       }
     }
   }
+}
+
+.form__control--checkbox {
+    margin-bottom: 1.75rem;
+
+    .form__control-error {
+        top: 90%;
+    }
+}
+
+.form__control-files {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.form__control-file {
+    .form__control-input-file {
+        height: 2.375rem;
+        width: max-content;
+        background: transparent;
+        border-radius: .25rem;
+        border: 1px solid $color-red;
+
+        padding: .5rem 1rem;
+        margin-bottom: .5rem;
+
+        display: flex;
+        align-items: center;
+
+        input[type="file"] {
+            display: none;
+        }
+
+        @media screen and (min-width: 768px) {
+            height: 2.9375rem;
+        }
+
+        label {
+            font-family: Inter, Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            color: $color-red;
+            display: flex;
+            cursor: pointer;
+            font-size: .8125rem;
+            line-height: 13px;
+
+            align-items: center;
+
+            @media screen and (min-width: 768px) {
+                font-size: 1.125rem;
+                line-height: 18px;
+            }
+
+            &::after {
+                margin-left: .5rem;
+            }
+        }
+
+        &--take {
+            label::after {
+                content: url("/assets/icons/camera-red.svg");
+            }
+        }
+
+        &--upload {
+            label::after {
+                content: url("/assets/icons/upload-red.svg");
+            }
+        }
+    }
+
+    .form__control-label {
+        color: $color-granite-grey;
+        font-weight: 500;
+    }
+}
+
+label a {
+    font-weight: 400;
 }
