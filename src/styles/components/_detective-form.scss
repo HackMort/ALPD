@@ -1,0 +1,43 @@
+.detective-form {
+    .detective-form__control-label {
+        font-weight: 600;
+        line-height: 20.8px;
+
+        margin-bottom: .5rem;
+
+        &:last-of-type {
+            margin-top: 1.25rem;
+        }
+    }
+
+    .form__control .form__control-input {
+        width: 75%;
+    }
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: column;
+
+        .form__control .form__control-input {
+            width: 100%;
+        }
+
+        .detective-form__control-label,
+        .form__control--files {
+        }
+
+        .form__control--email,
+        .form__control--checkbox,
+        .form__submit {
+        }
+
+        .form__submit {
+            margin-top: 1rem;
+
+            .button {
+                padding-left: 3.6563rem;
+                padding-right: 3.6563rem;
+            }
+        }
+    }
+}
