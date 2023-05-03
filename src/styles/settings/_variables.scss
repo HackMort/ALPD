@@ -17,6 +17,7 @@ $colors: (
     "white": #FFFFFF,
     "cinnabar": #E93C2B,
     "floral-white": #FFFAED,
+    "saffron-mango": #F8BA5D
 );
 
 $color-folder: map-get($colors, "folder");
@@ -32,3 +33,4 @@ $color-black: map-get($colors, "black");
 $color-white: map-get($colors, "white");
 $color-cinnabar: map-get($colors, "cinnabar");
 $color-floral-white: map-get($colors, "floral-white");
+$color-saffron-mango: map-get($colors, "saffron-mango");

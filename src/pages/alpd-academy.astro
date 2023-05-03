@@ -92,88 +92,115 @@ import Layout from "../layouts/Layout.astro";
     <div class="wrapper alpd-academy__low-header">
         <h1 class="alpd-academy__low-title">MENACING Mutations</h1>
         <p class="alpd-academy__low-description">
-            In hypophosphatasia, loss of function mutations in the ALPL gene result in deficient alkaline phosphatase enzyme activity, which leads to accumulation of ALP-phosphorylated substrates: inorganic pyrophosphate (PPi), pyridoxal 5’-phosphate (PLP), and phosphoethanolamine (PEA).<sup>1,5</sup>
+            In hypophosphatasia, loss of function mutations in the <span class="text--italic">ALPL</span> gene result in deficient alkaline phosphatase enzyme activity, which leads to accumulation of ALP-phosphorylated substrates: inorganic pyrophosphate (PPi), pyridoxal 5’-phosphate (PLP), and phosphoethanolamine (PEA).<sup>1,5</sup>
         </p>
         <table class="alpd-academy__mutations-table">
             <thead>
                 <tr>
                     <th></th>
-                    <th>ALP</th>
-                    <th>PPi<sup>a</sup></th>
-                    <th>PLP<sup>b</sup></th>
-                    <th>PEA<sup>c</sup></th>
+                    <th><div class="content color--saffron-mango">ALP</div></th>
+                    <th><div class="content color--white">PPi<sup>a</sup></div></th>
+                    <th><div class="content color--white">PLP<sup>b</sup></div></th>
+                    <th><div class="content color--white">PEA<sup>c</sup></div></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>HPP</td>
-                    <td><img src="/assets/icons/arrow-down-orange.svg" alt=""></td>
-                    <td><img src="/assets/icons/arrow-up-blue.svg" alt=""></td>
-                    <td><img src="/assets/icons/arrow-up-blue.svg" alt=""></td>
-                    <td><img src="/assets/icons/arrow-up-blue.svg" alt=""></td>
+                    <td><div class="content color--saffron-mango">HPP</div></td>
+                    <td><div class="content"><img src="/assets/icons/arrow-down-orange.svg" alt=""></div></td>
+                    <td><div class="content"><img src="/assets/icons/arrow-up-blue.svg" alt=""></div></td>
+                    <td><div class="content"><img src="/assets/icons/arrow-up-blue.svg" alt=""></div></td>
+                    <td><div class="content"><img src="/assets/icons/arrow-up-blue.svg" alt=""></div></td>
                 </tr>
             </tbody>
         </table>
-        <p class="alpd-academy__mutations-table-footnote">
-            <sup>a</sup>PPi tests are done in research settings only and are not commercially available.<sup>9</sup>
-            <sup>b</sup>PLP levels may be elevated in individuals taking supplements containing vitamin B<sup>6</sup>. PLP levels may also appear as normal or low in patients with HPP. This does not invalidate the HPP diagnosis.<sup>13</sup>
-            <sup>c</sup>PEA levels may be normal in some patients with hypophosphatasia.
-        </p>
+        <ul class="alpd-academy__mutations-table-footnote">
+            <li><sup class="positioned">a</sup>PPi tests are done in research settings only and are not commercially available.<sup>9</sup></li>
+            <li><sup class="positioned">b</sup>PLP levels may be elevated in individuals taking supplements containing vitamin B<sup>6</sup>. PLP levels may also appear as normal or low in patients with HPP. This does not invalidate the HPP diagnosis.<sup>13</sup></li>
+            <li><sup class="positioned">c</sup>PEA levels may be normal in some patients with hypophosphatasia.</li>
+        </ul>
     </div>
     <article class="alpd-academy__deficient">
         <div class="alpd-academy__deficient-content">
-            <picture class="alpd-academy__deficient-pic">
-                <source srcset="/assets/images/alpd-academy/k-deficient-desktop.png" media="(min-width: 1024px)">
-                <source srcset="/assets/images/alpd-academy/k-deficient-tablet.png" media="(min-width: 500px)">
-                <img src="/assets/images/alpd-academy/k-deficient-mobile.png" alt="">
-                <figcaption>
-                    Image created for Alexion Pharmaceuticals, Inc. for illustrative purposes.
-                </figcaption>
-            </picture>
-
-            <div class="alpd-academy__deficient-content">
-                <h4 class="alpd-academy__deficient-paragraph-title">
-                    Deficient alkaline phosphatase in bone and teeth
-                </h4>
-                <p class="alpd-academy__deficient-paragraph">
-                    In hypophosphatasia, accumulation of PPi blocks hydroxyapatite crystal formation and bone mineralization, and excess calcium can lead to complications, such as<sup>1,10,11</sup>:
-                </p>
-                <ul class="alpd-academy__symptoms-list">
-                    <li>nephrocalcinosis</li>
-                    <li>kidney disorders</li>
-                    <li>chondrocalcinosis</li>
-                    <li>pseudogout</li>
-                </ul>
+            <div class="wrapper">
+                <picture class="alpd-academy__deficient-pic">
+                    <source srcset="/assets/images/alpd-academy/k-deficient-desktop.png" media="(min-width: 1024px)">
+                    <source srcset="/assets/images/alpd-academy/k-deficient-tablet.png" media="(min-width: 500px)">
+                    <img src="/assets/images/alpd-academy/k-deficient-mobile.png" alt="">
+                        <figcaption>
+                            Image created for Alexion Pharmaceuticals, Inc. for illustrative purposes.
+                        </figcaption>
+                </picture>
             </div>
 
-            <picture class="alpd-academy__deficient-pic">
-                <source srcset="/assets/images/alpd-academy/k-neurlogic-desktop.png" media="(min-width: 1024px)">
-                <source srcset="/assets/images/alpd-academy/k-neurlogic-tablet.png" media="(min-width: 500px)">
-                <img src="/assets/images/alpd-academy/k-neurlogic-mobile.png" alt="">
-                <figcaption>
-                    Image created for Alexion Pharmaceuticals, Inc. for illustrative purposes.
-                </figcaption>
-            </picture>
             <div class="alpd-academy__deficient-content">
-                <h4 class="alpd-academy__deficient-paragraph-title">
-                    Deficient alkaline phosphatase in the central nervous system (CNS)
-                </h4>
-                <p class="alpd-academy__deficient-paragraph">
-                    Pyridoxal 5`-phosphate (PLP) (ie, the active form of vitamin B6) deficiency in the CNS results in deficient GABA activity.<sup>1</sup>
-                </p>
-                <p class="alpd-academy__deficient-paragraph">
-                    Though the direct cause is unknown, hypophosphatasia is also associated with other neurologic symptoms in pediatrics and adults, like:<sup>8,12</sup>
-                </p>
-                <ul class="alpd-academy__symptoms-list">
-                    <li>fatigue</li>
-                    <li>headaches</li>
-                    <li>sleep disturbance</li>
-                    <li>vertigo</li>
-                    <li>mood (depression, anxiety)</li>
-                </ul>
+                <div class="wrapper">
+                    <h4 class="alpd-academy__deficient-paragraph-title">
+                        Deficient alkaline phosphatase in bone and teeth
+                    </h4>
+                    <p class="alpd-academy__deficient-paragraph">
+                        In hypophosphatasia, accumulation of PPi blocks hydroxyapatite crystal formation and bone mineralization, and excess calcium can lead to complications, such as<sup>1,10,11</sup>:
+                    </p>
+                    <ul class="alpd-academy__symptoms-list">
+                        <li>nephrocalcinosis</li>
+                        <li>chondrocalcinosis</li>
+                        <li>kidney disorders</li>
+                        <li>pseudogout</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <picture class="alpd-academy__deficient-pic">
+                    <source srcset="/assets/images/alpd-academy/k-neurlogic-desktop.png" media="(min-width: 1024px)">
+                    <source srcset="/assets/images/alpd-academy/k-neurlogic-tablet.png" media="(min-width: 500px)">
+                    <img src="/assets/images/alpd-academy/k-neurlogic-mobile.png" alt="">
+                        <figcaption>
+                            Image created for Alexion Pharmaceuticals, Inc. for illustrative purposes.
+                        </figcaption>
+                </picture>
+            </div>
+            <div class="alpd-academy__deficient-content">
+                <div class="wrapper">
+                    <h4 class="alpd-academy__deficient-paragraph-title">
+                        Deficient alkaline phosphatase in the central nervous system (CNS)
+                    </h4>
+                    <p class="alpd-academy__deficient-paragraph">
+                        Pyridoxal 5`-phosphate (PLP) (ie, the active form of vitamin B6) deficiency in the CNS results in deficient GABA activity.<sup>1</sup>
+                    </p>
+                    <p class="alpd-academy__deficient-paragraph">
+                        Though the direct cause is unknown, hypophosphatasia is also associated with other neurologic symptoms in pediatrics and adults, like:<sup>8,12</sup>
+                    </p>
+                    <ul class="alpd-academy__symptoms-list grid-rows-3">
+                        <li>fatigue</li>
+                        <li>vertigo</li>
+                        <li>headaches</li>
+                        <li class="row-span-2">mood (depression, anxiety)</li>
+                        <li>sleep disturbance</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </article>
+    <div class="alpd-academy__call-out">
+        <div class="wrapper">
+            <p class="alpd-academy__call-out-text">
+                The third substrate impacted by low levels of alkaline phosphatase is <span class="text--700">phosphoethanolamine (PEA)</span>. While the impact on the body is not fully understood, it is important to recognize this third substrate as it can be used as a <span class="text--700">testing method to confirm a hypophosphatasia</span> diagnosis.<sup>5,13,14</sup>
+            </p>
+        </div>
+    </div>
+    <div class="alpd-academy__persistently-low-alp-container">
+        <div class="red-string persistently-low-red-string"></div>
+        <img class="persistently-low-pin" src="/assets/images/alpd-academy/red-pin.png" alt="">
+        <div class="alpd-academy__persistently-low-alp-content">
+            <p>
+                Patients with persistently low alkaline phosphatase (ALP) can experience debilitating hypophosphatasia symptoms that may progress, and wide-ranging systemic complications.<sup>1-4, 15</sup>
+            </p>
+            <p class="color--red">
+                Persistently low ALP can be defined as 2 or more age- and sex-adjusted ALP levels below normal range in intervals of more than 30 days.<sup>5,16,17</sup>
+            </p>
+        </div>
+    </div>
   </section>
 
 </Layout>

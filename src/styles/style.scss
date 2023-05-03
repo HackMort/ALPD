@@ -248,12 +248,150 @@
     }
 }
 
-.alpd-academy__deficient {
-    background-image: url("/assets/images/alpd-academy/manilla-folder-mobile.png");
+.alpd-academy__low {
+    margin-top: 3rem;
+
+    figcaption {
+        font-size: 14px;
+        line-height: 18.2px;
+        text-align: center;
+        margin: 1rem 0;
+    }
+    
+    .alpd-academy__low-title {
+        color: $color-white;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+    }
+
+    .alpd-academy__low-description {
+        color: $color-white;
+        font-size: 1.125rem;
+        line-height: 25.2px;
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+    }
+
+    .alpd-academy__mutations-table {
+        border: 1px solid $color-white;
+        width: 100%;
+
+        margin-bottom: 1rem;
+
+        img {
+            width: 1.1013rem;
+        }
+
+        th, td {
+            border: 1px solid $color-white;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        th .content {
+            padding: .125rem 0;
+        }
+
+        td .content {
+            padding: .375rem 0;
+        }
+    }
+
+    .alpd-academy__mutations-table-footnote {
+        margin-bottom: 1.5rem;
+
+       li {
+        color: $color-white;
+        line-height: 18.2px;
+        position: relative;
+        transform: translateX(.375rem);
+
+        width: calc(100% - .375rem);
+
+        .positioned {
+            position: absolute;
+            right: 100%;
+            top: .3125rem;
+        }
+       }
+    }
+
+    .alpd-academy__deficient {
+        background-image: url("/assets/images/alpd-academy/manilla-folder-mobile.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        padding: 2.5rem 0;
+    
+        .alpd-academy__deficient-content {
+            background-color: $color-white;
+            padding: 1rem 0;
+            width: calc(100% - 6px);
+        }
+    }
+
+    .alpd-academy__deficient-paragraph-title {
+        font-size: 1.125rem;
+        font-weight: 600;
+        line-height: 25.2px;
+        margin-bottom: 1.5rem;
+    }
+
+    .alpd-academy__deficient-paragraph {
+        font-weight: 400;
+        line-height: 22.4px;
+        margin-bottom: 1rem;
+    }
+
+    .alpd-academy__symptoms-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        li {
+            list-style-type: none;
+            display: flex;
+            align-items: flex-start;
+
+            &::before {
+                content: "·";
+                font-size: 2.375rem;
+                line-height: 0;
+                margin-top: .3125rem;
+                margin-right: .5rem;
+            }
+        }
+    }
+}
+
+.alpd-academy__call-out {
+    background-image: url("/assets/images/alpd-academy/call-out-bg-mobile.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
 
-    .alpd-academy__deficient-content {
+    padding: 2rem 0;
+
+    .alpd-academy__call-out-text {
+        line-height: 22.4px;
+        font-weight: 600;
+        text-align: center;
+    }
+}
+
+.alpd-academy__persistently-low-alp-container {
+
+    .persistently-low-red-string {
+
+    }
+
+    .persistently-low-pin {
+
+    }
+
+    .alpd-academy__persistently-low-alp-content {
         
     }
 }
