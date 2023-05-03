@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="HPP Profile" pageClass="hpp__profile" showISI={false}>
+  <!-- Profiling hypophostasia (HPP) -->
+  <section id="profiling-hypophostasia" class="profiling-hypophostasia">
+
+
+    <div class="hpp__profile__red-string-bg">
+      <h2 class="hpp__profile__hidden-title">11A0763</h2>
+      <div class="wrapper hpp__profile__content">
+          <h2 class="hpp__profile__main-title color--red text--uppercase">Profiling Hypophosphatasia (HPP)</h2>
+          <h3 class="hpp__profile__sub-title color--white">
+              Take a look at the case file of hypophosphatasia to learn how it stays hidden and how it may be causing harm to your patients
+          </h3>
+          <p class="hpp__profile__paragraph hpp__profile__paragraph--sub color--white">
+              Hypophosphatasia is an inherited, multisystemic, rare metabolic disorder characterized by persistently low age- and sex- adjusted alkaline phosphatase (ALP) activity that may progress over time.<sup class="color--white">1,2</sup>
+          </p>
+
+      </div>
+
+      <div class="hpp__profile__image-container">
+        <picture>
+          <source srcset="/assets/images/hpp-profile/hpp-profile.png" media="(min-width: 700px)"/>
+          <img class="hpp__profile__image" src="/assets/images/hpp-profile/hpp-profile-mb.png" alt="HPP Profile">
+        </picture>
+      </div>
+  
+      <div class="hpp__profile__red-frame-disclaimer">
+        <p class="hpp__profile__paragraph hpp__profile__paragraph--sub hpp__profile__red-frame-disclaimer--content color--white text--center">
+          Hypophosphatasia may become debilitating and can cause damage to multiple systems in the body beyond the skeletal system.3-5
+        </p>
+      </div>
+    </div>
+
+  </section>
+</Layout>

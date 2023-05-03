@@ -33,3 +33,199 @@
         margin-bottom: 2.5rem;
     }
 }
+
+/* HPP Profile Page */
+.hpp__profile {
+    
+    .profiling-hypophostasia {
+        /* max-width: 50%;
+        margin: auto;
+
+        @media screen and (max-width: 768px) {
+            max-width: 100%;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            max-width: 70%;
+        }
+
+        @media screen and (min-width: 1024px) and (max-width: 1200px) {
+            max-width: 60%;
+        } */
+    }
+
+    &__content {
+        margin-bottom: 2rem;
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            max-width: 70%;
+        }
+
+        @media screen and (min-width: 1024px) and (max-width: 1200px) {
+            max-width: 60%;
+        }
+
+        @media screen and (min-width: 1201px) {
+            max-width: 50%;
+        }
+    }
+
+    &__main-title {
+        margin: 3.1875rem 8rem 0 0;
+        font-weight: 600;
+        @include media('tablet') {
+            text-align: center;
+            margin: 3.1875rem auto 0 auto;
+        }
+    }
+
+    &__paragraph {
+        margin: 1rem 0 1rem 0;
+        &--sub {
+            font-size: 1.125rem;
+            @include media('tablet') {
+                text-align: center;
+            }
+        }
+
+        @include media('tablet') {
+            text-align: center;
+        }
+    }
+
+    &__sub-title {
+        font-size: 1.125rem;
+        font-weight: 600;
+        @include media('tablet') {
+            text-align: center;
+        }
+    }
+
+    &__image-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            max-width: 70%;
+            margin: auto;
+        }
+
+        @media screen and (min-width: 1024px) and (max-width: 1200px) {
+            max-width: 60%;
+            margin: auto;
+        }
+
+        @media screen and (min-width: 1201px) {
+            max-width: 50%;
+            margin: auto;
+        }
+
+        @media screen and (min-width: 768px) {
+            position: relative;
+            z-index: 2;
+        }
+    }
+
+    &__red-frame-disclaimer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--content {
+            background-image: url(/assets/images/red-frame.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            
+            font-size: 1rem;
+               
+            @media screen and (max-width: 768px) {  
+                background-image: url(/assets/images/sticky-card.png);
+                color: $color-black;
+                z-index: 2;
+                margin: -2rem 0 0 0;
+            }
+
+            @media screen and (max-width: 495px) { 
+                padding: 6rem;
+            }
+
+            @media screen and (min-width: 496px) and (max-width: 600px) { 
+                padding: 7rem;
+            }
+
+            @media screen and (min-width: 601px) and (max-width: 768px) { 
+                padding: 10rem;
+            }
+
+            @media screen and (min-width: 769px) and (max-width: 1024px) { 
+                font-size: 1.25rem;
+                padding: 4rem;
+                max-width: 60%;
+                margin: -3rem 0 1rem 0;
+            }
+
+            @media screen and (min-width: 1025px) and (max-width: 1100px) { 
+                font-size: 1.25rem;
+                padding: 4rem 5rem;
+                max-width: 46%;
+                margin: -2rem 0 1rem 0;
+            }
+
+            @media screen and (min-width: 1101px) and (max-width: 1366px) {
+                font-size: 1.25rem;
+                padding: 4rem 5rem;
+                max-width: 42%;
+                margin: -2rem 0 1rem 0;
+            }
+
+            @media screen and (min-width: 1367px) {
+                font-size: 1.25rem;
+                padding: 8rem 5rem;
+                max-width: 30%;
+                margin: -8rem 0 1rem 0;
+            }
+        }
+    }
+
+    &__red-string-bg {
+        overflow: clip;
+        position: relative;
+        /* Just a inclined line troughing from the left to the right*/
+        &::before {
+            content: '';
+            position: absolute;
+            top: 300px;
+            left: 0;
+            width: calc(100vw * 2);
+            height: 2px;
+            background-color: $color-red;
+            transform: rotate(45deg);
+            transform-origin: left;
+
+            @media screen and (min-width: 769px) {
+                //Rotate the line to the right side
+                transform: rotate(333deg);
+                transform-origin: top;
+                top: 165px;
+                left: -150px;
+            }
+        }
+    }
+
+    &__hidden-title {
+        display: none;
+
+        @media screen and (min-width: 769px) {
+            display: block;
+            font-size: 8rem;
+            font-weight: 600;
+            margin: 0 0 1rem 0;
+            position: absolute;
+            z-index: 0;
+            top: 250px;
+            left: 22%;
+            color: $color-brown;
+        }
+    }
+}

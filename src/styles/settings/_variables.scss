@@ -16,6 +16,7 @@ $colors: (
     "black": #000000,
     "white": #FFFFFF,
     "cinnabar": #E93C2B,
+    "brown": #473831,
 );
 
 $color-folder: map-get($colors, "folder");
@@ -30,3 +31,4 @@ $color-texture: map-get($colors, "texture");
 $color-black: map-get($colors, "black");
 $color-white: map-get($colors, "white");
 $color-cinnabar: map-get($colors, "cinnabar");
+$color-brown: map-get($colors, "brown");
