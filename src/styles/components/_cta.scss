@@ -1,0 +1,186 @@
+.cta{
+
+    p{
+        color: $color-white;
+    }
+
+    &__text{
+        margin-bottom: 1.0325rem;
+        font-size: 1.125rem;
+        
+    }
+    .alpd-academy{
+        padding-top: 8.7462rem;
+        padding-bottom: 10.5175rem;
+        text-align: center;
+        position: relative;
+
+        a{
+            margin: auto; 
+        }
+        .cta__text{
+            width: 251px;
+            margin: auto;
+            margin-bottom: 1.0325rem;
+            @media screen and (min-width:500px) {
+                width: unset;
+            }
+        }
+
+        .red-string{
+            &.mod-1{
+                display: none;
+                @media screen and (min-width:768px) {
+                    display: block;
+                    position: absolute;
+                    color: red;
+                    width: 100vw;
+                    top: -68px;
+                    left: 0;
+                    transform: rotate(356deg);
+                }
+            }
+
+            &.mod-2{
+                display: none;
+                @media screen and (min-width:768px) {
+                    display: block;
+                    position: absolute;
+                    color: red;
+                    width: 100vw;
+                    top: -54px;
+                    left: 0;
+                    transform: rotate(360deg);
+                }
+                @media screen and (min-width:1700px) {
+                    transform: rotate(359deg);
+                    top: -42px;
+                }
+            }
+
+            &.mod-3{
+                display: none;
+                @media screen and (min-width:768px) {
+                    display: block;
+                    position: absolute;
+                    color: red;
+                    width: 100vw;
+                    bottom: -54px;
+                    transform: rotate(357deg);
+                }
+            }  
+            .red-circle{
+                display: none;
+            }         
+        }
+    }
+
+    .hpp-profile{
+        text-align: center;
+        background-image: url('/assets/images/cta-circle.png');
+        background-repeat: no-repeat;
+        background-size:665px;
+        background-position: center;
+        height: 18rem;
+        position: relative;
+        padding-top: 8.7462rem;
+        padding-bottom: 10.5175rem;
+
+        a{
+            margin: auto;
+        }
+
+        .red-string{
+            display: none;
+
+            &.mod-3{
+            @media screen and (min-width:768px) {
+                display: block;
+                position: absolute;
+                color: red;
+                width: 100vw;
+                bottom: -54px;
+                transform: rotate(357deg);
+            }
+        }
+        }
+        .cta__text{
+            padding-top: 109px;
+        }   
+    }
+
+    .identifying-hpp{
+        padding-top: 3.625rem;
+        padding-bottom: 3.625rem;
+        text-align: center;
+        background-image: url('/assets/images/identifying-mobile.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 19.5625rem;
+        position: relative;
+        
+        @media screen and (min-width:376px) {
+            background-size:665px;
+        }
+        @media screen and (min-width:665px) {
+            background-image: url('/assets/images/identifying-desktop.png');
+            background-size: cover;
+            height: 39.4375rem;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        
+        a{
+            margin: auto;
+        }
+
+        .cta__text{
+            margin-top: 3rem;
+            @media screen and (min-width:665px) {
+                padding-top: 16rem;
+            }
+        }
+
+        &.mod-1{
+            display: none;
+            @media screen and (min-width:768px) {
+                display: block;
+                position: absolute;
+                color: red;
+                width: 100vw;
+                top: -68px;
+                left: 0;
+                transform: rotate(356deg);
+            }
+        }
+
+        &.mod-2{
+            display: none;
+            @media screen and (min-width:768px) {
+                display: block;
+                position: absolute;
+                color: red;
+                width: 100vw;
+                top: -54px;
+                left: 0;
+                transform: rotate(360deg);
+            }
+            @media screen and (min-width:1700px) {
+                transform: rotate(359deg);
+                top: -42px;
+            }
+        }
+
+        &.mod-3{
+            display: none;
+            @media screen and (min-width:768px) {
+                display: block;
+                position: absolute;
+                color: blue;
+                width: 100vw;
+                bottom: -64px;
+                transform: rotate(357deg);
+            }
+        }   
+    }
+}
