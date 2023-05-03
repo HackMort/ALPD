@@ -6,11 +6,12 @@
     }
 
     &__text{
+        color:white;
         margin-bottom: 1.0325rem;
         font-size: 1.125rem;
         
     }
-    .alpd-academy{
+    .variant-1{
         text-align: center;
         position: relative;
 
@@ -18,6 +19,7 @@
             margin: auto; 
         }
         .cta__text{
+            color:white;
             width: 251px;
             margin: auto;
             margin-bottom: 1.0325rem;
@@ -74,7 +76,7 @@
         }
     }
 
-    .hpp-profile{
+    .variant-2{
         text-align: center;
         background-image: url('/assets/images/cta-circle.png');
         background-repeat: no-repeat;
@@ -103,11 +105,12 @@
         }
         }
         .cta__text{
+            color:white;
             padding-top: 109px;
         }   
     }
 
-    .identifying-hpp{
+    .variant-3{
         padding-top: 3.625rem;
         padding-bottom: 3.625rem;
         text-align: center;
@@ -133,6 +136,7 @@
         }
 
         .cta__text{
+            color:white;
             font-family: 'Oswald';
             font-style: normal;
             font-weight: 700;

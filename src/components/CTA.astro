@@ -1,29 +1,30 @@
 ---
 type Props = {
   link: string;
-  buttonDescription: string;
+  buttonLabel: string;
   text: string;
-  LinkTarget?: string;
-  pageName?: string;
+  linkTarget?: string;
+  variation?: string;
+  className?: string;
 };
 
 const {
   link,
-  LinkTarget,
-  pageName, 
+  linkTarget,
+  variation, 
   text,
-  buttonDescription
+  buttonLabel,
+  className
 } = Astro.props;
 ---
 
-<div class="cta">
-    <div class={pageName}>
-        <p class="cta__text">{text}</p>
-        <a href={link} target={LinkTarget ? LinkTarget : "_self"} class="button">{buttonDescription}</a>
+<div class={`cta ${className ? className : ' '}`}>
+    <div class={variation ? variation : "variant-1"}>
+      <div class="cta__text" set:html={text}></div>
+        <a href={link} target={linkTarget ? linkTarget : "_self"} class="button">{buttonLabel}</a>
         <div class="red-string mod-1"></div >
         <div class="red-string mod-2"></div >
         <div class="red-string mod-3"></div >
-        <!-- <img src="/assets/images/cta-circle.png" alt="" class="red-circle"> -->
     </div>
 
 </div>
