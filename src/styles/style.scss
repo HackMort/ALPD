@@ -251,11 +251,22 @@
 .alpd-academy__low {
     margin-top: 3rem;
 
+    .alpd-academy__low-header {
+        @media screen and (min-width: 768px) {
+            text-align: center;
+            max-width: 35.625rem;
+        }
+    }
+
     figcaption {
         font-size: 14px;
         line-height: 18.2px;
         text-align: center;
         margin: 1rem 0;
+
+        @media screen and (min-width: 768px) {
+            margin: 0;
+        }
     }
     
     .alpd-academy__low-title {
@@ -277,6 +288,10 @@
         width: 100%;
 
         margin-bottom: 1rem;
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 2rem;
+        }
 
         img {
             width: 1.1013rem;
@@ -300,10 +315,24 @@
         td .content {
             padding: .375rem 0;
         }
+
+        @media screen and (min-width: 550px) {
+            th .content {
+                padding: .375rem 0;
+            }
+
+            td .content {
+                padding: .5rem 0;
+            }
+        }
     }
 
     .alpd-academy__mutations-table-footnote {
         margin-bottom: 1.5rem;
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 4rem;
+        }
 
        li {
         color: $color-white;
@@ -318,6 +347,10 @@
             right: 100%;
             top: .3125rem;
         }
+
+        @media screen and (min-width: 768px) {
+            text-align: left;
+        }
        }
     }
 
@@ -326,11 +359,83 @@
         background-size: 100% 100%;
         background-repeat: no-repeat;
         padding: 2.5rem 0;
+
+        @media screen and (min-width: 1024px) {
+            background-image: none;
+        }
     
-        .alpd-academy__deficient-content {
+        .alpd-academy__deficient-wrapper {
             background-color: $color-white;
             padding: 1rem 0;
             width: calc(100% - 6px);
+
+            @media screen and (min-width: 768px) {
+                width: calc(100% - 1rem);
+            }
+
+            @media screen and (min-width: 1024px) {
+                width: 100%;
+                position: relative;
+                background-image: url("/assets/images/alpd-academy/background-31.png");
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                background-color: transparent;
+
+                max-width: 72.5rem;
+                margin-left: auto;
+                margin-right: auto;
+
+                &::after {
+                    content: "";
+                    background-image: url("/assets/images/alpd-academy/flip-corner.png");
+                    background-repeat: no-repeat;
+                    position: absolute;
+
+                    width: 18.375rem;
+                    height: 8.375rem;
+
+                    bottom: 20px;
+                    right: 5px;
+                }
+            }
+
+            @media screen and (min-width: 1366px) {
+                &::after {
+                    bottom: 21px;
+                }
+            }
+        }
+    }
+
+    .alpd-academy__deficient-content {
+        @media screen and (min-width: 768px) {
+            width: 42.875rem;
+            margin-left: auto;
+            margin-right: auto;
+
+            text-align: center;
+
+            &.last {
+                .alpd-academy__deficient-paragraph-title {
+                    width: 21.875rem;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                .alpd-academy__deficient-paragraph {
+                    margin-left: auto;
+                    margin-right: auto;
+
+                    &:first-of-type {
+                        width: 31.25rem;
+                    }
+
+                    &:last-of-type {
+                        width: 32.25rem;
+                        margin-bottom: 2rem;
+                    }
+                }
+            }
         }
     }
 
@@ -345,6 +450,10 @@
         font-weight: 400;
         line-height: 22.4px;
         margin-bottom: 1rem;
+
+        @media screen and (min-width: 768px) {
+            font-weight: 500;
+        }
     }
 
     .alpd-academy__symptoms-list {
@@ -362,6 +471,93 @@
                 line-height: 0;
                 margin-top: .3125rem;
                 margin-right: .5rem;
+            }
+
+            @media screen and (min-width: 768px) {
+                font-weight: 500;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            column-gap: 2rem;
+            place-content: center;
+            grid-template-columns: repeat(2, minmax(0, max-content));
+
+            &--underlined {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                grid-template-rows: repeat(2, minmax(0, max-content));
+                align-items: center;
+
+                column-gap: 0;
+                row-gap: 1rem;
+
+                li {
+                    font-family: "veneer", sans-serif;
+                    font-weight: 400;
+                    font-size: 1.75rem;
+                    line-height: 39.2px;
+                    text-align: center;
+                    display: block;
+                    text-transform: uppercase;
+
+                    line-height: 100%;
+
+                    &::before {
+                        display: none;
+                    }
+
+                    &::after {
+                        content: "";
+                        width: 100%;
+                        height: .9375rem;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: contain;
+                    }
+
+                    > * {
+                        font-family: "veneer", sans-serif;
+                    }
+
+                    &:nth-child(1)::after {
+                        background-image: url("/assets/images/alpd-academy/fatigue-underline.png");
+                    }
+
+                    &:nth-child(2) {
+                        grid-row-start: 2;
+                        grid-column-start: 2;
+
+                        &::after {
+                            background-image: url("/assets/images/alpd-academy/vertigo-underline.png");
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        grid-row-start: 2;
+                        &::after {
+                            background-image: url("/assets/images/alpd-academy/headaches-underline.png");
+                        }
+                    }
+
+                    &:nth-child(4)::after {
+                        background-image: url("/assets/images/alpd-academy/mood-underline.png");
+                    }
+
+                    &:nth-child(5) {
+                        grid-row-start: 1;
+                        grid-column-start: 2;
+
+                        &::after {
+                            background-image: url("/assets/images/alpd-academy/sleep-disturbance-underline.png");
+                        }
+                    }
+                }
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            &--underlined {
+                margin-bottom: 3rem;
             }
         }
     }
