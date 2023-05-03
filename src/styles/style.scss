@@ -37,9 +37,9 @@
 
 // -------------------------- ALPD Academy page ---------------------------------------------------
 .alpd__academy {
-    width: 100%;
-    max-width: 90rem;
-    margin: auto;
+    // width: 100%;
+    // max-width: 90rem;
+    // margin: auto;
 }
 
 .alpd-academy__role {
@@ -245,6 +245,16 @@
                 }
             }
         }
+    }
+}
+
+.alpd-academy__deficient {
+    background-image: url("/assets/images/alpd-academy/manilla-folder-mobile.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    .alpd-academy__deficient-content {
+        
     }
 }
 
