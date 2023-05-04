@@ -19,12 +19,10 @@ const {
   className,
 } = Astro.props;
 
-const bypass = bypassModal ? "document-link" : ' ';
-const linkClasses = `button ${bypass}`;
+const linkClasses = `button ${bypassModal ? "document-link" : ' '}`;
 const targetAnchor = linkTarget ? linkTarget : "_self";
 const variant = variation ? variation : "variant-1";
-const customClass = className ? className : ' ';
-const mainClass = `cta ${customClass}`
+const mainClass = `cta ${className ? className : ' '}`
 
 ---
 
