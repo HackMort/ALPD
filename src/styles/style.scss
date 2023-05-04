@@ -336,5 +336,17 @@
             color: $color-brown;
         }
     }
+
+
+    .hpp-patients__section {
+        background-image: url(/assets/images/hpp-profile/frame-polaroid.png);
+        background-size: 500px;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        &--bg-white {
+            background-color: $color-white;
+        }
+    }	
 }
 /* HPP Profile page end */
