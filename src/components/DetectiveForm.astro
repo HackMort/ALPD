@@ -1,148 +1,165 @@
 <form class="detective-form" novalidate>
-    <p class="detective-form__control-label">
-        What should we call you, Detective?
-    </p>
+  <p class="detective-form__control-label">
+    What should we call you, Detective?
+  </p>
 
-    <div class="form__control-group">
-        <div
-        class="form__control"
-        data-touched="false"
-        data-required="true"
-        data-is-valid="false"
+  <div class="form__control-group">
+    <div
+      class="form__control"
+      data-touched="false"
+      data-required="true"
+      data-is-valid="false"
     >
-        <input
-            autocomplete="given-name"
-            class="form__control-input"
-            type="text"
-            id="first-name"
-            name="first-name"
-            placeholder="First Name"
-            required
-            aria-required="true"
-            pattern="^[a-zA-Z.'\\- ]{1,50}$"
-            onblur="validateFormControl(event)"
-            onchange="validateFormControl(event)"
-        />
-        <p class="form__control-error">Please enter first name</p>
+      <input
+        autocomplete="given-name"
+        class="form__control-input"
+        type="text"
+        id="first-name"
+        name="first-name"
+        placeholder="First Name"
+        required
+        aria-required="true"
+        pattern="^[a-zA-Z.'\\- ]{1,50}$"
+        onblur="validateFormControl(event)"
+        onchange="validateFormControl(event)"
+      />
+      <p class="form__control-error">Please enter first name</p>
     </div>
     <div
-        class="form__control"
-        data-touched="false"
-        data-required="true"
-        data-is-valid="false"
+      class="form__control"
+      data-touched="false"
+      data-required="true"
+      data-is-valid="false"
     >
-        <input
-            autocomplete="additional-name"
-            class="form__control-input"
-            type="text"
-            id="last-name"
-            name="last-name"
-            placeholder="Last Name"
-            required
-            aria-required="true"
-            pattern="^[a-zA-Z.'\\- ]{1,50}$"
-            onblur="validateFormControl(event)"
-            onchange="validateFormControl(event)"
-        />
-        <p class="form__control-error">Please enter last name</p>
+      <input
+        autocomplete="additional-name"
+        class="form__control-input"
+        type="text"
+        id="last-name"
+        name="last-name"
+        placeholder="Last Name"
+        required
+        aria-required="true"
+        pattern="^[a-zA-Z.'\\- ]{1,50}$"
+        onblur="validateFormControl(event)"
+        onchange="validateFormControl(event)"
+      />
+      <p class="form__control-error">Please enter last name</p>
     </div>
-    </div>
+  </div>
 
-    <p class="detective-form__control-label">
-        Where should we send your case files?
-    </p>
+  <p class="detective-form__control-label">
+    Where should we send your case files?
+  </p>
 
-    <div
-        class="form__control form__control--email"
-        data-touched="false"
-        data-required="false"
-        data-is-valid="false"
-    >
-        <input
-            autocomplete="email"
-            class="form__control-input"
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Email (optional)"
-            aria-required="false"
-            pattern="^[a-zA-Z0-9._\\-]{1,100}@[a-zA-Z0-9]+\\.[a-zA-Z]{2,10}$"
-        />
-    </div>
+  <div
+    class="form__control form__control--email"
+    data-touched="false"
+    data-required="false"
+    data-is-valid="false"
+  >
+    <input
+      autocomplete="email"
+      class="form__control-input"
+      type="email"
+      id="email"
+      name="email"
+      placeholder="Email (optional)"
+      aria-required="false"
+      pattern="^[a-zA-Z0-9._\\-]{1,100}@[a-zA-Z0-9]+\\.[a-zA-Z]{2,10}$"
+    />
+  </div>
 
-    <div
-        class="form__control form__control--files"
-        data-touched="false"
-        data-required="false"
-        data-is-valid="false"
-    >
-        <div class="form__control-files">
-            <div class="form__control-file">
-                <div class="form__control-input-file form__control-input-file--take">
-                    <input name="taked-photo" id="taked-photo" type="file" accept=".jpg, .jpeg, .png" capture/>
-                    <label for="taked-photo">Take Photo</label>
-                </div>
-                <p class="form__control-label">(Optional)</p>
-            </div>
-            <p class="mx-1">Or</p>
-            <div class="form__control-file">
-                <div class="form__control-input-file form__control-input-file--upload">
-                    <input name="uploaded-photo" id="uploaded-photo" type="file" accept=".jpg, .jpeg, .png" />
-                    <label for="uploaded-photo">Upload Photo</label>
-                </div>
-                <p class="form__control-label">(Optional)</p>
-            </div>
+  <div
+    class="form__control form__control--files"
+    data-touched="false"
+    data-required="false"
+    data-is-valid="false"
+  >
+    <div class="form__control-files">
+      <div class="form__control-file">
+        <div class="form__control-input-file form__control-input-file--take">
+          <input
+            name="taked-photo"
+            id="taked-photo"
+            type="file"
+            accept=".jpg, .jpeg, .png"
+            capture
+          />
+          <label for="taked-photo">Take Photo</label>
         </div>
-    </div>
-
-    <div
-        class="form__control form__control--checkbox"
-        data-touched="false"
-        data-required="true"
-        data-is-valid="false"
-    >
-        <div class="form__control-checkbox">
-            <input
-                id="terms-and-conditions"
-                type="checkbox"
-                name="terms"
-                required
-                aria-required="true"
-                onblur="validateFormControl(event)"
-                onchange="validateFormControl(event)"
-            />
-            <label class="form__control-label" for="terms-and-conditions">
-                I agree to the <a href="" target="_blank">Terms & Conditions</a> and <a href="" target="_blank">Privacy Notice</a>.
-            </label>
+        <p class="form__control-label">(Optional)</p>
+      </div>
+      <p class="mx-1">Or</p>
+      <div class="form__control-file">
+        <div class="form__control-input-file form__control-input-file--upload">
+          <input
+            name="uploaded-photo"
+            id="uploaded-photo"
+            type="file"
+            accept=".jpg, .jpeg, .png"
+          />
+          <label for="uploaded-photo">Upload Photo</label>
         </div>
-        <p class="form__control-error">Please select the checkbox</p>
+        <p class="form__control-label">(Optional)</p>
+      </div>
     </div>
+  </div>
 
-    <div
-        class="form__control form__control--checkbox"
-        data-touched="false"
-        data-required="true"
-        data-is-valid="false"
-    >
-        <div class="form__control-checkbox">
-            <input
-                id="sign-me-up"
-                type="checkbox"
-                name="sign-me-up"
-                required
-                aria-required="true"
-                onblur="validateFormControl(event)"
-                onchange="validateFormControl(event)"
-            />
-            <label class="form__control-label" for="sign-me-up">
-                Sign me up for additional information about Alexion's products, services, programs, market research, or other topics of interest that Alexion thinks may interest me.
-            </label>
-        </div>
-        <p class="form__control-error">Please select the checkbox</p>
+  <div
+    class="form__control form__control--checkbox"
+    data-touched="false"
+    data-required="true"
+    data-is-valid="false"
+  >
+    <div class="form__control-checkbox">
+      <input
+        id="terms-and-conditions"
+        type="checkbox"
+        name="terms"
+        required
+        aria-required="true"
+        onblur="validateFormControl(event)"
+        onchange="validateFormControl(event)"
+      />
+      <label class="form__control-label" for="terms-and-conditions">
+        I agree to the <a href="" target="_blank">Terms & Conditions</a> and <a
+          href=""
+          target="_blank">Privacy Notice</a
+        >.
+      </label>
     </div>
+    <p class="form__control-error">Please select the checkbox</p>
+  </div>
 
-    <div class="form__submit">
-        <input class="button" type="submit" value="Play Video" onclick="validateFormOnSubmit(event)" />
+  <div
+    class="form__control form__control--checkbox"
+    data-touched="false"
+    data-required="false"
+    data-is-valid="false"
+  >
+    <div class="form__control-checkbox">
+      <input
+        id="sign-me-up"
+        type="checkbox"
+        name="sign-me-up"
+        aria-required="false"
+      />
+      <label class="form__control-label" for="sign-me-up">
+        Sign me up for additional information about Alexion's products,
+        services, programs, market research, or other topics of interest that
+        Alexion thinks may interest me.
+      </label>
     </div>
+  </div>
+
+  <div class="form__submit">
+    <input
+      class="button"
+      type="submit"
+      value="Play Video"
+      onclick="validateFormOnSubmit(event)"
+    />
+  </div>
 </form>
 <script is:inline src="/assets/js/forms.js"></script>
