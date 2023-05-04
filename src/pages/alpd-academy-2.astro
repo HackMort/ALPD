@@ -78,13 +78,25 @@ import Layout from "../layouts/Layout.astro";
                 <div class="alpd-academy__alkaline-legend-content">
                   <p class="alpd-academy__alkaline-legend-title">LEGEND</p>
                   <ul class="alpd-academy__alkaline-legend-list">
-                    <li><strong>Ca<sup>2+</sup>:</strong> Calcium</li>
-                    <li><strong>CNS:</strong> Central nervous system</li>
-                    <li><strong>GABA:</strong> Gamma-aminobutyric acid</li>
-                    <li><strong>Pi:</strong> Inorganic phosphate</li>
+                    <li>
+                      <strong>Ca<sup>2+</sup>:</strong> Calcium
+                    </li>
+                    <li>
+                      <strong>CNS:</strong> Central nervous system
+                    </li>
+                    <li>
+                      <strong>GABA:</strong> Gamma-aminobutyric acid
+                    </li>
+                    <li>
+                      <strong>Pi:</strong> Inorganic phosphate
+                    </li>
                     <li><strong>PL:</strong> Pyroxidal</li>
-                    <li><strong>PLP:</strong> Pyridoxal 5’-phosphate</li>
-                    <li><strong>PPi:</strong> Inorganic pyrophosphate</li>
+                    <li>
+                      <strong>PLP:</strong> Pyridoxal 5’-phosphate
+                    </li>
+                    <li>
+                      <strong>PPi:</strong> Inorganic pyrophosphate
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -176,9 +188,21 @@ import Layout from "../layouts/Layout.astro";
           <tr>
             <th></th>
             <th><div class="content color--saffron-mango">ALP</div></th>
-            <th><div class="content color--white">PPi<sup>a</sup></div></th>
-            <th><div class="content color--white">PLP<sup>b</sup></div></th>
-            <th><div class="content color--white">PEA<sup>c</sup></div></th>
+            <th
+              ><div class="content color--white">
+                PPi<sup>a</sup>
+              </div></th
+            >
+            <th
+              ><div class="content color--white">
+                PLP<sup>b</sup>
+              </div></th
+            >
+            <th
+              ><div class="content color--white">
+                PEA<sup>c</sup>
+              </div></th
+            >
           </tr>
         </thead>
         <tbody>
@@ -476,20 +500,45 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </div>
 
-    <!-- <div class="hpp-profile__call-out">
+    <div class="hpp-profile__call-out">
       <p class="hpp-profile-text">Read the full file on hypophosphatasia</p>
       <a href="#" class="button">HPP Profile</a>
 
       <div class="red-string first"></div>
       <div class="red-string second"></div>
       <div class="red-string third"></div>
-    </div> -->
+    </div>
 
-    <CTA
+    <!-- <CTA
       buttonLabel="HPP Profile"
       linkURL="#"
       content="Read the full file on hypophosphatasia"
-    />
+    /> -->
     <References />
   </section>
 </Layout>
+
+<style is:global>
+  /* section {
+        max-width: 90rem;
+        margin-left: auto;
+        margin-right: auto;
+    } */
+
+  body {
+    background-image: url("/assets/images/background-stars.png") !important;
+    background-color: #000000 !important;
+  }
+
+  main {
+    background-image: none !important;
+    background-color: transparent !important;
+    max-width: 90rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer {
+    background-color: transparent !important;
+  }
+</style>

@@ -197,10 +197,13 @@ small {
 
 sub,
 sup {
-  font-size: 50%;
+  font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
 }
 
 sub {
@@ -208,7 +211,7 @@ sub {
 }
 
 sup {
-  top: -0.8em;
+  top: -0.5em;
 }
 
 img {

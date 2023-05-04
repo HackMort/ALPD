@@ -16,7 +16,10 @@ $colors: (
     "black": #000000,
     "white": #FFFFFF,
     "cinnabar": #E93C2B,
-    "brown": #473831,
+    "floral-white": #FFFAED,
+    "saffron-mango": #F8BA5D,
+    "buff": #F3CC86,
+    "cararra": #F8F8F5 "brown": #473831,
     "gold": #F8BA5D,
 );
 
@@ -32,5 +35,9 @@ $color-texture: map-get($colors, "texture");
 $color-black: map-get($colors, "black");
 $color-white: map-get($colors, "white");
 $color-cinnabar: map-get($colors, "cinnabar");
+$color-floral-white: map-get($colors, "floral-white");
+$color-saffron-mango: map-get($colors, "saffron-mango");
+$color-buff: map-get($colors, "buff");
+$color-cararra: map-get($colors, "cararra");
 $color-brown: map-get($colors, "brown");
 $color-gold: map-get($colors, "gold");

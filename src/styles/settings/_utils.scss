@@ -15,6 +15,30 @@ $color-value in $colors {
     }
 }
 
+.sz-500\:color--saffron-mango {
+    @media screen and (min-width: 500px) {
+        color: $color-saffron-mango;
+    }
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.md\:mb-2 {
+    @media screen and (min-width: 768px) {
+        margin-bottom: 2rem !important;
+    }
+}
+
+.md\:mb-1 {
+    margin-bottom: 1rem !important;
+}
+
+.lg\:mb-1 {
+    margin-bottom: 1rem !important;
+}
+
 .md\:color--black {
     @media screen and (min-width: 768px) {
         color: $color-black;
@@ -23,6 +47,26 @@ $color-value in $colors {
 
 .text--underline {
     text-decoration: underline;
+}
+
+.text--italic {
+    font-style: italic;
+}
+
+.text--700 {
+    font-weight: 700;
+}
+
+.text--400 {
+    font-weight: 400 !important;
+}
+
+.text--14px {
+    font-size: .875rem !important;
+}
+
+.md\:text--18px {
+    font-size: 1.125rem;
 }
 
 .mx-1 {
@@ -40,11 +84,56 @@ $color-value in $colors {
     }
 }
 
+.hidden {
+    display: none;
+}
+
 .md\:hidden {
     @media screen and (min-width: 768px) {
         display: none;
     }
 }
+
+.lg\:hidden {
+    @media screen and (min-width: 1024px) {
+        display: none;
+    }
+}
+
+.lg\:block {
+    @media screen and (min-width: 1024px) {
+        display: block;
+    }
+}
+
+.md\:block {
+    @media screen and (min-width: 768px) {
+        display: block;
+    }
+}
+
+.lg\:text--center {
+    @media screen and (min-width: 1024px) {
+        text-align: center !important;
+    }
+}
+
+.grid-rows-3 {
+    grid-template-rows: repeat(3, minmax(0, max-content));
+}
+
+.row-span-2 {
+    grid-row: span 2 / span 2;
+}
+
+.md\:row-span-1 {
+    grid-row: span 1 / span 1;
+}
+
+.font--special-elite {
+    font-family: 'Special Elite', cursive;
+}
+
 .text--center {
     text-align: center;
 }

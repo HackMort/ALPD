@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background: unset;
+}
+
 .fonts-preview {
   background-color: #E4E4E4;
   color: #5E5E5E;
@@ -16,16 +20,19 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+
   @media screen and (max-width:760px) {
     display: block;
   }
-  .block{
-    
+
+  .block {
+
     max-width: 20.375rem;
 
     @media screen and (max-width:1180px) {
       max-width: 13.375rem;
     }
+
     @media screen and (max-width:760px) {
       margin: auto;
       margin-bottom: 1rem;
@@ -158,32 +165,33 @@ main {
 }
 
 
-.design{
-main{
-  background: unset;
-}
-
-.elements{
-  width: 100%;
-  display: flex;
-
-  @media screen and (max-width:890px) {
-    display: block;
+.design {
+  main {
+    background: unset;
   }
-  
-}
+
+  .elements {
+    width: 100%;
+    display: flex;
+
+    @media screen and (max-width:890px) {
+      display: block;
+    }
+
+  }
 }
 
 
-.fingerprint{
+.fingerprint {
   max-width: 11.0625rem;
   margin-right: 5rem;
+
   @media screen and (max-width:890px) {
     margin-right: 0;
   }
 }
 
-.red-frame{
+.red-frame {
   max-width: 38.1563rem;
-  
+
 }
