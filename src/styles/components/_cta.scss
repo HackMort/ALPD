@@ -1,0 +1,208 @@
+.cta{
+    padding-top: 8.7462rem;
+    padding-bottom: 10.5175rem;
+    p{
+        color: $color-white;
+    }
+
+    &__text{
+        color:white;
+        margin-bottom: 1.0325rem;
+        font-size: 1.125rem;
+        
+    }
+    .variant-1{
+        text-align: center;
+        position: relative;
+
+        a{
+            margin: auto; 
+        }
+        .cta__text{
+            color:white;
+            width: 251px;
+            margin: auto;
+            margin-bottom: 1.0325rem;
+            @media screen and (min-width:500px) {
+                width: unset;
+            }
+        }
+
+        .red-string{
+            &.mod-1{
+                display: none;
+                @media screen and (min-width:768px) {
+                    display: block;
+                    position: absolute;
+                    color: red;
+                    width: 100vw;
+                    top: -68px;
+                    left: 0;
+                    transform: rotate(356deg);
+                }
+            }
+
+            &.mod-2{
+                display: none;
+                @media screen and (min-width:768px) {
+                    display: block;
+                    position: absolute;
+                    color: red;
+                    width: 100vw;
+                    top: -54px;
+                    left: 0;
+                    transform: rotate(360deg);
+                }
+                @media screen and (min-width:1700px) {
+                    transform: rotate(359deg);
+                    top: -42px;
+                }
+            }
+
+            &.mod-3{
+                display: none;
+                @media screen and (min-width:768px) {
+                    display: block;
+                    position: absolute;
+                    color: red;
+                    width: 100vw;
+                    bottom: -54px;
+                    transform: rotate(357deg);
+                }
+            }  
+            .red-circle{
+                display: none;
+            }         
+        }
+    }
+
+    .variant-2{
+        text-align: center;
+        background-image: url('/assets/images/cta-circle.png');
+        background-repeat: no-repeat;
+        background-size:665px;
+        background-position: center;
+        height: 18rem;
+        position: relative;
+        
+
+        a{
+            margin: auto;
+        }
+
+        .red-string{
+            display: none;
+
+            &.mod-3{
+            @media screen and (min-width:768px) {
+                display: block;
+                position: absolute;
+                color: red;
+                width: 100vw;
+                bottom: -54px;
+                transform: rotate(357deg);
+            }
+        }
+        }
+        .cta__text{
+            color:white;
+            padding-top: 109px;
+        }   
+    }
+
+    .variant-3{
+        padding-top: 3.625rem;
+        padding-bottom: 3.625rem;
+        text-align: center;
+        background-image: url('/assets/images/identifying-mobile.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 19.5625rem;
+        position: relative;
+        
+        @media screen and (min-width:376px) {
+            background-size:665px;
+        }
+        @media screen and (min-width:665px) {
+            background-image: url('/assets/images/identifying-desktop.png');
+            background-size: cover;
+            height: 39.4375rem;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        
+        a{
+            margin: auto;
+        }
+
+        .cta__text{
+            color:white;
+            font-family: 'Oswald';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 1.875rem;
+            text-transform: uppercase;
+            width: 14.875rem;
+            margin: auto;
+            margin-top: 2rem;
+            margin-bottom: 1.0325rem;
+            @media screen and (min-width:665px) {
+                padding-top: 15rem;
+                width: 616px;
+                font-size: 3rem;
+                line-height: 3.75rem;
+                text-align: center;
+                letter-spacing: -0.03em;
+            }
+        }
+
+        .red-string{
+        &.mod-1{
+            position: absolute;
+            color: red;
+            width: 100vw;
+            top: 52px;
+            left: 0;
+            transform: rotate(356deg);
+            @media screen and (min-width:665px) {
+                top: 117px;
+                left: 0;
+                transform: rotate(356deg);
+            }
+        }
+
+        &.mod-2{
+            position: absolute;
+            color: red;
+            width: 100vw;
+            bottom: 235px;
+            transform: rotate(371deg);
+            @media screen and (min-width:665px) {
+                top: 178px;
+                bottom: unset;
+                transform: rotate(367deg)
+            }
+        }
+
+        &.mod-3{
+            position: absolute;
+            color: red;
+            width: 100vw;
+            bottom: 41px;
+            transform: rotate(354deg);
+            @media screen and (min-width:665px) {
+                width: 100vw;
+                bottom: 171px;
+                transform: rotate(352deg)
+            }
+            @media screen and (min-width:2100px) {
+            transform: rotate(354deg);
+            }
+            @media screen and (min-width:2350px) {
+                transform: rotate(356deg)
+            }
+        }  
+    } 
+    }
+}
