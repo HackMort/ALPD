@@ -15,6 +15,12 @@ $color-value in $colors {
     }
 }
 
+.sz-500\:color--saffron-mango {
+    @media screen and (min-width: 500px) {
+       color: $color-saffron-mango;
+     }
+}
+
 .mb-0 {
     margin-bottom: 0 !important;
 }
@@ -49,6 +55,14 @@ $color-value in $colors {
 
 .text--700 {
     font-weight: 700;
+}
+
+.text--400 {
+    font-weight: 400 !important;
+}
+
+.text--14px {
+    font-size: .875rem !important;
 }
 
 .md\:text--18px {

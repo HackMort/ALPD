@@ -865,6 +865,110 @@
     }
 }
 
+.hypophosphatasia-info {
+    position: relative;
+    height: calc(496px + ((570 - 496) * ((100vw - 320px) / (500 - 320))));
+
+    @media screen and (min-width: 500px) {
+        height: auto;
+        margin-bottom: 5rem;
+
+        .red-string,
+        picture {
+            display: none;
+        }
+    }
+
+    .red-string {
+        width: calc(100vw + 20rem);
+        position: absolute;
+        z-index: 1;
+
+        left: 50%;
+        transform: translateX(-50%);
+
+        &.first {
+            top: 87px;
+            transform: translateX(-50%) rotate(-11deg);
+        }
+
+        &.last {
+            bottom: 0px;
+            transform: translateX(-50%) rotate(16deg);
+        }
+    }
+
+    .postit,
+    .postit-mask {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        width: 100%;
+        height: 100%;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .postit {
+        z-index: 0;
+    }
+
+    .postit-mask {
+        z-index: 2;
+    }
+
+    .hypophosphatasia-info__content {
+        position: relative;
+        z-index: 3;
+        padding-top: 8rem;
+        padding-bottom: 5rem;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+
+        @media screen and (min-width: 500px) {
+            padding: 0;
+            max-width: 44.6875rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        p {
+            text-align: center;
+            font-family: 'Special Elite', cursive;
+
+            font-size: 1.125rem;
+            line-height: 27px;
+
+            * {
+                font-family: 'Special Elite', cursive;
+            }
+
+            &:first-of-type {
+                margin-bottom: 1.5rem;
+                @media screen and (min-width: 500px) {
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+
+        @media screen and (min-width: 500px) {
+            p {
+                color: $color-white;
+                font-family: Barlow, Arial, Helvetica, sans-serif;
+
+                * {
+                    font-family: Barlow, Arial, Helvetica, sans-serif;
+                }
+            }
+        }
+    }
+}
+
 // -------------------------- ALPD Academy page ---------------------------------------------------
 
 /* 404 */
