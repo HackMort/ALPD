@@ -969,6 +969,70 @@
     }
 }
 
+.hpp-profile__call-out {
+    position: relative;
+    text-align: center;
+
+    padding: 4rem 0;
+
+    @media screen and (min-width: 768px) {
+        padding: 4.5rem 0;
+    }
+
+    .hpp-profile-text {
+        color: $color-white;
+        font-size: 1.125rem;
+        font-weight: 600;
+        line-height: 25.2px;
+        margin-bottom: 1rem;
+
+        max-width: 12.5rem;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media screen and (min-width: 768px) {
+            max-width: max-content;
+            font-size: 1.375rem;
+            line-height: 30.8px;
+        }
+    }
+
+    .button {
+        margin: auto;
+    }
+
+    .red-string {
+        width: calc(100vw + 100% + 20rem);
+        position: absolute;
+
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            display: block;
+        }
+
+        left: 50%;
+        transform: translateX(-50%);
+
+        &.first {
+            left: 0;
+            top: 0;
+            transform: translateX(-50%) rotate(2deg);
+        }
+
+        &.second {
+            left: 0;
+            top: 20px;
+            transform: translateX(-50%) rotate(-2deg);
+        }
+
+        &.third {
+            bottom: 0;
+            transform: translateX(-50%) rotate(-5deg);
+        }
+    }
+}
+
 // -------------------------- ALPD Academy page ---------------------------------------------------
 
 /* 404 */
