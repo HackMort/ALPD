@@ -21,7 +21,9 @@
 @import './components/_footer-navigation.scss';
 @import './components/case-file';
 @import './components/alpd-video';
+@import './components/references';
 @import './components/detective-form';
+@import './components/cta';
 @import './components/internal-nav';
 
 
@@ -989,6 +991,7 @@
 
     @media screen and (min-width: 768px) {
         padding: 4.5rem 0;
+        margin-bottom: 7rem;
     }
 
     .hpp-profile-text {
