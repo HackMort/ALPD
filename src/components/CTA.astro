@@ -12,27 +12,26 @@ type Props = {
 const {
   linkURL,
   linkTarget,
-  variation, 
+  variation,
   content,
   buttonLabel,
   bypassModal = false,
   className,
 } = Astro.props;
 
-const linkClasses = `button ${bypassModal ? "document-link" : ' '}`;
+const linkClasses = `button ${bypassModal ? "document-link" : " "}`;
 const targetAnchor = linkTarget ? linkTarget : "_self";
 const variant = variation ? variation : "variant-1";
-const mainClass = `cta ${className ? className : ' '}`
-
+const mainClass = `cta ${className ? className : " "}`;
 ---
 
 <div class={mainClass}>
-    <div class={variant}>
-      <div class="cta__text" set:html={content}></div>
-        <a href={linkURL} target={targetAnchor} class={linkClasses}>{buttonLabel}</a>
-        <div class="red-string mod-1"></div >
-        <div class="red-string mod-2"></div >
-        <div class="red-string mod-3"></div >
-    </div>
-
+  <div class={variant}>
+    <div class="cta__text" set:html={content} />
+    <a href={linkURL} target={targetAnchor} class={linkClasses}>{buttonLabel}</a
+    >
+    <div class="red-string mod-1"></div>
+    <div class="red-string mod-2"></div>
+    <div class="red-string mod-3"></div>
+  </div>
 </div>
