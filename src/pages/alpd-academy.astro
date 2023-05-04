@@ -2,7 +2,19 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="ALPD Academy" pageClass="alpd__academy">
+<Layout title="ALPD Academy" pageClass="alpd__academy" showISI={false}>
+    <section class="page-hero">
+        <picture class="page-hero__image">
+            <source srcset="/assets/images/alpd-academy/alpd-academy-hero-desktop.png" media="(min-width: 1024px)">
+            <source srcset="/assets/images/alpd-academy/alpd-academy-hero-tablet.png" media="(min-width: 500px)">
+            <img src="/assets/images/alpd-academy/alpd-academy-hero-mobile.png" alt="">
+        </picture>
+        <picture class="page-hero__stamp">
+            <source srcset="/assets/images/alpd-academy/alpd-academy-stamp-desktop.png" media="(min-width: 768px)">
+            <img src="/assets/images/alpd-academy/alpd-academy-stamp-mobile.png" alt="">
+        </picture>
+        <div class="red-string page-hero-red-string"></div>
+    </section>
   <section class="section alpd-academy__role" id="role-of-alpd">
     <div class="wrapper alpd-academy__role-header">
         <h2 class="alpd-academy__role-title">

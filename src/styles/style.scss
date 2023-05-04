@@ -44,6 +44,7 @@
 
 .alpd-academy__role {
     position: relative;
+    margin-top: 2rem;
 
     .alpd-academy__role-red-string {
         position: absolute;
@@ -1029,6 +1030,46 @@
         &.third {
             bottom: 0;
             transform: translateX(-50%) rotate(-5deg);
+        }
+    }
+}
+
+.page-hero {
+    position: relative;
+    height: calc(250px + ((384 - 250) * ((100vw - 320px) / (1440 - 320))));
+
+    .page-hero__image {
+        height: 100%;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .page-hero__stamp {
+        position: absolute;
+        width: 15.0625rem;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @media screen and (min-width: 768px) {
+            width: 22.0625rem;
+            left: 3rem;
+        }
+    }
+
+    .page-hero-red-string {
+        width: calc(100vw + 20rem);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 2;
+
+        transform: translate(-50%, -50%) rotate(40deg);
+
+        @media screen and (min-width: 768px) {
+            top: 93%;
+            transform: translate(-50%, -50%) rotate(7deg);
         }
     }
 }
