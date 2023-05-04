@@ -5,71 +5,146 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="HPP Profile" pageClass="hpp__profile" showISI={false}>
   <!-- Profiling hypophostasia (HPP) -->
   <section id="profiling-hypophostasia" class="profiling-hypophostasia">
-
-
     <div class="hpp__profile__red-string-bg">
       <h2 class="hpp__profile__hidden-title">11A0763</h2>
       <div class="wrapper hpp__profile__content">
-          <h2 class="hpp__profile__main-title color--red text--uppercase">Profiling Hypophosphatasia (HPP)</h2>
-          <h3 class="hpp__profile__sub-title color--white">
-              Take a look at the case file of hypophosphatasia to learn how it stays hidden and how it may be causing harm to your patients
-          </h3>
-          <p class="hpp__profile__paragraph hpp__profile__paragraph--sub color--white">
-              Hypophosphatasia is an inherited, multisystemic, rare metabolic disorder characterized by persistently low age- and sex- adjusted alkaline phosphatase (ALP) activity that may progress over time.<sup class="color--white">1,2</sup>
-          </p>
-
+        <h2 class="hpp__profile__main-title color--red text--uppercase">
+          Profiling Hypophosphatasia (HPP)
+        </h2>
+        <h3 class="hpp__profile__sub-title color--white">
+          Take a look at the case file of hypophosphatasia to learn how it stays
+          hidden and how it may be causing harm to your patients
+        </h3>
+        <p
+          class="hpp__profile__paragraph hpp__profile__paragraph--sub color--white"
+        >
+          Hypophosphatasia is an inherited, multisystemic, rare metabolic
+          disorder characterized by persistently low age- and sex- adjusted
+          alkaline phosphatase (ALP) activity that may progress over time.<sup
+            class="color--white">1,2</sup
+          >
+        </p>
       </div>
 
       <div class="hpp__profile__image-container">
         <picture>
-          <source srcset="/assets/images/hpp-profile/hpp-profile.png" media="(min-width: 700px)"/>
-          <img class="hpp__profile__image" src="/assets/images/hpp-profile/hpp-profile-mb.png" alt="HPP Profile">
+          <source
+            srcset="/assets/images/hpp-profile/hpp-profile.png"
+            media="(min-width: 700px)"
+          />
+          <img
+            class="hpp__profile__image"
+            src="/assets/images/hpp-profile/hpp-profile-mb.png"
+            alt="HPP Profile"
+          />
         </picture>
       </div>
-  
+
       <div class="hpp__profile__red-frame-disclaimer">
-        <p class="hpp__profile__paragraph hpp__profile__paragraph--sub hpp__profile__red-frame-disclaimer--content color--white text--center">
-          Hypophosphatasia may become debilitating and can cause damage to multiple systems in the body beyond the skeletal system.3-5
+        <p
+          class="hpp__profile__paragraph hpp__profile__paragraph--sub hpp__profile__red-frame-disclaimer--content color--white text--center"
+        >
+          Hypophosphatasia may become debilitating and can cause damage to
+          multiple systems in the body beyond the skeletal system.3-5
         </p>
       </div>
     </div>
-
   </section>
 
-  <section id="hpp-patiens" class="wrapper hpp-patients__section">
+  <section id="hpp-patients">
+    <div class="hpp-patients__red-string">
+      <p class="wrapper hpp-patients__disclaimer">
+        Reduced alkaline phosphatase levels during childhood may affect peak
+        bone mass later in life23,24
+      </p>
+    </div>
 
-    <div class="hpp-patients__section--bg-white">
-      <div class="wrapper">
-        <h1 class="hpp-patients__section__title">
-          Percent of patients with hypophosphatasia fractures
-        </h1>
+    <div class="wrapper hpp-patients__section">
+      <div class="hpp-patients__section--bg-white">
+        <div class="wrapper">
+          <h1 class="hpp-patients__section__title">
+            Percent of patients with hypophosphatasia fractures
+          </h1>
 
-        <div class="hpp-patients__section__chart">
+          <div class="hpp-patients__section__chart">
+            <!-- Desktop chart -->
+            <picture>
+              <img
+                class="hpp-patients__section__image"
+                src="/assets/images/hpp-profile/hpp-patients-chart.png"
+                alt="HPP Profile"
+              />
+            </picture>
 
-          <!-- Desktop chart -->
-          <picture>
-            <img class="hpp-patients__section__image" src="/assets/images/hpp-profile/hpp-patients-chart.png" alt="HPP Profile">
-          </picture>
-
-
-          <!-- Mobile chart -->
-          <div class="hpp-patients__section__chart--mb">
-            <img class="hpp-patients__section__image--mb" src="/assets/images/hpp-profile/chart1-mb.png" alt="HPP Profile">
-            <p class="hpp-patients__section__text-chart">Infants and young children (≤5 years)25a</p>
-            <img class="hpp-patients__section__image--mb" src="/assets/images/hpp-profile/chart2-mb.png" alt="HPP Profile">
-            <p class="hpp-patients__section__text-chart">Children and adolescents (5-15 years)26b</p>
-            <img class="hpp-patients__section__image--mb" src="/assets/images/hpp-profile/chart3-mb.png" alt="HPP Profile">
-            <p class="hpp-patients__section__text-chart">Adults  (≥18 years)7c</p>            
+            <!-- Mobile chart -->
+            <div class="hpp-patients__section__chart--mb">
+              <img
+                class="hpp-patients__section__image--mb"
+                src="/assets/images/hpp-profile/chart1-mb.png"
+                alt="HPP Profile"
+              />
+              <p class="hpp-patients__section__text-chart">
+                Infants and young children (≤5 years)25a
+              </p>
+              <img
+                class="hpp-patients__section__image--mb"
+                src="/assets/images/hpp-profile/chart2-mb.png"
+                alt="HPP Profile"
+              />
+              <p class="hpp-patients__section__text-chart">
+                Children and adolescents (5-15 years)26b
+              </p>
+              <img
+                class="hpp-patients__section__image--mb"
+                src="/assets/images/hpp-profile/chart3-mb.png"
+                alt="HPP Profile"
+              />
+              <p class="hpp-patients__section__text-chart">
+                Adults (≥18 years)7c
+              </p>
+            </div>
           </div>
-        
+
+          <p class="hpp-patients__section__content">
+            Data from a multinational, noninterventional, retrospective chart
+            review study designed to understand the natural history of 48
+            patients ≤5 years of age with severe perinatal- and infantile-onset
+            HPP. Patients included in the study were those diagnosed with HPP
+            based on at least one of the following: serum biomarker levels
+            (below-normal ALP and above-normal PLP or phosphoethanolamine
+            [PEA]), below-normal ALP and radiographic abnormalities, and/or
+            genetic analysis of the ALPL gene. Additionally, onset of HPP must
+            have occurred prior to 6 months of age based on signs that included
+            at least one of the following: respiratory compromise, rachitic
+            chest deformity, and/or vitamin B6-responsive seizures.10 Data from
+            a retrospective, multinational, noninterventional natural history
+            study of childhood HPP in patients 5 to 15 years of age (N=32).17
+            Combined data from HIPS/HOST, an internet questionnaire and
+            telephone survey that queried demographics, HPP-related illness
+            history, disease progression, and health-related quality of life.
+            One hundred twenty-five adults participated.18
+          </p>
         </div>
-        
-        <p class="hpp-patients__section__content">
-          Data from a multinational, noninterventional, retrospective chart review study designed to understand the natural history of 48 patients ≤5 years of age with severe perinatal- and infantile-onset HPP. Patients included in the study were those diagnosed with HPP based on at least one of the following: serum biomarker levels (below-normal ALP and above-normal PLP or phosphoethanolamine [PEA]), below-normal ALP and radiographic abnormalities, and/or genetic analysis of the ALPL gene. Additionally, onset of HPP must have occurred prior to 6 months of age based on signs that included at least one of the following: respiratory compromise, rachitic chest deformity, and/or vitamin B6-responsive seizures.10
-          Data from a retrospective, multinational, noninterventional natural history study of childhood HPP in patients 5 to 15 years of age (N=32).17
-          Combined data from HIPS/HOST, an internet questionnaire and telephone survey that queried demographics, HPP-related illness history, disease progression, and health-related quality of life. One hundred twenty-five adults participated.18
-        </p>
       </div>
     </div>
+
+    <p class="wrapper hpp-patients__section__content--mb">
+      Data from a multinational, noninterventional, retrospective chart review
+      study designed to understand the natural history of 48 patients ≤5 years
+      of age with severe perinatal- and infantile-onset HPP. Patients included
+      in the study were those diagnosed with HPP based on at least one of the
+      following: serum biomarker levels (below-normal ALP and above-normal PLP
+      or phosphoethanolamine [PEA]), below-normal ALP and radiographic
+      abnormalities, and/or genetic analysis of the ALPL gene. Additionally,
+      onset of HPP must have occurred prior to 6 months of age based on signs
+      that included at least one of the following: respiratory compromise,
+      rachitic chest deformity, and/or vitamin B6-responsive seizures.10 Data
+      from a retrospective, multinational, noninterventional natural history
+      study of childhood HPP in patients 5 to 15 years of age (N=32).17 Combined
+      data from HIPS/HOST, an internet questionnaire and telephone survey that
+      queried demographics, HPP-related illness history, disease progression,
+      and health-related quality of life. One hundred twenty-five adults
+      participated.18
+    </p>
   </section>
 </Layout>

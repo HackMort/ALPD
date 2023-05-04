@@ -36,33 +36,35 @@
 }
 
 /* 404 */
-.page__not_found{
+.page__not_found {
     text-align: center;
-    
-    &__title{
+
+    &__title {
         width: 9rem;
         margin: auto;
         margin-top: 9.2363rem;
         position: relative;
         z-index: 2;
-        
+
         /* @media screen and (min-width:700px) {
             width: 11.1875rem;
             margin-top: 14.5006rem;
         } */
-        
+
     }
-    &__text{
+
+    &__text {
         color: $color-white;
         margin-top: 1.9125rem;
         margin-bottom: 1.99rem;
         position: relative;
         z-index: 2;
+
         @media screen and (min-width:700px) {
             margin-bottom: 3rem;
         }
 
-        p{
+        p {
             font-family: 'Barlow';
             font-style: normal;
             font-weight: 600;
@@ -70,32 +72,33 @@
             line-height: 1.5625rem;
             max-width: 17.125rem;
             margin: auto;
+
             @media screen and (min-width:700px) {
-            max-width: 36.3125rem;
-            font-size: 1.3125rem;
-            line-height: 1.8125rem;
+                max-width: 36.3125rem;
+                font-size: 1.3125rem;
+                line-height: 1.8125rem;
             }
         }
 
-        :first-child{
+        :first-child {
             margin-bottom: 2rem;
         }
     }
 
-    .button{
+    .button {
         margin: auto;
         margin-bottom: 8.0938rem;
         position: relative;
         z-index: 2;
     }
 
-    .reference{
+    .reference {
         position: relative;
         max-width: 90rem;
         margin: auto;
     }
 
-    &__image{
+    &__image {
         position: absolute;
         min-width: 27.6944rem;
         max-width: 27.6944rem;
@@ -105,18 +108,20 @@
         @media screen and (min-width:500px) {
             left: 0;
         }
+
         @media screen and (min-width:800px) {
             max-width: 51.5356rem;
             /* top: -23.3125rem; */
             top: -19.3125rem;
             left: -3.875rem;
         }
+
         @media screen and (min-width:1200px) {
             left: 0;
         }
     }
 
-    .red-string{
+    .red-string {
         position: absolute;
         transform: rotate(7.51deg);
         top: 22.4375rem;
@@ -126,35 +131,41 @@
             transform: rotate(5.51deg);
             top: 21.6875rem;
         }
+
         @media screen and (min-width:700px) {
             transform: rotate(-4.49deg);
             top: 20.8125rem;
             left: -1.8125rem;
             width: 105vw;
         }
+
         @media screen and (min-width:1500px) {
             transform: rotate(-3.49deg);
             top: 14.375rem;
             left: -21rem;
             width: 362vw;
         }
+
         @media screen and (min-width:1690px) {
             transform: rotate(-2.49deg);
             top: 15.6875rem;
             left: -21rem;
             width: 362vw;
         }
+
         @media screen and (min-width:2020px) {
             top: 12.5rem;
             left: -43.1875rem;
             width: 423vw;
         }
+
         @media screen and (min-width:2340px) {
             top: 14.4375rem;
             transform: rotate(-1.49deg);
         }
     }
-} 
+}
+
 /* 404 */
 
 /* HPP Profile Page */
@@ -162,6 +173,7 @@
 
     &__content {
         margin-bottom: 2rem;
+
         @media screen and (min-width: 768px) and (max-width: 1024px) {
             max-width: 70%;
         }
@@ -178,6 +190,7 @@
     &__main-title {
         margin: 3.1875rem 8rem 0 0;
         font-weight: 600;
+
         @include media('tablet') {
             text-align: center;
             margin: 3.1875rem auto 0 auto;
@@ -186,8 +199,10 @@
 
     &__paragraph {
         margin: 1rem 0 1rem 0;
+
         &--sub {
             font-size: 1.125rem;
+
             @include media('tablet') {
                 text-align: center;
             }
@@ -201,6 +216,7 @@
     &__sub-title {
         font-size: 1.125rem;
         font-weight: 600;
+
         @include media('tablet') {
             text-align: center;
         }
@@ -242,38 +258,39 @@
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
-            
+
             font-size: 1rem;
-            font-family: 'Special Elite', cursive;;
+            font-family: 'Special Elite', cursive;
+            ;
             font-weight: 400;
-               
-            @media screen and (max-width: 768px) {  
+
+            @media screen and (max-width: 768px) {
                 background-image: url(/assets/images/sticky-card.png);
                 color: $color-black;
                 z-index: 2;
                 margin: 0;
             }
 
-            @media screen and (max-width: 495px) { 
+            @media screen and (max-width: 495px) {
                 padding: 5rem;
             }
 
-            @media screen and (min-width: 496px) and (max-width: 600px) { 
+            @media screen and (min-width: 496px) and (max-width: 600px) {
                 padding: 7rem;
             }
 
-            @media screen and (min-width: 601px) and (max-width: 768px) { 
+            @media screen and (min-width: 601px) and (max-width: 768px) {
                 padding: 10rem;
             }
 
-            @media screen and (min-width: 769px) and (max-width: 1024px) { 
+            @media screen and (min-width: 769px) and (max-width: 1024px) {
                 font-size: 1.25rem;
                 padding: 4rem;
                 max-width: 60%;
                 margin: -3rem 0 1rem 0;
             }
 
-            @media screen and (min-width: 1025px) and (max-width: 1100px) { 
+            @media screen and (min-width: 1025px) and (max-width: 1100px) {
                 font-size: 1.25rem;
                 padding: 4rem 5rem;
                 max-width: 46%;
@@ -299,6 +316,7 @@
     &__red-string-bg {
         overflow: clip;
         position: relative;
+
         /* Just a inclined line troughing from the left to the right*/
         &::before {
             content: '';
@@ -340,7 +358,7 @@
     &__image {
         max-width: 65%;
         margin: auto;
-    }	
+    }
 
     .hpp-patients__section {
         background-image: url(/assets/images/hpp-profile/frame-polaroid.png);
@@ -375,6 +393,10 @@
             }
         }
 
+        @media screen and (min-width: 769px) and (max-width: 1300px) {
+            padding: 3.9rem 3rem;
+        }
+
         @media screen and (max-width: 768px) {
             background-image: url(/assets/images/hpp-profile/frame-polaroid-mb.png);
 
@@ -386,10 +408,10 @@
             background-repeat: no-repeat;
             background-size: 100% 100%;
             background-color: $color-white;
-            
+
             padding: 1rem 0;
         }
-        
+
         &__title {
             margin: 2rem;
         }
@@ -414,6 +436,7 @@
             max-width: 100%;
             margin: auto;
             display: none;
+
             @media screen and (min-width: 769px) {
                 display: block;
             }
@@ -423,6 +446,7 @@
                 margin: auto;
 
                 display: block;
+
                 @media screen and (min-width: 769px) {
                     display: none;
                 }
@@ -441,10 +465,42 @@
 
         &__content {
             margin: 2rem;
+
             @media screen and (max-width: 768px) {
                 display: none;
+            }
+
+            &--mb {
+                display: none;
+                color: $color-white;
+
+                @media screen and (max-width: 768px) {
+                    display: block;
+                    padding: 0 2rem;
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+    }
+
+    .hpp-patients {
+        &__disclaimer {
+            color: $color-gold;
+            margin: 3rem 0;
+            padding: 0 4rem;
+            text-align: center;
+        }
+
+        &__red-string {
+            &::before {
+                content: '';
+                height: 2px;
+                background-color: $color-red;
+                transform-origin: right;
+                transform: rotate(355deg);
             }
         }
     }
 }
+
 /* HPP Profile page end */
