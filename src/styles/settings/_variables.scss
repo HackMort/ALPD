@@ -18,7 +18,8 @@ $colors: (
     "cinnabar": #E93C2B,
     "floral-white": #FFFAED,
     "saffron-mango": #F8BA5D,
-    "buff": #F3CC86
+    "buff": #F3CC86,
+    "cararra": #F8F8F5
 );
 
 $color-folder: map-get($colors, "folder");
@@ -36,3 +37,4 @@ $color-cinnabar: map-get($colors, "cinnabar");
 $color-floral-white: map-get($colors, "floral-white");
 $color-saffron-mango: map-get($colors, "saffron-mango");
 $color-buff: map-get($colors, "buff");
+$color-cararra: map-get($colors, "cararra");

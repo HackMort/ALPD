@@ -116,6 +116,9 @@
 
         @media screen and (min-width: 1024px) {
             background-image: url("/assets/images/alpd-academy/manilla-folder-desktop.png");
+            max-width: 90rem;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         figcaption,
@@ -268,7 +271,7 @@
             margin: 0;
         }
     }
-    
+
     .alpd-academy__low-title {
         color: $color-white;
         text-transform: uppercase;
@@ -297,7 +300,8 @@
             width: 1.1013rem;
         }
 
-        th, td {
+        th,
+        td {
             border: 1px solid $color-white;
         }
 
@@ -334,24 +338,24 @@
             margin-bottom: 4rem;
         }
 
-       li {
-        color: $color-white;
-        line-height: 18.2px;
-        position: relative;
-        transform: translateX(.375rem);
+        li {
+            color: $color-white;
+            line-height: 18.2px;
+            position: relative;
+            transform: translateX(.375rem);
 
-        width: calc(100% - .375rem);
+            width: calc(100% - .375rem);
 
-        .positioned {
-            position: absolute;
-            right: 100%;
-            top: .3125rem;
+            .positioned {
+                position: absolute;
+                right: 100%;
+                top: .3125rem;
+            }
+
+            @media screen and (min-width: 768px) {
+                text-align: left;
+            }
         }
-
-        @media screen and (min-width: 768px) {
-            text-align: left;
-        }
-       }
     }
 
     .alpd-academy__deficient {
@@ -364,7 +368,7 @@
             background-image: none;
             padding-bottom: 0;
         }
-    
+
         .alpd-academy__deficient-wrapper {
             background-color: $color-white;
             padding: 1rem 0;
@@ -516,7 +520,7 @@
                         background-size: contain;
                     }
 
-                    > * {
+                    >* {
                         font-family: "veneer", sans-serif;
                     }
 
@@ -535,6 +539,7 @@
 
                     &:nth-child(3) {
                         grid-row-start: 2;
+
                         &::after {
                             background-image: url("/assets/images/alpd-academy/headaches-underline.png");
                         }
@@ -613,14 +618,14 @@
     margin-bottom: 3rem;
 
     @media screen and (min-width: 850px) {
-       max-width: 47.3125rem;
-       margin-left: auto;
-       margin-right: auto;
-       padding: 6rem 0;
+        max-width: 47.3125rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 6rem 0;
 
-       .wrapper {
-        max-width: 39.875rem;
-       }
+        .wrapper {
+            max-width: 39.875rem;
+        }
     }
 
     .backgroud {
@@ -709,7 +714,8 @@
     .numbers__info {
         margin-bottom: 2rem;
 
-        picture, img {
+        picture,
+        img {
             height: 100%;
             width: auto;
             margin: 0 auto;
@@ -766,6 +772,94 @@
 
             .number__kpi-description {
                 color: $color-white;
+            }
+        }
+    }
+
+    .chart__container {
+        background-image: url("/assets/images/alpd-academy/polaroid-mobile.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+
+        padding: 2.1rem 0;
+        padding-right: 1rem;
+
+        position: relative;
+
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+
+        @media screen and (min-width: 850px) {
+            background-image: url("/assets/images/alpd-academy/polaroid-desktop.png");
+            padding: 2.5rem 2.7rem;
+        }
+
+        @media screen and (min-width: 1024px) {
+            max-width: 80rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &::before {
+            content: "";
+            background-image: url("/assets/images/alpd-academy/tape-mobile.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            width: 9.375rem;
+            height: 3.5rem;
+
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @media screen and (min-width: 600px) {
+                width: 13rem;
+                height: 4.25rem;
+                top: -28px;
+            }
+
+            @media screen and (min-width: 1024px) {
+                background-image: url("/assets/images/alpd-academy/tape-desktop.png");
+                width: 23rem;
+                height: 8.25rem;
+                top: -80px;
+            }
+        }
+
+        .chart__container-content {
+            background-image: url("/assets/images/alpd-academy/chart-background-mobile.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+
+            background-color: $color-cararra;
+            box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25);
+
+            padding: 1.5rem 0;
+        }
+
+        .chart__title {
+            font-weight: 600;
+            font-size: 1.125rem;
+            line-height: 25.2px;
+
+            margin-bottom: 1.5rem;
+
+            @media screen and (min-width: 850px) {
+                font-size: 1.375rem;
+                line-height: 30.8px;
+                text-align: center;
+            }
+        }
+
+        .chart__paragraph {
+            font-weight: 500;
+            font-size: .875rem;
+            line-height: 21px;
+
+            &:not(:last-of-type) {
+                margin-bottom: 1rem;
             }
         }
     }

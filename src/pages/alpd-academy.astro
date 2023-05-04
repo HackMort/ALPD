@@ -246,5 +246,26 @@ import Layout from "../layouts/Layout.astro";
             </div>
         </div>
     </div>
+
+    <div class="chart__container">
+        <div class="chart__container-content">
+            <div class="wrapper">
+                <p class="chart__title">
+                    Age- and sex-adjusted alkaline phosphatase reference ranges (U/L)<sup>18-23</sup>
+                </p>
+                <picture class="chart">
+                    <source srcset="/assets/images/alpd-academy/7m-age-and-sec-chart-desktop.png" media="(min-width: 850px)">
+                    <source srcset="/assets/images/alpd-academy/7m-age-and-sec-chart-tablet.png" media="(min-width: 600px)">
+                    <img src="/assets/images/alpd-academy/7m-age-and-sec-chart-mobile.png" alt="">
+                </picture>
+                <p class="chart__paragraph">
+                    <sup>*</sup>Check with your lab for their appropriate age- and sex-adjusted reference range.<sup>1,24</sup>
+                </p>
+                <p class="chart__paragraph">
+                    Graph adapted from the Canadian Laboratory initiative on Pediatric Reference Intervals (CALIPER) project. CALIPER samples from 1072 male and 1116 female participants (newborn to 18 years) were used to calculate age- and sex-specific reference intervals. No variation in ALP based on ethnic differences was observed.<sup>23</sup>
+                </p>
+            </div>
+        </div>
+    </div>
   </section>
 </Layout>
