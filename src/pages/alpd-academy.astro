@@ -1,5 +1,10 @@
 ---
+import InternalNavigation from '../components/InternalNavigation.astro';
 import Layout from "../layouts/Layout.astro";
+const internalNavLinks = [
+  { href: "role-of-alp", label: "Role of ALP", active: true },
+  { href: "low-alp", label: "Low ALP" },
+];
 ---
 
 <Layout title="ALPD Academy" pageClass="alpd__academy" showISI={false}>
@@ -15,7 +20,8 @@ import Layout from "../layouts/Layout.astro";
         </picture>
         <div class="red-string page-hero-red-string"></div>
     </section>
-  <section class="section alpd-academy__role" id="role-of-alpd">
+    {internalNavLinks && <InternalNavigation items={internalNavLinks} />}
+  <section class="section alpd-academy__role" id="role-of-alp">
     <div class="wrapper alpd-academy__role-header">
         <h2 class="alpd-academy__role-title">
             What you may not know about alkaline phosphatase (ALP)
@@ -100,7 +106,7 @@ import Layout from "../layouts/Layout.astro";
     
     <div class="red-string alpd-academy__role-red-string"></div>
   </section>
-  <section class="section alpd-academy__low">
+  <section class="section alpd-academy__low" id="low-alp">
     <div class="wrapper alpd-academy__low-header">
         <h1 class="alpd-academy__low-title">MENACING Mutations</h1>
         <p class="alpd-academy__low-description">
