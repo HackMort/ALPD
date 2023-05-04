@@ -70,6 +70,14 @@ sup.symbol-sup {
 }
 
 main {
-    background-image: url("/assets/images/background-stars.png");
+    background-image: url("/assets/images/background-stars-mobile.png");
     background-color: #000000;
+
+    @media screen and (min-width: 500px) {
+        background-image: url("/assets/images/background-stars-tablet.png");
+    }
+
+    @media screen and (min-width: 1024px) {
+        background-image: url("/assets/images/background-stars-desktop.png");
+    }
 }
