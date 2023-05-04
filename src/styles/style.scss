@@ -337,16 +337,114 @@
         }
     }
 
+    &__image {
+        max-width: 65%;
+        margin: auto;
+    }	
 
     .hpp-patients__section {
         background-image: url(/assets/images/hpp-profile/frame-polaroid.png);
-        background-size: 500px;
         background-repeat: no-repeat;
-        background-position: center;
+        background-size: 100% 100%;
+        position: relative;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        padding: 2.5rem 4.7rem;
+        margin-bottom: 3rem;
+
+        &::before {
+            content: '';
+            background-image: url(/assets/images/hpp-profile/tape.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: -1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 12rem;
+            height: 5rem;
+
+            @media screen and (min-width: 769px) {
+                top: -1.5rem;
+                left: 7%;
+                transform: translateX(0);
+                width: 20rem;
+                height: 10rem;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            background-image: url(/assets/images/hpp-profile/frame-polaroid-mb.png);
+
+            padding: 3rem 1.7rem;
+        }
 
         &--bg-white {
+            background: url(/assets/images/hpp-profile/hpp-patients-chart-bg.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
             background-color: $color-white;
+            
+            padding: 1rem 0;
         }
-    }	
+        
+        &__title {
+            margin: 2rem;
+        }
+
+        &__chart {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+            &--mb {
+                @media screen and (min-width: 769px) {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 100%;
+                }
+            }
+        }
+
+        &__image {
+            max-width: 100%;
+            margin: auto;
+            display: none;
+            @media screen and (min-width: 769px) {
+                display: block;
+            }
+
+            &--mb {
+                max-width: 15rem;
+                margin: auto;
+
+                display: block;
+                @media screen and (min-width: 769px) {
+                    display: none;
+                }
+            }
+        }
+
+        &__text-chart {
+            text-align: center;
+            max-width: 11rem;
+            margin: auto;
+
+            @media screen and (min-width: 769px) {
+                max-width: 13rem;
+            }
+        }
+
+        &__content {
+            margin: 2rem;
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+        }
+    }
 }
 /* HPP Profile page end */
