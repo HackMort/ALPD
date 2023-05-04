@@ -37,34 +37,1087 @@
     }
 }
 
-/* 404 */
-.page__not_found{
+// -------------------------- ALPD Academy page ---------------------------------------------------
+.alpd__academy {
+    // width: 100%;
+    // max-width: 90rem;
+    // margin: auto;
+}
+
+.alpd-academy__role {
+    position: relative;
+    margin-top: 2rem;
+
+    .alpd-academy__role-red-string {
+        position: absolute;
+        width: calc(100vw + 31.25rem);
+        height: 0.5rem;
+        z-index: 1;
+
+        bottom: .25rem;
+        right: 50%;
+        transform: translateX(50%) rotate(12deg);
+
+        @media screen and (min-width: 768px) {
+            transform: translateX(50%) rotate(-12deg);
+        }
+    }
+
+    .alpd-academy__role-header {
+        @media screen and (min-width: 768px) {
+            text-align: center;
+            max-width: 39.625rem;
+        }
+    }
+
+    .alpd-academy__role-title {
+        color: $color-red;
+        text-transform: uppercase;
+        margin-bottom: 1.25rem;
+
+        @media screen and (min-width: 768px) {
+            font-size: 3.5rem;
+            line-height: 56px;
+        }
+    }
+
+    .alpd-academy__role-subtitle {
+        font-size: 1.125rem;
+        line-height: 25.2px;
+        font-weight: 600;
+        color: $color-white;
+        margin-bottom: 1rem;
+
+        @media screen and (min-width: 768px) {
+            font-size: 1.375rem;
+            line-height: 30.8px;
+        }
+    }
+
+    .alpd-academy__role-description {
+        color: $color-white;
+        font-weight: 500;
+        margin-bottom: 2.5rem;
+
+        @media screen and (min-width: 768px) {
+            font-size: 1.125rem;
+            line-height: 25.2px;
+        }
+    }
+
+    .alpd-academy__role-alkaline {
+        position: relative;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        background-image: url("/assets/images/alpd-academy/manilla-folder-mobile.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+
+        @media screen and (min-width: 768px) {
+            z-index: 2;
+        }
+
+        @media screen and (min-width: 1024px) {
+            background-image: url("/assets/images/alpd-academy/manilla-folder-desktop.png");
+            max-width: 90rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        figcaption,
+        .paragraph-caption {
+            font-size: 14px;
+            line-height: 18.2px;
+            text-align: center;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+
+            @media screen and (min-width: 1024px) {
+                margin-top: 0;
+                margin-bottom: 0;
+                text-align: left;
+            }
+        }
+
+        .alpd-academy__alkaline-wrapper {
+            position: relative;
+            z-index: 2;
+            background-image: url("/assets/images/alpd-academy/content-background.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+
+            @media screen and (min-width: 1024px) {
+                max-width: 56.25rem;
+                margin-left: auto;
+                margin-right: auto;
+
+                padding: 1rem;
+
+                background-color: #fafafa;
+
+                .wrapper {
+                    max-width: max-content;
+                }
+            }
+
+            @media screen and (min-width: 1366px) {
+                max-width: 68.5rem;
+                padding: 2.8937rem 0;
+                transform: translate(5.5rem, .625rem);
+            }
+        }
+
+        .alpd-academy__alkaline-in-bone-and-teeth {
+            @media screen and (min-width: 768px) {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        .alpd-academy__alkaline-legend {
+            width: 16.6288rem;
+            margin: 1.75rem auto;
+            height: fit-content;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            transform: matrix(0.99, -0.12, 0.1, 0.99, 0, 0);
+
+            @media screen and (min-width: 768px) {
+                flex: 0 0 auto;
+                margin: 0;
+                position: relative;
+                z-index: -1;
+            }
+
+            @media screen and (min-width: 1024px) {
+                transform: matrix(0.99, -0.12, 0.1, 0.99, 0, -18);
+                position: initial;
+                z-index: initial;
+            }
+
+
+            .alpd-academy__alkaline-legend-content {
+                background: $color-floral-white;
+                padding: 0.5rem 1rem;
+            }
+
+            .alpd-academy__alkaline-legend-title {
+                text-align: center;
+                text-transform: uppercase;
+                font-size: .875rem;
+                font-weight: 700;
+                line-height: 19.6px;
+            }
+
+            .alpd-academy__alkaline-legend-list {
+
+                li {
+                    list-style: none;
+                    font-size: .875rem;
+                    line-height: 19.6px;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .alpd-academy__alkaline-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            line-height: 25.2px;
+            margin-bottom: 1.5rem;
+
+            @media screen and (min-width: 1024px) {
+                font-size: 1.375rem;
+                line-height: 30.8px;
+            }
+        }
+
+        .alpd-academy__alkaline-content {
+            @media screen and (min-width: 1024px) {
+                &.alkaline-bone {
+                    max-width: 32.5rem;
+                    margin-left: 2rem;
+                }
+            }
+        }
+
+        .alpd-academy__alkaline-description {
+            font-weight: 400;
+            line-height: 22.4px;
+            margin-bottom: 3rem;
+
+            @media screen and (min-width: 768px) {
+                font-weight: 500;
+            }
+
+            @media screen and (min-width: 1024px) {
+                &--compact {
+                    max-width: 48.125rem;
+                    margin: auto;
+                }
+            }
+        }
+    }
+}
+
+.alpd-academy__low {
+    margin-top: 3rem;
+
+    .alpd-academy__low-header {
+        @media screen and (min-width: 768px) {
+            text-align: center;
+            max-width: 35.625rem;
+        }
+    }
+
+    figcaption {
+        font-size: 14px;
+        line-height: 18.2px;
+        text-align: center;
+        margin: 1rem 0;
+
+        @media screen and (min-width: 768px) {
+            margin: 0;
+        }
+    }
+
+    .alpd-academy__low-title {
+        color: $color-white;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+    }
+
+    .alpd-academy__low-description {
+        color: $color-white;
+        font-size: 1.125rem;
+        line-height: 25.2px;
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+    }
+
+    .alpd-academy__mutations-table {
+        border: 1px solid $color-white;
+        width: 100%;
+
+        margin-bottom: 1rem;
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 2rem;
+        }
+
+        img {
+            width: 1.1013rem;
+        }
+
+        th,
+        td {
+            border: 1px solid $color-white;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        th .content {
+            padding: .125rem 0;
+        }
+
+        td .content {
+            padding: .375rem 0;
+        }
+
+        @media screen and (min-width: 550px) {
+            th .content {
+                padding: .375rem 0;
+            }
+
+            td .content {
+                padding: .5rem 0;
+            }
+        }
+    }
+
+    .alpd-academy__mutations-table-footnote {
+        margin-bottom: 1.5rem;
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 4rem;
+        }
+
+        li {
+            color: $color-white;
+            line-height: 18.2px;
+            position: relative;
+            transform: translateX(.375rem);
+
+            width: calc(100% - .375rem);
+
+            .positioned {
+                position: absolute;
+                right: 100%;
+                top: .3125rem;
+            }
+
+            @media screen and (min-width: 768px) {
+                text-align: left;
+            }
+        }
+    }
+
+    .alpd-academy__deficient {
+        background-image: url("/assets/images/alpd-academy/manilla-folder-mobile.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        padding: 2.5rem 0;
+
+        @media screen and (min-width: 1024px) {
+            background-image: none;
+            padding-bottom: 0;
+        }
+
+        .alpd-academy__deficient-wrapper {
+            background-color: $color-white;
+            padding: 1rem 0;
+            width: calc(100% - 6px);
+
+            @media screen and (min-width: 768px) {
+                width: calc(100% - 1rem);
+            }
+
+            @media screen and (min-width: 1024px) {
+                width: 100%;
+                position: relative;
+                background-image: url("/assets/images/alpd-academy/background-31.png");
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                background-color: transparent;
+
+                max-width: 72.5rem;
+                margin-left: auto;
+                margin-right: auto;
+
+                &::after {
+                    content: "";
+                    background-image: url("/assets/images/alpd-academy/flip-corner.png");
+                    background-repeat: no-repeat;
+                    position: absolute;
+
+                    width: 18.375rem;
+                    height: 8.375rem;
+
+                    bottom: 20px;
+                    right: 5px;
+                }
+            }
+
+            @media screen and (min-width: 1366px) {
+                &::after {
+                    bottom: 21px;
+                }
+            }
+        }
+    }
+
+    .alpd-academy__deficient-content {
+        @media screen and (min-width: 768px) {
+            width: 42.875rem;
+            margin-left: auto;
+            margin-right: auto;
+
+            text-align: center;
+
+            &.last {
+                .alpd-academy__deficient-paragraph-title {
+                    width: 21.875rem;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                .alpd-academy__deficient-paragraph {
+                    margin-left: auto;
+                    margin-right: auto;
+
+                    &:first-of-type {
+                        width: 31.25rem;
+                    }
+
+                    &:last-of-type {
+                        width: 32.25rem;
+                        margin-bottom: 2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .alpd-academy__deficient-paragraph-title {
+        font-size: 1.125rem;
+        font-weight: 600;
+        line-height: 25.2px;
+        margin-bottom: 1.5rem;
+
+        @media screen and (min-width: 1024px) {
+            font-size: 1.375rem;
+            line-height: 30.8px;
+        }
+    }
+
+    .alpd-academy__deficient-paragraph {
+        font-weight: 400;
+        line-height: 22.4px;
+        margin-bottom: 1rem;
+
+        @media screen and (min-width: 768px) {
+            font-weight: 500;
+        }
+    }
+
+    .alpd-academy__symptoms-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        li {
+            list-style-type: none;
+            display: flex;
+            align-items: flex-start;
+
+            &::before {
+                content: "·";
+                font-size: 2.375rem;
+                line-height: 0;
+                margin-top: .3125rem;
+                margin-right: .5rem;
+            }
+
+            @media screen and (min-width: 768px) {
+                font-weight: 500;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            column-gap: 2rem;
+            place-content: center;
+            grid-template-columns: repeat(2, minmax(0, max-content));
+
+            &--underlined {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                grid-template-rows: repeat(2, minmax(0, max-content));
+                align-items: center;
+
+                column-gap: 0;
+                row-gap: 1rem;
+
+                li {
+                    font-family: "veneer", sans-serif;
+                    font-weight: 400;
+                    font-size: 1.75rem;
+                    line-height: 39.2px;
+                    text-align: center;
+                    display: block;
+                    text-transform: uppercase;
+
+                    line-height: 100%;
+
+                    &::before {
+                        display: none;
+                    }
+
+                    &::after {
+                        content: "";
+                        width: 100%;
+                        height: .9375rem;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: contain;
+                    }
+
+                    >* {
+                        font-family: "veneer", sans-serif;
+                    }
+
+                    &:nth-child(1)::after {
+                        background-image: url("/assets/images/alpd-academy/fatigue-underline.png");
+                    }
+
+                    &:nth-child(2) {
+                        grid-row-start: 2;
+                        grid-column-start: 2;
+
+                        &::after {
+                            background-image: url("/assets/images/alpd-academy/vertigo-underline.png");
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        grid-row-start: 2;
+
+                        &::after {
+                            background-image: url("/assets/images/alpd-academy/headaches-underline.png");
+                        }
+                    }
+
+                    &:nth-child(4)::after {
+                        background-image: url("/assets/images/alpd-academy/mood-underline.png");
+                    }
+
+                    &:nth-child(5) {
+                        grid-row-start: 1;
+                        grid-column-start: 2;
+
+                        &::after {
+                            background-image: url("/assets/images/alpd-academy/sleep-disturbance-underline.png");
+                        }
+                    }
+                }
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            &--underlined {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+}
+
+.alpd-academy__call-out {
+    background-image: url("/assets/images/alpd-academy/call-out-bg-mobile.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    padding: 2rem 0;
+
+    margin-bottom: 1.5rem;
+
+    .alpd-academy__call-out-text {
+        line-height: 22.4px;
+        font-weight: 600;
+        text-align: center;
+
+        @media screen and (min-width: 850px) {
+            font-size: 18px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 2.5rem;
+    }
+
+    @media screen and (min-width: 850px) {
+        background-image: url("/assets/images/alpd-academy/call-out-bg-desktop.png");
+        max-width: 35.4375rem;
+        margin-left: auto;
+        margin-right: auto;
+
+        margin-bottom: 0.1rem;
+
+        .wrapper {
+            max-width: 32.125rem;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        margin-top: -2rem;
+        position: relative;
+        z-index: 0;
+        padding: 4rem 0;
+    }
+}
+
+.alpd-academy__persistently-low-alp-container {
+    position: relative;
+    margin-bottom: 3rem;
+
+    @media screen and (min-width: 850px) {
+        max-width: 47.3125rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 6rem 0;
+
+        .wrapper {
+            max-width: 39.875rem;
+        }
+    }
+
+    .backgroud {
+        position: absolute;
+        top: 0;
+        right: 50%;
+        width: calc(100% + 20rem);
+        height: 100%;
+
+        z-index: 0;
+
+        background-color: $color-floral-white;
+        transform: rotate(-2.56deg) translateX(50%);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+        @media screen and (min-width: 850px) {
+            transform: none;
+            right: initial;
+            width: 100%;
+        }
+    }
+
+    padding: 2rem 0;
+
+    .persistently-low-red-string {
+        position: absolute;
+        width: calc(100vw + 20rem);
+
+        top: 0px;
+
+        z-index: 2;
+        left: 50%;
+        transform: translateX(-50%) rotate(8deg);
+
+        @media screen and (min-width: 850px) {
+            top: 44px;
+            transform: translateX(-50%) rotate(5deg);
+        }
+    }
+
+    .persistently-low-pin {
+        position: absolute;
+        width: 30px;
+
+        z-index: 2;
+
+        top: -30px;
+
+        left: 50%;
+        transform: translateX(-50%);
+
+        @media screen and (min-width: 850px) {
+            width: 50px;
+        }
+    }
+
+    .alpd-academy__persistently-low-alp-content {
+
+        p {
+            line-height: 22.4px;
+
+            &:not(:last-of-type) {
+                margin-bottom: 1rem;
+            }
+
+            @media screen and (min-width: 850px) {
+                font-size: 1.25rem;
+                line-height: 30px;
+            }
+        }
+    }
+}
+
+.alpd-academy__know-the-numbers {
+
+    .know-the-numbers__title {
+        color: $color-white;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+
+        @media screen and (min-width: 425px) {
+            text-align: center;
+        }
+    }
+
+    .numbers__info {
+        margin-bottom: 2rem;
+
+        picture,
+        img {
+            height: 100%;
+            width: auto;
+            margin: 0 auto;
+        }
+
+        @media screen and (min-width: 850px) {
+            .wrapper {
+                display: flex;
+                @include flex-gap(2rem)
+            }
+        }
+
+        .number__kpi {
+            text-align: center;
+
+            &:not(:last-of-type) {
+                margin-bottom: 3rem;
+
+                .number__kpi-description {
+                    margin-top: -1.75rem;
+                }
+            }
+
+            @media screen and (min-width: 425px) {
+                max-width: 25.375rem;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .number__kpi-title {
+                color: $color-white;
+                font-weight: 600;
+                font-size: 1.125rem;
+                line-height: 25.2px;
+            }
+
+            .number__kpi-data {
+                height: 9.25rem;
+                position: relative;
+            }
+
+            .number__kpi-legend {
+                position: absolute;
+                left: 0;
+                width: 100%;
+                top: 50%;
+                transform: translateY(-50%);
+
+                font-family: "veneer", sans-serif;
+                font-weight: 400;
+                font-size: 4.5rem;
+                color: $color-red;
+            }
+
+            .number__kpi-description {
+                color: $color-white;
+            }
+        }
+    }
+
+    .chart__container {
+        background-image: url("/assets/images/alpd-academy/polaroid-mobile.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+
+        padding: 2.1rem 0;
+        padding-right: 1rem;
+
+        position: relative;
+
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+
+        @media screen and (min-width: 850px) {
+            background-image: url("/assets/images/alpd-academy/polaroid-desktop.png");
+            padding: 2.5rem 2.7rem;
+        }
+
+        @media screen and (min-width: 1024px) {
+            max-width: 80rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &::before {
+            content: "";
+            background-image: url("/assets/images/alpd-academy/tape-mobile.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            width: 9.375rem;
+            height: 3.5rem;
+
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @media screen and (min-width: 600px) {
+                width: 13rem;
+                height: 4.25rem;
+                top: -28px;
+            }
+
+            @media screen and (min-width: 1024px) {
+                background-image: url("/assets/images/alpd-academy/tape-desktop.png");
+                width: 23rem;
+                height: 8.25rem;
+                top: -80px;
+            }
+        }
+
+        .chart__container-content {
+            background-image: url("/assets/images/alpd-academy/chart-background-mobile.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+
+            background-color: $color-cararra;
+            box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25);
+
+            padding: 1.5rem 0;
+        }
+
+        .chart__title {
+            font-weight: 600;
+            font-size: 1.125rem;
+            line-height: 25.2px;
+
+            margin-bottom: 1.5rem;
+
+            @media screen and (min-width: 850px) {
+                font-size: 1.375rem;
+                line-height: 30.8px;
+                text-align: center;
+            }
+        }
+
+        .chart__paragraph {
+            font-weight: 500;
+            font-size: .875rem;
+            line-height: 21px;
+
+            &:not(:last-of-type) {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+.hypophosphatasia-info {
+    position: relative;
+    height: calc(496px + ((570 - 496) * ((100vw - 320px) / (500 - 320))));
+
+    @media screen and (min-width: 500px) {
+        height: auto;
+        margin-bottom: 5rem;
+
+        .red-string,
+        picture {
+            display: none;
+        }
+    }
+
+    .red-string {
+        width: calc(100vw + 20rem);
+        position: absolute;
+        z-index: 1;
+
+        left: 50%;
+        transform: translateX(-50%);
+
+        &.first {
+            top: 87px;
+            transform: translateX(-50%) rotate(-11deg);
+        }
+
+        &.last {
+            bottom: 0px;
+            transform: translateX(-50%) rotate(16deg);
+        }
+    }
+
+    .postit,
+    .postit-mask {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        width: 100%;
+        height: 100%;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .postit {
+        z-index: 0;
+    }
+
+    .postit-mask {
+        z-index: 2;
+    }
+
+    .hypophosphatasia-info__content {
+        position: relative;
+        z-index: 3;
+        padding-top: 8rem;
+        padding-bottom: 5rem;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+
+        @media screen and (min-width: 500px) {
+            padding: 0;
+            max-width: 44.6875rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        p {
+            text-align: center;
+            font-family: 'Special Elite', cursive;
+
+            font-size: 1.125rem;
+            line-height: 27px;
+
+            * {
+                font-family: 'Special Elite', cursive;
+            }
+
+            &:first-of-type {
+                margin-bottom: 1.5rem;
+                @media screen and (min-width: 500px) {
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+
+        @media screen and (min-width: 500px) {
+            p {
+                color: $color-white;
+                font-family: Barlow, Arial, Helvetica, sans-serif;
+
+                * {
+                    font-family: Barlow, Arial, Helvetica, sans-serif;
+                }
+            }
+        }
+    }
+}
+
+.hpp-profile__call-out {
+    position: relative;
     text-align: center;
-    
-    &__title{
+
+    padding: 4rem 0;
+
+    @media screen and (min-width: 768px) {
+        padding: 4.5rem 0;
+    }
+
+    .hpp-profile-text {
+        color: $color-white;
+        font-size: 1.125rem;
+        font-weight: 600;
+        line-height: 25.2px;
+        margin-bottom: 1rem;
+
+        max-width: 12.5rem;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media screen and (min-width: 768px) {
+            max-width: max-content;
+            font-size: 1.375rem;
+            line-height: 30.8px;
+        }
+    }
+
+    .button {
+        margin: auto;
+    }
+
+    .red-string {
+        width: calc(100vw + 100% + 20rem);
+        position: absolute;
+
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            display: block;
+        }
+
+        left: 50%;
+        transform: translateX(-50%);
+
+        &.first {
+            left: 0;
+            top: 0;
+            transform: translateX(-50%) rotate(2deg);
+        }
+
+        &.second {
+            left: 0;
+            top: 20px;
+            transform: translateX(-50%) rotate(-2deg);
+        }
+
+        &.third {
+            bottom: 0;
+            transform: translateX(-50%) rotate(-5deg);
+        }
+    }
+}
+
+.page-hero {
+    position: relative;
+    height: calc(250px + ((384 - 250) * ((100vw - 320px) / (1440 - 320))));
+
+    .page-hero__image {
+        height: 100%;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .page-hero__stamp {
+        position: absolute;
+        width: 15.0625rem;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @media screen and (min-width: 768px) {
+            width: 22.0625rem;
+            left: 3rem;
+        }
+    }
+
+    .page-hero-red-string {
+        width: calc(100vw + 20rem);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 2;
+
+        transform: translate(-50%, -50%) rotate(40deg);
+
+        @media screen and (min-width: 768px) {
+            top: 93%;
+            transform: translate(-50%, -50%) rotate(7deg);
+        }
+    }
+}
+
+// -------------------------- ALPD Academy page ---------------------------------------------------
+
+/* 404 */
+.page__not_found {
+    text-align: center;
+
+    &__title {
         width: 9rem;
         margin: auto;
         margin-top: 9.2363rem;
         position: relative;
         z-index: 2;
-        
+
         /* @media screen and (min-width:700px) {
             width: 11.1875rem;
             margin-top: 14.5006rem;
         } */
-        
+
     }
-    &__text{
+
+    &__text {
         color: $color-white;
         margin-top: 1.9125rem;
         margin-bottom: 1.99rem;
         position: relative;
         z-index: 2;
+
         @media screen and (min-width:700px) {
             margin-bottom: 3rem;
         }
 
-        p{
+        p {
             font-family: 'Barlow';
             font-style: normal;
             font-weight: 600;
@@ -72,32 +1125,33 @@
             line-height: 1.5625rem;
             max-width: 17.125rem;
             margin: auto;
+
             @media screen and (min-width:700px) {
-            max-width: 36.3125rem;
-            font-size: 1.3125rem;
-            line-height: 1.8125rem;
+                max-width: 36.3125rem;
+                font-size: 1.3125rem;
+                line-height: 1.8125rem;
             }
         }
 
-        :first-child{
+        :first-child {
             margin-bottom: 2rem;
         }
     }
 
-    .button{
+    .button {
         margin: auto;
         margin-bottom: 8.0938rem;
         position: relative;
         z-index: 2;
     }
 
-    .reference{
+    .reference {
         position: relative;
         max-width: 90rem;
         margin: auto;
     }
 
-    &__image{
+    &__image {
         position: absolute;
         min-width: 27.6944rem;
         max-width: 27.6944rem;
@@ -107,18 +1161,20 @@
         @media screen and (min-width:500px) {
             left: 0;
         }
+
         @media screen and (min-width:800px) {
             max-width: 51.5356rem;
             /* top: -23.3125rem; */
             top: -19.3125rem;
             left: -3.875rem;
         }
+
         @media screen and (min-width:1200px) {
             left: 0;
         }
     }
 
-    .red-string{
+    .red-string {
         position: absolute;
         transform: rotate(7.51deg);
         top: 22.4375rem;
@@ -128,33 +1184,39 @@
             transform: rotate(5.51deg);
             top: 21.6875rem;
         }
+
         @media screen and (min-width:700px) {
             transform: rotate(-4.49deg);
             top: 20.8125rem;
             left: -1.8125rem;
             width: 105vw;
         }
+
         @media screen and (min-width:1500px) {
             transform: rotate(-3.49deg);
             top: 14.375rem;
             left: -21rem;
             width: 362vw;
         }
+
         @media screen and (min-width:1690px) {
             transform: rotate(-2.49deg);
             top: 15.6875rem;
             left: -21rem;
             width: 362vw;
         }
+
         @media screen and (min-width:2020px) {
             top: 12.5rem;
             left: -43.1875rem;
             width: 423vw;
         }
+
         @media screen and (min-width:2340px) {
             top: 14.4375rem;
             transform: rotate(-1.49deg);
         }
     }
-} 
+}
+
 /* 404 */
