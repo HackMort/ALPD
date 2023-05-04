@@ -1,6 +1,12 @@
 .cta{
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+    
+    @media screen and (min-width:768px) {
     padding-top: 8.7462rem;
     padding-bottom: 10.5175rem;
+    }
+
     p{
         color: $color-white;
     }
@@ -9,6 +15,7 @@
         color:white;
         margin-bottom: 1.0325rem;
         font-size: 1.125rem;
+        font-weight: 600;
         
     }
     .variant-1{
@@ -38,7 +45,7 @@
                     width: 100vw;
                     top: -68px;
                     left: 0;
-                    transform: rotate(356deg);
+                    transform: rotate(357deg);
                 }
             }
 
@@ -51,7 +58,7 @@
                     width: 100vw;
                     top: -54px;
                     left: 0;
-                    transform: rotate(360deg);
+                    transform: rotate(361deg);
                 }
                 @media screen and (min-width:1700px) {
                     transform: rotate(359deg);
@@ -66,8 +73,8 @@
                     position: absolute;
                     color: red;
                     width: 100vw;
-                    bottom: -54px;
-                    transform: rotate(357deg);
+                    bottom: -39px;
+                    transform: rotate(353deg);
                 }
             }  
             .red-circle{
@@ -100,7 +107,7 @@
                 color: red;
                 width: 100vw;
                 bottom: -54px;
-                transform: rotate(357deg);
+                transform: rotate(363deg);
             }
         }
         }
