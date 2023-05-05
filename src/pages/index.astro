@@ -5,9 +5,735 @@ import MainHero from "../components/MainHero.astro";
 import ALPDVideo from "../components/ALPDVideo.astro";
 import References from "../components/References.astro";
 import CTA from "../components/CTA.astro";
+import PatientCaseFile from "../components/Case-Files/PatientCaseFile.astro";
+import PinchToZoom from "../components/Pinch-to-zoom.astro";
+import PatientCaseFilesWrapper from "../components/Case-Files/PatientCaseFilesWrapper.astro";
 ---
 
 <Layout title="Welcome" showHeader={true} showISI={false}>
+  <PatientCaseFilesWrapper>
+    <PatientCaseFile
+      id="1"
+      name="Nathan"
+      age={57}
+      gender="M"
+      description="A 57-year-old male has gone undiagnosed for 30+ years. Does Nathan’s file remind you of any of your current patients?"
+      photo="/assets/images/case-files/nathan/nathan.png"
+    >
+      <Fragment slot="medical">
+        <ul>
+          <li class="item">
+            2 nontraumatic fractures: Age 13, femur; age 16, metatarsals
+          </li>
+          <li class="item">
+            Reportsof slow healing fractures, even at young age
+          </li>
+          <li class="item">Age 50: Kidney stones</li>
+          <li class="item">History of poor dentition and weak/loose teeth</li>
+          <li class="item">
+            Recent diagnosis ofpseudogout/CPPD/chondrocalcinosis
+          </li>
+        </ul>
+      </Fragment>
+      <Fragment slot="family">
+        <ul>
+          <li class="item">Mother: Osteoporosis</li>
+          <li class="item">
+            Father: Hypertension, myocardial infarction at 67
+          </li>
+        </ul>
+      </Fragment>
+      <Fragment slot="symptoms">
+        <ul>
+          <li class="item">Bone pain in back and thighs</li>
+          <li class="item">Chronic fatigue</li>
+          <li class="item">Current nontraumatic hairline fracture</li>
+          <li class="item">Reports of anxiety and depressed mood</li>
+        </ul>
+      </Fragment>
+      <Fragment slot="medications">
+        <ul>
+          <li class="item">Calcium and vitamin D supplement daily</li>
+          <li class="item">Reports of daily NSAID use</li>
+        </ul>
+      </Fragment>
+      <Fragment slot="results">
+        <h4 class="results__title">CMP test results from:</h4>
+        <h5>Today</h5>
+        <div class="acc-table">
+          <div class="first-column">
+            <h3>TEST</h3>
+            <p>Calcium, mg/dL</p>
+            <p>Protein, g/dL</p>
+            <p>Albumin, g/dL</p>
+            <p>Alkaline phosphatase, IU/L</p>
+          </div>
+
+          <div class="second-column">
+            <h3>RESULT</h3>
+            <p>10.6</p>
+            <p>6.5</p>
+            <p>4.6</p>
+            <p>63</p>
+          </div>
+
+          <div class="second-column last-child">
+            <h3>FLAG</h3>
+            <p>High</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+          </div>
+        </div>
+        <h5>6 months ago</h5>
+        <div class="acc-table">
+          <div class="first-column">
+            <h3>TEST</h3>
+            <p>Calcium, mg/dL</p>
+            <p>Protein, g/dL</p>
+            <p>Albumin, g/dL</p>
+            <p>Alkaline phosphatase, IU/L</p>
+          </div>
+          <div class="second-column">
+            <h3>RESULT</h3>
+            <p>9.8</p>
+            <p>6.9</p>
+            <p>3.9</p>
+            <p>35</p>
+          </div>
+          <div class="second-column last-child">
+            <h3>FLAG</h3>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+          </div>
+        </div>
+        <h5>1 year ago</h5>
+        <div class="acc-table">
+          <div class="first-column">
+            <h3>TEST</h3>
+            <p>Calcium, mg/dL</p>
+            <p>Protein, g/dL</p>
+            <p>Albumin, g/dL</p>
+            <p>Alkaline phosphatase, IU/L</p>
+          </div>
+          <div class="second-column">
+            <h3>RESULT</h3>
+            <p>10.2</p>
+            <p>7.1</p>
+            <p>4.0</p>
+            <p>32</p>
+          </div>
+          <div class="second-column last-child">
+            <h3>FLAG</h3>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+          </div>
+        </div>
+        <ul>
+          <li class="item">High vitamin B6 level shown at test 6 months ago</li>
+          <li class="item">
+            ALPL genetic test: Variant of uncertain significance (VUS)
+            identified
+          </li>
+        </ul>
+        <PinchToZoom id="pt-1-image-1">
+          <picture>
+            <source
+              srcset="/assets/images/case-files/nathan/Femur-fracture-age-13.png"
+              media="(min-width: 768px)"
+            />
+            <img
+              src="/assets/images/case-files/nathan/Femur-fracture-age-13.png"
+              alt=""
+            />
+          </picture>
+          <div class="patient">
+            <p>Femur fracture age 13</p>
+          </div>
+        </PinchToZoom>
+        <PinchToZoom id="pt-1-image-2">
+          <picture>
+            <source
+              srcset="/assets/images/case-files/nathan/Metatarsal-fracture-age-16.png"
+              media="(min-width: 768px)"
+            />
+            <img
+              src="/assets/images/case-files/nathan/Metatarsal-fracture-age-16.png"
+              alt=""
+            />
+          </picture>
+          <div class="patient">
+            <p>Metatarsal fracture age 16</p>
+          </div>
+        </PinchToZoom>
+        <PinchToZoom id="pt-1-image-3">
+          <picture>
+            <source
+              srcset="/assets/images/case-files/nathan/Tibial-fracture-age-57.png"
+              media="(min-width: 768px)"
+            />
+            <img
+              src="/assets/images/case-files/nathan/Tibial-fracture-age-57.png"
+              alt=""
+            />
+          </picture>
+          <div class="patient">
+            <p>Tibial fracture age 57</p>
+          </div>
+        </PinchToZoom>
+      </Fragment>
+      <Fragment slot="notes">
+        <ul>
+          <li class="item">N/A</li>
+        </ul>
+      </Fragment>
+    </PatientCaseFile>
+    <PatientCaseFile
+      id="2"
+      name="Anna"
+      age={35}
+      gender="F"
+      description="A 35-year-old female born prematurely. Does Anna’s file remind you of any of your current patients?"
+      photo="/assets/images/case-files/anna/anna.png"
+    >
+      <Fragment slot="medical">
+        <ul>
+          <li class="item">
+            2 nontraumatic fractures: Age 13, femur; age 16, metatarsals
+          </li>
+          <li class="item">
+            Reportsof slow healing fractures, even at young age
+          </li>
+          <li class="item">Age 50: Kidney stones</li>
+          <li class="item">History of poor dentition and weak/loose teeth</li>
+          <li class="item">
+            Recent diagnosis ofpseudogout/CPPD/chondrocalcinosis
+          </li>
+        </ul>
+      </Fragment>
+      <Fragment slot="family">
+        <ul>
+          <li class="item">Mother: Osteoporosis</li>
+          <li class="item">
+            Father: Hypertension, myocardial infarction at 67
+          </li>
+        </ul>
+      </Fragment>
+      <Fragment slot="symptoms">
+        <ul>
+          <li class="item">Bone pain in back and thighs</li>
+          <li class="item">Chronic fatigue</li>
+          <li class="item">Current nontraumatic hairline fracture</li>
+          <li class="item">Reports of anxiety and depressed mood</li>
+        </ul>
+      </Fragment>
+      <Fragment slot="medications">
+        <ul>
+          <li class="item">Calcium and vitamin D supplement daily</li>
+          <li class="item">Reports of daily NSAID use</li>
+        </ul>
+      </Fragment>
+      <Fragment slot="results">
+        <h4 class="results__title">CMP test results from:</h4>
+        <h5>Today</h5>
+        <div class="acc-table">
+          <div class="first-column">
+            <h3>TEST</h3>
+            <p>Calcium, mg/dL</p>
+            <p>Protein, g/dL</p>
+            <p>Albumin, g/dL</p>
+            <p>Alkaline phosphatase, IU/L</p>
+          </div>
+
+          <div class="second-column">
+            <h3>RESULT</h3>
+            <p>10.6</p>
+            <p>6.5</p>
+            <p>4.6</p>
+            <p>63</p>
+          </div>
+
+          <div class="second-column last-child">
+            <h3>FLAG</h3>
+            <p>High</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+          </div>
+        </div>
+        <h5>6 months ago</h5>
+        <div class="acc-table">
+          <div class="first-column">
+            <h3>TEST</h3>
+            <p>Calcium, mg/dL</p>
+            <p>Protein, g/dL</p>
+            <p>Albumin, g/dL</p>
+            <p>Alkaline phosphatase, IU/L</p>
+          </div>
+          <div class="second-column">
+            <h3>RESULT</h3>
+            <p>9.8</p>
+            <p>6.9</p>
+            <p>3.9</p>
+            <p>35</p>
+          </div>
+          <div class="second-column last-child">
+            <h3>FLAG</h3>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+          </div>
+        </div>
+        <h5>1 year ago</h5>
+        <div class="acc-table">
+          <div class="first-column">
+            <h3>TEST</h3>
+            <p>Calcium, mg/dL</p>
+            <p>Protein, g/dL</p>
+            <p>Albumin, g/dL</p>
+            <p>Alkaline phosphatase, IU/L</p>
+          </div>
+          <div class="second-column">
+            <h3>RESULT</h3>
+            <p>10.2</p>
+            <p>7.1</p>
+            <p>4.0</p>
+            <p>32</p>
+          </div>
+          <div class="second-column last-child">
+            <h3>FLAG</h3>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+          </div>
+        </div>
+        <ul>
+          <li class="item">High vitamin B6 level shown at test 6 months ago</li>
+          <li class="item">
+            ALPL genetic test: Variant of uncertain significance (VUS)
+            identified
+          </li>
+        </ul>
+        <PinchToZoom id="pt-1-image-1">
+          <picture>
+            <source
+              srcset="/assets/images/case-files/nathan/Femur-fracture-age-13.png"
+              media="(min-width: 768px)"
+            />
+            <img
+              src="/assets/images/case-files/nathan/Femur-fracture-age-13.png"
+              alt=""
+            />
+          </picture>
+          <div class="patient">
+            <p>Femur fracture age 13</p>
+          </div>
+        </PinchToZoom>
+        <PinchToZoom id="pt-1-image-2">
+          <picture>
+            <source
+              srcset="/assets/images/case-files/nathan/Metatarsal-fracture-age-16.png"
+              media="(min-width: 768px)"
+            />
+            <img
+              src="/assets/images/case-files/nathan/Metatarsal-fracture-age-16.png"
+              alt=""
+            />
+          </picture>
+          <div class="patient">
+            <p>Metatarsal fracture age 16</p>
+          </div>
+        </PinchToZoom>
+        <PinchToZoom id="pt-1-image-3">
+          <picture>
+            <source
+              srcset="/assets/images/case-files/nathan/Tibial-fracture-age-57.png"
+              media="(min-width: 768px)"
+            />
+            <img
+              src="/assets/images/case-files/nathan/Tibial-fracture-age-57.png"
+              alt=""
+            />
+          </picture>
+          <div class="patient">
+            <p>Tibial fracture age 57</p>
+          </div>
+        </PinchToZoom>
+      </Fragment>
+      <Fragment slot="notes">
+        <ul>
+          <li class="item">N/A</li>
+        </ul>
+      </Fragment>
+    </PatientCaseFile>
+    <PatientCaseFile
+      id="3"
+      name="Hannah"
+      age={7}
+      gender="F"
+      description="A 7-year-old female with ALP levels of 138. Does Hannah’s file remind you of any of your current patients?"
+      photo="/assets/images/case-files/hanna/hanna.png"
+    >
+      <Fragment slot="medical">
+        <ul>
+          <li class="item">Age 4: History of nontraumatic tooth loss</li>
+          <li class="item">Delay in walking milestone</li>
+          <li class="item">
+            Age 5: Bout with streptococcal pharyngitis, treated with antibiotics
+          </li>
+        </ul>
+      </Fragment>
+      <Fragment slot="family">
+        <ul>
+          <li class="item">
+            Mother: <strong>Anna</strong>
+            <ul>
+              <li class="item">
+                History of early tooth loss, delayed eruption of permanent
+                teeth, and chronic pain
+              </li>
+            </ul>
+          </li>
+          <li class="item">Father: No significant medical history to report</li>
+        </ul>
+      </Fragment>
+      <Fragment slot="symptoms">
+        <ul>
+          <li class="item">Bone pain in back and thighs</li>
+          <li class="item">Chronic fatigue</li>
+          <li class="item">Current nontraumatic hairline fracture</li>
+          <li class="item">Reports of anxiety and depressed mood</li>
+        </ul>
+      </Fragment>
+      <Fragment slot="medications">
+        <ul>
+          <li class="item">Calcium and vitamin D supplement daily</li>
+          <li class="item">Reports of daily NSAID use</li>
+        </ul>
+      </Fragment>
+      <Fragment slot="results">
+        <h4 class="results__title">CMP test results from:</h4>
+        <h5>Today</h5>
+        <div class="acc-table">
+          <div class="first-column">
+            <h3>TEST</h3>
+            <p>Calcium, mg/dL</p>
+            <p>Protein, g/dL</p>
+            <p>Albumin, g/dL</p>
+            <p>Alkaline phosphatase, IU/L</p>
+          </div>
+
+          <div class="second-column">
+            <h3>RESULT</h3>
+            <p>10.6</p>
+            <p>6.5</p>
+            <p>4.6</p>
+            <p>63</p>
+          </div>
+
+          <div class="second-column last-child">
+            <h3>FLAG</h3>
+            <p>High</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+          </div>
+        </div>
+        <h5>6 months ago</h5>
+        <div class="acc-table">
+          <div class="first-column">
+            <h3>TEST</h3>
+            <p>Calcium, mg/dL</p>
+            <p>Protein, g/dL</p>
+            <p>Albumin, g/dL</p>
+            <p>Alkaline phosphatase, IU/L</p>
+          </div>
+          <div class="second-column">
+            <h3>RESULT</h3>
+            <p>9.8</p>
+            <p>6.9</p>
+            <p>3.9</p>
+            <p>35</p>
+          </div>
+          <div class="second-column last-child">
+            <h3>FLAG</h3>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+          </div>
+        </div>
+        <h5>1 year ago</h5>
+        <div class="acc-table">
+          <div class="first-column">
+            <h3>TEST</h3>
+            <p>Calcium, mg/dL</p>
+            <p>Protein, g/dL</p>
+            <p>Albumin, g/dL</p>
+            <p>Alkaline phosphatase, IU/L</p>
+          </div>
+          <div class="second-column">
+            <h3>RESULT</h3>
+            <p>10.2</p>
+            <p>7.1</p>
+            <p>4.0</p>
+            <p>32</p>
+          </div>
+          <div class="second-column last-child">
+            <h3>FLAG</h3>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+          </div>
+        </div>
+        <ul>
+          <li class="item">High vitamin B6 level shown at test 6 months ago</li>
+          <li class="item">
+            ALPL genetic test: Variant of uncertain significance (VUS)
+            identified
+          </li>
+        </ul>
+        <PinchToZoom id="pt-1-image-1">
+          <picture>
+            <source
+              srcset="/assets/images/case-files/nathan/Femur-fracture-age-13.png"
+              media="(min-width: 768px)"
+            />
+            <img
+              src="/assets/images/case-files/nathan/Femur-fracture-age-13.png"
+              alt=""
+            />
+          </picture>
+          <div class="patient">
+            <p>Femur fracture age 13</p>
+          </div>
+        </PinchToZoom>
+        <PinchToZoom id="pt-1-image-2">
+          <picture>
+            <source
+              srcset="/assets/images/case-files/nathan/Metatarsal-fracture-age-16.png"
+              media="(min-width: 768px)"
+            />
+            <img
+              src="/assets/images/case-files/nathan/Metatarsal-fracture-age-16.png"
+              alt=""
+            />
+          </picture>
+          <div class="patient">
+            <p>Metatarsal fracture age 16</p>
+          </div>
+        </PinchToZoom>
+        <PinchToZoom id="pt-1-image-3">
+          <picture>
+            <source
+              srcset="/assets/images/case-files/nathan/Tibial-fracture-age-57.png"
+              media="(min-width: 768px)"
+            />
+            <img
+              src="/assets/images/case-files/nathan/Tibial-fracture-age-57.png"
+              alt=""
+            />
+          </picture>
+          <div class="patient">
+            <p>Tibial fracture age 57</p>
+          </div>
+        </PinchToZoom>
+      </Fragment>
+      <Fragment slot="notes">
+        <ul>
+          <li class="item">N/A</li>
+        </ul>
+      </Fragment>
+    </PatientCaseFile>
+    <PatientCaseFile
+      id="4"
+      name="Nathan"
+      age={57}
+      gender="M"
+      description="A 57-year-old male has gone undiagnosed for 30+ years. Does Nathan’s file remind you of any of your current patients?"
+      photo="/assets/images/case-files/nathan/nathan.png"
+    >
+      <Fragment slot="medical">
+        <ul>
+          <li class="item">
+            2 nontraumatic fractures: Age 13, femur; age 16, metatarsals
+          </li>
+          <li class="item">
+            Reportsof slow healing fractures, even at young age
+          </li>
+          <li class="item">Age 50: Kidney stones</li>
+          <li class="item">History of poor dentition and weak/loose teeth</li>
+          <li class="item">
+            Recent diagnosis ofpseudogout/CPPD/chondrocalcinosis
+          </li>
+        </ul>
+      </Fragment>
+      <Fragment slot="family">
+        <ul>
+          <li class="item">Mother: Osteoporosis</li>
+          <li class="item">
+            Father: Hypertension, myocardial infarction at 67
+          </li>
+        </ul>
+      </Fragment>
+      <Fragment slot="symptoms">
+        <ul>
+          <li class="item">Bone pain in back and thighs</li>
+          <li class="item">Chronic fatigue</li>
+          <li class="item">Current nontraumatic hairline fracture</li>
+          <li class="item">Reports of anxiety and depressed mood</li>
+        </ul>
+      </Fragment>
+      <Fragment slot="medications">
+        <ul>
+          <li class="item">Calcium and vitamin D supplement daily</li>
+          <li class="item">Reports of daily NSAID use</li>
+        </ul>
+      </Fragment>
+      <Fragment slot="results">
+        <h4 class="results__title">CMP test results from:</h4>
+        <h5>Today</h5>
+        <div class="acc-table">
+          <div class="first-column">
+            <h3>TEST</h3>
+            <p>Calcium, mg/dL</p>
+            <p>Protein, g/dL</p>
+            <p>Albumin, g/dL</p>
+            <p>Alkaline phosphatase, IU/L</p>
+          </div>
+
+          <div class="second-column">
+            <h3>RESULT</h3>
+            <p>10.6</p>
+            <p>6.5</p>
+            <p>4.6</p>
+            <p>63</p>
+          </div>
+
+          <div class="second-column last-child">
+            <h3>FLAG</h3>
+            <p>High</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+          </div>
+        </div>
+        <h5>6 months ago</h5>
+        <div class="acc-table">
+          <div class="first-column">
+            <h3>TEST</h3>
+            <p>Calcium, mg/dL</p>
+            <p>Protein, g/dL</p>
+            <p>Albumin, g/dL</p>
+            <p>Alkaline phosphatase, IU/L</p>
+          </div>
+          <div class="second-column">
+            <h3>RESULT</h3>
+            <p>9.8</p>
+            <p>6.9</p>
+            <p>3.9</p>
+            <p>35</p>
+          </div>
+          <div class="second-column last-child">
+            <h3>FLAG</h3>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+          </div>
+        </div>
+        <h5>1 year ago</h5>
+        <div class="acc-table">
+          <div class="first-column">
+            <h3>TEST</h3>
+            <p>Calcium, mg/dL</p>
+            <p>Protein, g/dL</p>
+            <p>Albumin, g/dL</p>
+            <p>Alkaline phosphatase, IU/L</p>
+          </div>
+          <div class="second-column">
+            <h3>RESULT</h3>
+            <p>10.2</p>
+            <p>7.1</p>
+            <p>4.0</p>
+            <p>32</p>
+          </div>
+          <div class="second-column last-child">
+            <h3>FLAG</h3>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+          </div>
+        </div>
+        <ul>
+          <li class="item">High vitamin B6 level shown at test 6 months ago</li>
+          <li class="item">
+            ALPL genetic test: Variant of uncertain significance (VUS)
+            identified
+          </li>
+        </ul>
+        <PinchToZoom id="pt-1-image-1">
+          <picture>
+            <source
+              srcset="/assets/images/case-files/nathan/Femur-fracture-age-13.png"
+              media="(min-width: 768px)"
+            />
+            <img
+              src="/assets/images/case-files/nathan/Femur-fracture-age-13.png"
+              alt=""
+            />
+          </picture>
+          <div class="patient">
+            <p>Femur fracture age 13</p>
+          </div>
+        </PinchToZoom>
+        <PinchToZoom id="pt-1-image-2">
+          <picture>
+            <source
+              srcset="/assets/images/case-files/nathan/Metatarsal-fracture-age-16.png"
+              media="(min-width: 768px)"
+            />
+            <img
+              src="/assets/images/case-files/nathan/Metatarsal-fracture-age-16.png"
+              alt=""
+            />
+          </picture>
+          <div class="patient">
+            <p>Metatarsal fracture age 16</p>
+          </div>
+        </PinchToZoom>
+        <PinchToZoom id="pt-1-image-3">
+          <picture>
+            <source
+              srcset="/assets/images/case-files/nathan/Tibial-fracture-age-57.png"
+              media="(min-width: 768px)"
+            />
+            <img
+              src="/assets/images/case-files/nathan/Tibial-fracture-age-57.png"
+              alt=""
+            />
+          </picture>
+          <div class="patient">
+            <p>Tibial fracture age 57</p>
+          </div>
+        </PinchToZoom>
+      </Fragment>
+      <Fragment slot="notes">
+        <ul>
+          <li class="item">N/A</li>
+        </ul>
+      </Fragment>
+    </PatientCaseFile>
+  </PatientCaseFilesWrapper>
+
   <MainHero />
   <section class="section section__home-video" id="alpd-video">
     <div class="wrapper">
@@ -56,5 +782,4 @@ import CTA from "../components/CTA.astro";
 
     <div class="red-string"></div>
   </section>
-  
 </Layout>
