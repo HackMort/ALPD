@@ -1,12 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import CTA from "../components/CTA.astro";
 ---
 
 <Layout title="HPP Profile" pageClass="hpp__profile" showISI={false}>
   <!-- Profiling hypophostasia (HPP) -->
-  <section id="profiling-hypophostasia" class="profiling-hypophostasia">
+  <section id="hpp-definition" class="profiling-hypophostasia">
     <div class="hpp__profile__red-string-bg">
-      <h2 class="hpp__profile__hidden-title">11A0763</h2>
       <div class="wrapper hpp__profile__content">
         <h2 class="hpp__profile__main-title color--red text--uppercase">
           Profiling Hypophosphatasia (HPP)
@@ -27,6 +27,7 @@ import Layout from "../layouts/Layout.astro";
       </div>
 
       <div class="hpp__profile__image-container">
+        <h2 class="hpp__profile__hidden-title">11A0763</h2>
         <picture>
           <source
             srcset="/assets/images/hpp-profile/hpp-profile.png"
@@ -45,26 +46,45 @@ import Layout from "../layouts/Layout.astro";
           class="hpp__profile__paragraph hpp__profile__paragraph--sub hpp__profile__red-frame-disclaimer--content color--white text--center"
         >
           Hypophosphatasia may become debilitating and can cause damage to
-          multiple systems in the body beyond the skeletal system.3-5
+          <span>multiple systems</span> in the body beyond the skeletal system.<sup
+            >3-5</sup
+          >
         </p>
       </div>
     </div>
   </section>
 
-  <section id="hpp-patients">
+  <!-- Prevalence of HPP -->
+  <section id="hpp-prevalence">
+    <!-- HPP Patients charts -->
     <div class="hpp-patients__red-string">
+      <picture>
+        <img
+          class="hpp-patients__red-pin"
+          src="/assets/images/hpp-profile/pin.png"
+          alt="Pin"
+        />
+      </picture>
       <p class="wrapper hpp-patients__disclaimer">
         Reduced alkaline phosphatase levels during childhood may affect peak
-        bone mass later in life23,24
+        bone mass later in life <sup>23,24</sup>
       </p>
+
+      <span class="hpp-patients__red-string1"></span>
+      <span class="hpp-patients__red-string2"></span>
     </div>
 
     <div class="wrapper hpp-patients__section">
       <div class="hpp-patients__section--bg-white">
+        <p class="hpp-patients__section__disclaimer--dk">
+          Reduced alkaline phosphatase levels during childhood may affect <span
+            >peak bone mass later in life <sup>23,24</sup></span
+          >
+        </p>
         <div class="wrapper">
-          <h1 class="hpp-patients__section__title">
+          <h5 class="hpp-patients__section__title">
             Percent of patients with hypophosphatasia fractures
-          </h1>
+          </h5>
 
           <div class="hpp-patients__section__chart">
             <!-- Desktop chart -->
@@ -146,5 +166,89 @@ import Layout from "../layouts/Layout.astro";
       and health-related quality of life. One hundred twenty-five adults
       participated.18
     </p>
+
+    <!-- HPP Patients notes -->
+
+    <div class="hpp-patients__notes">
+      <div class="hpp-patients__note">
+        <img
+          class="hpp-patients__notes--pin"
+          src="/assets/images/hpp-profile/pin.png"
+          alt="HPP patient note pin"
+        />
+        <p class="hpp-patients__notes--note">
+          In a meta-analysis of pediatric patients with hypophosphatasia who
+          were followed through adulthood [N=265], there was a <span
+            class="hpp-patients__notes--note--text-red">high risk</span
+          > of fractures (one or more, or multiple), gross motor/ambulatory difficulties,
+          pain, and surgery with increasing age. <sup>27</sup>
+          <br />
+          <br />
+          <span class="hpp-patients__notes--note--foot">
+            Not all patients in this study were pediatric; 43 of the 265
+            patients had adult-onset HPP.
+          </span>
+        </p>
+      </div>
+
+      <div class="hpp-patients__percentage">
+        <img
+          class="hpp-patients__percentage--pin"
+          src="/assets/images/hpp-profile/pin.png"
+          alt="Pin"
+        />
+        <p class="hpp-patients__percentage--text text--center">94%</p>
+        <p class="wrapper hpp-patients__percentage--content">
+          of patients with at least 1 year of follow-up experienced at least 1
+          manifestation or event that contributed to the <span
+            class="hpp-patients__percentage--content--text-red"
+            >clinical burden of hypophosphatasia.<sup>27</sup></span
+          >
+        </p>
+        <p class="wrapper hpp-patients__percentage--disclaimer">
+          *16.5% (43 patients/cases) had their first reported occurrence of HPP
+          manifestations at 18 years of age or older.
+        </p>
+      </div>
+    </div>
+
+    <div class="wrapper hpp-patients__content">
+      <h2 class="hpp__profile__title">
+        WHY Hypophosphatasia SHOULD REMAIN ON YOUR RADAR
+      </h2>
+      <p class="hpp__profile__content">
+        Though it has been previously classified as a rare disease, the overall
+        prevalence of hypophosphatasia is unknown. Globally, hypophosphatasia
+        affects males and females of all ages and appears to be especially
+        prevalent in people of Caucasian descent.<sup>1,15,28,29</sup>
+      </p>
+
+      <div class="hpp__profile__red-frame-disclaimer">
+        <p
+          class="hpp__profile__paragraph hpp__profile__paragraph--sub hpp__profile__red-frame-disclaimer--content color--white text--center"
+        >
+          While severe cases of hypophosphatasia occur in about 1:300,000
+          births, milder forms occur in about 1:6370 births. Additional affected
+          individuals may be unrecognized or misdiagnosed.1,19-21
+        </p>
+      </div>
+
+      <h2 class="hpp__profile__title">
+        Proper diagnosis of hypophosphatasia is crucial
+      </h2>
+      <p class="hpp__profile__content">
+        Misdiagnosing hypophosphatasia can put patients at risk, with some
+        commonly used therapies prescribed for misdiagnoses negatively impacting
+        their condition.18
+      </p>
+
+      <CTA
+        variation="variant-2"
+        buttonLabel="Usual Suspects"
+        content="Learn the risk of misdiagnosis"
+        linkURL="#"
+        bypassModal
+      />
+    </div>
   </section>
 </Layout>

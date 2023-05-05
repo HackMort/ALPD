@@ -1248,342 +1248,6 @@
 
                                 }
 
-                                /* 404 */
-
-                                /* HPP Profile Page */
-                                .hpp__profile {
-
-                                    &__content {
-                                        margin-bottom: 2rem;
-
-                                        @media screen and (min-width: 768px) and (max-width: 1024px) {
-                                            max-width: 70%;
-                                        }
-
-                                        @media screen and (min-width: 1024px) and (max-width: 1200px) {
-                                            max-width: 60%;
-                                        }
-
-                                        @media screen and (min-width: 1201px) {
-                                            max-width: 50%;
-                                        }
-                                    }
-
-                                    &__main-title {
-                                        margin: 3.1875rem 8rem 0 0;
-                                        font-weight: 600;
-
-                                        @include media('tablet') {
-                                            text-align: center;
-                                            margin: 3.1875rem auto 0 auto;
-                                        }
-                                    }
-
-                                    &__paragraph {
-                                        margin: 1rem 0 1rem 0;
-
-                                        &--sub {
-                                            font-size: 1.125rem;
-
-                                            @include media('tablet') {
-                                                text-align: center;
-                                            }
-                                        }
-
-                                        @include media('tablet') {
-                                            text-align: center;
-                                        }
-                                    }
-
-                                    &__sub-title {
-                                        font-size: 1.125rem;
-                                        font-weight: 600;
-
-                                        @include media('tablet') {
-                                            text-align: center;
-                                        }
-                                    }
-
-                                    &__image-container {
-                                        display: flex;
-                                        flex-direction: column;
-                                        justify-content: center;
-
-                                        @media screen and (min-width: 768px) and (max-width: 1024px) {
-                                            max-width: 70%;
-                                            margin: auto;
-                                        }
-
-                                        @media screen and (min-width: 1024px) and (max-width: 1200px) {
-                                            max-width: 60%;
-                                            margin: auto;
-                                        }
-
-                                        @media screen and (min-width: 1201px) {
-                                            max-width: 50%;
-                                            margin: auto;
-                                        }
-
-                                        @media screen and (min-width: 768px) {
-                                            position: relative;
-                                            z-index: 2;
-                                        }
-                                    }
-
-                                    &__red-frame-disclaimer {
-                                        display: flex;
-                                        justify-content: center;
-                                        align-items: center;
-
-                                        &--content {
-                                            background-image: url(/assets/images/red-frame.png);
-                                            background-size: contain;
-                                            background-repeat: no-repeat;
-                                            background-position: center;
-
-                                            font-size: 1rem;
-                                            font-family: 'Special Elite', cursive;
-                                            ;
-                                            font-weight: 400;
-
-                                            @media screen and (max-width: 768px) {
-                                                background-image: url(/assets/images/sticky-card.png);
-                                                color: $color-black;
-                                                z-index: 2;
-                                                margin: 0;
-                                            }
-
-                                            @media screen and (max-width: 495px) {
-                                                padding: 5rem;
-                                            }
-
-                                            @media screen and (min-width: 496px) and (max-width: 600px) {
-                                                padding: 7rem;
-                                            }
-
-                                            @media screen and (min-width: 601px) and (max-width: 768px) {
-                                                padding: 10rem;
-                                            }
-
-                                            @media screen and (min-width: 769px) and (max-width: 1024px) {
-                                                font-size: 1.25rem;
-                                                padding: 4rem;
-                                                max-width: 60%;
-                                                margin: -3rem 0 1rem 0;
-                                            }
-
-                                            @media screen and (min-width: 1025px) and (max-width: 1100px) {
-                                                font-size: 1.25rem;
-                                                padding: 4rem 5rem;
-                                                max-width: 46%;
-                                                margin: -2rem 0 1rem 0;
-                                            }
-
-                                            @media screen and (min-width: 1101px) and (max-width: 1366px) {
-                                                font-size: 1.25rem;
-                                                padding: 4rem 5rem;
-                                                max-width: 42%;
-                                                margin: -2rem 0 1rem 0;
-                                            }
-
-                                            @media screen and (min-width: 1367px) {
-                                                font-size: 1.25rem;
-                                                padding: 8rem 5rem;
-                                                max-width: 30%;
-                                                margin: -8rem 0 1rem 0;
-                                            }
-                                        }
-                                    }
-
-                                    &__red-string-bg {
-                                        overflow: clip;
-                                        position: relative;
-
-                                        /* Just a inclined line troughing from the left to the right*/
-                                        &::before {
-                                            content: '';
-                                            position: absolute;
-                                            top: 300px;
-                                            left: 0;
-                                            width: calc(100vw * 2);
-                                            height: 2px;
-                                            background-color: $color-red;
-                                            transform: rotate(45deg);
-                                            transform-origin: left;
-
-                                            @media screen and (min-width: 769px) {
-                                                //Rotate the line to the right side
-                                                transform: rotate(333deg);
-                                                transform-origin: top;
-                                                top: 165px;
-                                                left: -150px;
-                                            }
-                                        }
-                                    }
-
-                                    &__hidden-title {
-                                        display: none;
-
-                                        @media screen and (min-width: 769px) {
-                                            display: block;
-                                            font-size: 8rem;
-                                            font-weight: 600;
-                                            margin: 0 0 1rem 0;
-                                            position: absolute;
-                                            z-index: 0;
-                                            top: 250px;
-                                            left: 22%;
-                                            color: $color-brown;
-                                        }
-                                    }
-
-                                    &__image {
-                                        max-width: 65%;
-                                        margin: auto;
-                                    }
-
-                                    .hpp-patients__section {
-                                        background-image: url(/assets/images/hpp-profile/frame-polaroid.png);
-                                        background-repeat: no-repeat;
-                                        background-size: 100% 100%;
-                                        position: relative;
-
-                                        margin-left: auto;
-                                        margin-right: auto;
-
-                                        padding: 2.5rem 4.7rem;
-                                        margin-bottom: 3rem;
-
-                                        &::before {
-                                            content: '';
-                                            background-image: url(/assets/images/hpp-profile/tape.png);
-                                            background-repeat: no-repeat;
-                                            background-size: contain;
-                                            position: absolute;
-                                            top: -1.5rem;
-                                            left: 50%;
-                                            transform: translateX(-50%);
-                                            width: 12rem;
-                                            height: 5rem;
-
-                                            @media screen and (min-width: 769px) {
-                                                top: -1.5rem;
-                                                left: 7%;
-                                                transform: translateX(0);
-                                                width: 20rem;
-                                                height: 10rem;
-                                            }
-                                        }
-
-                                        @media screen and (min-width: 769px) and (max-width: 1300px) {
-                                            padding: 3.9rem 3rem;
-                                        }
-
-                                        @media screen and (max-width: 768px) {
-                                            background-image: url(/assets/images/hpp-profile/frame-polaroid-mb.png);
-
-                                            padding: 3rem 1.7rem;
-                                        }
-
-                                        &--bg-white {
-                                            background: url(/assets/images/hpp-profile/hpp-patients-chart-bg.png);
-                                            background-repeat: no-repeat;
-                                            background-size: 100% 100%;
-                                            background-color: $color-white;
-
-                                            padding: 1rem 0;
-                                        }
-
-                                        &__title {
-                                            margin: 2rem;
-                                        }
-
-                                        &__chart {
-                                            display: flex;
-                                            justify-content: center;
-                                            flex-direction: column;
-                                            align-items: center;
-
-                                            &--mb {
-                                                @media screen and (min-width: 769px) {
-                                                    display: flex;
-                                                    flex-direction: row;
-                                                    justify-content: space-between;
-                                                    width: 100%;
-                                                }
-                                            }
-                                        }
-
-                                        &__image {
-                                            max-width: 100%;
-                                            margin: auto;
-                                            display: none;
-
-                                            @media screen and (min-width: 769px) {
-                                                display: block;
-                                            }
-
-                                            &--mb {
-                                                max-width: 15rem;
-                                                margin: auto;
-
-                                                display: block;
-
-                                                @media screen and (min-width: 769px) {
-                                                    display: none;
-                                                }
-                                            }
-                                        }
-
-                                        &__text-chart {
-                                            text-align: center;
-                                            max-width: 11rem;
-                                            margin: auto;
-
-                                            @media screen and (min-width: 769px) {
-                                                max-width: 13rem;
-                                            }
-                                        }
-
-                                        &__content {
-                                            margin: 2rem;
-
-                                            @media screen and (max-width: 768px) {
-                                                display: none;
-                                            }
-
-                                            &--mb {
-                                                display: none;
-                                                color: $color-white;
-
-                                                @media screen and (max-width: 768px) {
-                                                    display: block;
-                                                    padding: 0 2rem;
-                                                    margin-bottom: 2rem;
-                                                }
-                                            }
-                                        }
-                                    }
-
-                                    .hpp-patients {
-                                        &__disclaimer {
-                                            color: $color-gold;
-                                            margin: 3rem 0;
-                                            padding: 0 4rem;
-                                            text-align: center;
-                                        }
-
-                                        &__red-string {
-                                            &::before {
-                                                content: '';
-                                                height: 2px;
-                                                background-color: $color-red;
-                                                transform-origin: right;
-                                                transform: rotate(355deg);
-                                            }
-                                        }
-                                    }
-                                }
                             }
                         }
                     }
@@ -1620,6 +1284,20 @@
             text-align: center;
             margin: 3.1875rem auto 0 auto;
         }
+    }
+
+    &__title {
+        color: $color-white;
+        text-transform: uppercase;
+
+        @include media('tablet') {
+            text-align: center;
+        }
+    }
+
+    &__content {
+        color: $color-white;
+        margin: 0 auto 3rem auto;
     }
 
     &__paragraph {
@@ -1677,16 +1355,19 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-bottom: 1rem;
 
         &--content {
             background-image: url(/assets/images/red-frame.png);
-            background-size: contain;
+            background-size: 100% 100%;
             background-repeat: no-repeat;
             background-position: center;
 
+            max-width: 35rem;
+            padding: 4rem 3rem;
+
             font-size: 1rem;
             font-family: 'Special Elite', cursive;
-            ;
             font-weight: 400;
 
             @media screen and (max-width: 768px) {
@@ -1694,47 +1375,10 @@
                 color: $color-black;
                 z-index: 2;
                 margin: 0;
+                max-width: 25rem;
+                padding: 6rem 3rem;
             }
 
-            @media screen and (max-width: 495px) {
-                padding: 5rem;
-            }
-
-            @media screen and (min-width: 496px) and (max-width: 600px) {
-                padding: 7rem;
-            }
-
-            @media screen and (min-width: 601px) and (max-width: 768px) {
-                padding: 10rem;
-            }
-
-            @media screen and (min-width: 769px) and (max-width: 1024px) {
-                font-size: 1.25rem;
-                padding: 4rem;
-                max-width: 60%;
-                margin: -3rem 0 1rem 0;
-            }
-
-            @media screen and (min-width: 1025px) and (max-width: 1100px) {
-                font-size: 1.25rem;
-                padding: 4rem 5rem;
-                max-width: 46%;
-                margin: -2rem 0 1rem 0;
-            }
-
-            @media screen and (min-width: 1101px) and (max-width: 1366px) {
-                font-size: 1.25rem;
-                padding: 4rem 5rem;
-                max-width: 42%;
-                margin: -2rem 0 1rem 0;
-            }
-
-            @media screen and (min-width: 1367px) {
-                font-size: 1.25rem;
-                padding: 8rem 5rem;
-                max-width: 30%;
-                margin: -8rem 0 1rem 0;
-            }
         }
     }
 
@@ -1751,14 +1395,14 @@
             width: calc(100vw * 2);
             height: 2px;
             background-color: $color-red;
-            transform: rotate(45deg);
+            transform: rotate(31deg);
             transform-origin: left;
 
             @media screen and (min-width: 769px) {
                 //Rotate the line to the right side
-                transform: rotate(333deg);
+                transform: rotate(338deg);
                 transform-origin: top;
-                top: 165px;
+                top: 107px;
                 left: -150px;
             }
         }
@@ -1773,147 +1417,190 @@
             font-weight: 600;
             margin: 0 0 1rem 0;
             position: absolute;
-            z-index: 0;
-            top: 250px;
-            left: 22%;
+            z-index: -1;
+            top: 41px;
+            left: 0;
             color: $color-brown;
         }
     }
 
     &__image {
-        max-width: 65%;
+        max-width: 100%;
         margin: auto;
-    }
 
-    .hpp-patients__section {
-        background-image: url(/assets/images/hpp-profile/frame-polaroid.png);
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        position: relative;
-
-        margin-left: auto;
-        margin-right: auto;
-
-        padding: 2.5rem 4.7rem;
-        margin-bottom: 3rem;
-
-        &::before {
-            content: '';
-            background-image: url(/assets/images/hpp-profile/tape.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            position: absolute;
-            top: -1.5rem;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 12rem;
-            height: 5rem;
-
-            @media screen and (min-width: 769px) {
-                top: -1.5rem;
-                left: 7%;
-                transform: translateX(0);
-                width: 20rem;
-                height: 10rem;
-            }
-        }
-
-        @media screen and (min-width: 769px) and (max-width: 1300px) {
-            padding: 3.9rem 3rem;
-        }
-
-        @media screen and (max-width: 768px) {
-            background-image: url(/assets/images/hpp-profile/frame-polaroid-mb.png);
-
-            padding: 3rem 1.7rem;
-        }
-
-        &--bg-white {
-            background: url(/assets/images/hpp-profile/hpp-patients-chart-bg.png);
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            background-color: $color-white;
-
-            padding: 1rem 0;
-        }
-
-        &__title {
-            margin: 2rem;
-        }
-
-        &__chart {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-
-            &--mb {
-                @media screen and (min-width: 769px) {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    width: 100%;
-                }
-            }
-        }
-
-        &__image {
-            max-width: 100%;
-            margin: auto;
-            display: none;
-
-            @media screen and (min-width: 769px) {
-                display: block;
-            }
-
-            &--mb {
-                max-width: 15rem;
-                margin: auto;
-
-                display: block;
-
-                @media screen and (min-width: 769px) {
-                    display: none;
-                }
-            }
-        }
-
-        &__text-chart {
-            text-align: center;
-            max-width: 11rem;
-            margin: auto;
-
-            @media screen and (min-width: 769px) {
-                max-width: 13rem;
-            }
-        }
-
-        &__content {
-            margin: 2rem;
-
-            @media screen and (max-width: 768px) {
-                display: none;
-            }
-
-            &--mb {
-                display: none;
-                color: $color-white;
-
-                @media screen and (max-width: 768px) {
-                    display: block;
-                    padding: 0 2rem;
-                    margin-bottom: 2rem;
-                }
-            }
+        @media screen and (min-width: 768px) {
+            max-width: 70%;
+            margin: 1rem auto;
         }
     }
 
     .hpp-patients {
+        &__section {
+            background-image: url(/assets/images/hpp-profile/frame-polaroid.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            position: relative;
+
+            margin-left: auto;
+            margin-right: auto;
+
+            padding: 4rem 4.5rem;
+            margin-bottom: 3rem;
+            margin-top: 3rem;
+
+            &::before {
+                content: '';
+                background-image: url(/assets/images/hpp-profile/tape.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                position: absolute;
+                top: -1.5rem;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 12rem;
+                height: 5rem;
+
+                @media screen and (min-width: 769px) {
+                    top: -1.5rem;
+                    left: 7%;
+                    transform: translateX(0);
+                    width: 20rem;
+                    height: 10rem;
+                }
+            }
+
+            @media screen and (min-width: 769px) and (max-width: 1300px) {
+                padding: 3.9rem 3rem;
+            }
+
+            @media screen and (max-width: 768px) {
+                background-image: url(/assets/images/hpp-profile/frame-polaroid-mb.png);
+
+                padding: 3rem 1.7rem;
+            }
+
+            &--bg-white {
+                background: url(/assets/images/hpp-profile/hpp-patients-chart-bg.png);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                background-color: $color-white;
+
+                padding: 1rem 0;
+            }
+
+            &__title {
+                margin: 1rem 2rem;
+                font-size: 1.375rem;
+
+                @media screen and (min-width: 769px) {
+                    margin-top: 5rem;
+                    margin-bottom: 2rem;
+                }
+            }
+
+            &__chart {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+
+                &--mb {
+                    @media screen and (min-width: 769px) {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        width: 100%;
+                    }
+                }
+            }
+
+            &__image {
+                max-width: 100%;
+                margin: auto;
+                display: none;
+
+                @media screen and (min-width: 769px) {
+                    display: block;
+                }
+
+                &--mb {
+                    max-width: 15rem;
+                    margin: auto;
+
+                    display: block;
+
+                    @media screen and (min-width: 769px) {
+                        display: none;
+                    }
+                }
+            }
+
+            &__text-chart {
+                text-align: center;
+                max-width: 10rem;
+                margin: auto;
+                font-size: .875rem;
+            }
+
+            &__content {
+                margin: 2rem;
+                font-size: .875rem;
+
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+
+                &--mb {
+                    display: none;
+                    color: $color-white;
+
+                    @media screen and (max-width: 768px) {
+                        display: block;
+                        padding: 0 2rem;
+                        margin-bottom: 2rem;
+                    }
+                }
+            }
+
+            &__disclaimer--dk {
+                font-family: 'Special Elite', cursive;
+                max-width: 30rem;
+                text-align: center;
+                background-image: url(/assets/images/red-frame.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                padding: 3rem 4rem;
+                margin: auto;
+                position: absolute;
+                right: 13px;
+                top: 50px;
+                transform: rotate(10deg);
+
+                span {
+                    color: $color-cinnabar;
+                    font-family: inherit;
+                }
+
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+
+                @media screen and (min-width: 769px) and (max-width: 1250px) {
+                    max-width: 25rem;
+                    padding: 3rem 2rem;
+                }
+            }
+        }
+
         &__disclaimer {
             color: $color-saffron-mango;
-            margin: 3rem 0;
-            padding: 0 4rem;
+            padding: 3rem 4rem;
             text-align: center;
+            font-family: 'Special Elite', cursive;
+
+            @media screen and (min-width: 600px) and (max-width: 768px) {
+                padding: 5rem 2rem;
+            }
         }
 
         &__red-string {
@@ -1924,7 +1611,201 @@
                 transform-origin: right;
                 transform: rotate(355deg);
             }
+
+            @media screen and (min-width: 769px) {
+                display: none;
+            }
         }
+
+        &__red-string1 {
+            &::before {
+                content: '';
+                height: 2px;
+                background-color: $color-red;
+                transform-origin: right;
+                transform: rotate(5deg);
+            }
+
+            @media screen and (min-width: 769px) {
+                display: none;
+            }
+        }
+
+        &__red-string2 {
+            &::before {
+                content: '';
+                height: 2px;
+                background-color: $color-red;
+                transform-origin: left;
+                transform: rotate(358deg);
+            }
+
+            @media screen and (min-width: 769px) {
+                display: none;
+            }
+        }
+
+        &__red-pin {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -2.9375rem;
+            max-width: 5rem;
+
+            @media screen and (min-width: 769px) {
+                display: none;
+            }
+
+            @media screen and (min-width: 600px) and (max-width: 768px) {
+                top: -2.3125rem;
+            }
+
+        }
+
+        &__notes {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+
+            &--pin {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                max-width: 4rem;
+                top: 2rem;
+
+                @media screen and (min-width: 769px) {
+                    display: none;
+                }
+            }
+
+            &--note {
+                font-family: 'Special Elite', cursive;
+
+                background-image: url(/assets/images/hpp-profile/stick-note-mb.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                padding: 10rem 4rem 4rem 4rem;
+                max-width: 23rem;
+                margin: auto;
+
+                @media screen and (min-width: 769px) {
+                    padding: 6rem 4rem 4rem 4rem;
+                }
+
+                &::before {
+                    content: '';
+                    height: 2px;
+                    background-color: $color-red;
+                    position: absolute;
+                    width: calc(100% + 2rem);
+                    left: 0;
+                    transform-origin: left;
+                    transform: rotate(341deg);
+
+                    @media screen and (min-width: 769px) {
+                        display: none;
+                    }
+                }
+
+                &--text-red {
+                    color: $color-cinnabar;
+                    font-family: inherit;
+                }
+
+                &--foot {
+                    font-size: .75rem;
+                    position: relative;
+
+                    &::before {
+                        content: '*';
+                        position: absolute;
+                        left: -5px;
+                    }
+                }
+            }
+
+            @media screen and (min-width: 769px) {
+                flex-direction: row;
+                justify-content: center;
+                @include flex-gap(5rem);
+            }
+        }
+
+        &__percentage {
+            background-image: url(/assets/images/hpp-profile/paper-bg.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position: center;
+            padding: 2.5rem 0;
+            max-width: 100vw;
+
+            position: relative;
+
+            @media screen and (max-width: 768px) {
+                width: 100vw !important;
+            }
+
+            @media screen and (min-width: 769px) {
+                max-width: 30rem;
+                background-image: url(/assets/images/hpp-profile/paper-bg-dk.png);
+                background-size: contain;
+                padding: 5rem 2rem 2rem 2rem;
+            }
+
+            &--text {
+                color: $color-red;
+                font-size: 3.625rem;
+                font-weight: 700;
+                text-align: center;
+                padding: 3.5rem;
+                font-family: 'Oswald', sans-serif;
+                margin: 3rem 0 0 0;
+
+                background-image: url(/assets/images/hpp-profile/fingerprint.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+
+            &--content {
+                font-family: 'Special Elite', cursive;
+                max-width: calc(100vw - 5rem);
+                text-align: center;
+
+                &--text-red {
+                    color: $color-cinnabar;
+                    font-family: inherit;
+                }
+            }
+
+            &--disclaimer {
+                text-align: center;
+                margin-top: 2rem;
+                margin-bottom: 3rem;
+
+                @media screen and (min-width: 769px) {
+                    margin-top: 1rem;
+                }
+            }
+
+            &--pin {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                max-width: 4rem;
+                top: 1.5rem;
+
+                @media screen and (min-width: 769px) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    #hpp-prevalence {
+        position: relative;
     }
 }
 
