@@ -1,0 +1,77 @@
+---
+import Accordion from "../Accordion.astro";
+type Props = {
+  id: string;
+  name: string;
+  age: number;
+  gender: string;
+  description: string;
+  photo: string;
+};
+const { id, name, age, gender, description, photo } = Astro.props;
+const activeClass = Number(id) === 1 ? "active" : "";
+---
+
+<div class="patients__case_files">
+  <div class={`patient__case ${activeClass}`} id={`patient-id-${id}`}>
+    <p class="patient__case_intro">{description}</p>
+    <div class="patient__case_grid">
+      <div class="grid_header">
+        <img class="profile__pic" src={photo} style="width: 308.29px;" />
+        <img
+          class="profile__finger_print"
+          src="/assets/images/footer-finger-print.png"
+          style="width: 80px;"
+        />
+      </div>
+      <div class="grid_info">
+        <h6 class="patient__name" set:html={name} />
+        <h4 class="patient__age" set:html={age} />
+        <h4 class="patient__gender" set:html={gender} />
+      </div>
+      <div class="accordion">
+        <Accordion header="medical history" id={`acc-medical-${id}`}>
+          <slot name="medical" />
+        </Accordion>
+        <Accordion header="family History" id={`acc-family-${id}`}>
+          <slot name="family" />
+        </Accordion>
+        <Accordion header="presenting symptoms" id={`acc-symptoms-${id}`}>
+          <slot name="symptoms" />
+        </Accordion>
+        <Accordion header="current medications" id={`acc-medications-${id}`}>
+          <slot name="medications" />
+        </Accordion>
+        <Accordion header="Lab results/Imaging" id={`acc-results-${id}`}>
+          <slot name="results" />
+        </Accordion>
+        <Accordion header="physician notes" id={`acc-notes-${id}`}>
+          <slot name="notes" />
+        </Accordion>
+      </div>
+    </div>
+  </div><!-- case-file -->
+</div>
+<style>
+  .patients__case_files {
+    background-color: white;
+  }
+  .patient__case {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+</style>
+<script>
+  // const patientSelect = document.getElementById("patient-dropdown");
+  // const patientCaseFiles = document.querySelectorAll(".patient__case");
+  // patientSelect?.addEventListener("change", (e: Event) => {
+  //   patientCaseFiles.forEach((patientCaseFile) => {
+  //     patientCaseFile?.classList.remove("active");
+  //   });
+  //   const selectedValue = (e.target as HTMLInputElement).value;
+  //   const patientCaseFile = document.querySelector(`#${selectedValue}`);
+  //   patientCaseFile?.classList.add("active");
+  // });
+</script>
