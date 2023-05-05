@@ -4,11 +4,17 @@
   width: 100% !important;
   padding: .5rem 1rem;
 
+  &.fancybox__content {
+    background-color: rgba(3, 3, 3, 0.8);
+  }
+
+
   .pinch-to-zoom__close-modal {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    color: #000000;
+    color: $color-white;
+    cursor: pointer;
     font-size: 3.125rem;
     font-weight: 300;
     line-height: 40%;
