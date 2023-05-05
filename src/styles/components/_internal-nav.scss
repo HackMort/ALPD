@@ -1,13 +1,56 @@
 .internal__nav {
+    --nav-top-position: 73.06px;
+
+    &.is--sticky {
+        position: fixed;
+        top: var(--nav-top-position);
+        left: 0;
+        width: 100%;
+        z-index: 10;
+
+        background-image: url('/assets/images/header-bg-mobile.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @media screen and (max-width: 374px) {
+            margin-top: -6px;
+        }
+
+        @media screen and (min-width: 768px) {
+            .internal__nav_list {
+                padding-top: 1rem;
+            }
+        }
+    }
 
     .internal__nav_list {
         display: flex;
         justify-content: center;
         padding: .75rem 0;
+        position: relative;
+
+        @media screen and (min-width: 768px) {
+            padding-top: 3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+
+            &::after {
+                content: "";
+                background: $color-red;
+                height: 1px;
+                width: 90%;
+                max-width: 62.1875rem;
+
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
     }
 
     .internal__nav_list_item {
-        padding: .25rem .75rem;
+        padding: .25rem 2rem;
         list-style-type: none;
 
         &:not(:first-of-type) {
@@ -17,6 +60,7 @@
         &.is--active {
             .internal__nav_list_item_link {
                 position: relative;
+                font-weight: 700;
 
                 &::after {
                     content: "";
@@ -34,9 +78,14 @@
         .internal__nav_list_item_link {
             color: $color-white;
             font-size: 1rem;
-            font-weight: 600;
+            font-weight: 400;
             line-height: 24px;
             font-family: "oswald", sans-serif;
+
+            @media screen and (min-width: 768px) {
+                font-size: 1.5rem;
+                line-height: 36px;
+            }
         }
     }
 }

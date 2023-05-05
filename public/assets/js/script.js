@@ -3,6 +3,8 @@ import { ToggleMobileMenu, MainMenu, StickyHeader } from './header.js'
 import { Tabs } from './tabs.js'
 import { cookieValidation, cookieFormValidation } from './validate.js'
 import { Accordions } from './accordions.js'
+import { stickyInternalNav, highlightActiveInternalNavOnScroll, setActiveIternalNavItemOnClick, setNavTopPosition } from './internal-nav.js'
+
 document.addEventListener('DOMContentLoaded', function (e) {
   console.log('DOM fully loaded and parsed')
   /**
@@ -58,4 +60,17 @@ document.addEventListener('DOMContentLoaded', function (e) {
    * Call the function from accordions.js
   */
   Accordions()
+
+  window.addEventListener('scroll', () => {
+    const headerInnerHeight = document.querySelector('.header__inner').offsetHeight
+    highlightActiveInternalNavOnScroll(headerInnerHeight)
+    setNavTopPosition()
+    stickyInternalNav()()
+  })
+
+  window.addEventListener('resize', () => {
+    setNavTopPosition()
+  })
+
+  setActiveIternalNavItemOnClick()
 })
