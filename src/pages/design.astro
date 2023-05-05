@@ -1,6 +1,7 @@
 ---
 import Accordion from "../components/Accordion.astro";
 import Layout from "../layouts/Layout.astro";
+import CTA from "../components/CTA.astro";
 import "../styles/settings/_design.scss";
 ---
 
@@ -382,5 +383,32 @@ import "../styles/settings/_design.scss";
         </Accordion>
       </div>
     </div>
+  </section>
+  <section class="design-system-section">
+    <div class="section-wrapper section-wrapper--small">
+      <h1 class="title">CTA VARIANTS</h1>
+      <div class="fonts-preview" style="background-color: black; display:block; padding:0; padding-top:30px">
+        <div>
+          <h2 style="color: white; padding-left:30px;">VARIANT-1</h2>
+          <CTA variation="variant-1" buttonLabel="buttonLabel" content="Sample text" linkURL="#" bypassModal >
+          </div>
+        </div>
+        
+        <div class="fonts-preview" style="background-color: black; display:block; padding:0; padding-top:30px">
+        <div>
+        <h2 style="color: white; padding-left:30px;">VARIANT-2</h2>
+        <CTA variation="variant-2" buttonLabel="buttonLabel" content="Sample text" linkURL="#" bypassModal >
+        </div>
+      </div>
+        
+      <div class="fonts-preview" style="background-color: black; display:block; padding:0; padding-top:30px">
+        <div>
+        <h2 style="color: white; padding-left:30px;">VARIANT-3</h2>
+        <CTA variation="variant-3" buttonLabel="buttonLabel" content="Sample text" linkURL="#" bypassModal >
+        </div>
+      </div>
+        
+      
+      </div>  
   </section>
 </Layout>

@@ -13,6 +13,9 @@ function ToggleMobileMenu (buttonID, menuClass, toggleClass = 'is--open') {
   }
   const mobileMenuToogleBtn = document.getElementById(buttonID)
   const mobileNav = document.querySelector(menuClass)
+  if (!mobileMenuToogleBtn || !mobileNav) {
+    return
+  }
   mobileMenuToogleBtn.addEventListener('click', () => {
     mobileMenuToogleBtn.classList.toggle(toggleClass)
     mobileNav.classList.toggle(toggleClass)
@@ -31,6 +34,9 @@ function MainMenu (menuClass = 'main__navigation', currentPageClass = 'current-p
     return
   }
   const menuItems = document.querySelectorAll(`.${menuClass} li a`)
+  if (!menuItems) {
+    return
+  }
   const mobileQuery = window.matchMedia('(max-width: 1199px)')
   const currentPage = window.location.pathname.replace(/\/+$/, '') // Remove trailing slash if any, this is needed in order to work in the Dev Server.
   const parentMenuItemClass = 'has__sub_menu'
@@ -67,6 +73,9 @@ function StickyHeader (headerClass = 'site__header', stickyClass = 'is--sticky')
     return
   }
   const header = document.querySelector(`.${headerClass}`)
+  if (!header) {
+    return
+  }
   const headerHeight = header.offsetHeight
   const stickyHeader = () => {
     if (window.pageYOffset > headerHeight) {
