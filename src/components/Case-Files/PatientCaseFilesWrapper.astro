@@ -1,0 +1,45 @@
+---
+type Props = {
+  data?: Array<Object>;
+};
+const { data } = Astro.props;
+---
+
+<div class="patients mobile--version" style="background: white;">
+  <div class="wrapper">
+    <h3 class="patients__heading">Patient case file</h3>
+    <h3>Count: <span class="count"></span></h3>
+    <form class="form">
+      <select class="form__select" name="patient" id="patient-dropdown"
+      ></select>
+    </form>
+    <div id="patient__case_files" class="patient__case_files">
+      <slot />
+    </div>
+  </div>
+</div>
+
+<script>
+  const patientCaseFiles = document.querySelectorAll(".patient__case");
+  const count = document.querySelector(".count");
+  const patientSelect = document.querySelector("#patient-dropdown");
+  count.innerHTML = patientCaseFiles.length.toString();
+  if (patientCaseFiles.length > 0) {
+    patientCaseFiles.forEach((patient) => {
+      const patientName = patient.querySelector(".patient__name").innerHTML;
+      const patientAge = patient.querySelector(".patient__age").innerHTML;
+      const patientID = patient.id.toString();
+      const selected = Number(patientID) === 1 ? "selected" : "";
+      patientSelect.innerHTML += `<option ${selected} value="${patientID}">${patientName} - ${patientAge}</option>`;
+    });
+  }
+
+  patientSelect?.addEventListener("change", (e: Event) => {
+    patientCaseFiles.forEach((patientCaseFile) => {
+      patientCaseFile?.classList.remove("active");
+    });
+    const selectedValue = (e.target as HTMLInputElement).value;
+    const patientCaseFile = document.querySelector(`#${selectedValue}`);
+    patientCaseFile?.classList.add("active");
+  });
+</script>
