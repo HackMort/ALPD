@@ -6,31 +6,43 @@ type Props = {
   age: number | string;
   gender: string;
   description: string;
-  photo: string;
+  photoMobile: string;
+  photoDesktop: string;
 };
-const { id, name, age, gender, description, photo } = Astro.props;
+const { id, name, age, gender, description, photoMobile, photoDesktop } =
+  Astro.props;
 const activeClass = Number(id) === 1 ? "active" : "";
+// Check if age is a string and if it is, check for the word "months"
+let ageString = "";
+if (age && typeof age === "string" && age.includes("months")) {
+  ageString = age.replace("months", "mo");
+} else {
+  ageString = age.toString();
+}
 ---
 
-<div class="patients__case_file_item mobile--only">
+<div class="patients__case_file_item">
   <div class={`patient__case ${activeClass}`} id={`patient-id-${id}`}>
     <h4 class="patient__case_description">{description}</h4>
     <div class="patient__case_grid">
       <div class="grid_header">
-        <img class="profile__pic" src={photo} />
+        <picture>
+          <source media="(min-width: 1024px)" srcset={photoDesktop} />
+          <img class="profile__pic" src={photoMobile} />
+        </picture>
         <img
           class="profile__finger_print"
           src="/assets/images/case-files/profile-finger-print-image.png"
         />
       </div>
       <div class="grid_info">
-        <div>
+        <div class="grid_info_name">
           <h6 class="patient__name" set:html={name} />
         </div>
-        <div class="with--border">
-          <h4 class="patient__age">{age}</h4>
+        <div class="grid_info_age">
+          <h4 class="patient__age">{ageString}</h4>
         </div>
-        <div>
+        <div class="grid_info_gender">
           <h4 class="patient__gender">{gender}</h4>
         </div>
       </div>
