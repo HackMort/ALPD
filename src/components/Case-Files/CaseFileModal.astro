@@ -143,8 +143,12 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
                 identified
               </li>
             </ul>
-            <PinchToZoom id="pt-1-image-1">
+            <PinchToZoom id="pt-1-image-1" useDefaultButton={false}>
               <picture>
+                <button
+                  data-panzoom-action="zoomToFull"
+                  data-content-id="pt-1-image-1"
+                  class="button button--pinch-to-zoom"></button>
                 <source
                   srcset="/assets/images/case-files/nathan/nathan-rad-1-desktop.png"
                   media="(min-width: 768px)"
@@ -159,8 +163,12 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
                 <p>Femur fracture age 13</p>
               </div>
             </PinchToZoom>
-            <PinchToZoom id="pt-1-image-2">
+            <PinchToZoom id="pt-1-image-2" useDefaultButton={false}>
               <picture>
+                <button
+                  data-panzoom-action="zoomToFull"
+                  data-content-id="pt-1-image-2"
+                  class="button button--pinch-to-zoom"></button>
                 <source
                   srcset="/assets/images/case-files/nathan/nathan-rad-2-desktop.png"
                   media="(min-width: 768px)"
@@ -175,8 +183,12 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
                 <p>Metatarsal fracture age 16</p>
               </div>
             </PinchToZoom>
-            <PinchToZoom id="pt-1-image-3">
+            <PinchToZoom id="pt-1-image-3" useDefaultButton={false}>
               <picture>
+                <button
+                  data-panzoom-action="zoomToFull"
+                  data-content-id="pt-1-image-3"
+                  class="button button--pinch-to-zoom"></button>
                 <source
                   srcset="/assets/images/case-files/nathan/nathan-rad-3-desktop.png"
                   media="(min-width: 768px)"
@@ -184,6 +196,7 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
                 <img
                   src="/assets/images/case-files/nathan/nathan-rad-3-mobile.png"
                   alt=""
+                  style="width: 138px;"
                 />
               </picture>
               <div class="patient">
