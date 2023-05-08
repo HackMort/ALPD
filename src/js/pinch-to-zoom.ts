@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 trapFocus: false,
                 closeButton: true,
                 id: clone.id,
+                mainClass: 'fancybox--pinch-to-zoom',
                 hideScrollbar: true,
                 defaultDisplay: 'flex',
                 on: {
