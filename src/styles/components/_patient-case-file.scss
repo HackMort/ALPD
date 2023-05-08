@@ -1,0 +1,236 @@
+.patients__heading {
+  font-family: 'Veneer';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.875rem;
+  line-height: 2.0625rem;
+  text-transform: uppercase;
+  color: $color-red;
+  margin-bottom: 1rem;
+  padding-top: 1.5rem;
+}
+
+.profiles__text {
+  font-weight: 400;
+  font-size: .875rem;
+  line-height: 1.3125rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.patient__case_files {
+  // scroll margin top
+  scroll-padding-top: 10rem;
+}
+
+.patients__case_file_item {
+  background-color: $color-white;
+
+  .patient__case {
+    display: none;
+
+    &.active {
+      display: block;
+      transition: display 2s ease-in-out;
+    }
+  }
+
+  .patient__case_description {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 1.5625rem;
+    color: $color-carbon;
+    margin-top: 1.5rem;
+    max-width: 18.375rem;
+
+    @media screen and (min-width: 600px) {
+      max-width: 100%;
+    }
+  }
+
+  .patient__case_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    color: red;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-top: 4rem;
+
+    .grid_header {
+      grid-row-start: 1;
+      grid-column-start: 1;
+      grid-row-end: 2;
+      grid-column-end: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid $color-black;
+      height: 13.5rem;
+      width: 100%;
+
+      .profile__pic {
+        position: relative;
+        top: -25px;
+        left: -20px;
+        width: 262px;
+      }
+
+      .profile__finger_print {
+        flex: 0 1 auto;
+        width: 5.0625rem;
+      }
+    }
+
+    .grid_info {
+      border-right: 1px solid $color-black;
+      border-left: 1px solid $color-black;
+      display: grid;
+      grid-template-columns: 1fr 100px 100px;
+      align-items: center;
+      min-height: 4.125rem;
+
+      @media screen and (min-width: 600px) {
+        grid-template-columns: 1fr 150px 150px;
+
+      }
+
+      >div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+
+      .with--border {
+        border-right: 1px solid $color-black;
+        border-left: 1px solid $color-black;
+      }
+
+      .patient__name {
+        font-family: 'Special Elite';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.25rem;
+        line-height: 1.875rem;
+        color: $color-carbon;
+      }
+
+      .patient__age,
+      .patient__gender {
+        position: relative;
+        font-size: 1.125rem;
+        line-height: 1.575rem;
+        font-weight: 400;
+
+        &::before {
+          content: 'age';
+          display: inline-block;
+          margin-right: .375rem;
+          font-weight: 600;
+        }
+      }
+
+      .patient__gender {
+        &::before {
+          content: 'gender';
+        }
+      }
+
+
+
+
+    }
+  }
+}
+
+/* Dots */
+.patients_dots_list {
+  display: flex;
+  @include flex-gap(1.875rem);
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  &__item {
+    list-style-type: none;
+
+    &.active {
+      .button {
+        background-color: $color-red;
+      }
+    }
+
+    .button {
+      background-color: $color-granite-grey;
+      border-radius: 50%;
+      height: 1rem;
+      padding: 0;
+      width: 1rem;
+
+
+
+    }
+
+  }
+
+}
+
+/* Form - Select */
+.form {
+  font-family: 'Special Elite';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  color: $color-carbon;
+
+  .form__select {
+    position: relative;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid $color-red;
+    border-radius: 0px;
+    display: flex;
+    align-items: center;
+    padding-top: 0.25rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    height: 2.625rem;
+    max-width: 16rem;
+
+    select {
+      position: relative;
+      display: block;
+      font-family: 'Special Elite';
+      font-style: normal;
+      font-weight: 400;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      border: none;
+      outline: none;
+      appearance: none;
+      --webkit-appearance: none;
+      --moz-appearance: none;
+      z-index: 2;
+
+      option {
+        font-size: 1rem;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: .875rem;
+      background-image: url('/assets/images/case-files/angle-down.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 14px;
+      width: 25px;
+    }
+  }
+}
