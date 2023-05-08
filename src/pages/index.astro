@@ -6,31 +6,9 @@ import ALPDVideo from "../components/ALPDVideo.astro";
 import References from "../components/References.astro";
 import CTA from "../components/CTA.astro";
 import CaseFileModal from "../components/Case-Files/CaseFileModal.astro";
-import PinchToZoom from "../components/Pinch-to-zoom.astro";
-import Accordion from "../components/Accordion.astro";
 ---
 
 <Layout title="Welcome" showHeader={true} showISI={false}>
-  <div class="accordion">
-    <Accordion id="testeiteitiet" header="lol">
-      <PinchToZoom id="pt-1-image-1">
-        <picture>
-          <source
-            srcset="/assets/images/case-files/nathan/nathan-rad-1-desktop.png"
-            media="(min-width: 768px)"
-          />
-          <img
-            src="/assets/images/case-files/nathan/nathan-rad-1-mobile.png"
-            alt=""
-          />
-        </picture>
-        <div class="patient">
-          <p>Femur fracture age 13</p>
-        </div>
-      </PinchToZoom>
-    </Accordion>
-  </div>
-
   <div
     class="modal--test"
     style="position: relative; z-index: 10; margin-top: 2rem; margin-bottom: 3rem;"
