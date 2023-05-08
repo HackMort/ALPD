@@ -1,11 +1,23 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import CTA from "../components/CTA.astro";
+import InternalNavigation from "../components/InternalNavigation.astro";
+
+const internalNavLinks = [
+  { href: "hpp-definition", label: "HPP Definition", active: true },
+  {
+    href: "hpp-multisystemic",
+    label: "Multisystemic Symptoms and Disease Burden",
+  },
+  { href: "hpp-prevalence", label: "Prevalence of HPP" },
+];
 ---
 
-<Layout title="HPP Profile" pageClass="hpp__profile" showISI={false}>
+<Layout title="HPP Profile" pageClass="hpp__profile" showISI={true}>
+  {internalNavLinks && <InternalNavigation items={internalNavLinks} />}
+
   <!-- Profiling hypophostasia (HPP) -->
-  <section id="hpp-definition" class="profiling-hypophostasia">
+  <section id="hpp-definition" class="profiling-hypophostasia section">
     <div class="hpp__profile__red-string-bg">
       <div class="wrapper hpp__profile__content">
         <h2 class="hpp__profile__main-title color--red text--uppercase">
@@ -46,16 +58,25 @@ import CTA from "../components/CTA.astro";
           class="hpp__profile__paragraph hpp__profile__paragraph--sub hpp__profile__red-frame-disclaimer--content color--white text--center"
         >
           Hypophosphatasia may become debilitating and can cause damage to
-          <span>multiple systems</span> in the body beyond the skeletal system.<sup
-            >3-5</sup
-          >
+          <span class="hpp__profile__red-frame-disclaimer--text-red"
+            >multiple systems</span
+          > in the body beyond the skeletal system.<sup>3-5</sup>
         </p>
       </div>
     </div>
   </section>
 
+  <section id="hpp-multisystemic" class="section">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptate
+      nihil vel repudiandae laboriosam quasi, porro nisi, cupiditate ipsum
+      nostrum, harum temporibus optio consectetur dolorem nam modi. Repudiandae,
+      voluptatum optio.
+    </p>
+  </section>
+
   <!-- Prevalence of HPP -->
-  <section id="hpp-prevalence">
+  <section id="hpp-prevalence" class="section">
     <!-- HPP Patients charts -->
     <div class="hpp-patients__red-string">
       <picture>
@@ -67,7 +88,7 @@ import CTA from "../components/CTA.astro";
       </picture>
       <p class="wrapper hpp-patients__disclaimer">
         Reduced alkaline phosphatase levels during childhood may affect peak
-        bone mass later in life <sup>23,24</sup>
+        bone mass later in life<sup>23,24</sup>
       </p>
 
       <span class="hpp-patients__red-string1"></span>
@@ -104,7 +125,7 @@ import CTA from "../components/CTA.astro";
                 alt="HPP Profile"
               />
               <p class="hpp-patients__section__text-chart">
-                Infants and young children (≤5 years)25a
+                Infants and young children (≤5 years)<sup>25a</sup>
               </p>
               <img
                 class="hpp-patients__section__image--mb"
@@ -112,7 +133,7 @@ import CTA from "../components/CTA.astro";
                 alt="HPP Profile"
               />
               <p class="hpp-patients__section__text-chart">
-                Children and adolescents (5-15 years)26b
+                Children and adolescents (5-15 years)<sup>26b</sup>
               </p>
               <img
                 class="hpp-patients__section__image--mb"
@@ -120,7 +141,7 @@ import CTA from "../components/CTA.astro";
                 alt="HPP Profile"
               />
               <p class="hpp-patients__section__text-chart">
-                Adults (≥18 years)7c
+                Adults (≥18 years)<sup>7c</sup>
               </p>
             </div>
           </div>
@@ -136,19 +157,17 @@ import CTA from "../components/CTA.astro";
             genetic analysis of the ALPL gene. Additionally, onset of HPP must
             have occurred prior to 6 months of age based on signs that included
             at least one of the following: respiratory compromise, rachitic
-            chest deformity, and/or vitamin B6-responsive seizures.10 Data from
-            a retrospective, multinational, noninterventional natural history
-            study of childhood HPP in patients 5 to 15 years of age (N=32).17
-            Combined data from HIPS/HOST, an internet questionnaire and
-            telephone survey that queried demographics, HPP-related illness
-            history, disease progression, and health-related quality of life.
-            One hundred twenty-five adults participated.18
+            chest deformity, and/or vitamin B<sub>6</sub>-responsive seizures.<sup
+              >25</sup
+            >
           </p>
         </div>
       </div>
     </div>
 
-    <p class="wrapper hpp-patients__section__content--mb">
+    <p
+      class="wrapper hpp-patients__section__content--mb hpp-patients__section__content--a"
+    >
       Data from a multinational, noninterventional, retrospective chart review
       study designed to understand the natural history of 48 patients ≤5 years
       of age with severe perinatal- and infantile-onset HPP. Patients included
@@ -158,24 +177,46 @@ import CTA from "../components/CTA.astro";
       abnormalities, and/or genetic analysis of the ALPL gene. Additionally,
       onset of HPP must have occurred prior to 6 months of age based on signs
       that included at least one of the following: respiratory compromise,
-      rachitic chest deformity, and/or vitamin B6-responsive seizures.10 Data
-      from a retrospective, multinational, noninterventional natural history
-      study of childhood HPP in patients 5 to 15 years of age (N=32).17 Combined
-      data from HIPS/HOST, an internet questionnaire and telephone survey that
-      queried demographics, HPP-related illness history, disease progression,
-      and health-related quality of life. One hundred twenty-five adults
-      participated.18
+      rachitic chest deformity, and/or vitamin B<sub>6</sub>-responsive
+      seizures.<sup>25</sup>
+    </p>
+
+    <p
+      class="wrapper hpp-patients__section__content--mb hpp-patients__section__content--b"
+    >
+      Data from a retrospective, multinational, noninterventional natural
+      history study of childhood HPP in patients 5 to 15 years of age (N=32).<sup
+        >26</sup
+      >
+    </p>
+
+    <p
+      class="wrapper hpp-patients__section__content--mb hpp-patients__section__content--c"
+    >
+      Combined data from HIPS/HOST, an internet questionnaire and telephone
+      survey that queried demographics, HPP-related illness history, disease
+      progression, and health-related quality of life. One hundred twenty-five
+      adults participated.<sup>7</sup>
     </p>
 
     <!-- HPP Patients notes -->
 
     <div class="hpp-patients__notes">
-      <div class="hpp-patients__note">
-        <img
-          class="hpp-patients__notes--pin"
-          src="/assets/images/hpp-profile/pin.png"
-          alt="HPP patient note pin"
-        />
+      <div class="hpp-patients__notes">
+        <div class="hpp-patients__notes--red-string red-string"></div>
+
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="/assets/images/hpp-profile/pin--desktop.png"
+          />
+          <img
+            class="hpp-patients__notes--pin"
+            src="/assets/images/hpp-profile/pin.png"
+            alt="HPP patient note pin"
+          />
+        </picture>
+
         <p class="hpp-patients__notes--note">
           In a meta-analysis of pediatric patients with hypophosphatasia who
           were followed through adulthood [N=265], there was a <span
@@ -192,13 +233,22 @@ import CTA from "../components/CTA.astro";
       </div>
 
       <div class="hpp-patients__percentage">
-        <img
-          class="hpp-patients__percentage--pin"
-          src="/assets/images/hpp-profile/pin.png"
-          alt="Pin"
-        />
+        <div class="hpp-patients__percentage--red-string red-string"></div>
+
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="/assets/images/hpp-profile/pin--desktop.png"
+          />
+          <img
+            class="hpp-patients__percentage--pin"
+            src="/assets/images/hpp-profile/pin.png"
+            alt="Pin"
+          />
+        </picture>
+
         <p class="hpp-patients__percentage--text text--center">94%</p>
-        <p class="wrapper hpp-patients__percentage--content">
+        <p class="hpp-patients__percentage--content">
           of patients with at least 1 year of follow-up experienced at least 1
           manifestation or event that contributed to the <span
             class="hpp-patients__percentage--content--text-red"
@@ -223,9 +273,9 @@ import CTA from "../components/CTA.astro";
         prevalent in people of Caucasian descent.<sup>1,15,28,29</sup>
       </p>
 
-      <div class="hpp__profile__red-frame-disclaimer">
+      <div class="hpp-patients__red-frame-disclaimer">
         <p
-          class="hpp__profile__paragraph hpp__profile__paragraph--sub hpp__profile__red-frame-disclaimer--content color--white text--center"
+          class="hpp-patients__red-frame-disclaimer--content color--white text--center"
         >
           While severe cases of hypophosphatasia occur in about 1:300,000
           births, milder forms occur in about 1:6370 births. Additional affected
@@ -241,14 +291,14 @@ import CTA from "../components/CTA.astro";
         commonly used therapies prescribed for misdiagnoses negatively impacting
         their condition.18
       </p>
-
-      <CTA
-        variation="variant-2"
-        buttonLabel="Usual Suspects"
-        content="Learn the risk of misdiagnosis"
-        linkURL="#"
-        bypassModal
-      />
     </div>
+
+    <CTA
+      variation="variant-2"
+      buttonLabel="Usual Suspects"
+      content="Learn the risk of misdiagnosis"
+      linkURL="#"
+      bypassModal
+    />
   </section>
 </Layout>

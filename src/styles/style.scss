@@ -1262,7 +1262,8 @@
 .hpp__profile {
 
     &__content {
-        margin-bottom: 2rem;
+        color: $color-white;
+        margin: 0 auto;
 
         @media screen and (min-width: 768px) and (max-width: 1024px) {
             max-width: 70%;
@@ -1278,7 +1279,7 @@
     }
 
     &__main-title {
-        margin: 3.1875rem 8rem 0 0;
+        margin: 1rem 8rem 0 0;
         font-weight: 600;
 
         @include media('tablet') {
@@ -1296,13 +1297,8 @@
         }
     }
 
-    &__content {
-        color: $color-white;
-        margin: 0 auto 3rem auto;
-    }
-
     &__paragraph {
-        margin: 1rem 0 1rem 0;
+        margin: 1rem 0 0 0;
 
         &--sub {
             font-size: 1.125rem;
@@ -1381,6 +1377,11 @@
             }
 
         }
+
+        &--text-red {
+            color: $color-cinnabar;
+            font-family: inherit;
+        }
     }
 
     &__red-string-bg {
@@ -1391,12 +1392,12 @@
         &::before {
             content: '';
             position: absolute;
-            top: 300px;
+            top: 315px;
             left: 0;
             width: calc(100vw * 2);
             height: 2px;
             background-color: $color-red;
-            transform: rotate(31deg);
+            transform: rotate(39deg);
             transform-origin: left;
 
             @media screen and (min-width: 769px) {
@@ -1490,7 +1491,7 @@
             }
 
             &__title {
-                margin: 1rem 2rem;
+                margin: 1rem;
                 font-size: 1.375rem;
 
                 @media screen and (min-width: 769px) {
@@ -1554,11 +1555,45 @@
                 &--mb {
                     display: none;
                     color: $color-white;
+                    position: relative;
 
                     @media screen and (max-width: 768px) {
                         display: block;
                         padding: 0 2rem;
                         margin-bottom: 2rem;
+                    }
+                }
+
+                &--a {
+                    &::before {
+                        content: 'a';
+                        color: $color-white;
+                        position: absolute;
+                        left: 25px;
+                        top: -3px;
+                        font-size: 0.8rem;
+                    }
+                }
+
+                &--b {
+                    &::before {
+                        content: 'b';
+                        color: $color-white;
+                        position: absolute;
+                        left: 25px;
+                        top: -3px;
+                        font-size: 0.8rem;
+                    }
+                }
+
+                &--c {
+                    &::before {
+                        content: 'c';
+                        color: $color-white;
+                        position: absolute;
+                        left: 25px;
+                        top: -3px;
+                        font-size: 0.8rem;
                     }
                 }
             }
@@ -1646,6 +1681,67 @@
             }
         }
 
+        &__red-frame-disclaimer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+
+            &--content {
+                background-image: url(/assets/images/red-frame.png);
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+
+                max-width: 35rem;
+                padding: 4rem 3rem;
+
+                font-size: 1rem;
+                font-family: 'Special Elite', cursive;
+                font-weight: 400;
+
+                @media screen and (max-width: 768px) {
+                    background-image: none;
+                    color: $color-white;
+                    z-index: 2;
+                    margin: 0;
+                    max-width: 25rem;
+                    padding: 5rem 0;
+                    position: relative;
+
+                    &::before {
+                        content: '';
+                        height: 2px;
+                        background-color: $color-red;
+                        width: calc(100vw * 2);
+                        position: absolute;
+                        top: 15px;
+                        left: -50%;
+                        transform-origin: left;
+                        transform: rotate(5deg);
+                    }
+
+                    &::after {
+                        content: '';
+                        width: calc(100vw * 2);
+                        height: 2px;
+                        background-color: $color-red;
+                        position: absolute;
+                        left: -50%;
+                        bottom: 15px;
+                        transform-origin: left;
+                        transform: rotate(355deg);
+                    }
+                }
+
+            }
+
+            &--text-red {
+                color: $color-cinnabar;
+                font-family: inherit;
+            }
+        }
+
         &__red-pin {
             position: absolute;
             left: 50%;
@@ -1668,6 +1764,21 @@
             display: flex;
             flex-direction: column;
 
+            &--red-string {
+                width: calc(100vw * 2);
+                position: absolute;
+                top: 85px;
+                transform: rotate(334deg);
+                left: -50%;
+
+                @media screen and (min-width: 769px) {
+                    width: calc(100vw * 2);
+                    top: 145px;
+                    transform: translateX(-50%) rotate(353deg);
+                    left: 50%;
+                }
+            }
+
             &--pin {
                 position: absolute;
                 left: 50%;
@@ -1676,7 +1787,10 @@
                 top: 2rem;
 
                 @media screen and (min-width: 769px) {
-                    display: none;
+                    height: 4rem;
+                    position: absolute;
+                    top: 6rem;
+                    left: 63%;
                 }
             }
 
@@ -1693,9 +1807,10 @@
 
                 @media screen and (min-width: 769px) {
                     padding: 6rem 4rem 4rem 4rem;
+                    max-width: 27rem;
                 }
 
-                &::before {
+                /* &::before {
                     content: '';
                     height: 2px;
                     background-color: $color-red;
@@ -1705,10 +1820,14 @@
                     transform-origin: left;
                     transform: rotate(341deg);
 
-                    @media screen and (min-width: 769px) {
-                        display: none;
+                    @media screen and (min-width: 769px) and (max-width: 1024px) {
+                        transform: rotate(350deg);
                     }
-                }
+
+                    @media screen and (min-width: 1025px) {
+                        transform: rotate(355deg);
+                    }
+                } */
 
                 &--text-red {
                     color: $color-cinnabar;
@@ -1741,7 +1860,6 @@
             background-position: center;
             padding: 2.5rem 0;
             max-width: 100vw;
-
             position: relative;
 
             @media screen and (max-width: 768px) {
@@ -1749,10 +1867,25 @@
             }
 
             @media screen and (min-width: 769px) {
-                max-width: 30rem;
+                max-width: 35rem;
                 background-image: url(/assets/images/hpp-profile/paper-bg-dk.png);
                 background-size: contain;
-                padding: 5rem 2rem 2rem 2rem;
+                padding: 3rem 1rem;
+                margin-top: 12rem;
+            }
+
+            &--red-string {
+                width: calc(100vw * 2);
+                position: absolute;
+                top: 80px;
+                transform: rotate(15deg);
+                left: -50%;
+
+                @media screen and (min-width: 769px) {
+                    top: 90px;
+                    transform: translateX(-50%) rotate(5deg);
+                    left: 50%;
+                }
             }
 
             &--text {
@@ -1774,7 +1907,32 @@
                 font-family: 'Special Elite', cursive;
                 max-width: calc(100vw - 5rem);
                 text-align: center;
+                margin: auto;
 
+                /*                 &::before {
+                    content: '';
+                    height: 2px;
+                    background-color: $color-red;
+                    position: absolute;
+                    width: calc(100% + 10rem);
+                    top: -5px;
+                    left: -100px;
+                    transform-origin: left;
+                    transform: rotate(16deg);
+                    z-index: 1;
+
+
+                    @media screen and (min-width: 769px) and (max-width: 1024px) {
+                        top: 200px;
+                        transform: rotate(8.7deg);
+                    }
+
+                    @media screen and (min-width: 1025px) {
+                        top: 200px;
+                        transform: rotate(7deg);
+                    }
+                }
+ */
                 &--text-red {
                     color: $color-cinnabar;
                     font-family: inherit;
@@ -1799,7 +1957,8 @@
                 top: 1.5rem;
 
                 @media screen and (min-width: 769px) {
-                    display: none;
+                    position: absolute;
+                    top: 3rem;
                 }
             }
         }
