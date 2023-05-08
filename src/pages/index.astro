@@ -18,7 +18,8 @@ import PatientCaseFilesWrapper from "../components/Case-Files/PatientCaseFilesWr
       age={57}
       gender="M"
       description="A 57-year-old male has gone undiagnosed for 30+ years. Does Nathan’s file remind you of any of your current patients?"
-      photo="/assets/images/case-files/nathan/nathan.png"
+      photoMobile="/assets/images/case-files/nathan/photo-nathan-mobile.png"
+      photoDesktop="/assets/images/case-files/nathan/photo-nathan-desktop.png"
     >
       <Fragment slot="medical">
         <ul>
@@ -143,11 +144,11 @@ import PatientCaseFilesWrapper from "../components/Case-Files/PatientCaseFilesWr
         <PinchToZoom id="pt-1-image-1">
           <picture>
             <source
-              srcset="/assets/images/case-files/nathan/Femur-fracture-age-13.png"
+              srcset="/assets/images/case-files/nathan/nathan-rad-1-desktop.png"
               media="(min-width: 768px)"
             />
             <img
-              src="/assets/images/case-files/nathan/Femur-fracture-age-13.png"
+              src="/assets/images/case-files/nathan/nathan-rad-1-mobile.png"
               alt=""
             />
           </picture>
@@ -158,11 +159,11 @@ import PatientCaseFilesWrapper from "../components/Case-Files/PatientCaseFilesWr
         <PinchToZoom id="pt-1-image-2">
           <picture>
             <source
-              srcset="/assets/images/case-files/nathan/Metatarsal-fracture-age-16.png"
+              srcset="/assets/images/case-files/nathan/nathan-rad-2-desktop.png"
               media="(min-width: 768px)"
             />
             <img
-              src="/assets/images/case-files/nathan/Metatarsal-fracture-age-16.png"
+              src="/assets/images/case-files/nathan/nathan-rad-2-mobile.png"
               alt=""
             />
           </picture>
@@ -173,11 +174,11 @@ import PatientCaseFilesWrapper from "../components/Case-Files/PatientCaseFilesWr
         <PinchToZoom id="pt-1-image-3">
           <picture>
             <source
-              srcset="/assets/images/case-files/nathan/Tibial-fracture-age-57.png"
+              srcset="/assets/images/case-files/nathan/nathan-rad-3-desktop.png"
               media="(min-width: 768px)"
             />
             <img
-              src="/assets/images/case-files/nathan/Tibial-fracture-age-57.png"
+              src="/assets/images/case-files/nathan/nathan-rad-3-mobile.png"
               alt=""
             />
           </picture>
@@ -198,7 +199,8 @@ import PatientCaseFilesWrapper from "../components/Case-Files/PatientCaseFilesWr
       age={35}
       gender="F"
       description="A 35-year-old female born prematurely. Does Anna’s file remind you of any of your current patients?"
-      photo="/assets/images/case-files/anna/anna.png"
+      photoMobile="/assets/images/case-files/anna/photo-anna-mobile.png"
+      photoDesktop="/assets/images/case-files/anna/photo-anna-desktop.png"
     >
       <Fragment slot="medical">
         <ul>
@@ -207,7 +209,7 @@ import PatientCaseFilesWrapper from "../components/Case-Files/PatientCaseFilesWr
           <li class="item">Early loss of baby teeth with root intact</li>
           <li class="item">Delayed eruption of permanent teeth</li>
           <li class="item">General short stature</li>
-          <li class="item">GHistory of lower extremity weakness</li>
+          <li class="item">History of lower extremity weakness</li>
         </ul>
       </Fragment>
       <Fragment slot="family">
@@ -294,11 +296,11 @@ import PatientCaseFilesWrapper from "../components/Case-Files/PatientCaseFilesWr
         <PinchToZoom id="pt-2-image-1">
           <picture>
             <source
-              srcset="/assets/images/case-files/anna/Delayed-eruption-of-permanent-teeth.png"
+              srcset="/assets/images/case-files/anna/anna-rad-1-desktop.png"
               media="(min-width: 768px)"
             />
             <img
-              src="/assets/images/case-files/anna/Delayed-eruption-of-permanent-teeth.png"
+              src="/assets/images/case-files/anna/anna-rad-1-mobile.png"
               alt=""
             />
           </picture>
@@ -309,11 +311,11 @@ import PatientCaseFilesWrapper from "../components/Case-Files/PatientCaseFilesWr
         <PinchToZoom id="pt-2-image-2">
           <picture>
             <source
-              srcset="/assets/images/case-files/anna/Early-loss-of-baby-teeth.png"
+              srcset="/assets/images/case-files/anna/anna-rad-2-desktop.png"
               media="(min-width: 768px)"
             />
             <img
-              src="/assets/images/case-files/anna/Early-loss-of-baby-teeth.png"
+              src="/assets/images/case-files/anna/anna-rad-2-mobile.png"
               alt=""
             />
           </picture>
@@ -337,7 +339,8 @@ import PatientCaseFilesWrapper from "../components/Case-Files/PatientCaseFilesWr
       age={7}
       gender="F"
       description="A 7-year-old female with ALP levels of 138. Does Hannah’s file remind you of any of your current patients?"
-      photo="/assets/images/case-files/hanna/hanna.png"
+      photoMobile="/assets/images/case-files/hannah/photo-hannah-mobile.png"
+      photoDesktop="/assets/images/case-files/hannah/photo-hannah-desktop.png"
     >
       <Fragment slot="medical">
         <ul>
@@ -364,16 +367,19 @@ import PatientCaseFilesWrapper from "../components/Case-Files/PatientCaseFilesWr
       </Fragment>
       <Fragment slot="symptoms">
         <ul>
-          <li class="item">Bone pain in back and thighs</li>
-          <li class="item">Chronic fatigue</li>
-          <li class="item">Current nontraumatic hairline fracture</li>
-          <li class="item">Reports of anxiety and depressed mood</li>
+          <li class="item">Short stature</li>
+          <li class="item">Mild knock knees</li>
+          <li class="item">Tired for past 3 months</li>
+          <li class="item">
+            Struggling to keep up with peers in sports/outdoor activities
+          </li>
+          <li class="item">Impaired gait/mobility</li>
+          <li class="item">Difficulty sleeping</li>
         </ul>
       </Fragment>
       <Fragment slot="medications">
         <ul>
-          <li class="item">Calcium and vitamin D supplement daily</li>
-          <li class="item">Reports of daily NSAID use</li>
+          <li class="item">None</li>
         </ul>
       </Fragment>
       <Fragment slot="results">
@@ -390,36 +396,12 @@ import PatientCaseFilesWrapper from "../components/Case-Files/PatientCaseFilesWr
 
           <div class="second-column">
             <h3>RESULT</h3>
-            <p>10.6</p>
-            <p>6.5</p>
-            <p>4.6</p>
-            <p>63</p>
+            <p>9.3</p>
+            <p>7.8</p>
+            <p>4.2</p>
+            <p>138</p>
           </div>
 
-          <div class="second-column last-child">
-            <h3>FLAG</h3>
-            <p>High</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-          </div>
-        </div>
-        <h5>6 months ago</h5>
-        <div class="acc-table">
-          <div class="first-column">
-            <h3>TEST</h3>
-            <p>Calcium, mg/dL</p>
-            <p>Protein, g/dL</p>
-            <p>Albumin, g/dL</p>
-            <p>Alkaline phosphatase, IU/L</p>
-          </div>
-          <div class="second-column">
-            <h3>RESULT</h3>
-            <p>9.8</p>
-            <p>6.9</p>
-            <p>3.9</p>
-            <p>35</p>
-          </div>
           <div class="second-column last-child">
             <h3>FLAG</h3>
             <p>&nbsp;</p>
@@ -439,10 +421,10 @@ import PatientCaseFilesWrapper from "../components/Case-Files/PatientCaseFilesWr
           </div>
           <div class="second-column">
             <h3>RESULT</h3>
-            <p>10.2</p>
-            <p>7.1</p>
-            <p>4.0</p>
-            <p>32</p>
+            <p>9.1</p>
+            <p>8.1</p>
+            <p>4.2</p>
+            <p>130</p>
           </div>
           <div class="second-column last-child">
             <h3>FLAG</h3>
@@ -452,21 +434,14 @@ import PatientCaseFilesWrapper from "../components/Case-Files/PatientCaseFilesWr
             <p>&nbsp;</p>
           </div>
         </div>
-        <ul>
-          <li class="item">High vitamin B6 level shown at test 6 months ago</li>
-          <li class="item">
-            ALPL genetic test: Variant of uncertain significance (VUS)
-            identified
-          </li>
-        </ul>
-        <PinchToZoom id="pt-1-image-1">
+        <PinchToZoom id="pt-3-image-1">
           <picture>
             <source
-              srcset="/assets/images/case-files/nathan/Femur-fracture-age-13.png"
+              srcset="/assets/images/case-files/nathan/hanna-rad-1-desktop.png"
               media="(min-width: 768px)"
             />
             <img
-              src="/assets/images/case-files/nathan/Femur-fracture-age-13.png"
+              src="/assets/images/case-files/nathan/hanna-rad-1-mobile.png"
               alt=""
             />
           </picture>
@@ -474,14 +449,14 @@ import PatientCaseFilesWrapper from "../components/Case-Files/PatientCaseFilesWr
             <p>Femur fracture age 13</p>
           </div>
         </PinchToZoom>
-        <PinchToZoom id="pt-1-image-2">
+        <PinchToZoom id="pt-3-image-2">
           <picture>
             <source
-              srcset="/assets/images/case-files/nathan/Metatarsal-fracture-age-16.png"
+              srcset="/assets/images/case-files/nathan/hanna-rad-2-desktop.png"
               media="(min-width: 768px)"
             />
             <img
-              src="/assets/images/case-files/nathan/Metatarsal-fracture-age-16.png"
+              src="/assets/images/case-files/nathan/hanna-rad-2-mobile.png"
               alt=""
             />
           </picture>
@@ -492,11 +467,11 @@ import PatientCaseFilesWrapper from "../components/Case-Files/PatientCaseFilesWr
         <PinchToZoom id="pt-1-image-3">
           <picture>
             <source
-              srcset="/assets/images/case-files/nathan/Tibial-fracture-age-57.png"
+              srcset="/assets/images/case-files/nathan/hanna-rad-1-desktop.png"
               media="(min-width: 768px)"
             />
             <img
-              src="/assets/images/case-files/nathan/Tibial-fracture-age-57.png"
+              src="/assets/images/case-files/nathan/hanna-rad-3-mobile.png"
               alt=""
             />
           </picture>
@@ -517,43 +492,38 @@ import PatientCaseFilesWrapper from "../components/Case-Files/PatientCaseFilesWr
       age="7 months"
       gender="F"
       description="A 7-month-old female with vitamin B-responsive seizures at birth. Does Sarah’s file remind you of any of your current patients?"
-      photo="/assets/images/case-files/sarah/sarah.png"
+      photoMobile="/assets/images/case-files/sarah/photo-sarah-mobile.png"
+      photoDesktop="/assets/images/case-files/sarah/photo-sarah-desktop.png"
     >
       <Fragment slot="medical">
         <ul>
+          <li class="item">Vitamin B-responsive seizures at birth</li>
           <li class="item">
-            2 nontraumatic fractures: Age 13, femur; age 16, metatarsals
-          </li>
-          <li class="item">
-            Reportsof slow healing fractures, even at young age
-          </li>
-          <li class="item">Age 50: Kidney stones</li>
-          <li class="item">History of poor dentition and weak/loose teeth</li>
-          <li class="item">
-            Recent diagnosis ofpseudogout/CPPD/chondrocalcinosis
+            History of craniosynostosis--corrective measures taken at 3 months
           </li>
         </ul>
       </Fragment>
       <Fragment slot="family">
         <ul>
-          <li class="item">Mother: Osteoporosis</li>
+          <li class="item">Mother: No significant medical history</li>
+          <li class="item">Father: No significant medical history</li>
           <li class="item">
-            Father: Hypertension, myocardial infarction at 67
+            Siblings: 2 older siblings with no remarkable medical history (ages
+            4 and 10 years)
           </li>
         </ul>
       </Fragment>
       <Fragment slot="symptoms">
         <ul>
-          <li class="item">Bone pain in back and thighs</li>
-          <li class="item">Chronic fatigue</li>
-          <li class="item">Current nontraumatic hairline fracture</li>
-          <li class="item">Reports of anxiety and depressed mood</li>
+          <li class="item">Low weight and height</li>
+          <li class="item">Decreased head size</li>
+          <li class="item">Diagnosis of nutritional rickets</li>
+          <li class="item">Thoracic deformity</li>
         </ul>
       </Fragment>
       <Fragment slot="medications">
         <ul>
-          <li class="item">Calcium and vitamin D supplement daily</li>
-          <li class="item">Reports of daily NSAID use</li>
+          <li class="item">Vitamin D supplement</li>
         </ul>
       </Fragment>
       <Fragment slot="results">
@@ -567,18 +537,16 @@ import PatientCaseFilesWrapper from "../components/Case-Files/PatientCaseFilesWr
             <p>Albumin, g/dL</p>
             <p>Alkaline phosphatase, IU/L</p>
           </div>
-
           <div class="second-column">
             <h3>RESULT</h3>
-            <p>10.6</p>
-            <p>6.5</p>
-            <p>4.6</p>
-            <p>63</p>
+            <p>10</p>
+            <p>71</p>
+            <p>3.9</p>
+            <p>93</p>
           </div>
-
           <div class="second-column last-child">
             <h3>FLAG</h3>
-            <p>High</p>
+            <p>&nbsp;</p>
             <p>&nbsp;</p>
             <p>&nbsp;</p>
             <p>&nbsp;</p>
@@ -595,38 +563,14 @@ import PatientCaseFilesWrapper from "../components/Case-Files/PatientCaseFilesWr
           </div>
           <div class="second-column">
             <h3>RESULT</h3>
-            <p>9.8</p>
-            <p>6.9</p>
-            <p>3.9</p>
-            <p>35</p>
+            <p>10.6</p>
+            <p>7.5</p>
+            <p>4.2</p>
+            <p>87</p>
           </div>
           <div class="second-column last-child">
             <h3>FLAG</h3>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-          </div>
-        </div>
-        <h5>1 year ago</h5>
-        <div class="acc-table">
-          <div class="first-column">
-            <h3>TEST</h3>
-            <p>Calcium, mg/dL</p>
-            <p>Protein, g/dL</p>
-            <p>Albumin, g/dL</p>
-            <p>Alkaline phosphatase, IU/L</p>
-          </div>
-          <div class="second-column">
-            <h3>RESULT</h3>
-            <p>10.2</p>
-            <p>7.1</p>
-            <p>4.0</p>
-            <p>32</p>
-          </div>
-          <div class="second-column last-child">
-            <h3>FLAG</h3>
-            <p>&nbsp;</p>
+            <p>High</p>
             <p>&nbsp;</p>
             <p>&nbsp;</p>
             <p>&nbsp;</p>
@@ -635,18 +579,27 @@ import PatientCaseFilesWrapper from "../components/Case-Files/PatientCaseFilesWr
         <ul>
           <li class="item">High vitamin B6 level shown at test 6 months ago</li>
           <li class="item">
-            ALPL genetic test: Variant of uncertain significance (VUS)
-            identified
+            ALPL genetic test: Autosomal recessive inheritance
+            <ul>
+              <li class="item">
+                Parental genetic testing reveals single gene variant in mother
+                and father
+              </li>
+              <li class="item">
+                Father's genetic variant reported as variant of uncertain
+                significance (VUS)
+              </li>
+            </ul>
           </li>
         </ul>
         <PinchToZoom id="pt-1-image-1">
           <picture>
             <source
-              srcset="/assets/images/case-files/nathan/Femur-fracture-age-13.png"
+              srcset="/assets/images/case-files/nathan/sarah-asset-1-desktop.png"
               media="(min-width: 768px)"
             />
             <img
-              src="/assets/images/case-files/nathan/Femur-fracture-age-13.png"
+              src="/assets/images/case-files/nathan/sarah-asset-1-mobile.png"
               alt=""
             />
           </picture>
