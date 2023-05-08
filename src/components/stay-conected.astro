@@ -4,6 +4,9 @@
         <img class="stay-connected__title" src="/assets/images/stay-connected-title.png">
         <p class="stay-connected__text">Sign up for the latest news and information about hypophosphatasia and/or be connected with your local Alexion representative.</p>
         <p class="stay-connected__indication">*Indicates required field.</p>
+
+<form class="form" novalidate>
+<div class="form__controls">
 <div class="block">
         <div
         class="form__control"
@@ -154,8 +157,8 @@
     <div
       class="form__control"
       data-touched="false"
-      data-required="true"
-      data-is-valid="false"
+      data-required="false"
+      data-is-valid="true"
     >
 
     <input
@@ -163,14 +166,12 @@
         type="text"
         id="npi-number"
         name="npi-number"
-        placeholder="*NPI Number"
-        required
-        aria-required="true"
+        placeholder="NPI Number"
+        aria-required="false"
         pattern="^[0-9]+"
         onblur="validateFormControl(event)"
         onchange="validateFormControl(event)"
       />
-      <p class="form__control-error">Please enter NPI number</p>
     </div>
 
   <div
@@ -302,7 +303,8 @@
     >.
   </p>
 
-  
+</form>
+  </div>  
 </div>
 <div class="button button--primary">
   <input type="submit" value="Submit" onclick="validateFormOnSubmit(event)" />
@@ -310,7 +312,8 @@
 
 <!-- absolute elements of the stay connected modal -->
 <picture>
-    <source media="(min-width: 740px)" srcset="/assets/images/modal-bottom-desktop.png"> 
+    <source media="(min-width: 740px)" srcset="/assets/images/modal-bottom-desktop.png">  
+    <source media="(min-width: 200px)" srcset="/assets/images/modal-bottom-mobile.png">  
     <img src="/assets/images/modal-bottom-mobile.png" alt="">
 </picture>
 

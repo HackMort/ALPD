@@ -83,6 +83,7 @@
 
     .form__control-input{
         width: 90%;
+        border-bottom: 1px solid $color-envelop;
         @media screen and (min-width:740px) {
             width: 100%;
         }
@@ -219,17 +220,11 @@
         @media screen and (min-width:740px) {
         width: 132px;
         margin-top: 26px;
-        margin-bottom: -26px;
+        margin-bottom: -11px;
         }
                
     }
 
-    picture{
-        height: 8rem;
-        img{
-            height: 100%;
-        }
-    }
 
     button{
         position: absolute;
@@ -277,4 +272,6 @@
 }
 .fancybox__content{
     background-color: transparent;
+    padding-left: 10px;
+    padding-right: 10px;
 }

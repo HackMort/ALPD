@@ -98,8 +98,8 @@ const formHasBeenTouched = function (form) {
 const checkFormValidity = function (form) {
   const controls = Array.from(form.querySelectorAll('.form__control'))
   return controls
-    .filter((control) => control.dataset.required === 'true')
-    .every((control) => control.dataset.isValid === 'true')
+  .filter((control) => control.dataset.required === 'true')
+  .every((control) => control.dataset.isValid === 'true')
 }
 
 /**
