@@ -3,7 +3,7 @@ type Props = {};
 const {} = Astro.props;
 ---
 
-<div class="patients mobile--version" style="background: white;">
+<div class="patients mobile--version">
   <div class="wrapper">
     <h3 class="patients__heading">Patient case file</h3>
     <form class="form">
@@ -23,12 +23,19 @@ const {} = Astro.props;
 
 <script>
   const patientCaseFiles = document.querySelectorAll(".patient__case");
-  const patientSelect = document.querySelector("#patient-dropdown");
-  const patientDotList = document.querySelector(".patients_dots_list");
+  const patientSelect = document.querySelector(
+    "#patient-dropdown"
+  ) as HTMLInputElement;
+  const patientDotList = document.querySelector(
+    ".patients.mobile--version .patients_dots_list"
+  );
   if (patientCaseFiles && patientCaseFiles.length > 0) {
     patientCaseFiles.forEach((patient) => {
       const patientName = patient.querySelector(".patient__name").innerHTML;
-      const patientAge = patient.querySelector(".patient__age").innerHTML;
+      let patientAge = patient.querySelector(".patient__age").innerHTML;
+      if (patientAge.includes("mo")) {
+        patientAge = patientAge.replace("mo", "months");
+      }
       const patientID = patient.id.replace("patient-id-", "");
       const selected = Number(patientID) === 1 ? "selected" : "";
       const activeDot = selected ? "active" : "";
@@ -48,6 +55,12 @@ const {} = Astro.props;
       `#patient-id-${selectedValue}`
     );
     patientCaseFile?.classList.add("active");
+    patientDotList?.querySelectorAll("li").forEach((dot) => {
+      dot?.classList.remove("active");
+    });
+    patientDotList
+      ?.querySelector(`[data-patient="${selectedValue}"]`)
+      ?.parentElement?.classList.add("active");
   });
 
   const patientDots = document.querySelectorAll(".patients_dots_list__button");
@@ -58,7 +71,6 @@ const {} = Astro.props;
       });
       dot?.parentElement?.classList.add("active");
       const patientID = (e.target as HTMLInputElement).dataset.patient;
-      // set patient dropdown value
       patientSelect.value = patientID;
       patientSelect.dispatchEvent(new Event("change"));
       scrollToPatient();
