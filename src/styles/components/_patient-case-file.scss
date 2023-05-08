@@ -1,4 +1,5 @@
 .patients {
+
   position: relative;
   background-color: $color-white;
   padding-bottom: 2rem;
@@ -7,7 +8,7 @@
     display: block;
 
     @media screen and (min-width: 1024px) {
-      display: none;
+      // display: none;
     }
   }
 
@@ -190,7 +191,26 @@
 
 
 
+
     }
+  }
+}
+
+/* Accordion */
+.accordion {
+  .pinch-to-zoom.f-panzoom {
+    display: inline-block;
+    width: auto !important;
+    padding-left: 0;
+  }
+
+  p.patient {
+    color: $color-carbon;
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 400;
+    font-size: .875rem;
+    line-height: 1.125rem;
   }
 }
 
