@@ -22,7 +22,7 @@ new instance of the `Panzoom` class with the container element, the `options` ob
 using the pan and zoom controls provided by the `Panzoom` library. */
 document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll(
-        'button.button--pich-to-zoom'
+        'button.button--pinch-to-zoom'
     )
 
     buttons.forEach((button) => {
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const clone = container.cloneNode(true) as HTMLElement
             clone.setAttribute('style', 'display: none')
             clone.id = 'clone-' + clone.id
-            const cloneZoomButton = clone.querySelector('button.button--pich-to-zoom')
+            const cloneZoomButton = clone.querySelector('button.button--pinch-to-zoom')
             cloneZoomButton.parentElement.removeChild(cloneZoomButton)
             body.appendChild(clone)
 
