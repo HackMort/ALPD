@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 defaultType: "inline",
                 placeFocusBack: false,
                 trapFocus: false,
-                closeButton: true,
+                closeButton: false,
                 id: clone.id,
                 mainClass: 'fancybox--pinch-to-zoom',
                 hideScrollbar: true,
