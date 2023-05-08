@@ -38,13 +38,14 @@ const {
     {showHeader && <Header />}
     <main class="main">
       <slot />
-      <StayConnected />  
     </main>
     {showISI && <ISI />}
     {showFooter && <Footer />}
+    <StayConnected />
     <CookieBanner />
   </body>
   <script src="/assets/js/script.js" type="module"></script>
+  <script is:inline src="/assets/js/forms.js"></script>
 </html>
 <style is:global>
   :root {
