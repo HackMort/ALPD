@@ -14,20 +14,25 @@ const activeClass = Number(id) === 1 ? "active" : "";
 
 <div class="patients__case_file_item mobile--only">
   <div class={`patient__case ${activeClass}`} id={`patient-id-${id}`}>
-    <p class="patient__case_intro">{description}</p>
+    <h4 class="patient__case_description">{description}</h4>
     <div class="patient__case_grid">
       <div class="grid_header">
-        <img class="profile__pic" src={photo} style="width: 308.29px;" />
+        <img class="profile__pic" src={photo} />
         <img
           class="profile__finger_print"
-          src="/assets/images/footer-finger-print.png"
-          style="width: 80px;"
+          src="/assets/images/case-files/profile-finger-print-image.png"
         />
       </div>
       <div class="grid_info">
-        <h6 class="patient__name" set:html={name} />
-        <h4 class="patient__age" set:html={age} />
-        <h4 class="patient__gender" set:html={gender} />
+        <div>
+          <h6 class="patient__name" set:html={name} />
+        </div>
+        <div class="with--border">
+          <h4 class="patient__age">{age}</h4>
+        </div>
+        <div>
+          <h4 class="patient__gender">{gender}</h4>
+        </div>
       </div>
       <div class="grid__accordions">
         <div class="accordion">
@@ -54,33 +59,3 @@ const activeClass = Number(id) === 1 ? "active" : "";
     </div>
   </div><!-- case-file -->
 </div>
-<style>
-  .patients__case_files {
-    background-color: white;
-  }
-  .patient__case_grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, auto);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-
-    .grid_header {
-      grid-area: 1 / 1 / 2 / 2;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 1rem;
-    }
-  }
-  /* .div1 { grid-area: 1 / 1 / 2 / 2; }
-.div2 { grid-area: 1 / 2 / 2 / 3; }
-.div3 { grid-area: 1 / 3 / 2 / 4; } */
-  .patient__case {
-    display: none;
-    &.active {
-      display: block;
-      transition: display 2s ease-in-out;
-    }
-  }
-</style>
