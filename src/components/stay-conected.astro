@@ -238,13 +238,13 @@
         onblur="validateFormControl(event)"
         onchange="validateFormControl(event)"
       />
-      <p class="form__control-error">Please enter email address</p>
+      <p class="form__control-error" id="custom-error">Please enter email address</p>
     </div>
     <div
       class="form__control"
       data-touched="false"
-      data-required="true"
-      data-is-valid="false"
+      data-required="false"
+      data-is-valid="true"
     >
 
     <div class="form__control-checkbox form__control-checkbox--last red-check">
@@ -266,8 +266,8 @@
     <div
     class="form__control"
     data-touched="false"
-    data-required="true"
-    data-is-valid="false"
+    data-required="false"
+    data-is-valid="true"
   >
     <div class="form__control-checkbox form__control-checkbox--last second-check">
       <input
@@ -275,7 +275,7 @@
         type="checkbox"
         name="terms-and-conditions"
         required
-        aria-required="true"
+        aria-required="false"
         onblur="validateFormControl(event)"
         onchange="validateFormControl(event)"
       />
@@ -289,7 +289,6 @@
         me.
       </label>
     </div>
-    <p class="form__control-error">Please confirm</p>
   </div>
 
 
@@ -302,13 +301,13 @@
       >Privacy Notice</a
     >.
   </p>
+</div>
+<div class="button button--primary">
+    <input type="submit" value="Submit" onclick="validateFormOnSubmit(event)" />
+</div>
 
 </form>
   </div>  
-</div>
-<div class="button button--primary">
-  <input type="submit" value="Submit" onclick="validateFormOnSubmit(event)" />
-</div>
 
 <!-- absolute elements of the stay connected modal -->
 <picture>
