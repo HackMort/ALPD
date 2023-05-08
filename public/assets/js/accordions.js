@@ -17,18 +17,14 @@ export function Accordions () {
     const accordionItems = document.querySelectorAll('.accordion__item')
     accordionItems.forEach((accordionItem) => {
       accordionItem.addEventListener('click', (e) => {
-      
         const expanded = accordionItem.getAttribute('aria-expanded') === 'true' || false
-        accordionItem.setAttribute('aria-expanded', !expanded)
-        
-      
- 
         // close all other accordion items... maybe?
-         accordionItems.forEach((accordionItem) => {
-           if (accordionItem !== e.currentTarget) {
-             accordionItem.setAttribute('aria-expanded', false)
-           }
-         })
+        accordionItems.forEach((accordionItem) => {
+          if (accordionItem !== e.target) {
+            accordionItem.setAttribute('aria-expanded', false)
+          }
+        })
+        accordionItem.setAttribute('aria-expanded', !expanded)
       })
     })
   }
