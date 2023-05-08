@@ -36,16 +36,18 @@ document.addEventListener('DOMContentLoaded', () => {
             clone.id = 'clone-' + clone.id
             const cloneZoomButton = clone.querySelector('button.button--pinch-to-zoom')
             cloneZoomButton.parentElement.removeChild(cloneZoomButton)
-            body.appendChild(clone)
+
+                body.appendChild(clone)
+
 
             let panzoom: Panzoom
 
             const modal = new Fancybox([{ src: clone.id }], {
-                autoFocus: true,
+                autoFocus: false,
                 defaultType: "inline",
-                placeFocusBack: true,
-                trapFocus: true,
-                closeButton: false,
+                placeFocusBack: false,
+                trapFocus: false,
+                closeButton: true,
                 id: clone.id,
                 hideScrollbar: true,
                 defaultDisplay: 'flex',
@@ -64,6 +66,10 @@ document.addEventListener('DOMContentLoaded', () => {
                             panzoom.destroy()
                             modal.close()
                         })
+                    },
+                    close: () => {
+                        panzoom.destroy()
+                        clone.parentElement.removeChild(clone);
                     },
                     destroy: () => {
                         clone.parentElement.removeChild(clone)
