@@ -5,7 +5,7 @@ import Headings from "./Enter-Site/Headings.astro";
 import Media from "./Enter-Site/Media.astro";
 ---
 
-<div class="enter__site">
+<section class="enter__site">
   <div class="grid">
     <div class="grid__content">
       <Headings />
@@ -16,7 +16,8 @@ import Media from "./Enter-Site/Media.astro";
       <Media />
     </div><!-- Media -->
   </div><!-- Grid -->
-</div><!-- Enter Site -->
+  <div class="badge visible"></div>
+</section><!-- Enter Site -->
 
 <script>
   const formButton = document.querySelector(".button--form");
@@ -26,14 +27,18 @@ import Media from "./Enter-Site/Media.astro";
   const mediaContent = document.querySelector(".grid__media");
   const closeButton = document.querySelector(".button--close");
 
+  const badge = document.querySelector(".badge");
+
   formButton.addEventListener("click", () => {
     buttonsContent.classList.remove("visible");
+    badge.classList.remove("visible");
     formContent.classList.add("visible");
   });
 
   videoButton.addEventListener("click", () => {
     buttonsContent.classList.remove("visible");
     formContent.classList.remove("visible");
+    badge.classList.remove("visible");
     mediaContent.classList.add("visible");
   });
 
