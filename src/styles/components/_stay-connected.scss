@@ -1,0 +1,280 @@
+.stay-connected{
+    background-image: url("/assets/images/stay-connected-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 375px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    
+    @media screen and (min-width:740px) {
+        background-image: url("/assets/images/stay-connected-desktop.png");
+        max-width: 728px;
+    }
+
+
+    &__wrapper{
+        padding-top: 2.625rem;
+        padding-right: 33px;        
+        padding-left: 61px;
+
+        @media screen and (min-width:740px) {
+            margin: auto;
+            max-width: 542px;
+            padding: 0;
+        }
+    }
+
+    &__title{
+        max-width: 165px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        
+        @media screen and (min-width:740px) {
+            margin: auto;
+            max-width: 175px;
+            margin-top: 87px;
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__text{
+        font-family: 'Barlow';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+
+        @media screen and (min-width:740px) {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;    
+        text-align: center;
+    }
+}
+
+    &__indication{
+        font-family: 'Barlow';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        margin-top: 10px;
+        margin-bottom: 32px;
+
+        @media screen and (min-width:740px) {
+        font-weight: 400;
+        font-size: 14px;    
+        text-align: center;
+        margin-bottom: 12px;
+        }
+    }
+
+    .block{
+        @media screen and (min-width:740px) {
+        display: flex;
+        max-width: 473px;
+        margin: auto;
+        :first-child{
+            margin-right: 3rem;
+        }
+        }
+    }
+
+    .form__control-input{
+        width: 90%;
+        @media screen and (min-width:740px) {
+            width: 100%;
+        }
+        &::placeholder{
+            font-family: 'Barlow';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 21px;
+            
+            @media screen and (min-width:740px) {
+            font-size: 16px;
+            line-height: 26px;
+            }
+        }
+    }
+
+    #specialty{
+            font-family: 'Barlow';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 21px;
+            @media screen and (min-width:740px) {
+                font-size: 16px;
+                line-height: 26px;
+                width: 117px;
+                }
+    }
+
+    #state{
+        font-family: 'Barlow';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 21px;
+            @media screen and (min-width:740px) {
+                font-size: 16px;
+                line-height: 26px;
+                width: 117px;
+                }
+    }
+
+    #email{
+        width: 90%;
+        @media screen and (min-width:740px) {
+        width: 473px;
+        margin: auto;
+        }
+    }
+
+    .red-check{
+        margin-top: 25px;
+        margin-left: -27px;
+        @media screen and (min-width:740px) {
+            margin: auto;
+            width: 29rem;
+            margin-top: 1.3125rem;
+        }
+
+        input{
+            width: 15px;
+            height: 15px;
+            margin-top: 6px;
+            border: 1px solid currentColor;
+        }
+
+        .form__control-label{
+        font-family: 'Barlow';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: $color-red;
+        max-width: 216px;
+
+        @media screen and (min-width:740px) {
+        font-size: 18px;
+        line-height: 25px;
+        max-width: unset;
+        }
+        }
+    }
+
+    .second-check{
+        margin-left: -27px;
+        @media screen and (min-width:740px) {
+        margin: auto;
+        width: 29rem;
+        }
+
+        input{
+            width: 15px;
+            height: 15px;
+            margin-top: 4px;
+            border: 1px solid currentColor;
+        }
+        .form__control-label{
+            font-family: 'Barlow';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            max-width: 270px;
+
+            @media screen and (min-width:740px) {
+            max-width: unset;
+            }
+            }
+    }
+
+    .request-a-rep__terms-text{
+        font-family: 'Barlow';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        @media screen and (min-width:740px) {
+        text-align: center;
+        }
+
+        a{
+            font-family: 'Barlow';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+
+    .button{
+        margin: auto;
+        margin-top: 20px;
+        @media screen and (min-width:740px) {
+        width: 132px;
+        margin-top: 26px;
+        margin-bottom: -26px;
+        }
+               
+    }
+
+    picture{
+        height: 8rem;
+        img{
+            height: 100%;
+        }
+    }
+
+    button{
+        position: absolute;
+        font-family: 'Barlow';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 24px;
+        top: 9px;
+        right: 13px;
+
+        @media screen and (min-width:740px) {
+        font-size: 21px;
+        right: 19px;
+        }
+    }
+
+    .red-string{
+        position: absolute;
+        color: red;
+        width: 100%;
+        top: 11px;
+        left: -14px;
+        transform: rotate(348deg);
+
+        @media screen and (min-width:740px) {
+        transform: rotate(357deg);
+        left: 0;
+        top: 57px;
+        }
+    }
+    
+    .red-string-2{        
+        @media screen and (min-width:740px) {
+        position: absolute;
+        border-bottom: 2px solid #CF1C0A;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        color: red;
+        width: 100%;    
+        transform: rotate(356deg);
+        left: 0;
+        bottom: 75px;
+        }
+    }
+}
+.fancybox__content{
+    background-color: transparent;
+}
