@@ -1,11 +1,24 @@
 <div class="media__container">
-  <img
-    src="/assets/images/enter-site/video-image-placeholder.png"
-    alt="Placeholder Video Image"
-  />
+    <picture>
+        <source srcset="public/assets/images/enter-site/video-poster.png" media="(min-width: 1024px)">
+        <img
+        src="/assets/images/enter-site/video-image-placeholder.png"
+        alt="Placeholder Video Image"
+      />
+    </picture>
   <!-- Close Button -->
   <button class="button--close">
     <span class="line"></span>
     <span class="line"></span>
   </button>
 </div>
+
+<script>
+    const buttonClose = document.querySelector('.media__container .button--close')
+
+    if (buttonClose) {
+        buttonClose.addEventListener('click', () => {
+            window.location.href = '/'
+        })
+    }
+</script>

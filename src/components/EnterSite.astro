@@ -6,47 +6,55 @@ import Media from "./Enter-Site/Media.astro";
 ---
 
 <section class="enter__site">
-  <div class="grid">
-    <div class="grid__content">
-     <div class="wrapper">
-        <Headings />
-        <Buttons />
-        <Form />
-     </div>
-    </div><!-- Content -->
-    <div class="grid__media">
-      <Media />
-    </div><!-- Media -->
-  </div><!-- Grid -->
-  <div class="badge visible"></div>
+    <div class="grid">
+        <div class="grid__content-wrapper">
+            <div class="grid__content">
+                <div class="wrapper">
+                    <Headings />
+                    <Buttons />
+                    <Form />
+                </div>
+            </div><!-- Content -->
+        </div>
+        <div class="grid__video-poster hidden lg:block">
+        </div>
+        <div class="grid__media">
+            <Media />
+        </div><!-- Media -->
+    </div><!-- Grid -->
+    <div class="badge visible"></div>
 </section><!-- Enter Site -->
 
 <script>
-  const formButton = document.querySelector(".button--form");
-  const videoButton = document.querySelector(".button--video");
-  const buttonsContent = document.querySelector(".grid__content_buttons");
-  const formContent = document.querySelector(".grid__form");
-  const mediaContent = document.querySelector(".grid__media");
-  const closeButton = document.querySelector(".button--close");
+    document.addEventListener("DOMContentLoaded", () => {
+        window.localStorage.setItem("recurrent-visitor", "true");
+    });
 
-  const badge = document.querySelector(".badge");
+    const formButton = document.querySelector(".button--form");
+    const videoButton = document.querySelector(".button--video");
+    const buttonsContent = document.querySelector(".grid__content_buttons");
+    const formContent = document.querySelector(".grid__form");
+    const mediaContent = document.querySelector(".grid__media");
+    const closeButton = document.querySelector(".button--close");
 
-  formButton.addEventListener("click", () => {
-    buttonsContent.classList.remove("visible");
-    badge.classList.remove("visible");
-    formContent.classList.add("visible");
-  });
+    const badge = document.querySelector(".badge");
 
-  videoButton.addEventListener("click", () => {
-    buttonsContent.classList.remove("visible");
-    formContent.classList.remove("visible");
-    badge.classList.remove("visible");
-    mediaContent.classList.add("visible");
-  });
+    formButton.addEventListener("click", () => {
+        buttonsContent.classList.remove("visible");
+        badge.classList.remove("visible");
+        formContent.classList.add("visible");
+    });
 
-  closeButton.addEventListener("click", () => {
-    buttonsContent.classList.add("visible");
-    formContent.classList.remove("visible");
-    mediaContent.classList.remove("visible");
-  });
+    videoButton.addEventListener("click", () => {
+        buttonsContent.classList.remove("visible");
+        formContent.classList.remove("visible");
+        badge.classList.remove("visible");
+        mediaContent.classList.add("visible");
+    });
+
+    closeButton.addEventListener("click", () => {
+        buttonsContent.classList.add("visible");
+        formContent.classList.remove("visible");
+        mediaContent.classList.remove("visible");
+    });
 </script>

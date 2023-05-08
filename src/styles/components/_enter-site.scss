@@ -27,14 +27,41 @@
             // left: 50%;
             // transform: translateX(-50%);
         }
+
+        @media screen and (min-width: 1024px) {
+            left: 22%;
+        }
     }
 
     .grid {
 
         position: relative;
 
+        @media screen and (min-width: 1024px) {
+            display: flex;
+        }
+
+        &__content-wrapper {
+            height: 100vh;
+
+            @media screen and (min-width: 1024px) {
+                background-image: url('/assets/images/enter-site/folder-desktop.png');
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+
+                width: 39rem;
+                margin-right: -54px;
+                position: relative;
+                z-index: 1;
+            }
+
+            @media screen and (min-width: 1380px) {
+                margin-right: -80px;
+            }
+        }
+
         &__content {
-            background-image: url('/assets/images/enter-site/background.png');
+            background-image: url('/assets/images/enter-site/background-mobile.png');
             background-size: 100% 100%;
             background-repeat: no-repeat;
             min-height: 100vh;
@@ -59,8 +86,8 @@
                 line-height: 2.25rem;
 
                 @media screen and (min-width: 768px) {
-                    font-size: 3.4375rem;
-                    line-height: 3.4375rem;
+                    font-size: 2.375rem;
+                    line-height: 2.375rem;
                 }
             }
 
@@ -70,8 +97,8 @@
                 margin-bottom: 0.75rem;
 
                 @media screen and (min-width: 768px) {
-                    font-size: 3.4375rem;
-                    line-height: 3.4375rem;
+                    font-size: 2.375rem;
+                    line-height: 2.375rem;
                 }
 
                 * {
@@ -89,6 +116,10 @@
                 font-weight: 700;
                 font-size: 1.3125rem;
                 line-height: 1.625rem;
+
+                @media screen and (min-width: 1024px) {
+                    max-width: 23.25rem;
+                }
             }
 
             &_buttons,
@@ -167,7 +198,11 @@
                 }
             }
 
-            @media screen and (min-width: 768px) {
+            @media screen and (min-width: 1024px) {
+                padding-top: 2.5rem;
+                background-image: url('/assets/images/enter-site/background-desktop.png');
+
+                max-width: 84%;
             }
 
         }
@@ -180,6 +215,28 @@
             display: block;
         }
 
+        &__video-poster {
+
+            background-image: url("/assets/images/enter-site/video-poster.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100% 100%;
+
+            flex: 1 0 auto;
+
+            // img {
+            //     height: 100%;
+            //     object-position: left top;
+            //     object-fit: fill;
+            // }
+
+            // picture {
+            //     @media screen and (min-width: 1314px) {
+            //         overflow: hidden;
+            //     }
+            // }
+        }
+
         &__media {
             display: none;
             background-color: $color-black;
@@ -190,9 +247,16 @@
             transition: display 0.5s ease-in-out;
             width: 100%;
 
+            z-index: 1;
+
             &.visible {
                 display: grid;
                 place-content: center;
+            }
+
+            img {
+                max-width: 80%;
+                margin: 0 auto;
             }
 
             .button--close {
