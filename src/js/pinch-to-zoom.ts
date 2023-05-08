@@ -37,7 +37,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const cloneZoomButton = clone.querySelector('button.button--pinch-to-zoom')
             cloneZoomButton.parentElement.removeChild(cloneZoomButton)
 
-                body.appendChild(clone)
+            const currentClone = body.querySelector(clone.id)
+
+            if (currentClone) {
+                currentClone.parentElement.removeChild(currentClone)
+            }
+
+            body.appendChild(clone)
 
 
             let panzoom: Panzoom
@@ -68,11 +74,15 @@ document.addEventListener('DOMContentLoaded', () => {
                         })
                     },
                     close: () => {
-                        panzoom.destroy()
-                        clone.parentElement.removeChild(clone);
+                        setTimeout(() => {
+                            panzoom.destroy()
+                            clone.parentElement.removeChild(clone);
+                        }, 1000);
                     },
                     destroy: () => {
-                        clone.parentElement.removeChild(clone)
+                        setTimeout(() => {
+                            clone.parentElement.removeChild(clone);
+                        }, 1000);
                     },
                 }
             });
