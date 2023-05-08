@@ -1,38 +1,29 @@
 ---
 import CTA from "../components/CTA.astro";
 import References from "../components/References.astro";
+import InternalNavigation from '../components/InternalNavigation.astro';
 import Layout from "../layouts/Layout.astro";
+const internalNavLinks = [
+  { href: "role-of-alp", label: "Role of ALP", active: true },
+  { href: "low-alp", label: "Low ALP" }
+];
 ---
 
 <Layout title="ALPD Academy" pageClass="alpd__academy" showISI={false}>
-  <section class="page-hero">
-    <picture class="page-hero__image">
-      <source
-        srcset="/assets/images/alpd-academy/alpd-academy-hero-desktop.png"
-        media="(min-width: 1024px)"
-      />
-      <source
-        srcset="/assets/images/alpd-academy/alpd-academy-hero-tablet.png"
-        media="(min-width: 500px)"
-      />
-      <img
-        src="/assets/images/alpd-academy/alpd-academy-hero-mobile.png"
-        alt=""
-      />
-    </picture>
-    <picture class="page-hero__stamp">
-      <source
-        srcset="/assets/images/alpd-academy/alpd-academy-stamp-desktop.png"
-        media="(min-width: 768px)"
-      />
-      <img
-        src="/assets/images/alpd-academy/alpd-academy-stamp-mobile.png"
-        alt=""
-      />
-    </picture>
-    <div class="red-string page-hero-red-string"></div>
-  </section>
-  <section class="section alpd-academy__role" id="role-of-alpd">
+    <section class="page-hero">
+        <picture class="page-hero__image">
+            <source srcset="/assets/images/alpd-academy/alpd-academy-hero-desktop.png" media="(min-width: 1024px)">
+            <source srcset="/assets/images/alpd-academy/alpd-academy-hero-tablet.png" media="(min-width: 500px)">
+            <img src="/assets/images/alpd-academy/alpd-academy-hero-mobile.png" alt="">
+        </picture>
+        <picture class="page-hero__stamp">
+            <source srcset="/assets/images/alpd-academy/alpd-academy-stamp-desktop.png" media="(min-width: 768px)">
+            <img src="/assets/images/alpd-academy/alpd-academy-stamp-mobile.png" alt="">
+        </picture>
+        <div class="red-string page-hero-red-string"></div>
+    </section>
+    {internalNavLinks && <InternalNavigation items={internalNavLinks} />}
+  <section class="section alpd-academy__role" id="role-of-alp">
     <div class="wrapper alpd-academy__role-header">
       <h2 class="alpd-academy__role-title">
         What you may not know about alkaline phosphatase (ALP)
@@ -159,7 +150,7 @@ import Layout from "../layouts/Layout.astro";
 
     <div class="red-string alpd-academy__role-red-string"></div>
   </section>
-  <section class="section alpd-academy__low">
+  <section class="section alpd-academy__low" id="low-alp">
     <div class="wrapper alpd-academy__low-header">
       <h1 class="alpd-academy__low-title">MENACING Mutations</h1>
       <p class="alpd-academy__low-description">
@@ -355,7 +346,7 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </div>
   </section>
-  <section class="section alpd-academy__know-the-numbers">
+  <section class="alpd-academy__know-the-numbers">
     <div class="wrapper">
       <h1 class="know-the-numbers__title">know the numbers</h1>
     </div>

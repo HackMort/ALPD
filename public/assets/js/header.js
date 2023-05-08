@@ -66,6 +66,7 @@ function MainMenu (menuClass = 'main__navigation', currentPageClass = 'current-p
     })
   })
 }
+
 function StickyHeader (headerClass = 'site__header', stickyClass = 'is--sticky') {
   if (!headerClass) {
     console.error('Header Class not found or invalid')
