@@ -24,6 +24,7 @@
 @import './components/references';
 @import './components/detective-form';
 @import './components/cta';
+@import './components/_patient-case-file.scss';
 
 
 .section__home-video {
@@ -963,6 +964,7 @@
 
             &:first-of-type {
                 margin-bottom: 1.5rem;
+
                 @media screen and (min-width: 500px) {
                     margin-bottom: 3rem;
                 }
