@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { ToggleMobileMenu, MainMenu, StickyHeader } from './header.js'
 import { Tabs } from './tabs.js'
-import { cookieValidation, cookieFormValidation } from './validate.js'
+// import { cookieValidation, cookieFormValidation } from './validate.js'
 import { Accordions } from './accordions.js'
 import { stickyInternalNav, highlightActiveInternalNavOnScroll, setActiveIternalNavItemOnClick, setNavTopPosition } from './internal-nav.js'
 
