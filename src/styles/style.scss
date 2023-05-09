@@ -1967,6 +1967,229 @@
     #hpp-prevalence {
         position: relative;
     }
+
+    .hpp-multisystemic {
+        margin-top: 2rem;
+
+        &__title {
+            margin-bottom: 2rem;
+        }
+
+        &__definition {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding: 2rem 0;
+            margin: 50px auto 0 auto;
+
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+                padding: 2rem 1rem;
+            }
+
+            .hpp-multisystemic__col:first-child {
+                width: 95%;
+            }
+
+            &--text {
+                font-weight: 600;
+                margin-bottom: 2rem;
+                max-width: 70%;
+
+                &-red {
+                    color: $color-red;
+                }
+            }
+
+            &--media {
+                margin: 0 1rem;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    background-image: url(/assets/images/hpp-profile/clip.png);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                    height: 80px;
+                    width: 50px;
+
+                    position: absolute;
+                    z-index: 2;
+                    transform: translateY(-17%) translateX(-20%);
+                }
+            }
+
+            &--photo {
+                position: relative;
+                z-index: 1;
+                top: -15px;
+                left: -40px;
+                width: 100%;
+
+                &-bg {
+                    position: absolute;
+                    z-index: 0;
+                    max-width: 90%;
+                }
+            }
+
+            &--title {
+                font-family: Oswald, sans-serif;
+                font-size: 1.5rem;
+                font-weight: 700;
+                margin-top: 2rem;
+                line-height: 2.5rem;
+
+                border-bottom: 1px solid $color-carbon;
+                max-width: 95%;
+            }
+        }
+
+        &__studies {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+
+        &__study {
+            width: 100%;
+            max-width: 25rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            margin-bottom: 3rem;
+
+            &--percentage {
+                font-size: 3.5rem;
+                font-weight: 700;
+                color: $color-red;
+                margin-bottom: 1rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                background-image: url(/assets/images/hpp-profile/fingerprint.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+
+                height: 9.0625rem;
+            }
+
+            &--text-bold {
+                font-weight: 700;
+                margin-bottom: 1rem;
+            }
+
+            &--text-red {
+                color: $color-red;
+            }
+        }
+
+        &__bg-paper {
+            background-image: url(/assets/images/hpp-profile/paper-bg--tabs.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position: center;
+            box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.25);
+            height: 100%;
+            width: fit-content;
+
+            margin: 4rem auto 0 auto;
+            padding: 0 3rem;
+            background-color: #fafafa;
+        }
+
+        &__tabs {
+            &--nav {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                width: 100%;
+                background-color: transparent;
+                overflow: hidden;
+                margin: auto;
+                padding-top: 0;
+
+                @media screen and (max-width: 769px) {
+                    margin-left: 0;
+                }
+            }
+
+            &--nav-item {
+                width: calc(100vw / 3 - 4rem);
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+
+                a {
+                    font-family: 'Special Elite', cursive;
+                    background: transparent;
+                    border: none;
+
+                    &:hover {
+                        color: $color-cinnabar;
+                    }
+
+                    //Area selected
+                    &[aria-selected='true'] {
+                        border-bottom: 5px solid $color-cinnabar;
+                    }
+                }
+
+
+            }
+
+            #multisystemic1 {
+                background-image: url(/assets/images/hpp-profile/folder-open--tab1.png);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                background-position: center;
+                margin-top: -70px;
+            }
+
+            #multisystemic2 {
+                background-image: url(/assets/images/hpp-profile/folder-open--tab2.png);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                background-position: center;
+                margin-top: -70px;
+            }
+
+            #multisystemic3 {
+                background-image: url(/assets/images/hpp-profile/folder-open--tab3.png);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                background-position: center;
+                margin-top: -70px;
+            }
+        }
+
+        &__condition {
+            margin-bottom: 2rem;
+            margin-left: 4rem;
+            margin-right: 4rem;
+        }
+
+        &__impact {
+
+            &--title {
+                font-family: Oswald, sans-serif;
+                font-size: 1.5rem;
+                font-weight: 700;
+                margin-top: 2rem;
+                line-height: 2.5rem;
+
+                border-bottom: 1px solid $color-carbon;
+                margin-bottom: 2rem;
+            }
+        }
+
+    }
+
 }
 
 /* HPP Profile page end */

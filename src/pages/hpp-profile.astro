@@ -13,10 +13,10 @@ const internalNavLinks = [
 ];
 ---
 
-<Layout title="HPP Profile" pageClass="hpp__profile" showISI={true}>
+<Layout title="HPP Profile" pageClass="hpp__profile" showISI={false}>
   {internalNavLinks && <InternalNavigation items={internalNavLinks} />}
 
-  <!-- Profiling hypophostasia (HPP) -->
+  <!-- HPP Definition -->
   <section id="hpp-definition" class="profiling-hypophostasia section">
     <div class="hpp__profile__red-string-bg">
       <div class="wrapper hpp__profile__content">
@@ -66,13 +66,321 @@ const internalNavLinks = [
     </div>
   </section>
 
-  <section id="hpp-multisystemic" class="section">
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptate
-      nihil vel repudiandae laboriosam quasi, porro nisi, cupiditate ipsum
-      nostrum, harum temporibus optio consectetur dolorem nam modi. Repudiandae,
-      voluptatum optio.
-    </p>
+  <h2 class="hpp__profile__title">How hypophosphatasia CAN cause harm</h2>
+
+  <!-- Multisystemic Symptoms and Disease Burden -->
+  <section id="hpp-multisystemic" class="section hpp-multisystemic">
+    <article class="hpp-multisystemic__tabs">
+      <ul role="tablist" class="hpp-multisystemic__tabs--nav">
+        <li role="presentation" class="hpp-multisystemic__tabs--nav-item">
+          <a href="#multisystemic1" role="tab" id="tab1" aria-selected="true"
+            >Adults</a
+          >
+        </li>
+        <li role="presentation" class="hpp-multisystemic__tabs--nav-item">
+          <a href="#multisystemic2" role="tab" id="tab2" tabindex="-1"
+            >Children/Adolescents</a
+          >
+        </li>
+        <li role="presentation" class="hpp-multisystemic__tabs--nav-item">
+          <a href="#multisystemic3" role="tab" id="tab3" tabindex="-1"
+            >Neonates/Infants</a
+          >
+        </li>
+      </ul>
+
+      <select name="hpp-multisystemic__select" id="hpp-multisystemic-select">
+        <option value="multisystemic1">Adults</option>
+        <option value="multisystemic2">Children/Adolescents</option>
+        <option value="multisystemic3">Neonates/Infants</option>
+      </select>
+
+      <!-- Tab adults content -->
+      <section
+        id="multisystemic1"
+        role="tabpanel"
+        aria-labelledby="tab1"
+        aria-hidden="false"
+        tabindex="-1"
+      >
+        <div class="hpp-multisystemic__bg-paper">
+          <article class="wrapper hpp-multisystemic__definition">
+            <div class="hpp-multisystemic__col">
+              <p class="hpp-multisystemic__definition--text">
+                <span class="hpp-multisystemic__definition--text-red"
+                  >Adults with hypophosphatasia</span
+                > may experience a full spectrum of symptoms. In addition to the
+                typical skeletal effects, pain and muscular/metabolic manifestations
+                are also common in adults with hypophosphatasia, regardless of age
+                of onset.<sup>6,7*</sup>
+              </p>
+              <span class="hpp-multisystemic__definition--condition">
+                *Adults may have a history of childhood symptoms.<sup>6</sup>
+              </span>
+
+              <h3 class="hpp-multisystemic__definition--title">
+                Studies of adult patients found:
+              </h3>
+            </div>
+            <div class="hpp-multisystemic__col">
+              <div class="hpp-multisystemic__definition--media">
+                <picture>
+                  <img
+                    class="hpp-multisystemic__definition--photo-bg"
+                    src="/assets/images/hpp-profile/patient-photo--bg.png"
+                    alt="Patient adults"
+                  />
+                </picture>
+
+                <picture>
+                  <img
+                    class="hpp-multisystemic__definition--photo"
+                    src="/assets/images/hpp-profile/patient-photo.png"
+                    alt="Patient adults"
+                  />
+                </picture>
+              </div>
+            </div>
+          </article>
+
+          <article class="wrapper hpp-multisystemic__studies">
+            <div class="hpp-multisystemic__study">
+              <h2 class="hpp-multisystemic__study--percentage">95%</h2>
+              <p class="hpp-multisystemic__study--text">
+                of patients reported pain and <span
+                  class="hpp-multisystemic__study--text-bold hpp-multisystemic__study--text-red"
+                  >76%</span
+                > said <span class="hpp-multisystemic__study--text-bold"
+                  >bone pain</span
+                > was severe enough to limit activity<sup>7†</sup>
+              </p>
+            </div>
+
+            <div class="hpp-multisystemic__study">
+              <h2 class="hpp-multisystemic__study--percentage">74%</h2>
+              <p class="hpp-multisystemic__study--text">
+                of patients reported <span
+                  class="hpp-multisystemic__study--text-bold"
+                  >inability to climb stairs</span
+                > and <span
+                  class="hpp-multisystemic__study--text-bold hpp-multisystemic__study--text-red"
+                  >81%</span
+                > reported <span class="hpp-multisystemic__study--text-bold"
+                  >inability to descend stairs
+                </span><sup>7†</sup>
+              </p>
+            </div>
+
+            <div class="hpp-multisystemic__study">
+              <h2 class="hpp-multisystemic__study--percentage">95%</h2>
+              <p class="hpp-multisystemic__study--text">
+                had <span class="hpp-multisystemic__study--text-bold"
+                  >difficulty walking</span
+                ><sup>7†</sup>
+              </p>
+            </div>
+
+            <div class="hpp-multisystemic__study">
+              <h2 class="hpp-multisystemic__study--percentage">&gt50%</h2>
+              <p class="hpp-multisystemic__study--text">
+                of patients reported pain and <span
+                  class="hpp-multisystemic__study--text-bold hpp-multisystemic__study--text-red"
+                  >76%</span
+                > said <span class="hpp-multisystemic__study--text-bold"
+                  >bone pain</span
+                > was severe enough to limit activity<sup>7†</sup>
+              </p>
+            </div>
+          </article>
+
+          <p class="wrapper hpp-multisystemic__condition">
+            Data collected from patients and caregivers via 2 survey instruments
+            (web-based and phone interviews) to evaluate patient-reported
+            symptomatology and burden of disease of hypophosphatasia (N=125).
+            The majority of patients in this study (67%) reported pediatric
+            onset of hypophosphatasia symptoms. Of patients reporting
+            adult-onset hypophosphatasia (27%), 50% (17/34) reported history or
+            surgeries, suggestive of pediatric onset of symptoms.7 Data from the
+            Global HPP Registry, an observational, longitudinal, multinational,
+            long-term study of patients ≥18 years with a confirmed diagnosis of
+            hypophosphatasia using physician-entered medical record data from
+            consenting patients (N=304). Of the 304 adults, 33% (~100 patients)
+            had pediatric-onset HPP.8
+          </p>
+
+          <article class="wrapper hpp-multisystemic__impact">
+            <h3 class="hpp-multisystemic__impact--title">
+              The multisystemic impact of hypophosphatasia
+            </h3>
+          </article>
+        </div>
+      </section>
+
+      <!-- Tab children content -->
+      <section
+        id="multisystemic2"
+        role="tabpanel"
+        aria-labelledby="tab2"
+        aria-hidden="true"
+        tabindex="-1"
+        hidden
+      >
+        <div class="hpp-multisystemic__bg-paper">
+          <article class="wrapper hpp-multisystemic__definition">
+            <div class="hpp-multisystemic__col">
+              <p class="hpp-multisystemic__definition--text">
+                <span class="hpp-multisystemic__definition--text-red"
+                  >Children and adolescents with hypophosphatasia</span
+                > can experience a wide variety of multisystemic manifestations and
+                behavioral challenges that impact their quality of life (QoL).6
+              </p>
+              <span class="hpp-multisystemic__definition--condition">
+                Clinically meaningful impairment in children’s pain, sleep, and
+                mood was reported in one study using parent ratings.*
+              </span>
+
+              <h3 class="hpp-multisystemic__definition--title">
+                A study of patients/caregivers of children with hypophosphatasia
+                showed:
+              </h3>
+            </div>
+            <div class="hpp-multisystemic__col">
+              <div class="hpp-multisystemic__definition--media">
+                <picture>
+                  <img
+                    class="hpp-multisystemic__definition--photo-bg"
+                    src="/assets/images/hpp-profile/patient-photo--bg.png"
+                    alt="Patient adults"
+                  />
+                </picture>
+
+                <picture>
+                  <img
+                    class="hpp-multisystemic__definition--photo"
+                    src="/assets/images/hpp-profile/patient-photo-adolescents.png"
+                    alt="Patient adults"
+                  />
+                </picture>
+              </div>
+            </div>
+          </article>
+
+          <article class="wrapper hpp-multisystemic__studies">
+            <div class="hpp-multisystemic__study">
+              <h2 class="hpp-multisystemic__study--percentage">50%</h2>
+              <p class="hpp-multisystemic__study--text">
+                (15/30) of children had clinically meaningful impairment in
+                overall QoL6
+              </p>
+            </div>
+
+            <div class="hpp-multisystemic__study">
+              <h2 class="hpp-multisystemic__study--percentage">57%</h2>
+              <p class="hpp-multisystemic__study--text">
+                (17/30) of the children were classified as poor sleepers6
+              </p>
+            </div>
+
+            <div class="hpp-multisystemic__study">
+              <h2 class="hpp-multisystemic__study--percentage">29%</h2>
+              <p class="hpp-multisystemic__study--text">
+                (7/24) of school-aged children experienced higher than average
+                levels of pain that interfered with daily activities6*
+              </p>
+            </div>
+          </article>
+
+          <p class="wrapper hpp-multisystemic__condition">
+            Data collected from patients and caregivers via 2 survey instruments
+            (web-based and phone interviews) to evaluate patient-reported
+            symptomatology and burden of disease of hypophosphatasia (N=125).
+            The majority of patients in this study (67%) reported pediatric
+            onset of hypophosphatasia symptoms. Of patients reporting
+            adult-onset hypophosphatasia (27%), 50% (17/34) reported history or
+            surgeries, suggestive of pediatric onset of symptoms.7 Data from the
+            Global HPP Registry, an observational, longitudinal, multinational,
+            long-term study of patients ≥18 years with a confirmed diagnosis of
+            hypophosphatasia using physician-entered medical record data from
+            consenting patients (N=304). Of the 304 adults, 33% (~100 patients)
+            had pediatric-onset HPP.8
+          </p>
+        </div>
+      </section>
+
+      <!-- Tab neonates/infants content -->
+      <section
+        id="multisystemic3"
+        role="tabpanel"
+        aria-labelledby="tab3"
+        aria-hidden="true"
+        tabindex="-1"
+        hidden
+      >
+        <div class="hpp-multisystemic__bg-paper">
+          <article class="wrapper hpp-multisystemic__definition">
+            <div class="hpp-multisystemic__col">
+              <p class="hpp-multisystemic__definition--text">
+                <span class="hpp-multisystemic__definition--text-red"
+                  >Neonates and infants with hypophosphatasia</span
+                > have a high risk of mortality and failure to thrive, making early
+                and accurate diagnosis critical.1,6-8
+              </p>
+
+              <h3 class="hpp-multisystemic__definition--title">
+                A study of patients/caregivers of infants with hypophosphatasia
+                showed:
+              </h3>
+            </div>
+            <div class="hpp-multisystemic__col">
+              <div class="hpp-multisystemic__definition--media">
+                <picture>
+                  <img
+                    class="hpp-multisystemic__definition--photo-bg"
+                    src="/assets/images/hpp-profile/patient-photo--bg.png"
+                    alt="Patient adults"
+                  />
+                </picture>
+
+                <picture>
+                  <img
+                    class="hpp-multisystemic__definition--photo"
+                    src="/assets/images/hpp-profile/patient-photo-infants.png"
+                    alt="Patient adults"
+                  />
+                </picture>
+              </div>
+            </div>
+          </article>
+
+          <article class="wrapper hpp-multisystemic__studies">
+            <div class="hpp-multisystemic__study">
+              <h2 class="hpp-multisystemic__study--percentage">73%</h2>
+              <p class="hpp-multisystemic__study--text">
+                of untreated cases of neonatal and infantile hypophosphatasia
+                were fatal before the age of 5. 58% of cases were fatal by 1
+                year of age*
+              </p>
+            </div>
+
+            <div class="hpp-multisystemic__study">
+              <h2 class="hpp-multisystemic__study--percentage">64%</h2>
+              <p class="hpp-multisystemic__study--text">
+                required respiratory support, most commonly invasive
+                ventilation. 95% of cases requiring invasive ventilation were
+                fatal*
+              </p>
+            </div>
+          </article>
+
+          <p class="wrapper hpp-multisystemic__condition">
+            *Data from a multinational, noninterventional, retrospective chart
+            review study designed to understand the natural history of 48
+            patients ≤5 years of age with severe perinatal- and infantile-onset
+            hypophosphatasia.
+          </p>
+        </div>
+      </section>
+    </article>
   </section>
 
   <!-- Prevalence of HPP -->
