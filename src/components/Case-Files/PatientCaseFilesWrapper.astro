@@ -1,0 +1,90 @@
+---
+type Props = {};
+const {} = Astro.props;
+---
+
+<div class="patients mobile--version">
+  <div class="wrapper">
+    <h3 class="patients__heading">Patient case file</h3>
+    <form class="form">
+      <div class="form__select">
+        <select name="patient" id="patient-dropdown"></select>
+      </div>
+    </form>
+    <div id="patient__case_files" class="patient__case_files">
+      <slot />
+    </div>
+    <ul class="patients_dots_list"></ul>
+    <p class="profiles__text">
+      Profiles are based on hypothetical patient cases.
+    </p>
+  </div>
+</div>
+
+<script>
+  const patientCaseFiles = document.querySelectorAll(".patient__case");
+  const patientSelect = document.querySelector(
+    "#patient-dropdown"
+  ) as HTMLInputElement;
+  const patientDotList = document.querySelector(
+    ".patients.mobile--version .patients_dots_list"
+  );
+  if (patientCaseFiles && patientCaseFiles.length > 0) {
+    patientCaseFiles.forEach((patient) => {
+      const patientName = patient.querySelector(".patient__name").innerHTML;
+      let patientAge = patient.querySelector(".patient__age").innerHTML;
+      if (patientAge.includes("mo")) {
+        patientAge = patientAge.replace("mo", "months");
+      }
+      const patientID = patient.id.replace("patient-id-", "");
+      const selected = Number(patientID) === 1 ? "selected" : "";
+      const activeDot = selected ? "active" : "";
+      patientSelect.innerHTML += `<option ${selected} value="${patientID}">${patientName}, ${patientAge}</option>`;
+      patientDotList.innerHTML += `<li class="patients_dots_list__item ${activeDot}">
+        <button class="patients_dots_list__button button" type="button" data-patient="${patientID}"></button>
+        </li>`;
+    });
+  }
+
+  patientSelect?.addEventListener("change", (e: Event) => {
+    patientCaseFiles.forEach((patientCaseFile) => {
+      patientCaseFile?.classList.remove("active");
+    });
+    const selectedValue = (e.target as HTMLInputElement).value;
+    const patientCaseFile = document.querySelector(
+      `#patient-id-${selectedValue}`
+    );
+    patientCaseFile?.classList.add("active");
+    patientDotList?.querySelectorAll("li").forEach((dot) => {
+      dot?.classList.remove("active");
+    });
+    patientDotList
+      ?.querySelector(`[data-patient="${selectedValue}"]`)
+      ?.parentElement?.classList.add("active");
+  });
+
+  const patientDots = document.querySelectorAll(".patients_dots_list__button");
+  patientDots?.forEach((dot) => {
+    dot.addEventListener("click", (e: Event) => {
+      patientDots.forEach((dot) => {
+        dot?.parentElement?.classList.remove("active");
+      });
+      dot?.parentElement?.classList.add("active");
+      const patientID = (e.target as HTMLInputElement).dataset.patient;
+      patientSelect.value = patientID;
+      patientSelect.dispatchEvent(new Event("change"));
+      scrollToPatient();
+    });
+  });
+
+  function scrollToPatient() {
+    const patientsSection = document.querySelector(".patients");
+    if (patientsSection) {
+      patientsSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+      });
+    }
+  }
+</script>

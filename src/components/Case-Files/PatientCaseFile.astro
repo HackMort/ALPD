@@ -1,0 +1,73 @@
+---
+import Accordion from "../Accordion.astro";
+type Props = {
+  id: string;
+  name: string;
+  age: number | string;
+  gender: string;
+  description: string;
+  photoMobile: string;
+  photoDesktop: string;
+};
+const { id, name, age, gender, description, photoMobile, photoDesktop } =
+  Astro.props;
+const activeClass = Number(id) === 1 ? "active" : "";
+// Check if age is a string and if it is, check for the word "months"
+let ageString = "";
+if (age && typeof age === "string" && age.includes("months")) {
+  ageString = age.replace("months", "mo");
+} else {
+  ageString = age.toString();
+}
+---
+
+<div class="patients__case_file_item">
+  <div class={`patient__case ${activeClass}`} id={`patient-id-${id}`}>
+    <h4 class="patient__case_description">{description}</h4>
+    <div class="patient__case_grid">
+      <div class="grid_header">
+        <picture>
+          <source media="(min-width: 1024px)" srcset={photoDesktop} />
+          <img class="profile__pic" src={photoMobile} />
+        </picture>
+        <img
+          class="profile__finger_print"
+          src="/assets/images/case-files/profile-finger-print-image.png"
+        />
+      </div>
+      <div class="grid_info">
+        <div class="grid_info_name">
+          <h6 class="patient__name" set:html={name} />
+        </div>
+        <div class="grid_info_age">
+          <h4 class="patient__age">{ageString}</h4>
+        </div>
+        <div class="grid_info_gender">
+          <h4 class="patient__gender">{gender}</h4>
+        </div>
+      </div>
+      <div class="grid__accordions">
+        <div class="accordion">
+          <Accordion header="medical history" id={`acc-medical-${id}`}>
+            <slot name="medical" />
+          </Accordion>
+          <Accordion header="family History" id={`acc-family-${id}`}>
+            <slot name="family" />
+          </Accordion>
+          <Accordion header="presenting symptoms" id={`acc-symptoms-${id}`}>
+            <slot name="symptoms" />
+          </Accordion>
+          <Accordion header="current medications" id={`acc-medications-${id}`}>
+            <slot name="medications" />
+          </Accordion>
+          <Accordion header="Lab results/Imaging" id={`acc-results-${id}`}>
+            <slot name="results" />
+          </Accordion>
+          <Accordion header="physician notes" id={`acc-notes-${id}`}>
+            <slot name="notes" />
+          </Accordion>
+        </div>
+      </div>
+    </div>
+  </div><!-- case-file -->
+</div>

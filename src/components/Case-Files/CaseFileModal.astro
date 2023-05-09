@@ -1,0 +1,710 @@
+---
+import PatientCaseFile from "./PatientCaseFile.astro";
+import PinchToZoom from "../Pinch-to-zoom.astro";
+import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
+---
+
+<div id="case-files-modal-template" style="display: none;">
+  <div class="case__files_modal" id="case-files-modal">
+    <button data-fancybox-close class="case__files_modal_close-button">×</button
+    >
+    <div class="case__files_modal_wrapper">
+      <PatientCaseFilesWrapper>
+        <PatientCaseFile
+          id="1"
+          name="Nathan"
+          age={57}
+          gender="M"
+          description="A 57-year-old male has gone undiagnosed for 30+ years. Does Nathan’s file remind you of any of your current patients?"
+          photoMobile="/assets/images/case-files/nathan/photo-nathan-mobile.png"
+          photoDesktop="/assets/images/case-files/nathan/photo-nathan-desktop.png"
+        >
+          <Fragment slot="medical">
+            <ul>
+              <li class="item">
+                2 nontraumatic fractures: Age 13, femur; age 16, metatarsals
+              </li>
+              <li class="item">
+                Reportsof slow healing fractures, even at young age
+              </li>
+              <li class="item">Age 50: Kidney stones</li>
+              <li class="item">
+                History of poor dentition and weak/loose teeth
+              </li>
+              <li class="item">
+                Recent diagnosis ofpseudogout/CPPD/chondrocalcinosis
+              </li>
+            </ul>
+          </Fragment>
+          <Fragment slot="family">
+            <ul>
+              <li class="item">Mother: Osteoporosis</li>
+              <li class="item">
+                Father: Hypertension, myocardial infarction at 67
+              </li>
+            </ul>
+          </Fragment>
+          <Fragment slot="symptoms">
+            <ul>
+              <li class="item">Bone pain in back and thighs</li>
+              <li class="item">Chronic fatigue</li>
+              <li class="item">Current nontraumatic hairline fracture</li>
+              <li class="item">Reports of anxiety and depressed mood</li>
+            </ul>
+          </Fragment>
+          <Fragment slot="medications">
+            <ul>
+              <li class="item">Calcium and vitamin D supplement daily</li>
+              <li class="item">Reports of daily NSAID use</li>
+            </ul>
+          </Fragment>
+          <Fragment slot="results">
+            <h4 class="results__title">CMP test results from:</h4>
+            <h5>Today</h5>
+            <div class="acc-table">
+              <div class="first-column">
+                <h3>TEST</h3>
+                <p>Calcium, mg/dL</p>
+                <p>Protein, g/dL</p>
+                <p>Albumin, g/dL</p>
+                <p>Alkaline phosphatase, IU/L</p>
+              </div>
+
+              <div class="second-column">
+                <h3>RESULT</h3>
+                <p>10.6</p>
+                <p>6.5</p>
+                <p>4.6</p>
+                <p>63</p>
+              </div>
+
+              <div class="second-column last-child">
+                <h3>FLAG</h3>
+                <p>High</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+              </div>
+            </div>
+            <h5>6 months ago</h5>
+            <div class="acc-table">
+              <div class="first-column">
+                <h3>TEST</h3>
+                <p>Calcium, mg/dL</p>
+                <p>Protein, g/dL</p>
+                <p>Albumin, g/dL</p>
+                <p>Alkaline phosphatase, IU/L</p>
+              </div>
+              <div class="second-column">
+                <h3>RESULT</h3>
+                <p>9.8</p>
+                <p>6.9</p>
+                <p>3.9</p>
+                <p>35</p>
+              </div>
+              <div class="second-column last-child">
+                <h3>FLAG</h3>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+              </div>
+            </div>
+            <h5>1 year ago</h5>
+            <div class="acc-table">
+              <div class="first-column">
+                <h3>TEST</h3>
+                <p>Calcium, mg/dL</p>
+                <p>Protein, g/dL</p>
+                <p>Albumin, g/dL</p>
+                <p>Alkaline phosphatase, IU/L</p>
+              </div>
+              <div class="second-column">
+                <h3>RESULT</h3>
+                <p>10.2</p>
+                <p>7.1</p>
+                <p>4.0</p>
+                <p>32</p>
+              </div>
+              <div class="second-column last-child">
+                <h3>FLAG</h3>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+              </div>
+            </div>
+            <ul>
+              <li class="item">
+                High vitamin B6 level shown at test 6 months ago
+              </li>
+              <li class="item">
+                ALPL genetic test: Variant of uncertain significance (VUS)
+                identified
+              </li>
+            </ul>
+            <PinchToZoom id="pt-1-image-1" useDefaultButton={false}>
+              <div class="rad__thumbnail" style="max-width: 95px;">
+                <picture>
+                  <button
+                    data-panzoom-action="zoomToFull"
+                    data-content-id="pt-1-image-1"
+                    class="button button--pinch-to-zoom"></button>
+                  <source
+                    srcset="/assets/images/case-files/nathan/nathan-rad-1-desktop.png"
+                    media="(min-width: 768px)"
+                  />
+                  <img
+                    src="/assets/images/case-files/nathan/nathan-rad-1-mobile.png"
+                    alt=""
+                  />
+                </picture>
+                <div class="patient">
+                  <p>Femur fracture age 13</p>
+                </div>
+              </div>
+            </PinchToZoom>
+            <PinchToZoom id="pt-1-image-2" useDefaultButton={false}>
+              <div class="rad__thumbnail" style="max-width: 162px;">
+                <picture>
+                  <button
+                    data-panzoom-action="zoomToFull"
+                    data-content-id="pt-1-image-2"
+                    class="button button--pinch-to-zoom"></button>
+                  <source
+                    srcset="/assets/images/case-files/nathan/nathan-rad-2-desktop.png"
+                    media="(min-width: 768px)"
+                  />
+                  <img
+                    src="/assets/images/case-files/nathan/nathan-rad-2-mobile.png"
+                    alt=""
+                  />
+                </picture>
+                <div class="patient">
+                  <p>Metatarsal fracture age 16</p>
+                </div>
+              </div>
+            </PinchToZoom>
+            <PinchToZoom id="pt-1-image-3" useDefaultButton={false}>
+              <div class="rad__thumbnail" style="max-width: 138px;">
+                <picture>
+                  <button
+                    data-panzoom-action="zoomToFull"
+                    data-content-id="pt-1-image-3"
+                    class="button button--pinch-to-zoom"></button>
+                  <source
+                    srcset="/assets/images/case-files/nathan/nathan-rad-3-desktop.png"
+                    media="(min-width: 768px)"
+                  />
+                  <img
+                    src="/assets/images/case-files/nathan/nathan-rad-3-mobile.png"
+                    alt=""
+                  />
+                </picture>
+                <div class="patient">
+                  <p>Tibial fracture age 57</p>
+                </div>
+              </div>
+            </PinchToZoom>
+          </Fragment>
+          <Fragment slot="notes">
+            <ul>
+              <li class="item">N/A</li>
+            </ul>
+          </Fragment>
+        </PatientCaseFile>
+        <PatientCaseFile
+          id="2"
+          name="Anna"
+          age={35}
+          gender="F"
+          description="A 35-year-old female born prematurely. Does Anna’s file remind you of any of your current patients?"
+          photoMobile="/assets/images/case-files/anna/photo-anna-mobile.png"
+          photoDesktop="/assets/images/case-files/anna/photo-anna-desktop.png"
+        >
+          <Fragment slot="medical">
+            <ul>
+              <li class="item">Born prematurely at 32 weeks</li>
+              <li class="item">History of developmental delays</li>
+              <li class="item">Early loss of baby teeth with root intact</li>
+              <li class="item">Delayed eruption of permanent teeth</li>
+              <li class="item">General short stature</li>
+              <li class="item">History of lower extremity weakness</li>
+            </ul>
+          </Fragment>
+          <Fragment slot="family">
+            <ul>
+              <li class="item">Mother of <strong>Hannah</strong></li>
+              <li class="item">
+                Mother: Osteoporosis diagnosis in her early 50s
+              </li>
+            </ul>
+          </Fragment>
+          <Fragment slot="symptoms">
+            <ul>
+              <li class="item">Chronic bone and joint pain, myalgia</li>
+              <li class="item">Morning stiffness</li>
+              <li class="item">
+                Symptoms worse in the morning and in cold weather
+              </li>
+              <li class="item">
+                Reports of frequent headaches and depressed mood
+              </li>
+            </ul>
+          </Fragment>
+          <Fragment slot="medications">
+            <ul>
+              <li class="item">Daily NSAID taken to address chronic pain</li>
+              <li class="item">
+                Hydrocodone taken as needed for severe pain episodes
+              </li>
+            </ul>
+          </Fragment>
+          <Fragment slot="results">
+            <h4 class="results__title">CMP test results from:</h4>
+            <h5>Today</h5>
+            <div class="acc-table">
+              <div class="first-column">
+                <h3>TEST</h3>
+                <p>Calcium, mg/dL</p>
+                <p>Protein, g/dL</p>
+                <p>Albumin, g/dL</p>
+                <p>Alkaline phosphatase, IU/L</p>
+              </div>
+
+              <div class="second-column">
+                <h3>RESULT</h3>
+                <p>9.9</p>
+                <p>7.1</p>
+                <p>4.1</p>
+                <p>34</p>
+              </div>
+
+              <div class="second-column last-child">
+                <h3>FLAG</h3>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+              </div>
+            </div>
+            <h5>3 months ago</h5>
+            <div class="acc-table">
+              <div class="first-column">
+                <h3>TEST</h3>
+                <p>Calcium, mg/dL</p>
+                <p>Protein, g/dL</p>
+                <p>Albumin, g/dL</p>
+                <p>Alkaline phosphatase, IU/L</p>
+              </div>
+              <div class="second-column">
+                <h3>RESULT</h3>
+                <p>9.8</p>
+                <p>7.5</p>
+                <p>4.2</p>
+                <p>19</p>
+              </div>
+              <div class="second-column last-child">
+                <h3>FLAG</h3>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+              </div>
+            </div>
+            <ul>
+              <li class="item">
+                ALPL genetic test: Autosomal recessive inheritance
+              </li>
+            </ul>
+            <PinchToZoom id="pt-2-image-1">
+              <div class="rad__thumbnail" style="max-width: 286px;">
+                <picture>
+                  <source
+                    srcset="/assets/images/case-files/anna/anna-rad-1-desktop.png"
+                    media="(min-width: 768px)"
+                  />
+                  <img
+                    src="/assets/images/case-files/anna/anna-rad-1-mobile.png"
+                    alt=""
+                  />
+                </picture>
+                <div class="patient">
+                  <p>Delayed eruption of permanent teeth</p>
+                </div>
+              </div>
+            </PinchToZoom>
+            <PinchToZoom id="pt-2-image-2">
+              <div class="rad__thumbnail" style="max-width: 195px;">
+                <picture>
+                  <source
+                    srcset="/assets/images/case-files/anna/anna-rad-2-desktop.png"
+                    media="(min-width: 768px)"
+                  />
+                  <img
+                    src="/assets/images/case-files/anna/anna-rad-2-mobile.png"
+                    alt=""
+                  />
+                </picture>
+                <div class="patient">
+                  <p>Early loss of baby teeth with root intact</p>
+                </div>
+              </div>
+            </PinchToZoom>
+          </Fragment>
+          <Fragment slot="notes">
+            <ul>
+              <li class="item">
+                Patient has an executed “pain contract” with physician's office
+                due to history of opioid use
+              </li>
+            </ul>
+          </Fragment>
+        </PatientCaseFile>
+        <PatientCaseFile
+          id="3"
+          name="Hannah"
+          age={7}
+          gender="F"
+          description="A 7-year-old female with ALP levels of 138. Does Hannah’s file remind you of any of your current patients?"
+          photoMobile="/assets/images/case-files/hannah/photo-hannah-mobile.png"
+          photoDesktop="/assets/images/case-files/hannah/photo-hannah-desktop.png"
+        >
+          <Fragment slot="medical">
+            <ul>
+              <li class="item">Age 4: History of nontraumatic tooth loss</li>
+              <li class="item">Delay in walking milestone</li>
+              <li class="item">
+                Age 5: Bout with streptococcal pharyngitis, treated with
+                antibiotics
+              </li>
+            </ul>
+          </Fragment>
+          <Fragment slot="family">
+            <ul>
+              <li class="item">
+                Mother: <strong>Anna</strong>
+                <ul>
+                  <li class="item">
+                    History of early tooth loss, delayed eruption of permanent
+                    teeth, and chronic pain
+                  </li>
+                </ul>
+              </li>
+              <li class="item">
+                Father: No significant medical history to report
+              </li>
+            </ul>
+            <PinchToZoom id="pt-3-image-1">
+              <picture>
+                <source
+                  srcset="/assets/images/case-files/hannah/hanna-rad-1-desktop.png"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  src="/assets/images/case-files/hannah/hanna-rad-1-mobile.png"
+                  alt=""
+                />
+              </picture>
+              <div class="patient">
+                <p>Femur fracture age 13</p>
+              </div>
+            </PinchToZoom>
+          </Fragment>
+          <Fragment slot="symptoms">
+            <ul>
+              <li class="item">Short stature</li>
+              <li class="item">Mild knock knees</li>
+              <li class="item">Tired for past 3 months</li>
+              <li class="item">
+                Struggling to keep up with peers in sports/outdoor activities
+              </li>
+              <li class="item">Impaired gait/mobility</li>
+              <li class="item">Difficulty sleeping</li>
+            </ul>
+          </Fragment>
+          <Fragment slot="medications">
+            <ul>
+              <li class="item">None</li>
+            </ul>
+          </Fragment>
+          <Fragment slot="results">
+            <h4 class="results__title">CMP test results from:</h4>
+            <h5>Today</h5>
+            <div class="acc-table">
+              <div class="first-column">
+                <h3>TEST</h3>
+                <p>Calcium, mg/dL</p>
+                <p>Protein, g/dL</p>
+                <p>Albumin, g/dL</p>
+                <p>Alkaline phosphatase, IU/L</p>
+              </div>
+
+              <div class="second-column">
+                <h3>RESULT</h3>
+                <p>9.3</p>
+                <p>7.8</p>
+                <p>4.2</p>
+                <p>138</p>
+              </div>
+
+              <div class="second-column last-child">
+                <h3>FLAG</h3>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+              </div>
+            </div>
+            <h5>1 year ago</h5>
+            <div class="acc-table">
+              <div class="first-column">
+                <h3>TEST</h3>
+                <p>Calcium, mg/dL</p>
+                <p>Protein, g/dL</p>
+                <p>Albumin, g/dL</p>
+                <p>Alkaline phosphatase, IU/L</p>
+              </div>
+              <div class="second-column">
+                <h3>RESULT</h3>
+                <p>9.1</p>
+                <p>8.1</p>
+                <p>4.2</p>
+                <p>130</p>
+              </div>
+              <div class="second-column last-child">
+                <h3>FLAG</h3>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+              </div>
+            </div>
+            <PinchToZoom id="pt-3-image-2">
+              <picture>
+                <source
+                  srcset="/assets/images/case-files/hannah/hanna-rad-1-desktop.png"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  src="/assets/images/case-files/hannah/hanna-rad-1-mobile.png"
+                  alt=""
+                />
+              </picture>
+              <div class="patient">
+                <p>Femur fracture age 13</p>
+              </div>
+            </PinchToZoom>
+            <PinchToZoom id="pt-3-image-3">
+              <picture>
+                <source
+                  srcset="/assets/images/case-files/hannah/hanna-rad-2-desktop.png"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  src="/assets/images/case-files/hannah/hanna-rad-2-mobile.png"
+                  alt=""
+                />
+              </picture>
+              <div class="patient">
+                <p>Metatarsal fracture age 16</p>
+              </div>
+            </PinchToZoom>
+            <PinchToZoom id="pt-3-image-3">
+              <picture>
+                <source
+                  srcset="/assets/images/case-files/hanna/hanna-rad-1-desktop.png"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  src="/assets/images/case-files/hanna/hanna-rad-3-mobile.png"
+                  alt=""
+                />
+              </picture>
+              <div class="patient">
+                <p>Tibial fracture age 57</p>
+              </div>
+            </PinchToZoom>
+          </Fragment>
+          <Fragment slot="notes">
+            <ul>
+              <li class="item">N/A</li>
+            </ul>
+          </Fragment>
+        </PatientCaseFile>
+        <PatientCaseFile
+          id="4"
+          name="Sarah"
+          age="7 months"
+          gender="F"
+          description="A 7-month-old female with vitamin B-responsive seizures at birth. Does Sarah’s file remind you of any of your current patients?"
+          photoMobile="/assets/images/case-files/sarah/photo-sarah-mobile.png"
+          photoDesktop="/assets/images/case-files/sarah/photo-sarah-desktop.png"
+        >
+          <Fragment slot="medical">
+            <ul>
+              <li class="item">Vitamin B-responsive seizures at birth</li>
+              <li class="item">
+                History of craniosynostosis--corrective measures taken at 3
+                months
+              </li>
+            </ul>
+          </Fragment>
+          <Fragment slot="family">
+            <ul>
+              <li class="item">Mother: No significant medical history</li>
+              <li class="item">Father: No significant medical history</li>
+              <li class="item">
+                Siblings: 2 older siblings with no remarkable medical history
+                (ages 4 and 10 years)
+              </li>
+            </ul>
+          </Fragment>
+          <Fragment slot="symptoms">
+            <ul>
+              <li class="item">Low weight and height</li>
+              <li class="item">Decreased head size</li>
+              <li class="item">Diagnosis of nutritional rickets</li>
+              <li class="item">Thoracic deformity</li>
+            </ul>
+          </Fragment>
+          <Fragment slot="medications">
+            <ul>
+              <li class="item">Vitamin D supplement</li>
+            </ul>
+          </Fragment>
+          <Fragment slot="results">
+            <h4 class="results__title">CMP test results from:</h4>
+            <h5>Today</h5>
+            <div class="acc-table">
+              <div class="first-column">
+                <h3>TEST</h3>
+                <p>Calcium, mg/dL</p>
+                <p>Protein, g/dL</p>
+                <p>Albumin, g/dL</p>
+                <p>Alkaline phosphatase, IU/L</p>
+              </div>
+              <div class="second-column">
+                <h3>RESULT</h3>
+                <p>10</p>
+                <p>71</p>
+                <p>3.9</p>
+                <p>93</p>
+              </div>
+              <div class="second-column last-child">
+                <h3>FLAG</h3>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+              </div>
+            </div>
+            <h5>6 months ago</h5>
+            <div class="acc-table">
+              <div class="first-column">
+                <h3>TEST</h3>
+                <p>Calcium, mg/dL</p>
+                <p>Protein, g/dL</p>
+                <p>Albumin, g/dL</p>
+                <p>Alkaline phosphatase, IU/L</p>
+              </div>
+              <div class="second-column">
+                <h3>RESULT</h3>
+                <p>10.6</p>
+                <p>7.5</p>
+                <p>4.2</p>
+                <p>87</p>
+              </div>
+              <div class="second-column last-child">
+                <h3>FLAG</h3>
+                <p>High</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+              </div>
+            </div>
+            <ul>
+              <li class="item">
+                High vitamin B6 level shown at test 6 months ago
+              </li>
+              <li class="item">
+                ALPL genetic test: Autosomal recessive inheritance
+                <ul>
+                  <li class="item">
+                    Parental genetic testing reveals single gene variant in
+                    mother and father
+                  </li>
+                  <li class="item">
+                    Father's genetic variant reported as variant of uncertain
+                    significance (VUS)
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <PinchToZoom id="pt-4-image-1">
+              <picture>
+                <source
+                  srcset="/assets/images/case-files/sarah/sarah-asset-1-desktop.png"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  src="/assets/images/case-files/sarah/sarah-asset-1-mobile.png"
+                  alt=""
+                />
+              </picture>
+            </PinchToZoom>
+          </Fragment>
+          <Fragment slot="notes">
+            <ul>
+              <li class="item">N/A</li>
+            </ul>
+          </Fragment>
+        </PatientCaseFile>
+      </PatientCaseFilesWrapper>
+    </div>
+  </div>
+</div>
+<script>
+  /**
+   * #################################################################################################
+   * CaseFileModal
+   * #################################################################################################
+   */
+
+  import { Fancybox } from "@fancyapps/ui";
+
+  class casFileModal {
+    caseModal: Fancybox;
+
+    constructor() {
+      this.caseModal = undefined;
+    }
+
+    open() {
+      this.caseModal = new Fancybox([{ src: "case-files-modal" }], {
+        autoFocus: false,
+        defaultType: "inline",
+        placeFocusBack: false,
+        trapFocus: false,
+        closeButton: false,
+        height: "auto",
+      });
+    }
+
+    close() {
+      this.caseModal.close();
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const openCaseFilesModal = new casFileModal();
+    const buttons = document.querySelectorAll(
+      "button.case-files-modal-trigger"
+    );
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        openCaseFilesModal.open();
+      });
+    });
+  });
+</script>

@@ -15,20 +15,18 @@ export function Accordions () {
   const accordion = document.querySelector('.accordion')
   if (accordion) {
     const accordionItems = document.querySelectorAll('.accordion__item')
-    accordionItems.forEach((accordionItem) => {
-      accordionItem.addEventListener('click', (e) => {
-      
-        const expanded = accordionItem.getAttribute('aria-expanded') === 'true' || false
-        accordionItem.setAttribute('aria-expanded', !expanded)
-        
-      
- 
-        // close all other accordion items... maybe?
-         accordionItems.forEach((accordionItem) => {
-           if (accordionItem !== e.currentTarget) {
-             accordionItem.setAttribute('aria-expanded', false)
-           }
-         })
+    accordionItems.forEach((item) => {
+      const accTrigger = item.querySelector('.accordion__item_title')
+      accTrigger.addEventListener('click', (e) => {
+        e.preventDefault()
+        e.stopPropagation()
+        const expanded = item.getAttribute('aria-expanded') === 'true' || false
+        item.setAttribute('aria-expanded', !expanded)
+        accordionItems.forEach((current) => {
+          if (current !== item) {
+            current.setAttribute('aria-expanded', false)
+          }
+        })
       })
     })
   }
