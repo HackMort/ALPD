@@ -1265,6 +1265,10 @@
                     @media screen and (min-width: 1024px) {
                         display: flex;
                     }
+
+                    @media screen and (min-width: 1600px) {
+                        max-width: var(--wrapper-max-width);
+                    }
                 }
 
                 .alp-reference-range__identify-icon {
@@ -1364,7 +1368,7 @@
                     top: -8%;
                     transform: translateX(-50%) rotate(8deg);
 
-                    @media screen and (min-width: 1024px) {
+                    @media screen and (min-width: 768px) {
                         top: -20%;
                     }
                 }
@@ -1375,10 +1379,10 @@
                 }
             }
 
-            @media screen and (min-width: 768px) {
-                max-width: 37.875rem;
-                margin: auto;
-            }
+            // @media screen and (min-width: 768px) {
+            //     max-width: 37.875rem;
+            //     margin: auto;
+            // }
         }
 
         .alpd-reference-range__footext-content {
@@ -1397,14 +1401,22 @@
                 }
             }
 
+            .footext-1 {
+                max-width: 37rem;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
             .footext-2 {
                 margin-bottom: 5rem;
+                
+                margin-bottom: 8rem;
+                max-width: 24.5rem;
+                margin-left: auto;
+                margin-right: auto;
 
-                @media screen and (min-width: 1024px) {
-                    margin-bottom: 8rem;
-                    max-width: 24.5rem;
-                    margin-left: auto;
-                    margin-right: auto;
+                @media screen and (min-width: 768px) {
+                    margin-bottom: 9rem;
                 }
             }
 
@@ -1412,6 +1424,18 @@
             .footext-4 {
                 font-size: .875rem;
                 line-height: 18.2px;
+            }
+
+            .footext-3 {
+                max-width: 37rem;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .footext-4 {
+                max-width: 25rem;
+                margin-left: auto;
+                margin-right: auto;
             }
         }
     }
