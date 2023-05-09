@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import CTA from "../components/CTA.astro";
 import InternalNavigation from "../components/InternalNavigation.astro";
+import CaseFileModal from "../components/Case-Files/CaseFileModal.astro";
 
 const internalNavLinks = [
   { href: "hpp-definition", label: "HPP Definition", active: true },
@@ -139,6 +140,11 @@ const internalNavLinks = [
                     alt="Patient adults"
                   />
                 </picture>
+
+                <button
+                  class="button button--custom-bg case-files-modal-trigger"
+                  >View Patient case files</button
+                >
               </div>
             </div>
           </article>
@@ -261,6 +267,11 @@ const internalNavLinks = [
                     alt="Patient adults"
                   />
                 </picture>
+
+                <button
+                  class="button button--custom-bg case-files-modal-trigger"
+                  >View Patient case files</button
+                >
               </div>
             </div>
           </article>
@@ -348,6 +359,11 @@ const internalNavLinks = [
                     alt="Patient adults"
                   />
                 </picture>
+
+                <button
+                  class="button button--custom-bg case-files-modal-trigger"
+                  >View Patient case files</button
+                >
               </div>
             </div>
           </article>
@@ -381,6 +397,8 @@ const internalNavLinks = [
         </div>
       </section>
     </article>
+
+    <CaseFileModal />
   </section>
 
   <!-- Prevalence of HPP -->
