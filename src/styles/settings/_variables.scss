@@ -21,6 +21,7 @@ $colors: (
     "buff": #F3CC86,
     "cararra": #F8F8F5,
     "brown": #473831,
+    "smoky-black": rgb(14 14 14 / 40%)
 );
 
 $color-folder: map-get($colors, "folder");
@@ -41,3 +42,4 @@ $color-buff: map-get($colors, "buff");
 $color-cararra: map-get($colors, "cararra");
 $color-brown: map-get($colors, "brown");
 $color-gold: map-get($colors, "gold");
+$color-smoky-black: map-get($colors, "smoky-black");
