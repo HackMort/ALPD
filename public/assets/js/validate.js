@@ -11,7 +11,7 @@
 
 function cookieValidation () {
   const accessCookie = document.cookie.split(';').filter((item) => item.trim().startsWith('accessCookie=')).pop()
-  if (!accessCookie && accessCookie !== 'accessCookie=customPSW' && window.location.pathname !== '/validate/') {
+  if (!accessCookie && accessCookie !== 'accessCookie=hpp2023' && window.location.pathname !== '/validate/') {
     window.location.href = '/validate/'
   }
 }
@@ -22,7 +22,7 @@ function cookieFormValidation () {
     form.addEventListener('submit', (e) => {
       e.preventDefault()
       const accessCode = form.querySelector('input[name="access-code"]').value
-      if (accessCode === 'customPSW') {
+      if (accessCode === 'hpp2023') {
         document.cookie = `accessCookie=${accessCode};max-age=604800;path=/`
         window.location.href = '/'
       } else {
@@ -32,4 +32,5 @@ function cookieFormValidation () {
   }
 }
 
-export { cookieValidation, cookieFormValidation }
+cookieValidation()
+cookieFormValidation()
