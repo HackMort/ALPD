@@ -31,7 +31,7 @@ const { id, classes = "", useDefaultButton = true } = Astro.props;
 
   import { Toolbar } from "@fancyapps/ui/dist/panzoom/panzoom.toolbar.esm.js";
   import "@fancyapps/ui/dist/panzoom/panzoom.toolbar.css";
-  import { OptionsType } from "@fancyapps/ui/types/Panzoom/options";
+  import { OptionsType } from "@fancyapps/ui/dist/panzoom/panzoom.esm.js";
 
   const options: Partial<OptionsType> = {
     click: "toggleCover",
