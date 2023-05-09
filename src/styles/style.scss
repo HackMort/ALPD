@@ -1975,6 +1975,22 @@
 
         &__title {
             margin-bottom: 2rem;
+
+            &--mobile {
+                display: block;
+
+                @media screen and (min-width: 769px) {
+                    display: none;
+                }
+            }
+
+            &--desktop {
+                display: none;
+
+                @media screen and (min-width: 769px) {
+                    display: block;
+                }
+            }
         }
 
         &__definition {
@@ -1986,7 +2002,8 @@
 
             @media screen and (max-width: 768px) {
                 flex-direction: column;
-                padding: 2rem 1rem;
+                padding: 2rem 0;
+                margin: 0 auto;
             }
 
             .hpp-multisystemic__col:first-child {
@@ -1997,6 +2014,10 @@
                 font-weight: 600;
                 margin-bottom: 2rem;
                 max-width: 70%;
+
+                @media screen and (max-width: 768px) {
+                    max-width: 100%;
+                }
 
                 &-red {
                     color: $color-red;
@@ -2019,6 +2040,19 @@
                     position: absolute;
                     z-index: 2;
                     transform: translateY(-17%) translateX(-20%);
+
+                    @media screen and (max-width: 768px) {
+                        display: none;
+                    }
+                }
+
+                @media screen and (max-width: 768px) {
+                    margin: 0;
+                    background-image: none;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
                 }
             }
 
@@ -2033,6 +2067,22 @@
                     position: absolute;
                     z-index: 0;
                     max-width: 90%;
+
+                    @media screen and (max-width: 768px) {
+                        top: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 50%;
+                    }
+                }
+
+                @media screen and (max-width: 768px) {
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 55%;
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;
                 }
             }
 
@@ -2045,6 +2095,10 @@
 
                 border-bottom: 1px solid $color-carbon;
                 max-width: 95%;
+
+                @media screen and (max-width: 768px) {
+                    max-width: 100%;
+                }
             }
         }
 
@@ -2063,6 +2117,10 @@
             justify-content: center;
             align-items: flex-start;
             margin-bottom: 3rem;
+
+            @media screen and (max-width: 769px) {
+                align-items: center;
+            }
 
             &--percentage {
                 font-size: 3.5rem;
@@ -2089,6 +2147,7 @@
             &--text-red {
                 color: $color-red;
             }
+
         }
 
         &__bg-paper {
@@ -2102,7 +2161,14 @@
 
             margin: 4rem auto 0 auto;
             padding: 0 3rem;
-            background-color: #fafafa;
+            background-color: $color-cararra;
+
+            @media screen and (max-width: 768px) {
+                background-color: transparent;
+                box-shadow: none;
+                background-image: none;
+                padding: 0;
+            }
         }
 
         &__tabs {
@@ -2168,12 +2234,26 @@
                 background-position: center;
                 margin-top: -70px;
             }
+
+            @media screen and (max-width: 768px) {
+
+                #multisystemic1,
+                #multisystemic2,
+                #multisystemic3 {
+                    background-image: none;
+                    background-color: $color-floral-white;
+                }
+            }
         }
 
         &__condition {
             margin-bottom: 2rem;
             margin-left: 4rem;
             margin-right: 4rem;
+
+            @media screen and (max-width: 768px) {
+                margin: 0 auto;
+            }
         }
 
         &__impact {
