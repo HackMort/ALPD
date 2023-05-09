@@ -62,10 +62,14 @@ document.addEventListener('DOMContentLoaded', function (e) {
   Accordions()
 
   window.addEventListener('scroll', () => {
-    const headerInnerHeight = document.querySelector('.header__inner').offsetHeight
+    const header = document.querySelector('.header__inner')
+    if (!header) {
+      return
+    }
+    const headerInnerHeight = header.offsetHeight
     highlightActiveInternalNavOnScroll(headerInnerHeight)
     setNavTopPosition()
-    stickyInternalNav()()
+    stickyInternalNav()
   })
 
   window.addEventListener('resize', () => {
