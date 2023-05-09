@@ -22,7 +22,7 @@ new instance of the `Panzoom` class with the container element, the `options` ob
 using the pan and zoom controls provided by the `Panzoom` library. */
 document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll(
-        'button.button--pich-to-zoom'
+        'button.button--pinch-to-zoom'
     )
 
     buttons.forEach((button) => {
@@ -34,19 +34,28 @@ document.addEventListener('DOMContentLoaded', () => {
             const clone = container.cloneNode(true) as HTMLElement
             clone.setAttribute('style', 'display: none')
             clone.id = 'clone-' + clone.id
-            const cloneZoomButton = clone.querySelector('button.button--pich-to-zoom')
+            const cloneZoomButton = clone.querySelector('button.button--pinch-to-zoom')
             cloneZoomButton.parentElement.removeChild(cloneZoomButton)
+
+            const currentClone = body.querySelector(clone.id)
+
+            if (currentClone) {
+                currentClone.parentElement.removeChild(currentClone)
+            }
+
             body.appendChild(clone)
+
 
             let panzoom: Panzoom
 
             const modal = new Fancybox([{ src: clone.id }], {
-                autoFocus: true,
+                autoFocus: false,
                 defaultType: "inline",
-                placeFocusBack: true,
-                trapFocus: true,
+                placeFocusBack: false,
+                trapFocus: false,
                 closeButton: false,
                 id: clone.id,
+                mainClass: 'fancybox--pinch-to-zoom',
                 hideScrollbar: true,
                 defaultDisplay: 'flex',
                 on: {
@@ -65,8 +74,16 @@ document.addEventListener('DOMContentLoaded', () => {
                             modal.close()
                         })
                     },
+                    close: () => {
+                        setTimeout(() => {
+                            panzoom.destroy()
+                            clone.parentElement.removeChild(clone);
+                        }, 1000);
+                    },
                     destroy: () => {
-                        clone.parentElement.removeChild(clone)
+                        setTimeout(() => {
+                            clone.parentElement.removeChild(clone);
+                        }, 1000);
                     },
                 }
             });
