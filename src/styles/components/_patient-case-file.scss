@@ -58,6 +58,8 @@
 .patient__case_files {
   // scroll margin top
   scroll-padding-top: 10rem;
+  margin: 0 auto;
+  max-width: 700px;
 }
 
 .patients__case_file_item {
@@ -207,10 +209,32 @@
 
 }
 
+.rad__thumbnail {
+  position: relative;
+
+  picture {
+    position: relative;
+
+    .button {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+    }
+  }
+}
+
 .fancybox--pinch-to-zoom {
   .pinch-to-zoom.f-panzoom {
     .rad__thumbnail {
-      max-width: 100% !important;
+      max-width: 500px !important;
+
+      .patient {
+        position: absolute;
+        color: $color-white;
+        top: 1rem;
+        left: 1rem;
+      }
     }
   }
 
