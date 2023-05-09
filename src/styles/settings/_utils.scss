@@ -8,6 +8,12 @@ Ex: .color--white { color: #FFFFFFF; } and
 $color-value in $colors {
     .color--#{$color-name} {
         color: $color-value;
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+        font-style: inherit;
+        letter-spacing: inherit;
+        line-height: inherit;
     }
 
     .bg-color--#{$color-name} {
@@ -17,8 +23,8 @@ $color-value in $colors {
 
 .sz-500\:color--saffron-mango {
     @media screen and (min-width: 500px) {
-       color: $color-saffron-mango;
-     }
+        color: $color-saffron-mango;
+    }
 }
 
 .lg\:color--red {
@@ -27,7 +33,7 @@ $color-value in $colors {
         font-family: inherit;
         font-size: inherit;
         font-weight: inherit;
-      }
+    }
 }
 
 .mb-0 {
@@ -36,7 +42,7 @@ $color-value in $colors {
 
 .md\:mb-2 {
     @media screen and (min-width: 768px) {
-       margin-bottom: 2rem !important;
+        margin-bottom: 2rem !important;
     }
 }
 
@@ -119,6 +125,10 @@ $color-value in $colors {
     @media screen and (min-width: 768px) {
         display: block;
     }
+}
+
+.text--center {
+    text-align: center !important;
 }
 
 .lg\:text--center {

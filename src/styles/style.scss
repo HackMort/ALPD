@@ -20,6 +20,7 @@
 @import './components/_footer.scss';
 @import './components/_footer-navigation.scss';
 @import './components/case-file.scss';
+@import './components/internal-nav';
 @import './components/alpd-video.scss';
 @import './components/references.scss';
 @import './components/detective-form.scss';
@@ -1115,6 +1116,10 @@
                     font-size: 1.375rem;
                     line-height: 30.8px;
                 }
+            }
+
+            .red-string.mod-3 {
+                display: none !important;
             }
         }
 
