@@ -144,7 +144,7 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
               </li>
             </ul>
             <PinchToZoom id="pt-1-image-1" useDefaultButton={false}>
-              <div class="rad__thumbnail" style="max-width: 95px;">
+              <div class="rad__thumbnail" style="max-width: 115px;">
                 <picture>
                   <button
                     data-panzoom-action="zoomToFull"
@@ -160,7 +160,7 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
                   />
                 </picture>
                 <div class="patient">
-                  <p>Femur fracture age 13</p>
+                  <p>Femur fracture <br /> age 13</p>
                 </div>
               </div>
             </PinchToZoom>
@@ -181,7 +181,7 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
                   />
                 </picture>
                 <div class="patient">
-                  <p>Metatarsal fracture age 16</p>
+                  <p>Metatarsal fracture <br /> age 16</p>
                 </div>
               </div>
             </PinchToZoom>
@@ -202,7 +202,7 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
                   />
                 </picture>
                 <div class="patient">
-                  <p>Tibial fracture age 57</p>
+                  <p>Tibial fracture <br /> age 57</p>
                 </div>
               </div>
             </PinchToZoom>
@@ -317,40 +317,50 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
                 ALPL genetic test: Autosomal recessive inheritance
               </li>
             </ul>
-            <PinchToZoom id="pt-2-image-1">
-              <div class="rad__thumbnail" style="max-width: 286px;">
-                <picture>
-                  <source
-                    srcset="/assets/images/case-files/anna/anna-rad-1-desktop.png"
-                    media="(min-width: 768px)"
-                  />
-                  <img
-                    src="/assets/images/case-files/anna/anna-rad-1-mobile.png"
-                    alt=""
-                  />
-                </picture>
-                <div class="patient">
-                  <p>Delayed eruption of permanent teeth</p>
+            <div class="zoom-wrapper">
+              <PinchToZoom id="pt-2-image-1" useDefaultButton={false}>
+                <div class="rad__thumbnail" style="max-width: 286px;">
+                  <picture>
+                    <button
+                      data-panzoom-action="zoomToFull"
+                      data-content-id="pt-2-image-1"
+                      class="button button--pinch-to-zoom"></button>
+                    <source
+                      srcset="/assets/images/case-files/anna/anna-rad-1-desktop.png"
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      src="/assets/images/case-files/anna/anna-rad-1-mobile.png"
+                      alt=""
+                    />
+                  </picture>
+                  <div class="patient">
+                    <p>Delayed eruption of permanent teeth</p>
+                  </div>
                 </div>
-              </div>
-            </PinchToZoom>
-            <PinchToZoom id="pt-2-image-2">
-              <div class="rad__thumbnail" style="max-width: 195px;">
-                <picture>
-                  <source
-                    srcset="/assets/images/case-files/anna/anna-rad-2-desktop.png"
-                    media="(min-width: 768px)"
-                  />
-                  <img
-                    src="/assets/images/case-files/anna/anna-rad-2-mobile.png"
-                    alt=""
-                  />
-                </picture>
-                <div class="patient">
-                  <p>Early loss of baby teeth with root intact</p>
+              </PinchToZoom>
+              <PinchToZoom id="pt-2-image-2" useDefaultButton={false}>
+                <div class="rad__thumbnail" style="max-width: 195px;">
+                  <picture>
+                    <button
+                      data-panzoom-action="zoomToFull"
+                      data-content-id="pt-2-image-2"
+                      class="button button--pinch-to-zoom"></button>
+                    <source
+                      srcset="/assets/images/case-files/anna/anna-rad-2-desktop.png"
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      src="/assets/images/case-files/anna/anna-rad-2-mobile.png"
+                      alt=""
+                    />
+                  </picture>
+                  <div class="patient">
+                    <p>Early loss of baby teeth with root intact</p>
+                  </div>
                 </div>
-              </div>
-            </PinchToZoom>
+              </PinchToZoom>
+            </div>
           </Fragment>
           <Fragment slot="notes">
             <ul>
@@ -395,19 +405,25 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
                 Father: No significant medical history to report
               </li>
             </ul>
-            <PinchToZoom id="pt-3-image-1">
-              <picture>
-                <source
-                  srcset="/assets/images/case-files/hannah/hanna-rad-1-desktop.png"
-                  media="(min-width: 768px)"
-                />
-                <img
-                  src="/assets/images/case-files/hannah/hanna-rad-1-mobile.png"
-                  alt=""
-                />
-              </picture>
-              <div class="patient">
-                <p>Femur fracture age 13</p>
+            <PinchToZoom id="pt-3-image-1" useDefaultButton={false}>
+              <div class="rad__thumbnail" style="max-width: 180px;">
+                <picture>
+                  <button
+                    data-panzoom-action="zoomToFull"
+                    data-content-id="pt-3-image-1"
+                    class="button button--pinch-to-zoom"></button>
+                  <source
+                    srcset="/assets/images/case-files/hannah/hanna-rad-1-desktop.png"
+                    media="(min-width: 768px)"
+                  />
+                  <img
+                    src="/assets/images/case-files/hannah/hanna-rad-1-mobile.png"
+                    alt=""
+                  />
+                </picture>
+                <div class="patient">
+                  <p>Nontraumatic tooth loss at age 4</p>
+                </div>
               </div>
             </PinchToZoom>
           </Fragment>
@@ -480,49 +496,46 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
                 <p>&nbsp;</p>
               </div>
             </div>
-            <PinchToZoom id="pt-3-image-2">
-              <picture>
-                <source
-                  srcset="/assets/images/case-files/hannah/hanna-rad-1-desktop.png"
-                  media="(min-width: 768px)"
-                />
-                <img
-                  src="/assets/images/case-files/hannah/hanna-rad-1-mobile.png"
-                  alt=""
-                />
-              </picture>
-              <div class="patient">
-                <p>Femur fracture age 13</p>
+            <PinchToZoom id="pt-3-image-2" useDefaultButton={false}>
+              <div class="rad__thumbnail" style="max-width: 200px;">
+                <picture>
+                  <button
+                    data-panzoom-action="zoomToFull"
+                    data-content-id="pt-3-image-2"
+                    class="button button--pinch-to-zoom"></button>
+                  <source
+                    srcset="/assets/images/case-files/hannah/hanna-rad-1-desktop.png"
+                    media="(min-width: 768px)"
+                  />
+                  <img
+                    src="/assets/images/case-files/hannah/hanna-rad-1-mobile.png"
+                    alt=""
+                  />
+                </picture>
+                <div class="patient">
+                  <p>Nontraumatic tooth loss at age 4</p>
+                </div>
               </div>
             </PinchToZoom>
-            <PinchToZoom id="pt-3-image-3">
-              <picture>
-                <source
-                  srcset="/assets/images/case-files/hannah/hanna-rad-2-desktop.png"
-                  media="(min-width: 768px)"
-                />
-                <img
-                  src="/assets/images/case-files/hannah/hanna-rad-2-mobile.png"
-                  alt=""
-                />
-              </picture>
-              <div class="patient">
-                <p>Metatarsal fracture age 16</p>
-              </div>
-            </PinchToZoom>
-            <PinchToZoom id="pt-3-image-3">
-              <picture>
-                <source
-                  srcset="/assets/images/case-files/hanna/hanna-rad-1-desktop.png"
-                  media="(min-width: 768px)"
-                />
-                <img
-                  src="/assets/images/case-files/hanna/hanna-rad-3-mobile.png"
-                  alt=""
-                />
-              </picture>
-              <div class="patient">
-                <p>Tibial fracture age 57</p>
+            <PinchToZoom id="pt-3-image-3" useDefaultButton={false}>
+              <div class="rad__thumbnail" style="max-width: 200px;">
+                <picture>
+                  <button
+                    data-panzoom-action="zoomToFull"
+                    data-content-id="pt-3-image-3"
+                    class="button button--pinch-to-zoom"></button>
+                  <source
+                    srcset="/assets/images/case-files/hannah/hanna-rad-2-desktop.png"
+                    media="(min-width: 768px)"
+                  />
+                  <img
+                    src="/assets/images/case-files/hannah/hanna-rad-2-mobile.png"
+                    alt=""
+                  />
+                </picture>
+                <div class="patient">
+                  <p>Currently presents with mild knock knees</p>
+                </div>
               </div>
             </PinchToZoom>
           </Fragment>
@@ -641,17 +654,23 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
                 </ul>
               </li>
             </ul>
-            <PinchToZoom id="pt-4-image-1">
-              <picture>
-                <source
-                  srcset="/assets/images/case-files/sarah/sarah-asset-1-desktop.png"
-                  media="(min-width: 768px)"
-                />
-                <img
-                  src="/assets/images/case-files/sarah/sarah-asset-1-mobile.png"
-                  alt=""
-                />
-              </picture>
+            <PinchToZoom id="pt-4-image-1" useDefaultButton={false}>
+              <div class="rad__thumbnail" style="max-width: 250px;">
+                <picture>
+                  <button
+                    data-panzoom-action="zoomToFull"
+                    data-content-id="pt-4-image-1"
+                    class="button button--pinch-to-zoom"></button>
+                  <source
+                    srcset="/assets/images/case-files/sarah/sarah-asset-1-desktop.png"
+                    media="(min-width: 768px)"
+                  />
+                  <img
+                    src="/assets/images/case-files/sarah/sarah-asset-1-mobile.png"
+                    alt=""
+                  />
+                </picture>
+              </div>
             </PinchToZoom>
           </Fragment>
           <Fragment slot="notes">
