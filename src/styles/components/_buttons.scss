@@ -22,29 +22,29 @@
   }
 
 
-  &--secondary{
-    background:none; 
-    border:2px solid $color-red;
+  &--secondary {
+    background: none;
+    border: 2px solid $color-red;
     color: $color-red;
     font-weight: 700;
 
     &:hover,
     &:focus {
-      background:none; 
-      border:2px solid $color-blue;
+      background: none;
+      border: 2px solid $color-blue;
       color: $color-blue;
     }
 
   }
 
-  
-  &--take-photo{
-    background:none; 
-    border:2px solid $color-red;
+
+  &--take-photo {
+    background: none;
+    border: 2px solid $color-red;
     color: $color-red;
     font-weight: 700;
 
-    &::after{
+    &::after {
       content: "";
       display: block;
       background-image: url('/assets/images/red-camera.png');
@@ -59,24 +59,24 @@
 
     &:hover,
     &:focus {
-      background:none; 
-      border:2px solid $color-blue;
+      background: none;
+      border: 2px solid $color-blue;
       color: $color-blue;
-      
-      &::after{
+
+      &::after {
         content: "";
         background-image: url('/assets/images/blue-camera.png');
+      }
     }
   }
-}
 
-    &--upload-photo{ 
-      background:none; 
-    border:2px solid $color-red;
+  &--upload-photo {
+    background: none;
+    border: 2px solid $color-red;
     color: $color-red;
     font-weight: 700;
 
-    &::after{
+    &::after {
       content: "";
       display: block;
       background-image: url('/assets/images/red-upload.png');
@@ -91,18 +91,19 @@
 
     &:hover,
     &:focus {
-      background:none; 
-      border:2px solid $color-blue;
+      background: none;
+      border: 2px solid $color-blue;
       color: $color-blue;
 
-      &::after{
+      &::after {
         content: "";
         background-image: url('/assets/images/blue-upload.png');
-    }
+      }
     }
 
   }
-  &--tertiary{
+
+  &--tertiary {
     background: none;
     color: $color-black;
     text-decoration: underline;
@@ -110,11 +111,32 @@
 
     &:hover,
     &:focus {
-      background:none; 
+      background: none;
       color: $color-black;
     }
 
   }
 
-  
+
+  &--custom-bg,
+  &--custom-bg:hover,
+  &--custom-bg:focus {
+    font-family: 'Veneer';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.375rem;
+    line-height: 1.375rem;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: $color-red;
+    border: 0px;
+    background-color: unset;
+    background-image: url('/assets/images/case-files/modal-button-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 57px;
+    justify-content: center;
+    min-width: 220px;
+  }
+
 }
