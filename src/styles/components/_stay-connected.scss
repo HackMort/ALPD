@@ -137,6 +137,10 @@
 
     .form__control .form__control-error {
     top: 86%;
+    font-size: 14px;
+    @media screen and (min-width:740px) {
+    font-size: 1rem;
+    }
     }
 
     #custom-error{
