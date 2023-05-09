@@ -318,33 +318,37 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
               </li>
             </ul>
             <PinchToZoom id="pt-2-image-1">
-              <picture>
-                <source
-                  srcset="/assets/images/case-files/anna/anna-rad-1-desktop.png"
-                  media="(min-width: 768px)"
-                />
-                <img
-                  src="/assets/images/case-files/anna/anna-rad-1-mobile.png"
-                  alt=""
-                />
-              </picture>
-              <div class="patient">
-                <p>Delayed eruption of permanent teeth</p>
+              <div class="rad__thumbnail" style="max-width: 286px;">
+                <picture>
+                  <source
+                    srcset="/assets/images/case-files/anna/anna-rad-1-desktop.png"
+                    media="(min-width: 768px)"
+                  />
+                  <img
+                    src="/assets/images/case-files/anna/anna-rad-1-mobile.png"
+                    alt=""
+                  />
+                </picture>
+                <div class="patient">
+                  <p>Delayed eruption of permanent teeth</p>
+                </div>
               </div>
             </PinchToZoom>
             <PinchToZoom id="pt-2-image-2">
-              <picture>
-                <source
-                  srcset="/assets/images/case-files/anna/anna-rad-2-desktop.png"
-                  media="(min-width: 768px)"
-                />
-                <img
-                  src="/assets/images/case-files/anna/anna-rad-2-mobile.png"
-                  alt=""
-                />
-              </picture>
-              <div class="patient">
-                <p>Early loss of baby teeth with root intact</p>
+              <div class="rad__thumbnail" style="max-width: 195px;">
+                <picture>
+                  <source
+                    srcset="/assets/images/case-files/anna/anna-rad-2-desktop.png"
+                    media="(min-width: 768px)"
+                  />
+                  <img
+                    src="/assets/images/case-files/anna/anna-rad-2-mobile.png"
+                    alt=""
+                  />
+                </picture>
+                <div class="patient">
+                  <p>Early loss of baby teeth with root intact</p>
+                </div>
               </div>
             </PinchToZoom>
           </Fragment>
@@ -391,6 +395,21 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
                 Father: No significant medical history to report
               </li>
             </ul>
+            <PinchToZoom id="pt-3-image-1">
+              <picture>
+                <source
+                  srcset="/assets/images/case-files/hannah/hanna-rad-1-desktop.png"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  src="/assets/images/case-files/hannah/hanna-rad-1-mobile.png"
+                  alt=""
+                />
+              </picture>
+              <div class="patient">
+                <p>Femur fracture age 13</p>
+              </div>
+            </PinchToZoom>
           </Fragment>
           <Fragment slot="symptoms">
             <ul>
@@ -461,14 +480,14 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
                 <p>&nbsp;</p>
               </div>
             </div>
-            <PinchToZoom id="pt-3-image-1">
+            <PinchToZoom id="pt-3-image-2">
               <picture>
                 <source
-                  srcset="/assets/images/case-files/nathan/hanna-rad-1-desktop.png"
+                  srcset="/assets/images/case-files/hannah/hanna-rad-1-desktop.png"
                   media="(min-width: 768px)"
                 />
                 <img
-                  src="/assets/images/case-files/nathan/hanna-rad-1-mobile.png"
+                  src="/assets/images/case-files/hannah/hanna-rad-1-mobile.png"
                   alt=""
                 />
               </picture>
@@ -476,14 +495,14 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
                 <p>Femur fracture age 13</p>
               </div>
             </PinchToZoom>
-            <PinchToZoom id="pt-3-image-2">
+            <PinchToZoom id="pt-3-image-3">
               <picture>
                 <source
-                  srcset="/assets/images/case-files/nathan/hanna-rad-2-desktop.png"
+                  srcset="/assets/images/case-files/hannah/hanna-rad-2-desktop.png"
                   media="(min-width: 768px)"
                 />
                 <img
-                  src="/assets/images/case-files/nathan/hanna-rad-2-mobile.png"
+                  src="/assets/images/case-files/hannah/hanna-rad-2-mobile.png"
                   alt=""
                 />
               </picture>
@@ -491,14 +510,14 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
                 <p>Metatarsal fracture age 16</p>
               </div>
             </PinchToZoom>
-            <PinchToZoom id="pt-1-image-3">
+            <PinchToZoom id="pt-3-image-3">
               <picture>
                 <source
-                  srcset="/assets/images/case-files/nathan/hanna-rad-1-desktop.png"
+                  srcset="/assets/images/case-files/hanna/hanna-rad-1-desktop.png"
                   media="(min-width: 768px)"
                 />
                 <img
-                  src="/assets/images/case-files/nathan/hanna-rad-3-mobile.png"
+                  src="/assets/images/case-files/hanna/hanna-rad-3-mobile.png"
                   alt=""
                 />
               </picture>
@@ -622,50 +641,17 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
                 </ul>
               </li>
             </ul>
-            <PinchToZoom id="pt-1-image-1">
+            <PinchToZoom id="pt-4-image-1">
               <picture>
                 <source
-                  srcset="/assets/images/case-files/nathan/sarah-asset-1-desktop.png"
+                  srcset="/assets/images/case-files/sarah/sarah-asset-1-desktop.png"
                   media="(min-width: 768px)"
                 />
                 <img
-                  src="/assets/images/case-files/nathan/sarah-asset-1-mobile.png"
+                  src="/assets/images/case-files/sarah/sarah-asset-1-mobile.png"
                   alt=""
                 />
               </picture>
-              <div class="patient">
-                <p>Femur fracture age 13</p>
-              </div>
-            </PinchToZoom>
-            <PinchToZoom id="pt-1-image-2">
-              <picture>
-                <source
-                  srcset="/assets/images/case-files/nathan/Metatarsal-fracture-age-16.png"
-                  media="(min-width: 768px)"
-                />
-                <img
-                  src="/assets/images/case-files/nathan/Metatarsal-fracture-age-16.png"
-                  alt=""
-                />
-              </picture>
-              <div class="patient">
-                <p>Metatarsal fracture age 16</p>
-              </div>
-            </PinchToZoom>
-            <PinchToZoom id="pt-1-image-3">
-              <picture>
-                <source
-                  srcset="/assets/images/case-files/nathan/Tibial-fracture-age-57.png"
-                  media="(min-width: 768px)"
-                />
-                <img
-                  src="/assets/images/case-files/nathan/Tibial-fracture-age-57.png"
-                  alt=""
-                />
-              </picture>
-              <div class="patient">
-                <p>Tibial fracture age 57</p>
-              </div>
             </PinchToZoom>
           </Fragment>
           <Fragment slot="notes">
