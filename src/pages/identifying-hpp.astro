@@ -1,0 +1,121 @@
+---
+import CTA from "../components/CTA.astro";
+import InternalNavigation from "../components/InternalNavigation.astro";
+import Layout from "../layouts/Layout.astro";
+const internalNavLinks = [
+    {
+        href: "alp-reference-range",
+        label: "ALP Reference Ranges",
+        active: true,
+    },
+    { href: "testing", label: "Testing" },
+    {
+        href: "multidisciplinary-care-team",
+        label: "Multidisciplinary Care Team",
+    },
+];
+---
+
+<Layout
+    title="Identifying HPP"
+    pageClass="identifying-hpp-page"
+    showISI={false}
+>
+    {internalNavLinks && <InternalNavigation items={internalNavLinks} />}
+
+    <section
+        class="section identifying-hpp-page__alp-reference-range"
+        id="alp-reference-range"
+    >
+        <div class="wrapper">
+            <h1 class="alp-reference-range__title">
+                tracking down hypophosphatasia
+            </h1>
+        </div>
+
+        <div class="alp-reference-range__identify-wrapper">
+
+            <img class="asset__bg asset__bg--back" src="/assets/images/identifying-hpp/back-desktop.png" alt="">
+            <img class="asset__bg asset__bg--photos" src="/assets/images/identifying-hpp/photos-desktop.png" alt="">
+
+            <p class="asset__bg asset__bg--text">11A0763</p>
+            <p class="asset__bg asset__bg--text">11A0763</p>
+
+            <div class="alp-reference-range__identify">
+                <div class="alp-reference-range__identify-bg">
+                    <picture>
+                        <source
+                            srcset="/assets/images/identifying-hpp/paper-sheet-desktop.png"
+                            media="(min-width: 1024px)"
+                        />
+                        <img
+                            src="/assets/images/identifying-hpp/paper-sheet-mobile.png"
+                            alt=""
+                        />
+                    </picture>
+                </div>
+                <div class="alp-reference-range__identify-content-wrapper">
+                </div>
+                <div class="alp-reference-range__identify-content">
+                    <div class="wrapper">
+                        <div>
+                            <picture class="alp-reference-range__identify-icon">
+                                <img
+                                    src="/assets/images/identifying-hpp/test-tube.svg"
+                                    alt=""
+                                />
+                            </picture>
+                        </div>
+                        <div>
+                            <p class="alp-reference-range__identify-p1">
+                                Identify hypophosphatasia with <span
+                                    class="lg:color--red lg:bold"
+                                    >2 or more low ALP (alkaline phosphatase)
+                                    levels</span
+                                > in the presence of clinical signs and symptoms<sup
+                                    >1,2*</sup
+                                >
+                            </p>
+                            <p class="alp-reference-range__identify-p2">
+                                If your patient has confirmed persistently low
+                                alkaline phosphatase in the presence of other
+                                comorbidities (eg, osteoporosis, osteomalacia,
+                                nutritional rickets), they could have
+                                hypophosphatasia. Persistently low alkaline
+                                phosphatase,<sup class="symbol-sup">†</sup> the key
+                                marker for a hypophosphatasia diagnosis, can be found
+                                in a routine blood test.<sup>2,3-10</sup>
+                            </p>
+                            <ul class="alp-reference-range__identify-ul">
+                                <li>
+                                    <sup class="symbol-sup positioned">*</sup
+                                    >ALP ranges must be age- and sex-adjusted.
+                                    Patient should be evaluated for other
+                                    symptoms of HPP and differential diagnoses
+                                    should be ruled out.<sup>2,6-10</sup>
+                                </li>
+                                <li>
+                                    <sup class="symbol-sup positioned">†</sup
+                                    >Persistently low alkaline phosphatase can
+                                    be defined as having 2 exams below normal
+                                    value at intervals of more than 30 days.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <CTA variation="variant-2" buttonLabel="View Chart" content="Look back at what constitutes low alkaline phosphatase activity" linkURL="#" bypassModal ></CTA>
+    </section>
+
+    
+    <section class="section identifying-hpp-page__testing" id="testing">
+    </section>
+    <section
+        class="section identifying-hpp-page__multidisciplinary-care-team"
+        id="multidisciplinary-care-team"
+    >
+    </section>
+</Layout>

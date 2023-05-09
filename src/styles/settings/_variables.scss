@@ -19,7 +19,8 @@ $colors: (
     "floral-white": #FFFAED,
     "saffron-mango": #F8BA5D,
     "buff": #F3CC86,
-    "cararra": #F8F8F5
+    "cararra": #F8F8F5,
+    "taupe": #473831
 );
 
 $color-folder: map-get($colors, "folder");
@@ -38,3 +39,4 @@ $color-floral-white: map-get($colors, "floral-white");
 $color-saffron-mango: map-get($colors, "saffron-mango");
 $color-buff: map-get($colors, "buff");
 $color-cararra: map-get($colors, "cararra");
+$color-taupe: map-get($colors, "taupe");

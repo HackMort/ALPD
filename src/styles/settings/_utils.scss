@@ -21,6 +21,15 @@ $color-value in $colors {
      }
 }
 
+.lg\:color--red {
+    @media screen and (min-width: 1024px) {
+        color: $color-red;
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+      }
+}
+
 .mb-0 {
     margin-bottom: 0 !important;
 }
@@ -132,4 +141,12 @@ $color-value in $colors {
 
 .font--special-elite {
     font-family: 'Special Elite', cursive;
+}
+
+.lg\:bold {
+    @media screen and (min-width: 1024px) {
+        font-weight: 700;
+        font-family: inherit;
+        font-size: inherit;
+    }
 }
