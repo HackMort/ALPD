@@ -352,10 +352,24 @@
         let instance: Fancybox;
 
         const modal = document.querySelector("#modal");
+        const errorLabel = modal.querySelectorAll('p[class ="form__control-error"]');
         const modalClose = modal.querySelector(".modal__close");
+        const button = modal.querySelector(".button")
+        const inputs = document.querySelectorAll('.form__control-input')
 
         modalClose.addEventListener("click", () => {
           instance.close();
+        });
+
+        button.addEventListener("click", () => {
+
+            for(let i=0;i<inputs.length;i++){
+                if(inputs[i].value === ''){
+
+                    errorLabel[i].style.display = 'block'
+                }
+            }
+            
         });
 
         instance = new Fancybox([{ src: "modal" }], {
@@ -365,11 +379,14 @@
           trapFocus: true,
           closeButton: false,
           dragToClose: false,
-          /*  on: {
+          on: {
                             close: () => {
-                                continueButton.setAttribute("href", "");
+
+                            errorLabel.forEach((label)=>(label.style.display = 'none'))
+                            inputs.forEach((input)=>(input.value = ''))
+
                             },
-                        }, */
+                }
         });
       });
     });
