@@ -19,13 +19,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('/assets/images/case-files/patient-case-file-bg.png');
+    background-image: url('/assets/images/case-files/patient-case-file-mobile-bg.png');
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 1;
 
     @media screen and (min-width: 600px) {
-      background-image: url('/assets/images/case-files/patient-case-file-bg-2x.png');
+      background-image: url('/assets/images/case-files/patient-case-file-mobile-bg-2x.png');
     }
   }
 

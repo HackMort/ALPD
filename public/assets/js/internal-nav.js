@@ -13,6 +13,11 @@ export function highlightActiveInternalNavOnScroll (headerInnerHeight) {
   const internalNav = document.querySelector(
     '.internal__nav_list'
   )
+
+  if (!internalNav) {
+    return
+  }
+
   const activeLi =
             document.querySelector('.internal__nav_list_item.is--active') ||
             internalNavItems[0]
@@ -75,6 +80,9 @@ export function highlightActiveInternalNavOnScroll (headerInnerHeight) {
 */
 export function setActiveIternalNavItemOnClick () {
   const internalNav = document.querySelector('.internal__nav')
+  if (!internalNav) {
+    return
+  }
 
   internalNav &&
   internalNav.addEventListener('click', (e) => {
@@ -113,6 +121,9 @@ export function stickyInternalNav (internalNavClass = 'internal__nav', stickyCla
 
   let extraOffset = 0
   const internalNav = document.querySelector(`.${internalNavClass}`)
+  if (!internalNav) {
+    return
+  }
   const previousSibling = internalNav.previousElementSibling
 
   if (previousSibling) {
@@ -133,6 +144,9 @@ export function stickyInternalNav (internalNavClass = 'internal__nav', stickyCla
 navigation container when has the class is--fixed */
 export function setNavTopPosition (internalNavClass = 'internal__nav', headerInnerClass = 'header__inner') {
   const internalNav = document.querySelector(`.${internalNavClass}`)
+  if (!internalNav) {
+    return
+  }
   if (internalNav) {
     const headerInner = document.querySelector(`.${headerInnerClass}`)
     const headerInnerStyles = getComputedStyle(headerInner)

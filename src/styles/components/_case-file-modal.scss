@@ -1,5 +1,7 @@
 .case__files_modal {
   padding: 0;
+  background-color: $color-white !important;
+
 
   &_close-button {
     position: absolute;
@@ -11,6 +13,6 @@
     line-height: 100%;
     color: $color-carbon;
     cursor: pointer;
-    z-index: 2;
+    z-index: 3;
   }
 }
