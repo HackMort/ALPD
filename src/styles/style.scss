@@ -19,12 +19,14 @@
 @import './components/_pinch-to-zoom.scss';
 @import './components/_footer.scss';
 @import './components/_footer-navigation.scss';
-@import './components/case-file';
-@import './components/alpd-video';
-@import './components/references';
-@import './components/detective-form';
-@import './components/cta';
-@import './components/internal-nav';
+@import './components/case-file.scss';
+@import './components/alpd-video.scss';
+@import './components/references.scss';
+@import './components/detective-form.scss';
+@import './components/cta.scss';
+@import './components/_patient-case-file.scss';
+@import './components/_case-file-modal.scss';
+@import './components/stay-connected.scss';
 
 
 .section__home-video {
@@ -964,6 +966,7 @@
 
             &:first-of-type {
                 margin-bottom: 1.5rem;
+
                 @media screen and (min-width: 500px) {
                     margin-bottom: 3rem;
                 }
