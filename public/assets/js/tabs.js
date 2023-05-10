@@ -30,7 +30,9 @@ export function Tabs () {
     })
   })
 
+  // console.log(tabLinks)
   const panels = document.querySelectorAll("section[role='tabpanel']")
+  console.log(panels)
 
   const LEFT_ARROW = 'ArrowLeft'
   const RIGHT_ARROW = 'ArrowRight'
@@ -40,7 +42,10 @@ export function Tabs () {
     tab.addEventListener('click', (e) => {
       e.preventDefault()
       const currentTabList = e.currentTarget.closest('ul[role="tablist"]')
+      // console.log('currentTabList', currentTabList)
       const currentTab = currentTabList.querySelector('[aria-selected]')
+      // console.log('currentTab', currentTab)
+      // console.log('e.currentTarget', e.currentTarget)
       if (e.currentTarget !== currentTab) {
         switchTab(currentTab, e.currentTarget)
       }
@@ -77,7 +82,9 @@ export function Tabs () {
     newTab.setAttribute('aria-selected', 'true')
     prevTab.removeAttribute('aria-selected')
     prevTab.setAttribute('tabindex', '-1')
-    panels[tabLinks.indexOf(prevTab)].hidden = true
-    panels[tabLinks.indexOf(newTab)].hidden = false
+    // panels[tabLinks.indexOf(prevTab)].hidden = true
+    // panels[tabLinks.indexOf(newTab)].hidden = false
+    document.getElementById(prevTab.getAttribute('href').replace('#', '')).hidden = true
+    document.getElementById(newTab.getAttribute('href').replace('#', '')).hidden = false
   }
 }
