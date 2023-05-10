@@ -1225,3 +1225,56 @@
 }
 
 /* 404 */
+
+/* Usual Suspects */
+.usual_suspects {
+    .mod-1, .mod-2 {
+        display: none;
+    }
+    .cta .variant-3 .red-string.mod-3 {
+        bottom: 106px;
+        right: -22px;
+        transform: rotate(204deg);
+    }
+
+    .cta .variant-3 {
+        padding: 0;
+        height: 177px;
+        background-image: url(assets/images/usual-suspects/usual-suspects__background.png);
+        background-size: cover;
+        background-size: 211%;
+        background-position-y: 100%;
+        background-position-x: 68%;
+
+        .cta__text {
+            display: none;
+        }        
+    }
+
+    .button.document-link {
+        display: none;
+    }
+
+    .cta {
+        padding: 0;
+        position: relative;
+    }
+
+    .cta::before {
+        content: "";
+        height: 100px;
+        width: 282px;
+        right: -12px;
+        top: 47px;
+
+        background-image: url(/assets/images/usual-suspects/usual-suspects-seal.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        position: absolute;
+        z-index: 1;
+        transform: rotateZ(-6deg);
+    }
+
+}
+/* Usual Suspects */
