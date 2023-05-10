@@ -1245,36 +1245,81 @@
         background-size: 211%;
         background-position-y: 100%;
         background-position-x: 68%;
-
+        
         .cta__text {
             display: none;
         }        
     }
-
+    
     .button.document-link {
         display: none;
     }
-
+    
     .cta {
         padding: 0;
         position: relative;
     }
-
+    
     .cta::before {
         content: "";
         height: 100px;
         width: 282px;
         right: -12px;
         top: 47px;
-
+        
         background-image: url(/assets/images/usual-suspects/usual-suspects-seal.png);
         background-size: contain;
         background-repeat: no-repeat;
-
+        
         position: absolute;
         z-index: 1;
         transform: rotateZ(-6deg);
     }
+    
+}
 
+@media screen and (min-width: 480px) {
+    .usual_suspects {
+        .cta .variant-3 {
+            background-size: 166%;
+            background-position-y: 100%;
+            background-position-x: 87%;
+            height: 200px;
+        }
+        
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .usual_suspects {
+        .cta .variant-3 {            
+            height: 250px;
+            
+            .red-string.mod-3 {
+                bottom: 131px;
+            }
+        }
+        
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .usual_suspects {
+        .cta .variant-3 {            
+            height: 350px;
+        }
+        
+    }
+}
+
+@media screen and (min-width: 1023px) {
+    .usual_suspects {
+        .cta .variant-3 {            
+            height: 380px;
+        }
+        
+    }
+
+   
 }
 /* Usual Suspects */
