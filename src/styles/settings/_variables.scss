@@ -19,7 +19,8 @@ $colors: (
     "floral-white": #FFFAED,
     "saffron-mango": #F8BA5D,
     "buff": #F3CC86,
-    "cararra": #F8F8F5
+    "cararra": #F8F8F5,
+    "smoky-black": rgb(14 14 14 / 40%)
 );
 
 $color-folder: map-get($colors, "folder");
@@ -38,3 +39,4 @@ $color-floral-white: map-get($colors, "floral-white");
 $color-saffron-mango: map-get($colors, "saffron-mango");
 $color-buff: map-get($colors, "buff");
 $color-cararra: map-get($colors, "cararra");
+$color-smoky-black: map-get($colors, "smoky-black");

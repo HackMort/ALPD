@@ -3,7 +3,7 @@
 
 
 .validate__section {
-  background-color: #d5d5d5;
+  background-color: $color-folder;
   display: grid;
   place-items: center;
   height: 100vh;
@@ -17,7 +17,7 @@
   margin: 0;
   margin-bottom: 2rem;
   text-transform: capitalize;
-  color: $color-black;
+  color: $color-carbon;
   text-align: center;
 
   @media screen and (min-width: 600px) {
@@ -32,7 +32,7 @@
 
 .validate__section input[type="text"] {
   background-color: $color-white;
-  border: 1px solid $color-black;
+  border: 1px solid $color-carbon;
   border-radius: 5px;
   height: 40px;
   margin-top: 5px;
@@ -47,10 +47,10 @@
 }
 
 .validate__section input[type="submit"] {
-  background-color: $color-black;
-  border: 1px solid $color-black;
+  background-color: $color-carbon;
+  border: 1px solid $color-carbon;
   border-radius: 5px;
-  box-shadow: 0 2px 0 $color-black;
+  box-shadow: 0 2px 0 $color-carbon;
   color: $color-white;
   display: block;
   font-weight: bold;

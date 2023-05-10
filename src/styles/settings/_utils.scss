@@ -85,7 +85,7 @@ $color-value in $colors {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 .md\:hidden {
@@ -102,7 +102,7 @@ $color-value in $colors {
 
 .lg\:block {
     @media screen and (min-width: 1024px) {
-        display: block;
+        display: block !important;
     }
 }
 

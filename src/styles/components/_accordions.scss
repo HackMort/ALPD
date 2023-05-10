@@ -1,5 +1,6 @@
 .accordion {
 
+
   &__item_content {
     color: $color-black;
     overflow: hidden;
@@ -11,20 +12,21 @@
     margin-top: 1rem;
     padding-top: 0;
 
-    @include transition(max-height, 0.3s, ease-in-out);
 
-    h2{
+    // @include transition(max-height, 0.1s, ease-in-out);
+
+    h2 {
       color: $color-red;
       font-family: 'Oswald';
       font-style: normal;
       font-weight: 700;
       font-size: 1.125rem;
-      line-height: 1.375rem;    
+      line-height: 1.375rem;
       text-transform: uppercase;
       margin-bottom: 1rem;
     }
 
-    h4{
+    h4 {
       font-family: 'Barlow';
       font-style: normal;
       font-weight: 600;
@@ -34,29 +36,36 @@
       margin-bottom: 1rem
     }
 
-    .item, .sub-item{
+    ul {
+      margin-bottom: 1rem;
+    }
+
+    .item,
+    .sub-item {
       font-family: 'Barlow';
       font-style: normal;
       font-weight: 400;
       font-size: 1rem;
       line-height: 1.375rem;
-      color:$color-carbon;
+      color: $color-carbon;
     }
 
-    .item{
-      margin-left: 27px;
-    }
-    .sub-item{
-      margin-left: 49.6px;
+    .item {
+      margin-left: 1.6875rem;
+      list-style-type: disc;
     }
 
-    
+    .sub-item {
+      margin-left: 3.1rem;
+    }
+
+
     a {
       color: $color-red;
       font-weight: 600;
       text-decoration: underline;
     }
-    
+
     p {
       color: $color-black;
       //padding-bottom: 1rem;
@@ -72,7 +81,7 @@
       //margin-bottom: 1rem;
     }
 
-    h5{
+    h5 {
       font-family: 'Barlow';
       font-style: normal;
       font-weight: 600;
@@ -83,64 +92,65 @@
       margin-bottom: 1rem
     }
 
-    .acc-table{
+    .acc-table {
       display: flex;
       margin-bottom: 1rem;
 
-      p{
+      p {
         border-top: 1px solid $color-black;
-        
-        padding: 0;
         padding-right: .8125rem;
-      padding-left: .8125rem;
-      padding-top: 10px;
-      padding-bottom: 10px;
+        padding-left: .8125rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
         margin: 0;
       }
-      h3{
-        padding-top: 10px;
-        font-family: 'veneer';
+
+      h3 {
+        font-family: 'Oswald';
         text-align: center;
         font-weight: 400;
         font-size: 1.125rem;
         background: rgba(82, 108, 173, 0.3);
+        padding-top: .3125rem;
+        padding-bottom: .3125rem;
       }
 
-      .last-child{
-        border-right: 1px solid $color-black!important;
+      .last-child {
+        border-right: 1px solid $color-black !important;
       }
     }
 
-    .first-column{
+    .first-column {
       padding-bottom: 0;
       border: 1px solid $color-black;
       border-right: none;
 
-      p{
+      p {
         font-family: 'Oswald';
         font-style: normal;
         font-weight: 400;
         font-size: .875rem;
         line-height: 1.3125rem;
-        color:$color-black;
+        color: $color-black;
       }
-      
+
 
     }
-    .second-column{
-      width: 4rem;
+
+    .second-column {
+      width: 5rem;
       text-align: center;
       padding-bottom: 0;
       border: 1px solid $color-black;
       border-right: none;
 
-      p{
+      p {
         font-family: 'Barlow';
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
         line-height: 1.3125rem;
-        color:$color-black;
+        color: $color-black;
 
         display: flex;
         justify-content: center;
@@ -148,11 +158,11 @@
       }
     }
 
-    .acc-mobile-image{
+    .acc-mobile-image {
       max-width: 7.8125rem;
     }
 
-    small{
+    small {
       font-family: 'Barlow';
       font-style: normal;
       font-weight: 400;
@@ -165,17 +175,19 @@
   [aria-expanded="true"] {
     background: none;
     height: auto;
-    .accordion__item_title{
+
+    .accordion__item_title {
       color: $color-red;
     }
 
     .accordion__item_content {
       max-height: 100%;
+      padding-bottom: 1.5rem;
     }
 
     .accordion__item_title::after {
       background-image: url('/assets/images/acc-minus.png');
-      transition: .5s; 
+      @include transition(background-image, 0.3s, ease-in-out);
     }
   }
 
@@ -185,12 +197,12 @@
     border-top: 0;
     border-bottom: 1px solid $color-black;
     padding-top: .9331rem;
-    padding-right: 1.6875rem;
-    padding-left: 1.6875rem; 
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
   }
 
- 
-  
+
+
 
   &__item_title {
     color: $color-black;
@@ -204,10 +216,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-transform: uppercase;
     padding-left: .625rem;
     padding-right: .625rem;
 
-     &::after {
+    &::after {
       content: "";
       display: block;
       background-image: url('/assets/images/acc-plus.png');
@@ -217,15 +230,15 @@
       height: 34px;
       width: 34px;
       transition: .5s;
-    } 
+    }
 
 
   }
 
 }
 
-.accordion__item{
-  &:first-child{
-    border-top: 1px solid $color-black;   
+.accordion__item {
+  &:first-child {
+    border-top: 1px solid $color-black;
   }
 }
