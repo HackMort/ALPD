@@ -1,0 +1,213 @@
+---
+import References from "../components/References.astro";
+---
+
+<div class="modal" id="modal">
+    <div class="alp-calculator">
+        <div class="red-string-1"></div>
+        <picture class="alp-calculator__title">
+            <img src="/assets/images/calculator-modal-title-mobile.png" alt="">
+        </picture>
+
+        <strong class="alp-calculator__strong-heading">Persistently low alkaline phosphatase (ALP) is the biochemical hallmark of hypophosphatasia<sup>1-3</sup></strong>
+
+        <p class="alp-calculator__text-heading">Compare your patient’s current and historical ALP levels from their comprehensive metabolic panel against normal age- and sex-adjusted reference ranges.</p>
+
+        <div class="comparisson-block">
+            <div class="alp-calculator__graphic">
+                <!-- <img src="/assets/images/alp-calculator/adult-female.svg" alt="" class="adult-female"> -->
+                <img src="/assets/images/alp-calculator/1-10y-female.svg" alt="" class="1-10y-female">
+            </div>
+            <form>
+            <div
+              class="form__control"
+              data-touched="false"
+              data-required="true"
+              data-is-valid="false"
+            >
+              <div class="form__control-input">
+                <select
+                  id="state"
+                  name="state"
+                  class="form__control-select"
+                  aria-placeholder="*Age"
+                  required
+                  aria-required="true"
+                  onblur="validateFormControl(event)"
+                  onchange="validateFormControl(event)"
+                >
+                  <option value="" selected disabled>*Age</option>
+                  <option value="0-14 days">0 - 14 days</option>
+                  <option value="15 days - 1 year">15 days - 1 year</option>
+                  <option value="1-10 years">1 - 10 years</option>
+                  <option value="10 -< 13 years">10 - &lt; 13 years</option>
+                  <option value="13 -< 15 years">13 - &lt; 15 years</option>
+                  <option value="15 -< 17 years">15 - &lt; 17 years</option>
+                  <option value="17 -< 19 years">17 - &lt; 19 years</option>
+                  <option value="Adult">Adult</option>
+                </select>
+              </div>
+              <p class="form__control-error">Plase select an age</p>
+            </div>
+
+            <div
+              class="form__control"
+              data-touched="false"
+              data-required="true"
+              data-is-valid="false"
+            >
+              <div class="form__control-input">
+                <select
+                  id="state"
+                  name="state"
+                  class="form__control-select"
+                  aria-placeholder="*Sex"
+                  required
+                  aria-required="false"
+                  onblur="validateFormControl(event)"
+                  onchange="validateFormControl(event)"
+                >
+                  <option value="" selected disabled>*Sex</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                </select>
+              </div>
+              <p class="form__control-error">Plase select a sex</p>
+            </div>
+        <div class="form__control"
+            data-touched="false"
+            data-required="false"
+            data-is-valid="true"
+            id="alp-ul"
+          >
+            <input
+              class="form__control-input"
+              type="text"
+              id="alp-ul"
+              name="alp-ul"
+              placeholder="ALP (U/L)"
+              aria-required="false"
+              pattern="^[0-9]+"
+              onblur="validateFormControl(event)"
+              onchange="validateFormControl(event)"
+            />
+          </div>
+          <p class="alp-ul-disclaimer"><small>(Leave blank if unknown)</small></p>
+          <p class="ch-disclaimer"><small>In children, low ALP ranges vary based on age and sex.</small></p>
+
+        <button class="button">Compare</button>    
+    </form>
+        </div>
+
+        
+        <div class="deactive-text">    
+            <div class="red-string-2"></div>
+
+            <p>Limitations: A low ALP value is not conclusive for diagnosis of HPP. Patient should be evaluated for other symptoms of HPP and differential diagnoses should be ruled out. Check with your lab for their appropriate age- and sex- adjusted reference range.</p>
+
+            <p>Persistently low age- and sex-adjusted ALP is the biochemical hallmark of HPP.<sup>1,2*</sup> Paired with key signs and symptoms, <strong>persistently low ALP</strong> can confirm a diagnosis of HPP. Be sure to check your patient’s prior comprehensive metabolic panel results to assess historical ALP levels.<sup>1-3</sup></p>
+
+            <button class="button">Next</button>
+        </div>
+
+<!-- survey here -->
+<div class="survey">
+    <img src="/assets/images/alp-calculator/survey-title.png" alt="" class="survey__title">
+
+    <p class="survey__strong-heading">After reviewing this information, how confident are you in considering a diagnosis of HPP in patients with perplexing symptoms and persistently low age- and sex-adjusted ALP?</p>
+
+    <form class="survey__buttons">
+        <button class="button button--secondary" type="submit">Highly Confident</button>
+        <button class="button button--secondary" type="submit">Somewhat Confident</button>
+        <button class="button button--secondary" type="submit">Not Confident</button>
+        <div class="red-string"></div>
+    </form>
+
+
+    <p class="survey__text">NOTE: Reference range was taken from the Canadian Laboratory Initiative on Pediatric Reference Intervals (CALIPER) Database which compiled age- and sex-specific reference intervals in a pediatric population.3
+
+        Clinicians should ensure that reported laboratory results for ALP reflect age- and sex-adjusted reference ranges for the specific patient.1-4
+        
+        Check with your lab for their appropriate age- and sex-adjusted reference range.
+        
+        This resource is for educational purposes only. It is not intended for use in diagnosis of any disease or condition or for the cure, mitigation, or treatment of any disease or condition. It does not replace a healthcare professional’s judgment or clinical diagnosis.</p>
+</div>
+
+
+        <div class="active-text">
+            <p class="active-text__one">Clinicians should ensure that reported laboratory results for ALP reflect age- and sex-adjusted reference ranges for the specific patient.</p>
+
+                <p class="active-text__two"> with your lab for their appropriate age- and sex- adjusted reference range.</p>
+                
+            <p class="active-text__three">This resource is for educational purposes only. It is not intended for use in diagnosis of any disease or condition or for the cure, mitigation, or treatment of any disease or condition. It does not replace a healthcare professional’s judgment or clinical diagnosis.</p>
+        </div>
+
+
+        <div class="references-container">
+            <References />
+        </div>
+        
+       <!--  <div class="comparisson-block-2">
+            <form class="form" novalidate>
+                <div class="form__controls">
+            <div
+              class="form__control"
+              data-touched="false"
+              data-required="true"
+              data-is-valid="false"
+            >
+              <div class="form__control-input">
+                <select
+                  id="state"
+                  name="state"
+                  class="form__control-select"
+                  aria-placeholder="*State"
+                  required
+                  aria-required="true"
+                  onblur="validateFormControl(event)"
+                  onchange="validateFormControl(event)"
+                >
+                  <option value="" selected disabled>*Age</option>
+                  <option value="0-14 days">0 - 14 days</option>
+                  <option value="15 days - 1 year">15 days - 1 year</option>
+                  <option value="1-10 years">1 - 10 years</option>
+                  <option value="10 -< 13 years">10 - &lt; 13 years</option>
+                  <option value="13 -< 15 years">13 - &lt; 15 years</option>
+                  <option value="15 -< 17 years">15 - &lt; 17 years</option>
+                  <option value="17 -< 19 years">17 - &lt; 19 years</option>
+                  <option value="Adult">Adult</option>
+                </select>
+              </div>
+              <p class="form__control-error">Plase select an age</p>
+            </div>
+
+            <div
+              class="form__control"
+              data-touched="false"
+              data-required="true"
+              data-is-valid="false"
+            >
+              <div class="form__control-input">
+                <select
+                  id="state"
+                  name="state"
+                  class="form__control-select"
+                  aria-placeholder="*State"
+                  required
+                  aria-required="true"
+                  onblur="validateFormControl(event)"
+                  onchange="validateFormControl(event)"
+                >
+                  <option value="" selected disabled>*Sex</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                </select>
+              </div>
+              <p class="form__control-error">Plase select a sex</p>
+            </div>
+        <button class="button">Compare</button>
+        </div> -->
+        
+
+    </div>
+  </div>
