@@ -55,7 +55,7 @@ export function Tabs () {
 
     tab.addEventListener('keydown', (e) => {
       const index = tabLinks.indexOf(e.currentTarget)
-      if (e.currentTarget.classList.contains('tab-link-vertical')) {
+      if (e.currentTarget.classList.contains('tab-link-vertical') || e.currentTarget.classList.contains('modal__inner_tab_link')) {
         return
       }
       switch (e.key) {
