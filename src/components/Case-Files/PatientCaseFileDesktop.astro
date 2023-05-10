@@ -25,13 +25,13 @@ const notesTab = `tab-notes-${uniqueId}`;
 <div class="patient__case_grid" id={`case-${uniqueId}`}>
   <div class="patient__case_grid_col --col-left">
     <div class="info_header">
-      <h2 class="name">{name}, {age}</h2>
+      <h2 class="heading">Patient Case File</h2>
+      <p class="name">{name}, {age}</p>
       <p class="text">Profiles are based on hypothetical patient cases.</p>
     </div>
     <div class="tabs">
       <ul role="tablist">
         <li role="presentation">
-          <!--active one -->
           <a
             href={`#${medicalTab}`}
             role="tab"
@@ -44,6 +44,7 @@ const notesTab = `tab-notes-${uniqueId}`;
             href={`#${familyTab}`}
             role="tab"
             id={`tab-link-${familyTab}`}
+            class="tab-link-vertical"
             tabindex="-1">Family History</a
           >
         </li>
@@ -52,6 +53,7 @@ const notesTab = `tab-notes-${uniqueId}`;
             href={`#${symptomsTab}`}
             role="tab"
             id={`tab-link-${familyTab}`}
+            class="tab-link-vertical"
             tabindex="-1">Presenting Symptoms</a
           >
         </li>
@@ -60,6 +62,7 @@ const notesTab = `tab-notes-${uniqueId}`;
             href={`#${medicationsTab}`}
             role="tab"
             id={`tab-link-${medicationsTab}`}
+            class="tab-link-vertical"
             tabindex="-1">Current Medications</a
           >
         </li>
@@ -68,6 +71,7 @@ const notesTab = `tab-notes-${uniqueId}`;
             href={`#${resultsTab}`}
             role="tab"
             id={`tab-link-${resultsTab}`}
+            class="tab-link-vertical"
             tabindex="-1">Lab Results/Imaging</a
           >
         </li>
@@ -92,8 +96,9 @@ const notesTab = `tab-notes-${uniqueId}`;
         role="tabpanel"
         aria-labelledby={medicalTab}
         aria-hidden="false"
-        tabindex="-1"
+        tabindex="1"
       >
+        <p class="panel__title">Medical History</p>
         <slot name="medical" />
       </section>
       <section
@@ -102,7 +107,9 @@ const notesTab = `tab-notes-${uniqueId}`;
         aria-labelledby={familyTab}
         aria-hidden="true"
         tabindex="-1"
+        hidden
       >
+        <p class="panel__title">Family History</p>
         <slot name="family" />
       </section>
       <section
@@ -111,8 +118,21 @@ const notesTab = `tab-notes-${uniqueId}`;
         aria-labelledby={symptomsTab}
         aria-hidden="true"
         tabindex="-1"
+        hidden
       >
+        <p class="panel__title">Presenting Symptoms</p>
         <slot name="symptoms" />
+      </section>
+      <section
+        id={medicationsTab}
+        role="tabpanel"
+        aria-labelledby={medicationsTab}
+        aria-hidden="true"
+        tabindex="-1"
+        hidden
+      >
+        <p class="panel__title">Current Medications</p>
+        <slot name="medications" />
       </section>
       <section
         id={resultsTab}
@@ -120,7 +140,9 @@ const notesTab = `tab-notes-${uniqueId}`;
         aria-labelledby={resultsTab}
         aria-hidden="true"
         tabindex="-1"
+        hidden
       >
+        <p class="panel__title">Lab Results/Imaging</p>
         <slot name="results" />
       </section>
       <section
@@ -129,7 +151,9 @@ const notesTab = `tab-notes-${uniqueId}`;
         aria-labelledby={notesTab}
         aria-hidden="true"
         tabindex="-1"
+        hidden
       >
+        <p class="panel__title">Physician Notes</p>
         <slot name="notes" />
       </section>
     </div>
@@ -137,7 +161,7 @@ const notesTab = `tab-notes-${uniqueId}`;
   <div class="patient__case_grid_col --col-right">
     <div class="patient__info_grid">
       <div class="patient__info_grid_photo">
-        <img src={photo} alt="" />
+        <img src={photo} alt={`photo-of-${name}`} class={`photo-of-${name}`} />
       </div>
       <div class="patient__info_grid_name">
         <h6 class="patient__name" set:html={name} />
@@ -153,6 +177,7 @@ const notesTab = `tab-notes-${uniqueId}`;
       <div class="patient__info_grid_finger-print">
         <img src="/assets/images/case-files/profile-finger-print-image.png" />
       </div>
+      <div class="patient__info_grid_empty_space"></div>
     </div>
   </div>
 </div>
