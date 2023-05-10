@@ -1,0 +1,356 @@
+---
+import PinchToZoom from "../Pinch-to-zoom.astro";
+import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
+---
+
+<div id="case-files-modal-template-desktop" style="display: none;">
+  <div class="case__files_modal" id="case-files-modal--destkop">
+    <button data-fancybox-close class="case__files_modal_close-button">×</button
+    >
+    <div class="case__files_modal_wrapper case__files_desktop_modal">
+      <ul role="tablist">
+        <li role="presentation">
+          <!--active one -->
+          <a
+            href="#case-p-panel-1"
+            role="tab"
+            id="case-link-to-panel-1"
+            aria-selected="true">Nathan, 57</a
+          >
+        </li>
+        <li role="presentation">
+          <a
+            href="#case-p-panel-2"
+            role="tab"
+            id="case-link-to-panel-2"
+            tabindex="-1">Anna, 35</a
+          >
+        </li>
+        <li role="presentation">
+          <a
+            href="#case-p-panel-3"
+            role="tab"
+            id="case-link-to-panel-3"
+            tabindex="-1">Hannah, 7</a
+          >
+        </li>
+        <li role="presentation">
+          <a
+            href="#case-p-panel-4"
+            role="tab"
+            id="case-link-to-panel-4"
+            tabindex="-1">Sarah, 7 months</a
+          >
+        </li>
+      </ul>
+      <section
+        id="case-p-panel-1"
+        role="tabpanel"
+        aria-labelledby="case-p-panel-1"
+        aria-hidden="false"
+        tabindex="-1"
+      >
+        <PatientCaseFileDesktop
+          name="Nathan"
+          age={57}
+          gender="M"
+          description="A 57-year-old male has gone undiagnosed for 30+ years. Does Nathan’s file remind you of any of your current patients?"
+          photo="/assets/images/case-files/nathan/photo-nathan-desktop.png"
+        >
+          <Fragment slot="medical">
+            <ul>
+              <li class="item">
+                2 nontraumatic fractures: Age 13, femur; age 16, metatarsals
+              </li>
+              <li class="item">
+                Reportsof slow healing fractures, even at young age
+              </li>
+              <li class="item">Age 50: Kidney stones</li>
+              <li class="item">
+                History of poor dentition and weak/loose teeth
+              </li>
+              <li class="item">
+                Recent diagnosis ofpseudogout/CPPD/chondrocalcinosis
+              </li>
+            </ul>
+          </Fragment>
+          <Fragment slot="family">
+            <ul>
+              <li class="item">Mother: Osteoporosis</li>
+              <li class="item">
+                Father: Hypertension, myocardial infarction at 67
+              </li>
+            </ul>
+          </Fragment>
+          <Fragment slot="symptoms">
+            <ul>
+              <li class="item">Bone pain in back and thighs</li>
+              <li class="item">Chronic fatigue</li>
+              <li class="item">Current nontraumatic hairline fracture</li>
+              <li class="item">Reports of anxiety and depressed mood</li>
+            </ul>
+          </Fragment>
+          <Fragment slot="medications">
+            <ul>
+              <li class="item">Calcium and vitamin D supplement daily</li>
+              <li class="item">Reports of daily NSAID use</li>
+            </ul>
+          </Fragment>
+          <Fragment slot="results">
+            <h4 class="results__title">CMP test results from:</h4>
+            <h5>Today</h5>
+            <div class="acc-table">
+              <div class="first-column">
+                <h3>TEST</h3>
+                <p>Calcium, mg/dL</p>
+                <p>Protein, g/dL</p>
+                <p>Albumin, g/dL</p>
+                <p>Alkaline phosphatase, IU/L</p>
+              </div>
+
+              <div class="second-column">
+                <h3>RESULT</h3>
+                <p>10.6</p>
+                <p>6.5</p>
+                <p>4.6</p>
+                <p>63</p>
+              </div>
+
+              <div class="second-column last-child">
+                <h3>FLAG</h3>
+                <p>High</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+              </div>
+            </div>
+            <h5>6 months ago</h5>
+            <div class="acc-table">
+              <div class="first-column">
+                <h3>TEST</h3>
+                <p>Calcium, mg/dL</p>
+                <p>Protein, g/dL</p>
+                <p>Albumin, g/dL</p>
+                <p>Alkaline phosphatase, IU/L</p>
+              </div>
+              <div class="second-column">
+                <h3>RESULT</h3>
+                <p>9.8</p>
+                <p>6.9</p>
+                <p>3.9</p>
+                <p>35</p>
+              </div>
+              <div class="second-column last-child">
+                <h3>FLAG</h3>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+              </div>
+            </div>
+            <h5>1 year ago</h5>
+            <div class="acc-table">
+              <div class="first-column">
+                <h3>TEST</h3>
+                <p>Calcium, mg/dL</p>
+                <p>Protein, g/dL</p>
+                <p>Albumin, g/dL</p>
+                <p>Alkaline phosphatase, IU/L</p>
+              </div>
+              <div class="second-column">
+                <h3>RESULT</h3>
+                <p>10.2</p>
+                <p>7.1</p>
+                <p>4.0</p>
+                <p>32</p>
+              </div>
+              <div class="second-column last-child">
+                <h3>FLAG</h3>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+              </div>
+            </div>
+            <ul>
+              <li class="item">
+                High vitamin B6 level shown at test 6 months ago
+              </li>
+              <li class="item">
+                ALPL genetic test: Variant of uncertain significance (VUS)
+                identified
+              </li>
+            </ul>
+            <PinchToZoom id="pt-1-image-1" useDefaultButton={false}>
+              <div class="rad__thumbnail" style="max-width: 115px;">
+                <picture>
+                  <button
+                    data-panzoom-action="zoomToFull"
+                    data-content-id="pt-1-image-1"
+                    class="button button--pinch-to-zoom"></button>
+                  <source
+                    srcset="/assets/images/case-files/nathan/nathan-rad-1-desktop.png"
+                    media="(min-width: 768px)"
+                  />
+                  <img
+                    src="/assets/images/case-files/nathan/nathan-rad-1-mobile.png"
+                    alt=""
+                  />
+                </picture>
+                <div class="patient">
+                  <p>Femur fracture <br /> age 13</p>
+                </div>
+              </div>
+            </PinchToZoom>
+            <PinchToZoom id="pt-1-image-2" useDefaultButton={false}>
+              <div class="rad__thumbnail" style="max-width: 162px;">
+                <picture>
+                  <button
+                    data-panzoom-action="zoomToFull"
+                    data-content-id="pt-1-image-2"
+                    class="button button--pinch-to-zoom"></button>
+                  <source
+                    srcset="/assets/images/case-files/nathan/nathan-rad-2-desktop.png"
+                    media="(min-width: 768px)"
+                  />
+                  <img
+                    src="/assets/images/case-files/nathan/nathan-rad-2-mobile.png"
+                    alt=""
+                  />
+                </picture>
+                <div class="patient">
+                  <p>Metatarsal fracture <br /> age 16</p>
+                </div>
+              </div>
+            </PinchToZoom>
+            <PinchToZoom id="pt-1-image-3" useDefaultButton={false}>
+              <div class="rad__thumbnail" style="max-width: 138px;">
+                <picture>
+                  <button
+                    data-panzoom-action="zoomToFull"
+                    data-content-id="pt-1-image-3"
+                    class="button button--pinch-to-zoom"></button>
+                  <source
+                    srcset="/assets/images/case-files/nathan/nathan-rad-3-desktop.png"
+                    media="(min-width: 768px)"
+                  />
+                  <img
+                    src="/assets/images/case-files/nathan/nathan-rad-3-mobile.png"
+                    alt=""
+                  />
+                </picture>
+                <div class="patient">
+                  <p>Tibial fracture <br /> age 57</p>
+                </div>
+              </div>
+            </PinchToZoom>
+          </Fragment>
+          <Fragment slot="notes">
+            <ul>
+              <li class="item">N/A</li>
+            </ul>
+          </Fragment>
+        </PatientCaseFileDesktop>
+      </section>
+      <section
+        id="case-p-panel-2"
+        role="tabpanel"
+        aria-labelledby="case-link-to-panel-2"
+        aria-hidden="true"
+        tabindex="-1"
+        hidden
+      >
+        <h2>Annah?</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dui
+          nibh, fermentum ac gravida quis, <a href="#">tempus sit</a> amet nulla.
+          Fusce dignissim dolor sit amet sapien auctor, eu vehicula elit placerat.
+          Aliquam vehicula luctus enim, at ullamcorper risus. Aliquam ut tincidunt
+          ipsum. Vivamus dui mi, suscipit vitae libero id, interdum aliquet metus.
+        </p>
+      </section>
+      <section
+        id="case-p-panel-3"
+        role="tabpanel"
+        aria-labelledby="case-link-to-panel-3"
+        aria-hidden="true"
+        tabindex="-1"
+        hidden
+      >
+        <h2>Panel 3</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dui
+          nibh, fermentum ac gravida quis, <a href="#">tempus sit</a> amet nulla.
+          Fusce dignissim dolor sit amet sapien auctor, eu vehicula elit placerat.
+          Aliquam vehicula luctus enim, at ullamcorper risus. Aliquam ut tincidunt
+          ipsum. Vivamus dui mi, suscipit vitae libero id, interdum aliquet metus.
+        </p>
+      </section>
+      <section
+        id="case-p-panel-4"
+        role="tabpanel"
+        aria-labelledby="case-link-to-panel-4"
+        aria-hidden="true"
+        tabindex="-1"
+        hidden
+      >
+        <h2>Panel 4</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dui
+          nibh, fermentum ac gravida quis, <a href="#">tempus sit</a> amet nulla.
+          Fusce dignissim dolor sit amet sapien auctor, eu vehicula elit placerat.
+          Aliquam vehicula luctus enim, at ullamcorper risus. Aliquam ut tincidunt
+          ipsum. Vivamus dui mi, suscipit vitae libero id, interdum aliquet metus.
+        </p>
+      </section>
+    </div>
+  </div>
+</div>
+<script>
+  /**
+   * #################################################################################################
+   * CaseFileModal
+   * #################################################################################################
+   */
+
+  import { Fancybox } from "@fancyapps/ui";
+
+  class caseFileModalDesktop {
+    caseFileModalDesktop: Fancybox;
+
+    constructor() {
+      this.caseFileModalDesktop = undefined;
+    }
+
+    open() {
+      this.caseFileModalDesktop = new Fancybox(
+        [{ src: "case-files-modal--destkop" }],
+        {
+          autoFocus: false,
+          defaultType: "inline",
+          placeFocusBack: false,
+          trapFocus: false,
+          closeButton: false,
+          height: "auto",
+          mainClass: "case-files-modal--destkop",
+        }
+      );
+    }
+
+    close() {
+      this.caseFileModalDesktop.close();
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const openCaseFilesModal = new caseFileModalDesktop();
+    const buttons = document.querySelectorAll(
+      "button.case-files-modal-trigger--desktop"
+    );
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        openCaseFilesModal.open();
+      });
+    });
+  });
+</script>
