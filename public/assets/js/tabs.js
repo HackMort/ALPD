@@ -32,11 +32,13 @@ export function Tabs () {
 
   // console.log(tabLinks)
   const panels = document.querySelectorAll("section[role='tabpanel']")
-  console.log(panels)
+  // console.log(panels)
 
   const LEFT_ARROW = 'ArrowLeft'
   const RIGHT_ARROW = 'ArrowRight'
   const DOWN_ARROW = 'ArrowDown'
+  /* eslint-disable-next-line no-unused-vars */
+  const UP_ARROW = 'ArrowUp'
 
   tabLinks.forEach(function (tab, i) {
     tab.addEventListener('click', (e) => {
@@ -53,6 +55,9 @@ export function Tabs () {
 
     tab.addEventListener('keydown', (e) => {
       const index = tabLinks.indexOf(e.currentTarget)
+      if (e.currentTarget.classList.contains('tab-link-vertical')) {
+        return
+      }
       switch (e.key) {
         case DOWN_ARROW:
           panels[i].focus()
