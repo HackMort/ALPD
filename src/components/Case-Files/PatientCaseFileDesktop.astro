@@ -1,0 +1,158 @@
+---
+type Props = {
+  name: string;
+  age: number | string;
+  gender: string;
+  description: string;
+  photo: string;
+};
+const { name, age, gender, description, photo } = Astro.props;
+// Check if age is a string and if it is, check for the word "months"
+let ageString = "";
+age && typeof age === "string" && age.includes("months")
+  ? (ageString = age.replace("months", "mo"))
+  : (ageString = age.toString());
+
+const uniqueId = `${name}-${ageString}`.toLowerCase().replace(/\s/g, "-");
+const medicalTab = `tab-medical-${uniqueId}`;
+const familyTab = `tab-family-${uniqueId}`;
+const symptomsTab = `tab-symptoms-${uniqueId}`;
+const medicationsTab = `tab-medications-${uniqueId}`;
+const resultsTab = `tab-results-${uniqueId}`;
+const notesTab = `tab-notes-${uniqueId}`;
+---
+
+<div class="patient__case_grid" id={`case-${uniqueId}`}>
+  <div class="patient__case_grid_col --col-left">
+    <div class="info_header">
+      <h2 class="name">{name}, {age}</h2>
+      <p class="text">Profiles are based on hypothetical patient cases.</p>
+    </div>
+    <div class="tabs">
+      <ul role="tablist">
+        <li role="presentation">
+          <!--active one -->
+          <a
+            href={`#${medicalTab}`}
+            role="tab"
+            id={`tab-link-${medicalTab}`}
+            aria-selected="true">Medical History</a
+          >
+        </li>
+        <li role="presentation">
+          <a
+            href={`#${familyTab}`}
+            role="tab"
+            id={`tab-link-${familyTab}`}
+            tabindex="-1">Family History</a
+          >
+        </li>
+        <li role="presentation">
+          <a
+            href={`#${symptomsTab}`}
+            role="tab"
+            id={`tab-link-${familyTab}`}
+            tabindex="-1">Presenting Symptoms</a
+          >
+        </li>
+        <li role="presentation">
+          <a
+            href={`#${medicationsTab}`}
+            role="tab"
+            id={`tab-link-${medicationsTab}`}
+            tabindex="-1">Current Medications</a
+          >
+        </li>
+        <li role="presentation">
+          <a
+            href={`#${resultsTab}`}
+            role="tab"
+            id={`tab-link-${resultsTab}`}
+            tabindex="-1">Lab Results/Imaging</a
+          >
+        </li>
+        <li role="presentation">
+          <a
+            href={`#${notesTab}`}
+            role="tab"
+            id={`tab-link-${notesTab}`}
+            tabindex="-1">Physician Notes</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="patient__case_grid_col --col-middle">
+    <div class="info_description">
+      <h4 class="description">{description}</h4>
+    </div>
+    <div class="info_content">
+      <section
+        id={medicalTab}
+        role="tabpanel"
+        aria-labelledby={medicalTab}
+        aria-hidden="false"
+        tabindex="-1"
+      >
+        <slot name="medical" />
+      </section>
+      <section
+        id={familyTab}
+        role="tabpanel"
+        aria-labelledby={familyTab}
+        aria-hidden="true"
+        tabindex="-1"
+      >
+        <slot name="family" />
+      </section>
+      <section
+        id={symptomsTab}
+        role="tabpanel"
+        aria-labelledby={symptomsTab}
+        aria-hidden="true"
+        tabindex="-1"
+      >
+        <slot name="symptoms" />
+      </section>
+      <section
+        id={resultsTab}
+        role="tabpanel"
+        aria-labelledby={resultsTab}
+        aria-hidden="true"
+        tabindex="-1"
+      >
+        <slot name="results" />
+      </section>
+      <section
+        id={notesTab}
+        role="tabpanel"
+        aria-labelledby={notesTab}
+        aria-hidden="true"
+        tabindex="-1"
+      >
+        <slot name="notes" />
+      </section>
+    </div>
+  </div>
+  <div class="patient__case_grid_col --col-right">
+    <div class="patient__info_grid">
+      <div class="patient__info_grid_photo">
+        <img src={photo} alt="" />
+      </div>
+      <div class="patient__info_grid_name">
+        <h6 class="patient__name" set:html={name} />
+      </div>
+      <div class="patient__info_grid_data">
+        <ul>
+          <li class="label">age</li>
+          <li>{age}</li>
+          <li class="label">gender</li>
+          <li>{gender}</li>
+        </ul>
+      </div>
+      <div class="patient__info_grid_finger-print">
+        <img src="/assets/images/case-files/profile-finger-print-image.png" />
+      </div>
+    </div>
+  </div>
+</div>
