@@ -229,6 +229,10 @@
     .rad__thumbnail {
       max-width: 500px !important;
 
+      picture {
+        max-width: 100% !important;
+      }
+
       .patient {
         position: absolute;
         color: $color-white;
