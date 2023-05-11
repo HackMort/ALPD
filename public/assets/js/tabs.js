@@ -30,17 +30,24 @@ export function Tabs () {
     })
   })
 
+  // console.log(tabLinks)
   const panels = document.querySelectorAll("section[role='tabpanel']")
+  // console.log(panels)
 
   const LEFT_ARROW = 'ArrowLeft'
   const RIGHT_ARROW = 'ArrowRight'
   const DOWN_ARROW = 'ArrowDown'
+  /* eslint-disable-next-line no-unused-vars */
+  const UP_ARROW = 'ArrowUp'
 
   tabLinks.forEach(function (tab, i) {
     tab.addEventListener('click', (e) => {
       e.preventDefault()
       const currentTabList = e.currentTarget.closest('ul[role="tablist"]')
+      // console.log('currentTabList', currentTabList)
       const currentTab = currentTabList.querySelector('[aria-selected]')
+      // console.log('currentTab', currentTab)
+      // console.log('e.currentTarget', e.currentTarget)
       if (e.currentTarget !== currentTab) {
         switchTab(currentTab, e.currentTarget)
       }
@@ -48,6 +55,9 @@ export function Tabs () {
 
     tab.addEventListener('keydown', (e) => {
       const index = tabLinks.indexOf(e.currentTarget)
+      if (e.currentTarget.classList.contains('tab-link-vertical') || e.currentTarget.classList.contains('modal__inner_tab_link')) {
+        return
+      }
       switch (e.key) {
         case DOWN_ARROW:
           panels[i].focus()
@@ -77,8 +87,10 @@ export function Tabs () {
     newTab.setAttribute('aria-selected', 'true')
     prevTab.removeAttribute('aria-selected')
     prevTab.setAttribute('tabindex', '-1')
-    panels[tabLinks.indexOf(prevTab)].hidden = true
-    panels[tabLinks.indexOf(newTab)].hidden = false
+    // panels[tabLinks.indexOf(prevTab)].hidden = true
+    // panels[tabLinks.indexOf(newTab)].hidden = false
+    document.getElementById(prevTab.getAttribute('href').replace('#', '')).hidden = true
+    document.getElementById(newTab.getAttribute('href').replace('#', '')).hidden = false
   }
 }
 
