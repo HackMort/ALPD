@@ -1276,6 +1276,79 @@
         transform: rotateZ(-6deg);
     }
     
+    section {
+        color:white;
+        padding-top: 20px;
+        padding-bottom: 45px;
+        padding-left: 24px;
+    }
+
+    .buttons-panel-container {
+        button {
+            color: white;
+            font-size: 16px;
+            padding: 0;
+            text-decoration: none;            
+            font-family: "oswald", sans-serif;
+            font-weight: 400;
+        }
+        button:first-of-type {
+            padding-bottom: 5px;
+            white-space: nowrap;
+            border-bottom: 3px solid $color-red;
+            border-radius: 0;
+            font-weight: 700;
+        }
+    }
+
+    .buttons-panel-container {
+        display: flex;
+        justify-content: center;
+        min-width: 354px;
+        margin-right: 20px;
+        margin-left: 8px;
+    }
+
+    .hr_line {
+        background-color: $color-red;
+        width: 1px;
+        height: 24px;
+        border: 0;
+        margin: 0 24px;
+    }
+    
+    .scrollable-content {
+        overflow-y: scroll;
+        height: 36px;
+
+    }
+    
+    .content-title {
+        font-family: "veneer", sans-serif;
+        margin-top: 30px;        
+        color: $color-red;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .content-pharagraph {
+        margin-top: 15px;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: "Barlow", sans-serif;
+        max-width: 567px;
+
+
+        &.content-pharagraph--secondary {
+            font-size: 16px;
+            font-weight: 500;
+            max-width: 502px;
+        }
+    }
+
+    .section-title {
+        
+    }
 }
 
 @media screen and (min-width: 480px) {
@@ -1294,10 +1367,16 @@
     .usual_suspects {
         .cta .variant-3 {            
             height: 250px;
-            
+
             .red-string.mod-3 {
                 bottom: 131px;
             }
+        }
+
+        .content-pharagraph {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
         }
         
     }
@@ -1308,6 +1387,33 @@
         .cta .variant-3 {            
             height: 350px;
         }
+
+        .content-pharagraph {
+            font-size: 22px;
+            margin-top: 27px;
+            
+            &.content-pharagraph--secondary {
+                font-size: 18px;
+                margin-top: 16px;
+            }
+        }
+        
+        .section-container {
+            padding-top: 83px;
+        }
+
+        .buttons-panel-container button {
+            font-size: 24px;
+            padding-bottom: 11px;
+        }
+        .buttons-panel-container button:first-of-type {
+            padding-bottom: 11px;
+        }
+
+        .content-title {
+            font-size: 56px;
+            margin-top: 69px;
+        }
         
     }
 }
@@ -1316,6 +1422,22 @@
     .usual_suspects {
         .cta .variant-3 {            
             height: 380px;
+        }
+
+        .cta .variant-3 {            
+            
+
+            .red-string.mod-3 {
+                bottom: 27px;
+                transform: rotate(171deg);  
+                right: 3px;
+            }
+        }
+
+        .cta::before {
+            width: 339px;
+            left: 68px;
+            top: 119px;
         }
         
     }

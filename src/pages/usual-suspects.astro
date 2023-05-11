@@ -1,9 +1,38 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import CTA from "../components/CTA.astro";
+import { tabProps } from "../components/Tabs.astro";
+
+const tabs:tabProps[] = [
+    { label: "Tab 1" },
+    { label: "Tab 2" },
+    { label: "Tab 3" },
+]
 ---
 
 
 <Layout title="Usual Suspects" pageClass="usual_suspects" showISI={ false } >
-    <CTA variation={"variant-3"} linkURL=""  buttonLabel=""  content="" bypassModal ></CTA>
+  <CTA variation={"variant-3"} linkURL=""  buttonLabel=""  content="" bypassModal />
+    
+  <section class="section-container">
+    <div class="scrollable-content" >
+      <div class="buttons-panel-container" >
+        <button class="button button--tertiary">Common Misdiagnoses</button>
+        <hr class="hr_line" />
+        <button class="button button--tertiary">Risk of Wrongful Diagnosis</button>
+  
+      </div>
+    </div>
+
+    <h2 class="content-title">A DISEASE IN DISGUISE</h2>
+    <p class="content-pharagraph" >Delayed and misdiagnoses often happen in hypophosphatasia cases because of how well it masks itself other more common diseases</p>
+    <p class="content-pharagraph content-pharagraph--secondary" >Symptoms of hypophosphatasia are often common across other metabolic disorders and various diseases, which can impact timely and accurate diagnosis.</p>
+
+    <h3 class="section-title" ></h3>
+
+    <div class="file-background-container" ></div>
+
+  </section>
+
+    
 </Layout>
