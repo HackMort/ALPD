@@ -1330,6 +1330,19 @@
 
     }
 
+    &__subhead {
+        font-size: 1.3125rem;
+        font-weight: 700;
+        margin: 2rem 0;
+        font-family: 'Oswald';
+
+        @media screen and (min-width: 769px) {
+            font-size: 1.5rem;
+            border-bottom: 1px solid $color-carbon;
+            padding-bottom: 0.5rem;
+        }
+    }
+
     &__paragraph {
         margin: 1rem 0 0 0;
 
@@ -2054,7 +2067,7 @@
 
                     position: absolute;
                     z-index: 2;
-                    transform: translateY(-17%) translateX(-20%);
+                    transform: translateY(-24%) translateX(-38%);
 
                     @media screen and (max-width: 768px) {
                         display: none;
@@ -2068,6 +2081,11 @@
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+                }
+
+                @media screen and (min-width: 769px) {
+                    max-width: 75%;
+                    margin: 0 auto;
                 }
             }
 
@@ -2102,42 +2120,28 @@
             }
 
             &--title {
-                font-size: 1.5rem;
                 font-weight: 700;
                 margin-top: 2rem;
-                line-height: 2.5rem;
-
-                border-bottom: 1px solid $color-carbon;
-                max-width: 95%;
-
-                @media screen and (max-width: 768px) {
-                    max-width: 100%;
-                }
+                margin-bottom: 2rem;
 
                 &-desktop {
-                    display: none;
+                    font-size: 23px;
+                    font-weight: 700;
+                    border-bottom: 1px solid $color-carbon;
+                    line-height: 2;
+                    font-family: Oswald, sans-serif;
 
-                    @media screen and (min-width: 769px) {
-
-                        font-family: Oswald, sans-serif;
-                        display: block;
-                    }
-                }
-
-                &-mobile {
-                    display: block;
-                    font-size: 1.125rem;
-                    border-bottom: none;
-                    margin-top: 0;
-                    margin-bottom: 1rem;
-
-                    @media screen and (min-width: 769px) {
+                    @media screen and (max-width: 768px) {
                         display: none;
                     }
                 }
 
-                &--no-line {
-                    border-bottom: none;
+                &-mobile {
+                    display: none;
+
+                    @media screen and (max-width: 768px) {
+                        display: block;
+                    }
                 }
             }
 
@@ -2148,6 +2152,11 @@
             flex-direction: row;
             justify-content: flex-start;
             flex-wrap: wrap;
+            margin-bottom: 2rem;
+
+            @media screen and (min-width: 769px) {
+                justify-content: space-between;
+            }
         }
 
         &__study {
@@ -2168,6 +2177,29 @@
 
             @media screen and (min-width: 769px) {
                 align-items: center;
+            }
+
+            &--text-red-line {
+                position: relative;
+                width: 90%;
+                margin: 0;
+
+                @media screen and (min-width: 769px) {
+                    width: 30%;
+
+                    &::after {
+                        content: '';
+                        background-image: url(/assets/images/hpp-profile/study-red-line--desktop.png);
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        background-position: center;
+                        height: 1rem;
+                        width: 100%;
+
+                        position: absolute;
+                    }
+                }
+
             }
 
             &--head-text {
@@ -2209,11 +2241,24 @@
                 margin-bottom: 0 !important;
                 border-top: 1px solid $color-granite-grey;
                 width: 90%;
+
+                @media screen and (min-width: 769px) {
+                    max-width: 100%;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    @include flex-gap(2rem);
+                }
             }
 
             &--red-line-img {
                 margin-top: 1rem;
                 margin-bottom: 1rem;
+
+                &--mobile {
+                    @media screen and (min-width: 769px) {
+                        display: none;
+                    }
+                }
             }
 
             &--full-width {
@@ -2370,12 +2415,20 @@
                 padding: 0 0.5rem;
             }
 
+            @media screen and (min-width: 769px) {
+                margin: unset auto
+            }
+
             &--dagger {
                 &::before {
                     content: '†';
                     position: absolute;
                     left: 0px;
                     top: -5px;
+
+                    @media screen and (min-width: 769px) {
+                        left: -8px;
+                    }
                 }
             }
 
@@ -2385,24 +2438,10 @@
                     position: absolute;
                     left: 0px;
                     top: -5px;
-                }
-            }
-        }
 
-        &__impact {
-
-            &--title {
-                font-family: Oswald, sans-serif;
-                font-size: 1.5rem;
-                font-weight: 700;
-                margin-top: 2rem;
-                line-height: 2.5rem;
-
-                border-bottom: 1px solid $color-carbon;
-                margin-bottom: 2rem;
-
-                @media screen and (max-width: 768px) {
-                    border-bottom: none;
+                    @media screen and (min-width: 769px) {
+                        left: -8px;
+                    }
                 }
             }
         }
@@ -2441,13 +2480,10 @@
         }
 
         &__report {
-            &--title {
-                border-bottom: 1px solid $color-carbon;
-
-                @media screen and (max-width: 768px) {
-                    border-bottom: none;
-                }
-            }
+            background-image: url(/assets/images/hpp-profile/bg-paper-reports.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position: center;
 
             &--chart {
                 margin: 2rem 0 0.5rem 0;

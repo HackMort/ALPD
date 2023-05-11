@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import CTA from "../components/CTA.astro";
 import InternalNavigation from "../components/InternalNavigation.astro";
 import CaseFileModal from "../components/Case-Files/CaseFileModal.astro";
+import CaseFileModalDesktop from "../components/Case-Files/CaseFileModalDesktop.astro";
 
 const internalNavLinks = [
   { href: "hpp-definition", label: "HPP Definition", active: true },
@@ -129,12 +130,9 @@ const internalNavLinks = [
                 are also common in adults with hypophosphatasia, regardless of age
                 of onset.<sup>6,7*</sup>
               </p>
-              <div class="wrapper">
-                <span class="wrapper hpp-multisystemic__definition--condition">
-                  *Adults may have a history of childhood symptoms.<sup>6</sup>
-                </span>
-              </div>
-
+              <span class="hpp-multisystemic__definition--condition">
+                *Adults may have a history of childhood symptoms.<sup>6</sup>
+              </span>
               <h3
                 class="hpp-multisystemic__definition--title hpp-multisystemic__definition--title-desktop"
               >
@@ -160,7 +158,12 @@ const internalNavLinks = [
                 </picture>
 
                 <button
-                  class="button button--custom-bg case-files-modal-trigger"
+                  class="button button--custom-bg case-files-modal-trigger button--custom-bg--only-mobile"
+                  >View Patient case files</button
+                >
+
+                <button
+                  class="button button--custom-bg case-files-modal-trigger--desktop button--custom-bg--only-desktop"
                   >View Patient case files</button
                 >
               </div>
@@ -213,7 +216,9 @@ const internalNavLinks = [
               class="hpp-multisystemic__study hpp-multisystemic__study--line"
             >
               <h2 class="hpp-multisystemic__study--percentage">&gt50%</h2>
-              <p class="hpp-multisystemic__study--text">
+              <p
+                class="hpp-multisystemic__study--text hpp-multisystemic__study--text-red-line"
+              >
                 A separate study of patients with hypophosphatasia reported
                 their health problems <span
                   class="hpp-multisystemic__study--text-bold"
@@ -224,7 +229,7 @@ const internalNavLinks = [
               <img
                 src="/assets/images/hpp-profile/study-red-line.png"
                 alt="Study red line"
-                class="hpp-multisystemic__study--red-line-img"
+                class="hpp-multisystemic__study--red-line-img hpp-multisystemic__study--red-line-img--mobile"
               />
             </div>
           </article>
@@ -252,7 +257,7 @@ const internalNavLinks = [
           </p>
 
           <article class="wrapper hpp-multisystemic__impact">
-            <h3 class="hpp-multisystemic__impact--title">
+            <h3 class="hpp-multisystemic__impact--title hpp__profile__subhead">
               The multisystemic impact of hypophosphatasia
             </h3>
 
@@ -270,11 +275,13 @@ const internalNavLinks = [
           </article>
 
           <article class="hpp-multisystemic__report">
-            <h2 class="wrapper hpp-multisystemic__report--title">
+            <h3
+              class="wrapper hpp-multisystemic__report--title hpp__profile__subhead"
+            >
               Systems of the body that adults with HPP report signs/symptoms in<sup
                 >6</sup
               >:
-            </h2>
+            </h3>
 
             <picture>
               <source
@@ -308,10 +315,12 @@ const internalNavLinks = [
               </p>
             </div>
 
-            <h2 class="wrapper hpp-multisystemic__report--title">
+            <h3
+              class="wrapper hpp-multisystemic__report--title hpp__profile__subhead"
+            >
               A retrospective chart review studied the prevalence of common
               neurologic symptoms associated with hypophosphatasia19<sup>a</sup>
-            </h2>
+            </h3>
 
             <div class="wrapper">
               <picture>
@@ -444,7 +453,7 @@ const internalNavLinks = [
           </p>
 
           <article class="wrapper hpp-multisystemic__impact">
-            <h3 class="hpp-multisystemic__impact--title">
+            <h3 class="hpp-multisystemic__impact--title hpp__profile__subhead">
               The multisystemic impact of hypophosphatasia
             </h3>
 
@@ -462,7 +471,9 @@ const internalNavLinks = [
           </article>
 
           <article class="hpp-multisystemic__report">
-            <h2 class="wrapper hpp-multisystemic__report--title">
+            <h2
+              class="wrapper hpp-multisystemic__report--title hpp__profile__subhead"
+            >
               Systems of the body that children with HPP report signs/symptoms
               in <sup>13</sup>:
             </h2>
@@ -766,6 +777,7 @@ const internalNavLinks = [
 </Layout>
 
 <CaseFileModal />
+<CaseFileModalDesktop />
 
 <!-- Prevalence of HPP -->
 <section id="hpp-prevalence" class="section">
