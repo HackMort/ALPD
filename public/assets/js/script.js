@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { ToggleMobileMenu, MainMenu, StickyHeader } from './header.js'
-import { Tabs, showSection } from './tabs.js'
+import { Tabs, ShowSection } from './tabs.js'
 // import { cookieValidation, cookieFormValidation } from './validate.js'
 import { Accordions } from './accordions.js'
 import { stickyInternalNav, highlightActiveInternalNavOnScroll, setActiveIternalNavItemOnClick, setNavTopPosition } from './internal-nav.js'
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
    * @see public/assets/js/tabs.js
    * Call the function from tabs.js to show the section selected by select input
   */
-  showSection()
+  ShowSection()
 
   /**
    * Accordions
