@@ -1100,6 +1100,12 @@
 
     .identifying-hpp-page__alp-reference-range {
 
+        margin-bottom: 2rem;
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: 3.5rem;
+        }
+
         .cta {
             padding-top: 0;
 
@@ -1410,7 +1416,7 @@
 
             .footext-2 {
                 margin-bottom: 5rem;
-                
+
                 margin-bottom: 8rem;
                 max-width: 24.5rem;
                 margin-left: auto;
@@ -1442,12 +1448,112 @@
     }
 
     .identifying-hpp-page__testing {
-        
-        .testing__substrate-testing {
-            background-color: $color-dairy-cream;
+
+        .substrate-testing-wrapper {
+            margin-bottom: 30rem;
+
+            .asset__manilla {
+                display: none;
+            }
+
+            @media screen and (min-width: 768px) {
+                position: relative;
+
+                .asset__manilla {
+                    display: block;
+                    position: absolute;
+                    top: auto;
+
+                    bottom: -15.8125rem;
+                }
+            }
+
+            @media screen and (min-width: 1366px) {
+                margin-bottom: 19rem;
+            }
         }
 
-        padding-top: 5rem;
+        .testing__substrate-testing {
+            background: $color-dairy-cream;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            
+            position: relative;
+            z-index: 2;
+
+            .test__limitations {
+                position: absolute;
+                width: 100%;
+                max-width: 23.4375rem;
+
+                background-image: url("/assets/images/identifying-hpp/papers.png");
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+
+                right: 0;
+                bottom: -28rem;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    background-image: url("/assets/images/identifying-hpp/papers-tape.png");
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+
+                    width: 15.125rem;
+                    height: 4.75rem;
+
+                    top: -6px;
+                    left: 50%;
+
+                    transform: translateX(-50%);
+                }
+
+                .test__limitations-content {
+                    max-width: 14rem;
+                    margin-left: auto;
+                    margin-right: auto;
+
+                    padding: 6rem 0;
+
+                    ul {
+                        margin-left: 1rem;
+                    }
+
+                    p, li {
+                        line-height: 24px;
+                        font-weight: 400;
+                    }
+                }
+            }
+
+            @media screen and (min-width: 1024px) {
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+
+                    top: -3.375rem;
+
+                    height: 6.75rem;
+                    width: 16.25rem;
+
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+
+                &::before {
+                    background-image: url("/assets/images/identifying-hpp/tape-left-desktop.png");
+                    left: 0;
+                }
+
+                &::after {
+                    background-image: url("/assets/images/identifying-hpp/tape-right-desktop.png");
+                    right: 0;
+                }
+            }
+        }
+
+        // padding-top: 5rem;
 
         * {
             color: $color-carbon;
@@ -1456,8 +1562,88 @@
 
         .mobile-content {
 
+            &::before {
+                content: "";
+                background-image: url("/assets/images/identifying-hpp/testing-tab-bg-mobile.png");
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                width: 100%;
+                height: 4.625rem;
+            }
+
             @media screen and (min-width: 1024px) {
                 display: none;
+            }
+        }
+
+        .desktop-content {
+            display: none;
+            padding-top: 5rem;
+
+            max-width: 90rem;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+
+            @media screen and (min-width: 1024px) {
+                display: block;
+            }
+
+            .substrate-testing__title,
+            .substrate-testing__description {
+                text-align: center;
+            }
+
+            .substrate-testing__title {
+                font-size: 2.25rem;
+
+            }
+
+            .substrate-testing__description {
+                line-height: 25.2px;
+                max-width: 36.375rem;
+                margin-left: auto;
+                margin-right: auto;
+
+                margin-bottom: 1.5rem;
+            }
+
+            .substrate-testing__table {
+                width: 100%;
+                table-layout: fixed;
+
+                .substrate__name {
+                    font-size: 1.3125rem;
+                }
+
+                tbody,
+                thead {
+
+                    th,
+                    td {
+                        border: 1px solid $color-black;
+                    }
+                }
+
+                li {
+                    font-size: 1.125rem;
+                    line-height: 25.2px;
+                }
+
+                th {
+                    padding: .25rem 1rem;
+                    text-align: left;
+                    font-weight: 600;
+                    font-size: 1.3125rem;
+                }
+
+                td {
+                    padding: 1.25rem 1rem;
+                }
+
+                tfoot .mobile-table__footer {
+                    padding-bottom: 4rem;
+                }
             }
         }
 
@@ -1495,13 +1681,55 @@
             margin-bottom: .75rem;
         }
 
+        .substrate__limitations-list {
+
+            padding-left: 1rem;
+
+            li {
+                list-style-type: none;
+
+                font-weight: 400;
+                font-size: 1rem;
+                line-height: 22.4px;
+
+                position: relative;
+
+                &::before {
+                    content: "·";
+                    font-size: 2.375rem;
+                    line-height: 0;
+                    margin-right: .5rem;
+
+                    display: inline-block;
+
+                    top: 7px;
+                    left: -15px;
+
+                    position: absolute;
+                }
+
+                ul {
+                    margin-top: .75rem;
+                    padding-left: 2rem;
+                }
+            }
+        }
+
         .substrate-table__header {
             font-size: 1rem;
             font-weight: 600;
             line-height: 24px;
             margin-bottom: .75rem;
         }
-    } 
+
+        .mobile-table__footer {
+            font-weight: 400;
+            font-size: .875rem;
+            line-height: 18.2px;
+
+            padding-bottom: 5rem;
+        }
+    }
 }
 
 // -------------------------- Indentifying HPP page ---------------------------------------------------

@@ -7,7 +7,7 @@ Ex: .color--white { color: #FFFFFFF; } and
 @each $color-name,
 $color-value in $colors {
     .color--#{$color-name} {
-        color: $color-value;
+        color: $color-value !important;
         font-family: inherit;
         font-size: inherit;
         font-weight: inherit;
@@ -151,6 +151,10 @@ $color-value in $colors {
 
 .font--special-elite {
     font-family: 'Special Elite', cursive;
+}
+
+.font--veneer {
+    font-family: "veneer", sans-serif;
 }
 
 .lg\:bold {
