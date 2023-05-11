@@ -21,7 +21,8 @@ $colors: (
     "buff": #F3CC86,
     "cararra": #F8F8F5,
     "smoky-black": rgb(14 14 14 / 40%),
-    "taupe": #473831
+    "taupe": #473831,
+    "dairy-cream": #F9E3BE
 );
 
 $color-folder: map-get($colors, "folder");
@@ -42,3 +43,4 @@ $color-buff: map-get($colors, "buff");
 $color-cararra: map-get($colors, "cararra");
 $color-smoky-black: map-get($colors, "smoky-black");
 $color-taupe: map-get($colors, "taupe");
+$color-dairy-cream: map-get($colors, "dairy-cream");

@@ -1439,6 +1439,68 @@
             }
         }
     }
+
+    .identifying-hpp-page__testing {
+        
+        .testing__substrate-testing {
+            background-color: $color-dairy-cream;
+        }
+
+        padding-top: 5rem;
+
+        * {
+            color: $color-carbon;
+        }
+
+
+        .mobile-content {
+
+            @media screen and (min-width: 1024px) {
+                display: none;
+            }
+        }
+
+        .mobile-content-wrapper {
+            padding: 1.125rem 0;
+            border-top: 1px solid $color-black;
+        }
+
+        .substrate-testing__title {
+            font-family: "oswald", sans-serif;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 30px;
+
+            margin-bottom: 2rem;
+        }
+
+        .substrate-testing__description {
+            font-weight: 500;
+            line-height: 22.4px;
+        }
+
+        .substrate-testing__header {
+            font-family: "oswald", sans-serif;
+            font-weight: 700;
+            font-size: 1.3125rem;
+            line-height: 26.25px;
+        }
+
+        .substrate__name {
+            font-size: 1.125rem;
+            font-weight: 600;
+            line-height: 25.2px;
+            margin-bottom: .75rem;
+        }
+
+        .substrate-table__header {
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 24px;
+            margin-bottom: .75rem;
+        }
+    } 
 }
 
 // -------------------------- Indentifying HPP page ---------------------------------------------------
