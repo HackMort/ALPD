@@ -81,3 +81,27 @@ export function Tabs () {
     panels[tabLinks.indexOf(newTab)].hidden = false
   }
 }
+
+
+//Show the selected sections
+export function showSection() {
+  var select = document.getElementById("hpp-multisystemic-select");
+
+  select.addEventListener("change", function () {
+
+    var selectedOption = select.options[select.selectedIndex].value;
+
+    // Oculta todas las secciones
+    var sections = document.getElementsByTagName("section");
+    for (var i = 0; i < sections.length; i++) {
+        sections[i].setAttribute("aria-hidden", "true");
+        sections[i].setAttribute("hidden", "");
+    }
+
+    // Muestra la sección correspondiente al valor seleccionado
+    var targetSection = document.getElementById(selectedOption);
+    targetSection.setAttribute("aria-hidden", "false");
+    targetSection.removeAttribute("hidden");
+    targetSection.focus();
+  });
+}

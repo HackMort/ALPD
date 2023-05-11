@@ -1297,6 +1297,26 @@
         @include media('tablet') {
             text-align: center;
         }
+
+        &--desktop {
+            display: none;
+
+            @include media('tablet') {
+                display: block;
+            }
+        }
+
+        &--mobile {
+            display: block;
+            color: $color-blue;
+            margin-top: 1rem;
+            padding-top: 4rem;
+
+            @include media('tablet') {
+                display: none;
+            }
+        }
+
     }
 
     &__paragraph {
@@ -1973,26 +1993,6 @@
     .hpp-multisystemic {
         margin-top: 2rem;
 
-        &__title {
-            margin-bottom: 2rem;
-
-            &--mobile {
-                display: block;
-
-                @media screen and (min-width: 769px) {
-                    display: none;
-                }
-            }
-
-            &--desktop {
-                display: none;
-
-                @media screen and (min-width: 769px) {
-                    display: block;
-                }
-            }
-        }
-
         &__definition {
             display: flex;
             flex-direction: row;
@@ -2183,6 +2183,7 @@
                 padding-top: 0;
 
                 @media screen and (max-width: 769px) {
+                    display: none;
                     margin-left: 0;
                 }
             }

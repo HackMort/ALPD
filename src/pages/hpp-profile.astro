@@ -69,7 +69,7 @@ const internalNavLinks = [
 
   <!-- Multisystemic Symptoms and Disease Burden -->
   <section id="hpp-multisystemic" class="section hpp-multisystemic">
-    <h2 class="hpp__profile__title hpp__profile__title--desktop">
+    <h2 class="wrapper hpp__profile__title hpp__profile__title--desktop">
       How hypophosphatasia CAN cause harm
     </h2>
     <article class="hpp-multisystemic__tabs">
@@ -97,9 +97,14 @@ const internalNavLinks = [
         <option value="multisystemic3">Neonates/Infants</option>
       </select>
 
+      <h2 class="wrapper hpp__profile__title hpp__profile__title--mobile">
+        How hypophosphatasia CAN cause harm
+      </h2>
+
       <!-- Tab adults content -->
       <section
         id="multisystemic1"
+        data-target="multisystemic1"
         role="tabpanel"
         aria-labelledby="tab1"
         aria-hidden="false"
@@ -226,6 +231,7 @@ const internalNavLinks = [
       <!-- Tab children content -->
       <section
         id="multisystemic2"
+        data-target="multisystemic2"
         role="tabpanel"
         aria-labelledby="tab2"
         aria-hidden="true"
@@ -322,6 +328,7 @@ const internalNavLinks = [
       <!-- Tab neonates/infants content -->
       <section
         id="multisystemic3"
+        data-target="multisystemic3"
         role="tabpanel"
         aria-labelledby="tab3"
         aria-hidden="true"
