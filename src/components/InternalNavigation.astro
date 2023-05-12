@@ -14,7 +14,7 @@ const { items } = Astro.props;
 {
     items && (
         <nav class="internal__nav">
-            <div class="wrapper wrapper--only-left">
+            <div class="wrapper wrapper--only-left md:no-wrapper">
                 <ul class="internal__nav_list">
                 {items.map((item) => {
                     const classes = item.classes ? item.classes.join(" ") : "";

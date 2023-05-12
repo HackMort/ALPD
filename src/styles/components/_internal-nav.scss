@@ -61,8 +61,10 @@
         list-style-type: none;
         flex: 0 0 auto;
 
-        &:first-of-type {
-            padding-left: 0;
+        @media screen and (max-width: 500px) {
+            &:first-of-type {
+                padding-left: 0;
+            }
         }
 
         &:not(:first-of-type) {

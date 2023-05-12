@@ -87,3 +87,10 @@
         max-width: max-content
     }
 }
+
+.md\:no-wrapper {
+    @media screen and (min-width: 768px) {
+        max-width: max-content;
+        margin: 0 auto;
+    }
+}
