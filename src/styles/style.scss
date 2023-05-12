@@ -1466,6 +1466,12 @@
                     top: auto;
 
                     bottom: -15.8125rem;
+
+                    img {
+                        max-height: 89.3125rem;
+                        object-fit: contain;
+                        object-position: left;
+                    }
                 }
             }
 
@@ -1748,6 +1754,11 @@
                 @media screen and (min-width: 768px) {
                     text-align: center;
                 }
+
+                @media screen and (min-width: 1024px) {
+                    font-size: 2.25rem;
+                    line-height: 45px;
+                }
             }
 
             .genetic-testing-role__paragraph {
@@ -1765,6 +1776,22 @@
                         max-width: 24.0625rem;
                     }
                 }
+
+                @media screen and (min-width: 1024px) {
+
+                    &:first-of-type {
+                        font-size: 1.3125rem;
+                        line-height: 29.4px;
+                        max-width: 24.5625rem;
+                    }
+
+                    &:nth-child(3),
+                    &:last-of-type {
+                        max-width: 27.0625rem;
+                        font-size: 1.125rem;
+                        line-height: 25.2px;
+                    }
+                }
             }
 
             .line-container {
@@ -1772,6 +1799,26 @@
                 width: 100%;
 
                 height: 3rem;
+
+                &.first {
+                    height: 1rem;
+                }
+
+                &.second {
+                    height: 4rem;
+
+                    @media screen and (min-width: 1024px) {
+                        height: 12rem;
+                    }
+                }
+
+                &.third {
+                    height: 5rem;
+
+                    @media screen and (min-width: 768px) {
+                        height: 6rem;
+                    }
+                }
 
                 .red-string {
                     position: absolute;
@@ -1784,13 +1831,17 @@
 
                     &.first {
                         top: auto;
-                        bottom: 0;
+                        bottom: 10px;
 
-                        transform: translateX(-50%) rotate(-15deg);
+                        transform: translateX(-50%) rotate(-8deg);
                     }
 
                     &.second {
                         transform: translate(-50%, -50%) rotate(-3deg);
+
+                        @media screen and (min-width: 768px) {
+                            transform: translate(-50%, -50%) rotate(3deg);
+                        }
                     }
 
                     &.third {
@@ -1841,21 +1892,75 @@
 
                     p {
                         line-height: 1.5rem;
+
+                        @media screen and (min-width: 1024px) {
+                            font-size: 1.125rem;
+                            font-weight: 500;
+                            line-height: 25.2px;
+                        }
                     }
 
                     @media screen and (min-width: 768px) {
                         max-width: 32.5rem;
+                    }
+
+                    @media screen and (min-width: 1024px) {
+                        max-width: 35.5rem;
                     }
                 }
             }
 
             .additional-limitations {
 
+                @media screen and (min-width: 768px) {
+                    display: flex;
+                    justify-content: center;
+                }
+
                 .additional-limitations__left {
                     margin-bottom: 1.5rem;
+
+                    @media screen and (min-width: 768px) {
+                        flex: 0 0 auto;
+                        margin-bottom: 0;
+                    }
+                }
+
+                .additional-limitations__rigth {
+                    @media screen and (min-width: 768px) {
+                        max-width: 24.8125rem;
+                    }
+
+                    @media screen and (min-width: 1440px) {
+                        margin-left: 6rem;
+                    }
                 }
 
                 .additional-limitations__family {
+
+                    @media screen and (min-width: 768px) {
+                        height: 100%;
+                    }
+
+                    @media screen and (min-width: 1024px) {
+                        position: relative;
+                        
+                        &::before {
+                            position: absolute;
+                            content: url("/assets/images/identifying-hpp/family-members-pic.png");
+
+                            left: -4rem;
+                            top: -4.5rem;
+                        }
+
+                        &::after {
+                            position: absolute;
+                            content: url("/assets/images/identifying-hpp/family-members-pin.png");
+
+                            top: -5.75rem;
+                            left: 4rem;
+                        }
+                    }
 
                     .additional-limitations__family-content {
                         background-image: url("/assets/images/identifying-hpp/family-members-bg.png");
@@ -1872,6 +1977,11 @@
                         position: relative;
 
                         margin-top: 2rem;
+
+                        @media screen and (min-width: 768px) {
+                            height: 100%;
+                            margin-top: 0;
+                        }
 
                         &::before {
                             content: "";
@@ -1893,6 +2003,11 @@
                 .additional-limitations__title {
                     font-weight: 700;
                     margin-bottom: 1.5rem;
+
+                    @media screen and (min-width: 1024px) {
+                        font-size: 1.125rem;
+                        line-height: 25.2px;
+                    }
                 }
 
                 .additional-limitations__list {
@@ -1904,6 +2019,12 @@
                         &::marker {
                             color: $color-white;
                         }
+
+                        @media screen and (min-width: 1024px) {
+                            font-size: 1.125rem;
+                            font-weight: 500;
+                            line-height: 25.2px;
+                        }
                     }
                 }
             }
@@ -1914,6 +2035,97 @@
                     margin-bottom: 1.5rem;
                     line-height: 22.4px;
                 }
+
+                .has-vus__title {
+                    @media screen and (min-width: 1024px) {
+                        max-width: 543px;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                }
+
+                .has-vus__classification {
+                    @media screen and (min-width: 1024px) {
+                        margin-left: auto;
+                        margin-right: auto;
+
+                        max-width: 33.8125rem;
+                        text-align: center;
+
+                        font-size: 1.125rem;
+                        font-weight: 500;
+                        line-height: 25.2px;
+                    }
+                }
+
+                .has-vus__quote {
+                    @media screen and (min-width: 1024px) {
+
+                        max-width: 36.875rem;
+                        margin-left: auto;
+                        margin-right: auto;
+
+                        p {
+                            &:first-of-type {
+                                font-size: 1.25rem;
+                                line-height: 30px;
+                            }
+
+                            &:nth-child(2) {
+                                font-size: 1.125rem;
+                                font-weight: 500;
+                                line-height: 25.2px;
+                            }
+
+                            &:last-of-type {
+                                font-size: 1.25rem;
+                                line-height: 30px;
+
+                                max-width: 28.375rem;
+                                margin-left: auto;
+                                margin-right: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .identifying-hpp-page__multidisciplinary-care-team {
+
+        .calling-for-backup__title {
+            text-transform: uppercase;
+            font-family: "oswald", sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            line-height: 30px;
+            margin-bottom: 1rem;
+
+            @media screen and (min-width: 768px) {
+                text-align: center;
+            }
+
+            @media screen and (min-width: 1024px) {
+                font-size: 2.25rem;
+                line-height: 45px;
+            }
+        }
+
+        .calling-for-backup__tabs {
+            background-color: transparent;
+
+            a {
+                font-size: 1rem;
+                color: $color-white;
+                font-weight: 600;
+                font-family: "oswald", sans-serif;
+                border: none;
+            }
+
+            [aria-selected] {
+                background-color: transparent;
+                border: none;
             }
         }
     }

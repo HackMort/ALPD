@@ -431,7 +431,7 @@ const internalNavLinks = [
                     While genetic testing for hypophosphatasia can be a useful tool, it remains an evolving science with certain limitations and challenges.
                 </p>
             </div>
-           <div class="line-container">
+           <div class="line-container first">
             <div class="red-string first"></div>
            </div>
             <div class="kpi">
@@ -447,10 +447,10 @@ const internalNavLinks = [
                     </p>
                 </div>
             </div>
-            <div class="line-container">
+            <div class="line-container second">
                 <div class="red-string second"></div>
             </div>
-            <article class="additional-limitations">
+            <article class="additional-limitations md:wrapper">
                 <div class="additional-limitations__left">
                     <div class="additional-limitations__family">
                         <div class="additional-limitations__family-content">
@@ -461,7 +461,7 @@ const internalNavLinks = [
                     </div>
                 </div>
                 <div class="additional-limitations__rigth">
-                    <div class="wrapper">
+                    <div class="wrapper xl:no-wrapper">
                         <p class="additional-limitations__title color--buff">
                             Additional limitations<sup>17,23,24</sup>
                         </p>
@@ -479,7 +479,7 @@ const internalNavLinks = [
                     </div>
                 </div>
             </article>
-            <div class="line-container">
+            <div class="line-container third">
                 <div class="red-string third"></div>
             </div>
             <div class="has-vus">
@@ -487,7 +487,7 @@ const internalNavLinks = [
                     <h2 class="has-vus__title white-title color--white">
                         If your patient has a variant of uncertain significance (VUS)
                     </h2>
-                    <p class="color--white">
+                    <p class="color--white has-vus__classification">
                         If the classification of the variant is VUS, it means that at the time of interpretation, there was insufficient evidence to determine if the variant was related to disease or not.<sup>28</sup>
                     </p>
                     <div class="has-vus__quote">
@@ -509,5 +509,55 @@ const internalNavLinks = [
         class="section identifying-hpp-page__multidisciplinary-care-team"
         id="multidisciplinary-care-team"
     >
+
+    <article class="calling-for-backup">
+
+        <h2 class="calling-for-backup__title white-title">
+            calling for backup
+        </h2>
+
+        <p class="calling-for-backup__text">
+            Uncovering hypophosphatasia unlocks a world of answers for your patients and validates their long journey of perplexing symptoms. Once you’ve diagnosed hypophosphatasia, assembling a team of professionals to develop a comprehensive care plan for your patients.
+        </p>
+
+        <div class="calling-for-backup__grafic">
+
+            <ul role="tablist" class="calling-for-backup__tabs">
+                <li role="presentation">
+                  <!--active one -->
+                  <a href="#adults-older-children-panel" role="tab" id="adults-older-children-tab" aria-selected="true">Adults/older children</a>
+                </li>
+                <li role="presentation">
+                  <a href="#neotanes-infants-panel" role="tab" id="neotanes-infants-tab" tabindex="-1">Neonates/infants</a>
+                </li>
+            </ul>
+              <section
+                id="adults-older-children-panel"
+                role="tabpanel"
+                aria-labelledby="adults-older-children-tab"
+                aria-hidden="false"
+                tabindex="-1"
+              >
+              <picture>
+                <img src="/assets/images/identifying-hpp/adults-older-children-grafic.png" alt="">
+              </picture>
+              </section>
+              <section
+                id="neotanes-infants-panel"
+                role="tabpanel"
+                aria-labelledby="neotanes-infants-tab"
+                aria-hidden="true"
+                tabindex="-1"
+                hidden
+              >
+              <picture>
+                <img src="/assets/images/identifying-hpp/neonates-infants-grafic.png" alt="">
+              </picture>
+              </section>
+
+        </div>
+
+    </article>
+
     </section>
 </Layout>
