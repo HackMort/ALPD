@@ -46,6 +46,10 @@ $color-value in $colors {
     }
 }
 
+.mb-1 {
+    margin-bottom: 1rem !important;
+}
+
 .md\:mb-1 {
     margin-bottom: 1rem !important;
 }
@@ -131,6 +135,12 @@ $color-value in $colors {
     text-align: center !important;
 }
 
+.md\:text--center {
+    @media screen and (min-width: 768px) {
+        text-align: center !important;
+    }
+}
+
 .lg\:text--center {
     @media screen and (min-width: 1024px) {
         text-align: center !important;
@@ -163,4 +173,8 @@ $color-value in $colors {
         font-family: inherit;
         font-size: inherit;
     }
+}
+
+.font--500 {
+    font-weight: 500;
 }
