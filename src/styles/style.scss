@@ -1533,7 +1533,7 @@
                 background-size: 100% 100%;
                 background-color: $color-white;
 
-                padding: 1rem 0;
+                padding: 4rem 0;
             }
 
             &__title {
@@ -1819,8 +1819,8 @@
 
                 @media screen and (min-width: 769px) {
                     width: calc(100vw * 2);
-                    top: 145px;
-                    transform: translateX(-50%) rotate(353deg);
+                    top: 0;
+                    transform: translateX(-32%) rotate(353deg);
                     left: 50%;
                 }
             }
@@ -1835,8 +1835,8 @@
                 @media screen and (min-width: 769px) {
                     height: 4rem;
                     position: absolute;
-                    top: 6rem;
-                    left: 63%;
+                    top: 2rem;
+                    left: 50%;
                 }
             }
 
@@ -1849,31 +1849,18 @@
                 background-position: center;
                 padding: 10rem 4rem 4rem 4rem;
                 max-width: 23rem;
-                margin: auto;
 
                 @media screen and (min-width: 769px) {
+                    background-position: top;
                     padding: 6rem 4rem 4rem 4rem;
-                    max-width: 27rem;
+                    max-width: 22rem;
+                    position: relative;
+                    z-index: 2;
                 }
 
-                /* &::before {
-                    content: '';
-                    height: 2px;
-                    background-color: $color-red;
-                    position: absolute;
-                    width: calc(100% + 2rem);
-                    left: 0;
-                    transform-origin: left;
-                    transform: rotate(341deg);
-
-                    @media screen and (min-width: 769px) and (max-width: 1024px) {
-                        transform: rotate(350deg);
-                    }
-
-                    @media screen and (min-width: 1025px) {
-                        transform: rotate(355deg);
-                    }
-                } */
+                @media screen and (max-width: 768px) {
+                    margin: auto;
+                }
 
                 &--text-red {
                     color: $color-cinnabar;
@@ -1896,6 +1883,7 @@
                 flex-direction: row;
                 justify-content: center;
                 @include flex-gap(5rem);
+                margin: auto;
             }
         }
 
@@ -2008,6 +1996,13 @@
                 }
             }
         }
+
+        &__number-bg {
+            background-image: url(/assets/images/hpp-profile/number-bg.png);
+            background-repeat: no-repeat;
+            background-position: center left;
+            max-width: 100%;
+        }
     }
 
     #hpp-prevalence {
@@ -2063,14 +2058,34 @@
                     background-size: contain;
                     background-position: center;
                     height: 80px;
-                    width: 50px;
+                    width: 35px;
 
                     position: absolute;
                     z-index: 2;
-                    transform: translateY(-24%) translateX(-38%);
+                    left: 20%;
+                    top: -4%;
+
 
                     @media screen and (max-width: 768px) {
                         display: none;
+                    }
+
+                }
+
+                &--adolescents {
+                    &::before {
+                        width: 70px;
+                        left: 5%;
+                        top: -7%;
+                    }
+                }
+
+                &--infants {
+                    &::before {
+                        width: 70px;
+                        left: 50%;
+                        top: -5%;
+                        transform: rotate(-20deg);
                     }
                 }
 
@@ -2084,7 +2099,6 @@
                 }
 
                 @media screen and (min-width: 769px) {
-                    max-width: 75%;
                     margin: 0 auto;
                 }
             }
@@ -2094,17 +2108,23 @@
                 z-index: 1;
                 top: -15px;
                 left: -40px;
-                width: 100%;
+                width: 90%;
+                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+                @media screen and (min-width: 769px) {
+                    left: 0;
+                }
 
                 &-bg {
                     position: absolute;
                     z-index: 0;
-                    max-width: 90%;
+                    max-width: 80%;
+                    left: 60%;
+                    top: 0;
+                    transform: translateX(-50%);
 
                     @media screen and (max-width: 768px) {
                         top: 0;
-                        left: 50%;
-                        transform: translateX(-50%);
                         width: 50%;
                     }
                 }
@@ -2142,6 +2162,24 @@
                     @media screen and (max-width: 768px) {
                         display: block;
                     }
+                }
+
+                &-no-line {
+                    @media screen and (min-width: 769px) {
+                        border-bottom: none;
+                        max-width: 55%;
+                        line-height: 2rem;
+                    }
+                }
+            }
+
+            &--button {
+                @media screen and (min-width: 769px) {
+                    background-image: url('/assets/images/hpp-profile/patients-file-tape.png');
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    background-position: center;
+                    padding: 1rem 1.5rem;
                 }
             }
 
@@ -2480,11 +2518,6 @@
         }
 
         &__report {
-            background-image: url(/assets/images/hpp-profile/bg-paper-reports.png);
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            background-position: center;
-
             &--chart {
                 margin: 2rem 0 0.5rem 0;
 
@@ -2531,6 +2564,16 @@
                     }
                 }
             }
+
+            &--bg {
+                @media screen and (min-width: 769px) {
+                    background-image: url(/assets/images/hpp-profile/bg-paper-reports.png);
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    background-position: top left;
+                }
+
+            }
         }
 
         &__curiosities {
@@ -2570,6 +2613,13 @@
                 @media screen and (min-width: 769px) {
                     text-align: left;
                 }
+            }
+        }
+
+        &__survival {
+            &--title {
+                font-weight: 700;
+                margin-bottom: 1rem;
             }
         }
 
