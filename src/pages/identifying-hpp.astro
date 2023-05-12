@@ -2,6 +2,7 @@
 import CTA from "../components/CTA.astro";
 import InternalNavigation from "../components/InternalNavigation.astro";
 import Layout from "../layouts/Layout.astro";
+import CommonHeroPage from '../components/CommonHeroPage.astro';
 const internalNavLinks = [
     {
         href: "alp-reference-range",
@@ -21,6 +22,13 @@ const internalNavLinks = [
     pageClass="identifying-hpp-page"
     showISI={false}
 >
+    <CommonHeroPage title="Identifying hpp" classes="identifying-hpp-page__hero">
+        <picture slot="image-hero" data-image-hero>
+            <source srcset="/assets/images/identifying-hpp/identifying-hpp-hero-desktop.png" media="(min-width: 768px)">
+            <source srcset="/assets/images/identifying-hpp/identifying-hpp-hero-tablet.png" media="(min-width: 500px)">
+            <img src="/assets/images/identifying-hpp/identifying-hpp-hero-mobile.png" alt="">
+        </picture>
+    </CommonHeroPage>
     {internalNavLinks && <InternalNavigation items={internalNavLinks} />}
 
     <section

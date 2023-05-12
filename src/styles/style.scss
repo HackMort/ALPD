@@ -26,6 +26,7 @@
 @import './components/alpd-video.scss';
 @import './components/references.scss';
 @import './components/detective-form.scss';
+@import './components/common-page-hero';
 @import './components/cta.scss';
 @import './components/_patient-case-file.scss';
 @import './components/_case-file-modal.scss';
@@ -1098,6 +1099,44 @@
 
 // -------------------------- Indentifying HPP page ---------------------------------------------------
 .identifying-hpp-page {
+
+    .identifying-hpp-page__hero {
+
+        .common-page-hero__title {
+            right: .5rem;
+            top: .5rem;
+
+            transform: rotate(-3deg);
+
+            @media screen and (min-width: 768px) {
+                right: auto;
+                left: 3rem;
+
+                top: 50%;
+                transform: translateY(-50%) rotate(7deg);
+            }
+
+            @media screen and (min-width: 1024px) {
+                left: 4rem;
+            }
+
+            @media screen and (min-width: 1366px) {
+                left: 7rem;
+            }
+        }
+
+        .red-string {
+            position: absolute;
+
+            left: 50%;
+            bottom: 3rem;
+            transform: translateX(-50%) rotate(21deg);
+
+            @media screen and (min-width: 768px) {
+                display: none;
+            }
+        }
+    }
 
     .identifying-hpp-page__alp-reference-range {
 
