@@ -7,6 +7,7 @@ $colors: (
     "folder": #F3E6C3,
     "red": #CF1C0A,
     "blue": #526CAD,
+    "light-blue": #7F94CA,
     "green": #617D44,
     "platinum": #DFE2E9,
     "envelop": #E2A842,
@@ -44,3 +45,4 @@ $color-cararra: map-get($colors, "cararra");
 $color-smoky-black: map-get($colors, "smoky-black");
 $color-taupe: map-get($colors, "taupe");
 $color-dairy-cream: map-get($colors, "dairy-cream");
+$color-light-blue: map-get($colors, "light-blue");

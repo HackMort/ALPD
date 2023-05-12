@@ -1483,7 +1483,7 @@
         .testing__substrate-testing {
             background: $color-dairy-cream;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            
+
             position: relative;
             z-index: 2;
 
@@ -1526,7 +1526,8 @@
                         margin-left: 1rem;
                     }
 
-                    p, li {
+                    p,
+                    li {
                         line-height: 24px;
                         font-weight: 400;
                     }
@@ -1534,6 +1535,7 @@
             }
 
             @media screen and (min-width: 1024px) {
+
                 &::before,
                 &::after {
                     content: "";
@@ -1766,7 +1768,7 @@
 
                     margin-left: auto;
                     margin-right: auto;
-                    
+
                     &:first-of-type {
                         max-width: 21.5625rem;
                     }
@@ -1944,7 +1946,7 @@
 
                     @media screen and (min-width: 1024px) {
                         position: relative;
-                        
+
                         &::before {
                             position: absolute;
                             content: url("/assets/images/identifying-hpp/family-members-pic.png");
@@ -2013,7 +2015,7 @@
                 .additional-limitations__list {
                     margin-left: 1.5rem;
 
-                    li{
+                    li {
                         line-height: 22.4px;
 
                         &::marker {
@@ -2094,26 +2096,68 @@
 
     .identifying-hpp-page__multidisciplinary-care-team {
 
-        .calling-for-backup__title {
-            text-transform: uppercase;
-            font-family: "oswald", sans-serif;
-            font-weight: 700;
-            font-size: 1.5rem;
-            line-height: 30px;
-            margin-bottom: 1rem;
+        .calling-for-backup {
+            .calling-for-backup__title {
+                text-transform: uppercase;
+                font-family: "oswald", sans-serif;
+                font-weight: 700;
+                font-size: 1.5rem;
+                line-height: 30px;
+                margin-bottom: 1rem;
 
-            @media screen and (min-width: 768px) {
-                text-align: center;
+                color: $color-white;
+
+                @media screen and (min-width: 768px) {
+                    text-align: center;
+                }
+
+                @media screen and (min-width: 1024px) {
+                    font-size: 2.25rem;
+                    line-height: 45px;
+                }
             }
 
-            @media screen and (min-width: 1024px) {
-                font-size: 2.25rem;
-                line-height: 45px;
+            .calling-for-backup__text {
+                color: $color-white;
+                line-height: 22.4px;
+
+                margin-bottom: 3rem;
+            }
+        }
+
+        [role=tabpanel] {
+            max-width: 42.1875rem;
+            margin-left: auto;
+            margin-right: auto;
+
+            p {
+                @media screen and (min-width: 768px) {
+                    font-size: 1.125rem;
+                    font-weight: 500;
+                    line-height: 25.2px;
+                    max-width: 25rem;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
             }
         }
 
         .calling-for-backup__tabs {
             background-color: transparent;
+            border-bottom: 1px solid $color-light-blue;
+
+            padding: 0;
+            justify-content: center;
+
+            overflow: initial;
+            align-items: flex-end;
+
+            li {
+                height: 2rem;
+                @media screen and (min-width: 768px) {
+                    height: 2.5rem;
+                }
+            }
 
             a {
                 font-size: 1rem;
@@ -2121,11 +2165,29 @@
                 font-weight: 600;
                 font-family: "oswald", sans-serif;
                 border: none;
+
+                padding: 0;
+
+                @media screen and (min-width: 768px) {
+                    font-size: 1.5rem;
+                }
             }
 
             [aria-selected] {
                 background-color: transparent;
                 border: none;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    width: 100%;
+                    height: .3125rem;
+                    background: $color-red;
+
+                    position: absolute;
+                    left: 0;
+                    bottom: -3px;
+                }
             }
         }
     }
