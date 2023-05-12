@@ -1450,6 +1450,8 @@
 
     .identifying-hpp-page__testing {
 
+        margin-bottom: 3rem;
+
         .substrate-testing-wrapper {
             margin-bottom: 30rem;
 
@@ -2096,6 +2098,24 @@
 
     .identifying-hpp-page__multidisciplinary-care-team {
 
+        .line-container {
+            display: none;
+            position: relative;
+
+            @media screen and (min-width: 768px) {
+                display: block;
+                height: 4rem;
+
+                .red-string {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+
+                    transform: translate(-50%, -50%) rotate(4deg);
+                }
+            }
+        }
+
         .calling-for-backup {
             .calling-for-backup__title {
                 text-transform: uppercase;
@@ -2122,6 +2142,14 @@
                 line-height: 22.4px;
 
                 margin-bottom: 3rem;
+
+                @media screen and (min-width: 768px) {
+                    max-width: 35.5625rem;
+                    text-align: center;
+                    line-height: 25.2px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
             }
         }
 
@@ -2154,6 +2182,7 @@
 
             li {
                 height: 2rem;
+
                 @media screen and (min-width: 768px) {
                     height: 2.5rem;
                 }
@@ -2188,6 +2217,16 @@
                     left: 0;
                     bottom: -3px;
                 }
+            }
+        }
+    }
+
+    .cta-section {
+
+        .cta {
+            @media screen and (min-width: 768px) {
+                padding-top: 0;
+                padding-bottom: 4.5175rem;
             }
         }
     }
