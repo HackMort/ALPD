@@ -26,9 +26,15 @@
 
     .internal__nav_list {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         padding: .75rem 0;
         position: relative;
+
+        overflow-x: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
 
         @media screen and (min-width: 768px) {
             padding-top: 3rem;
@@ -53,6 +59,11 @@
     .internal__nav_list_item {
         padding: .25rem 2rem;
         list-style-type: none;
+        flex: 0 0 auto;
+
+        &:first-of-type {
+            padding-left: 0;
+        }
 
         &:not(:first-of-type) {
             border-left: 1px solid $color-red;
