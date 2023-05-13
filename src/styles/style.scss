@@ -1108,11 +1108,12 @@
 
 /* 404 */
 .page__not_found {
-    .page__not_found {
+    
         text-align: center;
 
-        &__title {
-
+    main{
+        overflow-x: unset;
+    }
             &__title {
                 width: 9rem;
                 margin: auto;
@@ -1129,7 +1130,7 @@
 
             }
 
-            &__text {
+
 
                 &__text {
                     color: $color-white;
@@ -1142,8 +1143,12 @@
                     @media screen and (min-width:700px) {
                         margin-bottom: 3rem;
                     }
-
-                    p {
+                }
+                
+                
+                .first-child {
+                    margin-bottom: 2rem;
+                }
                         p {
                             font-family: 'Barlow';
                             font-style: normal;
@@ -1164,28 +1169,32 @@
                             }
                         }
 
-                        :first-child {
-                            :first-child {
-                                margin-bottom: 2rem;
-                            }
-                        }
+                        
+                        
 
-                        .button {
+                    
                             .button {
-                                margin: auto;
-                                margin-bottom: 8.0938rem;
-                                position: relative;
-                                z-index: 2;
-                            }
+                                &.modifier{
 
-                            .reference {
+                                    margin: auto;
+                                    margin-bottom: 117px;
+                                    position: relative;
+                                    z-index: 2;
+                                    
+                                    @media screen and (min-width:700px) {
+                                        margin-bottom: 168px;
+                                    }
+                                }
+                                }
+
+                            
                                 .reference {
                                     position: relative;
                                     max-width: 90rem;
                                     margin: auto;
                                 }
 
-                                &__image {
+                                
                                     &__image {
                                         position: absolute;
                                         min-width: 27.6944rem;
@@ -1196,9 +1205,9 @@
                                         @media screen and (min-width:500px) {
                                             left: 0;
                                         }
+                                    
 
-
-                                        @media screen and (min-width:800px) {
+                                        @media screen and (min-width:896px) {
                                             max-width: 51.5356rem;
                                             /* top: -23.3125rem; */
                                             top: -19.3125rem;
@@ -1211,67 +1220,49 @@
                                         }
                                     }
 
-                                    .red-string {
+                                    
                                         .red-string {
-                                            position: absolute;
-                                            transform: rotate(7.51deg);
-                                            top: 22.4375rem;
+                                            &.modifier{
+
+                                                position: absolute;
+                                                transform: rotate(6.51deg);
+                                            top: 21.6875rem;
                                             width: 100vw;
-
-                                            @media screen and (min-width:400px) {
-                                                transform: rotate(5.51deg);
-                                                top: 21.6875rem;
-                                            }
-
-
+                                            
+                                           
+                                            
+                                            
                                             @media screen and (min-width:700px) {
                                                 transform: rotate(-4.49deg);
-                                                top: 20.8125rem;
+                                                top: 21.8125rem;
                                                 left: -1.8125rem;
                                                 width: 105vw;
                                             }
-
-
+                                            
+                                            
                                             @media screen and (min-width:1500px) {
                                                 transform: rotate(-3.49deg);
                                                 top: 14.375rem;
-                                                left: -21rem;
+                                                left: -28rem;
                                                 width: 362vw;
                                             }
-
-
-                                            @media screen and (min-width:1690px) {
-                                                transform: rotate(-2.49deg);
-                                                top: 15.6875rem;
-                                                left: -21rem;
-                                                width: 362vw;
-                                            }
-
-
+                                            
                                             @media screen and (min-width:2020px) {
                                                 top: 12.5rem;
                                                 left: -43.1875rem;
                                                 width: 423vw;
                                             }
-
-
+                                            
+                                            
                                             @media screen and (min-width:2340px) {
                                                 top: 14.4375rem;
                                                 transform: rotate(-1.49deg);
                                             }
                                         }
+                                        }
                                     }
-
-                                }
-
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+                                    
+                                
 
 /* HPP Profile Page */
 .hpp__profile {
