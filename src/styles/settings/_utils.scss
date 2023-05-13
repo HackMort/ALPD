@@ -17,8 +17,8 @@ $color-value in $colors {
 
 .sz-500\:color--saffron-mango {
     @media screen and (min-width: 500px) {
-       color: $color-saffron-mango;
-     }
+        color: $color-saffron-mango;
+    }
 }
 
 .mb-0 {
@@ -27,7 +27,7 @@ $color-value in $colors {
 
 .md\:mb-2 {
     @media screen and (min-width: 768px) {
-       margin-bottom: 2rem !important;
+        margin-bottom: 2rem !important;
     }
 }
 
@@ -132,4 +132,20 @@ $color-value in $colors {
 
 .font--special-elite {
     font-family: 'Special Elite', cursive;
+}
+
+.text--center {
+    text-align: center;
+}
+
+.text--left {
+    text-align: left;
+}
+
+.text--right {
+    text-align: right;
+}
+
+.text--uppercase {
+    text-transform: uppercase;
 }
