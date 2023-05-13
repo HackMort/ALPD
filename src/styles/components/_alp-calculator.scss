@@ -913,7 +913,10 @@
             overflow-x: hidden;
 
             @media screen and (min-width:745px) {
+                margin-right: auto;
                 margin-bottom: 5rem;
+                margin-left: auto;
+                width: 575px;
             }
         }
 
