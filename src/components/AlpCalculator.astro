@@ -172,10 +172,10 @@ import References from "../components/References.astro";
       <p class="deactive-text__2">
         <strong
           >Persistently low age- and sex-adjusted ALP is the biochemical
-          hallmark of HPP.</strong
-        ><sup>1,2*</sup> Paired with key signs and symptoms, persistently low ALP
-        can confirm a diagnosis of HPP. Be sure to check your patient’s prior comprehensive
-        metabolic panel results to assess historical ALP levels.<sup>1-3</sup>
+          hallmark of HPP.<sup>1,2</sup></strong
+        > Paired with key signs and symptoms, persistently low ALP can confirm a
+        diagnosis of HPP. Be sure to check your patient’s prior comprehensive metabolic
+        panel results to assess historical ALP levels.<sup>1-3</sup>
       </p>
 
       <button class="button deactive-text__button">Next</button>
@@ -334,12 +334,8 @@ import References from "../components/References.astro";
         surveyButtons.forEach((surveyButton) => {
           surveyButton.addEventListener("click", (e) => {
             e.preventDefault();
-
+            alert("Form Submitted Successfully!");
             instance.close();
-
-            setTimeout(() => {
-              alert("Feedback sent, thanks!");
-            }, 0);
           });
         });
         //survey buttons//
@@ -359,7 +355,7 @@ import References from "../components/References.astro";
         const mediaQuery = window.matchMedia("(min-width: 745px)");
         function handleResize(e) {
           if (e.matches) {
-            console.log(graphicCounter);
+            // console.log(graphicCounter);
             if (graphicCounter === 1) {
               graphicSection.style.display = "flex";
               graphicSection.style.marginTop = "2rem";
