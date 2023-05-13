@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
     const headerInnerHeight = header.offsetHeight
     highlightActiveInternalNavOnScroll(headerInnerHeight)
     setNavTopPosition()
-    stickyInternalNav()
+    stickyInternalNav()()
   })
 
   window.addEventListener('resize', () => {
