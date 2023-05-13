@@ -1,0 +1,523 @@
+---
+type Props = {
+    type: string;
+};
+
+const { type } = Astro.props;
+---
+
+<>
+    {
+        type == "infants" ? (
+            <>
+                <section
+                    class="skeleton__content"
+                    id="neurologic--infants-content"
+                    data-target="neurologic-content"
+                    role="tabpanel"
+                    aria-labelledby="neurologic--infants"
+                    aria-hidden="true"
+                    tabindex="-1"
+                    hidden
+                >
+                    <div class="skeleton__content--head">
+                        <img
+                            src="/assets/images/hpp-profile/skeleton/neuro-icon-active.svg"
+                            alt="Neurologic icon"
+                        />
+                        <p>
+                            Neurologic<sup>1,16,19</sup>
+                        </p>
+                    </div>
+
+                    <div class="skeleton__content--body">
+                        <p>Fatigue, headache, sleep disturbances</p>
+                        <div class="skeleton__content--img">
+                            <img
+                                src="/assets/images/hpp-profile/skeleton/neuro-img.png"
+                                alt="Neurologic"
+                            />
+                        </div>
+                    </div>
+                </section>
+
+                <section
+                    class="skeleton__content"
+                    id="dental--infants-content"
+                    data-target="dental-content"
+                    role="tabpanel"
+                    aria-labelledby="dental--infants"
+                    aria-hidden="true"
+                    tabindex="-1"
+                    hidden
+                >
+                    <div class="skeleton__content--head">
+                        <img
+                            src="/assets/images/hpp-profile/skeleton/dental-icon-active.svg"
+                            alt="Dental icon"
+                        />
+                        <p>
+                            Dental<sup>1,9</sup>
+                        </p>
+                    </div>
+
+                    <div class="skeleton__content--body">
+                        <p>
+                            Premature tooth loss with root intact, abnormal
+                            dentition, periodontal disease
+                        </p>
+                        <div class="skeleton__content--img">
+                            <img
+                                src="/assets/images/hpp-profile/skeleton/dental-xray-one.png"
+                                alt="X ray one"
+                            />
+                            <img
+                                src="/assets/images/hpp-profile/skeleton/dental-xray-two.png"
+                                alt="X ray two"
+                            />
+                        </div>
+                        <p class="skeleton__content--conditions">
+                            Reproduced with permission from Bloch-Zupan A.{" "}
+                            <em>
+                                Int Jour Paedtr Dent. 2016;26:426-438 and Reibel
+                                A. Orphanet J Rare Dis. 2009;4:6.
+                            </em>
+                        </p>
+                    </div>
+                </section>
+
+                <section
+                    class="skeleton__content"
+                    id="muscular--infants-content"
+                    data-target="muscular-content"
+                    role="tabpanel"
+                    aria-labelledby="muscular--infants"
+                    aria-hidden="true"
+                    tabindex="-1"
+                    hidden
+                >
+                    <div class="skeleton__content--head">
+                        <img
+                            src="/assets/images/hpp-profile/skeleton/muscular-icon-active.svg"
+                            alt="Muscular icon"
+                        />
+                        <p>
+                            Muscular<sup>1,9,10,18</sup>
+                        </p>
+                    </div>
+
+                    <div class="skeleton__content--body">
+                        <p>
+                            Symptoms include muscle weakness, pain, waddling
+                            gait, difficulty walking, reduced grip force
+                            assessed by digital hand dynamometer
+                        </p>
+                        <div class="skeleton__content--img">
+                            <img
+                                src="/assets/images/hpp-profile/skeleton/muscular-img.png"
+                                alt="X ray one"
+                            />
+                        </div>
+                        <p class="skeleton__content--conditions">
+                            Jandl NM. <em>Calcif Tissue Int.</em>{" "}
+                            2021;108(3):288-301.
+                        </p>
+                    </div>
+                </section>
+
+                <section
+                    class="skeleton__content"
+                    id="rheumatic--infants-content"
+                    data-target="rheumatic-content"
+                    role="tabpanel"
+                    aria-labelledby="rheumatic--infants"
+                    aria-hidden="true"
+                    tabindex="-1"
+                    hidden
+                >
+                    <div class="skeleton__content--head">
+                        <img
+                            src="/assets/images/hpp-profile/skeleton/rheumatic-icon-active.svg"
+                            alt="Rheumatic icon"
+                        />
+                        <p>
+                            Rheumatic<sup>1,6,9,11-14</sup>
+                        </p>
+                    </div>
+
+                    <div class="skeleton__content--body">
+                        <p>
+                            Calcific periarthritis, chondrocalcinosis,
+                            fibromyalgia, pain, pseudogout, osteoarthritis,
+                            rheumatoid arthritis, spondyloarthritis, and
+                            collagenosis
+                        </p>
+                        <div class="skeleton__content--img">
+                            <img
+                                src="/assets/images/hpp-profile/skeleton/rheumatic-img.png"
+                                alt="X ray one"
+                            />
+                        </div>
+                        <p class="skeleton__content--conditions">
+                            Hogler W. <em>BMC Musculoskeletal Disorders.</em>{" "}
+                            2019;29(1):80-88. Feurstein J.{" "}
+                            <em>Orphanet J Rare Dis.</em> 2022;17(1):435-442.
+                        </p>
+                    </div>
+                </section>
+
+                <section
+                    class="skeleton__content"
+                    id="renal--infants-content"
+                    data-target="renal-content"
+                    role="tabpanel"
+                    aria-labelledby="renal--infants"
+                    aria-hidden="true"
+                    tabindex="-1"
+                    hidden
+                >
+                    <div class="skeleton__content--head">
+                        <img
+                            src="/assets/images/hpp-profile/skeleton/renal-icon-active.svg"
+                            alt="Renal icon"
+                        />
+                        <p>
+                            Renal<sup>1,15,16</sup>
+                        </p>
+                    </div>
+
+                    <div class="skeleton__content--body">
+                        <p>Nephrocalcinosis</p>
+                        <div class="skeleton__content--img">
+                            <img
+                                src="/assets/images/hpp-profile/skeleton/renal-xray-one.png"
+                                alt="Renal X ray one"
+                            />
+                            <img
+                                src="/assets/images/hpp-profile/skeleton/renal-xray-two.png"
+                                alt="Renal X ray two"
+                            />
+                        </div>
+                        <p class="skeleton__content--conditions">
+                            Reproduced with permission from Mohn A.{" "}
+                            <em>Acta Paediatr.</em>
+                            2011;100(7):e43-e46.
+                        </p>
+                    </div>
+
+                    <br />
+                </section>
+
+                <section
+                    class="skeleton__content"
+                    id="orthopedic--infants-content"
+                    data-target="orthopedic-content"
+                    role="tabpanel"
+                    aria-labelledby="orthopedic--infants"
+                    aria-hidden="true"
+                    tabindex="-1"
+                    hidden
+                >
+                    <div class="skeleton__content--head">
+                        <img
+                            src="/assets/images/hpp-profile/skeleton/orthopedic-icon-active.svg"
+                            alt="Orthopedic icon"
+                        />
+                        <p>
+                            Orthopedic/skeletal<sup>1,3,9,14,17</sup>
+                        </p>
+                    </div>
+
+                    <div class="skeleton__content--body">
+                        <p>
+                            Fractures, pseudofractures, rickets/osteomalacia,
+                            osteopenia, severe hypomineralization, bone/joint
+                            pain, skeletal deformities
+                        </p>
+                        <div class="skeleton__content--img">
+                            <img
+                                src="/assets/images/hpp-profile/skeleton/orthopedic-img.png"
+                                alt="Orthopedic"
+                            />
+                        </div>
+                        <p>
+                            Bianchi ML.<em> Osteoporos Int.</em>{" "}
+                            2020;31(8):1445-1460.
+                        </p>
+                    </div>
+                    <br />
+                </section>
+            </>
+        ) : (
+            <>
+                <section
+                    class="skeleton__content"
+                    id="neurologic-content"
+                    data-target="neurologic-content"
+                    role="tabpanel"
+                    aria-labelledby="neurologic"
+                    aria-hidden="false"
+                    tabindex="-1"
+                >
+                    <div class="skeleton__content--head">
+                        <img
+                            src="/assets/images/hpp-profile/skeleton/neuro-icon-active.svg"
+                            alt="Neurologic icon"
+                        />
+                        <p>
+                            Neurologic<sup>1,16,19</sup>
+                        </p>
+                    </div>
+
+                    <div class="skeleton__content--body">
+                        <p>Fatigue, headache, sleep disturbances</p>
+                        <div class="skeleton__content--img">
+                            <img
+                                src="/assets/images/hpp-profile/skeleton/neuro-img.png"
+                                alt="Neurologic"
+                            />
+                        </div>
+                    </div>
+                </section>
+
+                <section
+                    class="skeleton__content"
+                    id="dental-content"
+                    data-target="dental-content"
+                    role="tabpanel"
+                    aria-labelledby="dental"
+                    aria-hidden="true"
+                    tabindex="-1"
+                    hidden
+                >
+                    <div class="skeleton__content--head">
+                        <img
+                            src="/assets/images/hpp-profile/skeleton/dental-icon-active.svg"
+                            alt="Dental icon"
+                        />
+                        <p>
+                            Dental<sup>1,9</sup>
+                        </p>
+                    </div>
+
+                    <div class="skeleton__content--body">
+                        <p>
+                            Premature tooth loss with root intact, abnormal
+                            dentition, periodontal disease
+                        </p>
+                        <div class="skeleton__content--img">
+                            <img
+                                src="/assets/images/hpp-profile/skeleton/dental-xray-one.png"
+                                alt="X ray one"
+                            />
+                            <img
+                                src="/assets/images/hpp-profile/skeleton/dental-xray-two.png"
+                                alt="X ray two"
+                            />
+                        </div>
+                        <p class="skeleton__content--conditions">
+                            Reproduced with permission from Bloch-Zupan A.{" "}
+                            <em>
+                                Int Jour Paedtr Dent. 2016;26:426-438 and Reibel
+                                A. Orphanet J Rare Dis. 2009;4:6.
+                            </em>
+                        </p>
+                    </div>
+                </section>
+
+                <section
+                    class="skeleton__content"
+                    id="muscular-content"
+                    data-target="muscular-content"
+                    role="tabpanel"
+                    aria-labelledby="muscular"
+                    aria-hidden="true"
+                    tabindex="-1"
+                    hidden
+                >
+                    <div class="skeleton__content--head">
+                        <img
+                            src="/assets/images/hpp-profile/skeleton/muscular-icon-active.svg"
+                            alt="Muscular icon"
+                        />
+                        <p>
+                            Muscular<sup>1,9,10,18</sup>
+                        </p>
+                    </div>
+
+                    <div class="skeleton__content--body">
+                        <p>
+                            Symptoms include muscle weakness, pain, waddling
+                            gait, difficulty walking, reduced grip force
+                            assessed by digital hand dynamometer
+                        </p>
+                        <div class="skeleton__content--img">
+                            <img
+                                src="/assets/images/hpp-profile/skeleton/muscular-img.png"
+                                alt="X ray one"
+                            />
+                        </div>
+                        <p class="skeleton__content--conditions">
+                            Jandl NM. <em>Calcif Tissue Int.</em>{" "}
+                            2021;108(3):288-301.
+                        </p>
+                    </div>
+                </section>
+
+                <section
+                    class="skeleton__content"
+                    id="rheumatic-content"
+                    data-target="rheumatic-content"
+                    role="tabpanel"
+                    aria-labelledby="rheumatic"
+                    aria-hidden="true"
+                    tabindex="-1"
+                    hidden
+                >
+                    <div class="skeleton__content--head">
+                        <img
+                            src="/assets/images/hpp-profile/skeleton/rheumatic-icon-active.svg"
+                            alt="Rheumatic icon"
+                        />
+                        <p>
+                            Rheumatic<sup>1,6,9,11-14</sup>
+                        </p>
+                    </div>
+
+                    <div class="skeleton__content--body">
+                        <p>
+                            Calcific periarthritis, chondrocalcinosis,
+                            fibromyalgia, pain, pseudogout, osteoarthritis,
+                            rheumatoid arthritis, spondyloarthritis, and
+                            collagenosis
+                        </p>
+                        <div class="skeleton__content--img">
+                            <img
+                                src="/assets/images/hpp-profile/skeleton/rheumatic-img.png"
+                                alt="X ray one"
+                            />
+                        </div>
+                        <p class="skeleton__content--conditions">
+                            Hogler W. <em>BMC Musculoskeletal Disorders.</em>{" "}
+                            2019;29(1):80-88. Feurstein J.{" "}
+                            <em>Orphanet J Rare Dis.</em> 2022;17(1):435-442.
+                        </p>
+                    </div>
+                </section>
+
+                <section
+                    class="skeleton__content"
+                    id="renal-content"
+                    data-target="renal-content"
+                    role="tabpanel"
+                    aria-labelledby="renal"
+                    aria-hidden="true"
+                    tabindex="-1"
+                    hidden
+                >
+                    <div class="skeleton__content--head">
+                        <img
+                            src="/assets/images/hpp-profile/skeleton/renal-icon-active.svg"
+                            alt="Renal icon"
+                        />
+                        <p>
+                            Renal<sup>1,15,16</sup>
+                        </p>
+                    </div>
+
+                    <div class="skeleton__content--body">
+                        <p>Nephrocalcinosis</p>
+                        <div class="skeleton__content--img">
+                            <img
+                                src="/assets/images/hpp-profile/skeleton/renal-xray-one.png"
+                                alt="Renal X ray one"
+                            />
+                            <img
+                                src="/assets/images/hpp-profile/skeleton/renal-xray-two.png"
+                                alt="Renal X ray two"
+                            />
+                        </div>
+                        <p class="skeleton__content--conditions">
+                            Reproduced with permission from Mohn A.{" "}
+                            <em>Acta Paediatr.</em>
+                            2011;100(7):e43-e46.
+                        </p>
+                    </div>
+
+                    <br />
+                </section>
+
+                <section
+                    class="skeleton__content"
+                    id="orthopedic-content"
+                    data-target="orthopedic-content"
+                    role="tabpanel"
+                    aria-labelledby="orthopedic"
+                    aria-hidden="true"
+                    tabindex="-1"
+                    hidden
+                >
+                    <div class="skeleton__content--head">
+                        <img
+                            src="/assets/images/hpp-profile/skeleton/orthopedic-icon-active.svg"
+                            alt="Orthopedic icon"
+                        />
+                        <p>
+                            Orthopedic/skeletal<sup>1,3,9,14,17</sup>
+                        </p>
+                    </div>
+
+                    <div class="skeleton__content--body">
+                        <p>
+                            Fractures, pseudofractures, rickets/osteomalacia,
+                            osteopenia, severe hypomineralization, bone/joint
+                            pain, skeletal deformities
+                        </p>
+                        <div class="skeleton__content--img">
+                            <img
+                                src="/assets/images/hpp-profile/skeleton/orthopedic-img.png"
+                                alt="Orthopedic"
+                            />
+                        </div>
+                        <p>
+                            Bianchi ML.<em> Osteoporos Int.</em>{" "}
+                            2020;31(8):1445-1460.
+                        </p>
+                    </div>
+                    <br />
+                </section>
+            </>
+        )
+    }
+</>
+
+<script>
+    const tabs = document.querySelectorAll(
+        ".hpp-multisystemic__tabs--nav-item a"
+    );
+    const sections = document.querySelectorAll(".skeleton__content");
+    const option = document.querySelectorAll(".skeleton__option");
+
+    tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+            //Reset all sections
+            console.log("clicked");
+            sections.forEach((section) => {
+                if (section.getAttribute("aria-hidden") === "false") {
+                    section.setAttribute("aria-hidden", "true");
+                    section.setAttribute("hidden", "true");
+                }
+            });
+
+            //Set the first section to be visible
+            sections[0].setAttribute("aria-hidden", "false");
+            sections[0].removeAttribute("hidden");
+
+            option.forEach((option) => {
+                option.classList.remove("skeleton__option--active");
+            });
+
+            option[0].classList.add("skeleton__option--active");
+        });
+    });
+</script>
