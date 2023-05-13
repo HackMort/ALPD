@@ -34,10 +34,10 @@ const data = [
         word: "Dental",
         icon: "/assets/images/hpp-profile/skeleton/dental-icon-active.svg",
         text: "Premature tooth loss with root intact, abnormal dentition, periodontal disease",
-        image1: "/assets/images/hpp-profile/skeleton/dental-xray-one.png",
+        image1: "/assets/images/hpp-profile/skeleton/dental-img.png",
         imageAlt1: "Dental x-ray one",
-        image2: "/assets/images/hpp-profile/skeleton/dental-xray-two.png",
-        imageAlt2: "Dental x-ray two",
+        image2: "",
+        imageAlt2: "",
         condition:
             "Reproduced with permission from Bloch-Zupan A. <em>Int Jour Paedtr Dent. 2016;26:426-438 and Reibel A. Orphanet J Rare Dis. 2009;4:6.</em>",
         type: "adults",
