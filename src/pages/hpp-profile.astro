@@ -4,6 +4,9 @@ import CTA from "../components/CTA.astro";
 import InternalNavigation from "../components/InternalNavigation.astro";
 import CaseFileModal from "../components/Case-Files/CaseFileModal.astro";
 import CaseFileModalDesktop from "../components/Case-Files/CaseFileModalDesktop.astro";
+import SkeletonDesktop from "../components/Skeleton/SkeletonDesktop.astro";
+import SkeletonMobile from "../components/Skeleton/SkeletonMobile.astro";
+import SkeletonInfo from "../components/Skeleton/SkeletonInfo.astro";
 
 const internalNavLinks = [
   { href: "hpp-definition", label: "HPP Definition", active: true },
@@ -263,17 +266,8 @@ const internalNavLinks = [
               The multisystemic impact of hypophosphatasia
             </h3>
 
-            <picture>
-              <source
-                media="(min-width: 769px)"
-                srcset="/assets/images/hpp-profile/fpo-img-dk.png"
-              />
-              <img
-                style="margin-bottom: 2rem;"
-                src="/assets/images/hpp-profile/fpo-img.png"
-                alt="FPO IMAGE"
-              />
-            </picture>
+            <SkeletonDesktop type="adults" />
+            <SkeletonMobile type="adults" />
           </article>
 
           <div class="hpp-multisystemic__report--bg">
@@ -471,17 +465,9 @@ const internalNavLinks = [
               The multisystemic impact of hypophosphatasia
             </h3>
 
-            <picture>
-              <source
-                media="(min-width: 769px)"
-                srcset="/assets/images/hpp-profile/fpo-img-dk.png"
-              />
-              <img
-                style="margin-bottom: 2rem;"
-                src="/assets/images/hpp-profile/fpo-img.png"
-                alt="FPO IMAGE"
-              />
-            </picture>
+            <section class="skeleton-container__skeleton">
+              <SkeletonDesktop type="infants" />
+            </section>
           </article>
 
           <article class="wrapper hpp-multisystemic__report">
