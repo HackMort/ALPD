@@ -139,4 +139,18 @@
     min-width: 220px;
   }
 
+  &--custom-bg {
+    &--only-desktop {
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    &--only-mobile {
+      @media screen and (min-width: 769px) {
+        display: none;
+      }
+    }
+  }
+
 }

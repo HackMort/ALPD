@@ -167,6 +167,22 @@ $color-value in $colors {
     font-family: 'Special Elite', cursive;
 }
 
+.text--center {
+    text-align: center;
+}
+
+.text--left {
+    text-align: left;
+}
+
+.text--right {
+    text-align: right;
+}
+
+.text--uppercase {
+    text-transform: uppercase;
+}
+
 .font--veneer {
     font-family: "veneer", sans-serif;
 }

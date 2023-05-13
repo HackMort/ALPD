@@ -1,0 +1,740 @@
+.skeleton {
+    width: 100%;
+    position: relative;
+    display: flex;
+
+    &--desktop {
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    &--mobile {
+        display: none;
+
+        @media screen and (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__image {
+        width: fit-content;
+
+        &--container {
+            width: 50%;
+            position: relative;
+            overflow: hidden;
+        }
+    }
+
+    &__option {
+        width: 155px;
+        height: max-content;
+
+        &:hover {
+            color: $color-cinnabar;
+            border-color: $color-cinnabar;
+        }
+
+        &[data-word="neurologic"] {
+            .skeleton__point {
+                top: 1.5rem;
+                left: 6.3rem;
+            }
+
+            .skeleton__line--before {
+                top: 1.7rem;
+                left: 50%;
+            }
+
+            .skeleton__line--after {
+                width: 50%;
+                top: 1.7rem;
+                left: 6.3rem;
+                z-index: 0;
+            }
+
+            .skeleton__word {
+                top: 0rem;
+                left: 50%;
+            }
+
+        }
+
+        &[data-word="dental"] {
+            .skeleton__point {
+                top: 2.6rem;
+                left: 6.3rem;
+            }
+
+            .skeleton__line--before {
+                top: 6.7rem;
+                left: 50%;
+            }
+
+            .skeleton__line--after {
+                width: 7.2rem;
+                top: 2.7rem;
+                left: 6.4rem;
+                z-index: 0;
+                transform: rotate(32deg);
+                transform-origin: left;
+            }
+
+            .skeleton__line--after2 {
+                width: 25%;
+                top: 6.5rem;
+                left: calc(6.4rem + 6.1rem);
+                z-index: 0;
+            }
+
+            .skeleton__icon {
+                width: 1.3rem;
+            }
+
+            .skeleton__word {
+                top: 5rem;
+                left: 50%;
+            }
+        }
+
+        &[data-word="muscular"] {
+            .skeleton__point {
+                top: 8rem;
+                left: 10rem;
+            }
+
+            .skeleton__line--before {
+                top: 11.5rem;
+                left: 50%;
+            }
+
+            .skeleton__line--after {
+                width: 4.8rem;
+                top: 8.1rem;
+                left: 10.1rem;
+                z-index: 0;
+                transform: rotate(45deg);
+                transform-origin: left;
+            }
+
+            .skeleton__line--after2 {
+                width: 25%;
+                top: 11.5rem;
+                left: calc(10.1rem + 3.4rem);
+                z-index: 0;
+            }
+
+            .skeleton__word {
+                top: 10rem;
+                left: 50%;
+            }
+        }
+
+        &[data-word="rheumatic"] {
+            .skeleton__point {
+                top: 11rem;
+                left: 10.6rem;
+            }
+
+            .skeleton__line--before {
+                top: 16.5rem;
+                left: 50%;
+            }
+
+            .skeleton__line--after {
+                width: 7.65rem;
+                top: 11.1rem;
+                left: 10.7rem;
+                z-index: 0;
+                transform: rotate(45deg);
+                transform-origin: left;
+            }
+
+            .skeleton__line--after2 {
+                width: 15%;
+                top: 16.5rem;
+                left: calc(10.7rem + 5.39rem);
+                z-index: 0;
+            }
+
+            .skeleton__word {
+                top: 15rem;
+                left: 50%;
+            }
+        }
+
+        &[data-word="renal"] {
+            .skeleton__point {
+                top: 14.2rem;
+                left: 7.5rem;
+            }
+
+            .skeleton__line--before {
+                top: 21.5rem;
+                left: 50%;
+            }
+
+            .skeleton__line--after {
+                width: 10.2rem;
+                top: 14.3rem;
+                left: 7.6rem;
+                z-index: 0;
+                transform: rotate(45deg);
+                transform-origin: left;
+            }
+
+            .skeleton__line--after2 {
+                width: 25%;
+                top: 21.5rem;
+                left: calc(7.6rem + 7.2rem);
+                z-index: 0;
+            }
+
+            .skeleton__word {
+                top: 20rem;
+                left: 50%;
+            }
+        }
+
+        &[data-word="orthopedic"] {
+            .skeleton__point {
+                top: 19rem;
+                left: 8.5rem;
+            }
+
+            .skeleton__line--before {
+                top: 26.5rem;
+                left: 50%;
+            }
+
+            .skeleton__line--after {
+                width: 10.45rem;
+                top: 19.1rem;
+                left: 8.6rem;
+                z-index: 0;
+                transform: rotate(45deg);
+                transform-origin: left;
+            }
+
+            .skeleton__line--after2 {
+                width: 15%;
+                top: 26.5rem;
+                left: calc(8.6rem + 7.4rem);
+                z-index: 0;
+            }
+
+            .skeleton__word {
+                top: 25rem;
+                left: 50%;
+            }
+        }
+
+        &--infants {
+            width: 240px;
+
+            &[data-word="neurologic"] {
+                .skeleton__point {
+                    top: 1.5rem;
+                    left: 6.3rem;
+                }
+
+                .skeleton__line--before {
+                    top: 1.7rem;
+                    left: 50%;
+                }
+
+                .skeleton__line--after {
+                    width: 50%;
+                    top: 1.7rem;
+                    left: 6.3rem;
+                    z-index: 0;
+                }
+
+                .skeleton__word {
+                    top: 0rem;
+                    left: 50%;
+                }
+
+            }
+
+            &[data-word="dental"] {
+                .skeleton__point {
+                    top: 2.6rem;
+                    left: 6.3rem;
+                }
+
+                .skeleton__line--before {
+                    top: 6.7rem;
+                    left: 50%;
+                }
+
+                .skeleton__line--after {
+                    width: 7.2rem;
+                    top: 2.7rem;
+                    left: 6.4rem;
+                    z-index: 0;
+                    transform: rotate(32deg);
+                    transform-origin: left;
+                }
+
+                .skeleton__line--after2 {
+                    width: 25%;
+                    top: 6.5rem;
+                    left: calc(6.4rem + 6.1rem);
+                    z-index: 0;
+                }
+
+                .skeleton__icon {
+                    width: 1.3rem;
+                }
+
+                .skeleton__word {
+                    top: 5rem;
+                    left: 50%;
+                }
+            }
+
+            &[data-word="muscular"] {
+                .skeleton__point {
+                    top: 8rem;
+                    left: 10rem;
+                }
+
+                .skeleton__line--before {
+                    top: 11.5rem;
+                    left: 50%;
+                }
+
+                .skeleton__line--after {
+                    width: 4.8rem;
+                    top: 8.1rem;
+                    left: 10.1rem;
+                    z-index: 0;
+                    transform: rotate(45deg);
+                    transform-origin: left;
+                }
+
+                .skeleton__line--after2 {
+                    width: 25%;
+                    top: 11.5rem;
+                    left: calc(10.1rem + 3.4rem);
+                    z-index: 0;
+                }
+
+                .skeleton__word {
+                    top: 10rem;
+                    left: 50%;
+                }
+            }
+
+            &[data-word="respiratory"] {
+                .skeleton__point {
+                    top: 8rem;
+                    left: 10rem;
+                }
+
+                .skeleton__line--before {
+                    top: 11.5rem;
+                    left: 50%;
+                }
+
+                .skeleton__line--after {
+                    width: 4.8rem;
+                    top: 8.1rem;
+                    left: 10.1rem;
+                    z-index: 0;
+                    transform: rotate(45deg);
+                    transform-origin: left;
+                }
+
+                .skeleton__line--after2 {
+                    width: 25%;
+                    top: 11.5rem;
+                    left: calc(10.1rem + 3.4rem);
+                    z-index: 0;
+                }
+
+                .skeleton__word {
+                    top: 15rem;
+                    left: 50%;
+                }
+            }
+
+            &[data-word="rheumatic"] {
+                .skeleton__point {
+                    top: 11rem;
+                    left: 10.6rem;
+                }
+
+                .skeleton__line--before {
+                    top: 16.5rem;
+                    left: 50%;
+                }
+
+                .skeleton__line--after {
+                    width: 7.65rem;
+                    top: 11.1rem;
+                    left: 10.7rem;
+                    z-index: 0;
+                    transform: rotate(45deg);
+                    transform-origin: left;
+                }
+
+                .skeleton__line--after2 {
+                    width: 15%;
+                    top: 16.5rem;
+                    left: calc(10.7rem + 5.39rem);
+                    z-index: 0;
+                }
+
+                .skeleton__word {
+                    top: 20rem;
+                    left: 50%;
+                }
+            }
+
+            &[data-word="renal"] {
+                .skeleton__point {
+                    top: 14.2rem;
+                    left: 7.5rem;
+                }
+
+                .skeleton__line--before {
+                    top: 21.5rem;
+                    left: 50%;
+                }
+
+                .skeleton__line--after {
+                    width: 10.2rem;
+                    top: 14.3rem;
+                    left: 7.6rem;
+                    z-index: 0;
+                    transform: rotate(45deg);
+                    transform-origin: left;
+                }
+
+                .skeleton__line--after2 {
+                    width: 25%;
+                    top: 21.5rem;
+                    left: calc(7.6rem + 7.2rem);
+                    z-index: 0;
+                }
+
+                .skeleton__word {
+                    top: 25rem;
+                    left: 50%;
+                }
+            }
+
+            &[data-word="orthopedic"] {
+                .skeleton__point {
+                    top: 19rem;
+                    left: 8.5rem;
+                }
+
+                .skeleton__line--before {
+                    top: 26.5rem;
+                    left: 50%;
+                }
+
+                .skeleton__line--after {
+                    width: 10.45rem;
+                    top: 19.1rem;
+                    left: 8.6rem;
+                    z-index: 0;
+                    transform: rotate(45deg);
+                    transform-origin: left;
+                }
+
+                .skeleton__line--after2 {
+                    width: 15%;
+                    top: 26.5rem;
+                    left: calc(8.6rem + 7.4rem);
+                    z-index: 0;
+                }
+
+                .skeleton__word {
+                    top: 30rem;
+                    left: 50%;
+                }
+            }
+
+            &[data-word="grow"] {
+                .skeleton__point {
+                    top: 19rem;
+                    left: 8.5rem;
+                }
+
+                .skeleton__line--before {
+                    top: 26.5rem;
+                    left: 50%;
+                }
+
+                .skeleton__line--after {
+                    width: 10.45rem;
+                    top: 19.1rem;
+                    left: 8.6rem;
+                    z-index: 0;
+                    transform: rotate(45deg);
+                    transform-origin: left;
+                }
+
+                .skeleton__line--after2 {
+                    width: 15%;
+                    top: 26.5rem;
+                    left: calc(8.6rem + 7.4rem);
+                    z-index: 0;
+                }
+
+                .skeleton__word {
+                    top: 35rem;
+                    left: 50%;
+                }
+            }
+        }
+
+        &--active {
+            .skeleton__point {
+                background-color: $color-red;
+                transform: scale(1.5);
+                transition: all 0.3s ease-in-out;
+            }
+
+            .skeleton__line--before {
+                display: block;
+                background-color: $color-red;
+            }
+
+            .skeleton__line--after {
+                background-color: $color-red;
+            }
+
+            .skeleton__line--after2 {
+                background-color: $color-red;
+            }
+
+            .skeleton__word {
+                border-color: $color-red;
+                color: $color-red;
+            }
+
+            .skeleton__icon {
+                display: none;
+
+                &--active {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &__point {
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        background-color: $color-blue;
+        position: absolute;
+        top: 0;
+        cursor: pointer;
+    }
+
+    &__icon {
+        max-width: 2rem;
+        stroke: $color-carbon !important;
+        margin-right: 0.5rem;
+
+        &--active {
+            display: none;
+        }
+    }
+
+    &__word {
+        background-color: #f4f4f2;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        cursor: pointer;
+
+        border: 1px solid $color-carbon;
+        width: 150px;
+        height: auto;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+
+        &:hover {
+            border-color: $color-red;
+            color: $color-red;
+
+            .skeleton__icon {
+                display: none;
+
+                &--active {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &__content {
+        width: fit-content;
+        max-width: 400px;
+        height: fit-content;
+        border: 1px solid $color-red;
+        padding: 1.5rem;
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        @include flex-gap(1rem);
+
+        @media screen and (max-width: 768px) {
+            padding: 0;
+            width: 100%;
+            max-width: 100%;
+            display: none;
+            border: none;
+        }
+
+        &--head {
+            width: 100%;
+            height: auto;
+            font-weight: 600;
+            display: flex;
+            align-items: flex-end;
+
+            color: $color-red;
+            font-weight: 600;
+
+            p {
+                font-weight: 700;
+            }
+
+            img {
+                width: 1.5rem;
+                margin-right: 0.5rem;
+            }
+        }
+
+        &--body {
+            display: flex;
+            flex-direction: column;
+            @include flex-gap(1rem);
+        }
+
+        &--img {
+            display: flex;
+            @include flex-gap(0.5rem);
+        }
+
+        &--conditions {
+            font-size: .75rem;
+
+            @media screen and (max-width: 768px) {
+                margin-bottom: 1rem;
+            }
+
+            em {
+                font-style: italic;
+            }
+        }
+
+        &--active {
+            @media screen and (max-width: 768px) {
+                display: flex;
+            }
+        }
+    }
+
+    &__line {
+        width: 100%;
+        height: 1px;
+        background-color: $color-carbon;
+        position: absolute;
+
+        &--before {
+            display: none;
+        }
+
+        &:hover {
+            background-color: $color-red;
+        }
+    }
+
+
+    &__container {
+        border: 1px solid $color-red;
+        padding: 0.5rem 1rem;
+        min-height: 400px;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $color-carbon;
+        height: 4rem;
+
+        &--title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: $color-red;
+
+            display: flex;
+            align-items: center;
+            @include flex-gap(0.5rem);
+        }
+
+        &--icon {
+            width: 2rem;
+            height: 2.5rem;
+        }
+
+        &--arrows {
+            display: flex;
+            @include flex-gap(1rem);
+            height: fit-content;
+        }
+
+        &--arrow {
+            img {
+                width: 0.8rem;
+                height: 1.5rem;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__footer {
+        max-width: 100%;
+        margin: 1rem;
+        display: none;
+
+        &--dots {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include flex-gap(0.5rem);
+        }
+
+        &--dot {
+            width: 0.8rem;
+            height: 0.8rem;
+            border-radius: 50%;
+            background-color: $color-carbon;
+            cursor: pointer;
+
+            &--active {
+                background-color: $color-red;
+            }
+        }
+
+        &--active {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
