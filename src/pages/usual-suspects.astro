@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import CTA from "../components/CTA.astro";
+import TabsPanel from "../components/usual-suspects/TabsPanel.astro"
+import MobileSelector from "../components/usual-suspects/MobileSelector.astro";
 
 
 ---
@@ -26,78 +28,13 @@ import CTA from "../components/CTA.astro";
     <h3 class="section-title" ></h3>
   </section>
 
-  <section class="usual-suspects-tabs" >
-    <section class="design-system-section">
-      <div class="section-wrapper section-wrapper--small">
-        <h1 class="title">Tabs</h1>
-        <ul role="tablist">
-          <li role="presentation">
-            <!--active one -->
-            <a href="#usual-suspects-panel-1" role="tab" id="tab1" aria-selected="true">Tab 1</a>
-          </li>
-          <li role="presentation">
-            <a href="#usual-suspects-panel-2" role="tab" id="tab2" tabindex="-1">Tab 2</a>
-          </li>
-          <li role="presentation">
-            <a href="#usual-suspects-panel-3" role="tab" id="tab3" tabindex="-1">Tab 3</a>
-          </li>
-        </ul>
-        <section
-          id="usual-suspects-panel-1"
-          class="usual-suspects-panel usual-suspects-panel-1"
-          role="tabpanel"
-          aria-labelledby="tab1"
-          aria-hidden="false"
-          tabindex="-1"
-        >
-          <h2>Adults</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dui
-            nibh, fermentum ac gravida quis, <a href="#">tempus sit</a> amet nulla.
-            Fusce dignissim dolor sit amet sapien auctor, eu vehicula elit placerat.
-            Aliquam vehicula luctus enim, at ullamcorper risus. Aliquam ut tincidunt
-            ipsum. Vivamus dui mi, suscipit vitae libero id, interdum aliquet metus.
-          </p>
-        </section>
-        <section
-          id="usual-suspects-panel-2"
-          class="usual-suspects-panel usual-suspects-panel-2"
-          role="tabpanel"
-          aria-labelledby="tab2"
-          aria-hidden="true"
-          tabindex="-1"
-          hidden
-        >
-          <h2>Children/Adolescents</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dui
-            nibh, fermentum ac gravida quis, <a href="#">tempus sit</a> amet nulla.
-            Fusce dignissim dolor sit amet sapien auctor, eu vehicula elit placerat.
-            Aliquam vehicula luctus enim, at ullamcorper risus. Aliquam ut tincidunt
-            ipsum. Vivamus dui mi, suscipit vitae libero id, interdum aliquet metus.
-          </p>
-        </section>
-        <section
-          id="usual-suspects-panel-3"
-          class="usual-suspects-panel usual-suspects-panel-3"
-          role="tabpanel"
-          aria-labelledby="tab3"
-          aria-hidden="true"
-          tabindex="-1"
-          hidden
-        >
-          <h2>Neonates/Infants</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dui
-            nibh, fermentum ac gravida quis, <a href="#">tempus sit</a> amet nulla.
-            Fusce dignissim dolor sit amet sapien auctor, eu vehicula elit placerat.
-            Aliquam vehicula luctus enim, at ullamcorper risus. Aliquam ut tincidunt
-            ipsum. Vivamus dui mi, suscipit vitae libero id, interdum aliquet metus.
-          </p>
-        </section>
-      </div>
-    </section>
+
+
+  <section class="usual-suspects-tabs--mobile" >
+    <MobileSelector />
   </section>
+
+  
 
     
 </Layout>

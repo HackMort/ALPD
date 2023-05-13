@@ -1387,46 +1387,33 @@
         }
     }
 
-    .usual-suspects-panel {
-        min-height: 687px;
-        padding-top: 100px;
-        color: black;
-        padding-left: 8%;
-        padding-right: 8%;
+    .hpp-multisystemic__tabs {
+        min-height: 800px; // Temporal height, remove when development is completed.
     }
 
-    .usual-suspects-panel-1 {
-        background-image: url(/assets/images/usual-suspects/folder_open_1.png);
-        background-size: cover;
-    }
-    .usual-suspects-panel-2 {
-        background-image: url(/assets/images/usual-suspects/folder_open_2.png);
-        background-size: cover;
-    }
-    .usual-suspects-panel-3 {
-        background-image: url(/assets/images/usual-suspects/folder_open_3.png);
-        background-size: cover;
-    }
-
-    .usual-suspects-tabs [role='tablist'] {
-        background: unset;
-        height: auto;
-        padding: 0; 
-        margin-bottom: -61px;
-        justify-content: space-around;
-        overflow: hidden;
-
-        li {
-            border: 2px solid white;
-            width: 33.33%;
-            opacity: 0;
-
-            a {
-                width: 100%;
+    .hpp__profile {
+        &__title {
+            &--desktop {
+                color: #ffffff;
+                font-size: 24px;
+                font-family: 'Oswald', sans-serif;
+                font-weight: 700;
+                line-height: 33px;
+            }
+    
+            &--mobile {
+                color: $color-carbon;
+                font-size: 16px;
+                font-family: 'Oswald', sans-serif;
+                font-weight: 600;
+                line-height: 24px;
             }
         }
-
     }
+                
+
+
+
 
 }
 
@@ -1519,6 +1506,8 @@
             left: 68px;
             top: 119px;
         }
+
+
         
     }
 
