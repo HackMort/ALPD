@@ -32,6 +32,12 @@
         width: 155px;
         height: max-content;
 
+        &--infants {
+            .skeleton__word {
+                width: 180px;
+            }
+        }
+
         &:hover {
             color: $color-cinnabar;
             border-color: $color-cinnabar;
@@ -40,7 +46,7 @@
         &[data-word="neurologic"] {
             .skeleton__point {
                 top: 1.5rem;
-                left: 6.3rem;
+                left: 6.8rem;
             }
 
             .skeleton__line--before {
@@ -51,7 +57,7 @@
             .skeleton__line--after {
                 width: 50%;
                 top: 1.7rem;
-                left: 6.3rem;
+                left: 6.8rem;
                 z-index: 0;
             }
 
@@ -65,7 +71,7 @@
         &[data-word="dental"] {
             .skeleton__point {
                 top: 2.6rem;
-                left: 6.3rem;
+                left: 6.8rem;
             }
 
             .skeleton__line--before {
@@ -76,7 +82,7 @@
             .skeleton__line--after {
                 width: 7.2rem;
                 top: 2.7rem;
-                left: 6.4rem;
+                left: 6.9rem;
                 z-index: 0;
                 transform: rotate(32deg);
                 transform-origin: left;
@@ -85,7 +91,7 @@
             .skeleton__line--after2 {
                 width: 25%;
                 top: 6.5rem;
-                left: calc(6.4rem + 6.1rem);
+                left: calc(6.4rem + 6.5rem);
                 z-index: 0;
             }
 
@@ -102,7 +108,7 @@
         &[data-word="muscular"] {
             .skeleton__point {
                 top: 8rem;
-                left: 10rem;
+                left: 10.3rem;
             }
 
             .skeleton__line--before {
@@ -113,7 +119,7 @@
             .skeleton__line--after {
                 width: 4.8rem;
                 top: 8.1rem;
-                left: 10.1rem;
+                left: 10.4rem;
                 z-index: 0;
                 transform: rotate(45deg);
                 transform-origin: left;
@@ -122,7 +128,7 @@
             .skeleton__line--after2 {
                 width: 25%;
                 top: 11.5rem;
-                left: calc(10.1rem + 3.4rem);
+                left: calc(10.1rem + 3.7rem);
                 z-index: 0;
             }
 
@@ -135,7 +141,7 @@
         &[data-word="rheumatic"] {
             .skeleton__point {
                 top: 11rem;
-                left: 10.6rem;
+                left: 11rem;
             }
 
             .skeleton__line--before {
@@ -146,7 +152,7 @@
             .skeleton__line--after {
                 width: 7.65rem;
                 top: 11.1rem;
-                left: 10.7rem;
+                left: 11.1rem;
                 z-index: 0;
                 transform: rotate(45deg);
                 transform-origin: left;
@@ -155,7 +161,7 @@
             .skeleton__line--after2 {
                 width: 15%;
                 top: 16.5rem;
-                left: calc(10.7rem + 5.39rem);
+                left: calc(10.7rem + 5.8rem);
                 z-index: 0;
             }
 
@@ -168,7 +174,7 @@
         &[data-word="renal"] {
             .skeleton__point {
                 top: 14.2rem;
-                left: 7.5rem;
+                left: 8rem;
             }
 
             .skeleton__line--before {
@@ -179,7 +185,7 @@
             .skeleton__line--after {
                 width: 10.2rem;
                 top: 14.3rem;
-                left: 7.6rem;
+                left: 8.1rem;
                 z-index: 0;
                 transform: rotate(45deg);
                 transform-origin: left;
@@ -188,7 +194,7 @@
             .skeleton__line--after2 {
                 width: 25%;
                 top: 21.5rem;
-                left: calc(7.6rem + 7.2rem);
+                left: calc(7.6rem + 7.7rem);
                 z-index: 0;
             }
 
@@ -201,7 +207,7 @@
         &[data-word="orthopedic"] {
             .skeleton__point {
                 top: 19rem;
-                left: 8.5rem;
+                left: 9rem;
             }
 
             .skeleton__line--before {
@@ -212,7 +218,7 @@
             .skeleton__line--after {
                 width: 10.45rem;
                 top: 19.1rem;
-                left: 8.6rem;
+                left: 9.2rem;
                 z-index: 0;
                 transform: rotate(45deg);
                 transform-origin: left;
@@ -221,7 +227,7 @@
             .skeleton__line--after2 {
                 width: 15%;
                 top: 26.5rem;
-                left: calc(8.6rem + 7.4rem);
+                left: calc(8.6rem + 7.9rem);
                 z-index: 0;
             }
 
@@ -230,6 +236,270 @@
                 left: 50%;
             }
         }
+
+
+        &[data-word="neurologic--infants"] {
+            .skeleton__point {
+                top: 3rem;
+                left: 6.2rem;
+            }
+
+            .skeleton__line--before {
+                top: 3.2rem;
+                left: 50%;
+            }
+
+            .skeleton__line--after {
+                width: 50%;
+                top: 3.2rem;
+                left: 6.2rem;
+                z-index: 0;
+            }
+
+            .skeleton__word {
+                top: 1.5rem;
+                left: 50%;
+            }
+
+        }
+
+        &[data-word="dental--infants"] {
+            .skeleton__point {
+                top: 6rem;
+                left: 6.2rem;
+            }
+
+            .skeleton__line--before {
+                top: 7.8rem;
+                left: 50%;
+            }
+
+            .skeleton__line--after {
+                width: 4.7rem;
+                top: 6.2rem;
+                left: 6.5rem;
+                z-index: 0;
+                transform: rotate(20deg);
+                transform-origin: left;
+            }
+
+            .skeleton__line--after2 {
+                width: 25%;
+                top: 7.8rem;
+                left: calc(6.4rem + 4.5rem);
+                z-index: 0;
+            }
+
+            .skeleton__icon {
+                width: 1.3rem;
+            }
+
+            .skeleton__word {
+                top: 6.5rem;
+                left: 50%;
+            }
+        }
+
+        &[data-word="muscular--infants"] {
+            .skeleton__point {
+                top: 10.5rem;
+                left: 10rem;
+            }
+
+            .skeleton__line--before {
+                top: 12.5rem;
+                left: 50%;
+            }
+
+            .skeleton__line--after {
+                width: 3.2rem;
+                top: 10.5rem;
+                left: 10.1rem;
+                z-index: 0;
+                transform: rotate(38deg);
+                transform-origin: left;
+            }
+
+            .skeleton__line--after2 {
+                width: 25%;
+                top: 12.5rem;
+                left: calc(10.1rem + 2.5rem);
+                z-index: 0;
+            }
+
+            .skeleton__word {
+                top: 11rem;
+                left: 50%;
+            }
+        }
+
+        &[data-word="respiratory--infants"] {
+            .skeleton__point {
+                top: 12.5rem;
+                left: 5rem;
+            }
+
+            .skeleton__line--before {
+                top: 17.5rem;
+                left: 50%;
+            }
+
+            .skeleton__line--after {
+                width: 10rem;
+                top: 12.5rem;
+                left: 5rem;
+                z-index: 0;
+                transform: rotate(30deg);
+                transform-origin: left;
+            }
+
+            .skeleton__line--after2 {
+                width: 25%;
+                top: 17.5em;
+                left: calc(10.1rem + 3.5rem);
+                z-index: 0;
+            }
+
+            .skeleton__word {
+                top: 15.7rem;
+                left: 50%;
+            }
+        }
+
+        &[data-word="rheumatic--infants"] {
+            .skeleton__point {
+                top: 18rem;
+                left: 11rem;
+            }
+
+            .skeleton__line--before {
+                top: 22rem;
+                left: 50%;
+            }
+
+            .skeleton__line--after {
+                width: 6.1em;
+                top: 18.1rem;
+                left: 11.2rem;
+                z-index: 0;
+                transform: rotate(40deg);
+                transform-origin: left;
+            }
+
+            .skeleton__line--after2 {
+                width: 15%;
+                top: 22rem;
+                left: calc(10.7rem + 5.2rem);
+                z-index: 0;
+            }
+
+            .skeleton__word {
+                top: 20.5rem;
+                left: 50%;
+            }
+        }
+
+        &[data-word="renal--infants"] {
+            .skeleton__point {
+                top: 19.5rem;
+                left: 8rem;
+            }
+
+            .skeleton__line--before {
+                top: 27rem;
+                left: 50%;
+            }
+
+            .skeleton__line--after {
+                width: 10.5rem;
+                top: 19.6rem;
+                left: 8.1rem;
+                z-index: 0;
+                transform: rotate(45deg);
+                transform-origin: left;
+            }
+
+            .skeleton__line--after2 {
+                width: 25%;
+                top: 27rem;
+                left: calc(7.6rem + 7.9rem);
+                z-index: 0;
+            }
+
+            .skeleton__word {
+                top: 25.4rem;
+                left: 50%;
+            }
+        }
+
+        &[data-word="orthopedic--infants"] {
+            .skeleton__point {
+                top: 32.2rem;
+                left: 8.5rem;
+            }
+
+            .skeleton__line--before {
+                top: 32.4rem;
+                left: 50%;
+            }
+
+            .skeleton__line--after {
+                display: none;
+                width: 10.45rem;
+                top: 19.1rem;
+                left: 8.6rem;
+                z-index: 0;
+                transform: rotate(45deg);
+                transform-origin: left;
+            }
+
+            .skeleton__line--after2 {
+                width: 25%;
+                top: 32.4rem;
+                left: 8.5rem;
+                z-index: 0;
+            }
+
+            .skeleton__word {
+                top: 30.4rem;
+                left: 50%;
+            }
+        }
+
+        &[data-word="developmental--infants"] {
+            .skeleton__point {
+                top: 37rem;
+                left: 8.6rem;
+            }
+
+            .skeleton__line--before {
+                top: 37.2rem;
+                left: 50%;
+            }
+
+            .skeleton__line--after {
+                display: none;
+                width: 4.8rem;
+                top: 8.1rem;
+                left: 10.1rem;
+                z-index: 0;
+                transform: rotate(45deg);
+                transform-origin: left;
+            }
+
+            .skeleton__line--after2 {
+                width: 25%;
+                top: 37.2rem;
+                left: 8.6rem;
+                z-index: 0;
+            }
+
+            .skeleton__word {
+                top: 35.7rem;
+                left: 50%;
+            }
+        }
+
 
         &--infants {
             width: 240px;
@@ -587,9 +857,13 @@
         padding: 1.5rem;
         position: relative;
 
-        display: flex;
+        display: none;
         flex-direction: column;
         @include flex-gap(1rem);
+
+        &--active {
+            display: flex;
+        }
 
         @media screen and (max-width: 768px) {
             padding: 0;
@@ -668,7 +942,7 @@
     &__container {
         border: 1px solid $color-red;
         padding: 0.5rem 1rem;
-        min-height: 400px;
+        min-height: 450px;
     }
 
     &__header {
@@ -711,7 +985,6 @@
     &__footer {
         max-width: 100%;
         margin: 1rem;
-        display: none;
 
         &--dots {
             display: flex;
@@ -730,11 +1003,6 @@
             &--active {
                 background-color: $color-red;
             }
-        }
-
-        &--active {
-            display: flex;
-            justify-content: center;
         }
     }
 }
