@@ -84,6 +84,12 @@
         padding-bottom: 12.2369rem;
 
     }
+    @media screen and (min-width:768px) {
+        padding-top: 5rem;
+    }
+    @media screen and (min-width:1130px) {
+        padding-top: 8rem;
+    }
 
     .files-heading {
         font-family: 'Oswald';
