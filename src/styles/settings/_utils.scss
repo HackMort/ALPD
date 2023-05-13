@@ -129,9 +129,21 @@ $color-value in $colors {
     }
 }
 
+.sm\:block {
+    @media screen and (min-width: 425px) {
+        display: block !important;
+    }
+}
+
 .md\:block {
     @media screen and (min-width: 768px) {
         display: block;
+    }
+}
+
+.sz-463\:hidden {
+    @media screen and (min-width: 463px) {
+        display: none !important;
     }
 }
 

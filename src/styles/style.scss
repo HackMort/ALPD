@@ -1199,7 +1199,7 @@
         .alp-reference-range__identify-wrapper {
             position: relative;
 
-            img {
+            >img {
                 width: auto;
             }
 
@@ -1340,27 +1340,32 @@
 
                 .alp-reference-range__identify-p1 {
                     font-family: 'Special Elite', cursive;
-                    font-size: 1.25rem;
-                    line-height: 30px;
+                    font-size: 1.1rem;
+                    line-height: 25px;
                     margin-bottom: 1.25rem;
 
-                    &::after {
-                        content: "";
-                        background-image: url("/assets/images/identifying-hpp/red-line.png");
-                        background-repeat: no-repeat;
-                        background-size: contain;
+                    @media screen and (min-width: 375px) {
+                        font-size: 1.25rem;
+                        line-height: 30px;
+                    }
 
-                        width: 150px;
-                        height: 20px;
+                    .underline-text {
+                        position: relative;
 
-                        display: inline-block;
+                        &::after {
+                            content: "";
+                            background-image: url("/assets/images/identifying-hpp/red-underline.png");
+                            background-repeat: no-repeat;
+                            background-size: contain;
 
-                        @media screen and (min-width: 1024px) {
-                            display: block;
-                            width: 174px;
-                            height: 28px;
+                            width: 100%;
+                            height: 20px;
 
-                            transform: translateY(-7px);
+                            display: inline-block;
+
+                            position: absolute;
+                            top: 91%;
+                            left: 0;
                         }
                     }
 
