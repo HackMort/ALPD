@@ -54,7 +54,7 @@
         font-size: 1.875rem;
         line-height: 32px;
         text-transform: uppercase;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
 
         @media screen and (min-width:745px) {
             // width: 563px;
@@ -732,9 +732,11 @@
             margin: auto;
             margin-top: 2rem;
             margin-bottom: 68px;
+            &.modifier{
+                background-color: gray;
+            }
         }
-    }
-
+        }
 
     .deactive-text {
         position: relative;

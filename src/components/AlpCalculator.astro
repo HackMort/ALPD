@@ -84,7 +84,7 @@ import References from "../components/References.astro";
               onblur="validateFormControl(event)"
               onchange="validateFormControl(event)"
             >
-              <option value="" selected disabled>*Age</option>
+              <option value="" selected>*Age</option>
               <option value="0-14 days">0 - 14 days</option>
               <option value="15 days - 1 year">15 days - 1 year</option>
               <option value="1-10 years">1 - 10 years</option>
@@ -115,7 +115,7 @@ import References from "../components/References.astro";
               onblur="validateFormControl(event)"
               onchange="validateFormControl(event)"
             >
-              <option value="" selected disabled>*Sex</option>
+              <option value="" selected>*Sex</option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
             </select>
@@ -150,7 +150,7 @@ import References from "../components/References.astro";
         </p>
 
         <button
-          class="button"
+          class="button modifier"
           id="compare"
           type="submit"
           value="Submit"
@@ -340,6 +340,30 @@ import References from "../components/References.astro";
         });
         //survey buttons//
 
+        //compare button//
+        ageValue.addEventListener('click', ()=>{
+         if(ageValue.value === '' || sexValue.value === ''){
+            compareButton.style.backgroundColor = 'gray'
+            console.log('age')
+         }else{
+            compareButton.style.backgroundColor = '#CF1C0A'
+            console.log('sex')
+         }
+        })
+        
+        
+        sexValue.addEventListener('click', ()=>{
+         if(ageValue.value === '' || sexValue.value === ''){
+            compareButton.style.backgroundColor = 'gray'
+            console.log('age')
+         }else{
+            compareButton.style.backgroundColor = '#CF1C0A'
+            console.log('sex')
+         }
+        })
+        //#CF1C0A
+        //compare button//
+
         graphic.style.display = "none";
         deactiveText1.style.display = "none";
         deactiveText2.style.display = "none";
@@ -375,9 +399,8 @@ import References from "../components/References.astro";
               "url('/assets/images/stay-connected-desktop.png')";
             compareButton.addEventListener("click", (e) => {
               e.preventDefault();
-              if (ageValue.value != "" || sexValue.value != "") {
-                graphicCounter = 1;
-                form.style.maxWidth = "325px";
+              if (ageValue.value != "" && sexValue.value != "") {
+                 graphicCounter = 1;
                 form.style.marginRight = "0";
                 compareButton.style.marginBottom = "10px";
                 graphic.style.marginLeft = "28px";
@@ -1293,6 +1316,7 @@ import References from "../components/References.astro";
                 }
               }
               chDisclaimer.style.marginTop = "0px";
+              
             });
 
             nextButton.addEventListener("click", () => {
@@ -1324,6 +1348,7 @@ import References from "../components/References.astro";
               ulInput.style.margin = "auto";
               chDisclaimer2.style.margin = "auto";
               chDisclaimer2.style.width = "296px";
+              compareButton.style.backgroundColor = 'gray'
               form.style.margin = "auto";
               form.style.marginTop = "1.5rem";
             });
@@ -1336,11 +1361,34 @@ import References from "../components/References.astro";
               chDisclaimer2.style.margin = "auto";
               calculatorAlp.style.backgroundImage =
                 "url('/assets/images/stay-connected-desktop.png')";
+              compareButton.style.backgroundColor = 'gray'
               ageValue.value = "";
               sexValue.value = "";
               alpValue.value = "";
               instance.close();
             });
+
+            ageValue.addEventListener('click', ()=>{
+              if(ageValue.value === '' || sexValue.value === ''){
+                 compareButton.style.backgroundColor = 'gray'
+                 console.log('age')
+              }else{
+                 compareButton.style.backgroundColor = '#CF1C0A'
+                 console.log('sex')
+              }
+             });
+        
+        
+            sexValue.addEventListener('click', ()=>{
+             if(ageValue.value === '' || sexValue.value === ''){
+                compareButton.style.backgroundColor = 'gray'
+                console.log('age')
+             }else{
+                compareButton.style.backgroundColor = '#CF1C0A'
+                console.log('sex')
+             }
+            });
+
 
             if (survey.style.display === "block") {
               redString1.style.display = "none";
@@ -1362,7 +1410,7 @@ import References from "../components/References.astro";
             compareButton.addEventListener("click", (e) => {
               e.preventDefault();
               if (ageValue.value != "" && sexValue.value != "") {
-                graphicCounter = 1;
+                 graphicCounter = 1;
                 graphicSection.style.display = "block";
                 graphicSection.style.marginTop = "1.5rem";
                 compareButton.style.marginBottom = "32px";
@@ -2276,6 +2324,12 @@ import References from "../components/References.astro";
                 }
               }
               chDisclaimer.style.marginTop = "-10px";
+
+              if(ageValue.value === '' || sexValue.value === ''){
+                compareButton.style.backgroundColor = 'gray'
+             }else{
+                compareButton.style.backgroundColor = '#CF1C0A'
+             }
             });
 
             nextButton.addEventListener("click", () => {
@@ -2288,6 +2342,7 @@ import References from "../components/References.astro";
                 "url('/assets/images/alp-calculator-bg-mobile.png')";
               chDisclaimer2.style.margin = "auto";
               chDisclaimer2.style.width = "243px";
+              compareButton.style.backgroundColor = 'gray'
               ageValue.value = "";
               sexValue.value = "";
               alpValue.value = "";
@@ -2296,11 +2351,33 @@ import References from "../components/References.astro";
             modalClose.addEventListener("click", () => {
               calculatorAlp.style.backgroundImage =
                 "url('/assets/images/alp-calculator-bg-mobile.png')";
+              compareButton.style.backgroundColor = 'gray'
               instance.close();
               ageValue.value = "";
               sexValue.value = "";
               alpValue.value = "";
               graphicCounter = 0;
+            });
+
+            ageValue.addEventListener('click', ()=>{
+              if(ageValue.value === '' || sexValue.value === ''){
+                 compareButton.style.backgroundColor = 'gray'
+                 console.log('age')
+              }else{
+                 compareButton.style.backgroundColor = '#CF1C0A'
+                 console.log('sex')
+              }
+             });
+        
+        
+            sexValue.addEventListener('click', ()=>{
+             if(ageValue.value === '' || sexValue.value === ''){
+                compareButton.style.backgroundColor = 'gray'
+                console.log('age')
+             }else{
+                compareButton.style.backgroundColor = '#CF1C0A'
+                console.log('sex')
+             }
             });
 
             if (survey.style.display === "block") {
@@ -2358,6 +2435,7 @@ import References from "../components/References.astro";
         modalClose.addEventListener("click", () => {
           graphicCounter = 0;
           instance.close();
+          compareButton.style.backgroundColor = 'gray'
         });
 
         instance = new Fancybox([{ src: "modal-calculator" }], {
@@ -2387,6 +2465,7 @@ import References from "../components/References.astro";
               ageInput.style.margin = "auto";
               sexInput.style.margin = "auto";
               ulInput.style.margin = "auto";
+              compareButton.style.backgroundColor = 'gray'
               ageValue.value = "";
               sexValue.value = "";
               alpValue.value = "";
