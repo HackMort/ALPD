@@ -1229,9 +1229,11 @@
 
 /* Usual Suspects */
 .usual_suspects {
+
     .mod-1, .mod-2 {
         display: none;
     }
+
     .cta .variant-3 .red-string.mod-3 {
         bottom: 106px;
         right: -22px;
@@ -1277,7 +1279,7 @@
         transform: rotateZ(-6deg);
     }
     
-    section {
+    .section-container {
         color:white;
         padding-top: 20px;
         padding-bottom: 45px;
@@ -1347,10 +1349,49 @@
         }
     }
 
-    .section-title {
-        
+    .usual-suspects-panel {
+        min-height: 687px;
+        padding-top: 100px;
+        color: black;
+        padding-left: 8%;
+        padding-right: 8%;
     }
+
+    .usual-suspects-panel-1 {
+        background-image: url(/assets/images/usual-suspects/folder_open_1.png);
+        background-size: cover;
+    }
+    .usual-suspects-panel-2 {
+        background-image: url(/assets/images/usual-suspects/folder_open_2.png);
+        background-size: cover;
+    }
+    .usual-suspects-panel-3 {
+        background-image: url(/assets/images/usual-suspects/folder_open_3.png);
+        background-size: cover;
+    }
+
+    .usual-suspects-tabs [role='tablist'] {
+        background: unset;
+        height: auto;
+        padding: 0; 
+        margin-bottom: -61px;
+        justify-content: space-around;
+        overflow: hidden;
+
+        li {
+            border: 2px solid white;
+            width: 33.33%;
+            opacity: 0;
+
+            a {
+                width: 100%;
+            }
+        }
+
+    }
+
 }
+
 
 @media screen and (min-width: 480px) {
     .usual_suspects {
