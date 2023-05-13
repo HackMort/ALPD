@@ -1455,7 +1455,7 @@
             }
 
             .footext-1 {
-                max-width: 37rem;
+                max-width: 19rem;
                 margin-left: auto;
                 margin-right: auto;
             }
@@ -1464,7 +1464,7 @@
                 margin-bottom: 5rem;
 
                 margin-bottom: 8rem;
-                max-width: 24.5rem;
+                max-width: 17rem;
                 margin-left: auto;
                 margin-right: auto;
 
@@ -1480,15 +1480,19 @@
             }
 
             .footext-3 {
-                max-width: 37rem;
+                max-width: 20rem;
                 margin-left: auto;
                 margin-right: auto;
             }
 
             .footext-4 {
-                max-width: 25rem;
+                max-width: 18rem;
                 margin-left: auto;
                 margin-right: auto;
+
+                &:last-of-type {
+                    max-width: 19rem;
+                }
             }
         }
     }
@@ -1569,8 +1573,24 @@
 
                     padding: 6rem 0;
 
+                    @media screen and (min-width: 1024px) {
+                        max-width: 16rem;
+                    }
+
+                    p {
+                        margin-bottom: .5rem;
+
+                        @media screen and (min-width: 768px) {
+                            margin-bottom: .75rem;
+                        }
+                    }
+
                     ul {
-                        margin-left: 1rem;
+                        margin-left: 1.25rem;
+
+                        @media screen and (min-width: 1024px) {
+                            margin-left: 2rem;
+                        }
                     }
 
                     p,
@@ -1664,6 +1684,8 @@
                 max-width: 36.375rem;
                 margin-left: auto;
                 margin-right: auto;
+
+
 
                 margin-bottom: 1.5rem;
             }
