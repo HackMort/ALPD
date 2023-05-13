@@ -1832,15 +1832,34 @@
                 }
             }
 
+            .genetic-testing-role__title {
+                @media screen and (min-width: 425px) {
+                    text-align: center;
+                }
+            }
+
             .genetic-testing-role__paragraph {
-                @media screen and (min-width: 768px) {
+                &:first-of-type {
+                    font-size: 1.125rem;
+                    line-height: 25.2px;
+                }
+
+                @media screen and (min-width: 425px) {
+                    text-align: center;
 
                     margin-left: auto;
                     margin-right: auto;
 
-                    &:first-of-type {
-                        max-width: 21.5625rem;
+                    &:nth-child(3) {
+                        max-width: 24.1875rem;
                     }
+
+                    &:last-of-type {
+                        max-width: 23.4375rem;
+                    }
+                }
+
+                @media screen and (min-width: 768px) {
 
                     &:nth-child(3),
                     &:last-of-type {
