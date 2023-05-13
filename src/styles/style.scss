@@ -1948,6 +1948,10 @@
                     margin-right: auto;
 
                     position: relative;
+                    
+                    @media screen and (min-width: 768px) {
+                        transform: translateX(20%);
+                    }
 
                     p {
                         position: absolute;
@@ -1969,13 +1973,21 @@
 
                             margin-bottom: .25rem;
                         }
+
+                        @media screen and (min-width: 768px) {
+                            transform: translateX(-70%);
+                        }
+
+                        @media screen and (min-width: 768px) {
+                            font-size: 5.125rem;
+                        }
                     }
                 }
 
                 .kpi__content {
 
                     width: 100%;
-                    max-width: 80%;
+                    max-width: 18.4375rem;
 
                     margin-left: auto;
                     margin-right: auto;
@@ -2127,20 +2139,25 @@
                 }
 
                 .has-vus__title {
-                    @media screen and (min-width: 1024px) {
-                        max-width: 543px;
+                    @media screen and (min-width: 768px) {
+                        text-align: center;
                         margin-left: auto;
                         margin-right: auto;
                     }
                 }
 
                 .has-vus__classification {
-                    @media screen and (min-width: 1024px) {
+                    
+                    @media screen and (min-width: 768px) {
+                        text-align: center;
                         margin-left: auto;
                         margin-right: auto;
 
+                        max-width: 30.625rem;
+                    }
+
+                    @media screen and (min-width: 1024px) {
                         max-width: 33.8125rem;
-                        text-align: center;
 
                         font-size: 1.125rem;
                         font-weight: 500;
@@ -2149,11 +2166,24 @@
                 }
 
                 .has-vus__quote {
+                    @media screen and (min-width: 768px) {
+
+                        max-width: 29.875rem;
+                        margin-left: auto;
+                        margin-right: auto;
+
+                        p {
+                            &:last-of-type {
+                                max-width: 22.375rem;
+                                margin-left: auto;
+                                margin-right: auto;
+                            }
+                        }
+                    }
+
                     @media screen and (min-width: 1024px) {
 
                         max-width: 36.875rem;
-                        margin-left: auto;
-                        margin-right: auto;
 
                         p {
                             &:first-of-type {
@@ -2176,6 +2206,12 @@
                                 margin-right: auto;
                             }
                         }
+                    }
+
+                    .quote-note {
+                        font-size: .875rem;
+                        line-height: 18.2px;
+                        font-weight: 400;
                     }
                 }
             }
@@ -2245,13 +2281,16 @@
             margin-right: auto;
 
             p {
+                line-height: 24px;
+                max-width: 18rem;
+                margin-left: auto;
+                margin-right: auto;
+                font-weight: 500;
+
                 @media screen and (min-width: 768px) {
                     font-size: 1.125rem;
-                    font-weight: 500;
                     line-height: 25.2px;
-                    max-width: 25rem;
-                    margin-left: auto;
-                    margin-right: auto;
+                    max-width: 26rem;
                 }
             }
         }
@@ -2261,10 +2300,15 @@
             border-bottom: 1px solid $color-light-blue;
 
             padding: 0;
-            justify-content: center;
+            justify-content: space-around;
 
             overflow: initial;
             align-items: flex-end;
+
+            @media screen and (min-width: 500px) {
+                justify-content: center;
+                @include flex-gap(4rem)
+            }
 
             li {
                 height: 2rem;

@@ -3,6 +3,7 @@ import CTA from "../components/CTA.astro";
 import InternalNavigation from "../components/InternalNavigation.astro";
 import Layout from "../layouts/Layout.astro";
 import CommonHeroPage from "../components/CommonHeroPage.astro";
+import References from "../components/References.astro";
 const internalNavLinks = [
     {
         href: "alp-reference-range",
@@ -584,14 +585,15 @@ const internalNavLinks = [
                             alt=""
                         />
                     </picture>
-                    <p class="color--red font--veneer">400%</p>
+                    <p class="color--red font--veneer">400+</p>
                 </div>
                 <div class="kpi__content">
                     <p class="color--white text--center font--special-elite">
                         Since its initial discovery in 1988, the number of <span
                             class="text--italic font--50">ALPL</span
-                        > gene mutations have increased with over 400 identified;
-                        new discoveries are ongoing<sup>11,19-23</sup>
+                        >
+                        gene mutations have increased with over 400 identified; new
+                        discoveries are ongoing<sup>10,18-22</sup>
                     </p>
                 </div>
             </div>
@@ -607,7 +609,7 @@ const internalNavLinks = [
                                 who have identical genotypes may express varying
                                 phenotypes due to factors beyond the ALPL gene mutation
                                 (eg, number of mutant enzyme synthesized, alkaline
-                                phosphate enzymatic activity).<sup>25-27</sup>
+                                phosphatase enzymatic activity).<sup>24-26</sup>
                             </p>
                         </div>
                     </div>
@@ -615,7 +617,7 @@ const internalNavLinks = [
                 <div class="additional-limitations__rigth">
                     <div class="wrapper xl:no-wrapper">
                         <p class="additional-limitations__title color--buff">
-                            Additional limitations<sup>17,23,24</sup>
+                            Additional limitations<sup>16,22,23</sup>
                         </p>
 
                         <ul class="additional-limitations__list">
@@ -659,28 +661,32 @@ const internalNavLinks = [
             <div class="has-vus">
                 <div class="wrapper">
                     <h2 class="has-vus__title white-title color--white">
-                        If your patient has a variant of uncertain significance
-                        (VUS)
+                        If your patient has a variant of<br
+                            class="hidden md:block"
+                        /> uncertain significance (VUS)
                     </h2>
                     <p class="color--white has-vus__classification">
                         If the classification of the variant is VUS, it means
                         that at the time of interpretation, there was
                         insufficient evidence to determine if the variant was
-                        related to disease or not.<sup>28</sup>
+                        related to disease or not.<sup>27</sup>
                     </p>
                     <div class="has-vus__quote">
                         <p
                             class="color--white text--center font--special-elite"
                         >
-                            “According to the American College of Medical
-                            Genetics and Genomics, a VUS should not be used in
-                            clinical decision-making. If a patient is identified
-                            to have a VUS, all clinical decisions should be
-                            based on personal and family history and not on the
-                            presence of the VUS.”
+                            “According to the ACMG* guidelines, a VUS should not
+                            be used in clinical decision-making. If a patient is
+                            identified to have a VUS, all clinical decisions
+                            should be based on personal and family history and
+                            not on the presence of the VUS.”<sup>28</sup>
                         </p>
                         <p class="color--white text--center">
                             -Jennifer Schleit, PhD, Senior Geneticist
+                        </p>
+                        <p class="color--white text--center quote-note">
+                            <sup class="symbol-sup">*</sup>ACMG, American
+                            College of Medical Genetics and Genomics.
                         </p>
                         <p
                             class="color--saffron-mango text--center font--special-elite"
@@ -789,4 +795,85 @@ const internalNavLinks = [
             bypassModal
         />
     </section>
+
+    <References>
+        <p>
+            <strong>References: 1.</strong> Bishop N, Munns CF, Ozono K. Transformative therapy
+            in hypophosphatasia. Arch Dis Child. 2016;101(6):514-515. <strong>2.</strong>
+            Desborough R, Nicklin P, Gossiel F, et al. Clinical and biochemical
+            characteristics of adults with hypophosphatasia attending a
+            metabolic bone clinic. Bone. 2021;144:115795. <strong>3.</strong> Bloch-Zupan A.
+            Hypophosphatasia: diagnosis and clinical signs - a dental surgeon
+            perspective. Int J Paediatr Dent. 2016;26(6):426-438. <strong>4.</strong> Shapiro JR,
+            Lewiecki EM. Hypophosphatasia in adults: clinical assessment and
+            treatment considerations. J Bone Miner Res. 2017;32(10):1977-1980.
+            <strong>5.</strong> Rockman-Greenberg C. Hypophosphatasia. Pediatr Endocrinol Rev.
+            2013;10(suppl 2):380-388. <strong>6.</strong> McKiernan FE, Berg RL, Fuehrer J.
+            Clinical and radiographic findings in adults with persistent
+            hypophosphatasemia. J Bone Miner Res. 2014;29(7):1651-1660. <strong>7.</strong> Whyte
+            MP. Hypophosphatasia: nature's window on alkaline phosphatase
+            function in humans. In: Bilezikian JP, Raisz LG, Martin TJ, eds.
+            Principles of Bone Biology. 3rd ed. Academic Press; 2008:1573-1598.
+            <strong>8.</strong> Bianchi ML, Bishop NJ, Guañabens N, et al; Rare Bone Disease
+            Action Group of the European Calcified Tissue Society.
+            Hypophosphatasia in adolescents and adults: overview of diagnosis
+            and treatment. Osteoporos Int. 2020;31(8):1445-1460. <strong>9.</strong> Vieira LHR,
+            Peixoto KC, Flósi CL, Fleiuss de Farias ML, Madeira M. Active search
+            of adult patients with persistently low serum alkaline phosphatase
+            levels for diagnosis of hypophosphatasia. Arch Endocrinol Metab.
+            2021;65(3):289-294. <strong>10.</strong> NORD. Hypophosphatasia. Accessed March 30,
+            2023. <a href="https://rarediseases.org/rare-diseases/hypophosphatasia/" target="_blank">https://rarediseases.org/rare-diseases/hypophosphatasia/</a> <strong>11.</strong>
+            Mornet E, Nunes ME. Hypophosphatasia. In: Adam MP, Ardinger HH,
+            Pagon RA, et al, eds. GeneReviews®. University of Washington; 2007.
+            Accessed March 30, 2023. <a href="https://www.ncbi.nlm.nih.gov/books/NBK1150/" target="_blank">https://www.ncbi.nlm.nih.gov/books/NBK1150/</a>
+            <strong>12.</strong> Mornet E. Molecular genetics of hypophosphatasia and
+            phenotype-genotype correlations. Subcell Biochem. 2015;76:25-43. <strong>13.</strong>
+            Kamińska J, Dymicka-Piekarska V, Tomaszewska J, Matowicka-Karna J,
+            Koper-Lenkiewicz OM. Diagnostic utility of protein in creatinine
+            ratio (P/C ratio) in spot urine sample within routine clinical
+            practice. Crit Rev Clin Lab Sci. 2020;57(5):345-364. <strong>14.</strong> Shajani-Yi
+            Z, Ayala-Lopez N, Black M, Dahir KM. Urine phosphoethanolamine is a
+            specific biomarker for hypophosphatasia in adults. Bone.
+            2022;163:116504. <strong>15.</strong> Phillips KA, Deverka PA, Hooker GW, Douglas MP.
+            Genetic test availability and spending: where are we now? Where are
+            we going? Health Aff (Millwood). 2018;37(5):710-716. <strong>16.</strong> Mornet E.
+            Hypophosphatasia. Metabolism. 2018;82:142–155. <strong>17.</strong> Khan AA, Josse R,
+            Kannu P, et al. Hypophosphatasia: Canadian update on diagnosis and
+            management. Osteoporos Int. 2019;30(9):1713-1722. <strong>18.</strong> NIH
+            MedlinePlus. ALPL gene. National Library of Medicine. 2018. Accessed
+            March 30, 2023. <a href="https://medlineplus.gov/genetics/gene/alpl/" target="_blank">https://medlineplus.gov/genetics/gene/alpl/</a> <strong>19.</strong>
+            Horton RH, Lucassen AM. Recent developments in genetic/genomic
+            medicine. Clin Sci (Lond). 2019;133(5):697-708. <strong>20.</strong> Weiss MJ, Cole
+            DE, Ray K, et al. A missense mutation in the human liver/bone/kidney
+            alkaline phosphatase gene causing a lethal form of hypophosphatasia.
+            Proc Natl Acad Sci. 1988;85:7666-7669. <strong>21.</strong> The ALPL Gene Variant
+            Database. JKU Faculty of Medicine. Accessed March 30, 2023.
+            <a href="https://alplmutationdatabase.jku.at/" target="_blank">https://alplmutationdatabase.jku.at/</a> <strong>22.</strong> Jandl NM, Schmidt T,
+            Rolvien T, et al. Genotype-phenotype associations in 72 adults with
+            suspected ALPL-associated hypophosphatasia. Calc Tissue Int.
+            2021;108(3):288-301. <strong>23.</strong> Nunes ME. Hypophosphatasia. GeneReviews®.
+            2007;1993–2002. <strong>24.</strong> Whyte MP, Leung E, Wilcox WR, et al. Natural
+            history of perinatal and infantile hypophosphatasia: a retrospective
+            study. J Pediatr. 2019;209:116-124.e4. <strong>25.</strong> Zurutuza L, Muller F,
+            Gibrat JF, et al. Correlations of genotype and phenotype in
+            hypophosphatasia. Hum Mol Genet. 1999;8(6):1039-1046. <strong>26.</strong> Hofmann C,
+            Girschick HJ, Mentrup B, et al. Clinical aspects of
+            hypophosphatasia: an update. Clin Rev Bone Miner Metab.
+            2013;11:60-70. <strong>27.</strong> Sanabria-de la Torre R, Martínez-Heredia L,
+            González-Salvatierra S, et al. Characterization of genetic variants
+            of uncertain significance for the ALPL gene in patients with adult
+            hypophosphatasia. Front Endocrinol (Lausanne). 2022;13:863940. <strong>28.</strong>
+            Blueprint Genetics. VUS—the most maligned result in genetic testing.
+            2019. Accessed March 30, 2023.
+            <a href="https://blueprintgenetics.com/resources/vus-the-most-maligned-result-in-genetic-testing/" target="_blank">https://blueprintgenetics.com/resources/vus-the-most-maligned-result-in-genetic-testing/</a>
+            <strong>29.</strong> Beck NM, Sagaser KG, Lawson CS, et al. Not just a carrier:
+            clinical presentation and management of patients with heterozygous
+            disease-causing alkaline phosphatase (ALPL) variants identified
+            through expanded carrier screening. Mol Genet Genomic Med.
+            2023;11(1):e2056. <strong>30.</strong> Kishnani PS, Rockman-Greenberg C, Rauch F, et
+            al. Five-year efficacy and safety of asfotase alfa therapy for
+            adults and adolescents with hypophosphatasia. Bone.
+            2019;121:149-162.
+        </p>
+    </References>
 </Layout>

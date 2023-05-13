@@ -143,7 +143,7 @@ $color-value in $colors {
 
 .md\:block {
     @media screen and (min-width: 768px) {
-        display: block;
+        display: block !important;
     }
 }
 
@@ -183,10 +183,6 @@ $color-value in $colors {
 
 .font--special-elite {
     font-family: 'Special Elite', cursive;
-}
-
-.text--center {
-    text-align: center;
 }
 
 .text--left {
