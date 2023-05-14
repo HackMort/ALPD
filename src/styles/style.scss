@@ -1108,179 +1108,182 @@
 
 /* 404 */
 .page__not_found {
-    
-        
 
-    main{
+
+
+    main {
         overflow-x: unset;
     }
-            &__title {
-                width: 9rem;
-                margin: auto;
-                margin-top: 9.2363rem;
-                position: relative;
-                z-index: 2;
+
+    &__title {
+        width: 9rem;
+        margin: auto;
+        margin-top: 9.2363rem;
+        position: relative;
+        z-index: 2;
 
 
-                /* @media screen and (min-width:700px) {
+        /* @media screen and (min-width:700px) {
             width: 11.1875rem;
             margin-top: 14.5006rem;
         } */
 
 
+    }
+
+
+
+    &__text {
+        color: $color-white;
+        margin-top: 1.9125rem;
+        margin-bottom: 1.99rem;
+        position: relative;
+        z-index: 2;
+
+        @media screen and (min-width:700px) {
+            margin-bottom: 3rem;
+        }
+    }
+
+
+    .first-child {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-family: 'Barlow';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.125rem;
+        line-height: 1.5625rem;
+        max-width: 17.125rem;
+        margin: auto;
+        margin-bottom: 2rem;
+
+        @media screen and (min-width:700px) {
+            max-width: 36.3125rem;
+            font-size: 1.3125rem;
+            line-height: 1.8125rem;
+            max-width: 36.3125rem;
+            font-size: 1.3125rem;
+            line-height: 1.8125rem;
+        }
+    }
+
+    p {
+        &.modifier {
+            text-align: center;
+            font-family: 'Barlow';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 1.125rem;
+            line-height: 1.5625rem;
+            max-width: 17.125rem;
+            margin: auto;
+
+
+            @media screen and (min-width:700px) {
+                max-width: 36.3125rem;
+                font-size: 1.3125rem;
+                line-height: 1.8125rem;
+                max-width: 36.3125rem;
+                font-size: 1.3125rem;
+                line-height: 1.8125rem;
+            }
+        }
+    }
+
+
+
+
+    .button {
+        &.modifier {
+
+            margin: auto;
+            margin-bottom: 117px;
+            position: relative;
+            z-index: 2;
+
+            @media screen and (min-width:700px) {
+                margin-bottom: 168px;
+            }
+        }
+    }
+
+
+    .reference {
+        position: relative;
+        max-width: 90rem;
+        margin: auto;
+    }
+
+
+    &__image {
+        position: absolute;
+        min-width: 27.6944rem;
+        max-width: 27.6944rem;
+        top: -12.375rem;
+        left: -5rem;
+
+        @media screen and (min-width:500px) {
+            left: 0;
+        }
+
+
+        @media screen and (min-width:896px) {
+            max-width: 51.5356rem;
+            /* top: -23.3125rem; */
+            top: -19.3125rem;
+            left: -3.875rem;
+        }
+
+
+        @media screen and (min-width:1200px) {
+            left: 0;
+        }
+    }
+
+
+    .red-string {
+        &.modifier {
+
+            position: absolute;
+            transform: rotate(6.51deg);
+            top: 21.6875rem;
+            width: 100vw;
+
+
+
+
+            @media screen and (min-width:700px) {
+                transform: rotate(-4.49deg);
+                top: 21.8125rem;
+                left: -1.8125rem;
+                width: 105vw;
             }
 
 
-
-                &__text {
-                    color: $color-white;
-                    margin-top: 1.9125rem;
-                    margin-bottom: 1.99rem;
-                    position: relative;
-                    z-index: 2;
-                    
-                    @media screen and (min-width:700px) {
-                        margin-bottom: 3rem;
-                    }
-                }
-                
-                
-                .first-child {
-                    text-align: center;
-                    margin-bottom: 2rem;
-                    font-family: 'Barlow';
-                    font-style: normal;
-                    font-weight: 600;
-                    font-size: 1.125rem;
-                    line-height: 1.5625rem;
-                    max-width: 17.125rem;
-                    margin: auto;
-                    @media screen and (min-width:700px) {
-                    max-width: 36.3125rem;
-                    font-size: 1.3125rem;
-                    line-height: 1.8125rem;
-                    max-width: 36.3125rem;
-                    font-size: 1.3125rem;
-                    line-height: 1.8125rem;
-                    margin-bottom: 2rem;
-                }
+            @media screen and (min-width:1500px) {
+                transform: rotate(-3.49deg);
+                top: 14.375rem;
+                left: -28rem;
+                width: 362vw;
             }
-            p {
-                            &.modifier{
-                                text-align: center;
-                            font-family: 'Barlow';
-                            font-style: normal;
-                            font-weight: 600;
-                            font-size: 1.125rem;
-                            line-height: 1.5625rem;
-                            max-width: 17.125rem;
-                            margin: auto;
+
+            @media screen and (min-width:2020px) {
+                top: 12.5rem;
+                left: -43.1875rem;
+                width: 423vw;
+            }
 
 
-                            @media screen and (min-width:700px) {
-                                max-width: 36.3125rem;
-                                font-size: 1.3125rem;
-                                line-height: 1.8125rem;
-                                max-width: 36.3125rem;
-                                font-size: 1.3125rem;
-                                line-height: 1.8125rem;
-                            }
-                        }
-                    }
-                        
-                    
-
-                    
-                            .button {
-                                &.modifier{
-
-                                    margin: auto;
-                                    margin-bottom: 117px;
-                                    position: relative;
-                                    z-index: 2;
-                                    
-                                    @media screen and (min-width:700px) {
-                                        margin-bottom: 168px;
-                                    }
-                                }
-                                }
-
-                            
-                                .reference {
-                                    position: relative;
-                                    max-width: 90rem;
-                                    margin: auto;
-                                }
-
-                                
-                                    &__image {
-                                        position: absolute;
-                                        min-width: 27.6944rem;
-                                        max-width: 27.6944rem;
-                                        top: -12.375rem;
-                                        left: -4.0625rem;
-
-                                        @media screen and (min-width:500px) {
-                                            left: 0;
-                                        }
-                                    
-
-                                        @media screen and (min-width:896px) {
-                                            max-width: 51.5356rem;
-                                            /* top: -23.3125rem; */
-                                            top: -19.3125rem;
-                                            left: -3.875rem;
-                                        }
+            @media screen and (min-width:2340px) {
+                top: 14.4375rem;
+                transform: rotate(-1.49deg);
+            }
+        }
+    }
+}
 
 
-                                        @media screen and (min-width:1200px) {
-                                            left: 0;
-                                        }
-                                    }
-
-                                    
-                                        .red-string {
-                                            &.modifier{
-
-                                                position: absolute;
-                                                transform: rotate(6.51deg);
-                                            top: 21.6875rem;
-                                            width: 100vw;
-                                            
-                                           
-                                            
-                                            
-                                            @media screen and (min-width:700px) {
-                                                transform: rotate(-4.49deg);
-                                                top: 21.8125rem;
-                                                left: -1.8125rem;
-                                                width: 105vw;
-                                            }
-                                            
-                                            
-                                            @media screen and (min-width:1500px) {
-                                                transform: rotate(-3.49deg);
-                                                top: 14.375rem;
-                                                left: -28rem;
-                                                width: 362vw;
-                                            }
-                                            
-                                            @media screen and (min-width:2020px) {
-                                                top: 12.5rem;
-                                                left: -43.1875rem;
-                                                width: 423vw;
-                                            }
-                                            
-                                            
-                                            @media screen and (min-width:2340px) {
-                                                top: 14.4375rem;
-                                                transform: rotate(-1.49deg);
-                                            }
-                                        }
-                                        }
-                                    }
-                                    
-                                
 
 /* HPP Profile Page */
 .hpp__profile {
