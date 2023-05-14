@@ -160,7 +160,7 @@ import References from "../components/References.astro";
     </div>
 
     <div class="deactive-text">
-      <div class="red-string-2"></div>
+      <div class="red-string-2-calculator"></div>
 
       <p class="deactive-text__1">
         Limitations: A low ALP value is not conclusive for diagnosis of HPP.
@@ -292,7 +292,7 @@ import References from "../components/References.astro";
         const activeText2 = document.querySelector(".active-text__two");
         const activeText3 = document.querySelector(".active-text__three");
         const redString1 = document.querySelector(".red-string-1");
-        const redString2 = document.querySelector(".red-string-2");
+        const redString2 = document.querySelector(".red-string-2-calculator");
         const deactiveText1 = document.querySelector(".deactive-text__1");
         const deactiveText2 = document.querySelector(".deactive-text__2");
         const nextButton = document.querySelector(".deactive-text__button");
@@ -346,29 +346,9 @@ import References from "../components/References.astro";
         });
         //survey buttons//
 
-        //compare button//
-        ageValue.addEventListener('click', ()=>{
-         if(ageValue.value === '' || sexValue.value === ''){
-            compareButton.style.backgroundColor = 'gray'
-            console.log('age')
-         }else{
-            compareButton.style.backgroundColor = '#CF1C0A'
-            console.log('sex')
-         }
-        })
         
         
-        sexValue.addEventListener('click', ()=>{
-         if(ageValue.value === '' || sexValue.value === ''){
-            compareButton.style.backgroundColor = 'gray'
-            console.log('age')
-         }else{
-            compareButton.style.backgroundColor = '#CF1C0A'
-            console.log('sex')
-         }
-        })
-        //#CF1C0A
-        //compare button//
+        
 
         graphic.style.display = "none";
         deactiveText1.style.display = "none";
@@ -1413,7 +1393,6 @@ import References from "../components/References.astro";
               ulInput.style.margin = "auto";
               chDisclaimer2.style.margin = "auto";
               chDisclaimer2.style.width = "296px";
-              compareButton.style.backgroundColor = 'gray'
               form.style.margin = "auto";
               form.style.marginTop = "1.5rem";
               activeText3.style.marginLeft = "46px";
@@ -1428,7 +1407,6 @@ import References from "../components/References.astro";
               chDisclaimer2.style.margin = "auto";
               calculatorAlp.style.backgroundImage =
                 "url('/assets/images/stay-connected-desktop.png')";
-              compareButton.style.backgroundColor = 'gray'
               ageValue.value = "";
               sexValue.value = "";
               alpValue.value = "";
@@ -1439,27 +1417,7 @@ import References from "../components/References.astro";
               instance.close();
             });
 
-            ageValue.addEventListener('click', ()=>{
-              if(ageValue.value === '' || sexValue.value === ''){
-                 compareButton.style.backgroundColor = 'gray'
-                 console.log('age')
-              }else{
-                 compareButton.style.backgroundColor = '#CF1C0A'
-                 console.log('sex')
-              }
-             });
-        
-        
-            sexValue.addEventListener('click', ()=>{
-             if(ageValue.value === '' || sexValue.value === ''){
-                compareButton.style.backgroundColor = 'gray'
-                console.log('age')
-             }else{
-                compareButton.style.backgroundColor = '#CF1C0A'
-                console.log('sex')
-             }
-            });
-
+   
 
             if (survey.style.display === "block") {
               redString1.style.display = "none";
@@ -2453,7 +2411,6 @@ import References from "../components/References.astro";
               chDisclaimer.style.marginTop = "-10px";
 
               if(ageValue.value === '' || sexValue.value === ''){
-                compareButton.style.backgroundColor = 'gray'
              }else{
                 compareButton.style.backgroundColor = '#CF1C0A'
              }
@@ -2469,7 +2426,6 @@ import References from "../components/References.astro";
                 "url('/assets/images/alp-calculator-bg-mobile.png')";
               chDisclaimer2.style.margin = "auto";
               chDisclaimer2.style.width = "243px";
-              compareButton.style.backgroundColor = 'gray'
               ageValue.value = "";
               sexValue.value = "";
               alpValue.value = "";
@@ -2480,7 +2436,6 @@ import References from "../components/References.astro";
             modalClose.addEventListener("click", () => {
               calculatorAlp.style.backgroundImage =
                 "url('/assets/images/alp-calculator-bg-mobile.png')";
-              compareButton.style.backgroundColor = 'gray'
               instance.close();
               ageValue.value = "";
               sexValue.value = "";
@@ -2490,26 +2445,8 @@ import References from "../components/References.astro";
               graphicCounter = 0;
             });
 
-            ageValue.addEventListener('click', ()=>{
-              if(ageValue.value === '' || sexValue.value === ''){
-                 compareButton.style.backgroundColor = 'gray'
-                 console.log('age')
-              }else{
-                 compareButton.style.backgroundColor = '#CF1C0A'
-                 console.log('sex')
-              }
-             });
         
-        
-            sexValue.addEventListener('click', ()=>{
-             if(ageValue.value === '' || sexValue.value === ''){
-                compareButton.style.backgroundColor = 'gray'
-                console.log('age')
-             }else{
-                compareButton.style.backgroundColor = '#CF1C0A'
-                console.log('sex')
-             }
-            });
+
 
             if (survey.style.display === "block") {
               redString1.style.display = "block";
@@ -2568,7 +2505,6 @@ import References from "../components/References.astro";
         modalClose.addEventListener("click", () => {
           graphicCounter = 0;
           instance.close();
-          compareButton.style.backgroundColor = 'gray'
         });
 
         instance = new Fancybox([{ src: "modal-calculator" }], {
@@ -2598,7 +2534,6 @@ import References from "../components/References.astro";
               ageInput.style.margin = "auto";
               sexInput.style.margin = "auto";
               ulInput.style.margin = "auto";
-              compareButton.style.backgroundColor = 'gray'
               ageValue.value = "";
               sexValue.value = "";
               alpValue.value = "";
