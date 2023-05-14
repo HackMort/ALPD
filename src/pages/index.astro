@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import CaseFile from "../components/CaseFile.astro";
 import MainHero from "../components/MainHero.astro";
 import ALPDVideo from "../components/ALPDVideo.astro";
+import AlpCalculator from "../components/AlpCalculator.astro";
 ---
 
 <Layout title="Welcome" showHeader={true} showISI={false}>
@@ -45,10 +46,11 @@ import ALPDVideo from "../components/ALPDVideo.astro";
       <CaseFile
         imgSrc="identifying-folder"
         imgAlt="identifying suspect folder"
+        className="custom-class"
         link="/identifying-hpp/"
       >
         Get the drop on identifying hypophosphatasia and the tests that can help
-        point you in the right direction.
+        point you in the right direction. 
       </CaseFile>
     </div>
 
