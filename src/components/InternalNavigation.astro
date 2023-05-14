@@ -14,7 +14,8 @@ const { items } = Astro.props;
 {
     items && (
         <nav class="internal__nav">
-            <ul class="internal__nav_list">
+            <div class="wrapper">
+                <ul class="internal__nav_list">
                 {items.map((item) => {
                     const classes = item.classes ? item.classes.join(" ") : "";
                     const active = item.active ? "is--active" : "";
@@ -30,7 +31,8 @@ const { items } = Astro.props;
                         </li>
                     );
                 })}
-            </ul>
+            </ul>    
+            </div>
         </nav>
     )
 }

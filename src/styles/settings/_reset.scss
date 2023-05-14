@@ -75,6 +75,10 @@ html {
   overflow-x: hidden;
 }
 
+span, sub, sup {
+    color: inherit;
+}
+
 h1,
 h2,
 h3,
@@ -95,6 +99,10 @@ em {
   font-style: inherit;
   text-decoration: none;
   color: inherit;
+}
+
+span {
+    font-family: inherit;
 }
 
 blockquote:before,
@@ -203,7 +211,7 @@ sup {
   vertical-align: baseline;
   font-family: inherit;
   font-weight: inherit;
-  color: inherit;
+  color: inherit !important;
 }
 
 sub {
