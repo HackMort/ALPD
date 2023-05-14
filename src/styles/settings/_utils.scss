@@ -78,9 +78,19 @@ $color-value in $colors {
     font-size: 2.125rem;
 }
 
+.font-size--14px {
+    font-size: .875rem;
+}
+
 .md\:font-size--36px {
     @media screen and (min-width: 768px) {
         font-size: 2.25rem;
+    }
+}
+
+.md\:font-size--18px {
+    @media screen and (min-width: 768px) {
+        font-size: 1.125rem;
     }
 }
 
@@ -98,6 +108,10 @@ $color-value in $colors {
     @media screen and (min-width: 1024px) {
         display: none;
     }
+}
+
+.block {
+    display: block;
 }
 
 .lg\:block {
@@ -148,4 +162,11 @@ $color-value in $colors {
 
 .text--uppercase {
     text-transform: uppercase;
+}
+
+.font--inherit {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: initial;
 }
