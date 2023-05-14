@@ -441,7 +441,7 @@
         .alpd-academy__deficient-wrapper {
             background-color: $color-white;
             padding: 1rem 0;
-            width: calc(100% - 6px);
+            width: calc(100% - 1rem);
 
             @media screen and (min-width: 768px) {
                 width: calc(100% - 1rem);
@@ -856,10 +856,16 @@
 
             .number__kpi-description {
                 color: $color-white;
+
+                &.right--column {
+                    @media screen and (min-width: 1024px) {
+                        margin-top: -1.75rem;
+                    }
+                }
             }
 
             @media screen and (min-width: 1366px) {
-                
+
                 &:first-of-type {
                     margin-right: 0;
                 }
