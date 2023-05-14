@@ -1458,6 +1458,10 @@
                 max-width: 19rem;
                 margin-left: auto;
                 margin-right: auto;
+
+                @media screen and (min-width: 768px) {
+                    max-width: 37.875rem;
+                }
             }
 
             .footext-2 {
@@ -1470,6 +1474,7 @@
 
                 @media screen and (min-width: 768px) {
                     margin-bottom: 9rem;
+                    max-width: 26.5625rem;
                 }
             }
 
@@ -1483,6 +1488,10 @@
                 max-width: 20rem;
                 margin-left: auto;
                 margin-right: auto;
+
+                @media screen and (min-width: 768px) {
+                    max-width: 37.875rem;
+                }
             }
 
             .footext-4 {
@@ -1490,8 +1499,16 @@
                 margin-left: auto;
                 margin-right: auto;
 
+                @media screen and (min-width: 768px) {
+                    max-width: 26.25rem;
+                }
+
                 &:last-of-type {
                     max-width: 19rem;
+
+                    @media screen and (min-width: 768px) {
+                        max-width: 25rem;
+                    }
                 }
             }
         }
@@ -1548,7 +1565,15 @@
                 background-size: 100% 100%;
 
                 right: 0;
-                bottom: -28rem;
+                bottom: -29.5rem;
+
+                @media screen and (min-width: 1024px) {
+                    bottom: -24rem;
+                }
+
+                @media screen and (min-width: 1366px) {
+                    bottom: -24rem;
+                }
 
                 &::before {
                     position: absolute;
@@ -1948,7 +1973,7 @@
                     margin-right: auto;
 
                     position: relative;
-                    
+
                     @media screen and (min-width: 768px) {
                         transform: translateX(20%);
                     }
@@ -2147,7 +2172,7 @@
                 }
 
                 .has-vus__classification {
-                    
+
                     @media screen and (min-width: 768px) {
                         text-align: center;
                         margin-left: auto;
