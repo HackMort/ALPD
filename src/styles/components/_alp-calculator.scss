@@ -244,11 +244,11 @@
 
         .progress-1 {
             position: relative;
-            width: 70%;
-            height: 100%;
+            width: 0%;
+            height: 0%;
             margin: auto;
             background-color: $color-platinum;
-            animation-name: m2;
+            animation-name: z9;
             animation-duration: 1.5s;
             animation-fill-mode: forwards;
             animation-timing-function: ease;
@@ -257,160 +257,192 @@
         @keyframes m1 {
             0% {
                 height: 0%;
+                width: 70%;
             }
 
             100% {
                 height: 46%;
+                width: 70%;
             }
         }
 
         @keyframes m2 {
             0% {
                 height: 0%;
+                width: 70%;
             }
 
             100% {
                 height: 87%;
+                width: 70%;
             }
         }
 
         @keyframes m3 {
             0% {
                 height: 0%;
+                width: 70%;
             }
 
             100% {
                 height: 62%;
+                width: 70%;
             }
         }
 
         @keyframes m4 {
             0% {
                 height: 0%;
+                width: 70%;
             }
 
             100% {
                 height: 80%;
+                width: 70%;
             }
         }
 
         @keyframes m5 {
             0% {
                 height: 0%;
+                width: 70%;
             }
 
             100% {
                 height: 90%;
+                width: 70%;
             }
         }
 
         @keyframes m6 {
             0% {
                 height: 0%;
+                width: 70%;
             }
 
             100% {
                 height: 59%;
+                width: 70%;
             }
         }
 
         @keyframes m7 {
             0% {
                 height: 0%;
+                width: 70%;
             }
 
             100% {
                 height: 26%;
+                width: 70%;
             }
         }
 
         @keyframes m8 {
             0% {
                 height: 0%;
+                width: 70%;
             }
 
             100% {
                 height: 22%;
+                width: 70%;
             }
         }
 
         @keyframes f1 {
             0% {
                 height: 0%;
+                width: 70%;
             }
 
             100% {
                 height: 45%;
+                width: 70%;
             }
         }
 
         @keyframes f2 {
             0% {
                 height: 0%;
+                width: 70%;
             }
 
             100% {
                 height: 87%;
+                width: 70%;
             }
         }
 
         @keyframes f3 {
             0% {
                 height: 0%;
+                width: 70%;
             }
 
             100% {
                 height: 62%;
+                width: 70%;
             }
         }
 
         @keyframes f4 {
             0% {
                 height: 0%;
+                width: 70%;
             }
 
             100% {
                 height: 78%;
+                width: 70%;
             }
         }
 
         @keyframes f5 {
             0% {
                 height: 0%;
+                width: 70%;
             }
 
             100% {
                 height: 45%;
+                width: 70%;
             }
         }
 
         @keyframes f6 {
             0% {
                 height: 0%;
+                width: 70%;
             }
 
             100% {
                 height: 22%;
+                width: 70%;
             }
         }
 
         @keyframes f7 {
             0% {
                 height: 0%;
+                width: 70%;
             }
 
             100% {
                 height: 18%;
+                width: 70%;
             }
         }
 
         @keyframes f8 {
             0% {
                 height: 0%;
+                width: 70%;
             }
 
             100% {
                 height: 22%;
+                width: 70%;
             }
         }
 
@@ -433,13 +465,12 @@
 
         .progress-2 {
             position: relative;
-            width: 70%;
+            width: 0%;
             height: 100%;
             margin: auto;
             background-color: $color-green;
             /* border-bottom: 2px solid red */
-            ;
-            animation-name: m8n;
+            animation-name: z9;
             animation-duration: 1.5s;
             animation-fill-mode: forwards;
             animation-timing-function: ease;
@@ -448,160 +479,203 @@
         @keyframes m1n {
             0% {
                 height: 0%;
+                width: 70%;
             }
 
             100% {
                 height: 15%;
+                width: 70%;
             }
         }
 
         @keyframes m2n {
             0% {
                 height: 0%;
+                width: 70%;
             }
 
             100% {
                 height: 23%;
+                width: 70%;
             }
         }
 
         @keyframes m3n {
             0% {
                 height: 0%;
+                width: 70%;
             }
 
             100% {
                 height: 26%;
+                width: 70%;
             }
         }
 
         @keyframes m4n {
             0% {
                 height: 0%;
+                width: 70%;
             }
 
             100% {
                 height: 23%;
+                width: 70%;
             }
         }
 
         @keyframes m5n {
             0% {
                 height: 0%;
+                width: 70%;
             }
 
             100% {
                 height: 20%;
+                width: 70%;
             }
         }
 
         @keyframes m6n {
             0% {
                 height: 0%;
+                width: 70%;
             }
 
             100% {
                 height: 13%;
+                width: 70%;
             }
         }
 
         @keyframes m7n {
             0% {
                 height: 0%;
+                width: 70%;
             }
 
             100% {
                 height: 11%;
+                width: 70%;
             }
         }
 
         @keyframes m8n {
             0% {
                 height: 0%;
+                width: 70%;
             }
 
             100% {
                 height: 11%;
+                width: 70%;
             }
         }
 
         @keyframes f1n {
             0% {
                 height: 0%;
+                width: 70%;
             }
 
             100% {
                 height: 15%;
+                width: 70%;
             }
         }
 
         @keyframes f2n {
             0% {
                 height: 0%;
+                width: 70%;
             }
 
             100% {
                 height: 23%;
+                width: 70%;
             }
         }
 
         @keyframes f3n {
             0% {
                 height: 0%;
+                width: 70%;
             }
 
             100% {
                 height: 26%;
+                width: 70%;
             }
         }
 
         @keyframes f4n {
             0% {
                 height: 0%;
+                width: 70%;
             }
 
             100% {
                 height: 24%;
+                width: 70%;
             }
         }
 
         @keyframes f5n {
             0% {
                 height: 0%;
+                width: 70%;
             }
 
             100% {
                 height: 11%;
+                width: 70%;
             }
         }
 
         @keyframes f6n {
             0% {
                 height: 0%;
+                width: 70%;
+                width: 70%;
             }
 
             100% {
+                width: 70%;
                 height: 11%;
+                width: 70%;
             }
         }
 
         @keyframes f7n {
             0% {
                 height: 0%;
+                width: 70%;
             }
 
             100% {
                 height: 10%;
+                width: 70%;
             }
         }
 
         @keyframes f8n {
             0% {
                 height: 0%;
+                width: 70%;
             }
 
             100% {
                 height: 11%;
+                width: 70%;
+            }
+        }
+        @keyframes z9 {
+            0% {
+                height: 0%;
+            }
+
+            100% {
+                height: 0%;
             }
         }
 
@@ -609,7 +683,7 @@
             position: absolute;
             bottom: 0;
             transform: rotate(180deg);
-            left: 42%;
+            left: 39%;
             color: white;
             font-weight: bold;
         }
@@ -624,6 +698,18 @@
             margin: auto;
             margin-top: 1rem;
 
+        }
+
+        .form__control .form__control-error{
+            &.modifier{
+                left: 41px;
+                top: 77%;
+                font-size: 12px;
+                @media screen and (min-width:745px) {
+                    left: 0;
+                    font-size: 14px;
+                }
+            }
         }
 
         #age-input {
@@ -784,6 +870,7 @@
 
         @media screen and (min-width:745px) {
             width: 666px;
+            margin:auto;
         }
 
         p {
@@ -833,13 +920,13 @@
         .button--tertiary {
             position: absolute;
             top: -66px;
-            left: -37px;
+            left: -29px;
 
             @media screen and (min-width:745px) {
                 font-size: 21px;
                 line-height: 140%;
                 top: -98px;
-                left: -29px;
+                left: -18px;
                 /* or 29px */
             }
         }
@@ -856,6 +943,13 @@
             font-weight: 600;
             font-size: 16px;
             line-height: 24px;
+            max-width: 331px;
+
+            @media screen and (min-width:745px) {
+                max-width: 479px;
+                text-align: center;
+                margin: auto;
+            }
         }
 
         &__buttons {

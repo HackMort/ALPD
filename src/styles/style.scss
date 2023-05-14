@@ -1109,7 +1109,7 @@
 /* 404 */
 .page__not_found {
     
-        text-align: center;
+        
 
     main{
         overflow-x: unset;
@@ -1138,8 +1138,7 @@
                     margin-bottom: 1.99rem;
                     position: relative;
                     z-index: 2;
-
-
+                    
                     @media screen and (min-width:700px) {
                         margin-bottom: 3rem;
                     }
@@ -1147,9 +1146,28 @@
                 
                 
                 .first-child {
+                    text-align: center;
+                    margin-bottom: 2rem;
+                    font-family: 'Barlow';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 1.125rem;
+                    line-height: 1.5625rem;
+                    max-width: 17.125rem;
+                    margin: auto;
+                    @media screen and (min-width:700px) {
+                    max-width: 36.3125rem;
+                    font-size: 1.3125rem;
+                    line-height: 1.8125rem;
+                    max-width: 36.3125rem;
+                    font-size: 1.3125rem;
+                    line-height: 1.8125rem;
                     margin-bottom: 2rem;
                 }
-                        p {
+            }
+            p {
+                            &.modifier{
+                                text-align: center;
                             font-family: 'Barlow';
                             font-style: normal;
                             font-weight: 600;
@@ -1168,9 +1186,9 @@
                                 line-height: 1.8125rem;
                             }
                         }
-
+                    }
                         
-                        
+                    
 
                     
                             .button {
