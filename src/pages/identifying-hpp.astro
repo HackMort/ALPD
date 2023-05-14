@@ -5,875 +5,787 @@ import Layout from "../layouts/Layout.astro";
 import CommonHeroPage from "../components/CommonHeroPage.astro";
 import References from "../components/References.astro";
 const internalNavLinks = [
-    {
-        href: "alp-reference-range",
-        label: "ALP Reference Ranges",
-        active: true,
-    },
-    { href: "testing", label: "Testing" },
-    {
-        href: "multidisciplinary-care-team",
-        label: "Multidisciplinary Care Team",
-    },
+  {
+    href: "alp-reference-range",
+    label: "ALP Reference Ranges",
+    active: true,
+  },
+  { href: "testing", label: "Testing" },
+  {
+    href: "multidisciplinary-care-team",
+    label: "Multidisciplinary Care Team",
+  },
 ];
 ---
 
 <Layout
-    title="Identifying HPP"
-    pageClass="identifying-hpp-page"
-    showISI={false}
+  title="Identifying HPP"
+  pageClass="identifying-hpp-page"
+  showISI={false}
 >
-    <CommonHeroPage
-        title="Identifying hpp"
-        classes="identifying-hpp-page__hero"
-    >
-        <picture slot="image-hero" data-image-hero>
+  <CommonHeroPage title="Identifying hpp" classes="identifying-hpp-page__hero">
+    <picture slot="image-hero" data-image-hero>
+      <source
+        srcset="/assets/images/identifying-hpp/identifying-hpp-hero-desktop.png"
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="/assets/images/identifying-hpp/identifying-hpp-hero-tablet.png"
+        media="(min-width: 500px)"
+      />
+      <img
+        src="/assets/images/identifying-hpp/identifying-hpp-hero-mobile.png"
+        alt=""
+      />
+    </picture>
+  </CommonHeroPage>
+  {internalNavLinks && <InternalNavigation items={internalNavLinks} />}
+
+  <section
+    class="section identifying-hpp-page__alp-reference-range"
+    id="alp-reference-range"
+  >
+    <div class="wrapper">
+      <h1 class="alp-reference-range__title">tracking down hypophosphatasia</h1>
+    </div>
+
+    <article class="alp-reference-range__identify-wrapper">
+      <img
+        class="asset__bg asset__bg--back"
+        src="/assets/images/identifying-hpp/back-desktop.png"
+        alt=""
+      />
+      <img
+        class="asset__bg asset__bg--photos"
+        src="/assets/images/identifying-hpp/photos-desktop.png"
+        alt=""
+      />
+
+      <p class="asset__bg asset__bg--text">11A0763</p>
+      <p class="asset__bg asset__bg--text">11A0763</p>
+
+      <div class="alp-reference-range__identify">
+        <div class="alp-reference-range__identify-bg">
+          <picture>
             <source
-                srcset="/assets/images/identifying-hpp/identifying-hpp-hero-desktop.png"
-                media="(min-width: 768px)"
-            />
-            <source
-                srcset="/assets/images/identifying-hpp/identifying-hpp-hero-tablet.png"
-                media="(min-width: 500px)"
+              srcset="/assets/images/identifying-hpp/paper-sheet-desktop.png"
+              media="(min-width: 1024px)"
             />
             <img
-                src="/assets/images/identifying-hpp/identifying-hpp-hero-mobile.png"
-                alt=""
+              src="/assets/images/identifying-hpp/paper-sheet-mobile.png"
+              alt=""
             />
-        </picture>
-    </CommonHeroPage>
-    {internalNavLinks && <InternalNavigation items={internalNavLinks} />}
-
-    <section
-        class="section identifying-hpp-page__alp-reference-range"
-        id="alp-reference-range"
-    >
-        <div class="wrapper">
-            <h1 class="alp-reference-range__title">
-                tracking down hypophosphatasia
-            </h1>
+          </picture>
         </div>
-
-        <article class="alp-reference-range__identify-wrapper">
-            <img
-                class="asset__bg asset__bg--back"
-                src="/assets/images/identifying-hpp/back-desktop.png"
-                alt=""
-            />
-            <img
-                class="asset__bg asset__bg--photos"
-                src="/assets/images/identifying-hpp/photos-desktop.png"
-                alt=""
-            />
-
-            <p class="asset__bg asset__bg--text">11A0763</p>
-            <p class="asset__bg asset__bg--text">11A0763</p>
-
-            <div class="alp-reference-range__identify">
-                <div class="alp-reference-range__identify-bg">
-                    <picture>
-                        <source
-                            srcset="/assets/images/identifying-hpp/paper-sheet-desktop.png"
-                            media="(min-width: 1024px)"
-                        />
-                        <img
-                            src="/assets/images/identifying-hpp/paper-sheet-mobile.png"
-                            alt=""
-                        />
-                    </picture>
-                </div>
-                <div class="alp-reference-range__identify-content-wrapper">
-                </div>
-                <div class="alp-reference-range__identify-content">
-                    <div class="wrapper">
-                        <div>
-                            <picture class="alp-reference-range__identify-icon">
-                                <img
-                                    src="/assets/images/identifying-hpp/test-tube.svg"
-                                    alt=""
-                                />
-                            </picture>
-                        </div>
-                        <div>
-                            <p class="alp-reference-range__identify-p1">
-                                Identify hypophosphatasia with <span
-                                    >2 or more low ALP (alkaline phosphatase)
-                                    levels</span
-                                > in the presence of<br
-                                    class="hidden sm:block sz-463:hidden"
-                                />
-                                <span class="underline-text"
-                                    >clinical signs</span
-                                > and symptoms<sup>1*</sup>
-                            </p>
-                            <p class="alp-reference-range__identify-p2">
-                                If your patient has confirmed persistently low
-                                alkaline phosphatase in the presence of other
-                                comorbidities (eg, osteoporosis, osteomalacia,
-                                nutritional rickets), they could have
-                                hypophosphatasia. Persistently low alkaline
-                                phosphatase,<sup class="symbol-sup">†</sup> the key
-                                marker for a hypophosphatasia diagnosis, can be found
-                                in a routine blood test.<sup>1-8</sup>
-                            </p>
-                            <ul class="alp-reference-range__identify-ul">
-                                <li>
-                                    <sup class="symbol-sup positioned">*</sup
-                                    >ALP ranges must be age- and sex-adjusted.
-                                    Patient should be evaluated for other
-                                    symptoms of HPP and differential diagnoses
-                                    should be ruled out.<sup>1,5-9</sup>
-                                </li>
-                                <li>
-                                    <sup class="symbol-sup positioned">†</sup
-                                    >Persistently low alkaline phosphatase can
-                                    be defined as having 2 exams below normal
-                                    value at intervals of more than 30 days.
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </article>
-
-        <CTA
-            variation="variant-2"
-            buttonLabel="View Chart"
-            content="Look back at what constitutes low alkaline phosphatase activity"
-            linkURL="#"
-            bypassModal
-        />
-
-        <article class="alpd-reference-range__footext">
-            <div class="red-string footext-red-line"></div>
-            <div class="red-string footext-red-line"></div>
-
-            <div class="alpd-reference-range__footext-content">
-                <div class="wrapper">
-                    <p
-                        class="font--special-elite color--white text--center footext-1"
-                    >
-                        When <span class="color--saffron-mango"
-                            >persistently low levels of alkaline phosphatase</span
-                        >
-                        intersect with a range of unexplained symptoms in other metabolic
-                        disorders, look for hypophosphatasia in new and existing
-                        patients<sup>6,8,9*</sup>
-                    </p>
-                    <br />
-                    <p class="color--white text--center footext-2">
-                        <sup class="symbol-sup">*</sup>Persistently low values
-                        may be defined as at least 2 values below normal at
-                        intervals of more than 30 days.<sup>6,8,9</sup>
-                    </p>
-
-                    <p
-                        class="color--white text--center font--special-elite footext-3"
-                    >
-                        Any clinical sign/symptom PLUS persistently low alkaline
-                        phosphatase* is sufficient for a <span
-                            class="color--saffron-mango"
-                            >hypophosphatasia diagnosis<sup>1,5,7,11†</sup
-                            ></span
-                        >
-                    </p>
-                    <br />
-                    <p class="text--center color--white footext-4">
-                        <sup class="symbol-sup">*</sup>Persistently low values
-                        may be defined as at least 2 values below normal in
-                        intervals of more than 30 days.<sup>9</sup>
-                    </p>
-                    <p class="text--center color--white footext-4">
-                        <sup class="symbol-sup">†</sup>Other causes of low
-                        alkaline phosphatase should be ruled out.<sup>1</sup> Not
-                        all signs and symptoms need to be present for a hypophosphatasia
-                        diagnosis.<sup>5</sup>
-                    </p>
-                </div>
-            </div>
-        </article>
-    </section>
-
-    <section class="section identifying-hpp-page__testing" id="testing">
-        <div class="substrate-testing-wrapper">
-            <article class="testing__substrate-testing">
-                <div class="mobile-content">
-                    <div class="substrate-testing__table">
-                        <div class="mobile-content-wrapper">
-                            <div class="wrapper">
-                                <h2 class="substrate-testing__title">
-                                    what you may not know<br
-                                        class="md:hidden"
-                                    /> about substrate testing
-                                </h2>
-                                <p class="substrate-testing__description">
-                                    If a patient presents with low alkaline
-                                    phosphatase and signs/symptoms of
-                                    hypophosphatasia, a diagnosis can be
-                                    confirmed with substrate testing. However,
-                                    it’s important to be aware of the
-                                    limitations that come with these tests.
-                                    Elevated PLP and/or PEA can support a
-                                    diagnosis of hypophosphatasia, but these
-                                    tests are subject to certain limitations<sup
-                                        >6,10</sup
-                                    >:
-                                </p>
-                            </div>
-                        </div>
-                        <div class="mobile-content-wrapper">
-                            <div class="wrapper">
-                                <h3 class="substrate-testing__header">
-                                    Substrate Test and Limitations
-                                </h3>
-                            </div>
-                        </div>
-                        <div class="mobile-content-wrapper">
-                            <div class="wrapper">
-                                <h4 class="substrate__name">
-                                    PEA<sup>8-10,12,13</sup>
-                                </h4>
-                                <h6 class="substrate-table__header">
-                                    LIMITATIONS:
-                                </h6>
-                                <ul class="substrate__limitations-list">
-                                    <li>
-                                        May be normal in some patients with
-                                        hypophosphatasia
-                                    </li>
-                                    <li>
-                                        Can be collected via spot urine test or
-                                        24-hour urine collection test, which can
-                                        result in unreliable results due to:
-
-                                        <ul class="substrate__limitations-list">
-                                            <li>
-                                                Incomplete collection (omission
-                                                of one or more samples in 24
-                                                hours)
-                                            </li>
-                                            <li>Incorrect collection time</li>
-                                            <li>
-                                                Incomplete emptying of bladder
-                                            </li>
-                                            <li>Poor storage of sample</li>
-                                            <li>
-                                                Inclusion of first 2 morning
-                                                samples
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="mobile-content-wrapper">
-                            <div class="wrapper">
-                                <h4 class="substrate__name">
-                                    PLP (vitamin B<sub>6</sub>)<sup>6,11,14</sup
-                                    >
-                                </h4>
-                                <h6 class="substrate-table__header">
-                                    LIMITATIONS:
-                                </h6>
-                                <ul class="substrate__limitations-list">
-                                    <li>
-                                        May be elevated in individuals taking
-                                        supplements containing B<sub>6</sub>
-                                    </li>
-                                    <li>
-                                        May appear normal or low in patients
-                                        with hypophosphatasia. This does not
-                                        invalidate the hypophosphatasia
-                                        diagnosis.
-                                    </li>
-                                    <li>
-                                        PLP is light-sensitive and must be
-                                        protected from light; will need to be
-                                        collected with amber-colored tube
-                                    </li>
-                                    <li>
-                                        PLP decreases in samples stored at room
-                                        temperature due to dephosphorylation to
-                                        PL
-                                    </li>
-                                    <li>
-                                        PLP is bound to albumin; it can be
-                                        affected by nutrition, smoking,
-                                        inflammation, and drugs
-                                    </li>
-                                    <li>
-                                        in fasting state as it may decrease
-                                        after high-carbohydrate intake
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="mobile-content-wrapper">
-                            <div class="wrapper">
-                                <h4 class="substrate__name">
-                                    PPi<sup>8</sup>
-                                </h4>
-                                <h6 class="substrate-table__header">
-                                    LIMITATIONS:
-                                </h6>
-                                <ul class="substrate__limitations-list">
-                                    <li>
-                                        These tests are done in research
-                                        settings only and are not commercially
-                                        available
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="mobile-content-wrapper">
-                            <div class="wrapper">
-                                <p class="mobile-table__footer">
-                                    PEA=phosphoethanolamine; PLP=pyridoxal
-                                    5’-phosphate, the active form of vitamin B<sub
-                                        >6</sub
-                                    >; PPi=inorganic pyrophosphate.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="desktop-content">
-                    <div class="wrapper">
-                        <h2 class="substrate-testing__title">
-                            what you may not know<br class="md:hidden" /> about substrate
-                            testing
-                        </h2>
-                        <p class="substrate-testing__description">
-                            If a patient presents with low alkaline phosphatase
-                            and signs/symptoms of hypophosphatasia, a diagnosis
-                            can be confirmed with substrate testing. However,
-                            it’s important to be aware of the limitations that
-                            come with these tests. Elevated PLP and/or PEA can
-                            support a diagnosis of hypophosphatasia, but these
-                            tests are subject to certain limitations<sup
-                                >6,10</sup
-                            >:
-                        </p>
-                    </div>
-
-                    <table class="substrate-testing__table">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th colspan="3">Substrate Test</th>
-                                <th colspan="3">Limitations</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <td></td>
-                                <td colspan="3">
-                                    <h4
-                                        class="substrate__name substrate-testing__table-content"
-                                    >
-                                        PEA<sup>8,10,12,13</sup>
-                                    </h4>
-                                </td>
-                                <td colspan="3">
-                                    <ul
-                                        class="substrate__limitations-list substrate-testing__table-content"
-                                    >
-                                        <li>
-                                            May be normal in some patients with
-                                            hypophosphatasia
-                                        </li>
-                                        <li>
-                                            Can be collected via spot urine test
-                                            or 24-hour urine collection test,
-                                            which can result in unreliable
-                                            results due to:
-
-                                            <ul
-                                                class="substrate__limitations-list"
-                                            >
-                                                <li>
-                                                    Incomplete collection
-                                                    (omission of one or more
-                                                    samples in 24 hours)
-                                                </li>
-                                                <li>
-                                                    Incorrect collection time
-                                                </li>
-                                                <li>
-                                                    Incomplete emptying of
-                                                    bladder
-                                                </li>
-                                                <li>Poor storage of sample</li>
-                                                <li>
-                                                    Inclusion of first 2 morning
-                                                    samples
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td colspan="3">
-                                    <h4
-                                        class="substrate__name substrate-testing__table-content"
-                                    >
-                                        PLP (vitamin B<sub>6</sub>)<sup
-                                            >6,11,14</sup
-                                        >
-                                    </h4>
-                                </td>
-                                <td colspan="3">
-                                    <ul
-                                        class="substrate__limitations-list substrate-testing__table-content"
-                                    >
-                                        <li>
-                                            May be elevated in individuals
-                                            taking supplements containing B<sub
-                                                >6</sub
-                                            >
-                                        </li>
-                                        <li>
-                                            May appear normal or low in patients
-                                            with hypophosphatasia. This does not
-                                            invalidate the hypophosphatasia
-                                            diagnosis.
-                                        </li>
-                                        <li>
-                                            PLP is light-sensitive and must be
-                                            protected from light; will need to
-                                            be collected with amber-colored tube
-                                        </li>
-                                        <li>
-                                            PLP decreases in samples stored at
-                                            room temperature due to
-                                            dephosphorylation to PL
-                                        </li>
-                                        <li>
-                                            PLP is bound to albumin; it can be
-                                            affected by nutrition, smoking,
-                                            inflammation, and drugs
-                                        </li>
-                                        <li>
-                                            in fasting state as it may decrease
-                                            after high-carbohydrate intake
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td colspan="3">
-                                    <h4
-                                        class="substrate__name substrate-testing__table-content"
-                                    >
-                                        PPi<sup>8</sup>
-                                    </h4>
-                                </td>
-                                <td colspan="3">
-                                    <ul
-                                        class="substrate__limitations-list substrate-testing__table-content"
-                                    >
-                                        <li>
-                                            These tests are done in research
-                                            settings only and are not
-                                            commercially available
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <td></td>
-                                <td colspan="3">
-                                    <p class="mobile-table__footer">
-                                        PEA=phosphoethanolamine; PLP=pyridoxal
-                                        5’-phosphate,<br /> the active form of vitamin
-                                        B<sub>6</sub>; PPi=inorganic
-                                        pyrophosphate.
-                                    </p>
-                                </td>
-                            </tr>
-                        </tfoot>
-                    </table>
-                </div>
-
-                <div class="test__limitations">
-                    <div class="test__limitations-content">
-                        <p class="font--special-elite">
-                            Elevated PLP and/or PEA can support a diagnosis of
-                            hypophosphatasia. These tests are subject to certain <span
-                                class="color--red"
-                                >limitations<sup>5,6</sup></span
-                            >:
-                        </p>
-                        <ul class="test__limitations-list">
-                            <li class="font--special-elite">
-                                restrictive costs/ affordability<sup
-                                    >8,10,12,13,15</sup
-                                >
-                            </li>
-                            <li class="font--special-elite">
-                                diagnostic services only available at certain
-                                laboratories<sup>8,10,12,13,15</sup>
-                            </li>
-                            <li class="font--special-elite">
-                                results may be unreliable if sample collection
-                                is done incorrectly<sup>8,10,12,13,15</sup>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </article>
-
-            <picture class="asset__manilla">
+        <div class="alp-reference-range__identify-content-wrapper"></div>
+        <div class="alp-reference-range__identify-content">
+          <div class="wrapper">
+            <div>
+              <picture class="alp-reference-range__identify-icon">
                 <img
-                    src="/assets/images/identifying-hpp/manilla-desktop.png"
-                    alt=""
+                  src="/assets/images/identifying-hpp/test-tube.svg"
+                  alt=""
                 />
-            </picture>
+              </picture>
+            </div>
+            <div>
+              <p class="alp-reference-range__identify-p1">
+                Identify hypophosphatasia with <span
+                  >2 or more low ALP (alkaline phosphatase) levels</span
+                > in the presence of<br class="hidden sm:block sz-463:hidden" />
+                <span class="underline-text">clinical signs</span> and symptoms<sup
+                  >1*</sup
+                >
+              </p>
+              <p class="alp-reference-range__identify-p2">
+                If your patient has confirmed persistently low alkaline
+                phosphatase in the presence of other comorbidities (eg,
+                osteoporosis, osteomalacia, nutritional rickets), they could
+                have hypophosphatasia. Persistently low alkaline phosphatase,<sup
+                  class="symbol-sup">†</sup
+                > the key marker for a hypophosphatasia diagnosis, can be found in
+                a routine blood test.<sup>1-8</sup>
+              </p>
+              <ul class="alp-reference-range__identify-ul">
+                <li>
+                  <sup class="symbol-sup positioned">*</sup>ALP ranges must be
+                  age- and sex-adjusted. Patient should be evaluated for other
+                  symptoms of HPP and differential diagnoses should be ruled
+                  out.<sup>1,5-9</sup>
+                </li>
+                <li>
+                  <sup class="symbol-sup positioned">†</sup>Persistently low
+                  alkaline phosphatase can be defined as having 2 exams below
+                  normal value at intervals of more than 30 days.
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <article class="genetic-testing-role">
-            <div class="wrapper">
-                <h2
-                    class="genetic-testing-role__title white-title color--white"
-                >
-                    The role of genetic testing
-                </h2>
-                <p class="mb-1 md:text--center genetic-testing-role__paragraph">
-                    <span class="color--saffron-mango">
-                        Genetic testing rules in hypophosphatasia;<br
-                            class="hidden xs:block"
-                        /> it does <strong>not</strong>
-                        rule it out<sup>16,17</sup>
-                    </span>
-                </p>
-                <p
-                    class="color--white mb-1 md:text--center genetic-testing-role__paragraph"
-                >
-                    Insurance requirements and/or coverage for genetic testing
-                    vary by state and insurance provider. Verify with the
-                    patient's insurer to understand which type of services will
-                    be covered.
-                </p>
-                <p
-                    class="color--white mb-1 md:text--center genetic-testing-role__paragraph"
-                >
-                    While genetic testing for hypophosphatasia can be a useful
-                    tool, it remains an evolving science with certain
-                    limitations that can make it challenging to rely upon for an
-                    accurate diagnosis.
-                </p>
-            </div>
-            <div class="line-container first">
-                <div class="red-string first"></div>
-            </div>
-            <div class="kpi">
-                <div class="kpi__number">
-                    <picture>
-                        <img
-                            src="/assets/images/identifying-hpp/fingerprint.png"
-                            alt=""
-                        />
-                    </picture>
-                    <p class="color--red font--veneer">400+</p>
-                </div>
-                <div class="kpi__content">
-                    <p class="color--white text--center font--special-elite">
-                        Since its initial discovery in 1988, the number of <span
-                            class="text--italic font--50">ALPL</span
-                        >
-                        gene mutations have increased with over 400 identified; new
-                        discoveries are ongoing<sup>10,18-22</sup>
-                    </p>
-                </div>
-            </div>
-            <div class="line-container second">
-                <div class="red-string second"></div>
-            </div>
-            <article class="additional-limitations md:wrapper">
-                <div class="additional-limitations__left">
-                    <div class="additional-limitations__family">
-                        <div class="additional-limitations__family-content">
-                            <p>
-                                <strong>Family members</strong> with hypophosphatasia
-                                who have identical genotypes may express varying
-                                phenotypes due to factors beyond the ALPL gene mutation
-                                (eg, number of mutant enzyme synthesized, alkaline
-                                phosphatase enzymatic activity).<sup>24-26</sup>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="additional-limitations__rigth">
-                    <div class="wrapper xl:no-wrapper">
-                        <p class="additional-limitations__title color--buff">
-                            Additional limitations<sup>16,22,23</sup>
-                        </p>
+      </div>
+    </article>
 
-                        <ul class="additional-limitations__list">
-                            <li class="color--white">
-                                restrictive costs/affordability
-                            </li>
-                            <li class="color--white">
-                                diagnostic services only available at certain
-                                laboratories
-                            </li>
-                            <li class="color--white">
-                                not all <span class="text--italic">ALPL</span> variants
-                                necessarily lead to the manifestation of hypophosphatasia
-                                or establish hypophosphatasia
-                            </li>
-                            <li class="color--white">
-                                diagnostic sensitivity of genetic tests that
-                                detect <span class="text--italic">ALPL</span> can
-                                vary by laboratory
-                            </li>
-                            <li class="color--white">
-                                <span class="text--italic">ALPL</span> sequencing
-                                is predicted to detect pathogenic variants of ~95%
-                                of severe perinatal and infantile hypophosphatasia
-                                cases; in milder forms, the detection rate is difficult
-                                to estimate
-                            </li>
-                            <li class="color--white">
-                                the milder the disease, the higher the
-                                likelihood that only one <span
-                                    class="text--italic">ALPL</span
-                                > pathogenic variant is detected
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </article>
-            <div class="line-container third">
-                <div class="red-string third"></div>
-            </div>
-            <div class="has-vus">
-                <div class="wrapper">
-                    <h2 class="has-vus__title white-title color--white">
-                        If your patient has a variant of<br
-                            class="hidden md:block"
-                        /> uncertain significance (VUS)
-                    </h2>
-                    <p class="color--white has-vus__classification">
-                        If the classification of the variant is VUS, it means
-                        that at the time of interpretation, there was
-                        insufficient evidence to determine if the variant was
-                        related to disease or not.<sup>27</sup>
-                    </p>
-                    <div class="has-vus__quote">
-                        <p
-                            class="color--white text--center font--special-elite"
-                        >
-                            “According to the ACMG* guidelines, a VUS should not
-                            be used in clinical decision-making. If a patient is
-                            identified to have a VUS, all clinical decisions
-                            should be based on personal and family history and
-                            not on the presence of the VUS.”<sup>28</sup>
-                        </p>
-                        <p class="color--white text--center">
-                            -Jennifer Schleit, PhD, Senior Geneticist
-                        </p>
-                        <p class="color--white text--center quote-note">
-                            <sup class="symbol-sup">*</sup>ACMG, American
-                            College of Medical Genetics and Genomics.
-                        </p>
-                        <p
-                            class="color--saffron-mango text--center font--special-elite"
-                        >
-                            A VUS may be related to hypophosphatasia and does
-                            not rule out the diagnosis.<sup>29</sup>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </article>
-    </section>
-    <section
-        class="section identifying-hpp-page__multidisciplinary-care-team"
-        id="multidisciplinary-care-team"
-    >
-        <div class="line-container first">
-            <div class="red-string first"></div>
+    <CTA
+      variation="variant-2"
+      buttonLabel="View Chart"
+      content="Look back at what constitutes low alkaline phosphatase activity"
+      linkURL="#"
+      bypassModal
+    />
+
+    <article class="alpd-reference-range__footext">
+      <div class="red-string footext-red-line"></div>
+      <div class="red-string footext-red-line"></div>
+
+      <div class="alpd-reference-range__footext-content">
+        <div class="wrapper">
+          <p class="font--special-elite color--white text--center footext-1">
+            When <span class="color--saffron-mango"
+              >persistently low levels of alkaline phosphatase</span
+            >
+            intersect with a range of unexplained symptoms in other metabolic disorders,
+            look for hypophosphatasia in new and existing patients<sup
+              >6,8,9*</sup
+            >
+          </p>
+          <br />
+          <p class="color--white text--center footext-2">
+            <sup class="symbol-sup">*</sup>Persistently low values may be
+            defined as at least 2 values below normal at intervals of more than
+            30 days.<sup>6,8,9</sup>
+          </p>
+
+          <p class="color--white text--center font--special-elite footext-3">
+            Any clinical sign/symptom PLUS persistently low alkaline
+            phosphatase* is sufficient for a <span class="color--saffron-mango"
+              >hypophosphatasia diagnosis<sup>1,5,7,11†</sup></span
+            >
+          </p>
+          <br />
+          <p class="text--center color--white footext-4">
+            <sup class="symbol-sup">*</sup>Persistently low values may be
+            defined as at least 2 values below normal in intervals of more than
+            30 days.<sup>9</sup>
+          </p>
+          <p class="text--center color--white footext-4">
+            <sup class="symbol-sup">†</sup>Other causes of low alkaline
+            phosphatase should be ruled out.<sup>1</sup> Not all signs and symptoms
+            need to be present for a hypophosphatasia diagnosis.<sup>5</sup>
+          </p>
         </div>
+      </div>
+    </article>
+  </section>
 
-        <article class="calling-for-backup">
-            <div class="wrapper">
-                <h2 class="calling-for-backup__title white-title">
-                    calling for backup
+  <section class="section identifying-hpp-page__testing" id="testing">
+    <div class="substrate-testing-wrapper">
+      <article class="testing__substrate-testing">
+        <div class="mobile-content">
+          <div class="substrate-testing__table">
+            <div class="mobile-content-wrapper">
+              <div class="wrapper">
+                <h2 class="substrate-testing__title">
+                  what you may not know<br class="md:hidden" /> about substrate testing
                 </h2>
-
-                <p class="calling-for-backup__text">
-                    Uncovering hypophosphatasia unlocks a world of answers for
-                    your patients and validates their long journey of perplexing
-                    symptoms. Once you’ve diagnosed hypophosphatasia, consider
-                    assembling a team of professionals similar to the example
-                    below to develop a comprehensive care plan for your
-                    patients.
+                <p class="substrate-testing__description">
+                  If a patient presents with low alkaline phosphatase and
+                  signs/symptoms of hypophosphatasia, a diagnosis can be
+                  confirmed with substrate testing. However, it’s important to
+                  be aware of the limitations that come with these tests.
+                  Elevated PLP and/or PEA can support a diagnosis of
+                  hypophosphatasia, but these tests are subject to certain
+                  limitations<sup>6,10</sup>:
                 </p>
+              </div>
             </div>
+            <div class="mobile-content-wrapper">
+              <div class="wrapper">
+                <h3 class="substrate-testing__header">
+                  Substrate Test and Limitations
+                </h3>
+              </div>
+            </div>
+            <div class="mobile-content-wrapper">
+              <div class="wrapper">
+                <h4 class="substrate__name">
+                  PEA<sup>8-10,12,13</sup>
+                </h4>
+                <h6 class="substrate-table__header">LIMITATIONS:</h6>
+                <ul class="substrate__limitations-list">
+                  <li>May be normal in some patients with hypophosphatasia</li>
+                  <li>
+                    Can be collected via spot urine test or 24-hour urine
+                    collection test, which can result in unreliable results due
+                    to:
 
-            <div class="calling-for-backup__grafic">
-                <ul role="tablist" class="calling-for-backup__tabs">
-                    <li role="presentation">
-                        <!--active one -->
-                        <a
-                            href="#adults-older-children-panel"
-                            role="tab"
-                            id="adults-older-children-tab"
-                            aria-selected="true">Adults/older children</a
-                        >
-                    </li>
-                    <li role="presentation">
-                        <a
-                            href="#neotanes-infants-panel"
-                            role="tab"
-                            id="neotanes-infants-tab"
-                            tabindex="-1">Neonates/infants</a
-                        >
-                    </li>
+                    <ul class="substrate__limitations-list">
+                      <li>
+                        Incomplete collection (omission of one or more samples
+                        in 24 hours)
+                      </li>
+                      <li>Incorrect collection time</li>
+                      <li>Incomplete emptying of bladder</li>
+                      <li>Poor storage of sample</li>
+                      <li>Inclusion of first 2 morning samples</li>
+                    </ul>
+                  </li>
                 </ul>
-                <section
-                    id="adults-older-children-panel"
-                    role="tabpanel"
-                    aria-labelledby="adults-older-children-tab"
-                    aria-hidden="false"
-                    tabindex="-1"
-                >
-                    <picture class="mb-2">
-                        <img
-                            src="/assets/images/identifying-hpp/adults-older-children-grafic.png"
-                            alt=""
-                        />
-                    </picture>
-                    <p class="text--center color--white">
-                        Assemble a multidisciplinary disease management team to
-                        provide comprehensive care to your patients with
-                        hypophosphatasia.<sup>10,30</sup>
-                    </p>
-                </section>
-                <section
-                    id="neotanes-infants-panel"
-                    role="tabpanel"
-                    aria-labelledby="neotanes-infants-tab"
-                    aria-hidden="true"
-                    tabindex="-1"
-                    hidden
-                >
-                    <picture class="mb-2">
-                        <img
-                            src="/assets/images/identifying-hpp/neonates-infants-grafic.png"
-                            alt=""
-                        />
-                    </picture>
-                    <p class="text--center color--white">
-                        Assemble a multidisciplinary disease management team to
-                        provide comprehensive care to your patients with
-                        hypophosphatasia.<sup>30</sup>
-                    </p>
-                </section>
+              </div>
             </div>
-        </article>
-    </section>
+            <div class="mobile-content-wrapper">
+              <div class="wrapper">
+                <h4 class="substrate__name">
+                  PLP (vitamin B<sub>6</sub>)<sup>6,11,14</sup>
+                </h4>
+                <h6 class="substrate-table__header">LIMITATIONS:</h6>
+                <ul class="substrate__limitations-list">
+                  <li>
+                    May be elevated in individuals taking supplements containing
+                    B<sub>6</sub>
+                  </li>
+                  <li>
+                    May appear normal or low in patients with hypophosphatasia.
+                    This does not invalidate the hypophosphatasia diagnosis.
+                  </li>
+                  <li>
+                    PLP is light-sensitive and must be protected from light;
+                    will need to be collected with amber-colored tube
+                  </li>
+                  <li>
+                    PLP decreases in samples stored at room temperature due to
+                    dephosphorylation to PL
+                  </li>
+                  <li>
+                    PLP is bound to albumin; it can be affected by nutrition,
+                    smoking, inflammation, and drugs
+                  </li>
+                  <li>
+                    in fasting state as it may decrease after high-carbohydrate
+                    intake
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="mobile-content-wrapper">
+              <div class="wrapper">
+                <h4 class="substrate__name">
+                  PPi<sup>8</sup>
+                </h4>
+                <h6 class="substrate-table__header">LIMITATIONS:</h6>
+                <ul class="substrate__limitations-list">
+                  <li>
+                    These tests are done in research settings only and are not
+                    commercially available
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="mobile-content-wrapper">
+              <div class="wrapper">
+                <p class="mobile-table__footer">
+                  PEA=phosphoethanolamine; PLP=pyridoxal 5’-phosphate, the
+                  active form of vitamin B<sub>6</sub>; PPi=inorganic
+                  pyrophosphate.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <section class="cta-section">
-        <CTA
-            variation="variant-3"
-            buttonLabel="Back to Home"
-            content="Don’t let hypophosphatasia go free"
-            linkURL="/"
-            bypassModal
-        />
-    </section>
+        <div class="desktop-content">
+          <div class="wrapper">
+            <h2 class="substrate-testing__title">
+              what you may not know<br class="md:hidden" /> about substrate testing
+            </h2>
+            <p class="substrate-testing__description">
+              If a patient presents with low alkaline phosphatase and
+              signs/symptoms of hypophosphatasia, a diagnosis can be confirmed
+              with substrate testing. However, it’s important to be aware of the
+              limitations that come with these tests. Elevated PLP and/or PEA
+              can support a diagnosis of hypophosphatasia, but these tests are
+              subject to certain limitations<sup>6,10</sup>:
+            </p>
+          </div>
 
-    <References>
-        <p>
-            <strong>References: 1.</strong> Bishop N, Munns CF, Ozono K. Transformative therapy
-            in hypophosphatasia. Arch Dis Child. 2016;101(6):514-515. <strong>2.</strong>
-            Desborough R, Nicklin P, Gossiel F, et al. Clinical and biochemical
-            characteristics of adults with hypophosphatasia attending a
-            metabolic bone clinic. Bone. 2021;144:115795. <strong>3.</strong> Bloch-Zupan A.
-            Hypophosphatasia: diagnosis and clinical signs - a dental surgeon
-            perspective. Int J Paediatr Dent. 2016;26(6):426-438. <strong>4.</strong> Shapiro JR,
-            Lewiecki EM. Hypophosphatasia in adults: clinical assessment and
-            treatment considerations. J Bone Miner Res. 2017;32(10):1977-1980.
-            <strong>5.</strong> Rockman-Greenberg C. Hypophosphatasia. Pediatr Endocrinol Rev.
-            2013;10(suppl 2):380-388. <strong>6.</strong> McKiernan FE, Berg RL, Fuehrer J.
-            Clinical and radiographic findings in adults with persistent
-            hypophosphatasemia. J Bone Miner Res. 2014;29(7):1651-1660. <strong>7.</strong> Whyte
-            MP. Hypophosphatasia: nature's window on alkaline phosphatase
-            function in humans. In: Bilezikian JP, Raisz LG, Martin TJ, eds.
-            Principles of Bone Biology. 3rd ed. Academic Press; 2008:1573-1598.
-            <strong>8.</strong> Bianchi ML, Bishop NJ, Guañabens N, et al; Rare Bone Disease
-            Action Group of the European Calcified Tissue Society.
-            Hypophosphatasia in adolescents and adults: overview of diagnosis
-            and treatment. Osteoporos Int. 2020;31(8):1445-1460. <strong>9.</strong> Vieira LHR,
-            Peixoto KC, Flósi CL, Fleiuss de Farias ML, Madeira M. Active search
-            of adult patients with persistently low serum alkaline phosphatase
-            levels for diagnosis of hypophosphatasia. Arch Endocrinol Metab.
-            2021;65(3):289-294. <strong>10.</strong> NORD. Hypophosphatasia. Accessed March 30,
-            2023. <a href="https://rarediseases.org/rare-diseases/hypophosphatasia/" target="_blank">https://rarediseases.org/rare-diseases/hypophosphatasia/</a> <strong>11.</strong>
-            Mornet E, Nunes ME. Hypophosphatasia. In: Adam MP, Ardinger HH,
-            Pagon RA, et al, eds. GeneReviews®. University of Washington; 2007.
-            Accessed March 30, 2023. <a href="https://www.ncbi.nlm.nih.gov/books/NBK1150/" target="_blank">https://www.ncbi.nlm.nih.gov/books/NBK1150/</a>
-            <strong>12.</strong> Mornet E. Molecular genetics of hypophosphatasia and
-            phenotype-genotype correlations. Subcell Biochem. 2015;76:25-43. <strong>13.</strong>
-            Kamińska J, Dymicka-Piekarska V, Tomaszewska J, Matowicka-Karna J,
-            Koper-Lenkiewicz OM. Diagnostic utility of protein in creatinine
-            ratio (P/C ratio) in spot urine sample within routine clinical
-            practice. Crit Rev Clin Lab Sci. 2020;57(5):345-364. <strong>14.</strong> Shajani-Yi
-            Z, Ayala-Lopez N, Black M, Dahir KM. Urine phosphoethanolamine is a
-            specific biomarker for hypophosphatasia in adults. Bone.
-            2022;163:116504. <strong>15.</strong> Phillips KA, Deverka PA, Hooker GW, Douglas MP.
-            Genetic test availability and spending: where are we now? Where are
-            we going? Health Aff (Millwood). 2018;37(5):710-716. <strong>16.</strong> Mornet E.
-            Hypophosphatasia. Metabolism. 2018;82:142–155. <strong>17.</strong> Khan AA, Josse R,
-            Kannu P, et al. Hypophosphatasia: Canadian update on diagnosis and
-            management. Osteoporos Int. 2019;30(9):1713-1722. <strong>18.</strong> NIH
-            MedlinePlus. ALPL gene. National Library of Medicine. 2018. Accessed
-            March 30, 2023. <a href="https://medlineplus.gov/genetics/gene/alpl/" target="_blank">https://medlineplus.gov/genetics/gene/alpl/</a> <strong>19.</strong>
-            Horton RH, Lucassen AM. Recent developments in genetic/genomic
-            medicine. Clin Sci (Lond). 2019;133(5):697-708. <strong>20.</strong> Weiss MJ, Cole
-            DE, Ray K, et al. A missense mutation in the human liver/bone/kidney
-            alkaline phosphatase gene causing a lethal form of hypophosphatasia.
-            Proc Natl Acad Sci. 1988;85:7666-7669. <strong>21.</strong> The ALPL Gene Variant
-            Database. JKU Faculty of Medicine. Accessed March 30, 2023.
-            <a href="https://alplmutationdatabase.jku.at/" target="_blank">https://alplmutationdatabase.jku.at/</a> <strong>22.</strong> Jandl NM, Schmidt T,
-            Rolvien T, et al. Genotype-phenotype associations in 72 adults with
-            suspected ALPL-associated hypophosphatasia. Calc Tissue Int.
-            2021;108(3):288-301. <strong>23.</strong> Nunes ME. Hypophosphatasia. GeneReviews®.
-            2007;1993–2002. <strong>24.</strong> Whyte MP, Leung E, Wilcox WR, et al. Natural
-            history of perinatal and infantile hypophosphatasia: a retrospective
-            study. J Pediatr. 2019;209:116-124.e4. <strong>25.</strong> Zurutuza L, Muller F,
-            Gibrat JF, et al. Correlations of genotype and phenotype in
-            hypophosphatasia. Hum Mol Genet. 1999;8(6):1039-1046. <strong>26.</strong> Hofmann C,
-            Girschick HJ, Mentrup B, et al. Clinical aspects of
-            hypophosphatasia: an update. Clin Rev Bone Miner Metab.
-            2013;11:60-70. <strong>27.</strong> Sanabria-de la Torre R, Martínez-Heredia L,
-            González-Salvatierra S, et al. Characterization of genetic variants
-            of uncertain significance for the ALPL gene in patients with adult
-            hypophosphatasia. Front Endocrinol (Lausanne). 2022;13:863940. <strong>28.</strong>
-            Blueprint Genetics. VUS—the most maligned result in genetic testing.
-            2019. Accessed March 30, 2023.
-            <a href="https://blueprintgenetics.com/resources/vus-the-most-maligned-result-in-genetic-testing/" target="_blank">https://blueprintgenetics.com/resources/vus-the-most-maligned-result-in-genetic-testing/</a>
-            <strong>29.</strong> Beck NM, Sagaser KG, Lawson CS, et al. Not just a carrier:
-            clinical presentation and management of patients with heterozygous
-            disease-causing alkaline phosphatase (ALPL) variants identified
-            through expanded carrier screening. Mol Genet Genomic Med.
-            2023;11(1):e2056. <strong>30.</strong> Kishnani PS, Rockman-Greenberg C, Rauch F, et
-            al. Five-year efficacy and safety of asfotase alfa therapy for
-            adults and adolescents with hypophosphatasia. Bone.
-            2019;121:149-162.
+          <table class="substrate-testing__table">
+            <thead>
+              <tr>
+                <th></th>
+                <th colspan="3">Substrate Test</th>
+                <th colspan="3">Limitations</th>
+                <th></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td></td>
+                <td colspan="3">
+                  <h4 class="substrate__name substrate-testing__table-content">
+                    PEA<sup>8,10,12,13</sup>
+                  </h4>
+                </td>
+                <td colspan="3">
+                  <ul
+                    class="substrate__limitations-list substrate-testing__table-content"
+                  >
+                    <li>
+                      May be normal in some patients with hypophosphatasia
+                    </li>
+                    <li>
+                      Can be collected via spot urine test or 24-hour urine
+                      collection test, which can result in unreliable results
+                      due to:
+
+                      <ul class="substrate__limitations-list">
+                        <li>
+                          Incomplete collection (omission of one or more samples
+                          in 24 hours)
+                        </li>
+                        <li>Incorrect collection time</li>
+                        <li>Incomplete emptying of bladder</li>
+                        <li>Poor storage of sample</li>
+                        <li>Inclusion of first 2 morning samples</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td colspan="3">
+                  <h4 class="substrate__name substrate-testing__table-content">
+                    PLP (vitamin B<sub>6</sub>)<sup>6,11,14</sup>
+                  </h4>
+                </td>
+                <td colspan="3">
+                  <ul
+                    class="substrate__limitations-list substrate-testing__table-content"
+                  >
+                    <li>
+                      May be elevated in individuals taking supplements
+                      containing B<sub>6</sub>
+                    </li>
+                    <li>
+                      May appear normal or low in patients with
+                      hypophosphatasia. This does not invalidate the
+                      hypophosphatasia diagnosis.
+                    </li>
+                    <li>
+                      PLP is light-sensitive and must be protected from light;
+                      will need to be collected with amber-colored tube
+                    </li>
+                    <li>
+                      PLP decreases in samples stored at room temperature due to
+                      dephosphorylation to PL
+                    </li>
+                    <li>
+                      PLP is bound to albumin; it can be affected by nutrition,
+                      smoking, inflammation, and drugs
+                    </li>
+                    <li>
+                      in fasting state as it may decrease after
+                      high-carbohydrate intake
+                    </li>
+                  </ul>
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td colspan="3">
+                  <h4 class="substrate__name substrate-testing__table-content">
+                    PPi<sup>8</sup>
+                  </h4>
+                </td>
+                <td colspan="3">
+                  <ul
+                    class="substrate__limitations-list substrate-testing__table-content"
+                  >
+                    <li>
+                      These tests are done in research settings only and are not
+                      commercially available
+                    </li>
+                  </ul>
+                </td>
+                <td></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td></td>
+                <td colspan="3">
+                  <p class="mobile-table__footer">
+                    PEA=phosphoethanolamine; PLP=pyridoxal 5’-phosphate,<br /> the
+                    active form of vitamin B<sub>6</sub>; PPi=inorganic
+                    pyrophosphate.
+                  </p>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
+        <div class="test__limitations">
+          <div class="test__limitations-content">
+            <p class="font--special-elite">
+              Elevated PLP and/or PEA can support a diagnosis of
+              hypophosphatasia. These tests are subject to certain <span
+                class="color--red">limitations<sup>5,6</sup></span
+              >:
+            </p>
+            <ul class="test__limitations-list">
+              <li class="font--special-elite">
+                restrictive costs/ affordability<sup>8,10,12,13,15</sup>
+              </li>
+              <li class="font--special-elite">
+                diagnostic services only available at certain laboratories<sup
+                  >8,10,12,13,15</sup
+                >
+              </li>
+              <li class="font--special-elite">
+                results may be unreliable if sample collection is done
+                incorrectly<sup>8,10,12,13,15</sup>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <picture class="asset__manilla">
+        <img src="/assets/images/identifying-hpp/manilla-desktop.png" alt="" />
+      </picture>
+    </div>
+    <article class="genetic-testing-role">
+      <div class="wrapper">
+        <h2 class="genetic-testing-role__title white-title color--white">
+          The role of genetic testing
+        </h2>
+        <p class="mb-1 md:text--center genetic-testing-role__paragraph">
+          <span class="color--saffron-mango">
+            Genetic testing rules in hypophosphatasia;<br
+              class="hidden xs:block"
+            /> it does <strong>not</strong>
+            rule it out<sup>16,17</sup>
+          </span>
         </p>
-    </References>
+        <p
+          class="color--white mb-1 md:text--center genetic-testing-role__paragraph"
+        >
+          Insurance requirements and/or coverage for genetic testing vary by
+          state and insurance provider. Verify with the patient's insurer to
+          understand which type of services will be covered.
+        </p>
+        <p
+          class="color--white mb-1 md:text--center genetic-testing-role__paragraph"
+        >
+          While genetic testing for hypophosphatasia can be a useful tool, it
+          remains an evolving science with certain limitations that can make it
+          challenging to rely upon for an accurate diagnosis.
+        </p>
+      </div>
+      <div class="line-container first">
+        <div class="red-string first"></div>
+      </div>
+      <div class="kpi">
+        <div class="kpi__number">
+          <picture>
+            <img src="/assets/images/identifying-hpp/fingerprint.png" alt="" />
+          </picture>
+          <p class="color--red font--veneer">400+</p>
+        </div>
+        <div class="kpi__content">
+          <p class="color--white text--center">
+            Since its initial discovery in 1988, the number of <span
+              class="text--italic font--50">ALPL</span
+            >
+            gene mutations have increased with over 400 identified; new discoveries
+            are ongoing<sup>10,18-22</sup>
+          </p>
+        </div>
+      </div>
+      <div class="line-container second">
+        <div class="red-string second"></div>
+      </div>
+      <article class="additional-limitations md:wrapper">
+        <div class="additional-limitations__left">
+          <div class="additional-limitations__family">
+            <div class="additional-limitations__family-content">
+              <p>
+                <strong>Family members</strong> with hypophosphatasia who have identical
+                genotypes may express varying phenotypes due to factors beyond the
+                ALPL gene mutation (eg, number of mutant enzyme synthesized, alkaline
+                phosphatase enzymatic activity).<sup>24-26</sup>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="additional-limitations__rigth">
+          <div class="wrapper xl:no-wrapper">
+            <p class="additional-limitations__title color--buff">
+              Additional limitations<sup>16,22,23</sup>
+            </p>
+
+            <ul class="additional-limitations__list">
+              <li class="color--white">restrictive costs/affordability</li>
+              <li class="color--white">
+                diagnostic services only available at certain laboratories
+              </li>
+              <li class="color--white">
+                not all <span class="text--italic">ALPL</span> variants necessarily
+                lead to the manifestation of hypophosphatasia or establish hypophosphatasia
+              </li>
+              <li class="color--white">
+                diagnostic sensitivity of genetic tests that detect <span
+                  class="text--italic">ALPL</span
+                > can vary by laboratory
+              </li>
+              <li class="color--white">
+                <span class="text--italic">ALPL</span> sequencing is predicted to
+                detect pathogenic variants of ~95% of severe perinatal and infantile
+                hypophosphatasia cases; in milder forms, the detection rate is difficult
+                to estimate
+              </li>
+              <li class="color--white">
+                the milder the disease, the higher the likelihood that only one <span
+                  class="text--italic">ALPL</span
+                > pathogenic variant is detected
+              </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      <div class="line-container third">
+        <div class="red-string third"></div>
+      </div>
+      <div class="has-vus">
+        <div class="wrapper">
+          <h2 class="has-vus__title white-title color--white">
+            If your patient has a variant of<br class="hidden md:block" /> uncertain
+            significance (VUS)
+          </h2>
+          <p class="color--white has-vus__classification">
+            If the classification of the variant is VUS, it means that at the
+            time of interpretation, there was insufficient evidence to determine
+            if the variant was related to disease or not.<sup>27</sup>
+          </p>
+          <div class="has-vus__quote">
+            <p class="color--white text--center font--special-elite">
+              “According to the ACMG* guidelines, a VUS should not be used in
+              clinical decision-making. If a patient is identified to have a
+              VUS, all clinical decisions should be based on personal and family
+              history and not on the presence of the VUS.”<sup>28</sup>
+            </p>
+            <p class="color--white text--center">
+              -Jennifer Schleit, PhD, Senior Geneticist
+            </p>
+            <p class="color--white text--center quote-note">
+              <sup class="symbol-sup">*</sup>ACMG, American College of Medical
+              Genetics and Genomics.
+            </p>
+            <p class="color--saffron-mango text--center font--special-elite">
+              A VUS may be related to hypophosphatasia and does not rule out the
+              diagnosis.<sup>29</sup>
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+  <section
+    class="section identifying-hpp-page__multidisciplinary-care-team"
+    id="multidisciplinary-care-team"
+  >
+    <div class="line-container first">
+      <div class="red-string first"></div>
+    </div>
+
+    <article class="calling-for-backup">
+      <div class="wrapper">
+        <h2 class="calling-for-backup__title white-title">
+          calling for backup
+        </h2>
+
+        <p class="calling-for-backup__text">
+          Uncovering hypophosphatasia unlocks a world of answers for your
+          patients and validates their long journey of perplexing symptoms. Once
+          you’ve diagnosed hypophosphatasia, consider assembling a team of
+          professionals similar to the example below to develop a comprehensive
+          care plan for your patients.
+        </p>
+      </div>
+
+      <div class="calling-for-backup__grafic">
+        <ul role="tablist" class="calling-for-backup__tabs">
+          <li role="presentation">
+            <!--active one -->
+            <a
+              href="#adults-older-children-panel"
+              role="tab"
+              id="adults-older-children-tab"
+              aria-selected="true">Adults/older children</a
+            >
+          </li>
+          <li role="presentation">
+            <a
+              href="#neotanes-infants-panel"
+              role="tab"
+              id="neotanes-infants-tab"
+              tabindex="-1">Neonates/infants</a
+            >
+          </li>
+        </ul>
+        <section
+          id="adults-older-children-panel"
+          role="tabpanel"
+          aria-labelledby="adults-older-children-tab"
+          aria-hidden="false"
+          tabindex="-1"
+        >
+          <picture class="mb-2">
+            <img
+              src="/assets/images/identifying-hpp/adults-older-children-grafic.png"
+              alt=""
+            />
+          </picture>
+          <p class="text--center color--white">
+            Assemble a multidisciplinary disease management team to provide
+            comprehensive care to your patients with hypophosphatasia.<sup
+              >10,30</sup
+            >
+          </p>
+        </section>
+        <section
+          id="neotanes-infants-panel"
+          role="tabpanel"
+          aria-labelledby="neotanes-infants-tab"
+          aria-hidden="true"
+          tabindex="-1"
+          hidden
+        >
+          <picture class="mb-2">
+            <img
+              src="/assets/images/identifying-hpp/neonates-infants-grafic.png"
+              alt=""
+            />
+          </picture>
+          <p class="text--center color--white">
+            Assemble a multidisciplinary disease management team to provide
+            comprehensive care to your patients with hypophosphatasia.<sup
+              >30</sup
+            >
+          </p>
+        </section>
+      </div>
+    </article>
+  </section>
+
+  <section class="cta-section">
+    <CTA
+      variation="variant-3"
+      buttonLabel="Back to Home"
+      content="Don’t let hypophosphatasia go free"
+      linkURL="/"
+      bypassModal
+    />
+  </section>
+
+  <References>
+    <p>
+      <strong>References: 1.</strong> Bishop N, Munns CF, Ozono K. Transformative
+      therapy in hypophosphatasia. Arch Dis Child. 2016;101(6):514-515. <strong
+        >2.</strong
+      >
+      Desborough R, Nicklin P, Gossiel F, et al. Clinical and biochemical characteristics
+      of adults with hypophosphatasia attending a metabolic bone clinic. Bone. 2021;144:115795.
+      <strong>3.</strong> Bloch-Zupan A. Hypophosphatasia: diagnosis and clinical
+      signs - a dental surgeon perspective. Int J Paediatr Dent. 2016;26(6):426-438.
+      <strong>4.</strong> Shapiro JR, Lewiecki EM. Hypophosphatasia in adults: clinical
+      assessment and treatment considerations. J Bone Miner Res. 2017;32(10):1977-1980.
+      <strong>5.</strong> Rockman-Greenberg C. Hypophosphatasia. Pediatr Endocrinol
+      Rev. 2013;10(suppl 2):380-388. <strong>6.</strong> McKiernan FE, Berg RL, Fuehrer
+      J. Clinical and radiographic findings in adults with persistent hypophosphatasemia.
+      J Bone Miner Res. 2014;29(7):1651-1660. <strong>7.</strong> Whyte MP. Hypophosphatasia:
+      nature's window on alkaline phosphatase function in humans. In: Bilezikian
+      JP, Raisz LG, Martin TJ, eds. Principles of Bone Biology. 3rd ed. Academic
+      Press; 2008:1573-1598.
+      <strong>8.</strong> Bianchi ML, Bishop NJ, Guañabens N, et al; Rare Bone Disease
+      Action Group of the European Calcified Tissue Society. Hypophosphatasia in
+      adolescents and adults: overview of diagnosis and treatment. Osteoporos Int.
+      2020;31(8):1445-1460. <strong>9.</strong> Vieira LHR, Peixoto KC, Flósi CL,
+      Fleiuss de Farias ML, Madeira M. Active search of adult patients with persistently
+      low serum alkaline phosphatase levels for diagnosis of hypophosphatasia. Arch
+      Endocrinol Metab. 2021;65(3):289-294. <strong>10.</strong> NORD. Hypophosphatasia.
+      Accessed March 30, 2023. <a
+        href="https://rarediseases.org/rare-diseases/hypophosphatasia/"
+        target="_blank"
+        >https://rarediseases.org/rare-diseases/hypophosphatasia/</a
+      >
+      <strong>11.</strong>
+      Mornet E, Nunes ME. Hypophosphatasia. In: Adam MP, Ardinger HH, Pagon RA, et
+      al, eds. GeneReviews®. University of Washington; 2007. Accessed March 30, 2023.
+      <a href="https://www.ncbi.nlm.nih.gov/books/NBK1150/" target="_blank"
+        >https://www.ncbi.nlm.nih.gov/books/NBK1150/</a
+      >
+      <strong>12.</strong> Mornet E. Molecular genetics of hypophosphatasia and phenotype-genotype
+      correlations. Subcell Biochem. 2015;76:25-43. <strong>13.</strong>
+      Kamińska J, Dymicka-Piekarska V, Tomaszewska J, Matowicka-Karna J, Koper-Lenkiewicz
+      OM. Diagnostic utility of protein in creatinine ratio (P/C ratio) in spot urine
+      sample within routine clinical practice. Crit Rev Clin Lab Sci. 2020;57(5):345-364.
+      <strong>14.</strong> Shajani-Yi Z, Ayala-Lopez N, Black M, Dahir KM. Urine
+      phosphoethanolamine is a specific biomarker for hypophosphatasia in adults.
+      Bone. 2022;163:116504. <strong>15.</strong> Phillips KA, Deverka PA, Hooker
+      GW, Douglas MP. Genetic test availability and spending: where are we now? Where
+      are we going? Health Aff (Millwood). 2018;37(5):710-716. <strong
+        >16.</strong
+      > Mornet E. Hypophosphatasia. Metabolism. 2018;82:142–155. <strong
+        >17.</strong
+      > Khan AA, Josse R, Kannu P, et al. Hypophosphatasia: Canadian update on diagnosis
+      and management. Osteoporos Int. 2019;30(9):1713-1722. <strong>18.</strong>
+      NIH MedlinePlus. ALPL gene. National Library of Medicine. 2018. Accessed March
+      30, 2023. <a
+        href="https://medlineplus.gov/genetics/gene/alpl/"
+        target="_blank">https://medlineplus.gov/genetics/gene/alpl/</a
+      >
+      <strong>19.</strong>
+      Horton RH, Lucassen AM. Recent developments in genetic/genomic medicine. Clin
+      Sci (Lond). 2019;133(5):697-708. <strong>20.</strong> Weiss MJ, Cole DE, Ray
+      K, et al. A missense mutation in the human liver/bone/kidney alkaline phosphatase
+      gene causing a lethal form of hypophosphatasia. Proc Natl Acad Sci. 1988;85:7666-7669.
+      <strong>21.</strong> The ALPL Gene Variant Database. JKU Faculty of Medicine.
+      Accessed March 30, 2023.
+      <a href="https://alplmutationdatabase.jku.at/" target="_blank"
+        >https://alplmutationdatabase.jku.at/</a
+      >
+      <strong>22.</strong> Jandl NM, Schmidt T, Rolvien T, et al. Genotype-phenotype
+      associations in 72 adults with suspected ALPL-associated hypophosphatasia.
+      Calc Tissue Int. 2021;108(3):288-301. <strong>23.</strong> Nunes ME. Hypophosphatasia.
+      GeneReviews®. 2007;1993–2002. <strong>24.</strong> Whyte MP, Leung E, Wilcox
+      WR, et al. Natural history of perinatal and infantile hypophosphatasia: a retrospective
+      study. J Pediatr. 2019;209:116-124.e4. <strong>25.</strong> Zurutuza L, Muller
+      F, Gibrat JF, et al. Correlations of genotype and phenotype in hypophosphatasia.
+      Hum Mol Genet. 1999;8(6):1039-1046. <strong>26.</strong> Hofmann C, Girschick
+      HJ, Mentrup B, et al. Clinical aspects of hypophosphatasia: an update. Clin
+      Rev Bone Miner Metab. 2013;11:60-70. <strong>27.</strong> Sanabria-de la Torre
+      R, Martínez-Heredia L, González-Salvatierra S, et al. Characterization of genetic
+      variants of uncertain significance for the ALPL gene in patients with adult
+      hypophosphatasia. Front Endocrinol (Lausanne). 2022;13:863940. <strong
+        >28.</strong
+      >
+      Blueprint Genetics. VUS—the most maligned result in genetic testing. 2019.
+      Accessed March 30, 2023.
+      <a
+        href="https://blueprintgenetics.com/resources/vus-the-most-maligned-result-in-genetic-testing/"
+        target="_blank"
+        >https://blueprintgenetics.com/resources/vus-the-most-maligned-result-in-genetic-testing/</a
+      >
+      <strong>29.</strong> Beck NM, Sagaser KG, Lawson CS, et al. Not just a carrier:
+      clinical presentation and management of patients with heterozygous disease-causing
+      alkaline phosphatase (ALPL) variants identified through expanded carrier screening.
+      Mol Genet Genomic Med. 2023;11(1):e2056. <strong>30.</strong> Kishnani PS,
+      Rockman-Greenberg C, Rauch F, et al. Five-year efficacy and safety of asfotase
+      alfa therapy for adults and adolescents with hypophosphatasia. Bone. 2019;121:149-162.
+    </p>
+  </References>
 </Layout>
