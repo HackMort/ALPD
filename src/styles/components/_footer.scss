@@ -1,7 +1,7 @@
 .footer {
   background-color: transparent;
   border-top: 1px solid $color-white;
-  // border-bottom: 1px solid $color-white;
+  border-bottom: 1px solid $color-white;
   color: $color-black;
 
   &__grid {
@@ -175,7 +175,7 @@
           @media screen and (min-width: 1024px) {
             display: flex;
             align-items: flex-start;
-            justify-content: flex-start;
+            justify-content: space-between;
             @include flex-gap(1.25rem);
             align-self: center;
             padding-top: 0;
@@ -184,6 +184,11 @@
 
           @media screen and (min-width: 1200px) {
             @include flex-gap(2rem);
+
+            li {
+              flex: 0 0 6.6875rem;
+            }
+
           }
 
           @media screen and (min-width: 1365px) {
@@ -218,7 +223,7 @@
       }
 
       img {
-        width: 6.8125rem;
+        width: 8.3756rem;
       }
     }
 
