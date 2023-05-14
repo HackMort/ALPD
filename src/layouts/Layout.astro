@@ -39,6 +39,7 @@ const {
     <title>{title}</title>
   </head>
   <body class={pageClass}>
+    <CookieBanner />
     {showHeader && <Header />}
     <main class="main">
       <slot />
@@ -46,7 +47,6 @@ const {
     {showISI && <ISI />}
     {showFooter && <Footer />}
     <StayConnected />
-    <CookieBanner />
   </body>
   <script src="/assets/js/script.js" type="module"></script>
   <script is:inline src="/assets/js/forms.js"></script>
