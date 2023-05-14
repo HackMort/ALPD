@@ -23,6 +23,14 @@
         display: flex;
         align-items: center;
 
+        @media screen and (min-width: 1440px) {
+            left: calc(var(--wrapper-margin) / 2);
+        }
+
+        @media screen and (min-width: 1600px) {
+            left: calc((100vw - 90rem) / 2);
+        }
+
         h1 {
             font-family: "veneer", sans-serif;
             color: #ca4c40;

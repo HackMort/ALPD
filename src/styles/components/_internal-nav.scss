@@ -1,6 +1,18 @@
 .internal__nav {
     --nav-top-position: 73.06px;
 
+    .wrapper {
+
+        max-width: calc(100% - (var(--wrapper-margin) / 2));
+        margin-left: auto;
+        margin-right: 0;
+
+        @media screen and (min-width: 768px) {
+            margin: 0 auto;
+            max-width: var(--wrapper-max-width);
+        }
+    }
+
     &.is--sticky {
         position: fixed;
         top: var(--nav-top-position);
@@ -41,11 +53,13 @@
             margin-bottom: 1.5rem;
             padding-bottom: 1.5rem;
 
+            justify-content: center;
+
             &::after {
                 content: "";
                 background: $color-red;
                 height: 1px;
-                width: 90%;
+                width: 98%;
                 max-width: 62.1875rem;
 
                 position: absolute;
