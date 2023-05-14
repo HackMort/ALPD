@@ -23,7 +23,7 @@ $color-value in $colors {
 
 .sz-500\:color--saffron-mango {
     @media screen and (min-width: 500px) {
-        color: $color-saffron-mango;
+        color: $color-saffron-mango !important;
     }
 }
 
