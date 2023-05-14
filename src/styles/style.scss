@@ -971,17 +971,13 @@
 
         p {
             text-align: center;
-            font-family: 'Special Elite', cursive;
-
+            line-height: 21px;
             font-size: 1.125rem;
-            line-height: 27px;
-
-            * {
-                font-family: 'Special Elite', cursive;
-            }
 
             &:first-of-type {
                 margin-bottom: 1.5rem;
+                font-family: 'Special Elite', cursive;
+                line-height: 27px;
 
                 @media screen and (min-width: 500px) {
                     margin-bottom: 3rem;
