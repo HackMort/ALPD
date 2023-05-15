@@ -10,7 +10,6 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
     <div class="case__files_modal_wrapper case__files_desktop_modal">
       <ul role="tablist">
         <li role="presentation">
-          <!--active one -->
           <a
             href="#case-p-panel-1"
             role="tab"
@@ -64,9 +63,9 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
                   2 nontraumatic fractures: Age 13, femur; age 16, metatarsals
                 </li>
                 <li class="item">
-                  Reportsof slow healing fractures, even at young age
+                  Reports of slow healing fractures, even at young age
                 </li>
-                <li class="item">Age 50: Kidney stones</li>
+                <li class="item">Age 50: Kidney stoness</li>
                 <li class="item">
                   History of poor dentition and weak/loose teeth
                 </li>
@@ -93,8 +92,13 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
             </Fragment>
             <Fragment slot="medications">
               <ul>
-                <li class="item">Calcium and vitamin D supplement daily</li>
-                <li class="item">Reports of daily NSAID use</li>
+                <li class="item">
+                  Uses over-the-counter calcium and vitamin D <br /> supplements
+                  daily (not physician-directed)
+                </li>
+                <li class="item">
+                  Reports of self-medicating daily with NSAIDs
+                </li>
               </ul>
             </Fragment>
             <Fragment slot="results">
@@ -227,10 +231,10 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
               </div>
               <ul>
                 <li class="item">
-                  High vitamin B6 level shown at test 6 months ago
+                  High vitamin B<sub>6</sub> level shown at test 6 months ago
                 </li>
                 <li class="item">
-                  ALPL genetic test: Variant of uncertain significance <br /> (VUS)
+                  ALPL genetic test: Variant of uncertain <br /> significance (VUS)
                   identified
                 </li>
               </ul>
@@ -440,7 +444,7 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
                       <p>9.8</p>
                       <p>7.5</p>
                       <p>4.2</p>
-                      <p>19</p>
+                      <p>29</p>
                     </div>
                     <div class="second-column last-child">
                       <h3>FLAG</h3>
@@ -476,6 +480,10 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
                     </picture>
                     <div class="patient">
                       <p>Delayed eruption of permanent teeth</p>
+                      <small
+                        >Reproduced from [source] with permission from/under/by
+                        [x].</small
+                      >
                     </div>
                   </div>
                 </PinchToZoom>
