@@ -7,10 +7,11 @@
     }
 
     .main-hero__title {
-        text-transform: uppercase;
         font-size: 1.5rem;
         font-weight: 700;
         line-height: 30px;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
 
         @media screen and (min-width: 768px) {
             font-size: 2.25rem;
@@ -40,7 +41,9 @@
 
     .main-hero__button-wrapper {
         .button {
-            margin: 0 auto;
+            margin-top: 1.25rem;
+            margin-right: auto;
+            margin-left: auto;
         }
     }
 

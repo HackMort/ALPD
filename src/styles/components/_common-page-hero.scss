@@ -1,0 +1,50 @@
+.common-page-hero {
+    width: 100%;
+    position: relative;
+
+    height: calc(173px + ((379 - 173) * ((100vw - 320px) / (1440 - 320))));
+    max-height: 23.6875rem;
+
+    [data-image-hero] {
+        height: 100%;
+
+        img {
+            height: inherit;
+        }
+    }
+
+    .common-page-hero__title {
+        border: 10px solid transparent;
+        padding: .85rem .5rem .5rem .5rem;
+        position: absolute;
+
+        border-image: url("/assets/images/common-hero/hero-title-frame.png") 19 round;
+
+        display: flex;
+        align-items: center;
+
+        @media screen and (min-width: 1440px) {
+            left: calc(var(--wrapper-margin) / 2);
+        }
+
+        @media screen and (min-width: 1600px) {
+            left: calc((100vw - 90rem) / 2);
+        }
+
+        h1 {
+            font-family: "veneer", sans-serif;
+            color: #ca4c40;
+            text-transform: uppercase;
+            line-height: 100%;
+            font-weight: 500;
+
+            letter-spacing: 2px;
+
+            font-size: 1.75rem;
+
+            @media screen and (min-width: 768px) {
+                font-size: 3.5rem;
+            }
+        }
+    }
+}

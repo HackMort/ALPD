@@ -94,57 +94,59 @@ export function Tabs () {
   }
 }
 
-export function ShowSection() {
-  /*Show the selected section in the dropdown */
-  var select = document.getElementById("hpp-multisystemic-select");
-  
-  select.addEventListener("change", function () {
-    var selectedOption = select.options[select.selectedIndex].value;
+export function ShowSection () {
+  /* Show the selected section in the dropdown */
+  const select = document.getElementById('hpp-multisystemic-select')
 
-    var sections = document.getElementsByTagName("section");
-    for (var i = 0; i < sections.length; i++) {
-      //If a section is not hidden
-      if (sections[i].getAttribute("aria-hidden") === "false") {
-        sections[i].setAttribute("aria-hidden", "true");
-        sections[i].setAttribute("hidden", "true");
+  if (!select) {
+    return
+  }
+
+  select.addEventListener('change', function () {
+    const selectedOption = select.options[select.selectedIndex].value
+
+    const sections = document.getElementsByTagName('section')
+    for (let i = 0; i < sections.length; i++) {
+      // If a section is not hidden
+      if (sections[i].getAttribute('aria-hidden') === 'false') {
+        sections[i].setAttribute('aria-hidden', 'true')
+        sections[i].setAttribute('hidden', 'true')
       }
     }
 
-    //Showing the selected section
-    var targetSection = document.getElementById(selectedOption);
-    targetSection.setAttribute("aria-hidden", "false");
-    targetSection.removeAttribute("hidden");
-
-  });
+    // Showing the selected section
+    const targetSection = document.getElementById(selectedOption)
+    targetSection.setAttribute('aria-hidden', 'false')
+    targetSection.removeAttribute('hidden')
+  })
 
   /* Show the selected section in the tabs */
-  var option1 = document.querySelector("a[href='#multisystemic1']");
-  var option2 = document.querySelector("a[href='#multisystemic2']");
-  var option3 = document.querySelector("a[href='#multisystemic3']");
+  const option1 = document.querySelector("a[href='#multisystemic1']")
+  const option2 = document.querySelector("a[href='#multisystemic2']")
+  const option3 = document.querySelector("a[href='#multisystemic3']")
 
-  var bgFolder = document.querySelector(".hpp-multisystemic__tabs");
-  //Default option
-  bgFolder.classList.add("multisystemic1");
+  const bgFolder = document.querySelector('.hpp-multisystemic__tabs')
+  // Default option
+  bgFolder.classList.add('multisystemic1')
 
-  option1.addEventListener("click", function () {
-    //Remove the other classes
-    bgFolder.classList.remove("multisystemic2");
-    bgFolder.classList.remove("multisystemic3");
-    bgFolder.classList.add("multisystemic1");
-  });
-  
-  option2.addEventListener("click", function () {
-    //Remove the other classes 
-    bgFolder.classList.remove("multisystemic1");
-    bgFolder.classList.remove("multisystemic3");
-    bgFolder.classList.add("multisystemic2");
-  });
-  
-  option3.addEventListener("click", function () {
-    //Remove the other classes
-    bgFolder.classList.remove("multisystemic1");
-    bgFolder.classList.remove("multisystemic2");
-    bgFolder.classList.add("multisystemic3");
-  });
+  option1.addEventListener('click', function () {
+    // Remove the other classes
+    bgFolder.classList.remove('multisystemic2')
+    bgFolder.classList.remove('multisystemic3')
+    bgFolder.classList.add('multisystemic1')
+  })
 
+  option2.addEventListener('click', function () {
+    // Remove the other classes
+    bgFolder.classList.remove('multisystemic1')
+    bgFolder.classList.remove('multisystemic3')
+    bgFolder.classList.add('multisystemic2')
+  })
+
+  option3.addEventListener('click', function () {
+    // Remove the other classes
+    bgFolder.classList.remove('multisystemic1')
+    bgFolder.classList.remove('multisystemic2')
+    bgFolder.classList.add('multisystemic3')
+  })
 }

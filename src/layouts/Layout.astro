@@ -8,6 +8,7 @@ import Footer from "../components/Footer.astro";
 import ISI from "../components/ISI.astro";
 import CookieBanner from "../components/CookieBanner.astro";
 import StayConnected from "../components/stay-conected.astro";
+import AlpCalculator from "../components/AlpCalculator.astro";
 export interface Props {
   title: string;
   pageClass?: string;
@@ -39,6 +40,7 @@ const {
     <title>{title}</title>
   </head>
   <body class={pageClass}>
+    <CookieBanner />
     {showHeader && <Header />}
     <main class="main">
       <slot />
@@ -46,7 +48,7 @@ const {
     {showISI && <ISI />}
     {showFooter && <Footer />}
     <StayConnected />
-    <CookieBanner />
+    <AlpCalculator />
   </body>
   <script src="/assets/js/script.js" type="module"></script>
   <script is:inline src="/assets/js/forms.js"></script>

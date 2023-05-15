@@ -1,0 +1,32 @@
+---
+type Props = {
+    title?: string;
+    hiddeRedLine?: boolean;
+    classes?: string;
+};
+const {
+    title = undefined,
+    hiddeRedLine = false,
+    classes = "",
+} = Astro.props;
+
+const showTitle = title !== undefined
+---
+
+<section class={`common-page-hero ${classes}`}>
+
+    {
+        showTitle && (
+            <div class="common-page-hero__title">
+                <h1>{title}</h1>
+            </div>
+        )
+    }
+
+    {
+        !hiddeRedLine && <div class="red-string"></div>
+    }
+
+    <slot name="image-hero"/>
+
+</section>
