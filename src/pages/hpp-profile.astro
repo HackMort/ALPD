@@ -6,7 +6,7 @@ import CaseFileModal from "../components/Case-Files/CaseFileModal.astro";
 import CaseFileModalDesktop from "../components/Case-Files/CaseFileModalDesktop.astro";
 import SkeletonDesktop from "../components/Skeleton/SkeletonDesktop.astro";
 import SkeletonMobile from "../components/Skeleton/SkeletonMobile.astro";
-import SkeletonInfo from "../components/Skeleton/SkeletonInfo.astro";
+import CommonHeroPage from "../components/CommonHeroPage.astro";
 
 const internalNavLinks = [
   { href: "hpp-definition", label: "HPP Definition", active: true },
@@ -19,6 +19,20 @@ const internalNavLinks = [
 ---
 
 <Layout title="HPP Profile" pageClass="hpp__profile" showISI={false}>
+  <CommonHeroPage title="hpp profile" classes="hpp__profile__hero">
+    <picture slot="image-hero" data-image-hero>
+      <source
+        srcset="/assets/images/hpp-profile/hero-img.png"
+        media="(min-width: 1024px)"
+      />
+      <source
+        srcset="/assets/images/hpp-profile/hero-img--tablet.png"
+        media="(min-width: 500px)"
+      />
+      <img src="/assets/images/hpp-profile/hero-img--mobile.png" alt="" />
+    </picture>
+  </CommonHeroPage>
+
   {internalNavLinks && <InternalNavigation items={internalNavLinks} />}
 
   <!-- HPP Definition -->
@@ -32,13 +46,11 @@ const internalNavLinks = [
           Take a look at the case file of hypophosphatasia to learn how it stays
           hidden and how it may be causing harm to your patients
         </h3>
-        <p
-          class="hpp__profile__paragraph hpp__profile__paragraph--sub color--white"
-        >
+        <p class="hpp__profile__paragraph hpp__profile__paragraph--sub">
           Hypophosphatasia is an inherited, multisystemic, rare metabolic
-          disorder characterized by persistently low age- and sex- adjusted
-          alkaline phosphatase (ALP) activity that may progress over time.<sup
-            class="color--white">1,2</sup
+          disorder characterized by persistently low age- and sex-adjusted
+          alkaline phosphatase (ALP) activity that may progress over time.1,2<sup
+            >1,2</sup
           >
         </p>
       </div>

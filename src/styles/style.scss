@@ -2642,6 +2642,57 @@
 /* HPP Profile Page */
 .hpp__profile {
 
+    &__hero {
+        .common-page-hero__title {
+            position: absolute;
+            top: 38%;
+            left: 11%;
+            transform: rotate(4.26deg);
+            position: relative;
+            z-index: 3;
+            max-width: fit-content;
+
+            @media screen and (min-width: 768px) {
+                left: calc((var(--wrapper-margin) / 2) + 5rem);
+                transform: translateY(-68%) rotate(-5deg);
+            }
+
+            @media screen and (min-width: 1366px) {
+                left: calc((var(--wrapper-margin) / 2) + 5rem);
+            }
+
+            @media screen and (min-width: 1600px) {
+                left: calc(((100vw - 90rem) / 2) + 4rem);
+            }
+
+            h1 {
+                @media screen and (max-width: 768px) {
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        [data-image-hero] img {
+            height: auto;
+            position: absolute;
+            bottom: 0;
+            z-index: 1;
+        }
+
+        .red-string {
+            position: absolute;
+            z-index: 2;
+            transform: rotate(-28deg);
+            transform-origin: left;
+            top: 72%;
+
+            @media screen and (min-width: 768px) {
+                top: 0.5rem;
+                transform: rotate(5deg);
+            }
+        }
+    }
+
     &__content {
         color: $color-white;
         margin: 0 auto;
@@ -2660,12 +2711,15 @@
     }
 
     &__main-title {
-        margin: 1rem 8rem 0 0;
+        font-family: 'Oswald';
+        font-size: 1.875rem;
+        margin: 1rem 4rem 0.5rem 0;
         font-weight: 600;
 
         @include media('tablet') {
             text-align: center;
-            margin: 3.1875rem auto 0 auto;
+            margin: 3.1875rem auto 2rem auto;
+            font-size: 2.5rem;
         }
     }
 
@@ -2737,7 +2791,7 @@
     }
 
     &__sub-title {
-        font-size: 1.125rem;
+        font-size: 1.375rem;
         font-weight: 600;
 
         @include media('tablet') {
@@ -2802,8 +2856,10 @@
         }
 
         &--text-red {
-            color: $color-cinnabar;
-            font-family: inherit;
+            @media screen and (max-width: 768px) {
+                color: $color-cinnabar;
+                font-family: inherit;
+            }
         }
     }
 
@@ -3547,16 +3603,6 @@
                         max-width: 55%;
                         line-height: 2rem;
                     }
-                }
-            }
-
-            &--button {
-                @media screen and (min-width: 769px) {
-                    background-image: url('/assets/images/hpp-profile/patients-file-tape.png');
-                    background-repeat: no-repeat;
-                    background-size: 100% 100%;
-                    background-position: center;
-                    padding: 1rem 1.5rem;
                 }
             }
 

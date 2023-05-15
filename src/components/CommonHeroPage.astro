@@ -4,17 +4,12 @@ type Props = {
     hiddeRedLine?: boolean;
     classes?: string;
 };
-const {
-    title = undefined,
-    hiddeRedLine = false,
-    classes = "",
-} = Astro.props;
+const { title = undefined, hiddeRedLine = false, classes = "" } = Astro.props;
 
-const showTitle = title !== undefined
+const showTitle = title !== undefined;
 ---
 
 <section class={`common-page-hero ${classes}`}>
-
     {
         showTitle && (
             <div class="common-page-hero__title">
@@ -23,10 +18,7 @@ const showTitle = title !== undefined
         )
     }
 
-    {
-        !hiddeRedLine && <div class="red-string"></div>
-    }
+    {!hiddeRedLine && <div class="red-string" />}
 
-    <slot name="image-hero"/>
-
+    <slot name="image-hero" />
 </section>
