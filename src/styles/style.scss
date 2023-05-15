@@ -28,6 +28,7 @@
 @import './components/cta.scss';
 @import './components/_patient-case-file.scss';
 @import './components/_case-file-modal.scss';
+@import './components/_suspect-card.scss';
 @import './components/stay-connected.scss';
 @import './components/_skeleton.scss';
 
@@ -1412,11 +1413,79 @@
     }
                 
 
+    .usual-suspects-misdiagnosis {
+        color: white;
+        padding: 23px;
+        position: relative;
 
+        .title {
+            margin-top: 12px;
+            margin-bottom: 7px;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 24px;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            line-height: 30px;
+        }
+        .pharagraph {
+            font-size: 16px;
+            font-family: "Barlow", sans-serif;
+            line-height: 24px;
+            font-weight: 500;    
+            margin-bottom: 70px;   
+            max-width: 633px;   
+            margin-left: auto;
+            margin-right: auto;     
+        }
+
+        .pharagraph--secondary {
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            font-family: 'Special Elite', cursive;
+            font-weight: 400;
+            margin-bottom: 94px;    
+            max-width: 487px;
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
+
+        .horizontal_line, .horizontal_line--secondary {
+            position: absolute;
+            border: 0;
+            height: 2px;
+            background-color: $color-red;
+            width: 110vw;
+            left: -12px;
+        }
+        
+        .horizontal_line {
+            bottom: 50px;
+            transform: rotateZ(10deg);
+        }
+        
+        .horizontal_line--secondary {
+            bottom: 256px;
+            transform: rotateZ(-10deg);
+        }
+        
+    }
+
+    
 
 
 }
 
+
+@media screen and (min-width: 400px) {
+    .usual_suspects .usual-suspects-misdiagnosis {               
+        .horizontal_line--secondary {
+            transform: rotateZ(-7deg);
+        }
+    }
+}
 
 @media screen and (min-width: 480px) {
     .usual_suspects {
@@ -1425,6 +1494,17 @@
             background-position-y: 100%;
             background-position-x: 87%;
             height: 200px;
+        }
+
+        .usual-suspects-misdiagnosis {
+            .horizontal_line {
+                transform: rotateZ(5deg);
+            }
+            
+            .horizontal_line--secondary {
+                transform: rotateZ(-5deg);
+            }
+    
         }
         
     }
@@ -1444,6 +1524,31 @@
             text-align: center;
             margin-left: auto;
             margin-right: auto;
+        }
+
+        .usual-suspects-misdiagnosis {
+            .horizontal_line {
+                transform: rotateZ(3deg);
+                bottom: 63px;
+            }
+            
+            .horizontal_line--secondary {
+                transform: rotateZ(-3deg);
+                bottom: 240px;
+            }
+    
+        }
+
+        .usual-suspects-misdiagnosis {
+            .title {
+                margin-top: 57px;
+                margin-bottom: 34px;
+            }
+
+            .pharagraph {
+                margin-bottom: 85px;
+            }
+
         }
         
     }

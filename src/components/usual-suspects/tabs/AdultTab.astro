@@ -1,7 +1,16 @@
 ---
-import AdultTab from "./tabs/AdultTab.astro"
-import ChildrenAdolescent from "./tabs/ChildrenAdolescent.astro"
-import ChildrenTab from "./tabs/ChildrenTab.astro"
+import SuspectCard from "../../Suspect-Card.astro"
+import { Props } from "../../Suspect-Card.astro"
+
+const data_card_1:Props = {
+ title: "Osteopenia/Osteoporosis",
+ image: "",
+ subtitle: "Osteopenia/Osteoporosis ",
+ subtitle_secondary: "Oswaldo Porosis6-9",
+ info: "Note: Patient may have osteopenia as a symptom of hypophosphatasia",
+ list: [ "Decrease in bone mineral density", "Fractures (from fragile bones)" ]
+}
+
 ---
 
 <section class="hpp__profile" >
@@ -59,7 +68,7 @@ import ChildrenTab from "./tabs/ChildrenTab.astro"
             aria-hidden="false"
             tabindex="-1"
           >
-            <AdultTab />
+            <SuspectCard { ...data_card_1 } />
         </section>
         
         <!-- Tab children content -->
@@ -72,7 +81,7 @@ import ChildrenTab from "./tabs/ChildrenTab.astro"
             tabindex="-1"
             hidden
             >
-            <ChildrenAdolescent />
+            
         </section>
         
         <!-- Tab neonates/infants content -->
@@ -85,7 +94,7 @@ import ChildrenTab from "./tabs/ChildrenTab.astro"
             tabindex="-1"
             hidden
           >
-            <ChildrenTab />
+           
           </section>
 
         </article>
