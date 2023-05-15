@@ -256,6 +256,10 @@
                 z-index: 0;
             }
 
+            .skeleton__line--after2 {
+                display: none;
+            }
+
             .skeleton__word {
                 top: 1.5rem;
                 left: 50%;
@@ -275,7 +279,7 @@
             }
 
             .skeleton__line--after {
-                width: 4.7rem;
+                width: 4.69rem;
                 top: 6.2rem;
                 left: 6.5rem;
                 z-index: 0;
@@ -284,7 +288,7 @@
             }
 
             .skeleton__line--after2 {
-                width: 25%;
+                width: 30%;
                 top: 7.8rem;
                 left: calc(6.4rem + 4.5rem);
                 z-index: 0;
@@ -775,19 +779,23 @@
             .skeleton__line--before {
                 display: block;
                 background-color: $color-red;
+                transition: all 0.3s ease-in-out;
             }
 
             .skeleton__line--after {
                 background-color: $color-red;
+                transition: all 0.3s ease-in-out;
             }
 
             .skeleton__line--after2 {
                 background-color: $color-red;
+                transition: all 0.3s ease-in-out;
             }
 
             .skeleton__word {
                 border-color: $color-red;
                 color: $color-red;
+                transition: all 0.3s ease-in-out;
             }
 
             .skeleton__icon {
@@ -795,6 +803,7 @@
 
                 &--active {
                     display: block;
+                    transition: display 0.3s ease-in-out;
                 }
             }
         }
@@ -851,8 +860,8 @@
 
     &__content {
         width: fit-content;
-        max-width: 500px;
-        height: 455px;
+        max-width: 370px;
+        height: 475px;
         border: 1px solid $color-red;
         padding: 1.5rem;
         position: relative;
@@ -860,7 +869,18 @@
         display: none;
         flex-direction: column;
         @include flex-gap(1rem);
-        box-sizing: content-box;
+
+        &--infants {
+            height: fit-content;
+            min-height: 400px;
+            padding: 2rem 1.5rem;
+
+            .skeleton__content--img {
+                img {
+                    width: 100%;
+                }
+            }
+        }
 
         &--active {
             display: flex;
@@ -899,27 +919,38 @@
             display: flex;
             flex-direction: column;
             @include flex-gap(1rem);
+
+            font-weight: 400;
         }
 
         &--img {
             display: flex;
             @include flex-gap(0.5rem);
-            width: auto;
+            max-width: 100%;
 
             img {
                 width: auto;
             }
+
+            @media screen and (max-width: 768px) {
+                img {
+                    width: 100%;
+                }
+            }
         }
 
         &--conditions {
-            font-size: .75rem;
-
-            @media screen and (max-width: 768px) {
-                margin-bottom: 1rem;
-            }
-
             em {
                 font-style: italic;
+            }
+
+            p {
+                font-size: .75rem;
+                font-weight: 400;
+
+                @media screen and (max-width: 768px) {
+                    margin-bottom: 1rem;
+                }
             }
         }
 

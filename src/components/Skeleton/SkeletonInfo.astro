@@ -13,7 +13,7 @@ const { type, data } = Astro.props;
             .filter((item) => item.type === type)
             .map((item: any) => (
                 <section
-                    class={`skeleton__content${
+                    class={`skeleton__content skeleton__content--${type}${
                         item.active ? " skeleton__content--active" : ""
                     }`}
                     id={
@@ -35,7 +35,10 @@ const { type, data } = Astro.props;
                                 <img src={item.image2} alt={item.image2Alt} />
                             )}
                         </div>
-                        <p set:html={item.condition} />
+                        <div
+                            class="skeleton__content--conditions"
+                            set:html={item.condition}
+                        />
                     </div>
                 </section>
             ))
@@ -45,6 +48,21 @@ const { type, data } = Astro.props;
 <script>
     const btns = document.querySelectorAll(".skeleton__option");
     const sections = document.querySelectorAll("section.skeleton__content");
+
+    const infantsSections = document.querySelectorAll(
+        ".skeleton__content--infants"
+    );
+    const adultsSections = document.querySelectorAll(
+        ".skeleton__content--adults"
+    );
+
+    const btnsInfants = document.querySelectorAll(".skeleton__option--infants");
+
+    const btnsAdults = document.querySelectorAll(".skeleton__option--adults");
+
+    const tabBtns = document.querySelectorAll(
+        ".hpp-multisystemic__tabs--nav-item a"
+    );
 
     btns.forEach((btn) => {
         btn.addEventListener("click", () => {
@@ -69,6 +87,49 @@ const { type, data } = Astro.props;
                 document.querySelector(`#${sectionId}-content`);
 
             currentSection.classList.add("skeleton__content--active");
+        });
+    });
+
+    //Reseting state of the active button and section
+    tabBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            const sectionId = btn.getAttribute("href");
+
+            if (sectionId == "#multisystemic1") {
+                btnsInfants.forEach((btn) => {
+                    btn.classList.remove("skeleton__option--active");
+                });
+
+                infantsSections.forEach((section) => {
+                    //Only if a section is not hidden
+                    if (
+                        section.classList.contains("skeleton__content--active")
+                    ) {
+                        section.classList.remove("skeleton__content--active");
+                    }
+                });
+
+                //Add active class to the button and section
+                btnsAdults[0].classList.add("skeleton__option--active");
+                adultsSections[0].classList.add("skeleton__content--active");
+            } else if (sectionId == "#multisystemic2") {
+                btnsAdults.forEach((btn) => {
+                    btn.classList.remove("skeleton__option--active");
+                });
+
+                adultsSections.forEach((section) => {
+                    //Only if a section is not hidden
+                    if (
+                        section.classList.contains("skeleton__content--active")
+                    ) {
+                        section.classList.remove("skeleton__content--active");
+                    }
+                });
+
+                //Add active class to the button and section
+                btnsInfants[0].classList.add("skeleton__option--active");
+                infantsSections[0].classList.add("skeleton__content--active");
+            }
         });
     });
 </script>
