@@ -8,7 +8,7 @@ import CaseFileModalDesktop from "../components/Case-Files/CaseFileModalDesktop.
 
 <Layout
     title="Design System"
-    pageClass="design"
+    pageClass="designn"
     showFooter={false}
     showISI={false}
     showHeader={false}
@@ -494,102 +494,253 @@ import CaseFileModalDesktop from "../components/Case-Files/CaseFileModalDesktop.
     </section>
     <section class="design-system-section">
         <article class="misdiagnosis-table">
+            <picture class="misdiagnosis-table__asset">
+                <source
+                    srcset="/assets/images/usual-suspects/misdiagnosis/misdiagnosis-bg-desktop.png"
+                    media="(min-width: 1024px)"
+                />
+                <source
+                    srcset="/assets/images/usual-suspects/misdiagnosis/misdiagnosis-bg-tablet.png"
+                    media="(min-width: 500px)"
+                />
+                <img
+                    src="/assets/images/usual-suspects/misdiagnosis/misdiagnosis-bg-mobile.png"
+                    alt=""
+                />
+            </picture>
             <div class="misdiagnosis-table__content">
                 <div class="content-mobile">
                     <div class="content-mobile__row">
-                        <h2 class="content-mobile__title">
-                            Treatments for other similar disorders
-                        </h2>
+                        <div class="wrapper">
+                            <h2 class="content-mobile__title">
+                                Treatments for other similar disorders
+                            </h2>
+                        </div>
                     </div>
 
                     <div class="content-mobile__row">
-                        <h3 class="content__title">Bisphosphonates</h3>
+                        <div class="wrapper">
+                            <h3 class="content__title">Bisphosphonates</h3>
 
-                        <p class="content__subtitle">Patient populations</p>
+                            <p class="content__subtitle">Patient populations</p>
 
-                        <ul>
-                            <li>
-                                Bisphosphonates are commonly used in adult
-                                patients with osteoporosis<sup>19</sup>
-                            </li>
-                        </ul>
+                            <ul class="misdiagnosis-list">
+                                <li>
+                                    Bisphosphonates are commonly used in adult
+                                    patients with osteoporosis<sup>19</sup>
+                                </li>
+                            </ul>
 
-                        <p class="content__subtitle">
-                            Risk of treatment in patients with hypophosphatasia:
-                        </p>
+                            <p class="content__subtitle">
+                                Risk of treatment in patients with
+                                hypophosphatasia:
+                            </p>
 
-                        <p class="content__paragraph">
-                            <strong
-                                >Based on a study examining bisphophonates in
-                                osteoporosis, the half-life of bisphosphonates
-                                was shown to be greater than 10 years and may
-                                have detrimental effects on a patient's
-                                condition if a wrongful diagnosis is made.</strong
-                            > Make sure to rule out hypophosphatasia before starting
-                            patients on bisphosphonates.<sup>20</sup>
-                        </p>
+                            <p class="content__paragraph">
+                                <strong
+                                    >Based on a study examining bisphophonates
+                                    in osteoporosis, the half-life of
+                                    bisphosphonates was shown to be greater than
+                                    10 years and may have detrimental effects on
+                                    a patient's condition if a wrongful
+                                    diagnosis is made.</strong
+                                > Make sure to rule out hypophosphatasia before starting
+                                patients on bisphosphonates.<sup>20</sup>
+                            </p>
 
-                        <ul>
-                            <li>
-                                The phosphate motifs in bisphosphonates have a
-                                similar conformation to inorganic pyrophosphate
-                                (PPi), with the accumulation of PPi associated
-                                with skeletal and systemic symptoms seen in
-                                hypophosphatasia, which may result in a
-                                worsening of presenting symptoms<sup
-                                    >19,21,22</sup
-                                >
-                            </li>
-                            <li>
-                                Bisphosphonates may directly or indirectly
-                                worsen hypophosphatasia by binding zinc or
-                                magnesium, compromising alkaline phosphatase
-                                activity19,21,22
-                            </li>
-                            <li>
-                                Possible increased risk of fracture at growth
-                                plate<sup>19,21,22</sup>
-                            </li>
-                            <li>
-                                Increased risk of atypical femoral fractures in
-                                adults<sup>19,21,22</sup>
-                            </li>
-                            <li>
-                                Excessively high doses have led to osteopetrosis
-                                and persistent remodeling defects, persisting
-                                more than 6 years after discontinuation<sup
-                                    >19,21,22</sup
-                                >
-                            </li>
-                        </ul>
+                            <ul class="misdiagnosis-list">
+                                <li>
+                                    The phosphate motifs in bisphosphonates have
+                                    a similar conformation to inorganic
+                                    pyrophosphate (PPi), with the accumulation
+                                    of PPi associated with skeletal and systemic
+                                    symptoms seen in hypophosphatasia, which may
+                                    result in a worsening of presenting symptoms<sup
+                                        >19,21,22</sup
+                                    >
+                                </li>
+                                <li>
+                                    Bisphosphonates may directly or indirectly
+                                    worsen hypophosphatasia by binding zinc or
+                                    magnesium, compromising alkaline phosphatase
+                                    activity19,21,22
+                                </li>
+                                <li>
+                                    Possible increased risk of fracture at
+                                    growth plate<sup>19,21,22</sup>
+                                </li>
+                                <li>
+                                    Increased risk of atypical femoral fractures
+                                    in adults<sup>19,21,22</sup>
+                                </li>
+                                <li>
+                                    Excessively high doses have led to
+                                    osteopetrosis and persistent remodeling
+                                    defects, persisting more than 6 years after
+                                    discontinuation<sup>19,21,22</sup>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
 
                     <div class="content-mobile__row">
+                        <div class="wrapper">
+                            <h3 class="content__title">
+                                Supplements:<br />Vitamin D and calcium
+                            </h3>
+                            <p class="content__subtitle">Patient populations</p>
 
-                        <h3 class="content__title">Supplements:<br>Vitamin D and calcium</h3>
-                        <p class="content__subtitle">Patient populations</p>
+                            <ul class="misdiagnosis-list">
+                                <li>
+                                    Vitamin D and calcium supplementation can be
+                                    used for a myriad of conditions, ranging
+                                    from rickets to depression, in adults,
+                                    children, and infants<sup>7,21,23</sup>
+                                </li>
+                            </ul>
 
-                        <ul>
-                            <li>
-                                Vitamin D and calcium supplementation can be used for a myriad of conditions, ranging from rickets to depression, in adults, children, and infants<sup>7,21,23</sup>
-                            </li>
-                        </ul>
+                            <p class="content__subtitle">Patient populations</p>
 
-                        <p class="content__subtitle">Patient populations</p>
-
-                        <ul>
-                            <li>
-                                Hypercalcemia<sup>7,21,23</sup>
-                            </li>
-                            <li>
-                                Hypercalciuria<sup>7,21,23</sup>
-                            </li>
-                            <li>
-                                Kidney stones<sup>7,21,23
-                            </li>
-                        </ul>
-
+                            <ul class="misdiagnosis-list">
+                                <li>
+                                    Hypercalcemia<sup>7,21,23</sup>
+                                </li>
+                                <li>
+                                    Hypercalciuria<sup>7,21,23</sup>
+                                </li>
+                                <li>
+                                    Kidney stones<sup>7,21,23</sup>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
+                </div>
+                <div class="content-desktop">
+                    <table class="content-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th colspan="2"
+                                    >Treatments for other similar disorders</th
+                                >
+                                <th colspan="2">PATIENT POPULATIONS</th>
+                                <th colspan="3"
+                                    >RISK OF TREATMENT IN PATIENTS WITH
+                                    HYPOPHOSPHATASIA</th
+                                >
+                                <th colspan="2"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td colspan="2"
+                                    ><h3 class="content__title">
+                                        Bisphosphonates
+                                    </h3></td
+                                >
+                                <td colspan="2">
+                                    <ul class="misdiagnosis-list">
+                                        <li>
+                                            Bisphosphonates are commonly used in
+                                            adult patients with osteoporosis<sup
+                                                >19</sup
+                                            >
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td colspan="3">
+                                    <p class="content__paragraph">
+                                        <strong
+                                            >Based on a study examining
+                                            bisphophonates in osteoporosis, the
+                                            half-life of bisphosphonates was
+                                            shown to be greater than 10 years
+                                            and may have detrimental effects on
+                                            a patient's condition if a wrongful
+                                            diagnosis is made.</strong
+                                        > Make sure to rule out hypophosphatasia
+                                        before starting patients on bisphosphonates.<sup
+                                            >20</sup
+                                        >
+                                    </p>
+
+                                    <ul class="misdiagnosis-list">
+                                        <li>
+                                            The phosphate motifs in
+                                            bisphosphonates have a similar
+                                            conformation to inorganic
+                                            pyrophosphate (PPi), with the
+                                            accumulation of PPi associated with
+                                            skeletal and systemic symptoms seen
+                                            in hypophosphatasia, which may
+                                            result in a worsening of presenting
+                                            symptoms<sup>19,21,22</sup>
+                                        </li>
+                                        <li>
+                                            Bisphosphonates may directly or
+                                            indirectly worsen hypophosphatasia
+                                            by binding zinc or magnesium,
+                                            compromising alkaline phosphatase
+                                            activity19,21,22
+                                        </li>
+                                        <li>
+                                            Possible increased risk of fracture
+                                            at growth plate<sup>19,21,22</sup>
+                                        </li>
+                                        <li>
+                                            Increased risk of atypical femoral
+                                            fractures in adults<sup
+                                                >19,21,22</sup
+                                            >
+                                        </li>
+                                        <li>
+                                            Excessively high doses have led to
+                                            osteopetrosis and persistent
+                                            remodeling defects, persisting more
+                                            than 6 years after discontinuation<sup
+                                                >19,21,22</sup
+                                            >
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td colspan="2"></td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td colspan="2">
+                                    <h3 class="content__title">
+                                        Supplements:<br />Vitamin D and calcium
+                                    </h3>
+                                </td>
+                                <td colspan="2">
+                                    <ul class="misdiagnosis-list">
+                                        <li>
+                                            Vitamin D and calcium supplementation can be
+                                            used for a myriad of conditions, ranging
+                                            from rickets to depression, in adults,
+                                            children, and infants<sup>7,21,23</sup>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td colspan="3">
+                                    <ul class="misdiagnosis-list">
+                                        <li>
+                                            Hypercalcemia<sup>7,21,23</sup>
+                                        </li>
+                                        <li>
+                                            Hypercalciuria<sup>7,21,23</sup>
+                                        </li>
+                                        <li>
+                                            Kidney stones<sup>7,21,23</sup>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td colspan="2"></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </article>
