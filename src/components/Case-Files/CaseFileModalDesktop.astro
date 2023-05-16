@@ -10,7 +10,6 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
     <div class="case__files_modal_wrapper case__files_desktop_modal">
       <ul role="tablist">
         <li role="presentation">
-          <!--active one -->
           <a
             href="#case-p-panel-1"
             role="tab"
@@ -64,9 +63,9 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
                   2 nontraumatic fractures: Age 13, femur; age 16, metatarsals
                 </li>
                 <li class="item">
-                  Reportsof slow healing fractures, even at young age
+                  Reports of slow healing fractures, even at young age
                 </li>
-                <li class="item">Age 50: Kidney stones</li>
+                <li class="item">Age 50: Kidney stoness</li>
                 <li class="item">
                   History of poor dentition and weak/loose teeth
                 </li>
@@ -93,8 +92,13 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
             </Fragment>
             <Fragment slot="medications">
               <ul>
-                <li class="item">Calcium and vitamin D supplement daily</li>
-                <li class="item">Reports of daily NSAID use</li>
+                <li class="item">
+                  Uses over-the-counter calcium and vitamin D <br /> supplements
+                  daily (not physician-directed)
+                </li>
+                <li class="item">
+                  Reports of self-medicating daily with NSAIDs
+                </li>
               </ul>
             </Fragment>
             <Fragment slot="results">
@@ -227,10 +231,10 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
               </div>
               <ul>
                 <li class="item">
-                  High vitamin B6 level shown at test 6 months ago
+                  High vitamin B<sub>6</sub> level shown at test 6 months ago
                 </li>
                 <li class="item">
-                  ALPL genetic test: Variant of uncertain significance <br /> (VUS)
+                  ALPL genetic test: Variant of uncertain <br /> significance (VUS)
                   identified
                 </li>
               </ul>
@@ -440,7 +444,7 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
                       <p>9.8</p>
                       <p>7.5</p>
                       <p>4.2</p>
-                      <p>19</p>
+                      <p>29</p>
                     </div>
                     <div class="second-column last-child">
                       <h3>FLAG</h3>
@@ -476,6 +480,10 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
                     </picture>
                     <div class="patient">
                       <p>Delayed eruption of permanent teeth</p>
+                      <small
+                        >Reproduced from [source] with permission from/under/by
+                        [x].</small
+                      >
                     </div>
                   </div>
                 </PinchToZoom>
@@ -491,7 +499,7 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
                         media="(min-width: 768px)"
                       />
                       <img
-                        src="/assets/images/case-files/anna/anna-rad-2-thumbnail-desktop.png"
+                        src="/assets/images/case-files/anna/anna-rad-2-desktop.png"
                         alt=""
                       />
                     </picture>
@@ -505,8 +513,8 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
             <Fragment slot="notes">
               <ul>
                 <li class="item">
-                  Patient has an executed “pain contract” with physician's
-                  office due to history of opioid use
+                  Patient has an executed “pain contract” with <br />
+                  physician's office due to history of opioid use
                 </li>
               </ul>
             </Fragment>
@@ -523,7 +531,7 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
           <PatientCaseFileDesktop
             name="Hannah"
             age={7}
-            gender="F"
+            gender="Female"
             description="A 7-year-old female with ALP levels of 138. Does Hannah’s file remind you of any of your current patients?"
             photo="/assets/images/case-files/hannah/photo-hannah-desktop.png"
           >
@@ -573,7 +581,13 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
                       />
                     </picture>
                     <div class="patient">
-                      <p>Nontraumatic tooth loss at <br /> age 4</p>
+                      <p class="patient--color-black">
+                        Nontraumatic tooth loss at age 4
+                      </p>
+                      <small
+                        >Reproduced with permission from <br /> Kiselnikova L, et
+                        al. Clinical Case Reports. <br /> 2020;8(5):911-918.</small
+                      >
                     </div>
                   </div>
                 </PinchToZoom>
@@ -684,27 +698,6 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
                 </section>
               </div>
               <div class="thumbnails">
-                <PinchToZoom id="pt-3-desktop-image-2" useDefaultButton={false}>
-                  <div class="rad__thumbnail">
-                    <picture style="max-width: 136px;">
-                      <button
-                        data-panzoom-action="zoomToFull"
-                        data-content-id="pt-3-desktop-image-2"
-                        class="button button--pinch-to-zoom"></button>
-                      <source
-                        srcset="/assets/images/case-files/hannah/hanna-rad-1-desktop.png"
-                        media="(min-width: 768px)"
-                      />
-                      <img
-                        src="/assets/images/case-files/hannah/hanna-rad-1-mobile.png"
-                        alt=""
-                      />
-                    </picture>
-                    <div class="patient">
-                      <p>Nontraumatic tooth <br /> loss at age 4</p>
-                    </div>
-                  </div>
-                </PinchToZoom>
                 <PinchToZoom id="pt-3-desktop-image-3" useDefaultButton={false}>
                   <div class="rad__thumbnail">
                     <picture style="max-width: 137px;">
@@ -722,7 +715,41 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
                       />
                     </picture>
                     <div class="patient">
-                      <p>Currently presents with <br /> mild knock knees</p>
+                      <p>
+                        <span class="patient--child"
+                          >Currently presents with</span
+                        >
+                        <br />
+                        <span class="patient--main">mild knock knees</span>
+                      </p>
+                    </div>
+                  </div>
+                </PinchToZoom>
+                <PinchToZoom id="pt-3-desktop-image-2" useDefaultButton={false}>
+                  <div class="rad__thumbnail">
+                    <picture style="max-width: 136px;">
+                      <button
+                        data-panzoom-action="zoomToFull"
+                        data-content-id="pt-3-desktop-image-2"
+                        class="button button--pinch-to-zoom"></button>
+                      <source
+                        srcset="/assets/images/case-files/hannah/hanna-rad-1-desktop.png"
+                        media="(min-width: 768px)"
+                      />
+                      <img
+                        src="/assets/images/case-files/hannah/hanna-rad-1-mobile.png"
+                        alt=""
+                      />
+                    </picture>
+                    <div class="patient">
+                      <p class="patient--main patient--color-black">
+                        Nontraumatic tooth <br /> loss at age 4
+                      </p>
+                      <p class="patient--child">
+                        Reproduced with permission <br /> from Kiselnikova L, et
+                        al.
+                        <em>Clinical <br /> Case Reports.</em> 2020;8(5):911-918
+                      </p>
                     </div>
                   </div>
                 </PinchToZoom>
@@ -746,7 +773,7 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
           <PatientCaseFileDesktop
             name="Sarah"
             age="7 months"
-            gender="F"
+            gender="Female"
             description="A 7-month-old female with vitamin B-responsive seizures at birth. Does Sarah’s file remind you of any of your current patients?"
             photo="/assets/images/case-files/sarah/photo-sarah-desktop.png"
           >
@@ -871,17 +898,17 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
               </div>
               <ul>
                 <li class="item">
-                  High vitamin B6 level shown at test 6 months ago
+                  High vitamin B<sub>6</sub> level shown at test 6 months ago
                 </li>
                 <li class="item">
-                  ALPL genetic test: Autosomal recessive inheritance
+                  <em>ALPL</em> genetic test: Autosomal recessive inheritance
                   <ul>
                     <li class="item">
-                      Parental genetic testing reveals single gene variant in
-                      mother and father
+                      Parental genetic testing reveals single <br /> gene variant
+                      in mother and father
                     </li>
                     <li class="item">
-                      Father's genetic variant reported as variant of uncertain
+                      Father's genetic variant reported as variant <br /> of uncertain
                       significance (VUS)
                     </li>
                   </ul>
