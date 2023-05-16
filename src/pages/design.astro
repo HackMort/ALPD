@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import References from "../components/References.astro";
 import Accordion from "../components/Accordion.astro";
 import CTA from "../components/CTA.astro";
 import CaseFileModal from "../components/Case-Files/CaseFileModal.astro";
@@ -7,742 +8,761 @@ import CaseFileModalDesktop from "../components/Case-Files/CaseFileModalDesktop.
 ---
 
 <Layout
-    title="Design System"
-    pageClass="designn"
-    showFooter={false}
-    showISI={false}
-    showHeader={false}
+  title="Design System"
+  pageClass="design"
+  showFooter={false}
+  showISI={false}
+  showHeader={false}
 >
-    <h1>
-        Design System
-        <a href="/" style="font-size: 1.25rem; float: right;"> &laquo; Home</a>
-    </h1>
-    <section class="design-system-section">
-        <div class="section-wrapper section-wrapper--small">
-            <h1 class="title">Colors</h1>
-            <div class="colors">
-                <div class="color">
-                    <div class="color__box" style="background-color: #000000;">
-                        <p class="color__hex" style="color: white;">#000000</p>
-                    </div>
-                    <p class="color__variable">$color-black</p>
-                </div>
-                <div class="color">
-                    <div
-                        class="color__box"
-                        style="background-color: #ffffff; border: 1px solid #000"
-                    >
-                        <p class="color__hex">#ffffff</p>
-                    </div>
-                    <p class="color__variable">$color-white</p>
-                </div>
-                <div class="color">
-                    <div
-                        class="color__box"
-                        style="background-color: #526CAD; border: 1px solid #000"
-                    >
-                        <p class="color__hex">#526CAD</p>
-                    </div>
-                    <p class="color__variable">$color-blue</p>
-                </div>
-                <div class="color">
-                    <div
-                        class="color__box"
-                        style="background-color: #CF1C0A; border: 1px solid #000"
-                    >
-                        <p class="color__hex">#CF1C0A</p>
-                    </div>
-                    <p class="color__variable">$color-red</p>
-                </div>
-                <div class="color">
-                    <div
-                        class="color__box"
-                        style="background-color: #F3E6C3; border: 1px solid #000"
-                    >
-                        <p class="color__hex">#F3E6C3</p>
-                    </div>
-                    <p class="color__variable">$color-folder</p>
-                </div>
-                <div class="color">
-                    <div
-                        class="color__box"
-                        style="background-color: #617D44; border: 1px solid #000"
-                    >
-                        <p class="color__hex">#617D44</p>
-                    </div>
-                    <p class="color__variable">$color-green</p>
-                </div>
-                <div class="color">
-                    <div
-                        class="color__box"
-                        style="background-color: #DFE2E9; border: 1px solid #000"
-                    >
-                        <p class="color__hex">#DFE2E9</p>
-                    </div>
-                    <p class="color__variable">$color-platinum</p>
-                </div>
-                <div class="color">
-                    <div
-                        class="color__box"
-                        style="background-color: #E2A842; border: 1px solid #000"
-                    >
-                        <p class="color__hex">#E2A842</p>
-                    </div>
-                    <p class="color__variable">$color-envelop</p>
-                </div>
-                <div class="color">
-                    <div
-                        class="color__box"
-                        style="background-color: #1F1511; border: 1px solid #000"
-                    >
-                        <p class="color__hex">#1F1511</p>
-                    </div>
-                    <p class="color__variable">$color-carbon</p>
-                </div>
-                <div class="color">
-                    <div
-                        class="color__box"
-                        style="background-color: #E5E9F2; border: 1px solid #000"
-                    >
-                        <p class="color__hex">#E5E9F2</p>
-                    </div>
-                    <p class="color__variable">$color-texture</p>
-                </div>
-                <div class="color">
-                    <div
-                        class="color__box"
-                        style="background-color: #626468; border: 1px solid #000"
-                    >
-                        <p class="color__hex">#626468</p>
-                    </div>
-                    <p class="color__variable">$color-granite-grey</p>
-                </div>
-            </div>
+  <h1>
+    Design System
+    <a href="/" style="font-size: 1.25rem; float: right;"> &laquo; Home</a>
+  </h1>
+  <section class="design-system-section">
+    <div class="section-wrapper section-wrapper--small">
+      <h1 class="title">Colors</h1>
+      <div class="colors">
+        <div class="color">
+          <div class="color__box" style="background-color: #000000;">
+            <p class="color__hex" style="color: white;">#000000</p>
+          </div>
+          <p class="color__variable">$color-black</p>
         </div>
-    </section>
+        <div class="color">
+          <div
+            class="color__box"
+            style="background-color: #ffffff; border: 1px solid #000"
+          >
+            <p class="color__hex">#ffffff</p>
+          </div>
+          <p class="color__variable">$color-white</p>
+        </div>
+        <div class="color">
+          <div
+            class="color__box"
+            style="background-color: #526CAD; border: 1px solid #000"
+          >
+            <p class="color__hex">#526CAD</p>
+          </div>
+          <p class="color__variable">$color-blue</p>
+        </div>
+        <div class="color">
+          <div
+            class="color__box"
+            style="background-color: #CF1C0A; border: 1px solid #000"
+          >
+            <p class="color__hex">#CF1C0A</p>
+          </div>
+          <p class="color__variable">$color-red</p>
+        </div>
+        <div class="color">
+          <div
+            class="color__box"
+            style="background-color: #F3E6C3; border: 1px solid #000"
+          >
+            <p class="color__hex">#F3E6C3</p>
+          </div>
+          <p class="color__variable">$color-folder</p>
+        </div>
+        <div class="color">
+          <div
+            class="color__box"
+            style="background-color: #617D44; border: 1px solid #000"
+          >
+            <p class="color__hex">#617D44</p>
+          </div>
+          <p class="color__variable">$color-green</p>
+        </div>
+        <div class="color">
+          <div
+            class="color__box"
+            style="background-color: #DFE2E9; border: 1px solid #000"
+          >
+            <p class="color__hex">#DFE2E9</p>
+          </div>
+          <p class="color__variable">$color-platinum</p>
+        </div>
+        <div class="color">
+          <div
+            class="color__box"
+            style="background-color: #E2A842; border: 1px solid #000"
+          >
+            <p class="color__hex">#E2A842</p>
+          </div>
+          <p class="color__variable">$color-envelop</p>
+        </div>
+        <div class="color">
+          <div
+            class="color__box"
+            style="background-color: #1F1511; border: 1px solid #000"
+          >
+            <p class="color__hex">#1F1511</p>
+          </div>
+          <p class="color__variable">$color-carbon</p>
+        </div>
+        <div class="color">
+          <div
+            class="color__box"
+            style="background-color: #E5E9F2; border: 1px solid #000"
+          >
+            <p class="color__hex">#E5E9F2</p>
+          </div>
+          <p class="color__variable">$color-texture</p>
+        </div>
+        <div class="color">
+          <div
+            class="color__box"
+            style="background-color: #626468; border: 1px solid #000"
+          >
+            <p class="color__hex">#626468</p>
+          </div>
+          <p class="color__variable">$color-granite-grey</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="design-system-section">
-        <div class="section-wrapper section-wrapper--small">
-            <h1 class="title">Fonts</h1>
+  <section class="design-system-section">
+    <div class="section-wrapper section-wrapper--small">
+      <h1 class="title">Fonts</h1>
 
-            <div class="fonts-preview">
-                <div class="block">
-                    <h2 style="font-family: inter;">Barlow</h2>
-                    <p style="font-family: inter;">
-                        AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz
-                    </p>
-                    <p style="font-family: inter;">1234567890</p>
-                    <p style="font-family: inter;">!@#$%^&*(</p>
-                </div>
+      <div class="fonts-preview">
+        <div class="block">
+          <h2 style="font-family: inter;">Barlow</h2>
+          <p style="font-family: inter;">
+            AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz
+          </p>
+          <p style="font-family: inter;">1234567890</p>
+          <p style="font-family: inter;">!@#$%^&*(</p>
+        </div>
 
-                <div class="block">
-                    <h2 style="font-family: oswald;">Oswald</h2>
-                    <p style="font-family: oswald;">
-                        AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz
-                    </p>
-                    <p style="font-family: oswald;">1234567890</p>
-                    <p style="font-family: oswald;">!@#$%^&*(</p>
-                </div>
+        <div class="block">
+          <h2 style="font-family: oswald;">Oswald</h2>
+          <p style="font-family: oswald;">
+            AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz
+          </p>
+          <p style="font-family: oswald;">1234567890</p>
+          <p style="font-family: oswald;">!@#$%^&*(</p>
+        </div>
 
-                <div class="block">
-                    <h2 style="font-family: veneer;">Veneer</h2>
-                    <p style="font-family: veneer;">
-                        AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz
-                    </p>
-                    <p style="font-family: veneer;">1234567890</p>
-                    <p style="font-family: veneer;">!@#$%^&*(</p>
-                </div>
+        <div class="block">
+          <h2 style="font-family: veneer;">Veneer</h2>
+          <p style="font-family: veneer;">
+            AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz
+          </p>
+          <p style="font-family: veneer;">1234567890</p>
+          <p style="font-family: veneer;">!@#$%^&*(</p>
+        </div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Tag</th>
+            <th>Weight</th>
+            <th>Size</th>
+            <th>Line height</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="h1">
+            <td style="font-family: veneer;">h1</td>
+            <td style="font-family: veneer;">Bold</td>
+            <td style="font-family: veneer;">40px</td>
+            <td style="font-family: veneer;">46.88px</td>
+          </tr>
+          <tr class="h2">
+            <td style="font-family: veneer;">h2</td>
+            <td style="font-family: veneer;">600</td>
+            <td style="font-family: veneer;">30px</td>
+            <td style="font-family: veneer;">35.16px</td>
+          </tr>
+          <tr class="h3">
+            <td style="font-family: veneer;">h3</td>
+            <td style="font-family: veneer;">500</td>
+            <td style="font-family: veneer;">24px</td>
+            <td style="font-family: veneer;">28.13px</td>
+          </tr>
+          <tr class="h4">
+            <td style="font-family: veneer;">h4</td>
+            <td style="font-family: veneer;">500</td>
+            <td style="font-family: veneer;">20px</td>
+            <td style="font-family: veneer;">23.44px</td>
+          </tr>
+          <tr class="h5">
+            <td style="font-family: veneer;">h5</td>
+            <td style="font-family: veneer;">500</td>
+            <td style="font-family: veneer;">16px</td>
+            <td style="font-family: veneer;">24px</td>
+          </tr>
+          <tr class="p">
+            <td style="font-family: veneer;">p</td>
+            <td style="font-family: veneer;">400</td>
+            <td style="font-family: veneer;">18px</td>
+            <td style="font-family: veneer;">21.09px</td>
+          </tr>
+          <tr class="small">
+            <td style="font-family: veneer;">small</td>
+            <td style="font-family: veneer;">300</td>
+            <td style="font-family: veneer;">12px</td>
+            <td style="font-family: veneer;">14.06px</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <section class="design-system-section">
+    <div class="section-wrapper section-wrapper--small">
+      <h1 class="title">Buttons</h1>
+      <div class="buttons">
+        <!-- Default button -->
+        <button class="button"> Button Primary / Default</button>
+        <button class="button button--secondary"> Button Secondary</button>
+        <button class="button button--take-photo"> Button take-photo</button>
+        <button class="button button--upload-photo">
+          Button upload-photo</button
+        >
+        <button class="button button--tertiary"> Tertiary Button</button>
+      </div>
+    </div>
+  </section>
+  <section class="design-system-section">
+    <div class="section-wrapper section-wrapper--small">
+      <h1 class="title">Red string</h1>
+      <div class="red-string"></div>
+      <div class="elements">
+        <img
+          class="fingerprint"
+          src="/assets/images/footer-finger-print-2x.png"
+          alt=""
+        />
+        <img class="red-frame" src="/assets/images/red-frame.png" alt="" />
+      </div>
+    </div>
+  </section>
+  <section class="design-system-section">
+    <div class="section-wrapper section-wrapper--small">
+      <h1 class="title">Tabs</h1>
+      <ul role="tablist">
+        <li role="presentation">
+          <!--active one -->
+          <a href="#panel1" role="tab" id="tab1" aria-selected="true">Tab 1</a>
+        </li>
+        <li role="presentation">
+          <a href="#panel2" role="tab" id="tab2" tabindex="-1">Tab 2</a>
+        </li>
+        <li role="presentation">
+          <a href="#panel3" role="tab" id="tab3" tabindex="-1">Tab 3</a>
+        </li>
+      </ul>
+      <section
+        id="panel1"
+        role="tabpanel"
+        aria-labelledby="tab1"
+        aria-hidden="false"
+        tabindex="-1"
+      >
+        <h2>Panel 1</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dui
+          nibh, fermentum ac gravida quis, <a href="#">tempus sit</a> amet nulla.
+          Fusce dignissim dolor sit amet sapien auctor, eu vehicula elit placerat.
+          Aliquam vehicula luctus enim, at ullamcorper risus. Aliquam ut tincidunt
+          ipsum. Vivamus dui mi, suscipit vitae libero id, interdum aliquet metus.
+        </p>
+      </section>
+      <section
+        id="panel2"
+        role="tabpanel"
+        aria-labelledby="tab2"
+        aria-hidden="true"
+        tabindex="-1"
+        hidden
+      >
+        <h2>Panel 2</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dui
+          nibh, fermentum ac gravida quis, <a href="#">tempus sit</a> amet nulla.
+          Fusce dignissim dolor sit amet sapien auctor, eu vehicula elit placerat.
+          Aliquam vehicula luctus enim, at ullamcorper risus. Aliquam ut tincidunt
+          ipsum. Vivamus dui mi, suscipit vitae libero id, interdum aliquet metus.
+        </p>
+      </section>
+      <section
+        id="panel3"
+        role="tabpanel"
+        aria-labelledby="tab3"
+        aria-hidden="true"
+        tabindex="-1"
+        hidden
+      >
+        <h2>Panel 3</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dui
+          nibh, fermentum ac gravida quis, <a href="#">tempus sit</a> amet nulla.
+          Fusce dignissim dolor sit amet sapien auctor, eu vehicula elit placerat.
+          Aliquam vehicula luctus enim, at ullamcorper risus. Aliquam ut tincidunt
+          ipsum. Vivamus dui mi, suscipit vitae libero id, interdum aliquet metus.
+        </p>
+      </section>
+    </div>
+  </section>
+  <section class="design-system-section">
+    <div class="section-wrapper section-wrapper--small">
+      <h1 class="title">Accordions</h1>
+      <div class="accordion">
+        <Accordion id="1" header="ACC 1">
+          <h2>h2 title</h2>
+          <h4>h4 title</h4>
+          <h5>h5 title</h5>
+
+          <ul>
+            <li class="item">class "item"</li>
+            <li class="sub-item">class "sub-item"</li>
+          </ul>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
+            pariatur labore perspiciatis repudiandae aliquid quae doloribus!
+            Ratione, fugiat quae ad dolor voluptatum esse laborum porro id non
+            animi, sapiente exercitationem.
+          </p>
+
+          <!-- table for accordion content -->
+          <div class="acc-table">
+            <div class="first-column">
+              <h3>TEST</h3>
+              <p>Calcium, mg/dL</p>
+              <p>Protein, g/dL</p>
+              <p>Albumin, g/dL</p>
+              <p>Alkaline phosphatase, IU/L</p>
             </div>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>Tag</th>
-                        <th>Weight</th>
-                        <th>Size</th>
-                        <th>Line height</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="h1">
-                        <td style="font-family: veneer;">h1</td>
-                        <td style="font-family: veneer;">Bold</td>
-                        <td style="font-family: veneer;">40px</td>
-                        <td style="font-family: veneer;">46.88px</td>
-                    </tr>
-                    <tr class="h2">
-                        <td style="font-family: veneer;">h2</td>
-                        <td style="font-family: veneer;">600</td>
-                        <td style="font-family: veneer;">30px</td>
-                        <td style="font-family: veneer;">35.16px</td>
-                    </tr>
-                    <tr class="h3">
-                        <td style="font-family: veneer;">h3</td>
-                        <td style="font-family: veneer;">500</td>
-                        <td style="font-family: veneer;">24px</td>
-                        <td style="font-family: veneer;">28.13px</td>
-                    </tr>
-                    <tr class="h4">
-                        <td style="font-family: veneer;">h4</td>
-                        <td style="font-family: veneer;">500</td>
-                        <td style="font-family: veneer;">20px</td>
-                        <td style="font-family: veneer;">23.44px</td>
-                    </tr>
-                    <tr class="h5">
-                        <td style="font-family: veneer;">h5</td>
-                        <td style="font-family: veneer;">500</td>
-                        <td style="font-family: veneer;">16px</td>
-                        <td style="font-family: veneer;">24px</td>
-                    </tr>
-                    <tr class="p">
-                        <td style="font-family: veneer;">p</td>
-                        <td style="font-family: veneer;">400</td>
-                        <td style="font-family: veneer;">18px</td>
-                        <td style="font-family: veneer;">21.09px</td>
-                    </tr>
-                    <tr class="small">
-                        <td style="font-family: veneer;">small</td>
-                        <td style="font-family: veneer;">300</td>
-                        <td style="font-family: veneer;">12px</td>
-                        <td style="font-family: veneer;">14.06px</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-    <section class="design-system-section">
-        <div class="section-wrapper section-wrapper--small">
-            <h1 class="title">Buttons</h1>
-            <div class="buttons">
-                <!-- Default button -->
-                <button class="button"> Button Primary / Default</button>
-                <button class="button button--secondary">
-                    Button Secondary</button
-                >
-                <button class="button button--take-photo">
-                    Button take-photo</button
-                >
-                <button class="button button--upload-photo">
-                    Button upload-photo</button
-                >
-                <button class="button button--tertiary">
-                    Tertiary Button</button
-                >
+            <div class="second-column">
+              <h3>RESULT</h3>
+              <p>9.3</p>
+              <p>7.8</p>
+              <p>4.2</p>
+              <p>138</p>
             </div>
-        </div>
-    </section>
-    <section class="design-system-section">
-        <div class="section-wrapper section-wrapper--small">
-            <h1 class="title">Red string</h1>
-            <div class="red-string"></div>
-            <div class="elements">
-                <img
-                    class="fingerprint"
-                    src="/assets/images/footer-finger-print-2x.png"
-                    alt=""
-                />
-                <img
-                    class="red-frame"
-                    src="/assets/images/red-frame.png"
-                    alt=""
-                />
+
+            <div class="second-column last-child">
+              <h3>FLAG</h3>
+              <p>9.3</p>
+              <p>7.8</p>
+              <p>4.2</p>
+              <p>138</p>
             </div>
+          </div>
+          <!-- table for accordion content -->
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
+            pariatur labore perspiciatis repudiandae aliquid quae doloribus!
+            Ratione, fugiat quae ad dolor voluptatum esse laborum porro id non
+            animi, sapiente exercitationem.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
+            pariatur labore perspiciatis repudiandae aliquid quae doloribus!
+            Ratione, fugiat quae ad dolor voluptatum esse laborum porro id non
+            animi, sapiente exercitationem.
+          </p>
+
+          <img
+            src="/assets/images/acc-image-sample.png"
+            alt=""
+            class="acc-mobile-image"
+          />
+          <small
+            >This is a -small- tag for images descriptions. Image above has
+            class "acc-mobile-image"</small
+          >
+        </Accordion>
+        <Accordion id="2" header="ACC 2">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
+            pariatur labore perspiciatis repudiandae aliquid quae doloribus!
+            Ratione, fugiat quae ad dolor voluptatum esse laborum porro id non
+            animi, sapiente exercitationem.
+          </p>
+        </Accordion>
+      </div>
+    </div>
+  </section>
+  <section class="design-system-section">
+    <div class="section-wrapper section-wrapper--small">
+      <h1 class="title">CTA VARIANTS</h1>
+      <div
+        class="fonts-preview"
+        style="background-color: black; display:block; padding:0; padding-top:30px"
+      >
+        <div>
+          <h2 style="color: white; padding-left:30px;">VARIANT-1</h2>
+          <CTA
+            variation="variant-1"
+            buttonLabel="buttonLabel"
+            content="Sample text"
+            linkURL="#"
+            bypassModal
+          />
         </div>
-    </section>
-    <section class="design-system-section">
-        <div class="section-wrapper section-wrapper--small">
-            <h1 class="title">Tabs</h1>
-            <ul role="tablist">
-                <li role="presentation">
-                    <!--active one -->
-                    <a href="#panel1" role="tab" id="tab1" aria-selected="true"
-                        >Tab 1</a
-                    >
+
+        <div
+          class="fonts-preview"
+          style="background-color: black; display:block; padding:0; padding-top:30px"
+        >
+          <div>
+            <h2 style="color: white; padding-left:30px;">VARIANT-2</h2>
+            <CTA
+              variation="variant-2"
+              buttonLabel="buttonLabel"
+              content="Sample text"
+              linkURL="#"
+              bypassModal
+            />
+          </div>
+
+          <div
+            class="fonts-preview"
+            style="background-color: black; display:block; padding:0; padding-top:30px"
+          >
+            <div>
+              <h2 style="color: white; padding-left:30px;">VARIANT-3</h2>
+              <CTA
+                variation="variant-3"
+                buttonLabel="buttonLabel"
+                content="Sample text"
+                linkURL="#"
+                bypassModal
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="design-system-section">
+    <div class="section-wrapper section-wrapper--small">
+      <h1 class="title">Case Modal Mobile</h1>
+      <button class="button button--custom-bg case-files-modal-trigger"
+        >View Patient case files</button
+      >
+      <CaseFileModal />
+    </div>
+  </section>
+  <section class="design-system-section">
+    <div class="section-wrapper section-wrapper--small">
+      <h1 class="title">Case Modal Desktop Version</h1>
+      <button class="button button--custom-bg case-files-modal-trigger--desktop"
+        >View Patient case files</button
+      >
+      <div class="case__files_modal_wrapper">
+        <CaseFileModalDesktop />
+      </div>
+    </div>
+  </section>
+  <section class="design-system-section">
+    <h1 class="title">Usual Suspects Content</h1>
+    <article class="misdiagnosis-table">
+      <picture class="misdiagnosis-table__asset">
+        <source
+          srcset="/assets/images/usual-suspects/misdiagnosis/misdiagnosis-bg-desktop.png"
+          media="(min-width: 1024px)"
+        />
+        <source
+          srcset="/assets/images/usual-suspects/misdiagnosis/misdiagnosis-bg-tablet.png"
+          media="(min-width: 500px)"
+        />
+        <img
+          src="/assets/images/usual-suspects/misdiagnosis/misdiagnosis-bg-mobile.png"
+          alt=""
+        />
+      </picture>
+      <div class="misdiagnosis-table__content">
+        <div class="content-mobile">
+          <div class="content-mobile__row">
+            <div class="wrapper">
+              <h2 class="content-mobile__title">
+                Treatments for other similar disorders
+              </h2>
+            </div>
+          </div>
+
+          <div class="content-mobile__row">
+            <div class="wrapper">
+              <h3 class="content__title">Bisphosphonates</h3>
+
+              <p class="content__subtitle">Patient populations</p>
+
+              <ul class="misdiagnosis-list">
+                <li>
+                  Bisphosphonates are commonly used in adult patients with
+                  osteoporosis<sup>19</sup>
                 </li>
-                <li role="presentation">
-                    <a href="#panel2" role="tab" id="tab2" tabindex="-1"
-                        >Tab 2</a
-                    >
-                </li>
-                <li role="presentation">
-                    <a href="#panel3" role="tab" id="tab3" tabindex="-1"
-                        >Tab 3</a
-                    >
-                </li>
-            </ul>
-            <section
-                id="panel1"
-                role="tabpanel"
-                aria-labelledby="tab1"
-                aria-hidden="false"
-                tabindex="-1"
-            >
-                <h2>Panel 1</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas dui nibh, fermentum ac gravida quis, <a href="#"
-                        >tempus sit</a
-                    > amet nulla. Fusce dignissim dolor sit amet sapien auctor, eu
-                    vehicula elit placerat. Aliquam vehicula luctus enim, at ullamcorper
-                    risus. Aliquam ut tincidunt ipsum. Vivamus dui mi, suscipit vitae
-                    libero id, interdum aliquet metus.
-                </p>
-            </section>
-            <section
-                id="panel2"
-                role="tabpanel"
-                aria-labelledby="tab2"
-                aria-hidden="true"
-                tabindex="-1"
-                hidden
-            >
-                <h2>Panel 2</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas dui nibh, fermentum ac gravida quis, <a href="#"
-                        >tempus sit</a
-                    > amet nulla. Fusce dignissim dolor sit amet sapien auctor, eu
-                    vehicula elit placerat. Aliquam vehicula luctus enim, at ullamcorper
-                    risus. Aliquam ut tincidunt ipsum. Vivamus dui mi, suscipit vitae
-                    libero id, interdum aliquet metus.
-                </p>
-            </section>
-            <section
-                id="panel3"
-                role="tabpanel"
-                aria-labelledby="tab3"
-                aria-hidden="true"
-                tabindex="-1"
-                hidden
-            >
-                <h2>Panel 3</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Maecenas dui nibh, fermentum ac gravida quis, <a href="#"
-                        >tempus sit</a
-                    > amet nulla. Fusce dignissim dolor sit amet sapien auctor, eu
-                    vehicula elit placerat. Aliquam vehicula luctus enim, at ullamcorper
-                    risus. Aliquam ut tincidunt ipsum. Vivamus dui mi, suscipit vitae
-                    libero id, interdum aliquet metus.
-                </p>
-            </section>
-        </div>
-    </section>
-    <section class="design-system-section">
-        <div class="section-wrapper section-wrapper--small">
-            <h1 class="title">Accordions</h1>
-            <div class="accordion">
-                <Accordion id="1" header="ACC 1">
-                    <h2>h2 title</h2>
-                    <h4>h4 title</h4>
-                    <h5>h5 title</h5>
+              </ul>
 
-                    <ul>
-                        <li class="item">class "item"</li>
-                        <li class="sub-item">class "sub-item"</li>
-                    </ul>
+              <p class="content__subtitle">
+                Risk of treatment in patients with hypophosphatasia:
+              </p>
 
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Deleniti, pariatur labore perspiciatis repudiandae
-                        aliquid quae doloribus! Ratione, fugiat quae ad dolor
-                        voluptatum esse laborum porro id non animi, sapiente
-                        exercitationem.
-                    </p>
-
-                    <!-- table for accordion content -->
-                    <div class="acc-table">
-                        <div class="first-column">
-                            <h3>TEST</h3>
-                            <p>Calcium, mg/dL</p>
-                            <p>Protein, g/dL</p>
-                            <p>Albumin, g/dL</p>
-                            <p>Alkaline phosphatase, IU/L</p>
-                        </div>
-
-                        <div class="second-column">
-                            <h3>RESULT</h3>
-                            <p>9.3</p>
-                            <p>7.8</p>
-                            <p>4.2</p>
-                            <p>138</p>
-                        </div>
-
-                        <div class="second-column last-child">
-                            <h3>FLAG</h3>
-                            <p>9.3</p>
-                            <p>7.8</p>
-                            <p>4.2</p>
-                            <p>138</p>
-                        </div>
-                    </div>
-                    <!-- table for accordion content -->
-
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Deleniti, pariatur labore perspiciatis repudiandae
-                        aliquid quae doloribus! Ratione, fugiat quae ad dolor
-                        voluptatum esse laborum porro id non animi, sapiente
-                        exercitationem.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Deleniti, pariatur labore perspiciatis repudiandae
-                        aliquid quae doloribus! Ratione, fugiat quae ad dolor
-                        voluptatum esse laborum porro id non animi, sapiente
-                        exercitationem.
-                    </p>
-
-                    <img
-                        src="/assets/images/acc-image-sample.png"
-                        alt=""
-                        class="acc-mobile-image"
-                    />
-                    <small
-                        >This is a -small- tag for images descriptions. Image
-                        above has class "acc-mobile-image"</small
-                    >
-                </Accordion>
-                <Accordion id="2" header="ACC 2">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Deleniti, pariatur labore perspiciatis repudiandae
-                        aliquid quae doloribus! Ratione, fugiat quae ad dolor
-                        voluptatum esse laborum porro id non animi, sapiente
-                        exercitationem.
-                    </p>
-                </Accordion>
-            </div>
-        </div>
-    </section>
-    <section class="design-system-section">
-        <div class="section-wrapper section-wrapper--small">
-            <h1 class="title">CTA VARIANTS</h1>
-            <div
-                class="fonts-preview"
-                style="background-color: black; display:block; padding:0; padding-top:30px"
-            >
-                <div>
-                    <h2 style="color: white; padding-left:30px;">VARIANT-1</h2>
-                    <CTA
-                        variation="variant-1"
-                        buttonLabel="buttonLabel"
-                        content="Sample text"
-                        linkURL="#"
-                        bypassModal
-                    />
-                </div>
-
-                <div
-                    class="fonts-preview"
-                    style="background-color: black; display:block; padding:0; padding-top:30px"
+              <p class="content__paragraph">
+                <strong
+                  >Based on a study examining bisphophonates in osteoporosis,
+                  the half-life of bisphosphonates was shown to be greater than
+                  10 years and may have detrimental effects on a patient's
+                  condition if a wrongful diagnosis is made. Make sure to rule
+                  out hypophosphatasia before starting patients on
+                  bisphosphonates.<sup>20</sup></strong
                 >
-                    <div>
-                        <h2 style="color: white; padding-left:30px;">
-                            VARIANT-2
-                        </h2>
-                        <CTA
-                            variation="variant-2"
-                            buttonLabel="buttonLabel"
-                            content="Sample text"
-                            linkURL="#"
-                            bypassModal
-                        />
-                    </div>
+              </p>
 
-                    <div
-                        class="fonts-preview"
-                        style="background-color: black; display:block; padding:0; padding-top:30px"
+              <ul class="misdiagnosis-list">
+                <li>
+                  The phosphate motifs in bisphosphonates have a similar
+                  conformation to inorganic pyrophosphate (PPi), with the
+                  accumulation of PPi associated with skeletal and systemic
+                  symptoms seen in hypophosphatasia, which may result in a
+                  worsening of presenting symptoms<sup>19,21,22</sup>
+                </li>
+                <li>
+                  Bisphosphonates may directly or indirectly worsen
+                  hypophosphatasia by binding zinc or magnesium, compromising
+                  alkaline phosphatase activity19,21,22
+                </li>
+                <li>
+                  Possible increased risk of fracture at growth plate<sup
+                    >19,21,22</sup
+                  >
+                </li>
+                <li>
+                  Increased risk of atypical femoral fractures in adults<sup
+                    >19,21,22</sup
+                  >
+                </li>
+                <li>
+                  Excessively high doses have led to osteopetrosis and
+                  persistent remodeling defects, persisting more than 6 years
+                  after discontinuation<sup>19,21,22</sup>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="content-mobile__row">
+            <div class="wrapper">
+              <h3 class="content__title">
+                Supplements:<br />Vitamin D and calcium
+              </h3>
+              <p class="content__subtitle">Patient populations</p>
+
+              <ul class="misdiagnosis-list">
+                <li>
+                  Vitamin D and calcium supplementation can be used for a myriad
+                  of conditions, ranging from rickets to depression, in adults,
+                  children, and infants<sup>7,21,23</sup>
+                </li>
+              </ul>
+
+              <p class="content__subtitle">Patient populations</p>
+
+              <ul class="misdiagnosis-list">
+                <li>
+                  Hypercalcemia<sup>7,21,23</sup>
+                </li>
+                <li>
+                  Hypercalciuria<sup>7,21,23</sup>
+                </li>
+                <li>
+                  Kidney stones<sup>7,21,23</sup>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="content-desktop">
+          <table class="content-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th colspan="2">Treatments for other similar disorders</th>
+                <th colspan="2">PATIENT POPULATIONS</th>
+                <th colspan="3"
+                  >RISK OF TREATMENT IN PATIENTS WITH HYPOPHOSPHATASIA</th
+                >
+                <th colspan="2"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td colspan="2"
+                  ><h3 class="content__title">Bisphosphonates</h3></td
+                >
+                <td colspan="2">
+                  <ul class="misdiagnosis-list">
+                    <li>
+                      Bisphosphonates are commonly used in adult patients with
+                      osteoporosis<sup>19</sup>
+                    </li>
+                  </ul>
+                </td>
+                <td colspan="3">
+                  <p class="content__paragraph">
+                    <strong
+                      >Based on a study examining bisphophonates in
+                      osteoporosis, the half-life of bisphosphonates was shown
+                      to be greater than 10 years and may have detrimental
+                      effects on a patient's condition if a wrongful diagnosis
+                      is made. Make sure to rule out hypophosphatasia before
+                      starting patients on bisphosphonates.<sup>20</sup></strong
                     >
-                        <div>
-                            <h2 style="color: white; padding-left:30px;">
-                                VARIANT-3
-                            </h2>
-                            <CTA
-                                variation="variant-3"
-                                buttonLabel="buttonLabel"
-                                content="Sample text"
-                                linkURL="#"
-                                bypassModal
-                            />
-                        </div>
-                    </div>
-                </div>
-            </div>
+                  </p>
+
+                  <ul class="misdiagnosis-list">
+                    <li>
+                      The phosphate motifs in bisphosphonates have a similar
+                      conformation to inorganic pyrophosphate (PPi), with the
+                      accumulation of PPi associated with skeletal and systemic
+                      symptoms seen in hypophosphatasia, which may result in a
+                      worsening of presenting symptoms<sup>19,21,22</sup>
+                    </li>
+                    <li>
+                      Bisphosphonates may directly or indirectly worsen
+                      hypophosphatasia by binding zinc or magnesium,
+                      compromising alkaline phosphatase activity19,21,22
+                    </li>
+                    <li>
+                      Possible increased risk of fracture at growth plate<sup
+                        >19,21,22</sup
+                      >
+                    </li>
+                    <li>
+                      Increased risk of atypical femoral fractures in adults<sup
+                        >19,21,22</sup
+                      >
+                    </li>
+                    <li>
+                      Excessively high doses have led to osteopetrosis and
+                      persistent remodeling defects, persisting more than 6
+                      years after discontinuation<sup>19,21,22</sup>
+                    </li>
+                  </ul>
+                </td>
+                <td colspan="2"></td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td colspan="2">
+                  <h3 class="content__title">
+                    Supplements:<br />Vitamin D and calcium
+                  </h3>
+                </td>
+                <td colspan="2">
+                  <ul class="misdiagnosis-list">
+                    <li>
+                      Vitamin D and calcium supplementation can be used for a
+                      myriad of conditions, ranging from rickets to depression,
+                      in adults, children, and infants<sup>7,21,23</sup>
+                    </li>
+                  </ul>
+                </td>
+                <td colspan="3">
+                  <ul class="misdiagnosis-list">
+                    <li>
+                      Hypercalcemia<sup>7,21,23</sup>
+                    </li>
+                    <li>
+                      Hypercalciuria<sup>7,21,23</sup>
+                    </li>
+                    <li>
+                      Kidney stones<sup>7,21,23</sup>
+                    </li>
+                  </ul>
+                </td>
+                <td colspan="2"></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-    </section>
-    <section class="design-system-section">
-        <div class="section-wrapper section-wrapper--small">
-            <h1 class="title">Case Modal Mobile</h1>
-            <button class="button button--custom-bg case-files-modal-trigger"
-                >View Patient case files</button
-            >
-            <CaseFileModal />
-        </div>
-    </section>
-    <section class="design-system-section">
-        <div class="section-wrapper section-wrapper--small">
-            <h1 class="title">Case Modal Desktop Version</h1>
-            <button
-                class="button button--custom-bg case-files-modal-trigger--desktop"
-                >View Patient case files</button
-            >
-            <div class="case__files_modal_wrapper">
-                <CaseFileModalDesktop />
-            </div>
-        </div>
-    </section>
-    <section class="design-system-section">
-        <article class="misdiagnosis-table">
-            <picture class="misdiagnosis-table__asset">
-                <source
-                    srcset="/assets/images/usual-suspects/misdiagnosis/misdiagnosis-bg-desktop.png"
-                    media="(min-width: 1024px)"
-                />
-                <source
-                    srcset="/assets/images/usual-suspects/misdiagnosis/misdiagnosis-bg-tablet.png"
-                    media="(min-width: 500px)"
-                />
-                <img
-                    src="/assets/images/usual-suspects/misdiagnosis/misdiagnosis-bg-mobile.png"
-                    alt=""
-                />
-            </picture>
-            <div class="misdiagnosis-table__content">
-                <div class="content-mobile">
-                    <div class="content-mobile__row">
-                        <div class="wrapper">
-                            <h2 class="content-mobile__title">
-                                Treatments for other similar disorders
-                            </h2>
-                        </div>
-                    </div>
-
-                    <div class="content-mobile__row">
-                        <div class="wrapper">
-                            <h3 class="content__title">Bisphosphonates</h3>
-
-                            <p class="content__subtitle">Patient populations</p>
-
-                            <ul class="misdiagnosis-list">
-                                <li>
-                                    Bisphosphonates are commonly used in adult
-                                    patients with osteoporosis<sup>19</sup>
-                                </li>
-                            </ul>
-
-                            <p class="content__subtitle">
-                                Risk of treatment in patients with
-                                hypophosphatasia:
-                            </p>
-
-                            <p class="content__paragraph">
-                                <strong
-                                    >Based on a study examining bisphophonates
-                                    in osteoporosis, the half-life of
-                                    bisphosphonates was shown to be greater than
-                                    10 years and may have detrimental effects on
-                                    a patient's condition if a wrongful
-                                    diagnosis is made.</strong
-                                > Make sure to rule out hypophosphatasia before starting
-                                patients on bisphosphonates.<sup>20</sup>
-                            </p>
-
-                            <ul class="misdiagnosis-list">
-                                <li>
-                                    The phosphate motifs in bisphosphonates have
-                                    a similar conformation to inorganic
-                                    pyrophosphate (PPi), with the accumulation
-                                    of PPi associated with skeletal and systemic
-                                    symptoms seen in hypophosphatasia, which may
-                                    result in a worsening of presenting symptoms<sup
-                                        >19,21,22</sup
-                                    >
-                                </li>
-                                <li>
-                                    Bisphosphonates may directly or indirectly
-                                    worsen hypophosphatasia by binding zinc or
-                                    magnesium, compromising alkaline phosphatase
-                                    activity19,21,22
-                                </li>
-                                <li>
-                                    Possible increased risk of fracture at
-                                    growth plate<sup>19,21,22</sup>
-                                </li>
-                                <li>
-                                    Increased risk of atypical femoral fractures
-                                    in adults<sup>19,21,22</sup>
-                                </li>
-                                <li>
-                                    Excessively high doses have led to
-                                    osteopetrosis and persistent remodeling
-                                    defects, persisting more than 6 years after
-                                    discontinuation<sup>19,21,22</sup>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="content-mobile__row">
-                        <div class="wrapper">
-                            <h3 class="content__title">
-                                Supplements:<br />Vitamin D and calcium
-                            </h3>
-                            <p class="content__subtitle">Patient populations</p>
-
-                            <ul class="misdiagnosis-list">
-                                <li>
-                                    Vitamin D and calcium supplementation can be
-                                    used for a myriad of conditions, ranging
-                                    from rickets to depression, in adults,
-                                    children, and infants<sup>7,21,23</sup>
-                                </li>
-                            </ul>
-
-                            <p class="content__subtitle">Patient populations</p>
-
-                            <ul class="misdiagnosis-list">
-                                <li>
-                                    Hypercalcemia<sup>7,21,23</sup>
-                                </li>
-                                <li>
-                                    Hypercalciuria<sup>7,21,23</sup>
-                                </li>
-                                <li>
-                                    Kidney stones<sup>7,21,23</sup>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="content-desktop">
-                    <table class="content-table">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th colspan="2"
-                                    >Treatments for other similar disorders</th
-                                >
-                                <th colspan="2">PATIENT POPULATIONS</th>
-                                <th colspan="3"
-                                    >RISK OF TREATMENT IN PATIENTS WITH
-                                    HYPOPHOSPHATASIA</th
-                                >
-                                <th colspan="2"></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td></td>
-                                <td colspan="2"
-                                    ><h3 class="content__title">
-                                        Bisphosphonates
-                                    </h3></td
-                                >
-                                <td colspan="2">
-                                    <ul class="misdiagnosis-list">
-                                        <li>
-                                            Bisphosphonates are commonly used in
-                                            adult patients with osteoporosis<sup
-                                                >19</sup
-                                            >
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td colspan="3">
-                                    <p class="content__paragraph">
-                                        <strong
-                                            >Based on a study examining
-                                            bisphophonates in osteoporosis, the
-                                            half-life of bisphosphonates was
-                                            shown to be greater than 10 years
-                                            and may have detrimental effects on
-                                            a patient's condition if a wrongful
-                                            diagnosis is made.</strong
-                                        > Make sure to rule out hypophosphatasia
-                                        before starting patients on bisphosphonates.<sup
-                                            >20</sup
-                                        >
-                                    </p>
-
-                                    <ul class="misdiagnosis-list">
-                                        <li>
-                                            The phosphate motifs in
-                                            bisphosphonates have a similar
-                                            conformation to inorganic
-                                            pyrophosphate (PPi), with the
-                                            accumulation of PPi associated with
-                                            skeletal and systemic symptoms seen
-                                            in hypophosphatasia, which may
-                                            result in a worsening of presenting
-                                            symptoms<sup>19,21,22</sup>
-                                        </li>
-                                        <li>
-                                            Bisphosphonates may directly or
-                                            indirectly worsen hypophosphatasia
-                                            by binding zinc or magnesium,
-                                            compromising alkaline phosphatase
-                                            activity19,21,22
-                                        </li>
-                                        <li>
-                                            Possible increased risk of fracture
-                                            at growth plate<sup>19,21,22</sup>
-                                        </li>
-                                        <li>
-                                            Increased risk of atypical femoral
-                                            fractures in adults<sup
-                                                >19,21,22</sup
-                                            >
-                                        </li>
-                                        <li>
-                                            Excessively high doses have led to
-                                            osteopetrosis and persistent
-                                            remodeling defects, persisting more
-                                            than 6 years after discontinuation<sup
-                                                >19,21,22</sup
-                                            >
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td colspan="2"></td>
-                            </tr>
-
-                            <tr>
-                                <td></td>
-                                <td colspan="2">
-                                    <h3 class="content__title">
-                                        Supplements:<br />Vitamin D and calcium
-                                    </h3>
-                                </td>
-                                <td colspan="2">
-                                    <ul class="misdiagnosis-list">
-                                        <li>
-                                            Vitamin D and calcium supplementation can be
-                                            used for a myriad of conditions, ranging
-                                            from rickets to depression, in adults,
-                                            children, and infants<sup>7,21,23</sup>
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td colspan="3">
-                                    <ul class="misdiagnosis-list">
-                                        <li>
-                                            Hypercalcemia<sup>7,21,23</sup>
-                                        </li>
-                                        <li>
-                                            Hypercalciuria<sup>7,21,23</sup>
-                                        </li>
-                                        <li>
-                                            Kidney stones<sup>7,21,23</sup>
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td colspan="2"></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </article>
-    </section>
+      </div>
+    </article>
+    <CTA
+      variation="variant-2"
+      buttonLabel="Usual Suspects"
+      content="Learn the risks of misdiagnosis"
+      linkURL="#"
+      bypassModal
+    />
+    <References>
+      <strong>References: 1.</strong> McKiernan FE, Berg RL, Fuehrer J. Clinical
+      and radiographic findings in adults with persistent hypophosphatasemia. J Bone
+      Miner Res. 2014;29(7):1651-1660. <strong>2.</strong> Offiah AC, Vockley J,
+      Munns CF, Murotsuki J. Differential diagnosis of perinatal hypophosphatasia:
+      radiologic perspectives. Pediatr Radiology. 2019;49(1)3-22. <strong
+        >3.</strong
+      > Rockman-Greenberg C. Hypophosphatasia. Pediatr Endocrinol Rev. 2013;10(suppl
+      2):380-388 <strong>4.</strong>
+      Weber TJ, Sawyer EK, Moseley S, Odrljin T, Kishnani PS. Burden of disease in
+      adult patients with hypophosphatasia: results from two patient-reported surveys.
+      Metabolism. 2016;65(10):1522-1530. <strong>5.</strong> Sutton RA, Mumm S, Coburn
+      SP, Ericson KL, Whyte MP. “Atypical femoral fractures” during bisphosphonate
+      exposure in adult hypophosphatasia. J Bone Miner Res. 2012;27(5):987-994. <strong
+        >6.</strong
+      > National Institute of Child Health and Human Development. What are the symptoms
+      of osteogenesis imperfecta (OI). NICDH. 2021. Accessed March 30, 2023. <a
+        target="_blank"
+        href="https://www.nichd.nih.gov/health/topics/osteogenesisimp/conditioninfo/symptoms"
+        >https://www.nichd.nih.gov/health/topics/osteogenesisimp/conditioninfo/symptoms</a
+      >
+      <strong>7.</strong> Marini JC, Cabral WA. Osteogenesis imperfecta. In: Thakker
+      RV, Whyte MP, Eisman JA, Igarashi T, eds. Genetics of Bone Biology and Skeletal
+      Disease. Academic Press; 2018;397-420. <strong>8.</strong> Dubail J, Cormier-Daire
+      V. Chondrodysplasias with multiple dislocations caused by defects in glycosaminoglycan
+      synthesis. Front Genet. 2021;12:642097. <strong>9.</strong> NIH MedlinePlus.
+      Idiopathic infantile hypercalcemia. National Institute of Health. 2017. Accessed
+      March 30, 2023. <a
+        target="_blank"
+        href="https://medlineplus.gov/genetics/condition/idiopathic-infantile-hypercalcemia/"
+        >https://medlineplus.gov/genetics/condition/idiopathic-infantile-hypercalcemia/</a
+      >
+      <strong>10.</strong> Martos-Moreno GA, Calzada J, Couce ML, Argente J. Hypophosphatasia:
+      clinical manifestations, diagnostic recommendations and therapeutic options.
+      An Pediatr (Engl Ed). 2018;88(6):356.e1-356.e11. <strong>11.</strong> Mornet
+      E, Nunes ME. Hypophosphatasia. In: Adam MP, Ardinger HH, Pagon RA, et al, eds.
+      GeneReviews®. University of Washington; 2011. Accessed April 3, 2023. <a
+        target="_blank"
+        href="http://www.ncbi.nlm.nih.gov/books/NBK1150/?report=reader"
+        >http://www.ncbi.nlm.nih.gov/books/NBK1150/?report=reader</a
+      >
+      <strong>12.</strong> Mohn A, De Leonibus C, de Giorgis T, Mornet E, Chiarelli
+      F. Hypophosphatasia in a child with widened anterior fontanelle: lessons learned
+      from late diagnosis and incorrect treatment. Acta Paediatr. 2011;100(7):e43-e46.
+      <strong>13.</strong> Whyte MP, Wenkert D, McAlister WH, et al. Chronic recurrent
+      multifocal osteomyelitis mimicked in childhood hypophosphatasia. J Bone Miner
+      Res. 2009;24:1493-1505.
+      <strong>14.</strong> Shapiro JR, Lewiecki EM. Hypophosphatasia in adults: clinical
+      assessment and treatment considerations. J Bone Miner Res. 2017;32(10):1977-1980.
+      <strong>15.</strong>
+      Boyce AM, Tosi LL, Paul SM. Bisphosphonate treatment for children with disabling
+      conditions. PM R. 2014;6(5):427-436. <strong>16.</strong> Stadecker WJ. Bisphosphonates
+      101: an update for the general dentist. Inside Dentistry. 2008. <strong
+        >17.</strong
+      > Bianchi ML, Bishop NJ, Guañabens N, et al; Rare Bone Disease Action Group
+      of the European Calcified Tissue Society. Hypophosphatasia in adolescents and
+      adults: overview of diagnosis and treatment. Osteoporos Int. 2020;31(8):1445-1460.
+      <strong>18.</strong> Choida V, Bubbear JS. Update on the management of hypophosphatasia.
+      Ther Adv Musculoskelet Dis. 2019;11:1759720X19863997. <strong>19.</strong>
+      Vieira LHR, Peixoto KC, Flósi CL, Fleiuss de Farais ML, Madeira M. Active search
+      of adult patients with persistently low serum alkaline phosphatase levels for
+      diagnosis of hypophosphatasia. Arch Endocrinol Metab. 2021;65(3):289-294. <strong
+        >20.</strong
+      > Bloch-Zupan A. Hypophosphatasia: diagnosis and clinical signs - a dental
+      surgeon perspective. Int J Paediatr Dent. 2016;26(6):426-438. <strong
+        >21.</strong
+      > Bishop N, Munns CF, Ozono K. Transformative therapy in hypophosphatasia.
+      Arch Dis Child. 2016;101(6):514-515.
+    </References>
+  </section>
 </Layout>
