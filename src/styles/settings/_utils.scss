@@ -171,6 +171,10 @@ $color-value in $colors {
     text-align: center !important;
 }
 
+.text--underline {
+    text-decoration: underline;
+}
+
 .md\:text--center {
     @media screen and (min-width: 768px) {
         text-align: center !important;
