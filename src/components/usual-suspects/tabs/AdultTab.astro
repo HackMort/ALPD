@@ -1,19 +1,19 @@
 ---
 import SuspectCard from "../../Suspect-Card.astro"
-import { Props } from "../../Suspect-Card.astro"
 
-const data_card_1:Props = {
- title: "Osteopenia/Osteoporosis",
- image: "",
+const data_card_1 = {
+ title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
+ image: "/assets/images/usual-suspects/Suspect-1.png",
  subtitle: "Osteopenia/Osteoporosis ",
- subtitle_secondary: "Oswaldo Porosis6-9",
+ subtitle_secondary: `Oswaldo Porosis`,
+ subtitle_superscript: "6-9",
  info: "Note: Patient may have osteopenia as a symptom of hypophosphatasia",
  list: [ "Decrease in bone mineral density", "Fractures (from fragile bones)" ]
 }
 
 ---
 
-<section class="hpp__profile" >
+<section class="hpp__profile suspect-cards-container" >
     <!-- Multisystemic Symptoms and Disease Burden -->
     <section id="hpp-multisystemic" class="section hpp-multisystemic">
 
@@ -21,45 +21,32 @@ const data_card_1:Props = {
           Common suspects in:
         </h2>
 
-        <article class="hpp-multisystemic__tabs">
+        <article class="">
 
-          <ul role="tablist" class="hpp-multisystemic__tabs--nav">
-            <li role="presentation" class="hpp-multisystemic__tabs--nav-item">
-              <a href="#usual-suspects_tab1" role="tab" id="tab1" aria-selected="true"
-                >Adults</a
-              >
+          <ul role="tablist" class="usual-suspect__subtabs">
+
+            <li role="presentation" class="usual-suspect__subtabs--item">
+              <a href="#usual-suspects_tab1" role="tab" id="tab1" aria-selected="true"></a>
             </li>
-            <li role="presentation" class="hpp-multisystemic__tabs--nav-item">
-              <a href="#usual-suspects_tab2" role="tab" id="tab2" tabindex="-1"
-                >Children/Adolescents</a
-              >
+
+            <li role="presentation" class="usual-suspect__subtabs--item">
+              <a href="#usual-suspects_tab2" role="tab" id="tab2" tabindex="-1"></a>
             </li>
-            <li role="presentation" class="hpp-multisystemic__tabs--nav-item">
-              <a href="#usual-suspects_tab3" role="tab" id="tab3" tabindex="-1"
-                >Neonates/Infants</a
-              >
+
+            <li role="presentation" class="usual-suspect__subtabs--item">
+              <a href="#usual-suspects_tab3" role="tab" id="tab3" tabindex="-1" ></a>
             </li>
-          </ul>
-    
+
+          </ul>    
+
+
           <div class="wrapper">
             <h2 class="hpp__profile__title hpp__profile__title--mobile">
                 Common suspects in:
             </h2>
-    
-            <div class="hpp-multisystemic__select">
-              <select
-                name="hpp-multisystemic-select"
-                id="hpp-multisystemic-select"
-                class="hpp-multisystemic__select--input"
-              >
-                <option value="usual-suspects_tab1">Adults</option>
-                <option value="usual-suspects_tab2">Children/Adolescents</option>
-                <option value="usual-suspects_tab3">Neonates/Infants</option>
-              </select>
-            </div>
           </div>
     
-          <!-- Tab adults content -->
+          
           <section
             id="usual-suspects_tab1"
             data-target="usual-suspects_tab1"
@@ -71,7 +58,7 @@ const data_card_1:Props = {
             <SuspectCard { ...data_card_1 } />
         </section>
         
-        <!-- Tab children content -->
+        
         <section
         id="usual-suspects_tab2"
         data-target="usual-suspects_tab2"
@@ -84,7 +71,7 @@ const data_card_1:Props = {
             
         </section>
         
-        <!-- Tab neonates/infants content -->
+        
         <section
         id="usual-suspects_tab3"
         data-target="usual-suspects_tab3"

@@ -1473,8 +1473,34 @@
         
     }
 
-    
+    .suspect-cards-container {
+        [role="tablist"] [aria-selected] {
+            background-color: $color-red;
+            border: none;
+        }
 
+        [role="tablist"] a {
+            background-color: $color-granite-grey;
+            width: 16px;
+            height: 16px;
+            min-width: initial;
+            padding: 0;
+            border: 0;
+            border-radius: 100px;
+        }
+    }
+
+    .usual-suspect__subtabs {
+        background-color: initial;        
+    }
+    .usual-suspect__subtabs--item {
+        height: 16px;
+        width: 16px;
+        padding: 0;
+        background-color: $color-granite-grey;
+        border: 0;
+        border-radius: 100px;
+    }
 
 }
 
