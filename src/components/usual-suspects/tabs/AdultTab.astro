@@ -11,45 +11,45 @@ const data_card_1 = {
  list: [ "Decrease in bone mineral density", "Fractures (from fragile bones)" ]
 }
 
+const data_card_2 = {
+ title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
+ image: "/assets/images/usual-suspects/Suspect-2.png",
+ subtitle: "Osteopenia/Osteoporosis ",
+ subtitle_secondary: `Oswaldo Porosis`,
+ subtitle_superscript: "6-9",
+ info: "Note: Patient may have osteopenia as a symptom of hypophosphatasia",
+ list: [ "Decrease in bone mineral density", "Fractures (from fragile bones)" ]
+}
+
 ---
 
 <section class="hpp__profile suspect-cards-container" >
     <!-- Multisystemic Symptoms and Disease Burden -->
     <section id="hpp-multisystemic" class="section hpp-multisystemic">
 
-        <h2 class="wrapper hpp__profile__title hpp__profile__title--desktop">
-          Common suspects in:
-        </h2>
-
         <article class="">
 
           <ul role="tablist" class="usual-suspect__subtabs">
 
             <li role="presentation" class="usual-suspect__subtabs--item">
-              <a href="#usual-suspects_tab1" role="tab" id="tab1" aria-selected="true"></a>
+              <a href="#usual-suspects_adults-tab1" role="tab" id="tab1" aria-selected="true"></a>
             </li>
 
             <li role="presentation" class="usual-suspect__subtabs--item">
-              <a href="#usual-suspects_tab2" role="tab" id="tab2" tabindex="-1"></a>
+              <a href="#usual-suspects_adults-tab2" role="tab" id="tab2" tabindex="-1"></a>
             </li>
 
             <li role="presentation" class="usual-suspect__subtabs--item">
-              <a href="#usual-suspects_tab3" role="tab" id="tab3" tabindex="-1" ></a>
+              <a href="#usual-suspects_adults-tab3" role="tab" id="tab3" tabindex="-1" ></a>
             </li>
 
           </ul>    
-
-
-          <div class="wrapper">
-            <h2 class="hpp__profile__title hpp__profile__title--mobile">
-                Common suspects in:
-            </h2>
-          </div>
     
           
           <section
-            id="usual-suspects_tab1"
-            data-target="usual-suspects_tab1"
+            id="usual-suspects_adults-tab1"
+            class="usual-suspects-tab_section"
+            data-target="usual-suspects_adults-tab1"
             role="tabpanel"
             aria-labelledby="tab1"
             aria-hidden="false"
@@ -60,27 +60,29 @@ const data_card_1 = {
         
         
         <section
-        id="usual-suspects_tab2"
-        data-target="usual-suspects_tab2"
-        role="tabpanel"
-        aria-labelledby="tab2"
-        aria-hidden="true"
-            tabindex="-1"
-            hidden
-            >
-            
+          id="usual-suspects_adults-tab2"
+          class="usual-suspects-tab_section"
+          data-target="usual-suspects_adults-tab2"
+          role="tabpanel"
+          aria-labelledby="tab2"
+          aria-hidden="true"
+          tabindex="-1"
+          hidden
+        >
+        <SuspectCard { ...data_card_2 } />
         </section>
         
         
         <section
-        id="usual-suspects_tab3"
-        data-target="usual-suspects_tab3"
-        role="tabpanel"
-        aria-labelledby="tab3"
-            aria-hidden="true"
-            tabindex="-1"
-            hidden
-          >
+          id="usual-suspects_adults-tab3"
+          class="usual-suspects-tab_section"
+          data-target="usual-suspects_adults-tab3"
+          role="tabpanel"
+          aria-labelledby="tab3"
+          aria-hidden="true"
+          tabindex="-1"
+          hidden
+        >
            
           </section>
 

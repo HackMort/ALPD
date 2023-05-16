@@ -223,12 +223,14 @@
     }
 
     .usual-suspect__subtabs {
-        background-color: initial;   
+        background-color: initial;
         display: flex;
-        justify-content: center;    
+        justify-content: center;
         position: absolute;
-        bottom: 0;
-        left: calc(50vw - 48px); 
+        bottom: 20px;
+        left: calc(50vw - 150px);
+        height: auto;
+        min-width: 300px;
     }
     .usual-suspect__subtabs--item {
         height: 16px;
@@ -237,6 +239,20 @@
         background-color: $color-granite-grey;
         border: 0;
         border-radius: 100px;
+        margin: 0 15px;
+    }
+
+    .hpp__profile .hpp-multisystemic__tabs::after {
+        display: none;
+    }
+
+    .wrapper {
+        padding: 0 17px;
+    }
+
+    .usual-suspects-tab_section {
+        padding-top: 0;
+        padding-bottom: 50px;
     }
 
 }
