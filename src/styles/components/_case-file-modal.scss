@@ -3,6 +3,14 @@
   background-color: $color-cararra !important;
   --custom-folder-color: #dcc094;
 
+  .go__to_patient {
+    display: inline-block;
+    color: $color-black;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
   &.--desktop {
     background: unset !important;
     max-width: 1362px;
