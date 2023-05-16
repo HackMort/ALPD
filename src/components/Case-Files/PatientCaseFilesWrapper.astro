@@ -63,7 +63,9 @@ const {} = Astro.props;
       ?.parentElement?.classList.add("active");
   });
 
-  const patientDots = document.querySelectorAll(".patients_dots_list__button");
+  const patientDots = document.querySelectorAll(
+    ".patients_dots_list__button, a.go__to_patient"
+  );
   patientDots?.forEach((dot) => {
     dot.addEventListener("click", (e: Event) => {
       patientDots.forEach((dot) => {
