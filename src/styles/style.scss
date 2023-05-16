@@ -3490,6 +3490,7 @@
             &--media {
                 margin: 0 1rem;
                 position: relative;
+                display: flex;
 
                 &::before {
                     content: '';
@@ -3519,48 +3520,47 @@
                 &--adolescents {
 
                     &--mobile {
-                        display: none;
-
                         @media screen and (max-width: 768px) {
-                            display: block;
-
                             .hpp-multisystemic__definition--photo {
                                 left: 50%;
                                 transform: translate(-50%, 0) rotate(-5deg);
                             }
+                        }
 
+                        @media screen and (min-width: 769px) {
+                            display: none !important;
                         }
                     }
 
                     &--desktop {
-                        display: none;
+                        display: none !important;
 
                         @media screen and (min-width: 769px) {
-                            display: block;
+                            display: block !important;
                         }
                     }
                 }
 
                 &--infants {
                     &--mobile {
-                        display: none;
-
                         @media screen and (max-width: 768px) {
-                            display: block;
-
                             .hpp-multisystemic__definition--photo {
                                 left: 50%;
                                 transform: translate(-50%, 0) rotate(-5deg);
                             }
 
                         }
+
+                        @media screen and (min-width: 769px) {
+                            display: none !important;
+                        }
                     }
 
                     &--desktop {
-                        display: none;
+                        display: none !important;
 
                         @media screen and (min-width: 769px) {
-                            display: block;
+                            display: block !important;
                         }
                     }
                 }
@@ -3568,7 +3568,6 @@
                 @media screen and (max-width: 768px) {
                     margin: 1rem 0;
                     background-image: none;
-                    display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
@@ -3576,6 +3575,7 @@
 
                 @media screen and (min-width: 769px) {
                     margin: 0 auto;
+                    display: block;
                 }
             }
 
