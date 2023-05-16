@@ -223,7 +223,12 @@
     }
 
     .usual-suspect__subtabs {
-        background-color: initial;        
+        background-color: initial;   
+        display: flex;
+        justify-content: center;    
+        position: absolute;
+        bottom: 0;
+        left: calc(50vw - 48px); 
     }
     .usual-suspect__subtabs--item {
         height: 16px;
