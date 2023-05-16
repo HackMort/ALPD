@@ -342,6 +342,10 @@
             font-weight: 400;
             font-size: 18px;
             line-height: 25px;
+
+            em {
+              font-style: italic;
+            }
           }
 
           .panel__title {
@@ -490,6 +494,11 @@
                   line-height: 18px;
                   color: $color-carbon;
                   margin-top: 0.5rem;
+
+                  em {
+                    //Cursive
+                    font-style: italic;
+                  }
                 }
 
                 small {

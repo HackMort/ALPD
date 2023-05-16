@@ -499,7 +499,7 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
                         media="(min-width: 768px)"
                       />
                       <img
-                        src="/assets/images/case-files/anna/anna-rad-2-thumbnail-desktop.png"
+                        src="/assets/images/case-files/anna/anna-rad-2-desktop.png"
                         alt=""
                       />
                     </picture>
@@ -531,7 +531,7 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
           <PatientCaseFileDesktop
             name="Hannah"
             age={7}
-            gender="F"
+            gender="Female"
             description="A 7-year-old female with ALP levels of 138. Does Hannah’s file remind you of any of your current patients?"
             photo="/assets/images/case-files/hannah/photo-hannah-desktop.png"
           >
@@ -581,7 +581,9 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
                       />
                     </picture>
                     <div class="patient">
-                      <p>Nontraumatic tooth loss at <br /> age 4</p>
+                      <p class="patient--color-black">
+                        Nontraumatic tooth loss at <br /> age 4
+                      </p>
                     </div>
                   </div>
                 </PinchToZoom>
@@ -692,27 +694,6 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
                 </section>
               </div>
               <div class="thumbnails">
-                <PinchToZoom id="pt-3-desktop-image-2" useDefaultButton={false}>
-                  <div class="rad__thumbnail">
-                    <picture style="max-width: 136px;">
-                      <button
-                        data-panzoom-action="zoomToFull"
-                        data-content-id="pt-3-desktop-image-2"
-                        class="button button--pinch-to-zoom"></button>
-                      <source
-                        srcset="/assets/images/case-files/hannah/hanna-rad-1-desktop.png"
-                        media="(min-width: 768px)"
-                      />
-                      <img
-                        src="/assets/images/case-files/hannah/hanna-rad-1-mobile.png"
-                        alt=""
-                      />
-                    </picture>
-                    <div class="patient">
-                      <p>Nontraumatic tooth <br /> loss at age 4</p>
-                    </div>
-                  </div>
-                </PinchToZoom>
                 <PinchToZoom id="pt-3-desktop-image-3" useDefaultButton={false}>
                   <div class="rad__thumbnail">
                     <picture style="max-width: 137px;">
@@ -730,7 +711,41 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
                       />
                     </picture>
                     <div class="patient">
-                      <p>Currently presents with <br /> mild knock knees</p>
+                      <p>
+                        <span class="patient--child"
+                          >Currently presents with</span
+                        >
+                        <br />
+                        <span class="patient--main">mild knock knees</span>
+                      </p>
+                    </div>
+                  </div>
+                </PinchToZoom>
+                <PinchToZoom id="pt-3-desktop-image-2" useDefaultButton={false}>
+                  <div class="rad__thumbnail">
+                    <picture style="max-width: 136px;">
+                      <button
+                        data-panzoom-action="zoomToFull"
+                        data-content-id="pt-3-desktop-image-2"
+                        class="button button--pinch-to-zoom"></button>
+                      <source
+                        srcset="/assets/images/case-files/hannah/hanna-rad-1-desktop.png"
+                        media="(min-width: 768px)"
+                      />
+                      <img
+                        src="/assets/images/case-files/hannah/hanna-rad-1-mobile.png"
+                        alt=""
+                      />
+                    </picture>
+                    <div class="patient">
+                      <p class="patient--main patient--color-black">
+                        Nontraumatic tooth <br /> loss at age 4
+                      </p>
+                      <p class="patient--child">
+                        Reproduced with permission <br /> from Kiselnikova L, et
+                        al.
+                        <em>Clinical <br /> Case Reports.</em> 2020;8(5):911-918
+                      </p>
                     </div>
                   </div>
                 </PinchToZoom>
@@ -754,7 +769,7 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
           <PatientCaseFileDesktop
             name="Sarah"
             age="7 months"
-            gender="F"
+            gender="Female"
             description="A 7-month-old female with vitamin B-responsive seizures at birth. Does Sarah’s file remind you of any of your current patients?"
             photo="/assets/images/case-files/sarah/photo-sarah-desktop.png"
           >
@@ -879,10 +894,10 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
               </div>
               <ul>
                 <li class="item">
-                  High vitamin B6 level shown at test 6 months ago
+                  High vitamin B<sub>6</sub> level shown at test 6 months ago
                 </li>
                 <li class="item">
-                  ALPL genetic test: Autosomal recessive inheritance
+                  <em>ALPL</em> genetic test: Autosomal recessive inheritance
                   <ul>
                     <li class="item">
                       Parental genetic testing reveals single gene variant in
