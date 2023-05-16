@@ -95,41 +95,35 @@ const { type, data } = Astro.props;
         btn.addEventListener("click", () => {
             const sectionId = btn.getAttribute("href");
 
-            if (sectionId == "#multisystemic1") {
-                btnsInfants.forEach((btn) => {
-                    btn.classList.remove("skeleton__option--active");
-                });
+            //Whatever option is selected, reset the state of the buttons and sections
+            btnsInfants.forEach((btn) => {
+                btn.classList.remove("skeleton__option--active");
+            });
 
-                infantsSections.forEach((section) => {
-                    //Only if a section is not hidden
-                    if (
-                        section.classList.contains("skeleton__content--active")
-                    ) {
-                        section.classList.remove("skeleton__content--active");
-                    }
-                });
+            infantsSections.forEach((section) => {
+                //Only if a section is not hidden
+                if (section.classList.contains("skeleton__content--active")) {
+                    section.classList.remove("skeleton__content--active");
+                }
+            });
 
-                //Add active class to the button and section
-                btnsAdults[0].classList.add("skeleton__option--active");
-                adultsSections[0].classList.add("skeleton__content--active");
-            } else if (sectionId == "#multisystemic2") {
-                btnsAdults.forEach((btn) => {
-                    btn.classList.remove("skeleton__option--active");
-                });
+            btnsAdults.forEach((btn) => {
+                btn.classList.remove("skeleton__option--active");
+            });
 
-                adultsSections.forEach((section) => {
-                    //Only if a section is not hidden
-                    if (
-                        section.classList.contains("skeleton__content--active")
-                    ) {
-                        section.classList.remove("skeleton__content--active");
-                    }
-                });
+            adultsSections.forEach((section) => {
+                //Only if a section is not hidden
+                if (section.classList.contains("skeleton__content--active")) {
+                    section.classList.remove("skeleton__content--active");
+                }
+            });
 
-                //Add active class to the button and section
-                btnsInfants[0].classList.add("skeleton__option--active");
-                infantsSections[0].classList.add("skeleton__content--active");
-            }
+            //Add active class to the button and section
+            btnsInfants[0].classList.add("skeleton__option--active");
+            infantsSections[0].classList.add("skeleton__content--active");
+
+            btnsAdults[0].classList.add("skeleton__option--active");
+            adultsSections[0].classList.add("skeleton__content--active");
         });
     });
 </script>

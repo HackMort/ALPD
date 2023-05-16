@@ -28,6 +28,10 @@ const { type } = Astro.props;
         }
 
         {
+            /* 
+                - Filter the data to get the correct type of data
+                - Map over the data to create the options
+            **/
             data
                 .filter((item) => item.type == type)
                 .map((item) => (
