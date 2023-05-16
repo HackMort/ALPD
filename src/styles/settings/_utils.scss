@@ -7,7 +7,13 @@ Ex: .color--white { color: #FFFFFFF; } and
 @each $color-name,
 $color-value in $colors {
     .color--#{$color-name} {
-        color: $color-value;
+        color: $color-value !important;
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+        font-style: inherit;
+        letter-spacing: inherit;
+        line-height: inherit;
     }
 
     .bg-color--#{$color-name} {
@@ -17,7 +23,16 @@ $color-value in $colors {
 
 .sz-500\:color--saffron-mango {
     @media screen and (min-width: 500px) {
-        color: $color-saffron-mango;
+        color: $color-saffron-mango !important;
+    }
+}
+
+.lg\:color--red {
+    @media screen and (min-width: 1024px) {
+        color: $color-red;
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
     }
 }
 
@@ -25,10 +40,18 @@ $color-value in $colors {
     margin-bottom: 0 !important;
 }
 
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
 .md\:mb-2 {
     @media screen and (min-width: 768px) {
         margin-bottom: 2rem !important;
     }
+}
+
+.mb-1 {
+    margin-bottom: 1rem !important;
 }
 
 .md\:mb-1 {
@@ -78,9 +101,19 @@ $color-value in $colors {
     font-size: 2.125rem;
 }
 
+.font-size--14px {
+    font-size: .875rem;
+}
+
 .md\:font-size--36px {
     @media screen and (min-width: 768px) {
         font-size: 2.25rem;
+    }
+}
+
+.md\:font-size--18px {
+    @media screen and (min-width: 768px) {
+        font-size: 1.125rem;
     }
 }
 
@@ -100,15 +133,47 @@ $color-value in $colors {
     }
 }
 
+.block {
+    display: block;
+}
+
 .lg\:block {
     @media screen and (min-width: 1024px) {
         display: block !important;
     }
 }
 
+.xs\:block {
+    @media screen and (min-width: 375px) {
+        display: block !important;
+    }
+}
+
+.sm\:block {
+    @media screen and (min-width: 425px) {
+        display: block !important;
+    }
+}
+
 .md\:block {
     @media screen and (min-width: 768px) {
-        display: block;
+        display: block !important;
+    }
+}
+
+.sz-463\:hidden {
+    @media screen and (min-width: 463px) {
+        display: none !important;
+    }
+}
+
+.text--center {
+    text-align: center !important;
+}
+
+.md\:text--center {
+    @media screen and (min-width: 768px) {
+        text-align: center !important;
     }
 }
 
@@ -134,10 +199,6 @@ $color-value in $colors {
     font-family: 'Special Elite', cursive;
 }
 
-.text--center {
-    text-align: center;
-}
-
 .text--left {
     text-align: left;
 }
@@ -148,4 +209,27 @@ $color-value in $colors {
 
 .text--uppercase {
     text-transform: uppercase;
+}
+
+.font--veneer {
+    font-family: "veneer", sans-serif;
+}
+
+.lg\:bold {
+    @media screen and (min-width: 1024px) {
+        font-weight: 700;
+        font-family: inherit;
+        font-size: inherit;
+    }
+}
+
+.font--500 {
+    font-weight: 500;
+}
+
+.font--inherit {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: initial;
 }

@@ -72,3 +72,25 @@
 }
 
 // TODO Add utilities for common screen sizes. Eg: md:only-left
+
+.md\:wrapper {
+    @media screen and (min-width: 768px) {
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+        max-width: var(--wrapper-max-width);
+    }
+}
+
+.xl\:no-wrapper {
+    @media screen and (min-width: 1440px) {
+        max-width: max-content
+    }
+}
+
+.md\:no-wrapper {
+    @media screen and (min-width: 768px) {
+        max-width: max-content;
+        margin: 0 auto;
+    }
+}

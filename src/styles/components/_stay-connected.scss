@@ -26,22 +26,28 @@
     }
 
     &__title{
-        max-width: 165px;
+        font-size: 30px;
+        line-height: 110%;
+        /* or 33px */
         margin-top: 15px;
-        margin-bottom: 20px;
+        text-transform: uppercase;
+        color: $color-cinnabar;
+        max-width: 780px;
+        margin-bottom: 15px;
         
         @media screen and (min-width:740px) {
-            margin: auto;
-            max-width: 175px;
+            font-size: 32px;
+            line-height: 32px;
+            text-align: center;
+            margin-bottom: 20px;
             margin-top: 87px;
-            margin-bottom: 3rem;
+            
         }
     }
 
     &__text{
         font-family: 'Barlow';
         font-style: normal;
-        font-weight: bold;
         font-size: 16px;
         line-height: 24px;
 
@@ -216,7 +222,8 @@
         font-size: 14px;
         line-height: 18px;
         @media screen and (min-width:740px) {
-        text-align: center;
+            text-align: right;
+            max-width: 501px;
         }
 
         a{
