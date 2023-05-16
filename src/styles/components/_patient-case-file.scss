@@ -238,6 +238,23 @@
         color: $color-white;
         top: 1rem;
         left: 1rem;
+
+        &--child {
+          display: none;
+        }
+
+        &--main {
+          text-transform: capitalize;
+
+          //Reset the br tag
+          br {
+            display: none;
+          }
+        }
+
+        &--color-black {
+          color: $color-black;
+        }
       }
     }
   }
