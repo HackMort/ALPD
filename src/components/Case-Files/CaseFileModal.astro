@@ -6,7 +6,7 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
 
 <div id="case-files-modal-template" style="display: none;">
   <div class="case__files_modal" id="case-files-modal">
-    <button data-fancybox-close class="case__files_modal_close-button">×</button
+    <button data-fancybox-close class="case__files_modal_close-button">X</button
     >
     <div class="case__files_modal_wrapper">
       <PatientCaseFilesWrapper>
@@ -25,7 +25,7 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
                 2 nontraumatic fractures: Age 13, femur; age 16, metatarsals
               </li>
               <li class="item">
-                Reportsof slow healing fractures, even at young age
+                Reports of slow healing fractures, even at young age
               </li>
               <li class="item">Age 50: Kidney stones</li>
               <li class="item">
@@ -61,85 +61,107 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
           <Fragment slot="results">
             <h4 class="results__title">CMP test results from:</h4>
             <h5>Today</h5>
-            <div class="acc-table">
-              <div class="first-column">
-                <h3>TEST</h3>
-                <p>Calcium, mg/dL</p>
-                <p>Protein, g/dL</p>
-                <p>Albumin, g/dL</p>
-                <p>Alkaline phosphatase, IU/L</p>
-              </div>
-
-              <div class="second-column">
-                <h3>RESULT</h3>
-                <p>10.6</p>
-                <p>6.5</p>
-                <p>4.6</p>
-                <p>63</p>
-              </div>
-
-              <div class="second-column last-child">
-                <h3>FLAG</h3>
-                <p>High</p>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-              </div>
-            </div>
+            <table class="result-table">
+                <thead>
+                    <tr>
+                        <th colspan="2">TEST</th>
+                        <th>RESULT</th>
+                        <th>FLAG</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="2">Calcium, mg/dL</td>
+                        <td>10.6</td>
+                        <td>High</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Protein, g/dL</td>
+                        <td>6.5</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Albumin, g/dL</td>
+                        <td>4.6</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Alkaline phosphatase, IU/L</td>
+                        <td>63</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
             <h5>6 months ago</h5>
-            <div class="acc-table">
-              <div class="first-column">
-                <h3>TEST</h3>
-                <p>Calcium, mg/dL</p>
-                <p>Protein, g/dL</p>
-                <p>Albumin, g/dL</p>
-                <p>Alkaline phosphatase, IU/L</p>
-              </div>
-              <div class="second-column">
-                <h3>RESULT</h3>
-                <p>9.8</p>
-                <p>6.9</p>
-                <p>3.9</p>
-                <p>35</p>
-              </div>
-              <div class="second-column last-child">
-                <h3>FLAG</h3>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-              </div>
-            </div>
+            <table class="result-table">
+                <thead>
+                    <tr>
+                        <th colspan="2">TEST</th>
+                        <th>RESULT</th>
+                        <th>FLAG</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="2">Calcium, mg/dL</td>
+                        <td>9.8</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Protein, g/dL</td>
+                        <td>6.9</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Albumin, g/dL</td>
+                        <td>3.9</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Alkaline phosphatase, IU/L</td>
+                        <td>35</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
             <h5>1 year ago</h5>
-            <div class="acc-table">
-              <div class="first-column">
-                <h3>TEST</h3>
-                <p>Calcium, mg/dL</p>
-                <p>Protein, g/dL</p>
-                <p>Albumin, g/dL</p>
-                <p>Alkaline phosphatase, IU/L</p>
-              </div>
-              <div class="second-column">
-                <h3>RESULT</h3>
-                <p>10.2</p>
-                <p>7.1</p>
-                <p>4.0</p>
-                <p>32</p>
-              </div>
-              <div class="second-column last-child">
-                <h3>FLAG</h3>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-              </div>
-            </div>
+            <table class="result-table">
+                <thead>
+                    <tr>
+                        <th colspan="2">TEST</th>
+                        <th>RESULT</th>
+                        <th>FLAG</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="2">Calcium, mg/dL</td>
+                        <td>10.2</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Protein, g/dL</td>
+                        <td>7.1</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Albumin, g/dL</td>
+                        <td>4.0</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Alkaline phosphatase, IU/L</td>
+                        <td>32</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
             <ul>
               <li class="item">
-                High vitamin B6 level shown at test 6 months ago
+                High vitamin B<sub>6</sub> level shown at test 6 months ago
               </li>
               <li class="item">
-                ALPL genetic test: Variant of uncertain significance (VUS)
+                <span class="text--italic">ALPL</span> genetic test: Variant of uncertain significance (VUS)
                 identified
               </li>
             </ul>
@@ -165,7 +187,7 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
               </div>
             </PinchToZoom>
             <PinchToZoom id="pt-1-image-2" useDefaultButton={false}>
-              <div class="rad__thumbnail" style="max-width: 162px;">
+              <div class="rad__thumbnail" style="max-width: 196px;">
                 <picture>
                   <button
                     data-panzoom-action="zoomToFull"
@@ -234,7 +256,7 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
           </Fragment>
           <Fragment slot="family">
             <ul>
-              <li class="item">Mother of <strong>Hannah</strong></li>
+              <li class="item">Mother of <strong class="text--underline">Hannah</strong></li>
               <li class="item">
                 Mother: Osteoporosis diagnosis in her early 50s
               </li>
@@ -263,58 +285,72 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
           <Fragment slot="results">
             <h4 class="results__title">CMP test results from:</h4>
             <h5>Today</h5>
-            <div class="acc-table">
-              <div class="first-column">
-                <h3>TEST</h3>
-                <p>Calcium, mg/dL</p>
-                <p>Protein, g/dL</p>
-                <p>Albumin, g/dL</p>
-                <p>Alkaline phosphatase, IU/L</p>
-              </div>
-
-              <div class="second-column">
-                <h3>RESULT</h3>
-                <p>9.9</p>
-                <p>7.1</p>
-                <p>4.1</p>
-                <p>34</p>
-              </div>
-
-              <div class="second-column last-child">
-                <h3>FLAG</h3>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-              </div>
-            </div>
+            <table class="result-table">
+                <thead>
+                    <tr>
+                        <th colspan="2">TEST</th>
+                        <th>RESULT</th>
+                        <th>FLAG</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="2">Calcium, mg/dL</td>
+                        <td>9.9</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Protein, g/dL</td>
+                        <td>7.1</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Albumin, g/dL</td>
+                        <td>4.1</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Alkaline phosphatase, IU/L</td>
+                        <td>34</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
             <h5>3 months ago</h5>
-            <div class="acc-table">
-              <div class="first-column">
-                <h3>TEST</h3>
-                <p>Calcium, mg/dL</p>
-                <p>Protein, g/dL</p>
-                <p>Albumin, g/dL</p>
-                <p>Alkaline phosphatase, IU/L</p>
-              </div>
-              <div class="second-column">
-                <h3>RESULT</h3>
-                <p>9.8</p>
-                <p>7.5</p>
-                <p>4.2</p>
-                <p>19</p>
-              </div>
-              <div class="second-column last-child">
-                <h3>FLAG</h3>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-              </div>
-            </div>
+            <table class="result-table">
+                <thead>
+                    <tr>
+                        <th colspan="2">TEST</th>
+                        <th>RESULT</th>
+                        <th>FLAG</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="2">Calcium, mg/dL</td>
+                        <td>9.8</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Protein, g/dL</td>
+                        <td>7.5</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Albumin, g/dL</td>
+                        <td>4.2</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Alkaline phosphatase, IU/L</td>
+                        <td>29</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
             <ul>
               <li class="item">
-                ALPL genetic test: Autosomal recessive inheritance
+                <span class="text--italic">ALPL</span> genetic test: Autosomal recessive inheritance
               </li>
             </ul>
             <div class="zoom-wrapper">
@@ -393,7 +429,7 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
           <Fragment slot="family">
             <ul>
               <li class="item">
-                Mother: <strong>Anna</strong>
+                Mother: <strong class="text--underline">Anna</strong>
                 <ul>
                   <li class="item">
                     History of early tooth loss, delayed eruption of permanent
@@ -426,6 +462,7 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
                 </div>
               </div>
             </PinchToZoom>
+            <p class="pt-3-image-1--permissions">Reproduced with permission from Kiselnikova L, et al. Clinical Case Reports. 2020;8(5):911-918.</p>
           </Fragment>
           <Fragment slot="symptoms">
             <ul>
@@ -447,55 +484,91 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
           <Fragment slot="results">
             <h4 class="results__title">CMP test results from:</h4>
             <h5>Today</h5>
-            <div class="acc-table">
-              <div class="first-column">
-                <h3>TEST</h3>
-                <p>Calcium, mg/dL</p>
-                <p>Protein, g/dL</p>
-                <p>Albumin, g/dL</p>
-                <p>Alkaline phosphatase, IU/L</p>
-              </div>
-
-              <div class="second-column">
-                <h3>RESULT</h3>
-                <p>9.3</p>
-                <p>7.8</p>
-                <p>4.2</p>
-                <p>138</p>
-              </div>
-
-              <div class="second-column last-child">
-                <h3>FLAG</h3>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-              </div>
-            </div>
+            <table class="result-table">
+                <thead>
+                    <tr>
+                        <th colspan="2">TEST</th>
+                        <th>RESULT</th>
+                        <th>FLAG</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="2">Calcium, mg/dL</td>
+                        <td>9.3</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Protein, g/dL</td>
+                        <td>7.8</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Albumin, g/dL</td>
+                        <td>4.2</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Alkaline phosphatase, IU/L</td>
+                        <td>138</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
             <h5>1 year ago</h5>
-            <div class="acc-table">
-              <div class="first-column">
-                <h3>TEST</h3>
-                <p>Calcium, mg/dL</p>
-                <p>Protein, g/dL</p>
-                <p>Albumin, g/dL</p>
-                <p>Alkaline phosphatase, IU/L</p>
-              </div>
-              <div class="second-column">
-                <h3>RESULT</h3>
-                <p>9.1</p>
-                <p>8.1</p>
-                <p>4.2</p>
-                <p>130</p>
-              </div>
-              <div class="second-column last-child">
-                <h3>FLAG</h3>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-              </div>
-            </div>
+            <table class="result-table">
+                <thead>
+                    <tr>
+                        <th colspan="2">TEST</th>
+                        <th>RESULT</th>
+                        <th>FLAG</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="2">Calcium, mg/dL</td>
+                        <td>9.1</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Protein, g/dL</td>
+                        <td>8.1</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Albumin, g/dL</td>
+                        <td>4.2</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Alkaline phosphatase, IU/L</td>
+                        <td>130</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <PinchToZoom id="pt-3-image-3" useDefaultButton={false}>
+                <div class="rad__thumbnail" style="max-width: 200px;">
+                  <picture>
+                    <button
+                      data-panzoom-action="zoomToFull"
+                      data-content-id="pt-3-image-3"
+                      class="button button--pinch-to-zoom"></button>
+                    <source
+                      srcset="/assets/images/case-files/hannah/hanna-rad-2-desktop.png"
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      src="/assets/images/case-files/hannah/hanna-rad-2-mobile.png"
+                      alt=""
+                    />
+                  </picture>
+                  <div class="patient">
+                    <p>Currently presents with mild knock knees</p>
+                  </div>
+                </div>
+              </PinchToZoom>
             <PinchToZoom id="pt-3-image-2" useDefaultButton={false}>
               <div class="rad__thumbnail" style="max-width: 200px;">
                 <picture>
@@ -517,27 +590,7 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
                 </div>
               </div>
             </PinchToZoom>
-            <PinchToZoom id="pt-3-image-3" useDefaultButton={false}>
-              <div class="rad__thumbnail" style="max-width: 200px;">
-                <picture>
-                  <button
-                    data-panzoom-action="zoomToFull"
-                    data-content-id="pt-3-image-3"
-                    class="button button--pinch-to-zoom"></button>
-                  <source
-                    srcset="/assets/images/case-files/hannah/hanna-rad-2-desktop.png"
-                    media="(min-width: 768px)"
-                  />
-                  <img
-                    src="/assets/images/case-files/hannah/hanna-rad-2-mobile.png"
-                    alt=""
-                  />
-                </picture>
-                <div class="patient">
-                  <p>Currently presents with mild knock knees</p>
-                </div>
-              </div>
-            </PinchToZoom>
+            <p class="pt-3-image-1--permissions">Reproduced with permission from Kiselnikova L, et al. Clinical Case Reports. 2020;8(5):911-918.</p>
           </Fragment>
           <Fragment slot="notes">
             <ul>
@@ -589,59 +642,77 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
           <Fragment slot="results">
             <h4 class="results__title">CMP test results from:</h4>
             <h5>Today</h5>
-            <div class="acc-table">
-              <div class="first-column">
-                <h3>TEST</h3>
-                <p>Calcium, mg/dL</p>
-                <p>Protein, g/dL</p>
-                <p>Albumin, g/dL</p>
-                <p>Alkaline phosphatase, IU/L</p>
-              </div>
-              <div class="second-column">
-                <h3>RESULT</h3>
-                <p>10</p>
-                <p>71</p>
-                <p>3.9</p>
-                <p>93</p>
-              </div>
-              <div class="second-column last-child">
-                <h3>FLAG</h3>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-              </div>
-            </div>
+            
+            <table class="result-table">
+                <thead>
+                    <tr>
+                        <th colspan="2">TEST</th>
+                        <th>RESULT</th>
+                        <th>FLAG</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="2">Calcium, mg/dL</td>
+                        <td>10</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Protein, g/dL</td>
+                        <td>7.1</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Albumin, g/dL</td>
+                        <td>3.9</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Alkaline phosphatase, IU/L</td>
+                        <td>93</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
             <h5>6 months ago</h5>
-            <div class="acc-table">
-              <div class="first-column">
-                <h3>TEST</h3>
-                <p>Calcium, mg/dL</p>
-                <p>Protein, g/dL</p>
-                <p>Albumin, g/dL</p>
-                <p>Alkaline phosphatase, IU/L</p>
-              </div>
-              <div class="second-column">
-                <h3>RESULT</h3>
-                <p>10.6</p>
-                <p>7.5</p>
-                <p>4.2</p>
-                <p>87</p>
-              </div>
-              <div class="second-column last-child">
-                <h3>FLAG</h3>
-                <p>High</p>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-              </div>
-            </div>
+            
+            <table class="result-table">
+                <thead>
+                    <tr>
+                        <th colspan="2">TEST</th>
+                        <th>RESULT</th>
+                        <th>FLAG</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="2">Calcium, mg/dL</td>
+                        <td>10.6</td>
+                        <td>High</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Protein, g/dL</td>
+                        <td>7.5</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Albumin, g/dL</td>
+                        <td>4.2</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Alkaline phosphatase, IU/L</td>
+                        <td>87</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
             <ul>
               <li class="item">
-                High vitamin B6 level shown at test 6 months ago
+                High vitamin B<sub>6</sub> level shown at test 6 months ago
               </li>
               <li class="item">
-                ALPL genetic test: Autosomal recessive inheritance
+                <span class="text--italic">ALPL</span> genetic test: Autosomal recessive inheritance
                 <ul>
                   <li class="item">
                     Parental genetic testing reveals single gene variant in
