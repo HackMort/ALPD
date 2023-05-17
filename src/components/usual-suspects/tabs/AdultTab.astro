@@ -1,102 +1,131 @@
 ---
-import SuspectCard from "../../Suspect-Card.astro"
+import SuspectCard from "../../Suspect-Card.astro";
 
 const data_card_1 = {
- title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
- image: "/assets/images/usual-suspects/Suspect-1.png",
- subtitle: "Osteopenia/Osteoporosis",
- subtitle_secondary: `Oswaldo Porosis`,
- subtitle_superscript: "6-9",
- info: "Note: Patient may have osteopenia as a symptom of hypophosphatasia",
- list: [ "Decrease in bone mineral density", "Fractures (from fragile bones)" ]
-}
+  title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
+  image: "/assets/images/usual-suspects/Suspect-1.png",
+  subtitle: "Osteopenia/Osteoporosis",
+  subtitle_secondary: `Oswaldo Porosis`,
+  subtitle_superscript: "6-9",
+  info: "Note: Patient may have osteopenia as a symptom of hypophosphatasia",
+  list: ["Decrease in bone mineral density", "Fractures (from fragile bones)"],
+};
 
 const data_card_2 = {
- title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
- image: "/assets/images/usual-suspects/Suspect-2.png",
- subtitle: "Chondrocalcinosis/pseudogout",
- subtitle_secondary: "Sue Dogout",
- subtitle_superscript: "10,11",
- info: "Note: Patient may have pseudogout as a symptom of hypophosphatasia",
- list: [ "Inflammation of the joint (most commonly knee, wrist, ankle, elbow, toe, shoulder, and hip)" ]
-}
+  title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
+  image: "/assets/images/usual-suspects/Suspect-2.png",
+  subtitle: "Chondrocalcinosis/pseudogout",
+  subtitle_secondary: "Sue Dogout",
+  subtitle_superscript: "10,11",
+  info: "Note: Patient may have pseudogout as a symptom of hypophosphatasia",
+  list: [
+    "Inflammation of the joint (most commonly knee, wrist, ankle, elbow, toe, shoulder, and hip)",
+  ],
+};
 
 const data_card_3 = {
- title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
- image: "/assets/images/usual-suspects/Suspect-3.png",
- subtitle: "Fibromyalgia",
- subtitle_secondary: "Phil “Big Bro” Myalgia",
- subtitle_superscript: "12",
- info: "",
- list: [ "Fatigue", "Pain", "Muscle and joint stiffness", "Trouble sleeping" ]
-}
+  title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
+  image: "/assets/images/usual-suspects/Suspect-3.png",
+  subtitle: "Fibromyalgia",
+  subtitle_secondary: "Phil “Big Bro” Myalgia",
+  subtitle_superscript: "12",
+  info: "",
+  list: ["Fatigue", "Pain", "Muscle and joint stiffness", "Trouble sleeping"],
+};
 
 const data_card_4 = {
- title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
- image: "/assets/images/usual-suspects/Suspect-4.png",
- subtitle: "Osteogenesis imperfecta",
- subtitle_secondary: "Mr. Imperfect",
- subtitle_superscript: "2,13,14",
- info: "",
- list: [ "Reduced bone density", "Bowed long bones", "Fractures", "Gracile ribs", "Metaphyseal flaring", "Brittle teeth" ]
-}
-
+  title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
+  image: "/assets/images/usual-suspects/Suspect-4.png",
+  subtitle: "Osteogenesis imperfecta",
+  subtitle_secondary: "Mr. Imperfect",
+  subtitle_superscript: "2,13,14",
+  info: "",
+  list: [
+    "Reduced bone density",
+    "Bowed long bones",
+    "Fractures",
+    "Gracile ribs",
+    "Metaphyseal flaring",
+    "Brittle teeth",
+  ],
+};
 ---
 
-<section class="hpp__profile suspect-cards-container" >
-    <!-- Multisystemic Symptoms and Disease Burden -->
-    <section id="hpp-multisystemic" class="section hpp-multisystemic">
+<section class="hpp__profile suspect-cards-container">
+  <!-- Multisystemic Symptoms and Disease Burden -->
+  <section id="hpp-multisystemic" class="section hpp-multisystemic">
+    <article class="">
+      <ul role="tablist" class="usual-suspect__subtabs">
+        <li role="presentation" class="usual-suspect__subtabs--item">
+          <a
+            href="#usual-suspects_adults-tab1"
+            role="tab"
+            id="tab1"
+            aria-selected="true"></a>
+        </li>
 
-        <article class="">
+        <li role="presentation" class="usual-suspect__subtabs--item">
+          <a
+            href="#usual-suspects_adults-tab2"
+            role="tab"
+            id="tab2"
+            tabindex="-1"></a>
+        </li>
 
-          <ul role="tablist" class="usual-suspect__subtabs">
+        <li role="presentation" class="usual-suspect__subtabs--item">
+          <a
+            href="#usual-suspects_adults-tab3"
+            role="tab"
+            id="tab3"
+            tabindex="-1"></a>
+        </li>
 
-            <li role="presentation" class="usual-suspect__subtabs--item">
-              <a href="#usual-suspects_adults-tab1" role="tab" id="tab1" aria-selected="true"></a>
-            </li>
+        <li role="presentation" class="usual-suspect__subtabs--item">
+          <a
+            href="#usual-suspects_adults-tab4"
+            role="tab"
+            id="tab4"
+            tabindex="-1"></a>
+        </li>
+      </ul>
 
-            <li role="presentation" class="usual-suspect__subtabs--item">
-              <a href="#usual-suspects_adults-tab2" role="tab" id="tab2" tabindex="-1"></a>
-            </li>
-
-            <li role="presentation" class="usual-suspect__subtabs--item">
-              <a href="#usual-suspects_adults-tab3" role="tab" id="tab3" tabindex="-1" ></a>
-            </li>
-
-            <li role="presentation" class="usual-suspect__subtabs--item">
-              <a href="#usual-suspects_adults-tab4" role="tab" id="tab4" tabindex="-1" ></a>
-            </li>
-
-          </ul>    
-    
-          
-          <section
-            id="usual-suspects_adults-tab1"
-            class="usual-suspects-tab_section"
-            data-target="usual-suspects_adults-tab1"
-            role="tabpanel"
-            aria-labelledby="tab1"
-            aria-hidden="false"
-            tabindex="-1"
-          >
-            <SuspectCard { ...data_card_1 } />
-        </section>
-        
-        
-        <section
-          id="usual-suspects_adults-tab2"
-          class="usual-suspects-tab_section"
-          data-target="usual-suspects_adults-tab2"
-          role="tabpanel"
-          aria-labelledby="tab2"
-          aria-hidden="true"
-          tabindex="-1"
-          hidden
-        >
-        <SuspectCard { ...data_card_2 } />
+      <section
+        id="usual-suspects_adults-tab1"
+        class="usual-suspects-tab_section"
+        data-target="usual-suspects_adults-tab1"
+        role="tabpanel"
+        aria-labelledby="tab1"
+        aria-hidden="false"
+        tabindex="-1"
+      >
+        <div class="mobile--only">
+          <SuspectCard {...data_card_1} />
+        </div>
+        <div class="desktop--only">
+          <div class="wrapper">
+            <div class="cards__grid_container">
+              <SuspectCard {...data_card_1} />
+              <SuspectCard {...data_card_2} />
+              <SuspectCard {...data_card_3} />
+              <SuspectCard {...data_card_4} />
+            </div>
+          </div>
+        </div>
       </section>
-      
-      
+
+      <section
+        id="usual-suspects_adults-tab2"
+        class="usual-suspects-tab_section"
+        data-target="usual-suspects_adults-tab2"
+        role="tabpanel"
+        aria-labelledby="tab2"
+        aria-hidden="true"
+        tabindex="-1"
+        hidden
+      >
+        <SuspectCard {...data_card_2} />
+      </section>
+
       <section
         id="usual-suspects_adults-tab3"
         class="usual-suspects-tab_section"
@@ -107,8 +136,7 @@ const data_card_4 = {
         tabindex="-1"
         hidden
       >
-        <SuspectCard { ...data_card_3 } />
-      
+        <SuspectCard {...data_card_3} />
       </section>
 
       <section
@@ -121,11 +149,31 @@ const data_card_4 = {
         tabindex="-1"
         hidden
       >
-        <SuspectCard { ...data_card_4 } />
-      
+        <SuspectCard {...data_card_4} />
       </section>
-
-        </article>
-      </section>
-
+    </article>
+  </section>
 </section>
+<style>
+  .mobile--only {
+    display: block;
+    @media screen and (min-width: 1024px) {
+      display: none;
+    }
+  }
+  .desktop--only {
+    display: none;
+    @media screen and (min-width: 1024px) {
+      display: block;
+    }
+  }
+  .cards__grid_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .usual-suspect__subtabs {
+    @media screen and (min-width: 1024px) {
+      display: none !important;
+    }
+  }
+</style>
