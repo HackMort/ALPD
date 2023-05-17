@@ -1,0 +1,174 @@
+---
+import ModalInfantsMobile from "./ModalInfantsMobile.astro";
+import ModalAdultsMobile from "./ModalAdultsMobile.astro";
+---
+
+<Fragment>
+  <ModalInfantsMobile />
+  <ModalAdultsMobile />
+</Fragment>
+
+<script>
+  /**
+   * #################################################################################################
+   * UsualSuspectModalMobile
+   * #################################################################################################
+   */
+
+  import { Fancybox } from "@fancyapps/ui";
+
+  class usualSuspectModalInfants {
+    usualModalInfants: Fancybox;
+
+    constructor() {
+      this.usualModalInfants = undefined;
+    }
+
+    open() {
+      this.usualModalInfants = new Fancybox(
+        [{ src: "usual-supect-modal--infants" }],
+        {
+          autoFocus: false,
+          defaultType: "inline",
+          placeFocusBack: false,
+          trapFocus: false,
+          closeButton: false,
+          height: "auto",
+        }
+      );
+    }
+
+    close() {
+      this.usualModalInfants.close();
+    }
+  }
+
+  class usualSuspectModalAdults {
+    usualModalAdults: Fancybox;
+
+    constructor() {
+      this.usualModalAdults = undefined;
+    }
+
+    open() {
+      this.usualModalAdults = new Fancybox(
+        [{ src: "usual-supect-modal--adults" }],
+        {
+          autoFocus: false,
+          defaultType: "inline",
+          placeFocusBack: false,
+          trapFocus: false,
+          closeButton: false,
+          height: "auto",
+        }
+      );
+    }
+
+    close() {
+      this.usualModalAdults.close();
+    }
+  }
+
+  //Open the modals
+  document.addEventListener("DOMContentLoaded", () => {
+    const triggerBtns = document.querySelectorAll(
+      ".btn--usual-suspect-modal-trigger"
+    );
+    triggerBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        //Save the target-data value
+        const target = btn.getAttribute("data-target");
+
+        //Open the modal
+        if (target === "infants-modal") {
+          const modal = new usualSuspectModalInfants();
+          modal.open();
+        } else if (target === "adults-modal") {
+          const modal = new usualSuspectModalAdults();
+          modal.open();
+        }
+      });
+    });
+  });
+
+  //Expand all, accordions lists
+
+  const collapseTrigger = document.querySelectorAll(
+    ".usual-supect__list_modal_expand-link"
+  );
+
+  const accordionsList1 = document.querySelectorAll(
+    "#acc-list--1 .accordion__item"
+  );
+
+  const accordionsList2 = document.querySelectorAll(
+    "#acc-list--2 .accordion__item"
+  );
+
+  const accordionsList3 = document.querySelectorAll(
+    "#acc-list--3 .accordion__item"
+  );
+
+  collapseTrigger.forEach((trigger) => {
+    trigger.addEventListener("click", (e) => {
+      e.preventDefault();
+      trigger.innerHTML =
+        trigger.innerHTML === "Expand All" ? "Collapse All" : "Expand All";
+      if (trigger.getAttribute("href") == "#acc-list--1") {
+        accordionsList1.forEach((accordion) => {
+          //Add a class to the accordion item to make it expand
+          const expanded = accordion.classList.contains(
+            "accordion__item--expanded"
+          );
+
+          const expandedAria = accordion.getAttribute("aria-expanded");
+
+          if (expanded && expandedAria == "true") {
+            accordion.classList.remove("accordion__item--expanded");
+            accordion.setAttribute("aria-expanded", "false");
+          } else if (expanded && expandedAria == "false") {
+            accordion.classList.remove("accordion__item--expanded");
+            accordion.setAttribute("aria-expanded", "false");
+          } else {
+            accordion.classList.add("accordion__item--expanded");
+            accordion.setAttribute("aria-expanded", "true");
+          }
+        });
+      } else if (trigger.getAttribute("href") == "#acc-list--2") {
+        accordionsList2.forEach((accordion) => {
+          //Add a class to the accordion item to make it expand
+          const expanded = accordion.classList.contains(
+            "accordion__item--expanded"
+          );
+
+          const expandedAria = accordion.getAttribute("aria-expanded");
+
+          if (expanded && expandedAria === "true") {
+            accordion.classList.remove("accordion__item--expanded");
+            accordion.setAttribute("aria-expanded", "false");
+          } else {
+            accordion.classList.add("accordion__item--expanded");
+            accordion.setAttribute("aria-expanded", "true");
+          }
+        });
+      } else if (trigger.getAttribute("href") == "#acc-list--3") {
+        accordionsList3.forEach((accordion) => {
+          //Add a class to the accordion item to make it expand
+          const expanded = accordion.classList.contains(
+            "accordion__item--expanded"
+          );
+
+          const expandedAria = accordion.getAttribute("aria-expanded");
+
+          if (expanded && expandedAria === "true") {
+            accordion.classList.remove("accordion__item--expanded");
+            accordion.setAttribute("aria-expanded", "false");
+          } else {
+            accordion.classList.add("accordion__item--expanded");
+            accordion.setAttribute("aria-expanded", "true");
+          }
+        });
+      }
+    });
+  });
+</script>
