@@ -4,6 +4,7 @@ import Accordion from "../components/Accordion.astro";
 import CTA from "../components/CTA.astro";
 import CaseFileModal from "../components/Case-Files/CaseFileModal.astro";
 import CaseFileModalDesktop from "../components/Case-Files/CaseFileModalDesktop.astro";
+import ModalMobile from "../components/Usual-suspect/ModalMobile.astro";
 ---
 
 <Layout
@@ -458,6 +459,28 @@ import CaseFileModalDesktop from "../components/Case-Files/CaseFileModalDesktop.
       >
       <div class="case__files_modal_wrapper">
         <CaseFileModalDesktop />
+      </div>
+    </div>
+  </section>
+  <!-- Usual suspect modal -->
+  <section class="design-system-section">
+    <div class="section-wrapper section-wrapper--small">
+      <h1 class="title">Usual suspect</h1>
+      <div class="buttons">
+        <!-- 
+          data-target attribute is the id of the modal that will be triggered
+          data-target="infants-modal" 
+          data-target="adults-modal" 
+         -->
+        <button
+          class="button btn--usual-suspect-modal-trigger"
+          data-target="infants-modal">View List</button
+        >
+        <button
+          class="button btn--usual-suspect-modal-trigger"
+          data-target="adults-modal">View List</button
+        >
+        <ModalMobile />
       </div>
     </div>
   </section>

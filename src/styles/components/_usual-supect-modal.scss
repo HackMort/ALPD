@@ -1,0 +1,118 @@
+.usual-supect__list_modal--mobile {
+    background-color: $color-folder;
+
+    .usual-supect__list_modal {
+        &_wrapper {
+            padding: 0 1rem;
+
+            .accordion {
+                &__item {
+                    border-left: 1px solid $color-folder;
+                    border-right: 1px solid $color-folder;
+                    padding: 0.9331rem 0 0 0;
+
+                    &_title {
+                        font-family: "Barlow", sans-serif;
+                        font-weight: 600;
+                        text-transform: unset;
+                        text-align: left;
+                        padding: 0;
+
+                        sup {
+                            display: none;
+                            flex-grow: 1;
+                        }
+                    }
+                }
+
+                [aria-expanded=true] {
+                    .accordion__item {
+                        &_title {
+                            color: $color-black;
+
+                            sup {
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+
+                .usual-suspect__acc {
+                    &--title {
+                        color: $color-blue;
+                        text-decoration: none;
+                        padding: 0;
+                        margin: 0 0 0.5rem 3rem;
+                    }
+
+                    &--list {
+                        li {
+                            margin: 0 0 0 5rem;
+                            position: relative;
+
+                            &::before {
+                                content: "";
+                                width: 0.29rem;
+                                height: 0.29rem;
+                                background-color: $color-carbon;
+                                border-radius: 50%;
+                                position: absolute;
+                                top: 0.8rem;
+                                left: -0.8rem;
+                            }
+
+                            &.no-bullet {
+                                &::before {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                :last-child {
+                    .title-container {
+                        .accordion__item_title {
+                            color: $color-blue;
+                        }
+                    }
+                }
+            }
+        }
+
+        &_close-button {
+            color: $color-carbon;
+            position: absolute;
+            top: 0rem;
+            right: 1rem;
+            cursor: pointer;
+            font-size: 3rem;
+        }
+
+        &_title {
+            color: $color-red;
+            margin: 2.5rem 0 1rem 0;
+            text-transform: uppercase;
+        }
+
+        &_sub-title {
+            color: $color-blue;
+            font-size: 1.125rem;
+            font-weight: 600;
+        }
+
+        &_head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        &_expand-link {
+            color: $color-red;
+            align-self: flex-end;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+    }
+}

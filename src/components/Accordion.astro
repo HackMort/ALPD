@@ -15,9 +15,8 @@ const { header, id, expanded } = Astro.props;
       role="button"
       tabindex="0"
       aria-controls={id}
-    >
-      {header}
-    </h6>
+      set:html={header}
+    />
   </div>
 
   <div class="accordion__item_content" aria-labelledby={id} tabindex="0">
