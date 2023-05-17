@@ -1,0 +1,161 @@
+---
+import SuspectCard from "../../Suspect-Card.astro"
+
+const data_card_1 = {
+ title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
+ image: "/assets/images/usual-suspects/Suspect-4.png",
+ subtitle: "Osteogenesis imperfecta",
+ subtitle_secondary: "Mr. Imperfect",
+ subtitle_superscript: "2,13,14",
+ info: "",
+ list: [ "Reduced bone density", "Bowed long bones", "Fractures", "Gracile ribs", "Metaphyseal flaring", "Brittle teeth" ]
+}
+
+const data_card_2 = {
+ title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
+ image: "/assets/images/usual-suspects/Suspect-5.png",
+ subtitle: "Nutritional rickets ",
+ subtitle_secondary: "Tricky Ricky",
+ subtitle_superscript: "8",
+ info: "",
+ list: [ "Development of bone deformities", "Failure of bone mineralization", "Bowed legs", "Delay in gross motor milestones" ]
+}
+
+const data_card_3 = {
+ title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
+ image: "/assets/images/usual-suspects/Suspect-6.png",
+ subtitle: "X-linked hypophosphatemia ",
+ subtitle_secondary: "X-Woman",
+ subtitle_superscript: "9,10",
+ info: "",
+ list: [ "Bone pain", "Bowing of the legs", "Delayed ability to walk", "Growth delay", "Reduced bone mineral density" ]
+}
+
+const data_card_4 = {
+ title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
+ image: "/assets/images/usual-suspects/Suspect-7.png",
+ subtitle: "Cleidocranial dysostosis",
+ subtitle_secondary: "Cleo",
+ subtitle_superscript: "11",
+ info: "Note: ",
+ list: [ "Abnormality of the dentition", "Narrow chest", "Recurrent respiratory infections", "Short stature", "Skeletal dysplasia osteoporosis" ]
+}
+
+const data_card_5 = {
+ title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
+ image: "/assets/images/usual-suspects/Suspect-8.png",
+ subtitle: "Campomelic dysplasia",
+ subtitle_secondary: "Shorty",
+ subtitle_superscript: "2,12",
+ info: "Note: ",
+ list: [ "Shortening, bowing, and angulation of the long bones", "Tibial dimple" ]
+}
+
+
+
+---
+
+<section class="hpp__profile suspect-cards-container" >
+    <!-- Multisystemic Symptoms and Disease Burden -->
+    <section id="hpp-multisystemic" class="section hpp-multisystemic">
+
+        <article class="">
+
+          <ul role="tablist" class="usual-suspect__subtabs">
+
+            <li role="presentation" class="usual-suspect__subtabs--item">
+              <a href="#usual-suspects_children-adolescent-tab1" role="tab" id="tab1" aria-selected="true"></a>
+            </li>
+
+            <li role="presentation" class="usual-suspect__subtabs--item">
+              <a href="#usual-suspects_children-adolescent-tab2" role="tab" id="tab2" tabindex="-1"></a>
+            </li>
+
+            <li role="presentation" class="usual-suspect__subtabs--item">
+              <a href="#usual-suspects_children-adolescent-tab3" role="tab" id="tab3" tabindex="-1" ></a>
+            </li>
+
+            <li role="presentation" class="usual-suspect__subtabs--item">
+              <a href="#usual-suspects_children-adolescent-tab4" role="tab" id="tab4" tabindex="-1" ></a>
+            </li>
+
+            <li role="presentation" class="usual-suspect__subtabs--item">
+              <a href="#usual-suspects_children-adolescent-tab5" role="tab" id="tab5" tabindex="-1" ></a>
+            </li>
+
+          </ul>    
+    
+          
+          <section
+            id="usual-suspects_children-adolescent-tab1"
+            class="usual-suspects-tab_section"
+            data-target="usual-suspects_children-adolescent-tab1"
+            role="tabpanel"
+            aria-labelledby="tab1"
+            aria-hidden="false"
+            tabindex="-1"
+          >
+            <SuspectCard { ...data_card_1 } />
+        </section>
+        
+        
+        <section
+          id="usual-suspects_children-adolescent-tab2"
+          class="usual-suspects-tab_section"
+          data-target="usual-suspects_children-adolescent-tab2"
+          role="tabpanel"
+          aria-labelledby="tab2"
+          aria-hidden="true"
+          tabindex="-1"
+          hidden
+        >
+        <SuspectCard { ...data_card_2 } />
+      </section>
+      
+      
+      <section
+        id="usual-suspects_children-adolescent-tab3"
+        class="usual-suspects-tab_section"
+        data-target="usual-suspects_children-adolescent-tab3"
+        role="tabpanel"
+        aria-labelledby="tab3"
+        aria-hidden="true"
+        tabindex="-1"
+        hidden
+      >
+        <SuspectCard { ...data_card_3 } />
+      
+      </section>
+
+      <section
+        id="usual-suspects_children-adolescent-tab4"
+        class="usual-suspects-tab_section"
+        data-target="usual-suspects_children-adolescent-tab4"
+        role="tabpanel"
+        aria-labelledby="tab4"
+        aria-hidden="true"
+        tabindex="-1"
+        hidden
+      >
+        <SuspectCard { ...data_card_4 } />
+      
+      </section>
+
+      <section
+        id="usual-suspects_children-adolescent-tab5"
+        class="usual-suspects-tab_section"
+        data-target="usual-suspects_children-adolescent-tab5"
+        role="tabpanel"
+        aria-labelledby="tab4"
+        aria-hidden="true"
+        tabindex="-1"
+        hidden
+      >
+        <SuspectCard { ...data_card_5 } />
+      
+      </section>
+
+        </article>
+      </section>
+
+</section>

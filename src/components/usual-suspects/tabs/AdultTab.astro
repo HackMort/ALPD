@@ -4,7 +4,7 @@ import SuspectCard from "../../Suspect-Card.astro"
 const data_card_1 = {
  title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
  image: "/assets/images/usual-suspects/Suspect-1.png",
- subtitle: "Osteopenia/Osteoporosis ",
+ subtitle: "Osteopenia/Osteoporosis",
  subtitle_secondary: `Oswaldo Porosis`,
  subtitle_superscript: "6-9",
  info: "Note: Patient may have osteopenia as a symptom of hypophosphatasia",
@@ -14,11 +14,31 @@ const data_card_1 = {
 const data_card_2 = {
  title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
  image: "/assets/images/usual-suspects/Suspect-2.png",
- subtitle: "Osteopenia/Osteoporosis ",
- subtitle_secondary: `Oswaldo Porosis`,
- subtitle_superscript: "6-9",
- info: "Note: Patient may have osteopenia as a symptom of hypophosphatasia",
- list: [ "Decrease in bone mineral density", "Fractures (from fragile bones)" ]
+ subtitle: "Chondrocalcinosis/pseudogout",
+ subtitle_secondary: "Sue Dogout",
+ subtitle_superscript: "10,11",
+ info: "Note: Patient may have pseudogout as a symptom of hypophosphatasia",
+ list: [ "Inflammation of the joint (most commonly knee, wrist, ankle, elbow, toe, shoulder, and hip)" ]
+}
+
+const data_card_3 = {
+ title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
+ image: "/assets/images/usual-suspects/Suspect-3.png",
+ subtitle: "Fibromyalgia",
+ subtitle_secondary: "Phil “Big Bro” Myalgia",
+ subtitle_superscript: "12",
+ info: "",
+ list: [ "Fatigue", "Pain", "Muscle and joint stiffness", "Trouble sleeping" ]
+}
+
+const data_card_4 = {
+ title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
+ image: "/assets/images/usual-suspects/Suspect-4.png",
+ subtitle: "Osteogenesis imperfecta",
+ subtitle_secondary: "Mr. Imperfect",
+ subtitle_superscript: "2,13,14",
+ info: "",
+ list: [ "Reduced bone density", "Bowed long bones", "Fractures", "Gracile ribs", "Metaphyseal flaring", "Brittle teeth" ]
 }
 
 ---
@@ -41,6 +61,10 @@ const data_card_2 = {
 
             <li role="presentation" class="usual-suspect__subtabs--item">
               <a href="#usual-suspects_adults-tab3" role="tab" id="tab3" tabindex="-1" ></a>
+            </li>
+
+            <li role="presentation" class="usual-suspect__subtabs--item">
+              <a href="#usual-suspects_adults-tab4" role="tab" id="tab4" tabindex="-1" ></a>
             </li>
 
           </ul>    
@@ -70,21 +94,36 @@ const data_card_2 = {
           hidden
         >
         <SuspectCard { ...data_card_2 } />
-        </section>
-        
-        
-        <section
-          id="usual-suspects_adults-tab3"
-          class="usual-suspects-tab_section"
-          data-target="usual-suspects_adults-tab3"
-          role="tabpanel"
-          aria-labelledby="tab3"
-          aria-hidden="true"
-          tabindex="-1"
-          hidden
-        >
-           
-          </section>
+      </section>
+      
+      
+      <section
+        id="usual-suspects_adults-tab3"
+        class="usual-suspects-tab_section"
+        data-target="usual-suspects_adults-tab3"
+        role="tabpanel"
+        aria-labelledby="tab3"
+        aria-hidden="true"
+        tabindex="-1"
+        hidden
+      >
+        <SuspectCard { ...data_card_3 } />
+      
+      </section>
+
+      <section
+        id="usual-suspects_adults-tab4"
+        class="usual-suspects-tab_section"
+        data-target="usual-suspects_adults-tab4"
+        role="tabpanel"
+        aria-labelledby="tab4"
+        aria-hidden="true"
+        tabindex="-1"
+        hidden
+      >
+        <SuspectCard { ...data_card_4 } />
+      
+      </section>
 
         </article>
       </section>
