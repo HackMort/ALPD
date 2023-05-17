@@ -24,6 +24,7 @@
         font-weight: 600;
         font-size: 30px;
         line-height: 24px;
+        cursor: pointer;
         top: 9px;
         right: 13px;
     }
@@ -669,6 +670,7 @@
                 width: 70%;
             }
         }
+
         @keyframes z9 {
             0% {
                 height: 0%;
@@ -700,11 +702,12 @@
 
         }
 
-        .form__control .form__control-error{
-            &.modifier{
+        .form__control .form__control-error {
+            &.modifier {
                 left: 41px;
                 top: 86%;
                 font-size: 12px;
+
                 @media screen and (min-width:745px) {
                     left: 0;
                     font-size: 14px;
@@ -818,11 +821,12 @@
             margin: auto;
             margin-top: 2rem;
             margin-bottom: 68px;
-            &.modifier{
+
+            &.modifier {
                 background-color: $color-red;
             }
         }
-        }
+    }
 
     .deactive-text {
         position: relative;
@@ -870,7 +874,7 @@
 
         @media screen and (min-width:745px) {
             width: 666px;
-            margin:auto;
+            margin: auto;
         }
 
         p {
