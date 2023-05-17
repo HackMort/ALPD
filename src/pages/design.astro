@@ -770,16 +770,18 @@ import ModalMobile from "../components/Usual-suspect/ModalMobile.astro";
   <section class="design-system-section">
     <div class="section-wrapper section-wrapper--small">
       <h1 class="title">Usual suspect</h1>
-      <div class="buttons">
+      <div class="buttons" style="display: flex; flex-direction: column;">
         <!-- 
           data-target attribute is the id of the modal that will be triggered
           data-target="infants-modal" 
           data-target="adults-modal" 
          -->
+        <h1>Infants</h1>
         <button
           class="button btn--usual-suspect-modal-trigger"
           data-target="infants-modal">View List</button
         >
+        <h1>Adults</h1>
         <button
           class="button btn--usual-suspect-modal-trigger"
           data-target="adults-modal">View List</button
