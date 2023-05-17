@@ -1,0 +1,187 @@
+.usual-supect__list_modal--mobile {
+    background-color: $color-folder;
+
+    .usual-supect__list_modal {
+        &_wrapper {
+            padding: 0 1rem;
+
+            .accordion {
+                &__item {
+                    border-left: 1px solid $color-folder;
+                    border-right: 1px solid $color-folder;
+                    padding: 0.9331rem 0 0 0;
+
+                    &_title {
+                        font-family: "Barlow", sans-serif;
+                        font-weight: 600;
+                        text-transform: unset;
+                        text-align: left;
+                        padding: 0;
+
+                        sup {
+                            display: none;
+                            flex-grow: 1;
+                        }
+                    }
+
+                    &.references__acc {
+                        .title-container {
+                            .accordion__item_title {
+                                color: $color-blue;
+                            }
+                        }
+                    }
+                }
+
+                [aria-expanded=true] {
+                    .accordion__item {
+                        &_title {
+                            color: $color-black;
+
+                            sup {
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+
+                .usual-suspect__acc {
+                    &--title {
+                        color: $color-blue;
+                        text-decoration: none;
+                        padding: 0;
+                        margin: 0 0 0.5rem 1rem;
+                    }
+
+                    &--list {
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        li {
+                            margin: 0 0 0 2.5rem;
+                            position: relative;
+
+                            &::before {
+                                content: "";
+                                width: 0.29rem;
+                                height: 0.29rem;
+                                background-color: $color-carbon;
+                                border-radius: 50%;
+                                position: absolute;
+                                top: 0.8rem;
+                                left: -0.8rem;
+                            }
+
+                            &.no-bullet {
+                                &::before {
+                                    display: none;
+                                }
+                            }
+
+                            em {
+                                font-style: italic;
+                            }
+
+                            ul {
+                                margin-bottom: 0;
+                            }
+                        }
+
+                        &-sub {
+                            li {
+                                margin: 0 0 0 1.5rem;
+                            }
+                        }
+                    }
+
+                    &--note {
+                        margin: 0 0 1rem 1rem;
+                        font-style: italic;
+                    }
+
+                    &--paragraph {
+                        margin: 0 0 1rem 3rem;
+                        font-weight: 600;
+                    }
+
+                    &--references {
+                        em {
+                            font-style: italic;
+                        }
+
+                        a {
+                            color: $color-black;
+                            font-weight: 400;
+                        }
+                    }
+                }
+
+                &__item--expanded {
+                    background: none !important;
+                    height: auto !important;
+
+                    .accordion__item_title {
+                        color: $color-black;
+
+                        sup {
+                            display: inline-block;
+                        }
+                    }
+
+                    .accordion__item_content {
+                        max-height: 100% !important;
+                        padding-bottom: 1.5rem !important;
+                    }
+
+                    &.references__acc {
+                        .accordion__item_title {
+                            color: $color-blue !important;
+                        }
+                    }
+
+                    .accordion__item_title::after {
+                        background-image: url('/assets/images/acc-minus.png') !important;
+                        @include transition(background-image, 0.3s, ease-in-out);
+                    }
+                }
+            }
+        }
+
+        &_close-button {
+            color: $color-carbon;
+            position: absolute;
+            top: 0rem;
+            right: 1rem;
+            cursor: pointer;
+            font-size: 3rem;
+        }
+
+        &_title {
+            color: $color-red;
+            margin: 2.5rem 0 1rem 0;
+            text-transform: uppercase;
+        }
+
+        &_sub-title {
+            color: $color-blue;
+            font-size: 1.125rem;
+            font-weight: 600;
+        }
+
+        &_head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        &_expand-link {
+            color: $color-red;
+            align-self: flex-end;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+    }
+}
