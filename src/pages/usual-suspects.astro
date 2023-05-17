@@ -2,50 +2,62 @@
 import Layout from "../layouts/Layout.astro";
 import CTA from "../components/CTA.astro";
 import MobileSelector from "../components/usual-suspects/MobileSelector.astro";
-
-
 ---
 
+<Layout title="Usual Suspects" pageClass="usual_suspects" showISI={false}>
+  <CTA
+    variation={"variant-3"}
+    linkURL=""
+    buttonLabel=""
+    content=""
+    bypassModal
+  />
 
-<Layout title="Usual Suspects" pageClass="usual_suspects" showISI={ false } >
-  <CTA variation={"variant-3"} linkURL=""  buttonLabel=""  content="" bypassModal />
-    
   <section class="section-container">
-    <div class="scrollable-content" >
-      <div class="buttons-panel-container" >
+    <div class="scrollable-content">
+      <div class="buttons-panel-container">
         <button class="button button--tertiary">Common Misdiagnoses</button>
         <hr class="hr_line" />
-        <button class="button button--tertiary">Risk of Wrongful Diagnosis</button>
-  
+        <button class="button button--tertiary"
+          >Risk of Wrongful Diagnosis</button
+        >
       </div>
     </div>
 
     <h2 class="content-title">A DISEASE IN DISGUISE</h2>
-    <p class="content-pharagraph" >Delayed identification and misdiagnoses often happen in hypophosphatasia cases because of how well it masks itself as other more common diseases.1-5</p>
-    <p class="content-pharagraph content-pharagraph--secondary" >Symptoms of hypophosphatasia are often common across other metabolic disorders and various diseases, which can impact timely and accurate diagnosis.1-5</p>
+    <p class="content-pharagraph">
+      Delayed identification and misdiagnoses often happen in hypophosphatasia
+      cases because of how well it masks itself as other more common
+      diseases.1-5
+    </p>
+    <p class="content-pharagraph content-pharagraph--secondary">
+      Symptoms of hypophosphatasia are often common across other metabolic
+      disorders and various diseases, which can impact timely and accurate
+      diagnosis.1-5
+    </p>
 
-    <h3 class="section-title" ></h3>
+    <h3 class="section-title"></h3>
   </section>
 
-
-
-  <section class="usual-suspects-tabs--mobile" >
+  <section class="usual-suspects-tabs--mobile">
     <MobileSelector />
   </section>
-  
 
-  <section class="usual-suspects-misdiagnosis" >
+  <section class="usual-suspects-misdiagnosis">
+    <hr class="horizontal_line" />
+    <hr class="horizontal_line--secondary" />
 
-    <hr class="horizontal_line" >
-    <hr class="horizontal_line--secondary" >
-
-    <h2 class="title" >A misdiagnosis can do damage</h2>
-    <p class="pharagraph" >Misdiagnosis of a patient with hypophosphatasia is common and can lead to ineffective management that can compound the clinical picture and worsen hypophosphatasia. Certain therapies used for other disorders can interfere with or dramatically worsen hypophosphatasia.4-6, 15-17</p>
-    <p class="pharagraph--secondary" >Make sure to rule out hypophosphatasia before starting patients on bisphosphonates or some commonly used supplements that may end up causing your patients harm4,5,7</p>
-  
+    <h2 class="title">A misdiagnosis can do damage</h2>
+    <p class="pharagraph">
+      Misdiagnosis of a patient with hypophosphatasia is common and can lead to
+      ineffective management that can compound the clinical picture and worsen
+      hypophosphatasia. Certain therapies used for other disorders can interfere
+      with or dramatically worsen hypophosphatasia.4-6, 15-17
+    </p>
+    <p class="pharagraph--secondary">
+      Make sure to rule out hypophosphatasia before starting patients on
+      bisphosphonates or some commonly used supplements that may end up causing
+      your patients harm4,5,7
+    </p>
   </section>
-
-  
-
-    
 </Layout>
