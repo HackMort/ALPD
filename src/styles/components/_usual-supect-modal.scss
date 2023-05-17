@@ -50,12 +50,17 @@
                         color: $color-blue;
                         text-decoration: none;
                         padding: 0;
-                        margin: 0 0 0.5rem 2.5rem;
+                        margin: 0 0 0.5rem 1rem;
                     }
 
                     &--list {
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
                         li {
-                            margin: 0 0 0 4rem;
+                            margin: 0 0 0 2.5rem;
                             position: relative;
 
                             &::before {
@@ -78,6 +83,10 @@
                             em {
                                 font-style: italic;
                             }
+
+                            ul {
+                                margin-bottom: 0;
+                            }
                         }
 
                         &-sub {
@@ -88,7 +97,7 @@
                     }
 
                     &--note {
-                        margin: 0 0 0.5rem 3rem;
+                        margin: 0 0 1rem 1rem;
                         font-style: italic;
                     }
 
