@@ -104,20 +104,41 @@ export function ShowSection () {
 
   select.addEventListener('change', function () {
     const selectedOption = select.options[select.selectedIndex].value
+    console.log('selectedOption', selectedOption)
+    const sections = document.querySelectorAll(
+      '.hpp-multisystemic__tabs section[role="tabpanel"]'
+    )
+    // console.log('sections', sections)
+    sections.forEach((section) => {
+      section.setAttribute('aria-hidden', 'true')
+      section.setAttribute('hidden', 'true')
+      if (section.getAttribute('id') === selectedOption) {
+        console.log('Section Active? : ', section)
+        section.setAttribute('aria-hidden', 'false')
+        section.removeAttribute('hidden')
 
-    const sections = document.getElementsByTagName('section')
-    for (let i = 0; i < sections.length; i++) {
-      // If a section is not hidden
-      if (sections[i].getAttribute('aria-hidden') === 'false') {
-        sections[i].setAttribute('aria-hidden', 'true')
-        sections[i].setAttribute('hidden', 'true')
+        // find all sections with role="tabpanel" and unhide them
+        const tabPanels = section.querySelectorAll(
+          '.usual-suspects-tab_section'
+        )
+        // console.log('tabPanels', tabPanels)
+        setTimeout(() => {
+          const firstTabPanel = tabPanels[0]
+          const firstPanelID = firstTabPanel.getAttribute('id')
+          firstTabPanel.removeAttribute('hidden')
+          firstTabPanel.setAttribute('aria-hidden', 'false')
+          const tabLinks = section.querySelectorAll(
+            'article .usual-suspect__subtabs a')
+          console.log('tabLinks', tabLinks)
+          tabLinks.forEach((tabLink) => {
+            tabLink.removeAttribute('aria-selected')
+            if (tabLink.getAttribute('href') === `#${firstPanelID}`) {
+              tabLink.setAttribute('aria-selected', 'true')
+            }
+          })
+        }, 0)
       }
-    }
-
-    // Showing the selected section
-    const targetSection = document.getElementById(selectedOption)
-    targetSection.setAttribute('aria-hidden', 'false')
-    targetSection.removeAttribute('hidden')
+    })
   })
 
   /* Show the selected section in the tabs */
