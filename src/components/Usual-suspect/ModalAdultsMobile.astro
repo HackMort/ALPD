@@ -27,18 +27,16 @@ import Accordion from "../Accordion.astro";
             <div class="accordion" id="acc-list--2">
                 <Accordion
                     id="usl-acc-1"
-                    header="Osteogenesis imperfecta (OI)<sup>1,3-7</sup>"
+                    header="Osteogenesis imperfecta (OI)<sup>1-6</sup>"
                 >
                     <h5 class="usual-suspect__acc--title">Shared symptoms</h5>
                     <ul class="usual-suspect__acc--list">
                         <li>Reduced bone density</li>
-                        <li>Deficient ossification of skull vault</li>
                         <li>Bowed long bones</li>
                         <li>Fractures</li>
                         <li>Gracile ribs</li>
                         <li>Narrow thorax</li>
                         <li>Metaphyseal flaring</li>
-                        <li>Widening of growth plates</li>
                         <li>Tooth loss</li>
                     </ul>
 
@@ -55,29 +53,22 @@ import Accordion from "../Accordion.astro";
                             Radiographs may help distinguish from
                             hypophosphatasia
                         </li>
-                        <li class="no-bullet">
-                            <ul class="usual-suspect__acc--list">
-                                <li>
-                                    Wormian bones of the skull and compression
-                                    fractures in the spine are common in OI but
-                                    not in hypophosphatasia
-                                </li>
-                            </ul>
-                        </li>
                         <li>Can support diagnosis with genetic testing</li>
                         <li>Clinical history and physical exam</li>
                     </ul>
                 </Accordion>
-                <Accordion id="usl-acc-2" header="Osteopenia/osteoporosis">
+                <Accordion
+                    id="usl-acc-2"
+                    header="Osteopenia/osteoporosis<sup>4,7-10</sup>"
+                >
+                    <p class="usual-suspect__acc--note">
+                        Note: Patient may have osteopenia as a symptom of
+                        hypophosphatasia<sup>11</sup>
+                    </p>
                     <h5 class="usual-suspect__acc--title">Shared symptoms</h5>
                     <ul class="usual-suspect__acc--list">
-                        <li>
-                            Shortening, bowing, and angulation of the long bones
-                        </li>
-                        <li>Diaphyseal spurs</li>
-                        <li>Tibial dimple</li>
-                        <li>Absent ossification of pedicles</li>
-                        <li>Hypoplastic fibula</li>
+                        <li>Decrease in bone mineral density</li>
+                        <li>Fractures (from fragile bones)</li>
                     </ul>
 
                     <h5 class="usual-suspect__acc--title">
@@ -85,226 +76,150 @@ import Accordion from "../Accordion.astro";
                     </h5>
                     <ul class="usual-suspect__acc--list">
                         <li>
-                            Test for persistently low alkaline phosphatase
-                            (alkaline phosphatase is low in severe patients)
+                            Test for persistently low alkaline phosphatase (may
+                            be high in men with osteoporosis)
+                        </li>
+                        <li>
+                            Test for vitamin B<sub>6</sub> and urine PEA
                         </li>
                         <li>
                             Radiographs may help distinguish from
                             hypophosphatasia
                         </li>
                         <li class="no-bullet">
-                            <ul class="usual-suspect__acc--list">
+                            <ul
+                                class="usual-suspect__acc--list usual-suspect__acc--list-sub"
+                            >
                                 <li>
-                                    CD has sites of long bone angulation (femur
-                                    and tibia), lacks ossification of the wings
-                                    of scapula, dislocated elbow, 11 pairs of
-                                    ribs, narrow iliac wings, and normal bone
-                                    density
+                                    DXA may help support a hypophosphatasia
+                                    diagnosis
                                 </li>
                             </ul>
                         </li>
-                        <li>Can support diagnosis with genetic testing</li>
-                        <li>Clinical history and physical exam</li>
+                        <li>
+                            Genetic testing may help support a hypophosphatasia
+                            diagnosis, but a hypophosphatasia diagnosis cannot
+                            be excluded by not finding an <em>ALPL</em> mutation
+                        </li>
                     </ul>
                 </Accordion>
-                <Accordion id="usl-acc-3" header="Chondrocalcinosis/pseudogout">
+                <Accordion
+                    id="usl-acc-3"
+                    header="Chondrocalcinosis/pseudogout <sup>10,12-14</sup>"
+                >
+                    <p class="usual-suspect__acc--note">
+                        Note: Patient may have pseudogout as a symptom of
+                        hypophosphatasia<sup>15</sup>
+                    </p>
                     <h5 class="usual-suspect__acc--title">Shared symptoms</h5>
                     <ul class="usual-suspect__acc--list">
-                        <li>Short stature and vertebral abnormalities</li>
+                        <li>
+                            Inflammation of the joint (most commonly knee,
+                            wrist, ankle, elbow, toe, shoulder, and hip)
+                        </li>
                     </ul>
 
                     <h5 class="usual-suspect__acc--title">
-                        How to differentiate <br /> from HPP
+                        How to differentiate <br /> from hypophosphatasia
                     </h5>
                     <ul class="usual-suspect__acc--list">
                         <li>Test for persistently low alkaline phosphatase</li>
                         <li>
-                            Radiographs may help distinguish from
-                            hypophosphatasia
-                        </li>
-                        <li>Clinical history and physical exam</li>
-                    </ul>
-                </Accordion>
-                <Accordion id="usl-acc-4" header="Osteoarthritis">
-                    <h5 class="usual-suspect__acc--title">Shared symptoms</h5>
-                    <ul class="usual-suspect__acc--list">
-                        <li>Development of bone deformities</li>
-                        <li>Failure of bone mineralization</li>
-                        <li>Bowed legs</li>
-                        <li>Delay in gross motor milestones</li>
-                    </ul>
-                    <h5 class="usual-suspect__acc--title">
-                        How to differentiate from <br /> hypophosphatasia
-                    </h5>
-                    <ul class="usual-suspect__acc--list">
-                        <li>
-                            Test for persistently low alkaline phosphatase
-                            (alkaline phosphatase is high in rickets)
-                        </li>
-                        <li>
-                            Test for vitamin B<sub>6</sub>, calcium, vitamin D,
-                            and parathyroid hormone
-                        </li>
-                        <li class="no-bullet">
-                            <ul class="usual-suspect__acc--list">
-                                <li>
-                                    Patients may have normal vitamin B<sub
-                                        >6</sub
-                                    > and urine PEA
-                                </li>
-                            </ul>
-                        </li>
-                        <li>Clinical history and physical exam</li>
-                    </ul>
-                </Accordion>
-                <Accordion id="usl-acc-5" header="Fibromyalgia">
-                    <h5 class="usual-suspect__acc--title">Shared symptoms</h5>
-                    <ul class="usual-suspect__acc--list">
-                        <li>Abnormality of the dentition</li>
-                        <li>Narrow chest</li>
-                        <li>Recurrent respiratory infections</li>
-                        <li>Short stature</li>
-                        <li>Skeletal dysplasia osteoporosis</li>
-                    </ul>
-                    <h5 class="usual-suspect__acc--title">
-                        How to differentiate from <br /> hypophosphatasia
-                    </h5>
-                    <ul class="usual-suspect__acc--list">
-                        <li>
-                            Test for persistently low alkaline phosphatase
-                            (alkaline phosphatase may be low in severe patients)
-                        </li>
-                        <li>
-                            Test for vitamin B<sub>6</sub>, calcium, vitamin D,
-                            and parathyroid hormone
-                        </li>
-                        <li>
-                            Patients may have normal vitamin B<sub>6</sub> and urine
-                            PEA
+                            Arthrocentesis and synovial fluid analysis can
+                            confirm diagnosis
                         </li>
                         <li>
                             Radiographs may help distinguish from
                             hypophosphatasia
                         </li>
-                        <li>Clinical history and physical exam</li>
-                    </ul>
-                </Accordion>
-                <Accordion id="usl-acc-6" header="Ehlers-Danlos syndrome">
-                    <h5 class="usual-suspect__acc--title">Shared symptoms</h5>
-                    <ul class="usual-suspect__acc--list">
-                        <li>Bones in skull fuse together too early</li>
-                    </ul>
-                    <h5 class="usual-suspect__acc--title">
-                        How to differentiate from <br /> hypophosphatasia
-                    </h5>
-                    <ul class="usual-suspect__acc--list">
-                        <li>Test for persistently low alkaline phosphatase</li>
-                        <li>
-                            Test for vitamin B<sub>6</sub>, calcium, vitamin D,
-                            and parathyroid hormone
-                        </li>
                         <li class="no-bullet">
-                            <ul class="usual-suspect__acc--list">
+                            <ul
+                                class="usual-suspect__acc--list usual-suspect__acc--list-sub"
+                            >
                                 <li>
-                                    Patients may have normal vitamin B<sub
-                                        >6</sub
-                                    > and urine PEA
+                                    DXA may help support a hypophosphatasia
+                                    diagnosis
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            Radiographs may help distinguish from
-                            hypophosphatasia
+                            Genetic testing may help support a hypophosphatasia
+                            diagnosis, but a hypophosphatasia diagnosis cannot
+                            be excluded by not finding an ALPL mutation
                         </li>
-                        <li>Clinical history and physical exam</li>
-                    </ul>
-                </Accordion>
-            </div>
-
-            <h2 class="usual-supect__list_modal_title">Risk of treatment</h2>
-
-            <div class="usual-supect__list_modal_head">
-                <h4 class="usual-supect__list_modal_sub-title">
-                    Treatments for <br /> differential diagnoses
-                </h4>
-                <a
-                    class="usual-supect__list_modal_expand-link"
-                    href="#acc-list--3">Collapse All</a
-                >
-            </div>
-
-            <div class="accordion" id="acc-list--3">
-                <Accordion
-                    id="usl-acc-7"
-                    header="Idiopathic juvenile osteoporosis<sup>1,7,16,19,21,22</sup>"
-                >
-                    <h5 class="usual-suspect__acc--title">Shared symptoms</h5>
-                    <ul class="usual-suspect__acc--list">
-                        <li>Fractures</li>
-                        <li>Bone pain</li>
-                        <li>Difficulty/inability to walk</li>
-                    </ul>
-                    <h5 class="usual-suspect__acc--title">
-                        How to differentiate from <br /> hypophosphatasia
-                    </h5>
-                    <ul class="usual-suspect__acc--list">
-                        <li>
-                            Test for persistently low alkaline phosphatase
-                            (alkaline phosphatase is normal in idiopathic
-                            juvenile osteoporosis)
-                        </li>
-                        <li>
-                            Test for vitamin B<sub>6</sub>, calcium, vitamin D,
-                            and parathyroid hormone
-                        </li>
-                        <li class="no-bullet">
-                            <ul class="usual-suspect__acc--list">
-                                <li>
-                                    Patients may have normal vitamin B<sub
-                                        >6</sub
-                                    > and urine PEA
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            Radiographs may help distinguish from
-                            hypophosphatasia
-                        </li>
-                        <li>Clinical history and physical exam</li>
                     </ul>
                 </Accordion>
                 <Accordion
-                    id="usl-acc-8"
-                    header="X-linked hypophosphatemia (XLH)<sup>1,5,7,16,19,23</sup>"
+                    id="usl-acc-4"
+                    header="Osteoarthritis<sup>10,13,16-18</sup>"
                 >
                     <h5 class="usual-suspect__acc--title">Shared symptoms</h5>
                     <ul class="usual-suspect__acc--list">
-                        <li>Bone pain</li>
-                        <li>Bowing of the legs</li>
-                        <li>Delayed ability to walk</li>
-                        <li>Growth delay</li>
-                        <li>Reduced bone mineral density</li>
+                        <li>Joint pain</li>
+                        <li>Limited mobility</li>
                     </ul>
                     <h5 class="usual-suspect__acc--title">
                         How to differentiate from <br /> hypophosphatasia
                     </h5>
                     <ul class="usual-suspect__acc--list">
                         <li>
-                            Test for persistently low alkaline phosphatase
-                            (alkaline phosphatase is high in XLH)
+                            Test for persistently low alkaline phosphatase (may
+                            be elevated in patients with osteoarthritis)
                         </li>
                         <li>
-                            Test for vitamin B<sub>6</sub>, calcium, vitamin D,
-                            and parathyroid hormone
+                            Radiographs may help distinguish from
+                            hypophosphatasia
+                        </li>
+                        <li class="no-bullet">
+                            <ul
+                                class="usual-suspect__acc--list usual-suspect__acc--list-sub"
+                            >
+                                <li>
+                                    DXA may help support a hypophosphatasia
+                                    diagnosis
+                                </li>
+                            </ul>
                         </li>
                         <li>
-                            Patients may have normal vitamin B<sub>6</sub> and urine
-                            PEA
+                            Genetic testing may help support a hypophosphatasia
+                            diagnosis, but a hypophosphatasia diagnosis cannot
+                            be excluded by not finding an <em>ALPL</em> mutation
                         </li>
-                        <li>Clinical history and physical exam</li>
                     </ul>
                 </Accordion>
-                <Accordion id="usl-acc-9" header="Ehlers-Danlos syndrome">
+                <Accordion
+                    id="usl-acc-5"
+                    header="Fibromyalgia <sup>10,14,19-20</sup>"
+                >
+                    <h5 class="usual-suspect__acc--title">Shared symptoms</h5>
+                    <ul class="usual-suspect__acc--list">
+                        <li>Fatigue</li>
+                        <li>Pain</li>
+                        <li>Muscle and joint stiffness</li>
+                    </ul>
+                    <h5 class="usual-suspect__acc--title">
+                        How to differentiate from <br /> hypophosphatasia
+                    </h5>
+                    <ul class="usual-suspect__acc--list">
+                        <li>
+                            Test for persistently low alkaline phosphatase (may
+                            present as normal)
+                        </li>
+                        <li>
+                            Radiographs may help distinguish from
+                            hypophosphatasia
+                        </li>
+                        <li>
+                            Genetic testing may help support a hypophosphatasia
+                            diagnosis, but a hypophosphatasia diagnosis cannot
+                            be excluded by not finding an <em>ALPL</em> mutation
+                        </li>
+                    </ul>
+                </Accordion>
+                <Accordion
+                    id="usl-acc-6"
+                    header="Ehlers-Danlos syndrome<sup>10,13,14,18-20</sup>"
+                >
                     <h5 class="usual-suspect__acc--title">Shared symptoms</h5>
                     <ul class="usual-suspect__acc--list">
                         <li>Joint hypermobility</li>
@@ -325,90 +240,226 @@ import Accordion from "../Accordion.astro";
                         <li>
                             Genetic testing may help support a hypophosphatasia
                             diagnosis, but a hypophosphatasia diagnosis cannot
-                            be excluded by not finding an ALPL mutation
+                            be excluded by not finding an <em>ALPL</em> mutation
                         </li>
                     </ul>
                 </Accordion>
-                <Accordion id="usl-acc-10" header="References">
-                    <p>
-                        <strong>1.</strong> Offiah AC, Vockley J, Munns CF, Murotsuki
-                        J. Differential diagnosis of perinatal hypophosphatasia:
-                        radiologic perspectives. Pediatr Radiol. 2019;49(1)3-22.
-                        <strong>2.</strong> Mornet E, Hofmann C, Bloch-Zupan A, Girschick
-                        H, Le Merrer M. Clinical utility gene card for: hypophosphatasia
-                        – update 2013. Eur J Hum Gen. 2014;22(4). <strong
+            </div>
+
+            <h2 class="usual-supect__list_modal_title">Risk of treatment</h2>
+
+            <div class="usual-supect__list_modal_head">
+                <h4 class="usual-supect__list_modal_sub-title">
+                    Treatments for <br /> differential diagnoses
+                </h4>
+                <a
+                    class="usual-supect__list_modal_expand-link"
+                    href="#acc-list--3">Collapse All</a
+                >
+            </div>
+
+            <div class="accordion" id="acc-list--3">
+                <Accordion id="usl-acc-7" header="Bisphosphonates">
+                    <h5 class="usual-suspect__acc--title">
+                        Patient Populations
+                    </h5>
+
+                    <ul class="usual-suspect__acc--list">
+                        <li>
+                            Bisphosphonates are commonly used in adult patients
+                            with osteoporosis<sup>21</sup>
+                        </li>
+                    </ul>
+                    <h5 class="usual-suspect__acc--title">
+                        Risk of treatment in patients with hypophosphatasia
+                    </h5>
+                    <p class="usual-suspect__acc--paragraph">
+                        The half-life of bisphosphonates can exceed 10 years and
+                        may have detrimental effects on a patient’s condition if
+                        a wrongful diagnosis is made. Make sure to rule out
+                        hypophosphatasia before starting patients on
+                        bisphosphonates.<sup>22</sup>
+                    </p>
+                    <ul class="usual-suspect__acc--list">
+                        <li>
+                            Bisphosphonates are commonly used in adult patients
+                            with osteoporosis<sup>21,23,24</sup>
+                        </li>
+                        <li>
+                            Possible increased risk of fracture at growth plate<sup
+                                >21,23,24</sup
+                            >
+                        </li>
+                        <li>
+                            Increased risk of atypical femoral fractures in
+                            adults<sup>21,23,24</sup>
+                        </li>
+                        <li>
+                            Excessively high doses have led to osteopetrosis and
+                            persistent remodeling defects, persisting more than
+                            6 years after discontinuation<sup>21,23,24</sup>
+                        </li>
+                        <li>
+                            The phosphate motifs in bisphosphonates have a
+                            similar conformation to inorganic pyrophosphate
+                            (PPi), with the accumulation of PPi associated with
+                            skeletal and systemic symptoms seen in HPP, which
+                            may ultimately result in a worsening of presenting
+                            symptoms<sup>21,23,24</sup>
+                        </li>
+                        <li>
+                            Bisphosphonates may directly or indirectly worsen
+                            HPP by binding zinc or magnesium, compromising ALP
+                            activity<sup>21,23,24</sup>
+                        </li>
+                    </ul>
+                </Accordion>
+                <Accordion
+                    id="usl-acc-8"
+                    header="Supplements: <br/> Vitamin D and calcium"
+                >
+                    <h5 class="usual-suspect__acc--title">Shared symptoms</h5>
+                    <ul class="usual-suspect__acc--list">
+                        <li>
+                            Vitamin D and calcium supplementation can be used
+                            for a myriad of conditions, ranging from rickets to
+                            depression, in adults, children, and infants.<sup
+                                >7,23,25</sup
+                            >
+                        </li>
+                    </ul>
+                    <h5 class="usual-suspect__acc--title">
+                        Risk of treatment in patients <br /> with hypophosphatasia
+                    </h5>
+                    <ul class="usual-suspect__acc--list">
+                        <li>
+                            Hypercalcemia<sup>7,23,25</sup>
+                        </li>
+                        <li>
+                            Hypercalciuria<sup>7,23,25</sup>
+                        </li>
+                        <li>
+                            Kidney stones<sup>7,23,25</sup>
+                        </li>
+                    </ul>
+                </Accordion>
+                <Accordion
+                    id="usl-acc-10"
+                    header="References"
+                    className="references__acc"
+                >
+                    <p class="usual-suspect__acc--references">
+                        <strong>1.</strong> National Institute of Child Health and
+                        Human Development. What are the symptoms of osteogenesis
+                        imperfecta (OI). Accessed March 30, 2023. <span
+                            ><a
+                                href="https://www.nichd.nih.gov/health/topics/osteogenesisimp/conditioninfo/symptoms"
+                                >https://www.nichd.nih.gov/health/topics/osteogenesisimp/conditioninfo/symptoms</a
+                            ></span
+                        >
+                        <strong>2.</strong> Marini JC, Cabral WA. Osteogenesis Imperfecta.
+                        In: Thakker RV, Whyte MP, Eisman JA, Igarashi T, eds. <em
+                            >Genetics of Bone Biology and Skeletal Disease.</em
+                        > 2nd ed. Academic Press; 2018:397-420. <strong
                             >3.</strong
-                        > National Institute of Child Health and Human Development.
-                        What are the symptoms of osteogenesis imperfecta (OI). Accessed
-                        March 30, 2023. https://www.nichd.nih.gov/health/topics/osteogenesisimp/conditioninfo/symptoms
-                        <strong>4.</strong> Marini JC, Cabral WA. Osteogenesis imperfecta.
-                        In: Thakker RV, Whyte MP, Eisman JA, Igarashi T, eds. Genetics
-                        of Bone Biology and Skeletal Disease. 2nd ed. Academic Press;
-                        2018;397-420. <strong>5.</strong> Bloch-Zupan A. Hypophosphatasia:
-                        diagnosis and clinical signs - a dental surgeon perspective.
-                        Int J Paediatr Dent. 2016;26(6):426-438. <strong
-                            >6.</strong
-                        > Taillandier A, Domingues C, De Cazanove C, et al. Molecular
-                        diagnosis of hypophosphatasia and differential diagnosis
-                        by targeted Next Generation Sequencing. Mol Genet Metab.
-                        2015;116(3):215-220. <strong>7.</strong> Duffus S, Thrasher
-                        B, Calikoglu AS. Brief clinical report: hypophosphatasia–diagnostic
-                        considerations and treatment outcomes in an infant. Case
-                        Rep Pediatr. 2018;2018:5719761. <strong>8.</strong> National
-                        Institutes of Health. Campomelic dysplasia. Accessed March
-                        17, 2023. https://rarediseases.info.nih.gov/diseases/10027/campomelic-dysplasia
-                        <strong>9.</strong> Simon S, Resch H, Klaushofer K, Roschger
-                        P, Zwerina J, Kocijan R. Hypophosphatasia: from diagnosis
-                        to treatment. Curr Rheumatol Rep. 2018;20(11):69. <strong
-                            >10.</strong
+                        > Offiah A, Vockley J, Munns CF, Murotsuki J. Differential
+                        diagnosis of perinatal hypophosphatasia: radiologic perspectives.
+                        <em>Pediatr Radiol.</em> 2019;49(1):3-22.
+                        <strong>4.</strong>
+                        Bloch-Zupan A. Hypophosphatasia: diagnosis and clinical signs
+                        - a dental surgeon perspective. <em
+                            >Int J Paediatr Dent.</em
+                        > 2016;26(6):426-438.
+                        <strong>5.</strong> Taillandier A, Domingues C, De Cazanove
+                        C, et al. Molecular diagnosis of hypophosphatasia and differential
+                        diagnosis by targeted Next Generation Sequencing. <em
+                            >Mol Genet Metab.</em
+                        > 2015;116(3):215-220.
+                        <strong>6.</strong> Duffus S, Thrasher B, Calikoglu AS. Brief
+                        clinical report: hypophosphatasia–diagnostic considerations
+                        and treatment outcomes in an infant. <em
+                            >Case Rep Pediatr.</em
+                        > 2018;2018:5719761.
+                        <strong>7.</strong> Shapiro JR, Lewiecki EM. Hypophosphatasia
+                        in adults: clinical assessment and treatment considerations.
+                        <em>J Bone Miner Res.</em> 2017;32(10):1977-1980.
+                        <strong>8.</strong> Desborough R, Nicklin P, Gossiel F, et
+                        al. Clinical and biochemical characteristics of adults with
+                        hypophosphatasia attending a metabolic bone clinic. <em
+                            >Bone.</em
                         >
-                        Macmullan P, McCarthy G. Treatment and management of pseudogout:
-                        insights for the clinician. Ther Adv Musculoskelet Dis. 2012;4(2):121-131.
-                        <strong>11.</strong> Villa-Suárez JM, García-Fontana C, Andújar-Vera
+                        2021;144:115795. <strong>9.</strong> Fink HA, Litwack-Harrison
+                        S, Taylor BC, et al. Clinical utility of routine laboratory
+                        testing to identify possible secondary causes in older men
+                        with osteoporosis: the Osteoporotic Fractures in Men (MrOS)
+                        Study. <em>Osteoporos Int.</em> 2016;27(1):331-338.
+                        <strong>10.</strong> Villa-Suárez JM, García-Fontana C, Andújar-Vera
                         F, et al. Hypophosphatasia: a unique disorder of bone mineralization.
-                        Int J Mol Sci. 2021;22(9):4303. <strong>12.</strong>
-                        Dubail J, Cormier-Daire V. Chondrodysplasias with multiple
-                        dislocations caused by defects in glycosaminoglycan synthesis.
-                        Front Genet. 2021;12:642097. <strong>13.</strong> Mohn A,
-                        De Leonibus C, de Giorgis T, Mornet E, Chiarelli F. Hypophosphatasia
-                        in a child with widened anterior fontanelle: lessons learned
-                        from late diagnosis and incorrect treatment. Acta Paediatr.
-                        2011;100(7):e43-e46. <strong>14.</strong> Tournis S, Yavropoulou
-                        MP, Polyzos SA, Doulgeraki A. Hypophosphatasia. J Clin Med.
-                        2021;10(23):5676. <strong>15.</strong> Pettifor JM. Nutritional
-                        rickets. In: Glorieux FH, Pettifor JM, Jüppner H, eds. Pediatric
-                        Bone. 2nd ed. Academic Press; 2012:625-654. <strong
-                            >16.</strong
+                        <em>Int J Mol Sci.</em> 2021;22(9):4303.
+                        <strong>11.</strong>
+                        Varacallo M, Seaman TJ, Jandu JS, et al. Osteopenia. StatPearls
+                        [Internet]. 2022. Accessed March 30, 2023. <a
+                            href="https://www.ncbi.nlm.nih.gov/books/NBK499878/"
+                            >https://www.ncbi.nlm.nih.gov/books/NBK499878/</a
                         >
-                        Mckiernan FE, Dong J, Berg RL, et al. Mutational and biochemical
-                        findings in adults with persistent hypophosphatasemia. Osteoporos
-                        Int. 2017;28:2343-2348.
-                        <strong>17.</strong> Genetic and Rare Disease Information
-                        Center. Cleidocranial dysplasia. Accessed March 30, 2023.
-                        https://rarediseases.info.nih.gov/diseases/6118/cleidocranial-dysplasia
-                        <strong>18.</strong> Center of Disease Control. Facts about
-                        craniosynostosis. Accessed March 30, 2023. https://www.cdc.gov/ncbddd/birthdefects
-                        craniosynostosis.html#:~:text=What%20is%20Craniosynostosis
-                        <strong>19.</strong> Nunes ME. Hypophosphatasia. In: Adam
-                        MP, Ardinger HH, Pagon RA, et al, eds. GeneReviews®. University
-                        of Washington; 2007. Accessed March 30, 2023. http://www.ncbi.nlm.nih.gov/books/NBK1150/
-                        <strong>20.</strong>
-                        Rockman-Greenberg C. Hypophosphatasia. Pediatr Endocrinol
-                        Rev. 2013;10(suppl 2):380-388. <strong>21.</strong> Imerci
-                        A, Canbek U, Haghari S, Surer L, Kocak M. Idiopathic juvenile
-                        osteoporosis: a case report and review of the literature.
-                        Int J Surg Case Rep. 2015;9;127-129. <strong>22.</strong
+                        <strong>12.</strong> Macmullan P, McCarthy G. Treatment and
+                        management of pseudogout: insights for the clinician. <em
+                            >Ther Adv Muscoloskel Dis.</em
+                        > 2012;4(2):121-131. <strong>13.</strong> Tournis S, Yavropoulou
+                        MP, Polyzos SA, Doulgeraki A. Hypophosphatasia. <em
+                            >J Clin Med.</em
                         >
-                        Kulkarni ML, Keshavamurthy KS. Juvenile idiopathic osteoporosis.
-                        Indian Pediatr. 2004;41(7):737-740. <strong>23.</strong>
-                        Genetic and Rare Disease Information Center. X-linked hypophosphatemia.
-                        Accessed March 30, 2023. https://rarediseases.info.nih.gov/diseases/12943/x-linked-hypophosphatemia
-                        <strong>24.</strong> Abel MD, Carrasco LR. Ehlers-Danlos
-                        syndrome: classifications, oral manifestations, and dental
-                        considerations. Oral Surg Oral Med Oral Pathol Oral Radiol
-                        Endod. 2006;102(5):582-590. <strong>25.</strong> Sobey G.
-                        Ehlers-Danlos syndrome: how to diagnose and when to perform
-                        genetic tests. Arch Dis Child. 2015;100(1):57-61.
+                        2021;10(23):5676. <strong>14.</strong> Simon S, Resch H,
+                        Klaushofer K, Roschger P, Zwerina J, Kocijan R. Hypophosphatasia:
+                        from diagnosis to treatment. <em>Curr Rheumatol Rep.</em
+                        > 2018;20(11):69.
+                        <strong>15.</strong> Rosenthal AK, Ryan LM. Calcium pyrophosphate
+                        deposition disease. <em>N Engl J Med.</em> 2016;374(26):2575-2584.
+                        <strong>16.</strong> National Institute of Arthritis and
+                        Musculoskeletal and Skin Diseases. Osteoarthritis. Accessed
+                        March 30, 2023. <a
+                            href="https://www.niams.nih.gov/health-topics/osteoarthritis"
+                            >https://www.niams.nih.gov/health-topics/osteoarthritis</a
+                        >
+                        <strong>17.</strong> Park HM, Lee JH, Lee YJ. Positive association
+                        of serum alkaline phosphatase level with severe knee osteoarthritis:
+                        a nationwide population-based study. <em
+                            >Diagnostics (Basel).</em
+                        > 2020;10(12):1016. <strong>18.</strong> Kishnani PS, Rush
+                        ET, Arudne P, et al. Monitoring guidance for patients with
+                        hypophosphatasia treated with asfotase alfa. <em
+                            >Mol Genet Metab.</em
+                        >
+                        2017;122(1-2):4-17.<strong>19.</strong> Abel MD, Carrasco
+                        LR. Ehlers-Danlos syndrome: classifications, oral manifestations,
+                        and dental considerations. <em
+                            >Oral Surg Oral Med Oral Pathol Oral Radiol Endod.</em
+                        > 2006;102(5):582-590.
+                        <strong>20.</strong> Sobey G. Ehlers-Danlos syndrome: how
+                        to diagnose and when to perform genetic tests. <em
+                            >Arch Dis Child.</em
+                        >
+                        2015;100(1):57-61.
+                        <strong>21.</strong> Boyce AM, Tosi LL, Paul SM. Bisphosphonate
+                        treatment for children with disabling conditions. <em
+                            >PM R.</em
+                        > 2014;6(5):427-436.
+                        <strong>22.</strong> Stadecker WJ. Bisphosphonates 101: an
+                        update for the general dentist. <em
+                            >Inside Dentistry.</em
+                        > 2008. <strong>23.</strong> Bianchi ML, Bishop NJ, Guañabens
+                        N, et al; Rare Bone Disease Action Group of the European
+                        Calcified Tissue Society. Hypophosphatasia in adolescents
+                        and adults: overview of diagnosis and treatment. <em
+                            >Osteoporos Int.</em
+                        > 2020;31(8):1445-1460.
+                        <strong>24.</strong> Choida V, Bubbear JS. Update on the
+                        management of hypophosphatasia. <em
+                            >Ther Adv Musculoskelet Dis.</em
+                        > 2019;11:1759720X19863997. <strong>25.</strong>
+                        Martos-Moreno GA, Calzada J, Couce ML, Argente J. Hypophosphatasia:
+                        clinical manifestations, diagnostic recommendations and therapeutic
+                        options. <em>An Pediatr (Engl Ed).</em> 2018;88(6):356.e1-356.e11.
                     </p>
                 </Accordion>
             </div>

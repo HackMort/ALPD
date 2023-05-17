@@ -21,12 +21,28 @@ export function Accordions () {
         e.preventDefault()
         e.stopPropagation()
         const expanded = item.getAttribute('aria-expanded') === 'true' || false
-        item.setAttribute('aria-expanded', !expanded)
-        accordionItems.forEach((current) => {
-          if (current !== item) {
-            current.setAttribute('aria-expanded', false)
-          }
-        })
+        const itemClass = item.classList.contains('accordion__item--expanded')
+        console.log(expanded)
+        console.log(itemClass)
+
+
+        if(itemClass && expanded == true) {
+          item.classList.remove('accordion__item--expanded')
+          item.setAttribute('aria-expanded', false)
+        } else if (itemClass && expanded == false) {
+          item.classList.remove('accordion__item--expanded')
+          item.setAttribute('aria-expanded', false)
+        } else {
+          item.setAttribute('aria-expanded', !expanded)
+
+          accordionItems.forEach((current) => {
+            if (current !== item) {
+              current.setAttribute('aria-expanded', false)
+            }
+          })
+        }
+
+
       })
     })
   }

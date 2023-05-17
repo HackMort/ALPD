@@ -3,12 +3,18 @@ type Props = {
   id: string;
   header: string;
   expanded?: boolean;
+  className?: string;
 };
 
-const { header, id, expanded } = Astro.props;
+const { header, id, expanded, className } = Astro.props;
 ---
 
-<article id={id} role="tab" class="accordion__item" aria-expanded={expanded}>
+<article
+  id={id}
+  role="tab"
+  class=`accordion__item ${className || ''}`
+  aria-expanded={expanded}
+>
   <div class="title-container">
     <h6
       class="accordion__item_title"

@@ -23,6 +23,14 @@
                             flex-grow: 1;
                         }
                     }
+
+                    &.references__acc {
+                        .title-container {
+                            .accordion__item_title {
+                                color: $color-blue;
+                            }
+                        }
+                    }
                 }
 
                 [aria-expanded=true] {
@@ -42,12 +50,12 @@
                         color: $color-blue;
                         text-decoration: none;
                         padding: 0;
-                        margin: 0 0 0.5rem 3rem;
+                        margin: 0 0 0.5rem 2.5rem;
                     }
 
                     &--list {
                         li {
-                            margin: 0 0 0 5rem;
+                            margin: 0 0 0 4rem;
                             position: relative;
 
                             &::before {
@@ -66,15 +74,67 @@
                                     display: none;
                                 }
                             }
+
+                            em {
+                                font-style: italic;
+                            }
+                        }
+
+                        &-sub {
+                            li {
+                                margin: 0 0 0 1.5rem;
+                            }
+                        }
+                    }
+
+                    &--note {
+                        margin: 0 0 0.5rem 3rem;
+                        font-style: italic;
+                    }
+
+                    &--paragraph {
+                        margin: 0 0 1rem 3rem;
+                        font-weight: 600;
+                    }
+
+                    &--references {
+                        em {
+                            font-style: italic;
+                        }
+
+                        a {
+                            color: $color-black;
+                            font-weight: 400;
                         }
                     }
                 }
 
-                :last-child {
-                    .title-container {
-                        .accordion__item_title {
-                            color: $color-blue;
+                &__item--expanded {
+                    background: none !important;
+                    height: auto !important;
+
+                    .accordion__item_title {
+                        color: $color-black;
+
+                        sup {
+                            display: inline-block;
                         }
+                    }
+
+                    .accordion__item_content {
+                        max-height: 100% !important;
+                        padding-bottom: 1.5rem !important;
+                    }
+
+                    &.references__acc {
+                        .accordion__item_title {
+                            color: $color-blue !important;
+                        }
+                    }
+
+                    .accordion__item_title::after {
+                        background-image: url('/assets/images/acc-minus.png') !important;
+                        @include transition(background-image, 0.3s, ease-in-out);
                     }
                 }
             }

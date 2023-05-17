@@ -63,21 +63,60 @@ import ModalAdultsMobile from "./ModalAdultsMobile.astro";
 
             if (trigger.getAttribute("href") == "#acc-list--1") {
                 accordionsList1.forEach((accordion) => {
-                    accordion.getAttribute("aria-expanded") === "true"
-                        ? accordion.setAttribute("aria-expanded", "false")
-                        : accordion.setAttribute("aria-expanded", "true");
+                    //Add a class to the accordion item to make it expand
+                    const expanded = accordion.classList.contains(
+                        "accordion__item--expanded"
+                    );
+
+                    const expandedAria =
+                        accordion.getAttribute("aria-expanded");
+
+                    if (expanded && expandedAria == "true") {
+                        accordion.classList.remove("accordion__item--expanded");
+                        accordion.setAttribute("aria-expanded", "false");
+                    } else if (expanded && expandedAria == "false") {
+                        accordion.classList.remove("accordion__item--expanded");
+                        accordion.setAttribute("aria-expanded", "false");
+                    } else {
+                        accordion.classList.add("accordion__item--expanded");
+                        accordion.setAttribute("aria-expanded", "true");
+                    }
                 });
             } else if (trigger.getAttribute("href") == "#acc-list--2") {
                 accordionsList2.forEach((accordion) => {
-                    accordion.getAttribute("aria-expanded") === "true"
-                        ? accordion.setAttribute("aria-expanded", "false")
-                        : accordion.setAttribute("aria-expanded", "true");
+                    //Add a class to the accordion item to make it expand
+                    const expanded = accordion.classList.contains(
+                        "accordion__item--expanded"
+                    );
+
+                    const expandedAria =
+                        accordion.getAttribute("aria-expanded");
+
+                    if (expanded && expandedAria === "true") {
+                        accordion.classList.remove("accordion__item--expanded");
+                        accordion.setAttribute("aria-expanded", "false");
+                    } else {
+                        accordion.classList.add("accordion__item--expanded");
+                        accordion.setAttribute("aria-expanded", "true");
+                    }
                 });
             } else if (trigger.getAttribute("href") == "#acc-list--3") {
                 accordionsList3.forEach((accordion) => {
-                    accordion.getAttribute("aria-expanded") === "true"
-                        ? accordion.setAttribute("aria-expanded", "false")
-                        : accordion.setAttribute("aria-expanded", "true");
+                    //Add a class to the accordion item to make it expand
+                    const expanded = accordion.classList.contains(
+                        "accordion__item--expanded"
+                    );
+
+                    const expandedAria =
+                        accordion.getAttribute("aria-expanded");
+
+                    if (expanded && expandedAria === "true") {
+                        accordion.classList.remove("accordion__item--expanded");
+                        accordion.setAttribute("aria-expanded", "false");
+                    } else {
+                        accordion.classList.add("accordion__item--expanded");
+                        accordion.setAttribute("aria-expanded", "true");
+                    }
                 });
             }
         });
