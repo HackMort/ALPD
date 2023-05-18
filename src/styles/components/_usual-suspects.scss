@@ -1,54 +1,39 @@
 /* Usual Suspects */
 .usual_suspects {
 
-    .mod-1,
-    .mod-2 {
-        display: none;
-    }
+    .usual-suspects-page__hero {
 
-    .cta .variant-3 .red-string.mod-3 {
-        bottom: 106px;
-        right: -22px;
-        transform: rotate(204deg);
-    }
+        .common-page-hero__title {
+            right: -1rem;
+            top: 50%;
 
-    .cta .variant-3 {
-        padding: 0;
-        height: 177px;
-        background-image: url(assets/images/usual-suspects/usual-suspects__background.png);
-        background-size: cover;
-        background-size: 211%;
-        background-position-y: 100%;
-        background-position-x: 68%;
+            transform: translateY(-50%) rotate(-8deg);
 
-        .cta__text {
-            display: none;
+            @media screen and (min-width: 768px) {
+                right: auto;
+                left: calc(var(--wrapper-margin) / 2);
+
+                top: 50%;
+            }
+
+            @media screen and (min-width: 1600px) {
+                left: calc((100vw - 90rem) / 2);
+            }
         }
-    }
 
-    .button.document-link {
-        display: none;
-    }
+        .red-string {
+            position: absolute;
 
-    .cta {
-        padding: 0;
-        position: relative;
-    }
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(21deg);
 
-    .cta::before {
-        content: "";
-        height: 100px;
-        width: 282px;
-        right: -12px;
-        top: 47px;
-
-        background-image: url(/assets/images/usual-suspects/usual-suspects-seal.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-
-        position: absolute;
-        z-index: 1;
-        transform: rotateZ(-6deg);
+            @media screen and (min-width: 768px) {
+                top: auto;
+                bottom: 1.5rem;
+                transform: translateX(-50%) rotate(-7deg);
+            }
+        }
     }
 
     .section-container {
@@ -311,13 +296,6 @@
 
 @media screen and (min-width: 480px) {
     .usual_suspects {
-        .cta .variant-3 {
-            background-size: 166%;
-            background-position-y: 100%;
-            background-position-x: 87%;
-            height: 200px;
-        }
-
         .usual-suspects-misdiagnosis {
             .horizontal_line {
                 transform: rotateZ(5deg);
@@ -334,13 +312,6 @@
 
 @media screen and (min-width: 600px) {
     .usual_suspects {
-        .cta .variant-3 {
-            height: 250px;
-
-            .red-string.mod-3 {
-                bottom: 131px;
-            }
-        }
 
         .content-pharagraph {
             text-align: center;
@@ -378,10 +349,6 @@
 
 @media screen and (min-width: 767px) {
     .usual_suspects {
-        .cta .variant-3 {
-            height: 350px;
-        }
-
         .content-pharagraph {
             font-size: 22px;
             margin-top: 27px;
@@ -411,35 +378,6 @@
         }
 
     }
-}
-
-@media screen and (min-width: 1023px) {
-    .usual_suspects {
-        .cta .variant-3 {
-            height: 380px;
-        }
-
-        .cta .variant-3 {
-
-
-            .red-string.mod-3 {
-                bottom: 27px;
-                transform: rotate(171deg);
-                right: 3px;
-            }
-        }
-
-        .cta::before {
-            width: 339px;
-            left: 68px;
-            top: 119px;
-        }
-
-
-
-    }
-
-
 }
 
 /* Usual Suspects */
