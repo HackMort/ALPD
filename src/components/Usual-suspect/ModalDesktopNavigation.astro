@@ -1,8 +1,105 @@
-<ul class="navigation__links">
-  <li class="navigation__item prev">
-    <a class="navigation__item_link prev">&lsaquo; previous</a>
+---
+type Props = {
+  type?: string;
+};
+
+const { type } = Astro.props;
+---
+
+<ul class=`navigation__links ${type}`>
+  <li class=`navigation__item prev ${type}`>
+    <a class=`navigation__item_link prev ${type}`>&lsaquo; previous</a>
   </li>
-  <li class="navigation__item next">
-    <a class="navigation__item_link next">next &rsaquo;</a>
+  <li class=`navigation__item next ${type}`>
+    <a class=`navigation__item_link next ${type}`>next &rsaquo;</a>
   </li>
 </ul>
+
+<!-- Navigation -->
+<script>
+  // vanilla document ready
+  document.addEventListener("DOMContentLoaded", function (event) {
+    // Navigation Functionality
+    const modalArticlesAdults = document.querySelectorAll(
+      ".modal__grids_article.adults"
+    );
+    const modalArticlesInfants = document.querySelectorAll(
+      ".modal__grids_article.infants"
+    );
+    console.log(modalArticlesAdults);
+    console.log(modalArticlesInfants);
+
+    const currentActiveArticleAdults = document.querySelector(
+      ".modal__grids_article.adults.is--active"
+    );
+
+    const currentActiveArticleInfants = document.querySelector(
+      ".modal__grids_article.infants.is--active"
+    );
+
+    console.log(currentActiveArticleAdults);
+    console.log(currentActiveArticleInfants);
+
+    hidePrev(currentActiveArticleAdults, modalArticlesAdults, "adults");
+    hidePrev(currentActiveArticleInfants, modalArticlesInfants, "infants");
+
+    const navigationLinksAdults = document.querySelectorAll(
+      ".adults.navigation__item_link"
+    );
+
+    const navigationLinksInfants = document.querySelectorAll(
+      ".infants.navigation__item_link"
+    );
+
+    console.log(navigationLinksAdults);
+    console.log(navigationLinksInfants);
+
+    navigationHandle(navigationLinksAdults, modalArticlesAdults, "adults");
+    navigationHandle(navigationLinksInfants, modalArticlesInfants, "infants");
+  });
+
+  function hidePrev(current: any, modalArticles: any, type: string) {
+    if (current === modalArticles[0]) {
+      document
+        .querySelector(`.${type} .navigation__item.prev`)
+        .classList.add("hidden");
+    } else if (current === modalArticles[modalArticles.length - 1]) {
+      document
+        .querySelector(`.${type} .navigation__item.next`)
+        .classList.add("hidden");
+    } else {
+      document
+        .querySelector(`.${type} .navigation__item.prev`)
+        .classList.remove("hidden");
+      document
+        .querySelector(`.${type} .navigation__item.next`)
+        .classList.remove("hidden");
+    }
+  }
+
+  function navigationHandle(links: any, modalArticles: any, type: string) {
+    links.forEach((link: any) => {
+      link.addEventListener("click", (e: any) => {
+        e.preventDefault();
+        const currentActiveArticle = document.querySelector(
+          `.${type}.modal__grids_article.is--active`
+        );
+        const currentActiveArticleIndex =
+          Array.from(modalArticles).indexOf(currentActiveArticle);
+        const nextArticleIndex = currentActiveArticleIndex + 1;
+        const prevArticleIndex = currentActiveArticleIndex - 1;
+        const nextArticle = modalArticles[nextArticleIndex];
+        const prevArticle = modalArticles[prevArticleIndex];
+        if (link.classList.contains("next")) {
+          currentActiveArticle.classList.remove("is--active");
+          nextArticle.classList.add("is--active");
+          hidePrev(nextArticle, modalArticles, type);
+        } else if (link.classList.contains("prev")) {
+          currentActiveArticle.classList.remove("is--active");
+          prevArticle.classList.add("is--active");
+          hidePrev(prevArticle, modalArticles, type);
+        }
+      });
+    });
+  }
+</script>

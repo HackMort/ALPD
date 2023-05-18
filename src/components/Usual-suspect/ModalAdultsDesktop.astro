@@ -7,7 +7,7 @@ import ModalDesktopNavigation from "./ModalDesktopNavigation.astro";
     <button data-fancybox-close class="usual-supect__modal_close-button"
         >×</button
     >
-    <article class="modal__grids_article is--active" data-page="1">
+    <article class="modal__grids_article adults is--active" data-page="1">
         <div class="modal__grids_article--bg">
             <h1 class="modal__grids_title">ADULT MISDIAGNOSES</h1>
             <div class="grid align--baseline border--2x">
@@ -219,7 +219,7 @@ import ModalDesktopNavigation from "./ModalDesktopNavigation.astro";
             </div><!-- end of grid -->
         </div>
     </article>
-    <article class="modal__grids_article" data-page="2">
+    <article class="modal__grids_article adults" data-page="2">
         <div class="modal__grids_article--bg--white">
             <div class="grid align--baseline">
                 <div class="left">
@@ -368,7 +368,7 @@ import ModalDesktopNavigation from "./ModalDesktopNavigation.astro";
             </div><!-- end of grid -->
         </div>
     </article>
-    <article class="modal__grids_article" data-page="3">
+    <article class="modal__grids_article adults" data-page="3">
         <div class="modal__grids_article--bg--white">
             <div class="grid align--baseline full--width">
                 <div class="col">
@@ -495,79 +495,5 @@ import ModalDesktopNavigation from "./ModalDesktopNavigation.astro";
             </div><!-- end of grid -->
         </div>
     </article>
-    <ModalDesktopNavigation />
+    <ModalDesktopNavigation type="adults" />
 </section>
-
-<script>
-    // vanilla document ready
-    document.addEventListener("DOMContentLoaded", function (event) {
-        // Navigation Functionality
-        const modalArticles = document.querySelectorAll(
-            ".modal__grids_article"
-        );
-        const currentActiveArticle = document.querySelector(
-            ".modal__grids_article.is--active"
-        );
-        if (currentActiveArticle === modalArticles[0]) {
-            document
-                .querySelector(".navigation__item.prev")
-                .classList.add("hidden");
-        } else if (
-            currentActiveArticle === modalArticles[modalArticles.length - 1]
-        ) {
-            document
-                .querySelector(".navigation__item.next")
-                .classList.add("hidden");
-        } else {
-            document
-                .querySelector(".navigation__item.prev")
-                .classList.remove("hidden");
-            document
-                .querySelector(".navigation__item.next")
-                .classList.remove("hidden");
-        }
-        const navigationLinks = document.querySelectorAll(
-            ".navigation__item_link"
-        );
-
-        navigationLinks.forEach((link) => {
-            link.addEventListener("click", (e) => {
-                e.preventDefault();
-                const currentActiveArticle = document.querySelector(
-                    ".modal__grids_article.is--active"
-                );
-                const currentActiveArticleIndex =
-                    Array.from(modalArticles).indexOf(currentActiveArticle);
-                const nextArticleIndex = currentActiveArticleIndex + 1;
-                const prevArticleIndex = currentActiveArticleIndex - 1;
-                const nextArticle = modalArticles[nextArticleIndex];
-                const prevArticle = modalArticles[prevArticleIndex];
-                if (link.classList.contains("next")) {
-                    currentActiveArticle.classList.remove("is--active");
-                    nextArticle.classList.add("is--active");
-                    if (
-                        nextArticle === modalArticles[modalArticles.length - 1]
-                    ) {
-                        document
-                            .querySelector(".navigation__item.next")
-                            .classList.add("hidden");
-                    }
-                    document
-                        .querySelector(".navigation__item.prev")
-                        .classList.remove("hidden");
-                } else if (link.classList.contains("prev")) {
-                    currentActiveArticle.classList.remove("is--active");
-                    prevArticle.classList.add("is--active");
-                    if (prevArticle === modalArticles[0]) {
-                        document
-                            .querySelector(".navigation__item.prev")
-                            .classList.add("hidden");
-                    }
-                    document
-                        .querySelector(".navigation__item.next")
-                        .classList.remove("hidden");
-                }
-            });
-        });
-    });
-</script>
