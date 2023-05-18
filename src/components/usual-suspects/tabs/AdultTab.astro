@@ -1,5 +1,6 @@
 ---
 import SuspectCard from "../../Suspect-Card.astro";
+import ModalMobile from "../modals/ModalMobile.astro";
 
 const data_card_1 = {
   title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
@@ -161,6 +162,13 @@ const data_card_4 = {
       View the full list of suspects, shared symptoms, and how to differentiate
       from hypophosphatasia:
     </p>
+
+    <button
+      class="button btn--usual-suspect-modal-trigger"
+      data-target="adults-modal">View List</button
+    >
+
+    <ModalMobile />
   </section>
 </section>
 
