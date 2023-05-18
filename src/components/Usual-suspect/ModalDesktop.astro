@@ -1,0 +1,92 @@
+---
+import ModalInfantsDesktop from "./ModalInfantsMobile.astro";
+// import ModalAdultsMobile from "./ModalAdultsMobile.astro";
+---
+
+<Fragment>
+  <ModalInfantsDesktop />
+</Fragment>
+
+<script>
+  /**
+   * #################################################################################################
+   * UsualSuspectModalDesktop
+   * #################################################################################################
+   */
+
+  import { Fancybox } from "@fancyapps/ui";
+
+  class usualSuspectModalInfantsDesktop {
+    usualModalInfantsDesktop: Fancybox;
+
+    constructor() {
+      this.usualModalInfantsDesktop = undefined;
+    }
+
+    open() {
+      this.usualModalInfantsDesktop = new Fancybox(
+        [{ src: "usual-supect-modal--infants" }],
+        {
+          autoFocus: false,
+          defaultType: "inline",
+          placeFocusBack: false,
+          trapFocus: false,
+          closeButton: false,
+          height: "auto",
+        }
+      );
+    }
+
+    close() {
+      this.usualModalInfantsDesktop.close();
+    }
+  }
+
+  class usualSuspectModalAdultsDesktop {
+    usualModalAdultsDesktop: Fancybox;
+
+    constructor() {
+      this.usualModalAdultsDesktop = undefined;
+    }
+
+    open() {
+      this.usualModalAdultsDesktop = new Fancybox(
+        [{ src: "usual-supect-modal--adults" }],
+        {
+          autoFocus: false,
+          defaultType: "inline",
+          placeFocusBack: false,
+          trapFocus: false,
+          closeButton: false,
+          height: "auto",
+        }
+      );
+    }
+
+    close() {
+      this.usualModalAdultsDesktop.close();
+    }
+  }
+
+  //Open the modals
+  document.addEventListener("DOMContentLoaded", () => {
+    const triggerBtns = document.querySelectorAll(
+      ".btn--usual-suspect-modal-desktop"
+    );
+    triggerBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        //Save the target-data value
+        const target = btn.getAttribute("data-target");
+
+        //Open the modal
+        if (target === "infants-modal") {
+          const modal = new usualSuspectModalInfantsDesktop();
+          modal.open();
+        } else if (target === "adults-modal") {
+          const modal = new usualSuspectModalAdultsDesktop();
+          modal.open();
+        }
+      });
+    });
+  });
+</script>
