@@ -9,6 +9,7 @@ const data_card_1 = {
   subtitle_superscript: "6-9",
   info: "Note: Patient may have osteopenia as a symptom of hypophosphatasia",
   list: ["Decrease in bone mineral density", "Fractures (from fragile bones)"],
+  type: "adults",
 };
 
 const data_card_2 = {
@@ -21,6 +22,7 @@ const data_card_2 = {
   list: [
     "Inflammation of the joint (most commonly knee, wrist, ankle, elbow, toe, shoulder, and hip)",
   ],
+  type: "adults",
 };
 
 const data_card_3 = {
@@ -31,6 +33,7 @@ const data_card_3 = {
   subtitle_superscript: "12",
   info: "",
   list: ["Fatigue", "Pain", "Muscle and joint stiffness", "Trouble sleeping"],
+  type: "adults",
 };
 
 const data_card_4 = {
@@ -48,13 +51,14 @@ const data_card_4 = {
     "Metaphyseal flaring",
     "Brittle teeth",
   ],
+  type: "adults",
 };
 ---
 
 <section class="hpp__profile suspect-cards-container">
   <!-- Multisystemic Symptoms and Disease Burden -->
   <section id="hpp-multisystemic" class="section hpp-multisystemic">
-    <article class="">
+    <article class="usual-suspect__sections">
       <ul role="tablist" class="usual-suspect__subtabs">
         <li role="presentation" class="usual-suspect__subtabs--item">
           <a
@@ -152,8 +156,14 @@ const data_card_4 = {
         <SuspectCard {...data_card_4} />
       </section>
     </article>
+
+    <p class="usual-suspect__note">
+      View the full list of suspects, shared symptoms, and how to differentiate
+      from hypophosphatasia:
+    </p>
   </section>
 </section>
+
 <style>
   .mobile--only {
     display: block;

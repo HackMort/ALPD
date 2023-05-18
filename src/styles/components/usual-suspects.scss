@@ -1,7 +1,8 @@
 /* Usual Suspects */
 .usual_suspects {
 
-    .mod-1, .mod-2 {
+    .mod-1,
+    .mod-2 {
         display: none;
     }
 
@@ -19,39 +20,39 @@
         background-size: 211%;
         background-position-y: 100%;
         background-position-x: 68%;
-        
+
         .cta__text {
             display: none;
-        }        
+        }
     }
-    
+
     .button.document-link {
         display: none;
     }
-    
+
     .cta {
         padding: 0;
         position: relative;
     }
-    
+
     .cta::before {
         content: "";
         height: 100px;
         width: 282px;
         right: -12px;
         top: 47px;
-        
+
         background-image: url(/assets/images/usual-suspects/usual-suspects-seal.png);
         background-size: contain;
         background-repeat: no-repeat;
-        
+
         position: absolute;
         z-index: 1;
         transform: rotateZ(-6deg);
     }
-    
+
     .section-container {
-        color:white;
+        color: white;
         padding-top: 20px;
         padding-bottom: 45px;
         padding-left: 24px;
@@ -62,10 +63,11 @@
             color: white;
             font-size: 16px;
             padding: 0;
-            text-decoration: none;            
+            text-decoration: none;
             font-family: "oswald", sans-serif;
             font-weight: 400;
         }
+
         button:first-of-type {
             padding-bottom: 5px;
             white-space: nowrap;
@@ -90,16 +92,16 @@
         border: 0;
         margin: 0 24px;
     }
-    
+
     .scrollable-content {
         overflow-y: scroll;
         height: 36px;
 
     }
-    
+
     .content-title {
         font-family: "veneer", sans-serif;
-        margin-top: 30px;        
+        margin-top: 30px;
         color: $color-red;
         font-size: 30px;
         text-align: center;
@@ -133,7 +135,7 @@
                 font-weight: 700;
                 line-height: 33px;
             }
-    
+
             &--mobile {
                 color: $color-carbon;
                 font-size: 16px;
@@ -143,7 +145,7 @@
             }
         }
     }
-                
+
 
     .usual-suspects-misdiagnosis {
         color: white;
@@ -160,15 +162,16 @@
             font-weight: 700;
             line-height: 30px;
         }
+
         .pharagraph {
             font-size: 16px;
             font-family: "Barlow", sans-serif;
             line-height: 24px;
-            font-weight: 500;    
-            margin-bottom: 70px;   
-            max-width: 633px;   
+            font-weight: 500;
+            margin-bottom: 70px;
+            max-width: 633px;
             margin-left: auto;
-            margin-right: auto;     
+            margin-right: auto;
         }
 
         .pharagraph--secondary {
@@ -177,14 +180,15 @@
             text-align: center;
             font-family: 'Special Elite', cursive;
             font-weight: 400;
-            margin-bottom: 94px;    
+            margin-bottom: 94px;
             max-width: 487px;
             margin-left: auto;
             margin-right: auto;
-            
+
         }
 
-        .horizontal_line, .horizontal_line--secondary {
+        .horizontal_line,
+        .horizontal_line--secondary {
             position: absolute;
             border: 0;
             height: 2px;
@@ -192,17 +196,17 @@
             width: 110vw;
             left: -12px;
         }
-        
+
         .horizontal_line {
             bottom: 50px;
             transform: rotateZ(10deg);
         }
-        
+
         .horizontal_line--secondary {
             bottom: 256px;
             transform: rotateZ(-10deg);
         }
-        
+
     }
 
     .suspect-cards-container {
@@ -227,11 +231,13 @@
         display: flex;
         justify-content: center;
         position: absolute;
-        bottom: 20px;
-        left: calc(50vw - 150px);
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
         height: auto;
         min-width: 300px;
     }
+
     .usual-suspect__subtabs--item {
         height: 16px;
         width: 16px;
@@ -260,11 +266,19 @@
         background-size: 58px;
     }
 
+    .usual-suspect__sections {
+        position: relative;
+    }
+
+    .usual-suspect__note {
+        font-weight: 700;
+        padding: 0 1rem;
+    }
 }
 
 
 @media screen and (min-width: 400px) {
-    .usual_suspects .usual-suspects-misdiagnosis {               
+    .usual_suspects .usual-suspects-misdiagnosis {
         .horizontal_line--secondary {
             transform: rotateZ(-7deg);
         }
@@ -284,19 +298,19 @@
             .horizontal_line {
                 transform: rotateZ(5deg);
             }
-            
+
             .horizontal_line--secondary {
                 transform: rotateZ(-5deg);
             }
-    
+
         }
-        
+
     }
 }
 
 @media screen and (min-width: 600px) {
     .usual_suspects {
-        .cta .variant-3 {            
+        .cta .variant-3 {
             height: 250px;
 
             .red-string.mod-3 {
@@ -315,12 +329,12 @@
                 transform: rotateZ(3deg);
                 bottom: 63px;
             }
-            
+
             .horizontal_line--secondary {
                 transform: rotateZ(-3deg);
                 bottom: 240px;
             }
-    
+
         }
 
         .usual-suspects-misdiagnosis {
@@ -334,26 +348,26 @@
             }
 
         }
-        
+
     }
 }
 
 @media screen and (min-width: 767px) {
     .usual_suspects {
-        .cta .variant-3 {            
+        .cta .variant-3 {
             height: 350px;
         }
 
         .content-pharagraph {
             font-size: 22px;
             margin-top: 27px;
-            
+
             &.content-pharagraph--secondary {
                 font-size: 18px;
                 margin-top: 16px;
             }
         }
-        
+
         .section-container {
             padding-top: 83px;
         }
@@ -362,6 +376,7 @@
             font-size: 24px;
             padding-bottom: 11px;
         }
+
         .buttons-panel-container button:first-of-type {
             padding-bottom: 11px;
         }
@@ -370,22 +385,22 @@
             font-size: 56px;
             margin-top: 69px;
         }
-        
+
     }
 }
 
 @media screen and (min-width: 1023px) {
     .usual_suspects {
-        .cta .variant-3 {            
+        .cta .variant-3 {
             height: 380px;
         }
 
-        .cta .variant-3 {            
-            
+        .cta .variant-3 {
+
 
             .red-string.mod-3 {
                 bottom: 27px;
-                transform: rotate(171deg);  
+                transform: rotate(171deg);
                 right: 3px;
             }
         }
@@ -397,9 +412,10 @@
         }
 
 
-        
+
     }
 
-   
+
 }
+
 /* Usual Suspects */

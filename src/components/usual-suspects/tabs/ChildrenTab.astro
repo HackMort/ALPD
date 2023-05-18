@@ -1,136 +1,158 @@
 ---
-import SuspectCard from "../../Suspect-Card.astro"
+import SuspectCard from "../../Suspect-Card.astro";
 
 const data_card_1 = {
- title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
- image: "/assets/images/usual-suspects/Suspect-4.png",
- subtitle: "Osteogenesis imperfecta",
- subtitle_secondary: "Mr. Imperfect",
- subtitle_superscript: "2,6,7",
- info: "",
- list: [ "Reduced bone density", "Bowed long bones", "Fractures", "Gracile ribs", "Narrow thorax", "Metaphyseal flaring", "Brittle teeth" ]
-}
+  title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
+  image: "/assets/images/usual-suspects/Suspect-4.png",
+  subtitle: "Osteogenesis imperfecta",
+  subtitle_secondary: "Mr. Imperfect",
+  subtitle_superscript: "2,6,7",
+  info: "",
+  list: [
+    "Reduced bone density",
+    "Bowed long bones",
+    "Fractures",
+    "Gracile ribs",
+    "Narrow thorax",
+    "Metaphyseal flaring",
+    "Brittle teeth",
+  ],
+  type: "infants",
+};
 
 const data_card_2 = {
-    title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
-    image: "/assets/images/usual-suspects/Suspect-8.png",
-    subtitle: "Campomelic dysplasia",
-    subtitle_secondary: "Shorty",
-    subtitle_superscript: "2",
-    info: "Note: ",
-    list: [ "Shortening, bowing, and angulation of the long bones", "Diaphyseal spurs", "Tibial dimple", "Absent ossification of pedicles", "Hypoplastic fibulae" ]
-}
+  title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
+  image: "/assets/images/usual-suspects/Suspect-8.png",
+  subtitle: "Campomelic dysplasia",
+  subtitle_secondary: "Shorty",
+  subtitle_superscript: "2",
+  info: "Note: ",
+  list: [
+    "Shortening, bowing, and angulation of the long bones",
+    "Diaphyseal spurs",
+    "Tibial dimple",
+    "Absent ossification of pedicles",
+    "Hypoplastic fibulae",
+  ],
+  type: "infants",
+};
 
 const data_card_3 = {
- title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
- image: "/assets/images/usual-suspects/Suspect-9.png",
- subtitle: "Chondrodysplasias ",
- subtitle_secondary: "T-Bone",
- subtitle_superscript: "8",
- info: "Short stature and vertebral abnormalities",
- list: [ "" ]
-}
+  title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
+  image: "/assets/images/usual-suspects/Suspect-9.png",
+  subtitle: "Chondrodysplasias ",
+  subtitle_secondary: "T-Bone",
+  subtitle_superscript: "8",
+  info: "Short stature and vertebral abnormalities",
+  list: [""],
+  type: "infants",
+};
 
 const data_card_4 = {
- title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
- image: "/assets/images/usual-suspects/Suspect-10.png",
- subtitle: "Idiopathic hypercalcemia",
- subtitle_secondary: "AKA IDP",
- subtitle_superscript: "9,10",
- info: "",
- list: [ "Failure to thrive", "Psychomotor delay", "High levels of calcium in urine", "Poor feeding" ]
-}
-
-
-
-
-
-
+  title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
+  image: "/assets/images/usual-suspects/Suspect-10.png",
+  subtitle: "Idiopathic hypercalcemia",
+  subtitle_secondary: "AKA IDP",
+  subtitle_superscript: "9,10",
+  info: "",
+  list: [
+    "Failure to thrive",
+    "Psychomotor delay",
+    "High levels of calcium in urine",
+    "Poor feeding",
+  ],
+  type: "infants",
+};
 ---
 
-<section class="hpp__profile suspect-cards-container" >
-    <!-- Multisystemic Symptoms and Disease Burden -->
-    <section id="hpp-multisystemic" class="section hpp-multisystemic">
+<section class="hpp__profile suspect-cards-container">
+  <!-- Multisystemic Symptoms and Disease Burden -->
+  <section id="hpp-multisystemic" class="section hpp-multisystemic">
+    <article class="">
+      <ul role="tablist" class="usual-suspect__subtabs">
+        <li role="presentation" class="usual-suspect__subtabs--item">
+          <a
+            href="#usual-suspects_neonates-infants-tab1"
+            role="tab"
+            id="tab1"
+            aria-selected="true"></a>
+        </li>
 
-        <article class="">
+        <li role="presentation" class="usual-suspect__subtabs--item">
+          <a
+            href="#usual-suspects_neonates-infants-tab2"
+            role="tab"
+            id="tab2"
+            tabindex="-1"></a>
+        </li>
 
-          <ul role="tablist" class="usual-suspect__subtabs">
+        <li role="presentation" class="usual-suspect__subtabs--item">
+          <a
+            href="#usual-suspects_neonates-infants-tab3"
+            role="tab"
+            id="tab3"
+            tabindex="-1"></a>
+        </li>
 
-            <li role="presentation" class="usual-suspect__subtabs--item">
-              <a href="#usual-suspects_neonates-infants-tab1" role="tab" id="tab1" aria-selected="true"></a>
-            </li>
+        <li role="presentation" class="usual-suspect__subtabs--item">
+          <a
+            href="#usual-suspects_neonates-infants-tab4"
+            role="tab"
+            id="tab4"
+            tabindex="-1"></a>
+        </li>
+      </ul>
 
-            <li role="presentation" class="usual-suspect__subtabs--item">
-              <a href="#usual-suspects_neonates-infants-tab2" role="tab" id="tab2" tabindex="-1"></a>
-            </li>
+      <section
+        id="usual-suspects_neonates-infants-tab1"
+        class="usual-suspects-tab_section"
+        data-target="usual-suspects_neonates-infants-tab1"
+        role="tabpanel"
+        aria-labelledby="tab1"
+        aria-hidden="false"
+        tabindex="-1"
+      >
+        <SuspectCard {...data_card_1} />
+      </section>
 
-            <li role="presentation" class="usual-suspect__subtabs--item">
-              <a href="#usual-suspects_neonates-infants-tab3" role="tab" id="tab3" tabindex="-1" ></a>
-            </li>
+      <section
+        id="usual-suspects_neonates-infants-tab2"
+        class="usual-suspects-tab_section"
+        data-target="usual-suspects_neonates-infants-tab2"
+        role="tabpanel"
+        aria-labelledby="tab2"
+        aria-hidden="true"
+        tabindex="-1"
+        hidden
+      >
+        <SuspectCard {...data_card_2} />
+      </section>
 
-            <li role="presentation" class="usual-suspect__subtabs--item">
-              <a href="#usual-suspects_neonates-infants-tab4" role="tab" id="tab4" tabindex="-1" ></a>
-            </li>
+      <section
+        id="usual-suspects_neonates-infants-tab3"
+        class="usual-suspects-tab_section"
+        data-target="usual-suspects_neonates-infants-tab3"
+        role="tabpanel"
+        aria-labelledby="tab3"
+        aria-hidden="true"
+        tabindex="-1"
+        hidden
+      >
+        <SuspectCard {...data_card_3} />
+      </section>
 
-          </ul>    
-    
-          
-            <section
-                id="usual-suspects_neonates-infants-tab1"
-                class="usual-suspects-tab_section"
-                data-target="usual-suspects_neonates-infants-tab1"
-                role="tabpanel"
-                aria-labelledby="tab1"
-                aria-hidden="false"
-                tabindex="-1"
-            >
-                <SuspectCard { ...data_card_1 } />
-            </section>
-        
-        
-            <section
-                id="usual-suspects_neonates-infants-tab2"
-                class="usual-suspects-tab_section"
-                data-target="usual-suspects_neonates-infants-tab2"
-                role="tabpanel"
-                aria-labelledby="tab2"
-                aria-hidden="true"
-                tabindex="-1"
-                hidden
-            >
-                <SuspectCard { ...data_card_2 } />
-            </section>
-      
-      
-            <section
-                id="usual-suspects_neonates-infants-tab3"
-                class="usual-suspects-tab_section"
-                data-target="usual-suspects_neonates-infants-tab3"
-                role="tabpanel"
-                aria-labelledby="tab3"
-                aria-hidden="true"
-                tabindex="-1"
-                hidden
-            >
-                <SuspectCard { ...data_card_3 } />
-            
-            </section>
-
-            <section
-                id="usual-suspects_neonates-infants-tab4"
-                class="usual-suspects-tab_section"
-                data-target="usual-suspects_neonates-infants-tab4"
-                role="tabpanel"
-                aria-labelledby="tab4"
-                aria-hidden="true"
-                tabindex="-1"
-                hidden
-            >
-                <SuspectCard { ...data_card_4 } />
-            
-            </section>     
-
-        </article>
-    </section>
-
+      <section
+        id="usual-suspects_neonates-infants-tab4"
+        class="usual-suspects-tab_section"
+        data-target="usual-suspects_neonates-infants-tab4"
+        role="tabpanel"
+        aria-labelledby="tab4"
+        aria-hidden="true"
+        tabindex="-1"
+        hidden
+      >
+        <SuspectCard {...data_card_4} />
+      </section>
+    </article>
+  </section>
 </section>

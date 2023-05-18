@@ -1,14 +1,11 @@
-
-
-
-.suspect-card {    
+.suspect-card {
     width: 100%;
 }
 
 .suspect-card_bordered-item {
     border: 1px solid red;
     margin: -1px;
-    padding: 10px 27px;
+    padding: 15px 27px;
 }
 
 .suspect-card__note {
@@ -32,28 +29,20 @@
 }
 
 .suspect-card_title {
-    font-size: 18px;
-    font-family: Barlow, Arial, Helvetica, sans-serif; 
     font-weight: 600;
-    line-height: 25px;
+}
+
+.suspect-card_subtitle {
+    font-weight: 700;
     color: $color-carbon;
-}
+    line-height: 1.375rem;
 
-.font--special-elite {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: $color-red;
     strong {
-        font-weight: 500;
-        color: $color-carbon;
+        font-family: inherit;
+        color: $color-carbon !important;
     }
-}
 
-.suspect-card-subtitle {
-    margin-top: 18px;
-}
-
-.card-description-container {
-    min-height: 300px;
+    &--secondary {
+        color: $color-red;
+    }
 }
