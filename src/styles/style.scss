@@ -2928,19 +2928,11 @@
                 padding: 4rem 3rem;
 
                 font-size: 1.25rem;
-                font-weight: 30px;
                 font-family: 'Special Elite', cursive;
                 font-weight: 400;
-                color: $color-white;
+                // color: $color-white;
             }
 
-        }
-
-        &--text-red {
-            @media screen and (max-width: 768px) {
-                color: $color-cinnabar;
-                font-family: inherit;
-            }
         }
     }
 

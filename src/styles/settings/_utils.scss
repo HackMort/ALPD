@@ -21,13 +21,15 @@ $color-value in $colors {
     }
 
     .md\:color--#{$color-name} {
-        color: $color-value !important;
-        font-family: inherit;
-        font-size: inherit;
-        font-weight: inherit;
-        font-style: inherit;
-        letter-spacing: inherit;
-        line-height: inherit;
+        @media screen and (min-width: 768px) {
+            color: $color-value !important;
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: inherit;
+            font-style: inherit;
+            letter-spacing: inherit;
+            line-height: inherit;
+        }
     }
 }
 
