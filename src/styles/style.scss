@@ -2762,13 +2762,12 @@
         }
 
         &--mobile {
-            display: none;
             color: $color-blue;
 
             padding: 3rem 0 0 0;
 
-            @media screen and (max-width: 768px) {
-                display: block;
+            @media screen and (min-width: 1024px) {
+                display: none;
             }
         }
 
@@ -3973,8 +3972,7 @@
         &__tabs {
             position: relative;
 
-
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 1023px) {
                 background-color: $color-floral-white;
 
                 &::before {
@@ -3997,7 +3995,7 @@
                 &::after {
                     //Tape
                     content: '';
-                    background-image: url(/assets/images/hpp-profile/tape.png);
+                    background-image: url("/assets/images/hpp-profile/tape.png");
                     background-repeat: no-repeat;
                     background-size: 100% 100%;
                     background-position: center;
@@ -4023,7 +4021,7 @@
                 padding: 1% 0 0 0;
                 height: auto;
 
-                @media screen and (max-width: 768px) {
+                @media screen and (max-width: 1023px) {
                     display: none;
                     margin-left: 0;
                 }
@@ -4241,8 +4239,8 @@
             }
 
             &.multisystemic1 {
-                @media screen and (min-width: 769px) {
-                    background-image: url(/assets/images/hpp-profile/folder-open--tab1.png);
+                @media screen and (min-width: 1024px) {
+                    background-image: url("/assets/images/hpp-profile/folder-open--tab1.png");
                     background-repeat: no-repeat;
                     background-size: 100%;
                     background-position: top;
@@ -4250,14 +4248,14 @@
             }
 
             &.multisystemic2 {
-                background-image: url(/assets/images/hpp-profile/folder-open--tab2.png);
+                background-image: url("/assets/images/hpp-profile/folder-open--tab2.png");
                 background-repeat: no-repeat;
                 background-size: 100%;
                 background-position: top;
             }
 
             &.multisystemic3 {
-                background-image: url(/assets/images/hpp-profile/folder-open--tab3.png);
+                background-image: url("/assets/images/hpp-profile/folder-open--tab3.png");
                 background-repeat: no-repeat;
                 background-size: 100%;
                 background-position: top;
@@ -4350,7 +4348,7 @@
                 height: .9375rem;
             }
 
-            @media screen and (min-width: 769px) {
+            @media screen and (min-width: 1024px) {
                 display: none;
             }
         }

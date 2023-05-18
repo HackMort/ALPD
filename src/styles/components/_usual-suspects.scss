@@ -183,7 +183,7 @@
                 transform: translateX(-50%) rotate(5deg);
             }
 
-            @media screen and (min-width: 769px) {
+            @media screen and (min-width: 1024px) {
                 display: none;
             }
         }
@@ -205,6 +205,8 @@
                 font-family: 'Oswald', sans-serif;
                 font-weight: 600;
                 line-height: 24px;
+
+                text-align: center;
             }
         }
     }
@@ -320,9 +322,23 @@
 
     }
 
+    .hpp-multisystemic__select {
+        max-width: 21.5625rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .suspect-cards-container {
+        max-width: 21.5625rem;
+        margin-left: auto;
+        margin-right: auto;
+
         @media screen and (min-width: 768px) {
             padding-top: 2rem;
+        }
+
+        @media screen and (min-width: 1024px) {
+            max-width: max-content;
         }
 
         [role="tablist"] [aria-selected] {
@@ -353,7 +369,8 @@
         min-width: 300px;
 
         @media screen and (min-width: 768px) {
-            display: none;
+            bottom: -35px;
+            z-index: 2;
         }
     }
 
@@ -387,12 +404,24 @@
         }
     }
 
+    // .hpp-multisystemic {
+    //     @media screen and (min-width: 768px) {
+    //         position: relative;
+    //     }
+    // }
+
     .usual-suspect__sections {
         position: relative;
     }
 
     .usual-suspect__note {
         font-weight: 700;
+        font-size: 1.125rem;
+        line-height: 25.2px;
+
+        @media screen and (min-width: 768px) {
+            padding-top: 2.5rem;
+        }
     }
 
     .usual-suspect__trigger {
@@ -401,13 +430,13 @@
         }
     }
 
-    @media screen and (min-width: 789px) and (max-width: 1024px) {
-        .card-description-container {
-            height: 250px;
-        }
-    }
+    // @media screen and (min-width: 789px) and (max-width: 1024px) {
+    //     .card-description-container {
+    //         height: 250px;
+    //     }
+    // }
 
-    @media screen and (min-width: 1025px) {
+    @media screen and (min-width: 1024px) {
         .card-description-container {
             height: 250px;
         }
