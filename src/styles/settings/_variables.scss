@@ -12,6 +12,7 @@ $colors: (
     "platinum": #DFE2E9,
     "envelop": #E2A842,
     "granite-grey": #626468,
+    "light-granite-grey": rgba(98, 100, 104, 0.4),
     "carbon": #1F1511,
     "texture": #E5E9F2,
     "black": #000000,
@@ -24,7 +25,8 @@ $colors: (
     "brown": #473831,
     "smoky-black": rgb(14 14 14 / 40%),
     "taupe": #473831,
-    "dairy-cream": #F9E3BE
+    "dairy-cream": #F9E3BE,
+    "pearl-bush": #E9DCD3
 );
 
 $color-folder: map-get($colors, "folder");
@@ -34,6 +36,7 @@ $color-green: map-get($colors, "green");
 $color-platinum: map-get($colors, "platinum");
 $color-envelop: map-get($colors, "envelop");
 $color-granite-grey: map-get($colors, "granite-grey");
+$color-light-granite-grey: map-get($colors, "light-granite-grey");
 $color-carbon: map-get($colors, "carbon");
 $color-texture: map-get($colors, "texture");
 $color-black: map-get($colors, "black");
@@ -49,3 +52,4 @@ $color-smoky-black: map-get($colors, "smoky-black");
 $color-taupe: map-get($colors, "taupe");
 $color-dairy-cream: map-get($colors, "dairy-cream");
 $color-light-blue: map-get($colors, "light-blue");
+$color-pearl-bush: map-get($colors, "pearl-bush");
