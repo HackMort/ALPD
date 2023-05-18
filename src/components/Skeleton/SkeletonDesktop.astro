@@ -3,9 +3,10 @@ type Props = {
     type: string;
 };
 
-const { type } = Astro.props;
-
 import SkeletonInfo from "./SkeletonInfo.astro";
+import data from "./data.js";
+
+const { type } = Astro.props;
 ---
 
 <section class="skeleton skeleton--desktop">
@@ -17,7 +18,6 @@ import SkeletonInfo from "./SkeletonInfo.astro";
                     src="/assets/images/hpp-profile/skeleton/skeleton-body-infants.png"
                     alt=" "
                 />
-                
             ) : (
                 <img
                     class="skeleton__image"
@@ -28,299 +28,50 @@ import SkeletonInfo from "./SkeletonInfo.astro";
         }
 
         {
-            type === "infants" ? (
-                <div
-                    class="skeleton__option skeleton__option--active skeleton__option--infants"
-                    data-word="neurologic"
-                    id="neurologic--infants"
-                >
-                    <span class="skeleton__line skeleton__line--before"></span>
-                    <span class="skeleton__line skeleton__line--after"></span>
-                    <span class="skeleton__line skeleton__line--after2"></span>
-                    <div class="skeleton__point"></div>
-                    <div class="skeleton__word">
-                        <img
-                            class="skeleton__icon"
-                            src="/assets/images/hpp-profile/skeleton/neuro-icon.svg"
-                            alt="Neurologic"
-                        />
-                        <img
-                            class="skeleton__icon skeleton__icon--active"
-                            src="/assets/images/hpp-profile/skeleton/neuro-icon-active.svg"
-                            alt="Neurologic"
-                        />
-                        <span class="skeleton__data">Neurologic</span>
+            /* 
+                - Filter the data to get the correct type of data
+                - Map over the data to create the options
+            **/
+            data
+                .filter((item) => item.type == type)
+                .map((item) => (
+                    <div
+                        class={`skeleton__option skeleton__option--${
+                            item.type
+                        } ${item.active ? "skeleton__option--active" : ""}`}
+                        data-word={item.id}
+                        id={`${item.id}${
+                            item.type === "infants" ? "" : "--" + item.type
+                        }`}
+                    >
+                        <span class="skeleton__line skeleton__line--before" />
+                        <span class="skeleton__line skeleton__line--after" />
+                        <span class="skeleton__line skeleton__line--after2" />
+                        <div class="skeleton__point" />
+                        <div class="skeleton__word">
+                            <img
+                                class="skeleton__icon"
+                                src={`/assets/images/hpp-profile/skeleton/${
+                                    item.type == "infants"
+                                        ? item.id.split("--infants")[0]
+                                        : item.id
+                                }-icon.svg`}
+                                alt={item.id}
+                            />
+                            <img
+                                class="skeleton__icon skeleton__icon--active"
+                                src={`/assets/images/hpp-profile/skeleton/${
+                                    item.type == "infants"
+                                        ? item.id.split("--infants")[0]
+                                        : item.id
+                                }-icon-active.svg`}
+                                alt={item.id}
+                            />
+                            <span class="skeleton__data">{item.word}</span>
+                        </div>
                     </div>
-                </div>
-
-                <div class="skeleton__option skeleton__option--infants" data-word="dental" id="dental--infants">
-                    <span class="skeleton__line skeleton__line--before"></span>
-                    <span class="skeleton__line skeleton__line--after"></span>
-                    <span class="skeleton__line skeleton__line--after2"></span>
-                    <div class="skeleton__point"></div>
-                    <div class="skeleton__word">
-                        <img
-                            class="skeleton__icon"
-                            src="/assets/images/hpp-profile/skeleton/dental-icon.svg"
-                            alt="Dental"
-                        />
-                        <img
-                            class="skeleton__icon skeleton__icon--active"
-                            src="/assets/images/hpp-profile/skeleton/dental-icon-active.svg"
-                            alt="Dental"
-                        />
-                        <span class="skeleton__data">Dental</span>
-                    </div>
-                </div>
-
-                <div class="skeleton__option skeleton__option--infants" data-word="muscular" id="muscular--infants">
-                    <span class="skeleton__line skeleton__line--before"></span>
-                    <span class="skeleton__line skeleton__line--after"></span>
-                    <span class="skeleton__line skeleton__line--after2"></span>
-                    <div class="skeleton__point"></div>
-                    <div class="skeleton__word">
-                        <img
-                            class="skeleton__icon"
-                            src="/assets/images/hpp-profile/skeleton/muscular-icon.svg"
-                            alt="Muscular"
-                        />
-                        <img
-                            class="skeleton__icon skeleton__icon--active"
-                            src="/assets/images/hpp-profile/skeleton/muscular-icon-active.svg"
-                            alt="Muscular"
-                        />
-                        <span class="skeleton__data">Muscular</span>
-                    </div>
-                </div>
-
-                <div class="skeleton__option skeleton__option--infants" data-word="respiratory" id="respiratory--infants">
-                    <span class="skeleton__line skeleton__line--before"></span>
-                    <span class="skeleton__line skeleton__line--after"></span>
-                    <span class="skeleton__line skeleton__line--after2"></span>
-                    <div class="skeleton__point"></div>
-                    <div class="skeleton__word">
-                        <img
-                            class="skeleton__icon"
-                            src="/assets/images/hpp-profile/skeleton/respiratory-icon.svg"
-                            alt="respiratory"
-                        />
-                        <img
-                            class="skeleton__icon skeleton__icon--active"
-                            src="/assets/images/hpp-profile/skeleton/respiratory-icon-active.svg"
-                            alt="Orthopedic"
-                        />
-                        <span class="skeleton__data">Respiratory</span>
-                    </div>
-                </div>
-
-                <div class="skeleton__option skeleton__option--infants" data-word="rheumatic" id="rheumatic--infants">
-                    <span class="skeleton__line skeleton__line--before"></span>
-                    <span class="skeleton__line skeleton__line--after"></span>
-                    <span class="skeleton__line skeleton__line--after2"></span>
-                    <div class="skeleton__point"></div>
-                    <div class="skeleton__word">
-                        <img
-                            class="skeleton__icon"
-                            src="/assets/images/hpp-profile/skeleton/rheumatic-icon.svg"
-                            alt="Rheumatic"
-                        />
-                        <img
-                            class="skeleton__icon skeleton__icon--active"
-                            src="/assets/images/hpp-profile/skeleton/rheumatic-icon-active.svg"
-                            alt="Rheumatic"
-                        />
-                        <span class="skeleton__data">Rheumatic</span>
-                    </div>
-                </div>
-
-                <div class="skeleton__option skeleton__option--infants" data-word="renal" id="renal--infants">
-                    <span class="skeleton__line skeleton__line--before"></span>
-                    <span class="skeleton__line skeleton__line--after"></span>
-                    <span class="skeleton__line skeleton__line--after2"></span>
-                    <div class="skeleton__point"></div>
-                    <div class="skeleton__word">
-                        <img
-                            class="skeleton__icon"
-                            src="/assets/images/hpp-profile/skeleton/renal-icon.svg"
-                            alt="Renal"
-                        />
-                        <img
-                            class="skeleton__icon skeleton__icon--active"
-                            src="/assets/images/hpp-profile/skeleton/renal-icon-active.svg"
-                            alt="Renal"
-                        />
-                        <span class="skeleton__data">Renal</span>
-                    </div>
-                </div>
-
-                <div class="skeleton__option skeleton__option--infants" data-word="orthopedic" id="orthopedic--infants">
-                    <span class="skeleton__line skeleton__line--before"></span>
-                    <span class="skeleton__line skeleton__line--after"></span>
-                    <span class="skeleton__line skeleton__line--after2"></span>
-                    <div class="skeleton__point"></div>
-                    <div class="skeleton__word">
-                        <img
-                            class="skeleton__icon"
-                            src="/assets/images/hpp-profile/skeleton/orthopedic-icon.svg"
-                            alt="Orthopedic"
-                        />
-                        <img
-                            class="skeleton__icon skeleton__icon--active"
-                            src="/assets/images/hpp-profile/skeleton/orthopedic-icon-active.svg"
-                            alt="Orthopedic"
-                        />
-                        <span class="skeleton__data">Orthopedic/ skeletal</span>
-                    </div>
-                </div>
-
-                <div class="skeleton__option skeleton__option--infants" data-word="grow" id="grow--infants">
-                    <span class="skeleton__line skeleton__line--before"></span>
-                    <span class="skeleton__line skeleton__line--after"></span>
-                    <span class="skeleton__line skeleton__line--after2"></span>
-                    <div class="skeleton__point"></div>
-                    <div class="skeleton__word">
-                        <img
-                            class="skeleton__icon"
-                            src="/assets/images/hpp-profile/skeleton/grow-icon.svg"
-                            alt="Orthopedic"
-                        />
-                        <img
-                            class="skeleton__icon skeleton__icon--active"
-                            src="/assets/images/hpp-profile/skeleton/grow-icon-active.svg"
-                            alt="Grow"
-                        />
-                        <span class="skeleton__data">Developmental/ growth</span>
-                    </div>
-                </div>
-            ) : (
-                <div
-                    class="skeleton__option skeleton__option--active"
-                    data-word="neurologic"
-                    id="neurologic"
-                >
-                    <span class="skeleton__line skeleton__line--before"></span>
-                    <span class="skeleton__line skeleton__line--after"></span>
-                    <span class="skeleton__line skeleton__line--after2"></span>
-                    <div class="skeleton__point"></div>
-                    <div class="skeleton__word">
-                        <img
-                            class="skeleton__icon"
-                            src="/assets/images/hpp-profile/skeleton/neuro-icon.svg"
-                            alt="Neurologic"
-                        />
-                        <img
-                            class="skeleton__icon skeleton__icon--active"
-                            src="/assets/images/hpp-profile/skeleton/neuro-icon-active.svg"
-                            alt="Neurologic"
-                        />
-                        <span class="skeleton__data">Neurologic</span>
-                    </div>
-                </div>
-
-                <div class="skeleton__option" data-word="dental" id="dental">
-                    <span class="skeleton__line skeleton__line--before"></span>
-                    <span class="skeleton__line skeleton__line--after"></span>
-                    <span class="skeleton__line skeleton__line--after2"></span>
-                    <div class="skeleton__point"></div>
-                    <div class="skeleton__word">
-                        <img
-                            class="skeleton__icon"
-                            src="/assets/images/hpp-profile/skeleton/dental-icon.svg"
-                            alt="Dental"
-                        />
-                        <img
-                            class="skeleton__icon skeleton__icon--active"
-                            src="/assets/images/hpp-profile/skeleton/dental-icon-active.svg"
-                            alt="Dental"
-                        />
-                        <span class="skeleton__data">Dental</span>
-                    </div>
-                </div>
-
-                <div class="skeleton__option" data-word="muscular" id="muscular">
-                    <span class="skeleton__line skeleton__line--before"></span>
-                    <span class="skeleton__line skeleton__line--after"></span>
-                    <span class="skeleton__line skeleton__line--after2"></span>
-                    <div class="skeleton__point"></div>
-                    <div class="skeleton__word">
-                        <img
-                            class="skeleton__icon"
-                            src="/assets/images/hpp-profile/skeleton/muscular-icon.svg"
-                            alt="Muscular"
-                        />
-                        <img
-                            class="skeleton__icon skeleton__icon--active"
-                            src="/assets/images/hpp-profile/skeleton/muscular-icon-active.svg"
-                            alt="Muscular"
-                        />
-                        <span class="skeleton__data">Muscular</span>
-                    </div>
-                </div>
-
-                <div class="skeleton__option" data-word="rheumatic" id="rheumatic">
-                    <span class="skeleton__line skeleton__line--before"></span>
-                    <span class="skeleton__line skeleton__line--after"></span>
-                    <span class="skeleton__line skeleton__line--after2"></span>
-                    <div class="skeleton__point"></div>
-                    <div class="skeleton__word">
-                        <img
-                            class="skeleton__icon"
-                            src="/assets/images/hpp-profile/skeleton/rheumatic-icon.svg"
-                            alt="Rheumatic"
-                        />
-                        <img
-                            class="skeleton__icon skeleton__icon--active"
-                            src="/assets/images/hpp-profile/skeleton/rheumatic-icon-active.svg"
-                            alt="Rheumatic"
-                        />
-                        <span class="skeleton__data">Rheumatic</span>
-                    </div>
-                </div>
-
-                <div class="skeleton__option" data-word="renal" id="renal">
-                    <span class="skeleton__line skeleton__line--before"></span>
-                    <span class="skeleton__line skeleton__line--after"></span>
-                    <span class="skeleton__line skeleton__line--after2"></span>
-                    <div class="skeleton__point"></div>
-                    <div class="skeleton__word">
-                        <img
-                            class="skeleton__icon"
-                            src="/assets/images/hpp-profile/skeleton/renal-icon.svg"
-                            alt="Renal"
-                        />
-                        <img
-                            class="skeleton__icon skeleton__icon--active"
-                            src="/assets/images/hpp-profile/skeleton/renal-icon-active.svg"
-                            alt="Renal"
-                        />
-                        <span class="skeleton__data">Renal</span>
-                    </div>
-                </div>
-
-                <div class="skeleton__option" data-word="orthopedic" id="orthopedic">
-                    <span class="skeleton__line skeleton__line--before"></span>
-                    <span class="skeleton__line skeleton__line--after"></span>
-                    <span class="skeleton__line skeleton__line--after2"></span>
-                    <div class="skeleton__point"></div>
-                    <div class="skeleton__word">
-                        <img
-                            class="skeleton__icon"
-                            src="/assets/images/hpp-profile/skeleton/orthopedic-icon.svg"
-                            alt="Orthopedic"
-                        />
-                        <img
-                            class="skeleton__icon skeleton__icon--active"
-                            src="/assets/images/hpp-profile/skeleton/orthopedic-icon-active.svg"
-                            alt="Orthopedic"
-                        />
-                        <span class="skeleton__data">Orthopedic/ skeletal</span>
-                    </div>
-                </div>
-            )
+                ))
         }
-
-
     </section>
-    <SkeletonInfo type={type} />
-    <script src="../../js/skeleton.js"></script>
+    <SkeletonInfo type={type} data={data} />
 </section>

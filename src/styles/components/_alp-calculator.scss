@@ -863,7 +863,7 @@
         .button {
             margin: auto;
             margin-top: 15px;
-
+            display: none!important;
             @media screen and (min-width:745px) {
                 width: 135px;
             }
