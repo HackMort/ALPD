@@ -36,6 +36,23 @@
         }
     }
 
+    @media screen and (min-width: 425px) {
+        .internal__nav {
+            .wrapper {
+                max-width: calc(100% - var(--wrapper-margin) / 2);
+                margin: 0 auto;
+            }
+    
+            .internal__nav_list {
+                justify-content: center;
+
+                .internal__nav_list_item {
+                    padding: 0.25rem 2rem;
+                }
+            }
+        }
+    }
+
     .section-container {
         color: white;
         padding-top: 20px;
