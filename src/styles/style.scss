@@ -4116,10 +4116,9 @@
                 transform: rotate(3deg);
             }
             @media screen and (min-width: 650px) {
-                transform: rotate(4deg);
                 width: 228vw;
                 left: -289px;
-                top: 103px;
+                top: 78px;
             }
         }
         .modifier2{
@@ -4127,10 +4126,10 @@
             @media screen and (min-width: 650px) {
                 display: block;
                 position: absolute;
-                transform: rotate(-2deg);
+                transform: rotate(-1deg);
                 width: 228vw;
                 left: -289px!important;
-                top: 182px !important;
+                top: 209px !important;
             }    
         }
     }
@@ -4149,11 +4148,12 @@
         padding-left: 22.94px;
         margin-bottom: 3rem;
         margin-top: 2rem;
+        text-transform: uppercase;
         @media screen and (min-width: 650px) {
             font-size: 36px;
             line-height: 125%;
         /* or 45px */
-        max-width: 645px;
+        max-width: 669px;
         margin: auto;
         margin-top: 0;
         text-align: center;
@@ -4167,21 +4167,22 @@
         font-family: 'Barlow';
         font-style: normal;
         font-weight: 500;
-        font-size: 16px;
-        line-height: 150%;
-        /* or 24px */
+        font-size: 14px;
+        line-height: 18px;
         color: $color-white;
         max-width: 692px;
         @media screen and (min-width: 650px) {
             font-size: 18px;
             line-height: 140%;
-            font-weight: 300;
+            font-weight: 400;
             text-align: center;
             max-width: 815px;
             margin: auto;
         }
         
         &.modifier{
+            font-size: 16px;
+            line-height: 24px;
             margin-bottom: 2rem;
             @media screen and (min-width: 650px) {
                 max-width: 610px;
@@ -4208,6 +4209,8 @@
     position: relative;
     @media screen and (min-width: 686px) {
         padding-top: 61px;
+        background-image: url('/assets/images/usual-levels-desktop.png');
+
     }
 
     &__title{
@@ -4218,16 +4221,17 @@
         line-height: 125%;
         /* or 30px */
         padding-bottom: 1rem;
-        border-bottom: 2px solid black;
+        border-bottom: 1px solid black;
         margin-bottom: 9px;
         margin-top: 10px;
         padding-top: 11.85px;
+        text-transform: uppercase;
         @media screen and (min-width: 686px) {
         font-size: 24px;
         line-height: 140%;
         margin: auto;
         text-align: center;
-        border-top: 2px solid black;
+        border-top: 1px solid black;
         max-width: 788px;
     }
 }
@@ -4246,7 +4250,7 @@
         @media screen and (min-width: 686px) {
         display: block;
         position: absolute;
-        height: 1.5px;
+        height: 1px;
         width: 100%;
         background-color: black;
         top: 53px;
@@ -4263,7 +4267,7 @@
 
     &__list{
         padding-left: 22.94px;
-        border-bottom: 2px solid black;
+        border-bottom: 1px solid black;
         @media screen and (min-width: 686px) {
         border-bottom: none;
         }
@@ -4276,6 +4280,12 @@
             }
             
             li{
+                font-size: 16px;
+                line-height: 22.4px;
+                @media screen and (min-width: 686px) {
+                font-size: 18px;
+                line-height: 140%;
+                }
                 &::marker{
                     color: $color-red;
                 }
@@ -4289,6 +4299,8 @@
             font-weight: 600;
             font-size: 18px;
             line-height: 140%;
+            margin-left: -19px;
+            margin-bottom: 0.5rem;
             @media screen and (min-width: 650px) {
                 font-size: 21px;
                 line-height: 140%;
@@ -4300,6 +4312,11 @@
         
         ul{
             padding-bottom: 2rem;
+            margin-left: 1rem;
+            @media screen and (min-width: 686px) {
+                margin-left: 0;
+                max-width: 222px;
+            }
         }
         li{
             padding-top: 10px;
@@ -4324,7 +4341,7 @@
         }
     }
     
-    .flip{
+    picture{
         height: 61px;
         width: 141px;
         position: absolute;
@@ -4334,6 +4351,8 @@
         width: 394px;
         height: 170px;
         }
+
+        
     }
 }
         .usual-cta{

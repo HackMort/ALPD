@@ -25,7 +25,10 @@ import References from '../components/References.astro';
     </section>
 
     <section class="usual-levels">
-        <img src="/assets/images/flip3.png" alt="" class="flip">
+        <picture>
+            <source media="(min-width: 1024px)" srcset="/assets/images/flip-desktop.png" />
+            <img src="/assets/images/flip3.png" alt="" class="flip">
+        </picture>
         <h2 class="usual-levels__title">ALP Levels<sup>1‡</sup></h2>
 
         <div class="list-blocks">
