@@ -986,12 +986,13 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
     document.addEventListener("DOMContentLoaded", () => {
       const openCaseFilesModal = new caseFileModalDesktop();
       const buttons = document.querySelectorAll(
-        "button.case-files-modal-trigger--desktop"
+        ".case-files-modal-trigger--desktop"
       );
       const customTabLinks = document.querySelectorAll("[data-tab-id]");
 
       buttons.forEach((button) => {
         button.addEventListener("click", () => {
+          event.preventDefault();
           openCaseFilesModal.open();
         });
       });
