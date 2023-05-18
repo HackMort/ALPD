@@ -2999,6 +2999,7 @@
             padding: 3rem 1.4rem;
 
             margin-top: 3rem;
+            margin-bottom: 2rem;
 
             &::before {
                 content: '';
@@ -3034,11 +3035,12 @@
                 background-color: $color-cararra;
                 width: 100%;
 
-                padding: 1.5rem 0;
+                padding-top: 0.5rem;
+                padding-bottom: 1.5rem;
 
                 box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25);
 
-                @media screen and (min-width: 768px){
+                @media screen and (min-width: 768px) {
                     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
                     padding-top: 8rem;
@@ -3099,6 +3101,8 @@
                 max-width: 10rem;
                 margin: auto;
                 font-size: .875rem;
+                font-weight: 400;
+                line-height: 18px;
             }
 
             &__content {
@@ -3191,12 +3195,16 @@
 
         &__disclaimer {
             color: $color-saffron-mango;
-            padding: 3rem 2.1875rem;
+            padding: 3rem 4rem;
             text-align: center;
             font-family: 'Special Elite', cursive;
 
             @media screen and (min-width: 600px) and (max-width: 768px) {
                 padding: 5rem 2rem;
+            }
+
+            @media screen and (min-width: 600px) and (max-width: 768px) {
+                padding: 3rem 2.1875rem;
             }
         }
 
@@ -3368,7 +3376,7 @@
                 background-repeat: no-repeat;
                 background-size: contain;
                 background-position: center;
-                padding: 10rem 3rem 5rem 3rem;
+                padding: 12rem 3rem 5rem 3rem;
                 max-width: 23rem;
 
                 @media screen and (min-width: 768px) {
@@ -3384,6 +3392,7 @@
                 }
 
                 &--foot {
+                    display: block;
                     font-size: .75rem;
                     font-weight: 400;
                     position: relative;
@@ -3474,6 +3483,9 @@
                 text-align: center;
                 margin-top: 2rem;
                 margin-bottom: 3rem;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 1rem;
 
                 @media screen and (min-width: 769px) {
                     margin-top: 1rem;
@@ -3836,9 +3848,9 @@
             &--head-text {
                 margin: 2rem 0;
                 font-size: .875rem;
+                text-align: left;
 
                 @media screen and (min-width: 1024px) {
-                    text-align: left;
                     margin: 0 0;
                 }
             }
@@ -4058,14 +4070,18 @@
                 }
 
                 .hpp-multisystemic__report--content--harm {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 22px;
                     max-width: 41rem;
                     margin-left: auto;
                     margin-right: auto;
 
-                    font-size: 1.125rem;
-                    line-height: 25.2px;
-
-                    text-align: center;
+                    @media screen and (min-width: 1024px) {
+                        font-size: 1.125rem;
+                        line-height: 25.2px;
+                        text-align: center;
+                    }
                 }
             }
 
@@ -4146,7 +4162,7 @@
                 }
 
                 .hpp-multisystemic__report--content--harm {
-                    @media screen and (min-width: 768px){
+                    @media screen and (min-width: 768px) {
                         max-width: 40rem;
                         text-align: center;
                         margin-left: auto;
@@ -4241,15 +4257,18 @@
 
         &__condition {
             margin-bottom: 2rem;
-            margin-left: 4rem;
-            margin-right: 4rem;
+            // margin-left: 4rem;
+            // margin-right: 4rem;
             position: relative;
 
             font-size: .875rem;
+            font-weight: 400;
             line-height: 21px;
+            max-width: 289px;
 
             @media screen and (min-width: 768px) {
                 margin: 0 auto;
+                max-width: 100%;
             }
 
             @media screen and (min-width: 1024px) {
@@ -4338,12 +4357,21 @@
             }
 
             &--chart {
-                margin: 2rem 0 0.5rem 0;
+                margin: 2rem 0 1.5rem 0;
+
+                @media screen and (min-width: 1024px) {
+                    margin-bottom: 0.5rem;
+                }
 
                 &--foot {
+                    display: none;
                     font-weight: bold;
                     text-align: center;
                     font-size: .875rem;
+
+                    @media screen and (min-width: 1024px) {
+                        display: block;
+                    }
                 }
 
             }
