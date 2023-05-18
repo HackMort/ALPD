@@ -3529,6 +3529,14 @@
         }
     }
 
+    #hpp-multisystemic {
+        >.wrapper {
+            @media screen and (max-width: 1024px) {
+                max-width: 100%;
+            }
+        }
+    }
+
     .hpp-multisystemic {
         margin-top: 2rem;
 
