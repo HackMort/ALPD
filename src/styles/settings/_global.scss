@@ -91,10 +91,3 @@ body {
         background-image: url("/assets/images/background-stars-desktop.png");
     }
 }
-
-@media screen and (min-width: 1440px) {
-  body {
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}

@@ -4541,14 +4541,14 @@
         font-size: 1.5rem;
         line-height: 30px;
         max-width: 22rem;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
 
-        @media screen and (min-width: 650px) {
+        @media screen and (min-width: 768px) {
             margin: auto;
             text-align: center;
             max-width: 452px;
-            font-size: 36px;
-            line-height: 125%;
+            font-size: 2.25rem;
+            line-height: 45px;
         }
 
         @media screen and (min-width: 1500px) {
@@ -4557,31 +4557,64 @@
     }
 
     &__text {
-        width: 103%;
-        height: 278.92px;
         position: relative;
         padding-top: 36px;
-        margin-top: 64px;
-        overflow: hidden;
-        
+
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         background: $color-floral-white;
 
+        left: 50%;
+        transform: translateX(-50%) rotate(-2.56deg);
+        width: calc(100vw + 2rem);
+
         &::before {
             content: url("/assets/images/weeding-pin.png");
+            position: absolute;
+            left: 50%;
+            top: -10%;
+            transform: translateX(-50%);
         }
 
-        @media screen and (min-width: 507px) {
-            width: 77%;
-            margin: auto;
+        .red-string {
+            top: 17%;
+            transform: translateX(-50%) rotate(4deg);
+
+            &:last-of-type {
+                display: none;
+            }
         }
 
-        @media screen and (min-width: 650px) {
-            background-image: none;
-            overflow: visible;
+        @media screen and (min-width: 500px) {
+            left: 0;
+            width: 100%;
+
+            background: none;
+            transform: none;
+
+            margin: 6rem 0;
+            padding: 0;
+
+            &::before {
+                display: none;
+            }
+
+            .red-string {
+
+                &:first-of-type {
+                    top: -60%;
+                    transform: translateX(-50%) rotate(2deg);
+                }
+
+                &:last-of-type {
+                    display: block;
+                    transform: translateX(-50%) rotate(-2deg);
+
+                    top: auto;
+                    bottom: -1rem;
+                }
+
+            }
         }
-
-
 
         &__paragraph {
             position: relative;
@@ -4590,26 +4623,34 @@
             font-weight: 400;
             font-size: 16px;
             line-height: 24px;
-            max-width: 308px;
+            max-width: 19.25rem;
             z-index: 2;
             color: $color-black;
-            text-align: center;
             margin: auto;
-            margin-top: 4rem;
+            margin-top: 2rem;
+            padding-bottom: 2rem;
 
-            @media screen and (min-width: 650px) {
-                color: white;
-                font-size: 20px;
-                line-height: 150%;
-                /* or 30px */
-                max-width: 561px;
+            transform: rotate(2.56deg);
+
+            text-align: center;
+
+            @media screen and (min-width: 500px) {
+                color: $color-white;
+                max-width: 35.0625rem;
+
+                transform: none;
+            }
+
+            @media screen and (min-width: 768px) {
+                font-size: 1.25rem;
+                line-height: 30px;
             }
 
             span {
                 color: $color-red;
 
-                @media screen and (min-width: 650px) {
-                    color: #F8BA5D;
+                @media screen and (min-width: 500px) {
+                    color: $color-saffron-mango;
                 }
             }
         }
@@ -4653,65 +4694,72 @@
         font-family: 'Oswald';
         font-style: normal;
         font-weight: 700;
-        font-size: 24px;
+        font-size: 1.5rem;
         line-height: 30px;
-        max-width: 574px;
-        padding-left: 22.94px;
-        margin-bottom: 3rem;
+        max-width: 35.875rem;
+        margin-bottom: 1.5rem;
         margin-top: 2rem;
         text-transform: uppercase;
 
-        @media screen and (min-width: 650px) {
-            font-size: 36px;
-            line-height: 125%;
-            /* or 45px */
-            max-width: 669px;
+        @media screen and (min-width: 768px) {
+            font-size: 2.25rem;
+            line-height: 45px;
+            max-width: 41.8125rem;
             margin: auto;
             margin-top: 0;
             text-align: center;
-            margin-bottom: 18.21px;
+            margin-bottom: 1.1381rem;
         }
 
     }
 
     &__text {
-        padding-left: 22.94px;
-        padding-right: 27.93px;
         font-family: 'Barlow';
-        font-style: normal;
         font-weight: 500;
-        font-size: 14px;
-        line-height: 18px;
+        font-size: 1rem;
+        line-height: 24px;
         color: $color-white;
-        max-width: 692px;
+        max-width: 43.25rem;
 
-        @media screen and (min-width: 650px) {
-            font-size: 18px;
-            line-height: 140%;
+        @media screen and (min-width: 768px) {
+            font-size: 1.125rem;
+            line-height: 25.2px;
             font-weight: 400;
             text-align: center;
-            max-width: 815px;
+            max-width: 36.125rem;
             margin: auto;
         }
+    }
 
-        &.modifier {
-            font-size: 16px;
-            line-height: 24px;
-            margin-bottom: 2rem;
+    .persistently__footnote-list {
+        margin-top: 2rem;
+        padding-left: .4375rem;
 
-            @media screen and (min-width: 650px) {
-                max-width: 610px;
-                margin: auto;
-                margin-bottom: 17.2px;
-                font-weight: 500;
+        li {
+            position: relative;
+            color: $color-white;
+            font-size: .875rem;
+            line-height: 18.2px;
+
+            .positioned {
+                position: absolute;
+                left: -7px;
+                top: 7px;
             }
         }
 
-        .br {
-            display: none;
+        @media screen and (min-width: 768px) {
+            max-width: 37rem;
+            margin-left: auto;
+            margin-right: auto;
 
-            @media screen and (min-width: 650px) {
-                display: block;
+            li {
+                text-align: center;
+                position: initial;
+
+                .positioned {
+                    position: initial;
+                }
             }
         }
     }
