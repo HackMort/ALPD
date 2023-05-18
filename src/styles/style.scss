@@ -3716,7 +3716,7 @@
                 &::before {
                     //Tape
                     content: '';
-                    background-image: url(/assets/images/hpp-profile/tape.png);
+                    background-image: url("/assets/images/hpp-profile/tape.png");
                     background-repeat: no-repeat;
                     background-size: 100% 100%;
                     background-position: center;
@@ -3725,7 +3725,7 @@
 
                     position: absolute;
                     z-index: 2;
-                    top: -35px;
+                    top: -19px;
                     left: 50%;
                     transform: translateX(-50%) rotate(2deg);
                 }
@@ -4041,10 +4041,9 @@
         font-family: 'Oswald';
         font-style: normal;
         font-weight: 700;
-        font-size: 24px;
+        font-size: 1.5rem;
         line-height: 30px;
-        max-width: 352px;
-        padding-left: 22.94px;
+        max-width: 22rem;
         margin-bottom: 3rem;
 
         @media screen and (min-width: 650px) {
@@ -4061,17 +4060,19 @@
     }
 
     &__text {
-        background-image: url('/assets/images/weeding-out-card.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        transform: rotate(-2.56deg);
-
         width: 103%;
         height: 278.92px;
         position: relative;
         padding-top: 36px;
         margin-top: 64px;
         overflow: hidden;
+        
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        background: $color-floral-white;
+
+        &::before {
+            content: url("/assets/images/weeding-pin.png");
+        }
 
         @media screen and (min-width: 507px) {
             width: 77%;
@@ -4098,7 +4099,6 @@
             text-align: center;
             margin: auto;
             margin-top: 4rem;
-            transform: rotate(2.44deg);
 
             @media screen and (min-width: 650px) {
                 color: white;
@@ -4409,11 +4409,11 @@
 
 .misdiagnosis-table {
     position: relative;
-    margin-top: 5rem;
+    margin-top: 8rem;
 
     @media screen and (min-width: 1024px) {
 
-        margin-top: 6rem;
+        margin-top: 12rem;
 
         &::after {
             content: "";

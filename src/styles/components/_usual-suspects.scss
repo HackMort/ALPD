@@ -42,7 +42,7 @@
                 max-width: calc(100% - var(--wrapper-margin) / 2);
                 margin: 0 auto;
             }
-    
+
             .internal__nav_list {
                 justify-content: center;
 
@@ -53,11 +53,72 @@
         }
     }
 
-    .section-container {
-        color: white;
-        padding-top: 20px;
-        padding-bottom: 45px;
-        padding-left: 24px;
+    .common-misdiagnoses-section {
+
+        .content-title {
+            font-family: "veneer", sans-serif;
+            color: $color-cinnabar;
+            font-size: 30px;
+            font-weight: 400;
+            text-transform: uppercase;
+
+            margin: 1rem 0;
+
+            @media screen and (min-width: 600px) {
+                text-align: center;
+            }
+
+            @media screen and (min-width: 768px) {
+                font-size: 3.5rem;
+                line-height: 56px;
+
+                margin-top: 3rem;
+            }
+        }
+
+        .content-pharagraph {
+            color: $color-white;
+
+            &:first-of-type {
+                font-size: 1.125rem;
+                line-height: 25.2px;
+
+                margin-bottom: .75rem;
+                max-width: 29.0625rem;
+
+                strong {
+                    font-weight: 600;
+                }
+            }
+
+            &:nth-child(3) {
+                max-width: 28.0625rem;
+                font-size: 1rem;
+                line-height: 24px;
+            }
+
+            @media screen and (min-width: 600px) {
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            @media screen and (min-width: 768px) {
+
+                &:first-of-type {
+                    font-size: 1.375rem;
+                    line-height: 30.8px;
+                    max-width: 35.0625rem;
+                }
+
+                &:nth-child(3) {
+                    font-size: 1.125rem;
+                    line-height: 25.2px;
+                    max-width: 32.0625rem;
+                }
+
+            }
+        }
     }
 
     .buttons-panel-container {
@@ -101,31 +162,31 @@
 
     }
 
-    .content-title {
-        font-family: "veneer", sans-serif;
-        margin-top: 30px;
-        color: $color-red;
-        font-size: 30px;
-        text-align: center;
-    }
-
-    .content-pharagraph {
-        margin-top: 15px;
-        font-size: 18px;
-        font-weight: 600;
-        font-family: "Barlow", sans-serif;
-        max-width: 567px;
-
-
-        &.content-pharagraph--secondary {
-            font-size: 16px;
-            font-weight: 500;
-            max-width: 502px;
-        }
-    }
-
     .hpp-multisystemic__tabs {
         min-height: 800px; // Temporal height, remove when development is completed.
+
+        position: relative;
+
+        .red-string {
+            position: absolute;
+            left: 50%;
+
+            transform: translateX(-50%) rotate(17deg);
+
+            top: 24px;
+
+            @media screen and (min-width: 425px) {
+                transform: translateX(-50%) rotate(10deg);
+            }
+
+            @media screen and (min-width: 768px) {
+                transform: translateX(-50%) rotate(5deg);
+            }
+
+            @media screen and (min-width: 769px) {
+                display: none;
+            }
+        }
     }
 
     .hpp__profile {
@@ -150,43 +211,91 @@
 
 
     .usual-suspects-misdiagnosis {
-        color: white;
-        padding: 23px;
+        color: $color-white;
         position: relative;
 
+        .red-string-wrapper {
+            margin: 3.5rem 0;
+
+            &:first-of-type {
+                margin-bottom: 1rem;
+                .red-string {
+                    transform: translateX(-50%) rotate(-12deg);
+
+                    @media screen and (min-width: 600px) {
+                        transform: translateX(-50%) rotate(-3deg);
+                    }
+                }
+            }
+
+            &:last-of-type {
+                .red-string {
+                    transform: translateX(-50%) rotate(10deg);
+                    @media screen and (min-width: 600px) {
+                        transform: translateX(-50%) rotate(3deg);
+                    }
+                }
+            }
+        }
+
         .title {
-            margin-top: 12px;
-            margin-bottom: 7px;
+            margin-top: .75rem;
+            margin-bottom: 1rem;
             text-transform: uppercase;
-            text-align: center;
-            font-size: 24px;
+            font-size: 1.5rem;
             font-family: 'Oswald', sans-serif;
             font-weight: 700;
             line-height: 30px;
+
+            @media screen and (min-width: 600px) {
+                text-align: center;
+            }
+
+            @media screen and (min-width: 768px) {
+                font-size: 2.25rem;
+                line-height: 45px;
+
+                margin-top: 3rem;
+            }
         }
 
         .pharagraph {
-            font-size: 16px;
-            font-family: "Barlow", sans-serif;
+            font-size: 1rem;
             line-height: 24px;
             font-weight: 500;
-            margin-bottom: 70px;
-            max-width: 633px;
+            max-width: 39.5625rem;
             margin-left: auto;
             margin-right: auto;
+
+            @media screen and (min-width: 600px) {
+                text-align: center;
+            }
+
+            @media screen and (min-width: 768px) {
+                font-size: 1.125rem;
+                line-height: 25.2px;
+            }
         }
 
         .pharagraph--secondary {
-            font-size: 16px;
+            font-size: 1rem;
             line-height: 24px;
             text-align: center;
             font-family: 'Special Elite', cursive;
             font-weight: 400;
-            margin-bottom: 94px;
-            max-width: 487px;
+            max-width: 20.4375rem;
             margin-left: auto;
             margin-right: auto;
 
+            @media screen and (min-width: 600px) {
+                max-width: 24.4375rem;
+            }
+
+            @media screen and (min-width: 768px) {
+                font-size: 1.25rem;
+                line-height: 30px;
+                max-width: 30.4375rem;
+            }
         }
 
         .horizontal_line,
@@ -270,9 +379,12 @@
         }
     }
 
-    .hpp__profile .hpp-multisystemic__tabs::before {
-        background-image: url("/assets/icons/pin.svg");
-        background-size: 58px;
+    .hpp__profile .hpp-multisystemic__tabs {
+
+        &::before {
+            background-image: url("/assets/icons/pin.svg");
+            background-size: 58px;
+        }
     }
 
     .usual-suspect__sections {
@@ -330,33 +442,10 @@
 @media screen and (min-width: 600px) {
     .usual_suspects {
 
-        .content-pharagraph {
-            text-align: center;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
         .usual-suspects-misdiagnosis {
             .horizontal_line {
                 transform: rotateZ(3deg);
                 bottom: 63px;
-            }
-
-            .horizontal_line--secondary {
-                transform: rotateZ(-3deg);
-                bottom: 240px;
-            }
-
-        }
-
-        .usual-suspects-misdiagnosis {
-            .title {
-                margin-top: 57px;
-                margin-bottom: 34px;
-            }
-
-            .pharagraph {
-                margin-bottom: 85px;
             }
 
         }
