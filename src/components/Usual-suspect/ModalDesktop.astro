@@ -1,10 +1,14 @@
 ---
-import ModalInfantsDesktop from "./ModalInfantsMobile.astro";
+import ModalInfantsDesktop from "./ModalInfantsDesktop.astro";
+import ModalAdultsDesktop from "./ModalAdultsDesktop.astro";
 // import ModalAdultsMobile from "./ModalAdultsMobile.astro";
 ---
 
 <Fragment>
-  <ModalInfantsDesktop />
+  <div id="usual-suspect-modal-template" style="display: none;">
+    <!-- <ModalInfantsDesktop /> -->
+    <ModalAdultsDesktop />
+  </div>
 </Fragment>
 
 <script>
@@ -25,7 +29,7 @@ import ModalInfantsDesktop from "./ModalInfantsMobile.astro";
 
     open() {
       this.usualModalInfantsDesktop = new Fancybox(
-        [{ src: "usual-supect-modal--infants" }],
+        [{ src: "usual-supect-modal--infants--desktop" }],
         {
           autoFocus: false,
           defaultType: "inline",
@@ -51,7 +55,7 @@ import ModalInfantsDesktop from "./ModalInfantsMobile.astro";
 
     open() {
       this.usualModalAdultsDesktop = new Fancybox(
-        [{ src: "usual-supect-modal--adults" }],
+        [{ src: "usual-supect-modal--adults--desktop" }],
         {
           autoFocus: false,
           defaultType: "inline",
@@ -79,10 +83,10 @@ import ModalInfantsDesktop from "./ModalInfantsMobile.astro";
         const target = btn.getAttribute("data-target");
 
         //Open the modal
-        if (target === "infants-modal") {
+        if (target === "infants-modal-desktop") {
           const modal = new usualSuspectModalInfantsDesktop();
           modal.open();
-        } else if (target === "adults-modal") {
+        } else if (target === "adults-modal-desktop") {
           const modal = new usualSuspectModalAdultsDesktop();
           modal.open();
         }

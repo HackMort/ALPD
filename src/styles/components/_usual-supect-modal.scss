@@ -185,3 +185,22 @@
         }
     }
 }
+
+.usual-supect-modal--bg {
+    background-image: url('/assets/images/usual-suspects/modals/bg-modal--main.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100% 100%;
+}
+
+.usual-supect__modal_close-button {
+    @media screen and (min-width: 768px) {
+        color: $color-carbon;
+        position: absolute;
+        top: 0.5rem;
+        right: 2rem;
+        cursor: pointer;
+        font-size: 3rem;
+        z-index: 2;
+    }
+}

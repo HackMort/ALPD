@@ -1,12 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ModalInfantsDesktop from "../components/Usual-suspect/ModalInfantsDesktop.astro";
+import ModalAdultsDesktop from "../components/Usual-suspect/ModalAdultsDesktop.astro";
 import References from "../components/References.astro";
 import Accordion from "../components/Accordion.astro";
 import CTA from "../components/CTA.astro";
 import CaseFileModal from "../components/Case-Files/CaseFileModal.astro";
 import CaseFileModalDesktop from "../components/Case-Files/CaseFileModalDesktop.astro";
 import ModalMobile from "../components/Usual-suspect/ModalMobile.astro";
+import ModalDesktop from "../components/Usual-suspect/ModalDesktop.astro";
 ---
 
 <Layout
@@ -691,7 +693,22 @@ import ModalMobile from "../components/Usual-suspect/ModalMobile.astro";
       </div>
     </article>
     <h1 class="title">Usual Suspects Modal Desktop v1</h1>
-    <ModalInfantsDesktop />
+    <!-- 
+          data-target attribute is the id of the modal that will be triggered
+          data-target="infants-modal" 
+          data-target="adults-modal" 
+         -->
+    <h1>Infants</h1>
+    <button
+      class="button btn--usual-suspect-modal-desktop"
+      data-target="infants-modal-desktop">View List</button
+    >
+    <h1>Adults</h1>
+    <button
+      class="button btn--usual-suspect-modal-desktop"
+      data-target="adults-modal-desktop">View List</button
+    >
+    <ModalDesktop />
   </section>
   <!-- Usual suspect modal -->
   <section class="design-system-section">
