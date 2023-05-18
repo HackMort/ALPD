@@ -210,6 +210,10 @@
     }
 
     .suspect-cards-container {
+        @media screen and (min-width: 768px) {
+            padding-top: 2rem;
+        }
+
         [role="tablist"] [aria-selected] {
             background-color: $color-red;
             border: none;
@@ -236,6 +240,10 @@
         transform: translateX(-50%);
         height: auto;
         min-width: 300px;
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
     }
 
     .usual-suspect__subtabs--item {
@@ -252,13 +260,12 @@
         display: none;
     }
 
-    .wrapper {
-        padding: 0 17px;
-    }
-
     .usual-suspects-tab_section {
-        padding-top: 0;
-        padding-bottom: 50px;
+        padding: 0 0 50px;
+
+        @media screen and (min-width: 768px) {
+            padding: 0;
+        }
     }
 
     .hpp__profile .hpp-multisystemic__tabs::before {
@@ -272,12 +279,23 @@
 
     .usual-suspect__note {
         font-weight: 700;
-        padding: 0 1rem;
     }
 
     .usual-suspect__trigger {
         .btn--usual-suspect-modal-trigger {
             margin: 2rem auto;
+        }
+    }
+
+    @media screen and (min-width: 789px) and (max-width: 1024px) {
+        .card-description-container {
+            height: 250px;
+        }
+    }
+
+    @media screen and (min-width: 1025px) {
+        .card-description-container {
+            height: 250px;
         }
     }
 }

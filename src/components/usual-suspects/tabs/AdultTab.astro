@@ -103,11 +103,29 @@ const data_card_4 = {
         aria-hidden="false"
         tabindex="-1"
       >
-        <div class="mobile--only">
+        <div class="suspect-card--mobile--only">
+          <div class="suspect-card">
+            <div class="suspect-card_bordered-item suspect-card_bordered-title">
+              <h3 class="suspect-card_title">
+                Differential diagnoses for hypophosphatasia with shared
+                symptoms:
+              </h3>
+            </div>
+          </div>
           <SuspectCard {...data_card_1} />
         </div>
-        <div class="desktop--only">
-          <div class="wrapper">
+        <div class="suspect-card--desktop--only">
+          <div class="wrapper suspect-card__cards-container">
+            <div class="suspect-card">
+              <div
+                class="suspect-card_bordered-item suspect-card_bordered-title"
+              >
+                <h3 class="suspect-card_title">
+                  Differential diagnoses for hypophosphatasia with shared
+                  symptoms:
+                </h3>
+              </div>
+            </div>
             <div class="cards__grid_container">
               <SuspectCard {...data_card_1} />
               <SuspectCard {...data_card_2} />
@@ -158,21 +176,25 @@ const data_card_4 = {
       </section>
     </article>
 
-    <p class="usual-suspect__note">
-      View the full list of suspects, shared symptoms, and how to differentiate
-      from hypophosphatasia:
-    </p>
+    <div class="wrapper suspect-card__cards-container--foot">
+      <div class="suspect-card--foot">
+        <p class="usual-suspect__note">
+          View the full list of suspects, shared symptoms, and how to
+          differentiate from hypophosphatasia:
+        </p>
 
-    <div class="usual-suspect__trigger">
-      <button
-        class="button btn--usual-suspect-modal-trigger"
-        data-target="adults-modal">View List</button
-      >
+        <div class="usual-suspect__trigger">
+          <button
+            class="button btn--usual-suspect-modal-trigger"
+            data-target="adults-modal">View List</button
+          >
+        </div>
+      </div>
     </div>
   </section>
-</section>
-<ModalMobile />
 
+  <ModalMobile />
+</section>
 <style>
   .mobile--only {
     display: block;
@@ -188,7 +210,7 @@ const data_card_4 = {
   }
   .cards__grid_container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 25%);
   }
   .usual-suspect__subtabs {
     @media screen and (min-width: 1024px) {

@@ -1,11 +1,50 @@
 .suspect-card {
     width: 100%;
+
+    &--desktop--only {
+        display: none;
+
+        @media screen and (min-width: 769px) {
+            display: block;
+        }
+    }
+
+    &--mobile--only {
+        display: none;
+
+        @media screen and (max-width: 768px) {
+            display: block;
+        }
+    }
+
 }
 
 .suspect-card_bordered-item {
     border: 1px solid red;
-    margin: -1px;
-    padding: 15px 27px;
+    padding: 1rem;
+
+    img {
+        width: 100%;
+        max-width: 25rem;
+        margin: -1rem auto 0 auto;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1400px) {
+        padding: 0.5rem;
+
+        img {
+            max-width: 12.5rem;
+            margin: -1rem auto 0 auto;
+        }
+    }
+
+    @media screen and (min-width: 1400px) {
+        padding: 1rem;
+    }
+}
+
+.suspect-card_bordered-title {
+    border-bottom: 0;
 }
 
 .suspect-card__note {
@@ -36,6 +75,7 @@
     font-weight: 700;
     color: $color-carbon;
     line-height: 1.375rem;
+    word-wrap: break-word;
 
     strong {
         font-family: inherit;
@@ -44,5 +84,26 @@
 
     &--secondary {
         color: $color-red;
+    }
+}
+
+.suspect-card--foot {
+    @media screen and (min-width: 769px) {
+        display: flex;
+        align-items: center;
+        border: 1px solid $color-red;
+        padding-left: 0.5rem;
+    }
+}
+
+.suspect-card__cards-container {
+    @media screen and (min-width: 768px) {
+        padding: 1rem 2rem 0 2rem;
+    }
+}
+
+.suspect-card__cards-container--foot {
+    @media screen and (min-width: 768px) {
+        padding: 0rem 2rem 12rem 2rem;
     }
 }
