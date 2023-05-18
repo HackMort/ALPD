@@ -113,7 +113,6 @@ export function ShowSection () {
       section.setAttribute('aria-hidden', 'true')
       section.setAttribute('hidden', 'true')
       if (section.getAttribute('id') === selectedOption) {
-        console.log('Section Active? : ', section)
         section.setAttribute('aria-hidden', 'false')
         section.removeAttribute('hidden')
 
@@ -150,21 +149,21 @@ export function ShowSection () {
   // Default option
   bgFolder.classList.add('multisystemic1')
 
-  option1.addEventListener('click', function () {
+  option1 && option1.addEventListener('click', function () {
     // Remove the other classes
     bgFolder.classList.remove('multisystemic2')
     bgFolder.classList.remove('multisystemic3')
     bgFolder.classList.add('multisystemic1')
   })
 
-  option2.addEventListener('click', function () {
+  option2 && option2.addEventListener('click', function () {
     // Remove the other classes
     bgFolder.classList.remove('multisystemic1')
     bgFolder.classList.remove('multisystemic3')
     bgFolder.classList.add('multisystemic2')
   })
 
-  option3.addEventListener('click', function () {
+  option3 && option3.addEventListener('click', function () {
     // Remove the other classes
     bgFolder.classList.remove('multisystemic1')
     bgFolder.classList.remove('multisystemic2')

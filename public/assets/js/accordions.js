@@ -22,8 +22,6 @@ export function Accordions () {
         e.stopPropagation()
         const expanded = item.getAttribute('aria-expanded') === 'true' || false
         const itemClass = item.classList.contains('accordion__item--expanded')
-        console.log(expanded)
-        console.log(itemClass)
 
 
         if(itemClass && expanded == true) {

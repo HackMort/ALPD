@@ -1,5 +1,6 @@
 ---
 import SuspectCard from "../../Suspect-Card.astro";
+import ModalMobile from "../modals/ModalMobile.astro";
 
 const data_card_1 = {
   title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
@@ -87,7 +88,7 @@ const data_card_5 = {
 <section class="hpp__profile suspect-cards-container">
   <!-- Multisystemic Symptoms and Disease Burden -->
   <section id="hpp-multisystemic" class="section hpp-multisystemic">
-    <article class="">
+    <article class="usual-suspect__sections">
       <ul role="tablist" class="usual-suspect__subtabs">
         <li role="presentation" class="usual-suspect__subtabs--item">
           <a
@@ -194,5 +195,17 @@ const data_card_5 = {
         <SuspectCard {...data_card_5} />
       </section>
     </article>
+
+    <p class="usual-suspect__note">
+      View the full list of suspects, shared symptoms, and how to differentiate
+      from hypophosphatasia:
+    </p>
+
+    <div class="usual-suspect__trigger">
+      <button
+        class="button btn--usual-suspect-modal-trigger"
+        data-target="infants-modal">View List</button
+      >
+    </div>
   </section>
 </section>
