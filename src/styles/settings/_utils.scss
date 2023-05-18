@@ -19,6 +19,18 @@ $color-value in $colors {
     .bg-color--#{$color-name} {
         background-color: $color-value;
     }
+
+    .md\:color--#{$color-name} {
+        @media screen and (min-width: 768px) {
+            color: $color-value !important;
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: inherit;
+            font-style: inherit;
+            letter-spacing: inherit;
+            line-height: inherit;
+        }
+    }
 }
 
 .sz-500\:color--saffron-mango {
