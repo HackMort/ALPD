@@ -1,0 +1,127 @@
+---
+import ModalInfantsDesktop from "./ModalInfantsDesktop.astro";
+import ModalAdultsDesktop from "./ModalAdultsDesktop.astro";
+---
+
+<Fragment>
+  <div id="usual-suspect-modal-template" style="display: none;">
+    <ModalInfantsDesktop />
+    <ModalAdultsDesktop />
+  </div>
+</Fragment>
+
+<script>
+  /**
+   * #################################################################################################
+   * UsualSuspectModalDesktop
+   * #################################################################################################
+   */
+
+  import { Fancybox } from "@fancyapps/ui";
+
+  class usualSuspectModalInfantsDesktop {
+    usualModalInfantsDesktop: Fancybox;
+
+    constructor() {
+      this.usualModalInfantsDesktop = undefined;
+    }
+
+    open() {
+      this.usualModalInfantsDesktop = new Fancybox(
+        [{ src: "usual-supect-modal--infants--desktop" }],
+        {
+          autoFocus: false,
+          defaultType: "inline",
+          placeFocusBack: true,
+          trapFocus: false,
+          closeButton: false,
+          height: "auto",
+          dragToClose: false,
+          on: {
+            close: () => {
+              this.closingModal();
+            },
+          },
+        }
+      );
+    }
+
+    close() {
+      this.usualModalInfantsDesktop.destroy();
+    }
+
+    closingModal() {
+      const modalArticles = document.querySelectorAll(
+        `.modal__grids_article.infants`
+      );
+      modalArticles.forEach((article) => {
+        article.classList.remove("is--active");
+      });
+      modalArticles[0].classList.add("is--active");
+    }
+  }
+
+  class usualSuspectModalAdultsDesktop {
+    usualModalAdultsDesktop: Fancybox;
+
+    constructor() {
+      this.usualModalAdultsDesktop = undefined;
+    }
+
+    open() {
+      this.usualModalAdultsDesktop = new Fancybox(
+        [{ src: "usual-supect-modal--adults--desktop" }],
+        {
+          autoFocus: false,
+          defaultType: "inline",
+          placeFocusBack: true,
+          trapFocus: false,
+          closeButton: false,
+          height: "auto",
+          dragToClose: false,
+          on: {
+            close: () => {
+              this.closingModal();
+            },
+          },
+        }
+      );
+    }
+
+    close() {
+      this.usualModalAdultsDesktop.destroy();
+    }
+
+    closingModal() {
+      const modalArticles = document.querySelectorAll(
+        `.modal__grids_article.adults`
+      );
+      modalArticles.forEach((article) => {
+        article.classList.remove("is--active");
+      });
+      modalArticles[0].classList.add("is--active");
+    }
+  }
+
+  //Open the modals
+  document.addEventListener("DOMContentLoaded", () => {
+    const triggerBtns = document.querySelectorAll(
+      ".btn--usual-suspect-modal-desktop"
+    );
+    triggerBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        //Save the target-data value
+        const target = btn.getAttribute("data-target");
+
+        //Open the modal
+        if (target === "infants-modal-desktop") {
+          const modal = new usualSuspectModalInfantsDesktop();
+          modal.open();
+        } else if (target === "adults-modal-desktop") {
+          const modal = new usualSuspectModalAdultsDesktop();
+          modal.open();
+        }
+      });
+    });
+  });
+</script>

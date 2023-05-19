@@ -62,19 +62,11 @@
                         li {
                             margin: 0 0 0 2.5rem;
                             position: relative;
-
-                            &::before {
-                                content: "";
-                                width: 0.29rem;
-                                height: 0.29rem;
-                                background-color: $color-carbon;
-                                border-radius: 50%;
-                                position: absolute;
-                                top: 0.8rem;
-                                left: -0.8rem;
-                            }
+                            list-style-type: disc;
 
                             &.no-bullet {
+                                list-style-type: none;
+
                                 &::before {
                                     display: none;
                                 }
@@ -183,5 +175,24 @@
             text-decoration: underline;
             font-weight: 600;
         }
+    }
+}
+
+.usual-supect-modal--bg {
+    background-image: url('/assets/images/usual-suspects/modals/bg-modal--main.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100% 100%;
+}
+
+.usual-supect__modal_close-button {
+    @media screen and (min-width: 768px) {
+        color: $color-carbon;
+        position: absolute;
+        top: 0.5rem;
+        right: 2rem;
+        cursor: pointer;
+        font-size: 3rem;
+        z-index: 2;
     }
 }
