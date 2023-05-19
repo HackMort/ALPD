@@ -1,5 +1,6 @@
 ---
 import SuspectCard from "../../Suspect-Card.astro";
+import ModalDesktop from "../modals/ModalDesktop.astro";
 import ModalMobile from "../modals/ModalMobile.astro";
 
 const data_card_1 = {
@@ -195,9 +196,12 @@ const data_card_4 = {
             </div>
         </div>
     </section>
-
+    <ModalDesktop />
     <ModalMobile />
 </section>
+
+<script src="./toggle-modal.js"></script>
+
 <style>
     .mobile--only {
         display: block;

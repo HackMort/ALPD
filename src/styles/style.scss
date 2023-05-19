@@ -2686,13 +2686,13 @@
         .red-string {
             position: absolute;
             z-index: 2;
-            transform: rotate(-28deg);
+            transform: rotate(-28deg) translateX(-50%);
             transform-origin: left;
             top: 72%;
 
             @media screen and (min-width: 768px) {
                 top: 0.5rem;
-                transform: rotate(5deg);
+                transform: rotate(5deg) translateX(-50%);
             }
         }
     }
@@ -2732,7 +2732,6 @@
 
     &__title {
         color: $color-white;
-        text-transform: uppercase;
         font-family: 'Oswald';
         font-weight: 700;
 
@@ -2880,6 +2879,7 @@
         margin-right: auto;
 
         margin-bottom: 4rem;
+        z-index: 1;
 
         &::before {
             content: "";
@@ -2939,28 +2939,26 @@
     }
 
     &__red-string-bg {
-        overflow: clip;
         position: relative;
 
         /* Just a inclined line troughing from the left to the right*/
         &::before {
             content: '';
             position: absolute;
-            top: 380px;
-            left: 0;
+            top: 540px;
+            left: 50%;
             width: calc(100vw * 2);
             height: 2px;
             background-color: $color-red;
-            transform: rotate(39deg);
+            transform: rotate(39deg) translateX(-50%);
             transform-origin: left;
             z-index: 1;
 
             @media screen and (min-width: 769px) {
                 //Rotate the line to the right side
-                transform: rotate(338deg);
+                transform: rotate(338deg) translateX(-50%);
                 transform-origin: top;
-                top: 358px;
-                left: -150px;
+                top: -137px;
 
                 z-index: 0;
             }
@@ -3832,6 +3830,7 @@
 
             @media screen and (min-width: 1024px) {
                 justify-content: flex-start;
+                margin-left: 0;
             }
 
             &--text-red-line {
@@ -4723,7 +4722,6 @@
         @media screen and (min-width: 768px) {
             font-size: 1.125rem;
             line-height: 25.2px;
-            font-weight: 400;
             text-align: center;
             max-width: 36.125rem;
             margin: auto;
@@ -4782,23 +4780,25 @@
         font-family: 'Oswald';
         font-style: normal;
         font-weight: 700;
-        font-size: 24px;
-        line-height: 125%;
-        /* or 30px */
+        font-size: 1.5rem;
+        line-height: 33.6px;
         padding-bottom: 1rem;
         border-bottom: 1px solid black;
-        margin-bottom: 9px;
-        margin-top: 10px;
-        padding-top: 11.85px;
-        text-transform: uppercase;
+        margin-bottom: .5625rem;
+        margin-top: .625rem;
+        padding-top: .7406rem;
+
+        sup {
+            font-weight: 300;
+            font-size: 60%;
+            top: -0.6em;
+        }
 
         @media screen and (min-width: 686px) {
-            font-size: 24px;
-            line-height: 140%;
             margin: auto;
             text-align: center;
             border-top: 1px solid black;
-            max-width: 788px;
+            max-width: 49.25rem;
         }
     }
 
