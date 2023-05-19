@@ -2,7 +2,7 @@
   <nav class="site__navigation">
     <ul class="secondary__navigation nav__menu">
       <li class="nav__menu_item">
-        <a  class="nav__menu_item_link connected-modal">Stay Connected</a>
+        <a class="nav__menu_item_link connected-modal">Stay Connected</a>
       </li>
       <li class="nav__menu_item">
         <a
@@ -11,11 +11,22 @@
           target="_blank">Patient Site</a
         >
       </li>
-      <li class="nav__menu_item">
-        <a href="#" class="nav__menu_item_link">Patient Case Files</a>
+      <li class="nav__menu_item nav__menu_item--only-desktop">
+        <a
+          href="#"
+          class="nav__menu_item_link case-files-modal-trigger--desktop"
+          >Patient Case Files</a
+        >
+      </li>
+      <li class="nav__menu_item nav__menu_item--only-mobile">
+        <a href="#" class="nav__menu_item_link case-files-modal-trigger"
+          >Patient Case Files</a
+        >
       </li>
       <li class="nav__menu_item">
-        <a href="#" class="nav__menu_item_link calculator-modal">ALP Calculator</a>
+        <a href="#" class="nav__menu_item_link calculator-modal"
+          >ALP Calculator</a
+        >
       </li>
     </ul>
   </nav>

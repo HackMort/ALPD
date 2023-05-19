@@ -1,11 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import References from "../components/References.astro";
 import Accordion from "../components/Accordion.astro";
 import CTA from "../components/CTA.astro";
-import CaseFileModal from "../components/Case-Files/CaseFileModal.astro";
-import CaseFileModalDesktop from "../components/Case-Files/CaseFileModalDesktop.astro";
 import ModalMobile from "../components/usual-suspects/modals/ModalMobile.astro";
+import ModalDesktop from "../components/Usual-suspect/ModalDesktop.astro";
 ---
 
 <Layout
@@ -449,7 +447,6 @@ import ModalMobile from "../components/usual-suspects/modals/ModalMobile.astro";
       <button class="button button--custom-bg case-files-modal-trigger"
         >View Patient case files</button
       >
-      <CaseFileModal />
     </div>
   </section>
   <section class="design-system-section">
@@ -458,9 +455,6 @@ import ModalMobile from "../components/usual-suspects/modals/ModalMobile.astro";
       <button class="button button--custom-bg case-files-modal-trigger--desktop"
         >View Patient case files</button
       >
-      <div class="case__files_modal_wrapper">
-        <CaseFileModalDesktop />
-      </div>
     </div>
   </section>
   <section class="design-system-section">
@@ -689,87 +683,23 @@ import ModalMobile from "../components/usual-suspects/modals/ModalMobile.astro";
         </div>
       </div>
     </article>
-    <CTA
-      variation="variant-2"
-      buttonLabel="Usual Suspects"
-      content="Learn the risks of misdiagnosis"
-      linkURL="#"
-      bypassModal
-    />
-    <References>
-      <strong>References: 1.</strong> McKiernan FE, Berg RL, Fuehrer J. Clinical
-      and radiographic findings in adults with persistent hypophosphatasemia. J Bone
-      Miner Res. 2014;29(7):1651-1660. <strong>2.</strong> Offiah AC, Vockley J,
-      Munns CF, Murotsuki J. Differential diagnosis of perinatal hypophosphatasia:
-      radiologic perspectives. Pediatr Radiology. 2019;49(1)3-22. <strong
-        >3.</strong
-      > Rockman-Greenberg C. Hypophosphatasia. Pediatr Endocrinol Rev. 2013;10(suppl
-      2):380-388 <strong>4.</strong>
-      Weber TJ, Sawyer EK, Moseley S, Odrljin T, Kishnani PS. Burden of disease in
-      adult patients with hypophosphatasia: results from two patient-reported surveys.
-      Metabolism. 2016;65(10):1522-1530. <strong>5.</strong> Sutton RA, Mumm S, Coburn
-      SP, Ericson KL, Whyte MP. “Atypical femoral fractures” during bisphosphonate
-      exposure in adult hypophosphatasia. J Bone Miner Res. 2012;27(5):987-994. <strong
-        >6.</strong
-      > National Institute of Child Health and Human Development. What are the symptoms
-      of osteogenesis imperfecta (OI). NICDH. 2021. Accessed March 30, 2023. <a
-        target="_blank"
-        href="https://www.nichd.nih.gov/health/topics/osteogenesisimp/conditioninfo/symptoms"
-        >https://www.nichd.nih.gov/health/topics/osteogenesisimp/conditioninfo/symptoms</a
-      >
-      <strong>7.</strong> Marini JC, Cabral WA. Osteogenesis imperfecta. In: Thakker
-      RV, Whyte MP, Eisman JA, Igarashi T, eds. Genetics of Bone Biology and Skeletal
-      Disease. Academic Press; 2018;397-420. <strong>8.</strong> Dubail J, Cormier-Daire
-      V. Chondrodysplasias with multiple dislocations caused by defects in glycosaminoglycan
-      synthesis. Front Genet. 2021;12:642097. <strong>9.</strong> NIH MedlinePlus.
-      Idiopathic infantile hypercalcemia. National Institute of Health. 2017. Accessed
-      March 30, 2023. <a
-        target="_blank"
-        href="https://medlineplus.gov/genetics/condition/idiopathic-infantile-hypercalcemia/"
-        >https://medlineplus.gov/genetics/condition/idiopathic-infantile-hypercalcemia/</a
-      >
-      <strong>10.</strong> Martos-Moreno GA, Calzada J, Couce ML, Argente J. Hypophosphatasia:
-      clinical manifestations, diagnostic recommendations and therapeutic options.
-      An Pediatr (Engl Ed). 2018;88(6):356.e1-356.e11. <strong>11.</strong> Mornet
-      E, Nunes ME. Hypophosphatasia. In: Adam MP, Ardinger HH, Pagon RA, et al, eds.
-      GeneReviews®. University of Washington; 2011. Accessed April 3, 2023. <a
-        target="_blank"
-        href="http://www.ncbi.nlm.nih.gov/books/NBK1150/?report=reader"
-        >http://www.ncbi.nlm.nih.gov/books/NBK1150/?report=reader</a
-      >
-      <strong>12.</strong> Mohn A, De Leonibus C, de Giorgis T, Mornet E, Chiarelli
-      F. Hypophosphatasia in a child with widened anterior fontanelle: lessons learned
-      from late diagnosis and incorrect treatment. Acta Paediatr. 2011;100(7):e43-e46.
-      <strong>13.</strong> Whyte MP, Wenkert D, McAlister WH, et al. Chronic recurrent
-      multifocal osteomyelitis mimicked in childhood hypophosphatasia. J Bone Miner
-      Res. 2009;24:1493-1505.
-      <strong>14.</strong> Shapiro JR, Lewiecki EM. Hypophosphatasia in adults: clinical
-      assessment and treatment considerations. J Bone Miner Res. 2017;32(10):1977-1980.
-      <strong>15.</strong>
-      Boyce AM, Tosi LL, Paul SM. Bisphosphonate treatment for children with disabling
-      conditions. PM R. 2014;6(5):427-436. <strong>16.</strong> Stadecker WJ. Bisphosphonates
-      101: an update for the general dentist. Inside Dentistry. 2008. <strong
-        >17.</strong
-      > Bianchi ML, Bishop NJ, Guañabens N, et al; Rare Bone Disease Action Group
-      of the European Calcified Tissue Society. Hypophosphatasia in adolescents and
-      adults: overview of diagnosis and treatment. Osteoporos Int. 2020;31(8):1445-1460.
-      <strong>18.</strong> Choida V, Bubbear JS. Update on the management of hypophosphatasia.
-      Ther Adv Musculoskelet Dis. 2019;11:1759720X19863997. <strong>19.</strong>
-      Vieira LHR, Peixoto KC, Flósi CL, Fleiuss de Farais ML, Madeira M. Active search
-      of adult patients with persistently low serum alkaline phosphatase levels for
-      diagnosis of hypophosphatasia. Arch Endocrinol Metab. 2021;65(3):289-294. <strong
-        >20.</strong
-      > Bloch-Zupan A. Hypophosphatasia: diagnosis and clinical signs - a dental
-      surgeon perspective. Int J Paediatr Dent. 2016;26(6):426-438. <strong
-        >21.</strong
-      > Bishop N, Munns CF, Ozono K. Transformative therapy in hypophosphatasia.
-      Arch Dis Child. 2016;101(6):514-515.
-    </References>
+    <h1 class="title">Usual Suspects Modal Desktop Versions</h1>
+    <h1>Infants</h1>
+    <button
+      class="button btn--usual-suspect-modal-desktop"
+      data-target="infants-modal-desktop">View List</button
+    >
+    <h1>Adults</h1>
+    <button
+      class="button btn--usual-suspect-modal-desktop"
+      data-target="adults-modal-desktop">View List</button
+    >
+    <ModalDesktop />
   </section>
   <!-- Usual suspect modal -->
   <section class="design-system-section">
     <div class="section-wrapper section-wrapper--small">
-      <h1 class="title">Usual suspect</h1>
+      <h1 class="title">Usual Suspects Modal Mobile Versions</h1>
       <div class="buttons" style="display: flex; flex-direction: column;">
         <!-- 
           data-target attribute is the id of the modal that will be triggered

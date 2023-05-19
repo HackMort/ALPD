@@ -67,7 +67,6 @@ const { type, data } = Astro.props;
     btns.forEach((btn) => {
         btn.addEventListener("click", () => {
             const sectionId = btn.getAttribute("id");
-            console.log(sectionId);
             sections.forEach((section) => {
                 //Only if a section is not hidden
                 if (section.classList.contains("skeleton__content--active")) {

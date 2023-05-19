@@ -23,11 +23,10 @@ export function Accordions () {
         const expanded = item.getAttribute('aria-expanded') === 'true' || false
         const itemClass = item.classList.contains('accordion__item--expanded')
 
-
-        if(itemClass && expanded == true) {
+        if (itemClass && expanded === true) {
           item.classList.remove('accordion__item--expanded')
           item.setAttribute('aria-expanded', false)
-        } else if (itemClass && expanded == false) {
+        } else if (itemClass && expanded === false) {
           item.classList.remove('accordion__item--expanded')
           item.setAttribute('aria-expanded', false)
         } else {
@@ -39,8 +38,6 @@ export function Accordions () {
             }
           })
         }
-
-
       })
     })
   }
