@@ -1,0 +1,602 @@
+/* Usual Suspects */
+.usual_suspects {
+
+    .usual-suspects-page__hero {
+
+        .common-page-hero__title {
+            right: -1rem;
+            top: 50%;
+
+            transform: translateY(-50%) rotate(-8deg);
+
+            @media screen and (min-width: 768px) {
+                right: auto;
+                left: calc(var(--wrapper-margin) / 2);
+
+                top: 50%;
+            }
+
+            @media screen and (min-width: 1600px) {
+                left: calc((100vw - 90rem) / 2);
+            }
+        }
+
+        .red-string {
+            position: absolute;
+
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(21deg);
+
+            @media screen and (min-width: 768px) {
+                top: auto;
+                bottom: 1.5rem;
+                transform: translateX(-50%) rotate(-7deg);
+            }
+        }
+    }
+
+    @media screen and (min-width: 425px) {
+        .internal__nav {
+            .wrapper {
+                max-width: calc(100% - var(--wrapper-margin) / 2);
+                margin: 0 auto;
+            }
+
+            .internal__nav_list {
+                justify-content: center;
+
+                .internal__nav_list_item {
+                    padding: 0.25rem 2rem;
+                }
+            }
+        }
+    }
+
+    .common-misdiagnoses-section {
+
+        .content-title {
+            font-family: "veneer", sans-serif;
+            color: $color-cinnabar;
+            font-size: 30px;
+            font-weight: 400;
+            text-transform: uppercase;
+
+            margin: 1rem 0;
+
+            @media screen and (min-width: 600px) {
+                text-align: center;
+            }
+
+            @media screen and (min-width: 768px) {
+                font-size: 3.5rem;
+                line-height: 56px;
+
+                margin-top: 3rem;
+            }
+        }
+
+        .content-pharagraph {
+            color: $color-white;
+
+            &:first-of-type {
+                font-size: 1.125rem;
+                line-height: 25.2px;
+
+                margin-bottom: .75rem;
+                max-width: 29.0625rem;
+
+                strong {
+                    font-weight: 600;
+                }
+            }
+
+            &:nth-child(3) {
+                max-width: 28.0625rem;
+                font-size: 1rem;
+                line-height: 24px;
+            }
+
+            @media screen and (min-width: 600px) {
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            @media screen and (min-width: 768px) {
+
+                &:first-of-type {
+                    font-size: 1.375rem;
+                    line-height: 30.8px;
+                    max-width: 35.0625rem;
+                }
+
+                &:nth-child(3) {
+                    font-size: 1.125rem;
+                    line-height: 25.2px;
+                    max-width: 32.0625rem;
+                }
+
+            }
+        }
+    }
+
+    .buttons-panel-container {
+        button {
+            color: white;
+            font-size: 16px;
+            padding: 0;
+            text-decoration: none;
+            font-family: "oswald", sans-serif;
+            font-weight: 400;
+        }
+
+        button:first-of-type {
+            padding-bottom: 5px;
+            white-space: nowrap;
+            border-bottom: 3px solid $color-red;
+            border-radius: 0;
+            font-weight: 700;
+        }
+    }
+
+    .buttons-panel-container {
+        display: flex;
+        justify-content: center;
+        min-width: 354px;
+        margin-right: 20px;
+        margin-left: 8px;
+    }
+
+    .hr_line {
+        background-color: $color-red;
+        width: 1px;
+        height: 24px;
+        border: 0;
+        margin: 0 24px;
+    }
+
+    .scrollable-content {
+        overflow-y: scroll;
+        height: 36px;
+
+    }
+
+    .common-suspects-tabs {
+        min-height: 50rem; // Temporal height, remove when development is completed.
+        position: relative;
+
+        background-repeat: no-repeat;
+        background-size: 100% 100% !important;
+        background-position: center;
+
+        background-color: $color-floral-white;
+
+        &::before {
+            content: "";
+            background-image: url("/assets/icons/pin.svg") !important;
+            background-size: 58px;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 80px;
+            width: 13.625rem;
+            position: absolute;
+            z-index: 2;
+            top: -19px;
+            left: 50%;
+            transform: translateX(-50%) rotate(2deg);
+        }
+
+        @media screen and (min-width: 1024px) {
+
+            background-color: transparent;
+            min-height: 58rem;
+
+            &[data-active-tab="usual-suspects_tab1"] {
+                background-image: url("/assets/images/usual-suspects/adults-folder-tab.png") !important;
+            }
+
+            &[data-active-tab="usual-suspects_tab2"] {
+                background-image: url("/assets/images/usual-suspects/children-adolescents-folder-tab.png") !important;
+            }
+
+            &[data-active-tab="usual-suspects_tab3"] {
+                background-image: url("/assets/images/usual-suspects/neonates-infants-folder-tab.png") !important;
+            }
+
+            &::before {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width: 1366px) {
+            min-height: 58rem;
+
+            max-width: 100rem;
+            margin: 0 auto;
+        }
+
+        .red-string {
+            position: absolute;
+            left: 50%;
+
+            transform: translateX(-50%) rotate(17deg);
+
+            top: 24px;
+
+            @media screen and (min-width: 425px) {
+                transform: translateX(-50%) rotate(10deg);
+            }
+
+            @media screen and (min-width: 768px) {
+                transform: translateX(-50%) rotate(5deg);
+            }
+
+            @media screen and (min-width: 1024px) {
+                display: none;
+            }
+        }
+    }
+
+    .hpp__profile {
+        &__title {
+            &--desktop {
+                color: #ffffff;
+                font-size: 24px;
+                font-family: 'Oswald', sans-serif;
+                font-weight: 700;
+                line-height: 33px;
+            }
+
+            &--mobile {
+                color: $color-carbon;
+                font-size: 16px;
+                font-family: 'Oswald', sans-serif;
+                font-weight: 600;
+                line-height: 24px;
+
+            }
+        }
+    }
+
+
+    .usual-suspects-misdiagnosis {
+        color: $color-white;
+        position: relative;
+
+        .red-string-wrapper {
+            margin: 3.5rem 0;
+
+            &:first-of-type {
+                margin-bottom: 1rem;
+
+                .red-string {
+                    transform: translateX(-50%) rotate(-12deg);
+
+                    @media screen and (min-width: 600px) {
+                        transform: translateX(-50%) rotate(-3deg);
+                    }
+                }
+            }
+
+            &:last-of-type {
+                .red-string {
+                    transform: translateX(-50%) rotate(10deg);
+
+                    @media screen and (min-width: 600px) {
+                        transform: translateX(-50%) rotate(3deg);
+                    }
+                }
+            }
+        }
+
+        .title {
+            margin-top: .75rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            line-height: 30px;
+
+            @media screen and (min-width: 600px) {
+                text-align: center;
+            }
+
+            @media screen and (min-width: 768px) {
+                font-size: 2.25rem;
+                line-height: 45px;
+
+                margin-top: 3rem;
+            }
+        }
+
+        .pharagraph {
+            font-size: 1rem;
+            line-height: 24px;
+            font-weight: 500;
+            max-width: 39.5625rem;
+            margin-left: auto;
+            margin-right: auto;
+
+            @media screen and (min-width: 600px) {
+                text-align: center;
+            }
+
+            @media screen and (min-width: 768px) {
+                font-size: 1.125rem;
+                line-height: 25.2px;
+            }
+        }
+
+        .pharagraph--secondary {
+            font-size: 1rem;
+            line-height: 24px;
+            text-align: center;
+            font-family: 'Special Elite', cursive;
+            font-weight: 400;
+            max-width: 20.4375rem;
+            margin-left: auto;
+            margin-right: auto;
+
+            @media screen and (min-width: 600px) {
+                max-width: 24.4375rem;
+            }
+
+            @media screen and (min-width: 768px) {
+                font-size: 1.25rem;
+                line-height: 30px;
+                max-width: 30.4375rem;
+            }
+        }
+
+        .horizontal_line,
+        .horizontal_line--secondary {
+            position: absolute;
+            border: 0;
+            height: 2px;
+            background-color: $color-red;
+            width: 110vw;
+            left: -12px;
+        }
+
+        .horizontal_line {
+            bottom: 50px;
+            transform: rotateZ(10deg);
+        }
+
+        .horizontal_line--secondary {
+            bottom: 256px;
+            transform: rotateZ(-10deg);
+        }
+
+    }
+
+    .hpp-multisystemic__select {
+        max-width: 21.9375rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .suspect-cards-container {
+        max-width: 21.5625rem;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media screen and (min-width: 768px) {
+            padding-top: 2rem;
+        }
+
+        @media screen and (min-width: 1024px) {
+            max-width: initial;
+            padding-top: 0;
+
+            margin: initial;
+        }
+
+        [role="tablist"] [aria-selected] {
+            background-color: $color-red;
+            border: none;
+        }
+
+        [role="tablist"] a {
+            background-color: $color-granite-grey;
+            width: 16px;
+            height: 16px;
+            min-width: initial;
+            padding: 0;
+            border: 0;
+            border-radius: 100px;
+        }
+    }
+
+    .usual-suspect__subtabs {
+        background-color: initial;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: auto;
+        min-width: 300px;
+
+        @media screen and (min-width: 768px) {
+            bottom: -35px;
+            z-index: 2;
+        }
+    }
+
+    .usual-suspect__subtabs--item {
+        height: 16px;
+        width: 16px;
+        padding: 0;
+        background-color: $color-granite-grey;
+        border: 0;
+        border-radius: 100px;
+        margin: 0 15px;
+    }
+
+    .hpp__profile .hpp-multisystemic__tabs::after {
+        display: none;
+    }
+
+    .usual-suspects-tab_section {
+        padding: 0 0 50px;
+
+        @media screen and (min-width: 768px) {
+            padding: 0;
+        }
+    }
+
+    .hpp__profile .hpp-multisystemic__tabs {
+
+        &::before {
+        }
+    }
+
+    // .hpp-multisystemic {
+    //     @media screen and (min-width: 768px) {
+    //         position: relative;
+    //     }
+    // }
+
+    .usual-suspect__sections {
+        position: relative;
+    }
+
+    .usual-suspect__note {
+        font-weight: 700;
+        font-size: 1.125rem;
+        line-height: 25.2px;
+
+        @media screen and (min-width: 768px) {
+            padding-top: 2.5rem;
+        }
+
+        @media screen and (min-width: 1024px) {
+            padding-top: 0;
+            font-size: 1rem;
+
+            position: relative;
+
+            &::after {
+                content: "";
+                background-image: url("/assets/images/usual-suspects/red-underlines.svg");
+                background-repeat: no-repeat;
+
+                position: absolute;
+
+                left: -30px;
+                top: 100%;
+
+                width: 14.75rem;
+                height: 2rem;
+
+                background-size: contain;
+            }
+        }
+
+        @media screen and (min-width: 1366px) {
+            font-size: 1.3125rem;
+            line-height: 29.04px;
+
+            &::after {
+                width: 20.75rem;
+                left: -50px;
+            }
+        }
+    }
+
+    .usual-suspect__trigger {
+        .btn--usual-suspect-modal-trigger {
+            margin: 2rem auto;
+        }
+    }
+
+    // @media screen and (min-width: 789px) and (max-width: 1024px) {
+    //     .card-description-container {
+    //         height: 250px;
+    //     }
+    // }
+
+    @media screen and (min-width: 1024px) {
+        .card-description-container {
+            height: 18.4375rem;
+        }
+    }
+}
+
+
+@media screen and (min-width: 400px) {
+    .usual_suspects .usual-suspects-misdiagnosis {
+        .horizontal_line--secondary {
+            transform: rotateZ(-7deg);
+        }
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .usual_suspects {
+        .usual-suspects-misdiagnosis {
+            .horizontal_line {
+                transform: rotateZ(5deg);
+            }
+
+            .horizontal_line--secondary {
+                transform: rotateZ(-5deg);
+            }
+
+        }
+
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .usual_suspects {
+
+        .usual-suspects-misdiagnosis {
+            .horizontal_line {
+                transform: rotateZ(3deg);
+                bottom: 63px;
+            }
+
+        }
+
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .usual_suspects {
+        .content-pharagraph {
+            font-size: 22px;
+            margin-top: 27px;
+
+            &.content-pharagraph--secondary {
+                font-size: 18px;
+                margin-top: 16px;
+            }
+        }
+
+        .section-container {
+            padding-top: 83px;
+        }
+
+        .buttons-panel-container button {
+            font-size: 24px;
+            padding-bottom: 11px;
+        }
+
+        .buttons-panel-container button:first-of-type {
+            padding-bottom: 11px;
+        }
+
+        .content-title {
+            font-size: 56px;
+            margin-top: 69px;
+        }
+
+    }
+}
+
+/* Usual Suspects */
