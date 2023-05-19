@@ -126,5 +126,14 @@
 .suspect-card__cards-container--foot {
     @media screen and (min-width: 1024px) {
         padding: 0 2rem;
+        max-width: var(--wrapper-max-width);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media screen and (min-width: 1600px) {
+
+        max-width: 90rem;
+
     }
 }

@@ -163,12 +163,12 @@
     }
 
     .common-suspects-tabs {
-        min-height: 800px; // Temporal height, remove when development is completed.
+        min-height: 50rem; // Temporal height, remove when development is completed.
         position: relative;
 
         background-repeat: no-repeat;
-        background-size: 100%;
-        background-position: top;
+        background-size: 100% 100% !important;
+        background-position: center;
 
         background-color: $color-floral-white;
 
@@ -187,27 +187,33 @@
             transform: translateX(-50%) rotate(2deg);
         }
 
-        
-
         @media screen and (min-width: 1024px) {
 
             background-color: transparent;
+            min-height: 55rem;
 
             &[data-active-tab="usual-suspects_tab1"] {
-                background-image: url("/assets/images/usual-suspects/adults-folder-tab.png");
+                background-image: url("/assets/images/usual-suspects/adults-folder-tab.png") !important;
             }
 
             &[data-active-tab="usual-suspects_tab2"] {
-                background-image: url("/assets/images/usual-suspects/children-adolescents-folder-tab.png");
+                background-image: url("/assets/images/usual-suspects/children-adolescents-folder-tab.png") !important;
             }
 
             &[data-active-tab="usual-suspects_tab3"] {
-                background-image: url("/assets/images/usual-suspects/neonates-infants-folder-tab.png");
+                background-image: url("/assets/images/usual-suspects/neonates-infants-folder-tab.png") !important;
             }
 
             &::before {
                 display: none;
             }
+        }
+
+        @media screen and (min-width: 1366px) {
+            min-height: 58rem;
+
+            max-width: 100rem;
+            margin: 0 auto;
         }
 
         .red-string {

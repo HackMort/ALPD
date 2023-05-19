@@ -11,9 +11,9 @@ import ChildrenTab from "./tabs/ChildrenTab.astro";
       Common suspects in:
     </h2>
 
-    <article class="hpp-multisystemic__tabs common-suspects-tabs" data-active-tab="usual-suspects_tab1">
+    <article class="hpp-multisystemic__tabs common-suspects-tabs" id="usual-suspects-container" data-active-tab="usual-suspects_tab1">
         <div class="red-string"></div>
-      <ul role="tablist" class="hpp-multisystemic__tabs--nav">
+      <ul role="tablist" class="hpp-multisystemic__tabs--nav" id="tablist-usual-suspects">
         <li role="presentation" class="hpp-multisystemic__tabs--nav-item">
           <a
             href="#usual-suspects_tab1"
@@ -92,3 +92,30 @@ import ChildrenTab from "./tabs/ChildrenTab.astro";
     </article>
   </div>
 </div>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+        const tablist = document.querySelector('#tablist-usual-suspects')
+        const container: HTMLElement = document.querySelector("#usual-suspects-container")
+
+        const tabs = [].concat(Array.from(tablist.querySelectorAll('li a')))
+
+        tabs.forEach((tab) => {
+
+            tab.addEventListener('click', () => {
+                let activeTab: string = tab.href
+
+                if (activeTab) {
+                    const start = activeTab.indexOf('#')
+                    activeTab = activeTab.substring(start + 1)
+                    
+                    container.dataset.activeTab = activeTab
+                }
+            })
+
+        })
+
+    })
+
+</script>
