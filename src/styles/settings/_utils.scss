@@ -74,12 +74,6 @@ $color-value in $colors {
     margin-bottom: 1rem !important;
 }
 
-.md\:color--black {
-    @media screen and (min-width: 768px) {
-        color: $color-black;
-    }
-}
-
 .text--underline {
     text-decoration: underline;
 }

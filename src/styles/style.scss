@@ -2709,7 +2709,7 @@
             margin-left: auto;
             margin-right: auto;
 
-            max-width: 42rem;
+            // max-width: 42rem;
         }
     }
 
@@ -2738,6 +2738,8 @@
         font-size: 1.5rem;
         line-height: 30px;
 
+        text-transform: uppercase;
+
         @include media('tablet') {
             text-align: center;
 
@@ -2750,6 +2752,8 @@
         &--desktop {
             display: none;
             margin-bottom: 2rem;
+
+            text-transform: uppercase;
 
             @media screen and (min-width: 769px) {
                 display: block;
