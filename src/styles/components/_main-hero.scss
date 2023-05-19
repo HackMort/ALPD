@@ -40,10 +40,14 @@
     }
 
     .main-hero__button-wrapper {
+
         .button {
-            margin-top: 1.25rem;
             margin-right: auto;
             margin-left: auto;
+        }
+
+        @media screen and (min-width: 345px) {
+            margin-top: 1.25rem;
         }
     }
 
