@@ -162,10 +162,53 @@
 
     }
 
-    .hpp-multisystemic__tabs {
+    .common-suspects-tabs {
         min-height: 800px; // Temporal height, remove when development is completed.
-
         position: relative;
+
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: top;
+
+        background-color: $color-floral-white;
+
+        &::before {
+            content: "";
+            background-image: url("/assets/icons/pin.svg") !important;
+            background-size: 58px;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 80px;
+            width: 13.625rem;
+            position: absolute;
+            z-index: 2;
+            top: -19px;
+            left: 50%;
+            transform: translateX(-50%) rotate(2deg);
+        }
+
+        
+
+        @media screen and (min-width: 1024px) {
+
+            background-color: transparent;
+
+            &[data-active-tab="usual-suspects_tab1"] {
+                background-image: url("/assets/images/usual-suspects/adults-folder-tab.png");
+            }
+
+            &[data-active-tab="usual-suspects_tab2"] {
+                background-image: url("/assets/images/usual-suspects/children-adolescents-folder-tab.png");
+            }
+
+            &[data-active-tab="usual-suspects_tab3"] {
+                background-image: url("/assets/images/usual-suspects/neonates-infants-folder-tab.png");
+            }
+
+            &::before {
+                display: none;
+            }
+        }
 
         .red-string {
             position: absolute;
@@ -221,6 +264,7 @@
 
             &:first-of-type {
                 margin-bottom: 1rem;
+
                 .red-string {
                     transform: translateX(-50%) rotate(-12deg);
 
@@ -233,6 +277,7 @@
             &:last-of-type {
                 .red-string {
                     transform: translateX(-50%) rotate(10deg);
+
                     @media screen and (min-width: 600px) {
                         transform: translateX(-50%) rotate(3deg);
                     }
@@ -338,7 +383,10 @@
         }
 
         @media screen and (min-width: 1024px) {
-            max-width: max-content;
+            max-width: initial;
+            padding-top: 0;
+
+            margin: initial;
         }
 
         [role="tablist"] [aria-selected] {
@@ -399,8 +447,6 @@
     .hpp__profile .hpp-multisystemic__tabs {
 
         &::before {
-            background-image: url("/assets/icons/pin.svg");
-            background-size: 58px;
         }
     }
 
@@ -422,6 +468,39 @@
         @media screen and (min-width: 768px) {
             padding-top: 2.5rem;
         }
+
+        @media screen and (min-width: 1024px) {
+            padding-top: 0;
+            font-size: 1rem;
+
+            position: relative;
+
+            &::after {
+                content: "";
+                background-image: url("/assets/images/usual-suspects/red-underlines.svg");
+                background-repeat: no-repeat;
+
+                position: absolute;
+
+                left: -30px;
+                top: 100%;
+
+                width: 14.75rem;
+                height: 2rem;
+
+                background-size: contain;
+            }
+        }
+
+        @media screen and (min-width: 1366px) {
+            font-size: 1.3125rem;
+            line-height: 29.04px;
+
+            &::after {
+                width: 20.75rem;
+                left: -50px;
+            }
+        }
     }
 
     .usual-suspect__trigger {
@@ -438,7 +517,7 @@
 
     @media screen and (min-width: 1024px) {
         .card-description-container {
-            height: 250px;
+            height: 18.4375rem;
         }
     }
 }

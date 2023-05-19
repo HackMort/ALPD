@@ -101,7 +101,19 @@
     @media screen and (min-width: 1024px) {
         display: flex;
         align-items: center;
-        padding-left: 0.5rem;
+        justify-content: space-between;
+
+        height: 80px;
+        border: 1px solid $color-red;
+
+        border-top: none;
+
+        padding: 0 1rem;
+    }
+
+    @media screen and (min-width: 1366px) {
+        @include flex-gap(3rem);
+        justify-content: center;
     }
 }
 
@@ -112,7 +124,7 @@
 }
 
 .suspect-card__cards-container--foot {
-    @media screen and (min-width: 768px) {
-        // padding: 0rem 2rem 12rem 2rem;
+    @media screen and (min-width: 1024px) {
+        padding: 0 2rem;
     }
 }
