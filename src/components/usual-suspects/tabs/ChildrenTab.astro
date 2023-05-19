@@ -3,118 +3,118 @@ import SuspectCard from "../../Suspect-Card.astro";
 import ModalMobile from "../modals/ModalMobile.astro";
 
 const data_card_1 = {
-    title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
-    image: "/assets/images/usual-suspects/Suspect-4.png",
-    subtitle: "Osteogenesis imperfecta",
-    subtitle_secondary: "Mr. Imperfect",
-    subtitle_superscript: "2,6,7",
-    info: "",
-    list: [
-        "Reduced bone density",
-        "Bowed long bones",
-        "Fractures",
-        "Gracile ribs",
-        "Narrow thorax",
-        "Metaphyseal flaring",
-        "Brittle teeth",
-    ],
-    type: "infants",
+  title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
+  image: "/assets/images/usual-suspects/Suspect-4.png",
+  subtitle: "Osteogenesis imperfecta",
+  subtitle_secondary: "Mr. Imperfect",
+  subtitle_superscript: "2,6,7",
+  info: "",
+  list: [
+    "Reduced bone density",
+    "Bowed long bones",
+    "Fractures",
+    "Gracile ribs",
+    "Narrow thorax",
+    "Metaphyseal flaring",
+    "Brittle teeth",
+  ],
+  type: "infants",
 };
 
 const data_card_2 = {
-    title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
-    image: "/assets/images/usual-suspects/Suspect-8.png",
-    subtitle: "Campomelic dysplasia",
-    subtitle_secondary: "Shorty",
-    subtitle_superscript: "2",
-    info: "",
-    list: [
-        "Shortening, bowing, and angulation of the long bones",
-        "Diaphyseal spurs",
-        "Tibial dimple",
-        "Absent ossification of pedicles",
-        "Hypoplastic fibulae",
-    ],
-    type: "infants",
+  title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
+  image: "/assets/images/usual-suspects/Suspect-8.png",
+  subtitle: "Campomelic dysplasia",
+  subtitle_secondary: "Shorty",
+  subtitle_superscript: "2",
+  info: "",
+  list: [
+    "Shortening, bowing, and angulation of the long bones",
+    "Diaphyseal spurs",
+    "Tibial dimple",
+    "Absent ossification of pedicles",
+    "Hypoplastic fibulae",
+  ],
+  type: "infants",
 };
 
 const data_card_3 = {
-    title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
-    image: "/assets/images/usual-suspects/Suspect-9.png",
-    subtitle: "Chondrodysplasias ",
-    subtitle_secondary: "T-Bone",
-    subtitle_superscript: "8",
-    info: "",
-    list: ["Short stature and vertebral abnormalities"],
-    type: "infants",
+  title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
+  image: "/assets/images/usual-suspects/Suspect-9.png",
+  subtitle: "Chondrodysplasias ",
+  subtitle_secondary: "T-Bone",
+  subtitle_superscript: "8",
+  info: "",
+  list: ["Short stature and vertebral abnormalities"],
+  type: "infants",
 };
 
 const data_card_4 = {
-    title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
-    image: "/assets/images/usual-suspects/Suspect-10.png",
-    subtitle: "Idiopathic hypercalcemia",
-    subtitle_secondary: "AKA IDP",
-    subtitle_superscript: "9,10",
-    info: "",
-    list: [
-        "Failure to thrive",
-        "Psychomotor delay",
-        "High levels of calcium in urine",
-        "Poor feeding",
-    ],
-    type: "infants",
+  title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
+  image: "/assets/images/usual-suspects/Suspect-10.png",
+  subtitle: "Idiopathic hypercalcemia",
+  subtitle_secondary: "AKA IDP",
+  subtitle_superscript: "9,10",
+  info: "",
+  list: [
+    "Failure to thrive",
+    "Psychomotor delay",
+    "High levels of calcium in urine",
+    "Poor feeding",
+  ],
+  type: "infants",
 };
 ---
 
 <section class="hpp__profile suspect-cards-container">
-    <!-- Multisystemic Symptoms and Disease Burden -->
-    <section id="hpp-multisystemic" class="hpp-multisystemic">
-        <article class="usual-suspect__sections">
-            <ul role="tablist" class="usual-suspect__subtabs">
-                <li role="presentation" class="usual-suspect__subtabs--item">
-                    <a
-                        href="#usual-suspects_neonates-infants-tab1"
-                        role="tab"
-                        id="tab1"
-                        aria-selected="true"></a>
-                </li>
+  <!-- Multisystemic Symptoms and Disease Burden -->
+  <section id="hpp-multisystemic" class="hpp-multisystemic">
+    <article class="usual-suspect__sections">
+      <ul role="tablist" class="usual-suspect__subtabs">
+        <li role="presentation" class="usual-suspect__subtabs--item">
+          <a
+            href="#usual-suspects_neonates-infants-tab1"
+            role="tab"
+            id="tab1"
+            aria-selected="true"></a>
+        </li>
 
-                <li role="presentation" class="usual-suspect__subtabs--item">
-                    <a
-                        href="#usual-suspects_neonates-infants-tab2"
-                        role="tab"
-                        id="tab2"
-                        tabindex="-1"></a>
-                </li>
+        <li role="presentation" class="usual-suspect__subtabs--item">
+          <a
+            href="#usual-suspects_neonates-infants-tab2"
+            role="tab"
+            id="tab2"
+            tabindex="-1"></a>
+        </li>
 
-                <li role="presentation" class="usual-suspect__subtabs--item">
-                    <a
-                        href="#usual-suspects_neonates-infants-tab3"
-                        role="tab"
-                        id="tab3"
-                        tabindex="-1"></a>
-                </li>
+        <li role="presentation" class="usual-suspect__subtabs--item">
+          <a
+            href="#usual-suspects_neonates-infants-tab3"
+            role="tab"
+            id="tab3"
+            tabindex="-1"></a>
+        </li>
 
-                <li role="presentation" class="usual-suspect__subtabs--item">
-                    <a
-                        href="#usual-suspects_neonates-infants-tab4"
-                        role="tab"
-                        id="tab4"
-                        tabindex="-1"></a>
-                </li>
-            </ul>
+        <li role="presentation" class="usual-suspect__subtabs--item">
+          <a
+            href="#usual-suspects_neonates-infants-tab4"
+            role="tab"
+            id="tab4"
+            tabindex="-1"></a>
+        </li>
+      </ul>
 
-            <section
-                id="usual-suspects_neonates-infants-tab1"
-                class="usual-suspects-tab_section"
-                data-target="usual-suspects_neonates-infants-tab1"
-                role="tabpanel"
-                aria-labelledby="tab1"
-                aria-hidden="false"
-                tabindex="-1"
-            >
-                <div class="suspect-card--mobile--only">
-                    <!-- <div class="suspect-card">
+      <section
+        id="usual-suspects_neonates-infants-tab1"
+        class="usual-suspects-tab_section"
+        data-target="usual-suspects_neonates-infants-tab1"
+        role="tabpanel"
+        aria-labelledby="tab1"
+        aria-hidden="false"
+        tabindex="-1"
+      >
+        <div class="suspect-card--mobile--only">
+          <!-- <div class="suspect-card">
             <div class="suspect-card_bordered-item suspect-card_bordered-title">
               <h3 class="suspect-card_title">
                 Differential diagnoses for hypophosphatasia with shared
@@ -122,108 +122,108 @@ const data_card_4 = {
               </h3>
             </div>
           </div> -->
-                    <SuspectCard {...data_card_1} />
-                </div>
-                <div class="suspect-card--desktop--only">
-                    <div class="wrapper suspect-card__cards-container">
-                        <div class="suspect-card">
-                            <div
-                                class="suspect-card_bordered-item suspect-card_bordered-title"
-                            >
-                                <h3 class="suspect-card_title">
-                                    Differential diagnoses for hypophosphatasia
-                                    with shared symptoms:
-                                </h3>
-                            </div>
-                        </div>
-                        <div class="cards__grid_container">
-                            <SuspectCard {...data_card_1} />
-                            <SuspectCard {...data_card_2} />
-                            <SuspectCard {...data_card_3} />
-                            <SuspectCard {...data_card_4} />
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section
-                id="usual-suspects_neonates-infants-tab2"
-                class="usual-suspects-tab_section"
-                data-target="usual-suspects_neonates-infants-tab2"
-                role="tabpanel"
-                aria-labelledby="tab2"
-                aria-hidden="true"
-                tabindex="-1"
-                hidden
-            >
-                <SuspectCard {...data_card_2} />
-            </section>
-
-            <section
-                id="usual-suspects_neonates-infants-tab3"
-                class="usual-suspects-tab_section"
-                data-target="usual-suspects_neonates-infants-tab3"
-                role="tabpanel"
-                aria-labelledby="tab3"
-                aria-hidden="true"
-                tabindex="-1"
-                hidden
-            >
-                <SuspectCard {...data_card_3} />
-            </section>
-
-            <section
-                id="usual-suspects_neonates-infants-tab4"
-                class="usual-suspects-tab_section"
-                data-target="usual-suspects_neonates-infants-tab4"
-                role="tabpanel"
-                aria-labelledby="tab4"
-                aria-hidden="true"
-                tabindex="-1"
-                hidden
-            >
-                <SuspectCard {...data_card_4} />
-            </section>
-        </article>
-
-        <div class="suspect-card__cards-container--foot">
-            <div class="suspect-card--foot">
-                <p class="usual-suspect__note">
-                    View the full list of suspects, shared symptoms, and how to
-                    differentiate from hypophosphatasia:
-                </p>
-
-                <div class="usual-suspect__trigger">
-                    <button
-                        class="button btn--usual-suspect-modal-trigger"
-                        data-target="infants-modal">View List</button
-                    >
-                </div>
-            </div>
+          <SuspectCard {...data_card_1} />
         </div>
-    </section>
-    <ModalMobile />
+        <div class="suspect-card--desktop--only">
+          <div class="wrapper suspect-card__cards-container">
+            <div class="suspect-card">
+              <div
+                class="suspect-card_bordered-item suspect-card_bordered-title"
+              >
+                <h3 class="suspect-card_title">
+                  Differential diagnoses for hypophosphatasia with shared
+                  symptoms:
+                </h3>
+              </div>
+            </div>
+            <div class="cards__grid_container">
+              <SuspectCard {...data_card_1} />
+              <SuspectCard {...data_card_2} />
+              <SuspectCard {...data_card_3} />
+              <SuspectCard {...data_card_4} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="usual-suspects_neonates-infants-tab2"
+        class="usual-suspects-tab_section"
+        data-target="usual-suspects_neonates-infants-tab2"
+        role="tabpanel"
+        aria-labelledby="tab2"
+        aria-hidden="true"
+        tabindex="-1"
+        hidden
+      >
+        <SuspectCard {...data_card_2} />
+      </section>
+
+      <section
+        id="usual-suspects_neonates-infants-tab3"
+        class="usual-suspects-tab_section"
+        data-target="usual-suspects_neonates-infants-tab3"
+        role="tabpanel"
+        aria-labelledby="tab3"
+        aria-hidden="true"
+        tabindex="-1"
+        hidden
+      >
+        <SuspectCard {...data_card_3} />
+      </section>
+
+      <section
+        id="usual-suspects_neonates-infants-tab4"
+        class="usual-suspects-tab_section"
+        data-target="usual-suspects_neonates-infants-tab4"
+        role="tabpanel"
+        aria-labelledby="tab4"
+        aria-hidden="true"
+        tabindex="-1"
+        hidden
+      >
+        <SuspectCard {...data_card_4} />
+      </section>
+    </article>
+
+    <div class="suspect-card__cards-container--foot">
+      <div class="suspect-card--foot">
+        <p class="usual-suspect__note">
+          View the full list of suspects, shared symptoms, and how to
+          differentiate from hypophosphatasia:
+        </p>
+
+        <div class="usual-suspect__trigger">
+          <button
+            class="button btn--usual-suspect-modal-trigger"
+            data-target="infants-modal">View List</button
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+  <ModalMobile />
 </section>
 <style>
-    .mobile--only {
-        display: block;
-        @media screen and (min-width: 1024px) {
-            display: none;
-        }
+  .mobile--only {
+    display: block;
+    @media screen and (min-width: 1024px) {
+      display: none;
     }
-    .desktop--only {
-        display: none;
-        @media screen and (min-width: 1024px) {
-            display: block;
-        }
+  }
+  .desktop--only {
+    display: none;
+    @media screen and (min-width: 1024px) {
+      display: block;
     }
-    .cards__grid_container {
-        display: grid;
-        grid-template-columns: repeat(4, 25%);
+  }
+  .cards__grid_container {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+  }
+  .usual-suspect__subtabs {
+    @media screen and (min-width: 1024px) {
+      display: none !important;
     }
-    .usual-suspect__subtabs {
-        @media screen and (min-width: 1024px) {
-            display: none !important;
-        }
-    }
+  }
 </style>
