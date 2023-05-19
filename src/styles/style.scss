@@ -2686,13 +2686,13 @@
         .red-string {
             position: absolute;
             z-index: 2;
-            transform: rotate(-28deg);
+            transform: rotate(-28deg) translateX(-50%);
             transform-origin: left;
             top: 72%;
 
             @media screen and (min-width: 768px) {
                 top: 0.5rem;
-                transform: rotate(5deg);
+                transform: rotate(5deg) translateX(-50%);
             }
         }
     }
@@ -2879,6 +2879,7 @@
         margin-right: auto;
 
         margin-bottom: 4rem;
+        z-index: 1;
 
         &::before {
             content: "";
@@ -2938,28 +2939,26 @@
     }
 
     &__red-string-bg {
-        overflow: clip;
         position: relative;
 
         /* Just a inclined line troughing from the left to the right*/
         &::before {
             content: '';
             position: absolute;
-            top: 380px;
-            left: 0;
+            top: 540px;
+            left: 50%;
             width: calc(100vw * 2);
             height: 2px;
             background-color: $color-red;
-            transform: rotate(39deg);
+            transform: rotate(39deg) translateX(-50%);
             transform-origin: left;
             z-index: 1;
 
             @media screen and (min-width: 769px) {
                 //Rotate the line to the right side
-                transform: rotate(338deg);
+                transform: rotate(338deg) translateX(-50%);
                 transform-origin: top;
-                top: 358px;
-                left: -150px;
+                top: -137px;
 
                 z-index: 0;
             }
@@ -3831,6 +3830,7 @@
 
             @media screen and (min-width: 1024px) {
                 justify-content: flex-start;
+                margin-left: 0;
             }
 
             &--text-red-line {
