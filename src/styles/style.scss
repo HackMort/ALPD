@@ -2731,7 +2731,6 @@
 
     &__title {
         color: $color-white;
-        text-transform: uppercase;
         font-family: 'Oswald';
         font-weight: 700;
 
@@ -4722,7 +4721,6 @@
         @media screen and (min-width: 768px) {
             font-size: 1.125rem;
             line-height: 25.2px;
-            font-weight: 400;
             text-align: center;
             max-width: 36.125rem;
             margin: auto;
@@ -4781,23 +4779,25 @@
         font-family: 'Oswald';
         font-style: normal;
         font-weight: 700;
-        font-size: 24px;
-        line-height: 125%;
-        /* or 30px */
+        font-size: 1.5rem;
+        line-height: 33.6px;
         padding-bottom: 1rem;
         border-bottom: 1px solid black;
-        margin-bottom: 9px;
-        margin-top: 10px;
-        padding-top: 11.85px;
-        text-transform: uppercase;
+        margin-bottom: .5625rem;
+        margin-top: .625rem;
+        padding-top: .7406rem;
+
+        sup {
+            font-weight: 300;
+            font-size: 60%;
+            top: -0.6em;
+        }
 
         @media screen and (min-width: 686px) {
-            font-size: 24px;
-            line-height: 140%;
             margin: auto;
             text-align: center;
             border-top: 1px solid black;
-            max-width: 788px;
+            max-width: 49.25rem;
         }
     }
 

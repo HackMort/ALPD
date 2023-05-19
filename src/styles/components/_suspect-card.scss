@@ -82,7 +82,7 @@
     }
 
     @media screen and (min-width: 1024px) {
-        padding: 0.5rem;
+        padding: 1rem;
 
         &:not(:last-of-type) {
             border-bottom: none;
@@ -134,12 +134,12 @@
 }
 
 .suspect-card_subtitle {
-    font-weight: 700;
     color: $color-carbon;
     line-height: 1.375rem;
     word-wrap: break-word;
 
     strong {
+        font-weight: 400;
         font-family: inherit;
         color: $color-carbon !important;
     }
