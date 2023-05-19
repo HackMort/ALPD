@@ -44,7 +44,6 @@
                     color: red;
                     width: 100vw;
                     top: -68px;
-                    left: 0;
                     transform: rotate(357deg) translateX(-50%);
                 }
             }
@@ -57,7 +56,6 @@
                     color: red;
                     width: 100vw;
                     top: -54px;
-                    left: 0;
                     transform: rotate(361deg) translateX(-50%);
                 }
                 @media screen and (min-width:1700px) {
@@ -170,11 +168,9 @@
             color: red;
             width: 100vw;
             top: 52px;
-            left: 0;
             transform: rotate(356deg) translateX(-50%);
             @media screen and (min-width:665px) {
                 top: 117px;
-                left: 0;
                 transform: rotate(356deg) translateX(-50%);
             }
         }

@@ -789,6 +789,12 @@
 
 .alpd-academy__know-the-numbers {
 
+    .cta {
+        @media screen and (min-width: 1024px) {
+            padding-bottom: 14.5175rem;
+        }
+    }
+
     .know-the-numbers__title {
         color: $color-white;
         text-transform: uppercase;
