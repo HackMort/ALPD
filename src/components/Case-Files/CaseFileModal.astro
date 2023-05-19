@@ -800,11 +800,10 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
 
   document.addEventListener("DOMContentLoaded", () => {
     const openCaseFilesModal = new casFileModal();
-    const buttons = document.querySelectorAll(
-      "button.case-files-modal-trigger"
-    );
+    const buttons = document.querySelectorAll(".case-files-modal-trigger");
     buttons.forEach((button) => {
       button.addEventListener("click", () => {
+        event.preventDefault();
         openCaseFilesModal.open();
       });
     });
