@@ -62,19 +62,11 @@
                         li {
                             margin: 0 0 0 2.5rem;
                             position: relative;
-
-                            &::before {
-                                content: "";
-                                width: 0.29rem;
-                                height: 0.29rem;
-                                background-color: $color-carbon;
-                                border-radius: 50%;
-                                position: absolute;
-                                top: 0.8rem;
-                                left: -0.8rem;
-                            }
+                            list-style-type: disc;
 
                             &.no-bullet {
+                                list-style-type: none;
+
                                 &::before {
                                     display: none;
                                 }

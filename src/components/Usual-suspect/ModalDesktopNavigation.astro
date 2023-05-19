@@ -76,12 +76,11 @@ const { type } = Astro.props;
     //TODO: Close the modal when clicking outside of it
 
     /* document.addEventListener("DOMSubtreeModified", function (event) {
-      console.log("DOMSubtreeModified");
-      const modalOverlay = document.querySelector(".fancybox__backdrop");
-      console.log(modalOverlay);
+      const modalOverlay = document.querySelector(".fancybox__container");
       if (modalOverlay) {
-        //Modal overlay has z-index of -1
+        console.log(modalOverlay);
         modalOverlay.addEventListener("click", (e) => {
+          console.log("click");
           closingModal(modalArticlesAdults, "adults");
           closingModal(modalArticlesInfants, "infants");
         });
@@ -135,7 +134,6 @@ const { type } = Astro.props;
   }
 
   function closingModal(modals: any, type) {
-    console.log(modals);
     modals.forEach((modal: any) => {
       modal.classList.remove("is--active");
     });

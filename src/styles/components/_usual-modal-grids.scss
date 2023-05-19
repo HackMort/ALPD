@@ -188,17 +188,7 @@
       li {
         color: $color-carbon;
         position: relative;
-
-        &::before {
-          content: "";
-          width: 0.29rem;
-          height: 0.29rem;
-          background-color: #1F1511;
-          border-radius: 50%;
-          position: absolute;
-          top: 0.6rem;
-          left: -0.8rem;
-        }
+        list-style-type: disc;
       }
 
       ul {
