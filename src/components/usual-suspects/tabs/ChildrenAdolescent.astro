@@ -154,10 +154,8 @@ const data_card_5 = {
         <div class="suspect-card--desktop--only">
           <div class="wrapper suspect-card__cards-container">
             <button class="button-usual-slider button-usual-slider--prev button-usual-slider--is-hidden">
-              <img src="/assets/icons/usual-slider-prev.svg" alt="">
             </button>
             <button class="button-usual-slider button-usual-slider--next">
-              <img src="/assets/icons/usual-slider-next.svg" alt="">
             </button>
             <div class="suspect-card">
               <div
@@ -270,7 +268,7 @@ const data_card_5 = {
     overflow-x: hidden;
   }
   .button-usual-slider {
-    padding: 14px 18px;
+    padding: 0;
     position: absolute;
     top: 30%;
     border-radius: 50%;
@@ -294,6 +292,19 @@ const data_card_5 = {
     left: -25px;
   }
 
+  .button-usual-slider--prev::before {
+      content: '';
+      background-image: url('./assets/icons/usual-slider-prev.svg');
+      height: 22px;
+      width: 12px;
+  }
+
+  .button-usual-slider--next::before {
+      content: '';
+      background-image: url('./assets/icons/usual-slider-next.svg');
+      height: 22px;
+      width: 12px;
+  }
 
   .button-usual-slider--next {
     right: -25px;
@@ -301,12 +312,12 @@ const data_card_5 = {
 
   .suspect-card.slide-right {
     transform: translateX(0);
-    animation: slide-right 0.5s ease-in forwards;
+    animation: slide-right 0.2s ease-in forwards;
   }
 
   .suspect-card.slide-left {
     transform: translateX(-100%);
-    animation: slide-left 0.5s ease-in forwards;
+    animation: slide-left 0.2s ease-in forwards;
   }
 
   .button-usual-slider--is-hidden {
@@ -385,9 +396,7 @@ const data_card_5 = {
   }
 
   function hideSlideButtons() {
-    setTimeout(function() {
-      sliderButtons[0].classList.toggle('button-usual-slider--is-hidden')
-      sliderButtons[1].classList.toggle('button-usual-slider--is-hidden')
-    }, 400)
+    sliderButtons[0].classList.toggle('button-usual-slider--is-hidden')
+    sliderButtons[1].classList.toggle('button-usual-slider--is-hidden')
   }
 </script>
