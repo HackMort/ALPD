@@ -33,10 +33,11 @@ import ModalAdultsDesktop from "./ModalAdultsDesktop.astro";
         {
           autoFocus: false,
           defaultType: "inline",
-          placeFocusBack: false,
+          placeFocusBack: true,
           trapFocus: false,
           closeButton: false,
           height: "auto",
+          dragToClose: false,
         }
       );
     }
@@ -59,16 +60,28 @@ import ModalAdultsDesktop from "./ModalAdultsDesktop.astro";
         {
           autoFocus: false,
           defaultType: "inline",
-          placeFocusBack: false,
+          placeFocusBack: true,
           trapFocus: false,
           closeButton: false,
           height: "auto",
+          dragToClose: false,
         }
       );
     }
 
     close() {
       this.usualModalAdultsDesktop.close();
+      /* console.log("close");
+      //Is active class to the first element inside the slider
+      const modalsGrids = document.querySelectorAll(".modal__grids_article");
+
+      modalsGrids.forEach((grid) => {
+        grid.classList.remove("is--active");
+      });
+
+      modalsGrids[0].classList.add("is--active");
+
+      console.log(modalsGrids); */
     }
   }
 

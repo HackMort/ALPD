@@ -26,8 +26,6 @@ const { type } = Astro.props;
     const modalArticlesInfants = document.querySelectorAll(
       ".modal__grids_article.infants"
     );
-    console.log(modalArticlesAdults);
-    console.log(modalArticlesInfants);
 
     const currentActiveArticleAdults = document.querySelector(
       ".modal__grids_article.adults.is--active"
@@ -36,9 +34,6 @@ const { type } = Astro.props;
     const currentActiveArticleInfants = document.querySelector(
       ".modal__grids_article.infants.is--active"
     );
-
-    console.log(currentActiveArticleAdults);
-    console.log(currentActiveArticleInfants);
 
     hidePrev(currentActiveArticleAdults, modalArticlesAdults, "adults");
     hidePrev(currentActiveArticleInfants, modalArticlesInfants, "infants");
@@ -51,11 +46,47 @@ const { type } = Astro.props;
       ".infants.navigation__item_link"
     );
 
-    console.log(navigationLinksAdults);
-    console.log(navigationLinksInfants);
-
     navigationHandle(navigationLinksAdults, modalArticlesAdults, "adults");
     navigationHandle(navigationLinksInfants, modalArticlesInfants, "infants");
+
+    const modalCloseAdults = document.querySelector(
+      "#usual-supect-modal--adults--desktop .usual-supect__modal_close-button"
+    );
+    const modalCloseInfants = document.querySelector(
+      "#usual-supect-modal--infants--desktop .usual-supect__modal_close-button"
+    );
+
+    modalCloseAdults.addEventListener("click", (e) => {
+      e.preventDefault();
+      closingModal(modalArticlesAdults, "adults");
+    });
+
+    modalCloseInfants.addEventListener("click", (e) => {
+      e.preventDefault();
+      closingModal(modalArticlesInfants, "infants");
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        closingModal(modalArticlesAdults, "adults");
+        closingModal(modalArticlesInfants, "infants");
+      }
+    });
+
+    //TODO: Close the modal when clicking outside of it
+
+    /* document.addEventListener("DOMSubtreeModified", function (event) {
+      console.log("DOMSubtreeModified");
+      const modalOverlay = document.querySelector(".fancybox__backdrop");
+      console.log(modalOverlay);
+      if (modalOverlay) {
+        //Modal overlay has z-index of -1
+        modalOverlay.addEventListener("click", (e) => {
+          closingModal(modalArticlesAdults, "adults");
+          closingModal(modalArticlesInfants, "infants");
+        });
+      }
+    }); */
   });
 
   function hidePrev(current: any, modalArticles: any, type: string) {
@@ -101,5 +132,19 @@ const { type } = Astro.props;
         }
       });
     });
+  }
+
+  function closingModal(modals: any, type) {
+    console.log(modals);
+    modals.forEach((modal: any) => {
+      modal.classList.remove("is--active");
+    });
+    document
+      .querySelector(`.${type} .navigation__item.prev`)
+      .classList.add("hidden");
+    document
+      .querySelector(`.${type} .navigation__item.next`)
+      .classList.remove("hidden");
+    modals[0].classList.add("is--active");
   }
 </script>
