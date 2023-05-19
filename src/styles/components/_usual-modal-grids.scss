@@ -49,7 +49,7 @@
         &[data-page='2'] {
           .modal__grids_article--bg--white {
             background-color: white;
-            padding: 2rem 2rem 9rem 2rem;
+            padding: 2rem 2rem 13rem 2rem;
           }
         }
 
@@ -158,6 +158,16 @@
 
     &.full--width {
       grid-template-columns: 1fr;
+    }
+
+    &.grid--bt {
+      border-top: 1px solid $color-black;
+      margin-top: 1rem;
+    }
+
+    &.grid--mt12 {
+      margin-top: 12rem;
+      border-top: 2px solid $color-black;
     }
 
 
