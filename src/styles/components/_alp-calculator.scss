@@ -859,10 +859,12 @@
 
         p {
             margin-top: 1.5rem;
+            font-size: 16px;
+            line-height: 22.4px;
 
             @media screen and (min-width:745px) {
                 font-size: 14px;
-                line-height: 130%;
+                line-height: 18.2px;
                 /* or 18px */
                 max-width: 575px;
                 margin: auto;
