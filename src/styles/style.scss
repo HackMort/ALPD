@@ -820,6 +820,24 @@
         @media screen and (min-width: 1024px) {
             padding-bottom: 14.5175rem;
         }
+
+        @media screen and (min-width: 1850px) {
+            .variant-1 {
+                .red-string {
+                    &.mod-1 {
+                        top: -86px;
+                    }
+
+                    &.mod-2 {
+                        top: -70px;
+                    }
+
+                    &.mod-3 {
+                        bottom: 0;
+                    }
+                }
+            }
+        }
     }
 
     .know-the-numbers__title {
