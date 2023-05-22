@@ -51,6 +51,12 @@ import ModalAdultsDesktop from "./ModalAdultsDesktop.astro";
     }
 
     closingModal() {
+      document
+        .querySelector(`.navigation__item.prev.infants`)
+        .classList.add("hidden");
+      document
+        .querySelector(`.navigation__item.next.infants`)
+        .classList.remove("hidden");
       const modalArticles = document.querySelectorAll(
         `.modal__grids_article.infants`
       );

@@ -1,8 +1,12 @@
 .footer {
   background-color: transparent;
   border-top: 1px solid $color-white;
-  border-bottom: 1px solid $color-white;
   color: $color-black;
+  
+  @media screen and (min-width: 1024px) {
+    border-bottom: 1px solid $color-white;
+    margin-bottom: 3rem;
+  }
 
   &__grid {
     display: grid;

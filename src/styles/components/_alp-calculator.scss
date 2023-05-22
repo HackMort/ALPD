@@ -824,6 +824,16 @@
 
             &.modifier {
                 background-color: $color-red;
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 13px;
+                line-height: 13px;
+                @media screen and (min-width:745px) {
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 18px;
+                }
             }
         }
     }
@@ -849,10 +859,12 @@
 
         p {
             margin-top: 1.5rem;
+            font-size: 16px;
+            line-height: 22.4px;
 
             @media screen and (min-width:745px) {
                 font-size: 14px;
-                line-height: 130%;
+                line-height: 18.2px;
                 /* or 18px */
                 max-width: 575px;
                 margin: auto;
@@ -883,11 +895,11 @@
             font-style: normal;
             font-weight: 400;
             font-size: 14px;
-            line-height: 18px;
+            line-height: 18.2px;
 
             @media screen and (min-width:745px) {
                 font-size: 14px;
-                line-height: 18px;
+                line-height: 18.2px;
                 max-width: 538px;
                 margin-left: 46px;
                 margin-top: 1.5rem;

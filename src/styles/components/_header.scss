@@ -248,7 +248,7 @@
               background-image: url('/assets/images/mobile-secondary-nav-item-1.png');
               background-repeat: no-repeat;
               height: 37px;
-              opacity: 0.5;
+              // opacity: 0.5;
               width: 292px;
               z-index: -1;
             }
@@ -263,23 +263,8 @@
               background-image: url('/assets/images/mobile-secondary-nav-item-2.png');
               background-repeat: no-repeat;
               height: 37px;
-              opacity: 0.5;
+              // opacity: 0.5;
               width: 292px;
-              z-index: -1;
-            }
-          }
-
-          .nav__menu_item:nth-child(3) {
-            .nav__menu_item_link::before {
-              content: '';
-              position: absolute;
-              top: 70%;
-              left: 0;
-              background-image: url('/assets/images/mobile-secondary-nav-item-3.png');
-              background-repeat: no-repeat;
-              height: 37px;
-              opacity: 0.5;
-              width: 203px;
               z-index: -1;
             }
           }
@@ -288,12 +273,27 @@
             .nav__menu_item_link::before {
               content: '';
               position: absolute;
+              top: 70%;
+              left: 0;
+              background-image: url('/assets/images/mobile-secondary-nav-item-3.png');
+              background-repeat: no-repeat;
+              height: 37px;
+              // opacity: 0.5;
+              width: 203px;
+              z-index: -1;
+            }
+          }
+
+          .nav__menu_item:nth-child(5) {
+            .nav__menu_item_link::before {
+              content: '';
+              position: absolute;
               top: 100%;
               left: 0;
               background-image: url('/assets/images/mobile-secondary-nav-item-4.png');
               background-repeat: no-repeat;
               height: 37px;
-              opacity: 0.5;
+              // opacity: 0.5;
               width: 148px;
               z-index: -1;
             }
