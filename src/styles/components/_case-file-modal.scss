@@ -349,7 +349,7 @@
             font-style: normal;
             font-weight: 400;
             font-size: 18px;
-            line-height: 25px;
+            line-height: 27px;
 
             em {
               font-style: italic;
@@ -534,9 +534,10 @@
 
             img {
               position: relative;
-              top: -1.85rem;
+              top: -1.80rem;
               margin: 0 auto;
               width: 225px;
+              transform: rotate(4deg);
 
               &.photo-of-Anna {
                 top: -1.05rem;
