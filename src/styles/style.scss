@@ -48,9 +48,13 @@
         text-transform: uppercase;
         color: $color-cinnabar;
         text-align: center;
-        max-width: 780px;
+        max-width: 28ch;
         margin: auto;
-        margin-bottom: 2.5rem;
+        margin-bottom: 1.25rem;
+
+        @include media('tablet') {
+            max-width: 34ch;
+        }
     }
 }
 
