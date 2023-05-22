@@ -1254,6 +1254,19 @@
         .alp-reference-range__identify-wrapper {
             position: relative;
 
+            .red-string {
+                display: none;
+
+                @media screen and (min-width: 1024px) {
+                    display: block;
+                    z-index: 2;
+                    position: absolute;
+
+                    top: 50%;
+                    transform: translate(-50%, -50%) rotate(-17deg);
+                }
+            }
+
             >img {
                 width: auto;
             }
@@ -1275,6 +1288,10 @@
                 bottom: 50%;
                 transform: translateY(50%);
                 left: 0;
+
+                @media screen and (min-width: 1300px) {
+                    bottom: 28%;
+                }
             }
 
             .asset__bg--photos {
@@ -1925,6 +1942,14 @@
 
         .genetic-testing-role {
 
+            .genetic-testing-role__paragraph {
+                
+
+                &:not(:first-of-type) {
+                    max-width: 20.3125rem;
+                }
+            }
+
             .white-title {
                 text-transform: uppercase;
                 font-family: "oswald", sans-serif;
@@ -2002,6 +2027,10 @@
 
                 &.first {
                     height: 1rem;
+
+                    @media screen and (min-width: 1440px) {
+                        height: 5rem;
+                    }
                 }
 
                 &.second {
@@ -2021,6 +2050,10 @@
 
                     @media screen and (min-width: 768px) {
                         height: 6rem;
+                    }
+
+                    @media screen and (min-width: 1440px) {
+                        height: 8rem;
                     }
                 }
 
@@ -2385,7 +2418,7 @@
                 margin-bottom: 3rem;
 
                 @media screen and (min-width: 768px) {
-                    max-width: 35.5625rem;
+                    max-width: 34.5625rem;
                     text-align: center;
                     line-height: 25.2px;
                     margin-left: auto;
