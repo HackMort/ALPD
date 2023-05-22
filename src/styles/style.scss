@@ -3208,9 +3208,11 @@
 
         &__disclaimer {
             color: $color-saffron-mango;
-            padding: 3rem 4rem;
+            padding: 3rem 0;
             text-align: center;
             font-family: 'Special Elite', cursive;
+            margin: 0 auto;
+            max-width: 25ch;
 
             @media screen and (min-width: 600px) and (max-width: 768px) {
                 padding: 5rem 2rem;
@@ -3353,7 +3355,7 @@
             &--red-string {
                 width: calc(100vw * 2);
                 position: absolute;
-                top: 112px;
+                top: 50px;
                 transform: rotate(334deg);
                 left: -50%;
 
@@ -3374,7 +3376,7 @@
                 left: 50%;
                 transform: translateX(-50%);
                 max-width: 4rem;
-                top: 3.625rem;
+                top: 0;
 
                 @media screen and (min-width: 768px) {
                     height: 4rem;
@@ -3387,9 +3389,10 @@
             &--note {
                 background-image: url("/assets/images/hpp-profile/stick-note-mb.png");
                 background-repeat: no-repeat;
-                background-size: contain;
+                background-size: cover;
                 background-position: center;
-                padding: 12rem 3rem 5rem 3rem;
+                padding: 8.125rem 1.875rem 4.75rem;
+                margin: 0 auto;
                 max-width: 23rem;
 
                 @media screen and (min-width: 768px) {
@@ -3446,7 +3449,7 @@
             @media screen and (min-width: 769px) {
                 max-width: 35rem;
                 background-image: url(/assets/images/hpp-profile/paper-bg-dk.png);
-                background-size: contain;
+                background-size: cover;
                 padding: 3rem 1rem;
                 margin-top: 12rem;
             }
@@ -3529,6 +3532,42 @@
 
             @media screen and (max-width: 768px) {
                 background-image: none;
+            }
+        }
+
+        &__content {
+            .hpp__profile__title {
+                &:nth-of-type(1) {
+                    max-width: 20ch;
+
+                    @media screen and (min-width: 600px) {
+                        max-width: 32ch;
+
+                        br {
+                            display: none;
+                        }
+                    }
+
+                    @media screen and (min-width: 768px) {
+                        margin-left: auto;
+                        margin-right: auto;
+                        text-align: center;
+                    }
+                }
+
+                &:nth-of-type(2) {
+                    max-width: 33ch;
+
+                    @media screen and (min-width: 768px) {
+                        margin-left: auto;
+                        margin-right: auto;
+                        text-align: center;
+                    }
+
+                    @media screen and (min-width: 1024px) {
+                        max-width: 100%;
+                    }
+                }
             }
         }
     }
@@ -3969,42 +4008,19 @@
             box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.25);
             height: 100%;
             width: 100%;
-
-            //margin: 4rem auto 0 auto;
             padding: 0 3rem;
             background-color: $color-cararra;
+            position: relative;
 
             @media screen and (max-width: 768px) {
-                background-color: transparent;
+                background-color: $color-floral-white;
                 box-shadow: none;
                 background-image: none;
                 padding: 0;
+                padding-top: 1rem;
             }
-        }
-
-        &__tabs {
-            position: relative;
 
             @media screen and (max-width: 1023px) {
-                background-color: $color-floral-white;
-
-                &::before {
-                    //Tape
-                    content: '';
-                    background-image: url("/assets/images/hpp-profile/tape.png");
-                    background-repeat: no-repeat;
-                    background-size: 100% 100%;
-                    background-position: center;
-                    height: 80px;
-                    width: 13.625rem;
-
-                    position: absolute;
-                    z-index: 2;
-                    top: -19px;
-                    left: 50%;
-                    transform: translateX(-50%) rotate(2deg);
-                }
-
                 &::after {
                     //Tape
                     content: '';
@@ -4020,6 +4036,41 @@
                     bottom: -35px;
                     left: 50%;
                     transform: translateX(-50%) rotate(-5deg);
+                }
+            }
+        }
+
+        &__tabs {
+            position: relative;
+
+            @media screen and (max-width: 1023px) {
+                .hpp-multisystemic__title-container {
+                    background-color: $color-floral-white;
+                    padding-bottom: 1rem;
+                }
+
+                .hpp-multisystemic__tabs-container {
+                    background-color: $color-floral-white;
+                }
+
+                .hpp-multisystemic__select--input {
+                    margin-top: 0;
+                }
+
+                &::before {
+                    //Tape
+                    content: '';
+                    background-image: url("/assets/images/hpp-profile/tape.png");
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    background-position: center;
+                    height: 80px;
+                    width: 13.625rem;
+                    position: absolute;
+                    z-index: 2;
+                    top: -35px;
+                    left: 50%;
+                    transform: translateX(-50%) rotate(2deg);
                 }
             }
 
@@ -4064,8 +4115,6 @@
                         font-size: 1rem;
                     }
                 }
-
-
             }
 
             #multisystemic1 {
@@ -4274,6 +4323,11 @@
                 background-position: top;
             }
 
+            [role="tabpanel"] {
+                padding-left: 0;
+                padding-right: 0;
+                padding-top: 0;
+            }
         }
 
         &__condition {
@@ -4508,6 +4562,22 @@
                 font-weight: 700;
                 margin-top: 2rem;
                 margin-bottom: 1rem;
+            }
+        }
+
+        .wrapper {
+            @media screen and (max-width: 1023px) {
+                &--desktop {
+                    margin: 0;
+                    max-width: 100%;
+                }
+            }
+
+            @media screen and (min-width: 1024px) {
+                &--mobile {
+                    margin: 0;
+                    max-width: 100%;
+                }
             }
         }
 
