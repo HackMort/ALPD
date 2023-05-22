@@ -1,12 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import ModalInfantsDesktop from "../components/Usual-suspect/ModalInfantsDesktop.astro";
-import ModalAdultsDesktop from "../components/Usual-suspect/ModalAdultsDesktop.astro";
-import References from "../components/References.astro";
 import Accordion from "../components/Accordion.astro";
 import CTA from "../components/CTA.astro";
-import ModalMobile from "../components/Usual-suspect/ModalMobile.astro";
-import ModalDesktop from "../components/Usual-suspect/ModalDesktop.astro";
+import ModalMobile from "../components/usual-suspects/modals/ModalMobile.astro";
+import ModalDesktop from "../components/usual-suspects/modals/ModalDesktop.astro";
+import CaseFileModal from "../components/Case-Files/CaseFileModal.astro";
+import CaseFileModalDesktop from "../components/Case-Files/CaseFileModalDesktop.astro";
 ---
 
 <Layout
@@ -686,12 +685,7 @@ import ModalDesktop from "../components/Usual-suspect/ModalDesktop.astro";
         </div>
       </div>
     </article>
-    <h1 class="title">Usual Suspects Modal Desktop v1</h1>
-    <!-- 
-          data-target attribute is the id of the modal that will be triggered
-          data-target="infants-modal" 
-          data-target="adults-modal" 
-         -->
+    <h1 class="title">Usual Suspects Modal Desktop Versions</h1>
     <h1>Infants</h1>
     <button
       class="button btn--usual-suspect-modal-desktop"
@@ -707,12 +701,12 @@ import ModalDesktop from "../components/Usual-suspect/ModalDesktop.astro";
   <!-- Usual suspect modal -->
   <section class="design-system-section">
     <div class="section-wrapper section-wrapper--small">
-      <h1 class="title">Usual suspect</h1>
+      <h1 class="title">Usual Suspects Modal Mobile Versions</h1>
       <div class="buttons" style="display: flex; flex-direction: column;">
-        <!-- 
+        <!--
           data-target attribute is the id of the modal that will be triggered
-          data-target="infants-modal" 
-          data-target="adults-modal" 
+          data-target="infants-modal"
+          data-target="adults-modal"
          -->
         <h1>Infants</h1>
         <button

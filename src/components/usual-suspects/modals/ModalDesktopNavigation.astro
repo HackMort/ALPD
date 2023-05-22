@@ -17,7 +17,6 @@ const { type } = Astro.props;
 
 <!-- Navigation -->
 <script>
-  // vanilla document ready
   document.addEventListener("DOMContentLoaded", function (event) {
     // Navigation Functionality
     const modalArticlesAdults = document.querySelectorAll(
@@ -26,11 +25,9 @@ const { type } = Astro.props;
     const modalArticlesInfants = document.querySelectorAll(
       ".modal__grids_article.infants"
     );
-
     const currentActiveArticleAdults = document.querySelector(
       ".modal__grids_article.adults.is--active"
     );
-
     const currentActiveArticleInfants = document.querySelector(
       ".modal__grids_article.infants.is--active"
     );
@@ -48,44 +45,6 @@ const { type } = Astro.props;
 
     navigationHandle(navigationLinksAdults, modalArticlesAdults, "adults");
     navigationHandle(navigationLinksInfants, modalArticlesInfants, "infants");
-
-    const modalCloseAdults = document.querySelector(
-      "#usual-supect-modal--adults--desktop .usual-supect__modal_close-button"
-    );
-    const modalCloseInfants = document.querySelector(
-      "#usual-supect-modal--infants--desktop .usual-supect__modal_close-button"
-    );
-
-    modalCloseAdults.addEventListener("click", (e) => {
-      e.preventDefault();
-      closingModal(modalArticlesAdults, "adults");
-    });
-
-    modalCloseInfants.addEventListener("click", (e) => {
-      e.preventDefault();
-      closingModal(modalArticlesInfants, "infants");
-    });
-
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") {
-        closingModal(modalArticlesAdults, "adults");
-        closingModal(modalArticlesInfants, "infants");
-      }
-    });
-
-    //TODO: Close the modal when clicking outside of it
-
-    /* document.addEventListener("DOMSubtreeModified", function (event) {
-      const modalOverlay = document.querySelector(".fancybox__container");
-      if (modalOverlay) {
-        console.log(modalOverlay);
-        modalOverlay.addEventListener("click", (e) => {
-          console.log("click");
-          closingModal(modalArticlesAdults, "adults");
-          closingModal(modalArticlesInfants, "infants");
-        });
-      }
-    }); */
   });
 
   function hidePrev(current: any, modalArticles: any, type: string) {
@@ -131,18 +90,5 @@ const { type } = Astro.props;
         }
       });
     });
-  }
-
-  function closingModal(modals: any, type) {
-    modals.forEach((modal: any) => {
-      modal.classList.remove("is--active");
-    });
-    document
-      .querySelector(`.${type} .navigation__item.prev`)
-      .classList.add("hidden");
-    document
-      .querySelector(`.${type} .navigation__item.next`)
-      .classList.remove("hidden");
-    modals[0].classList.add("is--active");
   }
 </script>

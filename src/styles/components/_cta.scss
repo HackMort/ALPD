@@ -44,8 +44,7 @@
                     color: red;
                     width: 100vw;
                     top: -68px;
-                    left: 0;
-                    transform: rotate(357deg);
+                    transform: rotate(357deg) translateX(-50%);
                 }
             }
 
@@ -57,11 +56,10 @@
                     color: red;
                     width: 100vw;
                     top: -54px;
-                    left: 0;
-                    transform: rotate(361deg);
+                    transform: rotate(361deg) translateX(-50%);
                 }
                 @media screen and (min-width:1700px) {
-                    transform: rotate(359deg);
+                    transform: rotate(359deg) translateX(-50%);
                     top: -42px;
                 }
             }
@@ -74,7 +72,7 @@
                     color: red;
                     width: 100vw;
                     bottom: -39px;
-                    transform: rotate(353deg);
+                    transform: rotate(353deg) translateX(-50%);
                 }
             }  
             .red-circle{
@@ -107,7 +105,7 @@
                 color: red;
                 width: 100vw;
                 bottom: -54px;
-                transform: rotate(363deg);
+                transform: rotate(363deg) translateX(-50%);
             }
         }
         }
@@ -170,12 +168,10 @@
             color: red;
             width: 100vw;
             top: 52px;
-            left: 0;
-            transform: rotate(356deg);
+            transform: rotate(356deg) translateX(-50%);
             @media screen and (min-width:665px) {
                 top: 117px;
-                left: 0;
-                transform: rotate(356deg);
+                transform: rotate(356deg) translateX(-50%);
             }
         }
 
@@ -184,11 +180,11 @@
             color: red;
             width: 100vw;
             bottom: 235px;
-            transform: rotate(371deg);
+            transform: rotate(371deg) translateX(-50%);
             @media screen and (min-width:665px) {
                 top: 178px;
                 bottom: unset;
-                transform: rotate(367deg)
+                transform: rotate(367deg) translateX(-50%);
             }
         }
 
@@ -197,17 +193,17 @@
             color: red;
             width: 100vw;
             bottom: 41px;
-            transform: rotate(354deg);
+            transform: rotate(354deg) translateX(-50%);
             @media screen and (min-width:665px) {
                 width: 100vw;
                 bottom: 171px;
-                transform: rotate(352deg)
+                transform: rotate(352deg) translateX(-50%);
             }
             @media screen and (min-width:2100px) {
-            transform: rotate(354deg);
+            transform: rotate(354deg) translateX(-50%);
             }
             @media screen and (min-width:2350px) {
-                transform: rotate(356deg)
+                transform: rotate(356deg) translateX(-50%);
             }
         }  
     } 

@@ -1,7 +1,6 @@
 ---
 import ModalInfantsDesktop from "./ModalInfantsDesktop.astro";
 import ModalAdultsDesktop from "./ModalAdultsDesktop.astro";
-// import ModalAdultsMobile from "./ModalAdultsMobile.astro";
 ---
 
 <Fragment>
@@ -38,12 +37,27 @@ import ModalAdultsDesktop from "./ModalAdultsDesktop.astro";
           closeButton: false,
           height: "auto",
           dragToClose: false,
+          on: {
+            close: () => {
+              this.closingModal();
+            },
+          },
         }
       );
     }
 
     close() {
-      this.usualModalInfantsDesktop.close();
+      this.usualModalInfantsDesktop.destroy();
+    }
+
+    closingModal() {
+      const modalArticles = document.querySelectorAll(
+        `.modal__grids_article.infants`
+      );
+      modalArticles.forEach((article) => {
+        article.classList.remove("is--active");
+      });
+      modalArticles[0].classList.add("is--active");
     }
   }
 
@@ -65,19 +79,34 @@ import ModalAdultsDesktop from "./ModalAdultsDesktop.astro";
           closeButton: false,
           height: "auto",
           dragToClose: false,
+          on: {
+            close: () => {
+              this.closingModal();
+            },
+          },
         }
       );
     }
 
     close() {
-      this.usualModalAdultsDesktop.close();
+      this.usualModalAdultsDesktop.destroy();
+    }
+
+    closingModal() {
+      const modalArticles = document.querySelectorAll(
+        `.modal__grids_article.adults`
+      );
+      modalArticles.forEach((article) => {
+        article.classList.remove("is--active");
+      });
+      modalArticles[0].classList.add("is--active");
     }
   }
 
   //Open the modals
   document.addEventListener("DOMContentLoaded", () => {
     const triggerBtns = document.querySelectorAll(
-      ".btn--usual-suspect-modal-desktop"
+      ".btn--usual-suspect-modal-trigger"
     );
     triggerBtns.forEach((btn) => {
       btn.addEventListener("click", () => {
