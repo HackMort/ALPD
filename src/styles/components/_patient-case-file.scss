@@ -260,6 +260,14 @@
         &--color-black {
           color: $color-black;
         }
+
+        &--delay-color {
+          background-color: $color-white;
+          color: $color-black;
+          width: fit-content;
+          padding: .25rem .5rem;
+        }
+
       }
     }
   }
