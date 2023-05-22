@@ -175,7 +175,7 @@
       color: $color-blue;
       font-family: 'Barlow';
       font-style: normal;
-      font-weight: 900;
+      font-weight: 800;
       font-size: 18px;
       line-height: 21px;
       letter-spacing: -0.09px;
@@ -242,6 +242,8 @@
     margin-top: 1rem;
     font-weight: 400;
     font-style: italic;
+    line-height: 1.0625rem;
+    letter-spacing: -0.07px;
   }
 
   .disclaimer {
