@@ -1,0 +1,47 @@
+---
+
+export type tabProps = {
+    label: string; // Tab title
+}
+
+type Props = {
+  title?: string;
+  tabs: tabProps[];
+};
+
+const {
+    tabs,
+    title
+} = Astro.props;
+
+
+---
+
+<div class="section-wrapper section-wrapper--small">
+    <h1 class="title">{ title }</h1>
+
+    <ul role="tablist">
+
+        {tabs.map((tab, i) => (
+            <li role="presentation">                                   
+                <a href={`#panel${ i }`} role="tab" id={`tab1${ i }`} aria-selected={ i === 0 } >{ tab.label }</a>                             
+            </li>            
+        ))}    
+        
+    </ul>  
+    
+    {tabs.map((tab, i) => (
+        <section
+            id={`panel${i}`}
+            role="tabpanel"
+            aria-labelledby={`tab${i}`}
+            aria-hidden={ i !== 0 }
+            hidden = { i !== 0 }
+            tabindex="-1"
+        >
+            <slot name={`tab-panel-${i}`} />
+        </section>
+    ))}
+      
+    </section>
+  </div>

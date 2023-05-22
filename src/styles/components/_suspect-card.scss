@@ -1,0 +1,191 @@
+.suspect-card {
+    width: 100%;
+    border: 1px solid red;
+
+    &:not(:first-of-type) {
+        border-left: none;
+    }
+
+    &--desktop--only {
+        display: none;
+
+        @media screen and (min-width: 1024px) {
+            display: block;
+        }
+    }
+
+    &--mobile--only {
+
+        @media screen and (min-width: 1024px) {
+            display: none;
+        }
+    }
+
+    .suspect-card_bordered-item.title__wrapper {
+        @media screen and (min-width: 1024px) {
+            display: none;
+        }
+    }
+
+    .suspect-card_bordered-item:last-of-type {
+        border-top: 1px solid red;
+    }
+}
+
+@for $i from 1 through 5 {
+
+    #usual-suspects_adults-tab#{$i},
+    #usual-suspects_children-adolescent-tab#{$i},
+    #usual-suspects_neonates-infants-tab#{$i} {
+
+        .suspect-card {
+
+            .suspect-card_bordered-item {
+
+                &:first-of-type {
+                    border-bottom: 1px solid red;
+
+                    @media screen and (min-width: 1024px) {
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+
+        .suspect-card--desktop--only {
+
+            .suspect-card:first-of-type {
+                border-bottom: none;
+            }
+
+            .suspect-card_bordered-title {
+                border-top: none;
+            }
+
+            .cards__grid_container {
+                .suspect-card:first-of-type {
+                    border-bottom: 1px solid red;
+                }
+            }
+        }
+    }
+}
+
+.suspect-card_bordered-item {
+    padding: 1rem;
+
+    img {
+        width: 197.86px;
+        height: 240.91px;
+        max-width: 25rem;
+        margin: -1rem auto 0 auto;
+    }
+
+    @media screen and (min-width: 1024px) {
+        padding: 1rem;
+
+        &:not(:last-of-type) {
+            border-bottom: none;
+        }
+
+        img {
+            max-width: 12.5rem;
+            margin: -1rem auto 0 auto;
+        }
+    }
+
+    @media screen and (min-width: 1400px) {
+        padding: 1rem;
+    }
+}
+
+.suspect-card_bordered-title {
+    border-bottom: 0;
+}
+
+.suspect-card__note {
+    font-family: Barlow, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 22px;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.suspect-card_li {
+    font-family: Barlow, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    line-height: 22px;
+    font-size: 16px;
+}
+
+.suspect-card_ul {
+    margin-left: 14px;
+}
+
+.suspect-card_title {
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 25.2px;
+
+    @media screen and (min-width: 1024px) {
+        text-align: center;
+    }
+}
+
+.suspect-card_subtitle {
+    color: $color-carbon;
+    line-height: 1.375rem;
+    word-wrap: break-word;
+
+    strong {
+        font-weight: 400;
+        font-family: inherit;
+        color: $color-carbon !important;
+    }
+
+    &--secondary {
+        color: $color-red;
+    }
+}
+
+.suspect-card--foot {
+    @media screen and (min-width: 1024px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        height: 80px;
+        border: 1px solid $color-red;
+
+        border-top: none;
+
+        padding: 0 1rem;
+    }
+
+    @media screen and (min-width: 1366px) {
+        @include flex-gap(3rem);
+        justify-content: center;
+    }
+}
+
+.suspect-card__cards-container {
+    @media screen and (min-width: 768px) {
+        padding: 1rem 2rem 0 2rem;
+    }
+}
+
+.suspect-card__cards-container--foot {
+    @media screen and (min-width: 1024px) {
+        padding: 0 2rem;
+        max-width: var(--wrapper-max-width);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media screen and (min-width: 1600px) {
+
+        max-width: 90rem;
+
+    }
+}
