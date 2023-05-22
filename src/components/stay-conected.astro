@@ -21,7 +21,7 @@
             >
               <input
                 autocomplete="given-name"
-                class="form__control-input"
+                class="form__control-input stayinput"
                 type="text"
                 id="first-name"
                 name="first-name"
@@ -43,7 +43,7 @@
             >
               <input
                 autocomplete="additional-name"
-                class="form__control-input"
+                class="form__control-input stayinput"
                 type="text"
                 id="last-name"
                 name="last-name"
@@ -65,7 +65,7 @@
               data-required="true"
               data-is-valid="false"
             >
-              <div class="form__control-input">
+              <div class="form__control-input stayinput">
                 <select
                   id="state"
                   name="state"
@@ -141,7 +141,7 @@
             >
               <input
                 autocomplete="postal-code"
-                class="form__control-input"
+                class="form__control-input stayinput"
                 type="text"
                 id="zip-code"
                 name="zip-code"
@@ -164,7 +164,7 @@
               data-is-valid="true"
             >
               <input
-                class="form__control-input"
+                class="form__control-input stayinput"
                 type="text"
                 id="npi-number"
                 name="npi-number"
@@ -182,7 +182,7 @@
               data-required="true"
               data-is-valid="false"
             >
-              <div class="form__control-input">
+              <div class="form__control-input stayinput">
                 <select
                   id="specialty"
                   name="specialty"
@@ -228,7 +228,7 @@
           >
             <input
               autocomplete="email"
-              class="form__control-input"
+              class="form__control-input stayinput"
               type="email"
               id="email"
               name="email"
@@ -284,13 +284,14 @@
                 onchange="validateFormControl(event)"
               />
               <label class="form__control-label" for="terms-and-conditions">
-                By checking this box and submitting this form, I give <a
+                <!-- By checking this box and submitting this form, I give <a
                   href="https://alexion.com/Legal#privacynotice%5D"
                   target="_blank">Alexion</a
                 > permission to contact me for commercial purposes or otherwise provide
                 me with information about Alexion's products, services, programs,
                 market research, or other topics of interest that Alexion thinks
-                may interest me.
+                may interest me. -->
+                By checking this box and submitting this form, I give Alexion permission to provide promotional information to me or otherwise contact me about Alexion products, services, programs, or other topics that Alexion thinks may interest me.
               </label>
             </div>
           </div>
@@ -354,7 +355,7 @@
         const errorLabel = modal.querySelectorAll('p[class ="form__control-error"]');
         const modalClose = modal.querySelector(".modal__close");
         const button = modal.querySelector(".button")
-        const inputs = document.querySelectorAll('.form__control-input')
+        const inputs = document.querySelectorAll('.stayinput')
 
         modalClose.addEventListener("click", () => {
           instance.close();
@@ -362,12 +363,12 @@
 
         button.addEventListener("click", () => {
 
-            for(let i=0;i<inputs.length;i++){
-                if(inputs[i].value === ''){
-
-                    errorLabel[i].style.display = 'block'
-                }
-            }
+        for(let i=0;i<inputs.length;i++){
+          if(inputs[i].value === ''){
+            
+            errorLabel[i].style.display = 'block'
+          }
+        }
             
         });
 
