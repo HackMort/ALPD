@@ -708,6 +708,10 @@
         @media screen and (min-width: 850px) {
             font-size: 18px;
         }
+
+        strong {
+            font-weight: 700;
+        }
     }
 
     @media screen and (min-width: 768px) {
@@ -889,10 +893,16 @@
                     text-align: left;
 
                     &.color--saffron-mango {
+                        font-weight: 600;
                         line-height: 1.5rem;
                         margin-bottom: 1.25rem;
                         margin-top: -1.75rem;
                         text-align: center;
+
+                        @media screen and (min-width: 1024px) {
+                            font-size: 18px;
+                            line-height: 25.2px;
+                        }
                     }
 
                     &:not(.color--saffron-mango) {
@@ -903,6 +913,8 @@
                         max-width: 42ch;
 
                         @media screen and (min-width: 1024px) {
+                            font-size: 18px;
+                            line-height: 25.2px;
                             max-width: 41ch;
                         }
                     }
@@ -952,6 +964,19 @@
                     font-size: 5.125rem;
                     line-height: 6.375rem;
                 }
+
+                sup.symbol-sup {
+                    top: -28px;
+                    left: -12px;
+                    font-family: 'oswald';
+                    font-size: 32px;
+                    line-height: 0;
+
+                    @media screen and (min-width: 1024px) {
+                        top: -36px;
+                    }
+                }
+
             }
 
             .number__kpi-description {
