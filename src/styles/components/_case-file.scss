@@ -18,35 +18,19 @@
         text-align: center;
         margin: auto;
         margin-bottom: .75rem;
-        max-width: 15.5rem;
+        max-width: 29ch;
         color: $color-white;
 
 
         @media screen and (min-width:1000px) {
             font-size: 1.125rem;
             line-height: 1.5625rem;
-            max-width: 352.154px;
             position: relative;
-            z-index: 2;   
-            
+            z-index: 2;
         }
-        &.modifier{
-            max-width: 234px;
-            
-            @media screen and (min-width:1000px) {
-                max-width: 378px;
-            }
-        }
-        &.custom-class{
-            max-width: 317px;
-            @media screen and (min-width:1000px) {
-                font-size: 1.125rem;
-                line-height: 1.5625rem;
-                max-width: 352.154px;
-                position: relative;
-                z-index: 2;   
-                
-            }
+
+        @media screen and (min-width: 1200px) {
+            max-width: 40ch;
         }
     }
 
@@ -90,17 +74,14 @@
 .alp-files {
     position: relative;
     padding-top: 2rem;
-    padding-bottom: 3rem;
+    padding-bottom: 6.875rem;
 
     @media screen and (min-width:600px) {
         padding-bottom: 12.2369rem;
 
     }
     @media screen and (min-width:768px) {
-        padding-top: 5rem;
-    }
-    @media screen and (min-width:1130px) {
-        padding-top: 8rem;
+        padding-top: 3.75rem;
     }
 
     .files-heading {
@@ -129,6 +110,7 @@
 
     .case-file__first,
     .case-file__second {
+
         @media screen and (min-width:600px) {
             margin: auto;
             display: flex;
@@ -138,6 +120,34 @@
 
         @media screen and (min-width:1100px) {
             max-width: 54.1875rem;
+        }
+    }
+
+    .case-file {
+        &__first {
+            .case-file__text {
+                @media screen and (min-width: 1200px) {
+                    max-width: 37ch;
+                }
+            }
+        }
+
+        &__second {
+            .case-file:first-child {
+                .case-file__text {
+                    max-width: 26ch;
+
+                    @media screen and (min-width: 1200px) {
+                        max-width: 37ch;
+                    }
+                }
+            }
+
+            .case-file:last-child {
+                .case-file__text {
+                    max-width: 32ch;
+                }
+            }
         }
     }
 
