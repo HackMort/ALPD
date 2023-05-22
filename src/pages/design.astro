@@ -2,8 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 import Accordion from "../components/Accordion.astro";
 import CTA from "../components/CTA.astro";
-import ModalMobile from "../components/Usual-suspect/ModalMobile.astro";
-import ModalDesktop from "../components/Usual-suspect/ModalDesktop.astro";
+import ModalMobile from "../components/usual-suspects/modals/ModalMobile.astro";
+import ModalDesktop from "../components/usual-suspects/modals/ModalDesktop.astro";
+import CaseFileModal from "../components/Case-Files/CaseFileModal.astro";
+import CaseFileModalDesktop from "../components/Case-Files/CaseFileModalDesktop.astro";
 ---
 
 <Layout
@@ -701,10 +703,10 @@ import ModalDesktop from "../components/Usual-suspect/ModalDesktop.astro";
     <div class="section-wrapper section-wrapper--small">
       <h1 class="title">Usual Suspects Modal Mobile Versions</h1>
       <div class="buttons" style="display: flex; flex-direction: column;">
-        <!-- 
+        <!--
           data-target attribute is the id of the modal that will be triggered
-          data-target="infants-modal" 
-          data-target="adults-modal" 
+          data-target="infants-modal"
+          data-target="adults-modal"
          -->
         <h1>Infants</h1>
         <button

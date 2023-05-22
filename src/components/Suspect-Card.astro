@@ -1,0 +1,48 @@
+---
+export interface Props {
+    title: string;
+    subtitle: string;
+    subtitle_secondary?: string;
+    subtitle_superscript?: string;
+    image: string;
+    info?: string;
+    list?: string[];
+    type?: string;
+}
+
+const {
+    title,
+    subtitle,
+    image,
+    subtitle_secondary,
+    subtitle_superscript,
+    info,
+    list,
+    type,
+} = Astro.props;
+---
+
+<div class="suspect-card">
+    <div class="suspect-card_bordered-item title__wrapper">
+        <h3 class="suspect-card_title">{title}</h3>
+    </div>
+    <div class="suspect-card_bordered-item">
+        <img src={image} alt="" />
+    </div>
+
+    <div class="suspect-card_bordered-item card-description-container">
+        <h4 class="suspect-card_subtitle font--special-elite">{subtitle}</h4>
+        <h4
+            class="suspect-card_subtitle suspect-card_subtitle--secondary font--special-elite"
+        >
+            <strong>AKA</strong>
+            {subtitle_secondary}<sup>{subtitle_superscript}</sup>
+        </h4>
+
+        <p class="suspect-card__note">{info}</p>
+
+        <ul class="suspect-card_ul">
+            {list.map((elem) => <li class="suspect-card_li">{elem}</li>)}
+        </ul>
+    </div>
+</div>
