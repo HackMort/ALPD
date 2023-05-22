@@ -75,8 +75,10 @@ html {
   overflow-x: hidden;
 }
 
-span, sub, sup {
-    color: inherit;
+span,
+sub,
+sup {
+  color: inherit;
 }
 
 h1,
@@ -102,7 +104,7 @@ em {
 }
 
 span {
-    font-family: inherit;
+  font-family: inherit;
 }
 
 blockquote:before,
@@ -220,6 +222,10 @@ sub {
 
 sup {
   top: -0.5em;
+}
+
+em {
+  font-style: italic;
 }
 
 img {
