@@ -53,10 +53,14 @@ export function highlightActiveInternalNavOnScroll (headerInnerHeight) {
             item.classList.remove('is--active')
           })
 
-          const activeLi = document.querySelector(
+          let activeLi = document.querySelector(
                             `.internal__nav_list_item a[href="#${sectionId}"]`
-          ).parentElement
-          activeLi.classList.add('is--active')
+          )
+
+          if (activeLi) {
+            activeLi = activeLi.parentElement
+            activeLi.classList.add('is--active')
+          }
 
           // Scroll the internal navigation to the active item
           internalNav.scrollLeft = activeLiPosition - internalNavWidth / 2
