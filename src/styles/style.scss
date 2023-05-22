@@ -38,6 +38,7 @@
 @import './components/usual-suspects';
 @import './components/_skeleton.scss';
 @import './components/_usual-supect-modal.scss';
+@import './components/_usual-modal-grids.scss';
 
 
 .section__home-video {
@@ -115,13 +116,12 @@
         width: calc(100vw + 31.25rem);
         height: 0.5rem;
         z-index: 1;
-
         bottom: .25rem;
         right: 50%;
-        transform: translateX(50%) rotate(12deg);
+        transform: translateX(-50%) rotate(12deg);
 
         @media screen and (min-width: 768px) {
-            transform: translateX(50%) rotate(-12deg);
+            transform: translateX(-50%) rotate(-12deg);
         }
     }
 
@@ -153,6 +153,9 @@
         @media screen and (min-width: 768px) {
             font-size: 1.375rem;
             line-height: 30.8px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 36ch;
         }
     }
 
@@ -164,6 +167,9 @@
         @media screen and (min-width: 768px) {
             font-size: 1.125rem;
             line-height: 25.2px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 51ch;
         }
     }
 
@@ -184,8 +190,8 @@
             max-width: 90rem;
             margin-left: auto;
             margin-right: auto;
-
-            padding-top: 5rem;
+            padding-top: 6.5625rem;
+            padding-bottom: 7rem;
         }
 
         figcaption,
@@ -195,11 +201,15 @@
             text-align: center;
             margin-top: 2rem;
             margin-bottom: 2rem;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 37ch;
 
             @media screen and (min-width: 1024px) {
                 margin-top: 0;
-                margin-bottom: 0;
+                margin-bottom: 1.5rem;
                 text-align: left;
+                max-width: 100%;
             }
         }
 
@@ -229,7 +239,7 @@
             }
 
             @media screen and (min-width: 1366px) {
-                max-width: 68.5rem;
+                max-width: 61.5rem;
                 padding-bottom: 2.8937rem;
                 transform: translate(5.5rem, .625rem);
             }
@@ -296,6 +306,7 @@
             @media screen and (min-width: 1024px) {
                 font-size: 1.375rem;
                 line-height: 30.8px;
+                margin-bottom: .625rem;
             }
         }
 
@@ -321,6 +332,7 @@
                 &--compact {
                     max-width: 48.125rem;
                     margin: auto;
+                    margin-bottom: 4.4375rem !important;
                 }
             }
         }
@@ -334,6 +346,10 @@
         @media screen and (min-width: 768px) {
             text-align: center;
             max-width: 35.625rem;
+        }
+
+        @media screen and (min-width: 1024px) {
+            max-width: 37.8125rem;
         }
     }
 
@@ -360,6 +376,12 @@
         line-height: 25.2px;
         font-weight: 500;
         margin-bottom: 1.5rem;
+
+        @media screen and (min-width: 1024px) {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 56ch;
+        }
     }
 
     .alpd-academy__mutations-table {
@@ -416,6 +438,7 @@
 
         li {
             color: $color-white;
+            font-size: .875rem;
             line-height: 18.2px;
             position: relative;
             transform: translateX(.375rem);
@@ -493,12 +516,12 @@
             width: 42.875rem;
             margin-left: auto;
             margin-right: auto;
-
+            margin-top: .625rem;
             text-align: center;
 
             &.last {
                 .alpd-academy__deficient-paragraph-title {
-                    width: 21.875rem;
+                    width: 34ch;
                     margin-left: auto;
                     margin-right: auto;
                 }
@@ -508,15 +531,21 @@
                     margin-right: auto;
 
                     &:first-of-type {
-                        width: 31.25rem;
+                        width: 48ch;
+                        max-width: 48ch;
                     }
 
                     &:last-of-type {
-                        width: 32.25rem;
+                        width: 57ch;
+                        max-width: 57ch;
                         margin-bottom: 2rem;
                     }
                 }
             }
+        }
+
+        .alpd-academy__symptoms-list {
+            margin-bottom: 2rem;
         }
     }
 
@@ -539,6 +568,9 @@
 
         @media screen and (min-width: 768px) {
             font-weight: 500;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 50ch;
         }
     }
 
@@ -677,6 +709,10 @@
         @media screen and (min-width: 850px) {
             font-size: 18px;
         }
+
+        strong {
+            font-weight: 700;
+        }
     }
 
     @media screen and (min-width: 768px) {
@@ -707,6 +743,7 @@
 .alpd-academy__persistently-low-alp-container {
     position: relative;
     margin-bottom: 3rem;
+    padding: 2rem 0 4rem;
 
     @media screen and (min-width: 850px) {
         max-width: 47.3125rem;
@@ -738,8 +775,6 @@
             width: 100%;
         }
     }
-
-    padding: 2rem 0;
 
     .persistently-low-red-string {
         position: absolute;
@@ -788,6 +823,12 @@
             }
         }
     }
+
+    .font--special-elite {
+        @media screen and (min-width: 1024px) {
+            text-align: center;
+        }
+    }
 }
 
 .alpd-academy__know-the-numbers {
@@ -795,6 +836,24 @@
     .cta {
         @media screen and (min-width: 1024px) {
             padding-bottom: 14.5175rem;
+        }
+
+        @media screen and (min-width: 1850px) {
+            .variant-1 {
+                .red-string {
+                    &.mod-1 {
+                        top: -86px;
+                    }
+
+                    &.mod-2 {
+                        top: -70px;
+                    }
+
+                    &.mod-3 {
+                        bottom: 0;
+                    }
+                }
+            }
         }
     }
 
@@ -832,7 +891,38 @@
                 margin-bottom: 3rem;
 
                 .number__kpi-description {
-                    margin-top: -1.75rem;
+                    text-align: left;
+
+                    &.color--saffron-mango {
+                        font-weight: 600;
+                        line-height: 1.5rem;
+                        margin-bottom: 1.25rem;
+                        margin-top: -1.75rem;
+                        text-align: center;
+
+                        @media screen and (min-width: 1024px) {
+                            font-size: 18px;
+                            line-height: 25.2px;
+                        }
+                    }
+
+                    &:not(.color--saffron-mango) {
+                        font-size: .875rem;
+                        line-height: 1.3125rem;
+                        margin-left: auto;
+                        margin-right: auto;
+                        max-width: 42ch;
+
+                        @media screen and (min-width: 1024px) {
+                            font-size: 18px;
+                            line-height: 25.2px;
+                            max-width: 41ch;
+                        }
+                    }
+
+                    @media screen and (min-width: 1024px) {
+                        text-align: center;
+                    }
                 }
             }
 
@@ -847,6 +937,11 @@
                 font-weight: 600;
                 font-size: 1.125rem;
                 line-height: 25.2px;
+
+                @media screen and (min-width: 1024px) {
+                    font-size: 1.5rem;
+                    line-height: 2.125rem;
+                }
             }
 
             .number__kpi-data {
@@ -865,14 +960,38 @@
                 font-weight: 400;
                 font-size: 4.5rem;
                 color: $color-red;
+
+                @media screen and (min-width: 1024px) {
+                    font-size: 5.125rem;
+                    line-height: 6.375rem;
+                }
+
+                sup.symbol-sup {
+                    top: -28px;
+                    left: -12px;
+                    font-family: 'oswald';
+                    font-size: 32px;
+                    line-height: 0;
+
+                    @media screen and (min-width: 1024px) {
+                        top: -36px;
+                    }
+                }
+
             }
 
             .number__kpi-description {
                 color: $color-white;
+                text-align: left;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 35ch;
 
                 &.right--column {
                     @media screen and (min-width: 1024px) {
                         margin-top: -1.75rem;
+                        max-width: 34ch;
+                        text-align: center;
                     }
                 }
             }
@@ -912,6 +1031,7 @@
             max-width: 80rem;
             margin-left: auto;
             margin-right: auto;
+            margin-bottom: 4.375rem;
         }
 
         &::before {
@@ -976,6 +1096,10 @@
                 margin-bottom: 1rem;
             }
         }
+
+        .chart {
+            margin-bottom: 1.0625rem;
+        }
     }
 }
 
@@ -991,6 +1115,10 @@
         picture {
             display: none;
         }
+    }
+
+    @media screen and (min-width: 1024px) {
+        margin-bottom: 0;
     }
 
     .red-string {
@@ -1037,7 +1165,7 @@
     .hypophosphatasia-info__content {
         position: relative;
         z-index: 3;
-        padding-top: 8rem;
+        padding-top: 10rem;
         padding-bottom: 5rem;
         height: 100%;
 
@@ -1071,6 +1199,10 @@
                     margin-bottom: 3rem;
 
                     font-family: Barlow, Arial, Helvetica, sans-serif;
+                }
+
+                @media screen and (min-width: 1024px) {
+                    margin-bottom: 3.75rem;
                 }
             }
         }
@@ -3829,6 +3961,12 @@
             &--button {
                 @media screen and (min-width: 769px) {
                     margin-left: 1rem;
+                }
+
+                @media screen and (min-width: 1024px) {
+                    .button--custom-bg {
+                        padding-top: 1.25rem;
+                    }
                 }
             }
         }
