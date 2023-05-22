@@ -33,10 +33,11 @@
 @import './components/cta.scss';
 @import './components/_patient-case-file.scss';
 @import './components/_case-file-modal.scss';
+@import './components/_suspect-card.scss';
 @import './components/stay-connected.scss';
+@import './components/usual-suspects';
 @import './components/_skeleton.scss';
 @import './components/_usual-supect-modal.scss';
-@import './components/_usual-modal-grids.scss';
 
 
 .section__home-video {
@@ -46,9 +47,13 @@
         text-transform: uppercase;
         color: $color-cinnabar;
         text-align: center;
-        max-width: 780px;
+        max-width: 28ch;
         margin: auto;
-        margin-bottom: 2.5rem;
+        margin-bottom: 1.25rem;
+
+        @include media('tablet') {
+            max-width: 34ch;
+        }
     }
 }
 
@@ -786,6 +791,12 @@
 }
 
 .alpd-academy__know-the-numbers {
+
+    .cta {
+        @media screen and (min-width: 1024px) {
+            padding-bottom: 14.5175rem;
+        }
+    }
 
     .know-the-numbers__title {
         color: $color-white;
@@ -2684,13 +2695,13 @@
         .red-string {
             position: absolute;
             z-index: 2;
-            transform: rotate(-28deg);
+            transform: rotate(-28deg) translateX(-50%);
             transform-origin: left;
             top: 72%;
 
             @media screen and (min-width: 768px) {
                 top: 0.5rem;
-                transform: rotate(5deg);
+                transform: rotate(5deg) translateX(-50%);
             }
         }
     }
@@ -2707,7 +2718,7 @@
             margin-left: auto;
             margin-right: auto;
 
-            max-width: 42rem;
+            // max-width: 42rem;
         }
     }
 
@@ -2730,12 +2741,13 @@
 
     &__title {
         color: $color-white;
-        text-transform: uppercase;
         font-family: 'Oswald';
         font-weight: 700;
 
         font-size: 1.5rem;
         line-height: 30px;
+
+        text-transform: uppercase;
 
         @include media('tablet') {
             text-align: center;
@@ -2750,6 +2762,8 @@
             display: none;
             margin-bottom: 2rem;
 
+            text-transform: uppercase;
+
             @media screen and (min-width: 769px) {
                 display: block;
             }
@@ -2761,13 +2775,12 @@
         }
 
         &--mobile {
-            display: none;
             color: $color-blue;
 
             padding: 3rem 0 0 0;
 
-            @media screen and (max-width: 768px) {
-                display: block;
+            @media screen and (min-width: 1024px) {
+                display: none;
             }
         }
 
@@ -2879,6 +2892,7 @@
         margin-right: auto;
 
         margin-bottom: 4rem;
+        z-index: 1;
 
         &::before {
             content: "";
@@ -2938,28 +2952,26 @@
     }
 
     &__red-string-bg {
-        overflow: clip;
         position: relative;
 
         /* Just a inclined line troughing from the left to the right*/
         &::before {
             content: '';
             position: absolute;
-            top: 380px;
-            left: 0;
+            top: 540px;
+            left: 50%;
             width: calc(100vw * 2);
             height: 2px;
             background-color: $color-red;
-            transform: rotate(39deg);
+            transform: rotate(39deg) translateX(-50%);
             transform-origin: left;
             z-index: 1;
 
             @media screen and (min-width: 769px) {
                 //Rotate the line to the right side
-                transform: rotate(338deg);
+                transform: rotate(338deg) translateX(-50%);
                 transform-origin: top;
-                top: 358px;
-                left: -150px;
+                top: -137px;
 
                 z-index: 0;
             }
@@ -3533,7 +3545,7 @@
     #hpp-multisystemic {
         >.wrapper {
             @media screen and (max-width: 1024px) {
-                max-width: 100%;
+                //max-width: 100%;
             }
         }
     }
@@ -3831,6 +3843,7 @@
 
             @media screen and (min-width: 1024px) {
                 justify-content: flex-start;
+                margin-left: 0;
             }
 
             &--text-red-line {
@@ -3972,14 +3985,13 @@
         &__tabs {
             position: relative;
 
-
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 1023px) {
                 background-color: $color-floral-white;
 
                 &::before {
                     //Tape
                     content: '';
-                    background-image: url(/assets/images/hpp-profile/tape.png);
+                    background-image: url("/assets/images/hpp-profile/tape.png");
                     background-repeat: no-repeat;
                     background-size: 100% 100%;
                     background-position: center;
@@ -3988,7 +4000,7 @@
 
                     position: absolute;
                     z-index: 2;
-                    top: -35px;
+                    top: -19px;
                     left: 50%;
                     transform: translateX(-50%) rotate(2deg);
                 }
@@ -3996,7 +4008,7 @@
                 &::after {
                     //Tape
                     content: '';
-                    background-image: url(/assets/images/hpp-profile/tape.png);
+                    background-image: url("/assets/images/hpp-profile/tape.png");
                     background-repeat: no-repeat;
                     background-size: 100% 100%;
                     background-position: center;
@@ -4022,7 +4034,7 @@
                 padding: 1% 0 0 0;
                 height: auto;
 
-                @media screen and (max-width: 768px) {
+                @media screen and (max-width: 1023px) {
                     display: none;
                     margin-left: 0;
                 }
@@ -4240,8 +4252,8 @@
             }
 
             &.multisystemic1 {
-                @media screen and (min-width: 769px) {
-                    background-image: url(/assets/images/hpp-profile/folder-open--tab1.png);
+                @media screen and (min-width: 1024px) {
+                    background-image: url("/assets/images/hpp-profile/folder-open--tab1.png");
                     background-repeat: no-repeat;
                     background-size: 100%;
                     background-position: top;
@@ -4249,14 +4261,14 @@
             }
 
             &.multisystemic2 {
-                background-image: url(/assets/images/hpp-profile/folder-open--tab2.png);
+                background-image: url("/assets/images/hpp-profile/folder-open--tab2.png");
                 background-repeat: no-repeat;
                 background-size: 100%;
                 background-position: top;
             }
 
             &.multisystemic3 {
-                background-image: url(/assets/images/hpp-profile/folder-open--tab3.png);
+                background-image: url("/assets/images/hpp-profile/folder-open--tab3.png");
                 background-repeat: no-repeat;
                 background-size: 100%;
                 background-position: top;
@@ -4349,7 +4361,7 @@
                 height: .9375rem;
             }
 
-            @media screen and (min-width: 769px) {
+            @media screen and (min-width: 1024px) {
                 display: none;
             }
         }
@@ -4537,18 +4549,17 @@
         font-family: 'Oswald';
         font-style: normal;
         font-weight: 700;
-        font-size: 24px;
+        font-size: 1.5rem;
         line-height: 30px;
-        max-width: 352px;
-        padding-left: 22.94px;
-        margin-bottom: 3rem;
+        max-width: 22rem;
+        margin-bottom: 2rem;
 
-        @media screen and (min-width: 650px) {
+        @media screen and (min-width: 768px) {
             margin: auto;
             text-align: center;
             max-width: 452px;
-            font-size: 36px;
-            line-height: 125%;
+            font-size: 2.25rem;
+            line-height: 45px;
         }
 
         @media screen and (min-width: 1500px) {
@@ -4557,29 +4568,64 @@
     }
 
     &__text {
-        background-image: url('/assets/images/weeding-out-card.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        transform: rotate(-2.56deg);
-
-        width: 103%;
-        height: 278.92px;
         position: relative;
         padding-top: 36px;
-        margin-top: 64px;
-        overflow: hidden;
 
-        @media screen and (min-width: 507px) {
-            width: 77%;
-            margin: auto;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        background: $color-floral-white;
+
+        left: 50%;
+        transform: translateX(-50%) rotate(-2.56deg);
+        width: calc(100vw + 2rem);
+
+        &::before {
+            content: url("/assets/images/weeding-pin.png");
+            position: absolute;
+            left: 50%;
+            top: -10%;
+            transform: translateX(-50%);
         }
 
-        @media screen and (min-width: 650px) {
-            background-image: none;
-            overflow: visible;
+        .red-string {
+            top: 17%;
+            transform: translateX(-50%) rotate(4deg);
+
+            &:last-of-type {
+                display: none;
+            }
         }
 
+        @media screen and (min-width: 500px) {
+            left: 0;
+            width: 100%;
 
+            background: none;
+            transform: none;
+
+            margin: 6rem 0;
+            padding: 0;
+
+            &::before {
+                display: none;
+            }
+
+            .red-string {
+
+                &:first-of-type {
+                    top: -60%;
+                    transform: translateX(-50%) rotate(2deg);
+                }
+
+                &:last-of-type {
+                    display: block;
+                    transform: translateX(-50%) rotate(-2deg);
+
+                    top: auto;
+                    bottom: -1rem;
+                }
+
+            }
+        }
 
         &__paragraph {
             position: relative;
@@ -4588,27 +4634,34 @@
             font-weight: 400;
             font-size: 16px;
             line-height: 24px;
-            max-width: 308px;
+            max-width: 19.25rem;
             z-index: 2;
             color: $color-black;
-            text-align: center;
             margin: auto;
-            margin-top: 4rem;
-            transform: rotate(2.44deg);
+            margin-top: 2rem;
+            padding-bottom: 2rem;
 
-            @media screen and (min-width: 650px) {
-                color: white;
-                font-size: 20px;
-                line-height: 150%;
-                /* or 30px */
-                max-width: 561px;
+            transform: rotate(2.56deg);
+
+            text-align: center;
+
+            @media screen and (min-width: 500px) {
+                color: $color-white;
+                max-width: 35.0625rem;
+
+                transform: none;
+            }
+
+            @media screen and (min-width: 768px) {
+                font-size: 1.25rem;
+                line-height: 30px;
             }
 
             span {
                 color: $color-red;
 
-                @media screen and (min-width: 650px) {
-                    color: #F8BA5D;
+                @media screen and (min-width: 500px) {
+                    color: $color-saffron-mango;
                 }
             }
         }
@@ -4652,65 +4705,71 @@
         font-family: 'Oswald';
         font-style: normal;
         font-weight: 700;
-        font-size: 24px;
+        font-size: 1.5rem;
         line-height: 30px;
-        max-width: 574px;
-        padding-left: 22.94px;
-        margin-bottom: 3rem;
+        max-width: 35.875rem;
+        margin-bottom: 1.5rem;
         margin-top: 2rem;
         text-transform: uppercase;
 
-        @media screen and (min-width: 650px) {
-            font-size: 36px;
-            line-height: 125%;
-            /* or 45px */
-            max-width: 669px;
+        @media screen and (min-width: 768px) {
+            font-size: 2.25rem;
+            line-height: 45px;
+            max-width: 41.8125rem;
             margin: auto;
             margin-top: 0;
             text-align: center;
-            margin-bottom: 18.21px;
+            margin-bottom: 1.1381rem;
         }
 
     }
 
     &__text {
-        padding-left: 22.94px;
-        padding-right: 27.93px;
         font-family: 'Barlow';
-        font-style: normal;
         font-weight: 500;
-        font-size: 14px;
-        line-height: 18px;
+        font-size: 1rem;
+        line-height: 24px;
         color: $color-white;
-        max-width: 692px;
+        max-width: 43.25rem;
 
-        @media screen and (min-width: 650px) {
-            font-size: 18px;
-            line-height: 140%;
-            font-weight: 400;
+        @media screen and (min-width: 768px) {
+            font-size: 1.125rem;
+            line-height: 25.2px;
             text-align: center;
-            max-width: 815px;
+            max-width: 36.125rem;
             margin: auto;
         }
+    }
 
-        &.modifier {
-            font-size: 16px;
-            line-height: 24px;
-            margin-bottom: 2rem;
+    .persistently__footnote-list {
+        margin-top: 2rem;
+        padding-left: .4375rem;
 
-            @media screen and (min-width: 650px) {
-                max-width: 610px;
-                margin: auto;
-                margin-bottom: 17.2px;
-                font-weight: 500;
+        li {
+            position: relative;
+            color: $color-white;
+            font-size: .875rem;
+            line-height: 18.2px;
+
+            .positioned {
+                position: absolute;
+                left: -7px;
+                top: 7px;
             }
         }
 
-        .br {
-            display: none;
+        @media screen and (min-width: 768px) {
+            max-width: 37rem;
+            margin-left: auto;
+            margin-right: auto;
 
-            @media screen and (min-width: 650px) {
-                display: block;
+            li {
+                text-align: center;
+                position: initial;
+
+                .positioned {
+                    position: initial;
+                }
             }
         }
     }
@@ -4734,23 +4793,25 @@
         font-family: 'Oswald';
         font-style: normal;
         font-weight: 700;
-        font-size: 24px;
-        line-height: 125%;
-        /* or 30px */
+        font-size: 1.5rem;
+        line-height: 33.6px;
         padding-bottom: 1rem;
         border-bottom: 1px solid black;
-        margin-bottom: 9px;
-        margin-top: 10px;
-        padding-top: 11.85px;
-        text-transform: uppercase;
+        margin-bottom: .5625rem;
+        margin-top: .625rem;
+        padding-top: .7406rem;
+
+        sup {
+            font-weight: 300;
+            font-size: 60%;
+            top: -0.6em;
+        }
 
         @media screen and (min-width: 686px) {
-            font-size: 24px;
-            line-height: 140%;
             margin: auto;
             text-align: center;
             border-top: 1px solid black;
-            max-width: 788px;
+            max-width: 49.25rem;
         }
     }
 
@@ -4905,11 +4966,11 @@
 
 .misdiagnosis-table {
     position: relative;
-    margin-top: 5rem;
+    margin-top: 8rem;
 
     @media screen and (min-width: 1024px) {
 
-        margin-top: 6rem;
+        margin-top: 12rem;
 
         &::after {
             content: "";

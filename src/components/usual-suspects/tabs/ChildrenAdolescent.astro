@@ -1,0 +1,405 @@
+---
+import SuspectCard from "../../Suspect-Card.astro";
+import ModalMobile from "../modals/ModalMobile.astro";
+
+const data_card_1 = {
+  title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
+  image: "/assets/images/usual-suspects/Suspect-4.png",
+  subtitle: "Osteogenesis imperfecta",
+  subtitle_secondary: "Mr. Imperfect",
+  subtitle_superscript: "2,13,14",
+  info: "",
+  list: [
+    "Reduced bone density",
+    "Bowed long bones",
+    "Fractures",
+    "Gracile ribs",
+    "Metaphyseal flaring",
+    "Brittle teeth",
+  ],
+  type: "children",
+};
+
+const data_card_2 = {
+  title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
+  image: "/assets/images/usual-suspects/Suspect-5.png",
+  subtitle: "Nutritional rickets ",
+  subtitle_secondary: "Tricky Ricky",
+  subtitle_superscript: "8",
+  info: "",
+  list: [
+    "Development of bone deformities",
+    "Failure of bone mineralization",
+    "Bowed legs",
+    "Delay in gross motor milestones",
+  ],
+  type: "children",
+};
+
+const data_card_3 = {
+  title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
+  image: "/assets/images/usual-suspects/Suspect-6.png",
+  subtitle: "X-linked hypophosphatemia ",
+  subtitle_secondary: "X-Woman",
+  subtitle_superscript: "9,10",
+  info: "",
+  list: [
+    "Bone pain",
+    "Bowing of the legs",
+    "Delayed ability to walk",
+    "Growth delay",
+    "Reduced bone mineral density",
+  ],
+  type: "children",
+};
+
+const data_card_4 = {
+  title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
+  image: "/assets/images/usual-suspects/Suspect-7.png",
+  subtitle: "Cleidocranial dysostosis",
+  subtitle_secondary: "Cleo",
+  subtitle_superscript: "11",
+  info: "",
+  list: [
+    "Abnormality of the dentition",
+    "Narrow chest",
+    "Recurrent respiratory infections",
+    "Short stature",
+    "Skeletal dysplasia osteoporosis",
+  ],
+  type: "children",
+};
+
+const data_card_5 = {
+  title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
+  image: "/assets/images/usual-suspects/Suspect-8.png",
+  subtitle: "Campomelic dysplasia",
+  subtitle_secondary: "Shorty",
+  subtitle_superscript: "2,12",
+  info: "",
+  list: [
+    "Shortening, bowing, and angulation of the long bones",
+    "Tibial dimple",
+  ],
+  type: "children",
+};
+---
+
+<section class="hpp__profile suspect-cards-container">
+  <!-- Multisystemic Symptoms and Disease Burden -->
+  <section id="hpp-multisystemic" class="hpp-multisystemic">
+    <article class="usual-suspect__sections">
+      <ul role="tablist" class="usual-suspect__subtabs">
+        <li role="presentation" class="usual-suspect__subtabs--item">
+          <a
+            href="#usual-suspects_children-adolescent-tab1"
+            role="tab"
+            id="tab1"
+            aria-selected="true"></a>
+        </li>
+
+        <li role="presentation" class="usual-suspect__subtabs--item">
+          <a
+            href="#usual-suspects_children-adolescent-tab2"
+            role="tab"
+            id="tab2"
+            tabindex="-1"></a>
+        </li>
+
+        <li role="presentation" class="usual-suspect__subtabs--item">
+          <a
+            href="#usual-suspects_children-adolescent-tab3"
+            role="tab"
+            id="tab3"
+            tabindex="-1"></a>
+        </li>
+
+        <li role="presentation" class="usual-suspect__subtabs--item">
+          <a
+            href="#usual-suspects_children-adolescent-tab4"
+            role="tab"
+            id="tab4"
+            tabindex="-1"></a>
+        </li>
+
+        <li role="presentation" class="usual-suspect__subtabs--item">
+          <a
+            href="#usual-suspects_children-adolescent-tab5"
+            role="tab"
+            id="tab5"
+            tabindex="-1"></a>
+        </li>
+      </ul>
+
+      <section
+        id="usual-suspects_children-adolescent-tab1"
+        class="usual-suspects-tab_section"
+        data-target="usual-suspects_children-adolescent-tab1"
+        role="tabpanel"
+        aria-labelledby="tab1"
+        aria-hidden="false"
+        tabindex="-1"
+      >
+        <div class="suspect-card--mobile--only">
+          <!-- <div class="suspect-card">
+            <div class="suspect-card_bordered-item suspect-card_bordered-title">
+              <h3 class="suspect-card_title">
+                Differential diagnoses for hypophosphatasia with shared
+                symptoms:
+              </h3>
+            </div>
+          </div> -->
+          <SuspectCard {...data_card_1} />
+        </div>
+        <div class="suspect-card--desktop--only">
+          <div class="wrapper suspect-card__cards-container">
+            <button class="button-usual-slider button-usual-slider--prev button-usual-slider--is-hidden">
+            </button>
+            <button class="button-usual-slider button-usual-slider--next">
+            </button>
+            <div class="suspect-card">
+              <div
+                class="suspect-card_bordered-item suspect-card_bordered-title"
+              >
+                <h3 class="suspect-card_title">
+                  Differential diagnoses for hypophosphatasia with shared
+                  symptoms:
+                </h3>
+              </div>
+            </div>
+            <div class="cards__grid_container cards__grid_container--slider">
+              <SuspectCard {...data_card_1} />
+              <SuspectCard {...data_card_2} />
+              <SuspectCard {...data_card_3} />
+              <SuspectCard {...data_card_4} />
+              <SuspectCard {...data_card_5} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="usual-suspects_children-adolescent-tab2"
+        class="usual-suspects-tab_section"
+        data-target="usual-suspects_children-adolescent-tab2"
+        role="tabpanel"
+        aria-labelledby="tab2"
+        aria-hidden="true"
+        tabindex="-1"
+        hidden
+      >
+        <SuspectCard {...data_card_2} />
+      </section>
+
+      <section
+        id="usual-suspects_children-adolescent-tab3"
+        class="usual-suspects-tab_section"
+        data-target="usual-suspects_children-adolescent-tab3"
+        role="tabpanel"
+        aria-labelledby="tab3"
+        aria-hidden="true"
+        tabindex="-1"
+        hidden
+      >
+        <SuspectCard {...data_card_3} />
+      </section>
+
+      <section
+        id="usual-suspects_children-adolescent-tab4"
+        class="usual-suspects-tab_section"
+        data-target="usual-suspects_children-adolescent-tab4"
+        role="tabpanel"
+        aria-labelledby="tab4"
+        aria-hidden="true"
+        tabindex="-1"
+        hidden
+      >
+        <SuspectCard {...data_card_4} />
+      </section>
+
+      <section
+        id="usual-suspects_children-adolescent-tab5"
+        class="usual-suspects-tab_section"
+        data-target="usual-suspects_children-adolescent-tab5"
+        role="tabpanel"
+        aria-labelledby="tab5"
+        aria-hidden="true"
+        tabindex="-1"
+        hidden
+      >
+        <SuspectCard {...data_card_5} />
+      </section>
+    </article>
+
+    <div class="suspect-card__cards-container--foot">
+      <div class="suspect-card--foot">
+        <p class="usual-suspect__note">
+          View the full list of suspects, shared symptoms, and how to
+          differentiate from hypophosphatasia:
+        </p>
+
+        <div class="usual-suspect__trigger">
+          <button
+            class="button btn--usual-suspect-modal-trigger"
+            data-target="infants-modal">View List</button
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+  <ModalMobile />
+</section>
+
+<script src="./toggle-modal.js"></script>
+
+<style is:global>
+  .mobile--only {
+    display: block;
+    @media screen and (min-width: 1024px) {
+      display: none;
+    }
+  }
+  .desktop--only {
+    display: none;
+    @media screen and (min-width: 1024px) {
+      display: block;
+    }
+  }
+  .cards__grid_container {
+    position: relative;
+    display: flex;
+    overflow-x: hidden;
+  }
+  .button-usual-slider {
+    padding: 0;
+    position: absolute;
+    top: 30%;
+    border-radius: 50%;
+    width: 49.41px;
+    height: 49.41px;
+    background: #cf1c0a;
+    border: 3px solid #cf1c0a;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+
+  .button-usual-slider:hover {
+    background-color: #cf1c0a;
+  }
+
+  .button-usual-slider--prev {
+    left: -25px;
+  }
+
+  .button-usual-slider--prev::before {
+      content: '';
+      background-image: url('/assets/icons/usual-slider-prev.svg');
+      height: 22px;
+      width: 12px;
+  }
+
+  .button-usual-slider--next::before {
+      content: '';
+      background-image: url('/assets/icons/usual-slider-next.svg');
+      height: 22px;
+      width: 12px;
+  }
+
+  .button-usual-slider--next {
+    right: -25px;
+  }
+
+  .suspect-card.slide-right {
+    transform: translateX(0);
+    animation: slide-right 0.2s ease-in forwards;
+  }
+
+  .suspect-card.slide-left {
+    transform: translateX(-100%);
+    animation: slide-left 0.2s ease-in forwards;
+  }
+
+  .button-usual-slider--is-hidden {
+    display: none;
+  }
+
+  .cards__grid_container .suspect-card {
+    flex: 1 0 25%;
+    position: relative;
+    /* left: -25%; */
+  }
+  /* .cards__grid_container .suspect-card:nth-child(5) {
+    visibility: hidden;
+  } */
+  .usual-suspect__subtabs {
+    @media screen and (min-width: 1024px) {
+      display: none !important;
+    }
+  }
+
+  @keyframes slide-left {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes slide-right {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+</style>
+
+<script>
+  let isNextClicked = false;
+  let isPrevClicked = false;
+  const sliderButtons = document.querySelectorAll('.button-usual-slider');
+  const slideCards = document.querySelectorAll('.cards__grid_container--slider .suspect-card');
+
+  document.addEventListener('DOMContentLoaded', function (e) {
+
+    sliderButtons.forEach( sliderButton => {
+      sliderButton.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        if(event.target.classList.contains('button-usual-slider--prev') && !isPrevClicked) {
+          isPrevClicked = true;
+          isNextClicked = false;
+          changeSlideClassToCards('slide-right', 'slide-left')
+          hideSlideButtons()
+        }
+
+        if(event.target.classList.contains('button-usual-slider--next') && !isNextClicked) {
+          isPrevClicked = false;
+          isNextClicked = true;
+          changeSlideClassToCards('slide-left', 'slide-right')
+          hideSlideButtons()
+        }
+      })
+    })
+  })
+
+  function changeSlideClassToCards(newClass, oldClass) {
+    slideCards.forEach(slideCard => {
+      slideCard.classList.add(newClass);
+      slideCard.classList.remove(oldClass);
+    })
+  }
+
+  function hideSlideButtons() {
+    sliderButtons[0].classList.toggle('button-usual-slider--is-hidden')
+    sliderButtons[1].classList.toggle('button-usual-slider--is-hidden')
+  }
+</script>

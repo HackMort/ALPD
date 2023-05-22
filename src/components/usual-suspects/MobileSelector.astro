@@ -1,0 +1,121 @@
+---
+import AdultTab from "./tabs/AdultTab.astro";
+import ChildrenAdolescent from "./tabs/ChildrenAdolescent.astro";
+import ChildrenTab from "./tabs/ChildrenTab.astro";
+---
+
+<div class="hpp__profile">
+  <!-- Multisystemic Symptoms and Disease Burden -->
+  <div id="hpp-multisystemic" class="hpp-multisystemic">
+    <h2 class="wrapper hpp__profile__title hpp__profile__title--desktop">
+      Common suspects in:
+    </h2>
+
+    <article class="hpp-multisystemic__tabs common-suspects-tabs" id="usual-suspects-container" data-active-tab="usual-suspects_tab1">
+        <div class="red-string"></div>
+      <ul role="tablist" class="hpp-multisystemic__tabs--nav" id="tablist-usual-suspects">
+        <li role="presentation" class="hpp-multisystemic__tabs--nav-item">
+          <a
+            href="#usual-suspects_tab1"
+            role="tab"
+            id="tab1"
+            aria-selected="true">Adults</a
+          >
+        </li>
+        <li role="presentation" class="hpp-multisystemic__tabs--nav-item">
+          <a href="#usual-suspects_tab2" role="tab" id="tab2" tabindex="-1"
+            >Children/Adolescents</a
+          >
+        </li>
+        <li role="presentation" class="hpp-multisystemic__tabs--nav-item">
+          <a href="#usual-suspects_tab3" role="tab" id="tab3" tabindex="-1"
+            >Neonates/Infants</a
+          >
+        </li>
+      </ul>
+
+      <div class="wrapper">
+        <h2 class="hpp__profile__title hpp__profile__title--mobile">
+          Common suspects in:
+        </h2>
+
+        <div class="hpp-multisystemic__select">
+          <select
+            name="hpp-multisystemic-select"
+            id="hpp-multisystemic-select"
+            class="hpp-multisystemic__select--input"
+          >
+            <option value="usual-suspects_tab1">Adults</option>
+            <option value="usual-suspects_tab2">Children/Adolescents</option>
+            <option value="usual-suspects_tab3">Neonates/Infants</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Tab adults content -->
+      <section
+        id="usual-suspects_tab1"
+        data-target="usual-suspects_tab1"
+        role="tabpanel"
+        aria-labelledby="tab1"
+        aria-hidden="false"
+        tabindex="-1"
+      >
+        <AdultTab />
+      </section>
+
+      <!-- Tab children content -->
+      <section
+        id="usual-suspects_tab2"
+        data-target="usual-suspects_tab2"
+        role="tabpanel"
+        aria-labelledby="tab2"
+        aria-hidden="true"
+        tabindex="-1"
+        hidden
+      >
+        <ChildrenAdolescent />
+      </section>
+
+      <!-- Tab neonates/infants content -->
+      <section
+        id="usual-suspects_tab3"
+        data-target="usual-suspects_tab3"
+        role="tabpanel"
+        aria-labelledby="tab3"
+        aria-hidden="true"
+        tabindex="-1"
+        hidden
+      >
+        <ChildrenTab />
+      </section>
+    </article>
+  </div>
+</div>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+        const tablist = document.querySelector('#tablist-usual-suspects')
+        const container: HTMLElement = document.querySelector("#usual-suspects-container")
+
+        const tabs = [].concat(Array.from(tablist.querySelectorAll('li a')))
+
+        tabs.forEach((tab) => {
+
+            tab.addEventListener('click', () => {
+                let activeTab: string = tab.href
+
+                if (activeTab) {
+                    const start = activeTab.indexOf('#')
+                    activeTab = activeTab.substring(start + 1)
+                    
+                    container.dataset.activeTab = activeTab
+                }
+            })
+
+        })
+
+    })
+
+</script>
