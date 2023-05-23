@@ -2078,7 +2078,7 @@
         .genetic-testing-role {
 
             .genetic-testing-role__paragraph {
-                
+
 
                 &:not(:first-of-type) {
                     max-width: 20.3125rem;
@@ -2131,6 +2131,7 @@
                 }
 
                 @media screen and (min-width: 768px) {
+
                     &:nth-child(3),
                     &:last-of-type {
                         max-width: 24.0625rem;
@@ -2650,7 +2651,8 @@
 
     .identifying-hpp-page__references {
         em {
-            font-style: italic;        }
+            font-style: italic;
+        }
     }
 }
 
@@ -2798,6 +2800,7 @@
             position: absolute;
             transform: rotate(6.51deg);
             top: 21.6875rem;
+            left: 0;
             width: 100vw;
 
 
