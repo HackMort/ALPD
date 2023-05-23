@@ -370,6 +370,15 @@
             bottom: 256px;
             transform: rotateZ(-10deg);
         }
+        [data-misdiagnosis-id='usual-suspects_tab1'],
+        [data-misdiagnosis-id='usual-suspects_tab2'],
+        [data-misdiagnosis-id='usual-suspects_tab3'] {
+            display: none;
+        }
+
+        .active-tab {
+            display: block !important;
+        }
 
     }
 
