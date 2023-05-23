@@ -2078,7 +2078,7 @@
         .genetic-testing-role {
 
             .genetic-testing-role__paragraph {
-                
+
 
                 &:not(:first-of-type) {
                     max-width: 20.3125rem;
@@ -2131,6 +2131,7 @@
                 }
 
                 @media screen and (min-width: 768px) {
+
                     &:nth-child(3),
                     &:last-of-type {
                         max-width: 24.0625rem;
@@ -2650,7 +2651,8 @@
 
     .identifying-hpp-page__references {
         em {
-            font-style: italic;        }
+            font-style: italic;
+        }
     }
 }
 
@@ -3037,7 +3039,7 @@
     }
 
     sup {
-        font-size: 0.80rem;
+        font-size: 0.6rem;
     }
 
     &__image-container {
@@ -4540,9 +4542,9 @@
             &::after {
                 content: '';
                 position: absolute;
-                top: 1rem;
-                right: 1rem;
-                background-image: url(/assets/images/arrow-down.png);
+                top: 1.15rem;
+                right: 0.75rem;
+                background-image: url('/assets/images/arrow-down.png');
                 background-repeat: no-repeat;
                 background-size: contain;
                 background-position: center;
