@@ -15,15 +15,37 @@
 </div>
 
 <script>
-  const cookie = document.querySelector(".cookie");
-  const cookieButton = document.querySelector(".cookie__button");
+  const body = document.querySelector("body") as HTMLElement;
+  const cookie = document.querySelector(".cookie") as HTMLElement;
+  const cookieButton = document.querySelector(".cookie__button") as HTMLElement;
 
   if (localStorage.getItem("cookieConsent") === "true") {
-    cookie.classList.add("hidden");
+    hideCookieBanner();
   }
 
   cookieButton.addEventListener("click", function () {
-    cookie.classList.add("hidden");
-    localStorage.setItem("cookieConsent", "true");
+    hideCookieBanner();
+    setCookieConsent();
   });
+
+  window.addEventListener("resize", setOffsetOfBody);
+
+  function hideCookieBanner() {
+    cookie.classList.add("hidden");
+  }
+
+  function setCookieConsent() {
+    localStorage.setItem("cookieConsent", "true");
+  }
+
+  function setOffsetOfBody() {
+    const mediaQuery = window.matchMedia("(min-width: 1024px)");
+    if (mediaQuery.matches) {
+      if (cookie && !cookie.classList.contains("hidden")) {
+        body.style.paddingTop = cookie.offsetHeight + "px";
+      }
+    } else {
+      body.style.paddingTop = "0px";
+    }
+  }
 </script>
