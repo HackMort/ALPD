@@ -275,4 +275,15 @@
 
   }
 
+  .footer__nav_second a{
+    font-weight: 400;
+  }
+  
+  
+  .footer__nav_first a{
+    font-weight: 500;
+  @media screen and (min-width: 1000px) {
+    font-weight: 400;
+    }
+  }
 }
