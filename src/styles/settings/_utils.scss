@@ -127,6 +127,18 @@ $color-value in $colors {
     display: none !important;
 }
 
+.xs\:block {
+    @media screen and (min-width: 375px) {
+        display: block !important;
+    }
+}
+
+.sm\:hidden {
+    @media screen and (min-width: 425px) {
+        display: none !important;
+    }
+}
+
 .md\:hidden {
     @media screen and (min-width: 768px) {
         display: none;
@@ -145,12 +157,6 @@ $color-value in $colors {
 
 .lg\:block {
     @media screen and (min-width: 1024px) {
-        display: block !important;
-    }
-}
-
-.xs\:block {
-    @media screen and (min-width: 375px) {
         display: block !important;
     }
 }

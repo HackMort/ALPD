@@ -492,6 +492,9 @@
               padding: 0;
               width: auto !important;
 
+              .patient--zoom {
+                color: red;
+              }
 
               .patient {
                 p {
@@ -536,15 +539,15 @@
               position: relative;
               top: -1.80rem;
               margin: 0 auto;
-              width: 225px;
-              transform: rotate(4deg);
+              width: 247px;
+            //   transform: rotate(4deg);
 
               &.photo-of-Anna {
-                top: -1.05rem;
+                top: -1.2rem;
               }
 
               &.photo-of-Sarah {
-                top: -1rem;
+                top: -1.2rem;
               }
             }
           }
@@ -630,4 +633,33 @@
     }
   }
 
+  #patient-id-1 {
+
+    .profile__pic {
+        top: -25px;
+    }
+  }
+
+  #patient-id-3 {
+
+    .profile__pic {
+        top: -40px;
+    }
+  }
+
+  #patient-id-4 {
+    .profile__pic {
+        top: -40px;
+    }
+  }
+}
+
+.fancybox--pinch-to-zoom[aria-hidden="false"] {
+  .zoom-text {
+    display: none;
+  }
+
+  p {
+    text-transform: capitalize;
+  }
 }
