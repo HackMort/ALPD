@@ -4,6 +4,14 @@
   font-size: 1.0625rem;
   line-height: 1.625rem;
 
+  @media screen and (min-width: 1024px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+  }
+
   &.hidden {
     display: none;
   }
@@ -41,8 +49,10 @@
 
     a {
       color: $color-white;
-      font-weight: 700;
-      text-decoration: none;
+      font-family: Inter;
+      font-weight: 400;
+      text-decoration: underline;
+      text-underline-offset: 2px;
     }
 
   }
