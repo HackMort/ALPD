@@ -166,12 +166,13 @@
         &.mod-1{
             position: absolute;
             color: red;
-            width: 100vw;
-            top: 52px;
-            transform: rotate(356deg) translateX(-50%);
+            width: calc(100vw + 10rem);
+            top: 35px;
+            transform: rotate(-4deg) translateX(-50%);
+
             @media screen and (min-width:665px) {
-                top: 117px;
-                transform: rotate(356deg) translateX(-50%);
+                top: 321px;
+                transform: rotate(12deg) translateX(-50%);
             }
         }
 
@@ -179,12 +180,12 @@
             position: absolute;
             color: red;
             width: 100vw;
-            bottom: 235px;
-            transform: rotate(371deg) translateX(-50%);
+            bottom: 195px;
+            transform: rotate(372deg) translateX(-50%);
             @media screen and (min-width:665px) {
-                top: 178px;
+                top: 36px;
                 bottom: unset;
-                transform: rotate(367deg) translateX(-50%);
+                transform: rotate(357deg) translateX(-50%);
             }
         }
 
@@ -195,7 +196,7 @@
             bottom: 41px;
             transform: rotate(354deg) translateX(-50%);
             @media screen and (min-width:665px) {
-                width: 100vw;
+                width: calc(100vw + 10rem);
                 bottom: 171px;
                 transform: rotate(352deg) translateX(-50%);
             }

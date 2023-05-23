@@ -492,6 +492,9 @@
               padding: 0;
               width: auto !important;
 
+              .patient--zoom {
+                color: red;
+              }
 
               .patient {
                 p {
@@ -630,4 +633,14 @@
     }
   }
 
+}
+
+.fancybox--pinch-to-zoom[aria-hidden="false"] {
+  .zoom-text {
+    display: none;
+  }
+
+  p {
+    text-transform: capitalize;
+  }
 }
