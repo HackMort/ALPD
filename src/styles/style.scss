@@ -1379,6 +1379,11 @@
             @media screen and (min-width: 1024px) {
                 margin-bottom: 3rem;
             }
+
+            @media screen and (max-width: 768px) {
+                text-align: left;
+                margin-top: 1rem;
+            }
         }
 
         .alp-reference-range__identify-wrapper {
@@ -1552,6 +1557,10 @@
                             top: 91%;
                             left: 0;
                         }
+                    }
+
+                    .red-text {
+                        color: $color-red;
                     }
 
                     @media screen and (min-width: 1024px) {
@@ -2097,7 +2106,6 @@
                 }
 
                 @media screen and (min-width: 768px) {
-
                     &:nth-child(3),
                     &:last-of-type {
                         max-width: 24.0625rem;
@@ -2407,6 +2415,11 @@
                 }
 
                 .has-vus__quote {
+
+                    .author {
+                        font-weight: 400 !important;
+                    }
+
                     @media screen and (min-width: 768px) {
 
                         max-width: 29.875rem;
@@ -2600,6 +2613,11 @@
                 padding-bottom: 4.5175rem;
             }
         }
+    }
+
+    .identifying-hpp-page__references {
+        em {
+            font-style: italic;        }
     }
 }
 
