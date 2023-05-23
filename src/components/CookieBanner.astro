@@ -19,16 +19,20 @@
   const cookie = document.querySelector(".cookie") as HTMLElement;
   const cookieButton = document.querySelector(".cookie__button") as HTMLElement;
 
-  if (localStorage.getItem("cookieConsent") === "true") {
-    hideCookieBanner();
-  }
+  checkCookie();
+  setOffsetOfBody();
+  window.addEventListener("resize", setOffsetOfBody);
 
-  cookieButton.addEventListener("click", function () {
+  cookieButton.addEventListener("click", function (e) {
     hideCookieBanner();
     setCookieConsent();
   });
 
-  window.addEventListener("resize", setOffsetOfBody);
+  function checkCookie() {
+    if (localStorage.getItem("cookieConsent") === "true") {
+      hideCookieBanner();
+    }
+  }
 
   function hideCookieBanner() {
     cookie.classList.add("hidden");
@@ -42,10 +46,10 @@
     const mediaQuery = window.matchMedia("(min-width: 1024px)");
     if (mediaQuery.matches) {
       if (cookie && !cookie.classList.contains("hidden")) {
-        body.style.paddingTop = cookie.offsetHeight + "px";
+        body.style.paddingTop = `${cookie.offsetHeight}px`;
       }
     } else {
-      body.style.paddingTop = "0px";
+      body.style.paddingTop = `0`;
     }
   }
 </script>
