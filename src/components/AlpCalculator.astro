@@ -375,26 +375,31 @@ import References from "../components/References.astro";
               form.style.marginRight = "0";
               graphic.style.marginLeft = "28px";
               chDisclaimer.style.marginTop = "0px";
+              calculatorAlp.style.backgroundImage =
+                "url('/assets/images/alp-calculator/alp-bg-graphic.png')";
             } else {
               form.style.margin = "auto";
               form.style.marginTop = "1.5rem";
               compareButton.style.marginBottom = "68px";
               graphic.style.display = "none";
+              calculatorAlp.style.backgroundImage =
+                "url('/assets/images/stay-connected-desktop.png')";
             }
-            calculatorAlp.style.backgroundImage =
-              "url('/assets/images/stay-connected-desktop.png')";
-            compareButton.addEventListener("click", (e) => {
-              e.preventDefault();
-              if(ageValue.value === "" && sexValue.value === ""){
-               errorSex.style.display = 'block'
-               errorAge.style.display = 'block'
-            }else if (ageValue.value === ""){
-               errorAge.style.display = 'block'
-            }else if(sexValue.value === "") {
-               errorSex.style.display = 'block'
-              }
-              if (ageValue.value != "" && sexValue.value != "") {
-                 graphicCounter = 1;
+              compareButton.addEventListener("click", (e) => {
+                e.preventDefault();
+                if(ageValue.value === "" && sexValue.value === ""){
+                  errorSex.style.display = 'block'
+                  errorAge.style.display = 'block'
+                }else if (ageValue.value === ""){
+                  errorAge.style.display = 'block'
+                }else if(sexValue.value === "") {
+                  errorSex.style.display = 'block'
+                }
+                if (ageValue.value != "" && sexValue.value != "") {
+                  graphicCounter = 1;
+                  calculatorAlp.style.backgroundImage =
+                    "url('/assets/images/alp-calculator/alp-bg-graphic.png')";
+
                  bar1.style.animationName = "none";
                 bar2.style.animationName = "none";
                 errorSex.style.display = 'none'
@@ -2429,7 +2434,7 @@ import References from "../components/References.astro";
               ageValue.value = "";
               sexValue.value = "";
               alpValue.value = "";
-              activeText3.style.marginLeft = "46px";
+              activeText3.style.marginLeft = "0";
               activeText3.style.marginTop = "1.5rem";
             });
 
@@ -2440,7 +2445,7 @@ import References from "../components/References.astro";
               ageValue.value = "";
               sexValue.value = "";
               alpValue.value = "";
-              activeText3.style.marginLeft = "46px";
+              activeText3.style.marginLeft = "0";
               activeText3.style.marginTop = "1.5rem";
               graphicCounter = 0;
             });
@@ -2548,6 +2553,7 @@ import References from "../components/References.astro";
                   "url('/assets/images/stay-connected-desktop.png')";
               } else {
                 chDisclaimer2.style.margin = "auto";
+                activeText3.style.marginLeft = "0";
               }
             },
           },
