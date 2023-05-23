@@ -15,15 +15,48 @@
 </div>
 
 <script>
-  const cookie = document.querySelector(".cookie");
-  const cookieButton = document.querySelector(".cookie__button");
+  const body = document.querySelector("body") as HTMLElement;
+  const cookie = document.querySelector(".cookie") as HTMLElement;
+  const cookieButton = document.querySelector(".cookie__button") as HTMLElement;
 
-  if (localStorage.getItem("cookieConsent") === "true") {
-    cookie.classList.add("hidden");
+  checkCookie();
+  setOffsetOfBody();
+  window.addEventListener("resize", setOffsetOfBody);
+
+  cookieButton.addEventListener("click", function (e) {
+    hideCookieBanner();
+    setCookieConsent();
+  });
+
+  function checkCookie() {
+    if (localStorage.getItem("cookieConsent") === "true") {
+      hideCookieBanner();
+    }
   }
 
-  cookieButton.addEventListener("click", function () {
+  function hideCookieBanner() {
     cookie.classList.add("hidden");
+    body.style.paddingTop = `0`;
+  }
+
+  function setCookieConsent() {
     localStorage.setItem("cookieConsent", "true");
-  });
+  }
+
+  function setOffsetOfBody() {
+    const mediaQuery = window.matchMedia(
+      "(min-width: 1024px) and (max-width: 1099px)"
+    );
+    const maxMediaQuery = window.matchMedia("(min-width: 1100px)");
+    if (mediaQuery.matches) {
+      const paddingTop = `${cookie.offsetHeight}px`;
+      if (cookie && !cookie.classList.contains("hidden")) {
+        body.style.paddingTop = paddingTop;
+      }
+    } else if (maxMediaQuery.matches) {
+      body.style.paddingTop = `calc(${cookie.offsetHeight}px - 45px)`;
+    } else {
+      body.style.paddingTop = ``;
+    }
+  }
 </script>
