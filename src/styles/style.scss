@@ -3040,7 +3040,7 @@
     }
 
     sup {
-        font-size: 0.80rem;
+        font-size: 0.6rem;
     }
 
     &__image-container {
@@ -4543,9 +4543,9 @@
             &::after {
                 content: '';
                 position: absolute;
-                top: 1rem;
-                right: 1rem;
-                background-image: url(/assets/images/arrow-down.png);
+                top: 1.15rem;
+                right: 0.75rem;
+                background-image: url('/assets/images/arrow-down.png');
                 background-repeat: no-repeat;
                 background-size: contain;
                 background-position: center;

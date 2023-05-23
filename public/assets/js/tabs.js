@@ -102,71 +102,106 @@ export function ShowSection () {
     return
   }
 
-  select.addEventListener('change', function () {
-    const selectedOption = select.options[select.selectedIndex].value
-    console.log('selectedOption', selectedOption)
+  select.addEventListener("change", function () {
+    const selectedOption = select.options[select.selectedIndex].value;
     const sections = document.querySelectorAll(
       '.hpp-multisystemic__tabs section[role="tabpanel"]'
-    )
+    );
     // console.log('sections', sections)
     sections.forEach((section) => {
-      section.setAttribute('aria-hidden', 'true')
-      section.setAttribute('hidden', 'true')
-      if (section.getAttribute('id') === selectedOption) {
-        section.setAttribute('aria-hidden', 'false')
-        section.removeAttribute('hidden')
+      section.setAttribute("aria-hidden", "true");
+      section.setAttribute("hidden", "true");
+      if (section.getAttribute("id") === selectedOption) {
+        section.setAttribute("aria-hidden", "false");
+        section.removeAttribute("hidden");
 
         // find all sections with role="tabpanel" and unhide them
         const tabPanels = section.querySelectorAll(
-          '.usual-suspects-tab_section'
-        )
+          ".usual-suspects-tab_section"
+        );
         // console.log('tabPanels', tabPanels)
         setTimeout(() => {
-          const firstTabPanel = tabPanels[0]
-          const firstPanelID = firstTabPanel.getAttribute('id')
-          firstTabPanel.removeAttribute('hidden')
-          firstTabPanel.setAttribute('aria-hidden', 'false')
+          const firstTabPanel = tabPanels[0];
+          const firstPanelID = firstTabPanel.getAttribute("id");
+          firstTabPanel.removeAttribute("hidden");
+          firstTabPanel.setAttribute("aria-hidden", "false");
           const tabLinks = section.querySelectorAll(
-            'article .usual-suspect__subtabs a')
-          console.log('tabLinks', tabLinks)
+            "article .usual-suspect__subtabs a"
+          );
           tabLinks.forEach((tabLink) => {
-            tabLink.removeAttribute('aria-selected')
-            if (tabLink.getAttribute('href') === `#${firstPanelID}`) {
-              tabLink.setAttribute('aria-selected', 'true')
+            tabLink.removeAttribute("aria-selected");
+            if (tabLink.getAttribute("href") === `#${firstPanelID}`) {
+              tabLink.setAttribute("aria-selected", "true");
             }
-          })
-        }, 0)
+          });
+        }, 0);
       }
-    })
-  })
+    });
+  });
 
   /* Show the selected section in the tabs */
-  const option1 = document.querySelector("a[href='#multisystemic1']")
-  const option2 = document.querySelector("a[href='#multisystemic2']")
-  const option3 = document.querySelector("a[href='#multisystemic3']")
+  const option1 = document.querySelector("a[href='#multisystemic1']");
+  const option2 = document.querySelector("a[href='#multisystemic2']");
+  const option3 = document.querySelector("a[href='#multisystemic3']");
 
-  const bgFolder = document.querySelector('.hpp-multisystemic__tabs')
+  const bgFolder = document.querySelector(".hpp-multisystemic__tabs");
   // Default option
-  bgFolder.classList.add('multisystemic1')
+  bgFolder.classList.add("multisystemic1");
 
-  option1 && option1.addEventListener('click', function () {
-    // Remove the other classes
-    bgFolder.classList.remove('multisystemic2')
-    bgFolder.classList.remove('multisystemic3')
-    bgFolder.classList.add('multisystemic1')
-  })
+  option1 &&
+    option1.addEventListener("click", function () {
+      // Remove the other classes
+      bgFolder.classList.remove("multisystemic2");
+      bgFolder.classList.remove("multisystemic3");
+      bgFolder.classList.add("multisystemic1");
+    });
 
-  option2 && option2.addEventListener('click', function () {
-    // Remove the other classes
-    bgFolder.classList.remove('multisystemic1')
-    bgFolder.classList.remove('multisystemic3')
-    bgFolder.classList.add('multisystemic2')
-  })
+  option2 &&
+    option2.addEventListener("click", function () {
+      // Remove the other classes
+      bgFolder.classList.remove("multisystemic1");
+      bgFolder.classList.remove("multisystemic3");
+      bgFolder.classList.add("multisystemic2");
+    });
 
-  option3 && option3.addEventListener('click', function () {
-    // Remove the other classes
-    bgFolder.classList.remove('multisystemic1')
-    bgFolder.classList.remove('multisystemic2')
-    bgFolder.classList.add('multisystemic3')
-  })
+  option3 &&
+    option3.addEventListener("click", function () {
+      // Remove the other classes
+      bgFolder.classList.remove("multisystemic1");
+      bgFolder.classList.remove("multisystemic2");
+      bgFolder.classList.add("multisystemic3");
+    });
+
+  /*Usual suspects tabs*/
+  const tabs = document.querySelectorAll("a[href^='#usual-suspects_tab']");
+  const sections = document.querySelectorAll("[data-misdiagnosis-id]");
+  const selectInput = document.getElementById("hpp-multisystemic-select");
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", function (e) {
+      sections.forEach((section) => {
+        section.classList.remove("active-tab");
+
+        if (
+          section.getAttribute("data-misdiagnosis-id") ===
+          e.currentTarget.getAttribute("href").replace("#", "")
+        ) {
+          section.classList.add("active-tab");
+        }
+      });
+    });
+  });
+
+  selectInput.addEventListener("change", function (e) {
+    sections.forEach((section) => {
+      section.classList.remove("active-tab");
+
+      if (
+        section.getAttribute("data-misdiagnosis-id") === e.currentTarget.value
+      ) {
+        section.classList.add("active-tab");
+      }
+    });
+  });
+
 }
