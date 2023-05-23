@@ -7,535 +7,504 @@ import References from "../components/References.astro";
 import CommonHeroPage from "../components/CommonHeroPage.astro";
 
 const internalNavLinks = [
-    { href: "common-misdiagnoses", label: "Common Misdiagnoses", active: true },
-    {
-        href: "risk-of-wrongful-diagnosis",
-        label: "Risk of Wrongful Diagnosis",
-    },
+  { href: "common-misdiagnoses", label: "Common Misdiagnoses", active: true },
+  {
+    href: "risk-of-wrongful-diagnosis",
+    label: "Risk of Wrongful Diagnosis",
+  },
 ];
 ---
 
 <Layout title="Usual Suspects" pageClass="usual_suspects" showISI={false}>
-    <CommonHeroPage title="Usual Suspects" classes="usual-suspects-page__hero">
-        <picture slot="image-hero" data-image-hero>
-            <source
-                srcset="/assets/images/usual-suspects/hero/usual-suspects-hero-big-desktop.png"
-                media="(min-width: 1440px)"
-            />
-            <source
-                srcset="/assets/images/usual-suspects/hero/usual-suspects-hero-desktop.png"
-                media="(min-width: 768px)"
-            />
-            <source
-                srcset="/assets/images/usual-suspects/hero/usual-suspects-hero-tablet.png"
-                media="(min-width: 500px)"
-            />
-            <img
-                src="/assets/images/usual-suspects/hero/usual-suspects-hero-mobile.png"
-                alt=""
-            />
-        </picture>
-    </CommonHeroPage>
+  <CommonHeroPage title="Usual Suspects" classes="usual-suspects-page__hero">
+    <picture slot="image-hero" data-image-hero>
+      <source
+        srcset="/assets/images/usual-suspects/hero/usual-suspects-hero-big-desktop.png"
+        media="(min-width: 1440px)"
+      />
+      <source
+        srcset="/assets/images/usual-suspects/hero/usual-suspects-hero-desktop.png"
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="/assets/images/usual-suspects/hero/usual-suspects-hero-tablet.png"
+        media="(min-width: 500px)"
+      />
+      <img
+        src="/assets/images/usual-suspects/hero/usual-suspects-hero-mobile.png"
+        alt=""
+      />
+    </picture>
+  </CommonHeroPage>
 
-    {internalNavLinks && <InternalNavigation items={internalNavLinks} />}
+  {internalNavLinks && <InternalNavigation items={internalNavLinks} />}
 
-    <section
-        class="section common-misdiagnoses-section"
-        id="common-misdiagnoses"
-    >
-        <div class="wrapper">
-            <h2 class="content-title">A DISEASE IN DISGUISE</h2>
-            <h4 class="content-pharagraph">
-                <strong>
-                    Delayed identification and misdiagnoses often happen in
-                    hypophosphatasia cases because of how well it masks itself
-                    as other more common diseases.<sup>1-5</sup>
-                </strong>
-            </h4>
-            <p class="content-pharagraph">
-                Symptoms of hypophosphatasia are often common across other
-                metabolic disorders and various diseases, which can impact
-                timely and accurate diagnosis.<sup>1-5</sup>
-            </p>
-        </div>
+  <section class="section common-misdiagnoses-section" id="common-misdiagnoses">
+    <div class="wrapper">
+      <h2 class="content-title">A DISEASE IN DISGUISE</h2>
+      <h4 class="content-pharagraph">
+        <strong>
+          Delayed identification and misdiagnoses often happen in
+          hypophosphatasia cases because of how well it masks itself as other
+          more common diseases.<sup>1-5</sup>
+        </strong>
+      </h4>
+      <p class="content-pharagraph">
+        Symptoms of hypophosphatasia are often common across other metabolic
+        disorders and various diseases, which can impact timely and accurate
+        diagnosis.<sup>1-5</sup>
+      </p>
+    </div>
 
-        <article class="usual-suspects-tabs--mobile">
-            <MobileSelector />
-        </article>
-    </section>
+    <article class="usual-suspects-tabs--mobile">
+      <MobileSelector />
+    </article>
+  </section>
 
-    <section
-        class="section usual-suspects-misdiagnosis"
-        id="risk-of-wrongful-diagnosis"
-    >
-        <div class="wrapper">
-            <h2 class="title">A misdiagnosis can do damage</h2>
-            <p class="pharagraph">
-                Misdiagnosis of a patient with hypophosphatasia is common and can lead to ineffective management that can compound the clinical picture and worsen hypophosphatasia. Certain therapies used for other disorders can interfere with or dramatically worsen hypophosphatasia.<sup>4,5,11-14</sup>
-            </p>
-            <div class="red-string-wrapper">
-                <div class="red-string"></div>
-            </div>
-            <p class="pharagraph--secondary">
-                Make sure to <span class="color--saffron-mango"
-                    >rule out hypophosphatasia</span
-                > before starting patients on bisphosphonates or some commonly used
-                supplements that may end up causing your patients harm<sup
-                    >4,5,14</sup
-                >
-            </p>
-            <div class="red-string-wrapper">
-                <div class="red-string"></div>
-            </div>
-        </div>
+  <section
+    class="section usual-suspects-misdiagnosis"
+    id="risk-of-wrongful-diagnosis"
+  >
+    <div class="wrapper">
+      <h2 class="title">A misdiagnosis can do damage</h2>
+      <p class="pharagraph">
+        Misdiagnosis of a patient with hypophosphatasia is common and can lead
+        to ineffective management that can compound the clinical picture and
+        worsen hypophosphatasia. Certain therapies used for other disorders can
+        interfere with or dramatically worsen hypophosphatasia.<sup
+          >4,5,7,15-17</sup
+        >
+      </p>
+      <div class="red-string-wrapper">
+        <div class="red-string"></div>
+      </div>
+      <p class="pharagraph--secondary">
+        Make sure to <span class="color--saffron-mango"
+          >rule out hypophosphatasia</span
+        > before starting patients on bisphosphonates or some commonly used supplements
+        that may end up causing your patients harm<sup>4,5,7</sup>
+      </p>
+      <div class="red-string-wrapper">
+        <div class="red-string"></div>
+      </div>
+    </div>
 
-        <article class="misdiagnosis-table">
-            <picture class="misdiagnosis-table__asset">
-                <source
-                    srcset="/assets/images/usual-suspects/misdiagnosis/misdiagnosis-bg-desktop.png"
-                    media="(min-width: 1024px)"
-                />
-                <source
-                    srcset="/assets/images/usual-suspects/misdiagnosis/misdiagnosis-bg-tablet.png"
-                    media="(min-width: 500px)"
-                />
-                <img
-                    src="/assets/images/usual-suspects/misdiagnosis/misdiagnosis-bg-mobile.png"
-                    alt=""
-                />
-            </picture>
-            <div class="misdiagnosis-table__content">
-                <div class="content-mobile">
-                    <div class="content-mobile__row">
-                        <div class="wrapper">
-                            <h2 class="content-mobile__title">
-                                Treatments for other similar disorders
-                            </h2>
-                        </div>
-                    </div>
-
-                    <div class="content-mobile__row">
-                        <div class="wrapper">
-                            <h3 class="content__title">Bisphosphonates</h3>
-
-                            <p class="content__subtitle">Patient populations</p>
-
-                            <ul class="misdiagnosis-list">
-                                <li>
-                                    Bisphosphonates are commonly used in adult
-                                    patients with osteoporosis<sup>19</sup>
-                                </li>
-                            </ul>
-
-                            <p class="content__subtitle">
-                                Risk of treatment in patients with
-                                hypophosphatasia:
-                            </p>
-
-                            <p class="content__paragraph">
-                                <strong
-                                    >Based on a study examining bisphophonates
-                                    in osteoporosis, the half-life of
-                                    bisphosphonates was shown to be greater than
-                                    10 years and may have detrimental effects on
-                                    a patient's condition if a wrongful
-                                    diagnosis is made. Make sure to rule out
-                                    hypophosphatasia before starting patients on
-                                    bisphosphonates.<sup>20</sup></strong 
-                                >
-                            </p>
-
-                            <ul class="misdiagnosis-list">
-                                <li>
-                                    The phosphate motifs in bisphosphonates have
-                                    a similar conformation to inorganic
-                                    pyrophosphate (PPi), with the accumulation
-                                    of PPi associated with skeletal and systemic
-                                    symptoms seen in hypophosphatasia, which may
-                                    result in a worsening of presenting symptoms<sup
-                                        >19,21,22</sup
-                                    >
-                                </li>
-                                <li>
-                                    Bisphosphonates may directly or indirectly
-                                    worsen hypophosphatasia by binding zinc or
-                                    magnesium, compromising alkaline phosphatase
-                                    activity<sup>19,21,22</sup>
-                                </li>
-                                <li>
-                                    Possible increased risk of fracture at
-                                    growth plate<sup>19,21,22</sup>
-                                </li>
-                                <li>
-                                    Increased risk of atypical femoral fractures
-                                    in adults<sup>19,21,22</sup>
-                                </li>
-                                <li>
-                                    Excessively high doses have led to
-                                    osteopetrosis and persistent remodeling
-                                    defects, persisting more than 6 years after
-                                    discontinuation<sup>19,21,22</sup>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="content-mobile__row">
-                        <div class="wrapper">
-                            <h3 class="content__title">
-                                Supplements:<br />Vitamin D and calcium
-                            </h3>
-                            <p class="content__subtitle">Patient populations</p>
-
-                            <ul class="misdiagnosis-list">
-                                <li>
-                                    Vitamin D and calcium supplementation can be
-                                    used for a myriad of conditions, ranging
-                                    from rickets to depression, in adults,
-                                    children, and infants<sup>7,21,23</sup>
-                                </li>
-                            </ul>
-
-                            <p class="content__subtitle">Patient populations</p>
-
-                            <ul class="misdiagnosis-list">
-                                <li>
-                                    Hypercalcemia<sup>7,21,23</sup>
-                                </li>
-                                <li>
-                                    Hypercalciuria<sup>7,21,23</sup>
-                                </li>
-                                <li>
-                                    Kidney stones<sup>7,21,23</sup>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="content-desktop">
-                    <table class="content-table">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th colspan="2"
-                                    >Treatments for other similar disorders</th
-                                >
-                                <th colspan="2">PATIENT POPULATIONS</th>
-                                <th colspan="3"
-                                    >RISK OF TREATMENT IN PATIENTS WITH
-                                    HYPOPHOSPHATASIA</th
-                                >
-                                <th colspan="2"></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td></td>
-                                <td colspan="2"
-                                    ><h3 class="content__title">
-                                        Bisphosphonates
-                                    </h3></td
-                                >
-                                <td colspan="2">
-                                    <ul class="misdiagnosis-list">
-                                        <li>
-                                            Bisphosphonates are commonly used in
-                                            adult patients with osteoporosis<sup
-                                                >19</sup
-                                            >
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td colspan="3">
-                                    <p class="content__paragraph">
-                                        <strong
-                                            >Based on a study examining
-                                            bisphophonates in osteoporosis, the
-                                            half-life of bisphosphonates was
-                                            shown to be greater than 10 years
-                                            and may have detrimental effects on
-                                            a patient's condition if a wrongful
-                                            diagnosis is made. Make sure to rule
-                                            out hypophosphatasia before starting
-                                            patients on bisphosphonates.<sup
-                                                >20</sup
-                                            ></strong
-                                        >
-                                    </p>
-
-                                    <ul class="misdiagnosis-list">
-                                        <li>
-                                            The phosphate motifs in
-                                            bisphosphonates have a similar
-                                            conformation to inorganic
-                                            pyrophosphate (PPi), with the
-                                            accumulation of PPi associated with
-                                            skeletal and systemic symptoms seen
-                                            in hypophosphatasia, which may
-                                            result in a worsening of presenting
-                                            symptoms<sup>19,21,22</sup>
-                                        </li>
-                                        <li>
-                                            Bisphosphonates may directly or
-                                            indirectly worsen hypophosphatasia
-                                            by binding zinc or magnesium,
-                                            compromising alkaline phosphatase
-                                            activity<sup>19,21,22</sup>
-                                        </li>
-                                        <li>
-                                            Possible increased risk of fracture
-                                            at growth plate<sup>19,21,22</sup>
-                                        </li>
-                                        <li>
-                                            Increased risk of atypical femoral
-                                            fractures in adults<sup
-                                                >19,21,22</sup
-                                            >
-                                        </li>
-                                        <li>
-                                            Excessively high doses have led to
-                                            osteopetrosis and persistent
-                                            remodeling defects, persisting more
-                                            than 6 years after discontinuation<sup
-                                                >19,21,22</sup
-                                            >
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td colspan="2"></td>
-                            </tr>
-
-                            <tr>
-                                <td></td>
-                                <td colspan="2">
-                                    <h3 class="content__title">
-                                        Supplements:<br />Vitamin D and calcium
-                                    </h3>
-                                </td>
-                                <td colspan="2">
-                                    <ul class="misdiagnosis-list">
-                                        <li>
-                                            Vitamin D and calcium
-                                            supplementation can be used for a
-                                            myriad of conditions, ranging from
-                                            rickets to depression, in adults,
-                                            children, and infants<sup
-                                                >18,21,23</sup
-                                            >
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td colspan="3">
-                                    <ul class="misdiagnosis-list">
-                                        <li>
-                                            Hypercalcemia<sup>18,21,23</sup>
-                                        </li>
-                                        <li>
-                                            Hypercalciuria<sup>18,21,23</sup>
-                                        </li>
-                                        <li>
-                                            Kidney stones<sup>18,21,23</sup>
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td colspan="2"></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </article>
-
-        <article class="weeding-out">
-            <div class="wrapper">
-                <h2 class="weeding-out__title">WEEDING OUT SUSPECTS</h2>
-            </div>
-            <div class="weeding-out__text">
-                <div class="red-string"></div>
-                <p class="weeding-out__text__paragraph">
-                    <span>Persistently low alkaline phosphatase</span> differentiates
-                    hypophosphatasia from other conditions<sup>1,9,21,24</sup>
-                </p>
-                <div class="red-string"></div>
-            </div>
-        </article>
-    </section>
-
-    <section class="persistently">
-        <div class="wrapper">
-
-            <h2 class="persistently__title">
-                Persistently low ALP may differentiate HPP from other conditions<sup
-                    >1</sup
-                >
-            </h2>
-            <p class="persistently__text">
-                While some conditions may lead to transient decreases in ALP,
-                patients with HPP have persistently <span class="color--saffron-mango"
-                    >low* ALP levels.<sup>†</sup></span
-                > Persistently low ALP levels should raise suspicion of HPP, especially
-                when coupled with common symptoms of HPP such as musculoskeletal pain
-                and/or weakness, premature tooth loss, or previous nontraumatic fractures.<sup>1,3</sup>
-            </p>
-
-            <ul class="persistently__footnote-list">
-                <li>
-                    <sup class="symbol-sup positioned">*</sup>Persistently low alkaline phosphatase can be defined as having 2
-                    exams below normal value at intervals of more than 30 days.<sup
-                        >3,24</sup>
-                </li>
-                <li>
-                    <sup class="symbol-sup positioned">†</sup>Alkaline phosphatase ranges must be age- and
-                    sex-adjusted.<sup>3,26</sup>
-                </li>
-            </ul>
-
-        </div>
-    </section>
-
-    <section class="usual-levels">
-        <picture>
-            <source
-                media="(min-width: 1024px)"
-                srcset="/assets/images/flip-desktop.png"
-            />
-            <img src="/assets/images/flip3.png" alt="" class="flip" />
-        </picture>
-        <h2 class="usual-levels__title">ALP Levels<sup>1‡</sup></h2>
-
-        <div class="list-blocks">
-            <div class="title-line"></div>
-            <!-- <div class="title-line2"></div> -->
-            <div class="usual-levels__list">
-                <p class="title">Precipitously low</p>
-
-                <ul>
-                    <li>Multiple myeloma or other cancers</li>
-                    <li>Cardiac bypass surgery</li>
-                    <li>Major trauma or surgery</li>
-                    <li>Chemotherapy</li>
-                    <li>Transfusion(often massive)</li>
-                    <li>Starvation</li>
-                    <li>Sepsis/multi-organ/hepatic failure</li>
-                </ul>
-            </div>
-            <div class="usual-levels__list">
-                <p class="title">Transiently low</p>
-
-                <ul>
-                    <li>Osteogenesis imperfecta type II</li>
-                    <li>Profound hipothyroidism</li>
-                    <li>Cushing disease</li>
-                    <li>Bisphosphonate therapy</li>
-                    <li>Adynamic renal osteodystrophy</li>
-                    <li>Milk-alkali syndrom</li>
-                    <li>Wilson disease</li>
-                    <li>Celiac disease</li>
-                    <li>Zinc/magnesium deficiency</li>
-                </ul>
-            </div>
-            <div class="usual-levels__list modifier2">
-                <p class="title">Persistently low</p>
-
-                <ul>
-                    <li>Hypophosphatasia</li>
-                    <li>Ceidrocranial dysostosis</li>
-                    <li>Mseleni joint disease</li>
-                </ul>
-            </div>
-        </div>
-        <p class="disclaimer">
-            <sup>‡</sup>Not an exhaustive list of conditions associated with low
-            levels of ALP.
-        </p>
-    </section>
-
-    <section class="usual-cta">
-        <CTA
-            variation="variant-2"
-            buttonLabel="Identifying HPP"
-            content="Build the case for hypophosphatasia"
-            linkURL="/identifying-hpp/"
-            bypassModal
+    <article class="misdiagnosis-table">
+      <picture class="misdiagnosis-table__asset">
+        <source
+          srcset="/assets/images/usual-suspects/misdiagnosis/misdiagnosis-bg-desktop.png"
+          media="(min-width: 1024px)"
         />
-    </section>
+        <source
+          srcset="/assets/images/usual-suspects/misdiagnosis/misdiagnosis-bg-tablet.png"
+          media="(min-width: 500px)"
+        />
+        <img
+          src="/assets/images/usual-suspects/misdiagnosis/misdiagnosis-bg-mobile.png"
+          alt=""
+        />
+      </picture>
+      <div class="misdiagnosis-table__content">
+        <div class="content-mobile">
+          <div class="content-mobile__row">
+            <div class="wrapper">
+              <h2 class="content-mobile__title">
+                Treatments for other similar disorders
+              </h2>
+            </div>
+          </div>
 
-    <References>
-        <p>
-            <strong>References:<strong> </strong>1.</strong> McKiernan FE, Berg RL,
-            Fuehrer J. Clinical and radiographic findings in adults with persistent
-            hypophosphatasemia. J Bone Miner Res. 2014;29(7):1651-1660. <strong
-                >2.</strong
-            > Offiah AC, Vockley J, Munns CF, Murotsuki J. Differential diagnosis
-            of perinatal hypophosphatasia: radiologic perspectives. Pediatr Radiol.
-            2019;49(1):3-22. <strong>3.</strong> Rockman-Greenberg C. Hypophosphatasia.
-            Pediatr Endocrinol Rev. 2013;10(suppl 2):380-388. <strong>4.</strong
-            > Weber TJ, Sawyer EK, Moseley S, Odrljin T, Kishnani PS. Burden of disease
-            in adult patients with hypophosphatasia: results from two patient-reported
-            surveys. Metabolism. 2016;65(10):1522-1530. <strong>5.</strong> Sutton
-            RA, Mumm S, Coburn SP, Ericson KL, Whyte MP. “Atypical femoral fractures”
-            during bisphosphonate exposure in adult hypophosphatasia. J Bone Miner
-            Res. 2012;27(5):987-994. <strong>6.</strong> Varacallo M, Seaman TJ,
-            Jandu JS, Pizzutillo P. Osteopenia. StatPearls [Internet]. 2022. Accessed
-            March 30, 2023. <a href="https://www.ncbi.nlm.nih.gov/books/NBK499878/" target='_blank'>https://www.ncbi.nlm.nih.gov/books/NBK499878/</a>
-            <strong>7.</strong> Shapiro JR, Lewiecki EM. Hypophosphatasia in adults:
-            clinical assessment and treatment considerations. J Bone Miner Res. 2017;32(10):1977-1980.
-            <strong>8.</strong> Desborough R, Nicklin P, Gossiel F, et al. Clinical
-            and biochemical characteristics of adults with hypophosphatasia attending
-            a metabolic bone clinic. Bone. 2021;144:115795. <strong>9.</strong> Bloch-Zupan
-            A. Hypophosphatasia: diagnosis and clinical signs - a dental surgeon
-            perspective. Int J Paediatr Dent. 2016;26(6):426-438. <strong
-                >10.</strong
-            > Macmullan P, McCarthy G. Treatment and management of pseudogout: insights
-            for the clinician. Ther Adv Muscoloskelet Dis. 2012;4(2):121-131. <strong
-                >11.</strong
-            > Rosenthal AK, Ryan LM. Calcium pyrophosphate deposition disease. N
-            Engl J Med. 2016;374(26):2575-2584. <strong>12.</strong> National Institute
-            of Arthritis and Musculoskeletal and Skin Diseases. Fibromyalgia. Accessed
-            March 30, 2023. <a href="https://www.niams.nih.gov/health-topics/fibromyalgia" target="_blank">https://www.niams.nih.gov/health-topics/fibromyalgia</a>
-            <strong>13.</strong> National Institute of Child Health and Human Development.
-            What are the symptoms of osteogenesis imperfecta (OI). 2021. Accessed
-            March 30, 2023. <a href="https://www.nichd.nih.gov/health/topics/osteogenesisimp/conditioninfo/symptoms" target="_blank">https://www.nichd.nih.gov/health/topics/osteogenesisimp/conditioninfo/symptoms</a>
-            <strong>14.</strong> Marini JC, Cabral WA. Osteogenesis imperfecta. In:
-            Thakker RV, Whyte MP, Eisman JA, Igarashi T, eds. Genetics of Bone Biology
-            and Skeletal Disease. Academic Press; 2018;397-420. <strong
-                >15.</strong
-            > Mornet E, Nunes ME. Hypophosphatasia. In: Adam MP, Ardinger HH, Pagon
-            RA, et al, eds. GeneReviews®. University of Washington; 2011. Accessed
-            April 3, 2023. <a href="http://www.ncbi.nlm.nih.gov/books/NBK1150/?report=reader" target="_blank">http://www.ncbi.nlm.nih.gov/books/NBK1150/?report=reader</a>
-            <strong>16.</strong> Mohn A, De Leonibus C, de Giorgis T, Mornet E, Chiarelli
-            F. Hypophosphatasia in a child with widened anterior fontanelle: lessons
-            learned from late diagnosis and incorrect treatment. Acta Paediatr. 2011;100(7):e43-e46.
-            <strong>17.</strong> Whyte MP, Wenkert D, McAlister WH, et al. Chronic
-            recurrent multifocal osteomyelitis mimicked in childhood hypophosphatasia.
-            J Bone Miner Res. 2009;24:1493-1505. <strong>18.</strong> Shapiro JR,
-            Lewiecki EM. Hypophosphatasia in adults: clinical assessment and treatment
-            considerations. J Bone Miner Res. 2017;32(10):1977-1980. <strong
-                >19.</strong
-            > Boyce AM, Tosi LL, Paul SM. Bisphosphonate treatment for children with
-            disabling conditions. PM R. 2014;6(5):427-436.
-            <strong>20.</strong> Stadecker WJ. Bisphosphonates 101: an update for
-            the general dentist. Inside Dentistry. 2008. <strong>21.</strong> Bianchi
-            ML. Hypophosphatasia: an overview of the disease and its treatment. Osteoporos
-            Int. 2015; 26(12):2743-2757.
-            <strong>22.</strong> Choida V, Bubbear JS. Update on the management of
-            hypophosphatasia. Ther Adv Musculoskelet Dis. 2019;11:1759720X19863997.<strong
-            >
-                23.</strong
-            >
-            Martos-Moreno GA, Calzada J, Couce ML, Argente J. Hypophosphatasia: clinical
-            manifestations, diagnostic recommendations and therapeutic options. An
-            Pediatr (Engl Ed). 2018;88(6):356.e1-356.e11. <strong>24.</strong> Vieira
-            LHR, Peixoto KC, Flósi CL, Fleiuss de Farias ML, Madeira M. Active search
-            of adult patients with persistently low serum alkaline phosphatase levels
-            for diagnosis of hypophosphatasia. Arch Endocrinol Metab. 2021;65(3):289-294.
-            <strong>25.</strong> Bianchi ML, Bishop NJ, Guañabens N, et al; Rare
-            Bone Disease Action Group of the European Calcified Tissue Society. Hypophosphatasia
-            in adolescents and adults: overview of diagnosis and treatment. Osteoporos
-            Int. 2020;31(8):1445-1460. <strong>26.</strong> Bishop N, Munns CF, Ozono
-            K. Transformative therapy in hypophosphatasia. Arch Dis Child. 2016;101(6):514-515.<p
-            >
-            </p>
+          <div class="content-mobile__row">
+            <div class="wrapper">
+              <h3 class="content__title">Bisphosphonates</h3>
+
+              <p class="content__subtitle">Patient populations</p>
+
+              <ul class="misdiagnosis-list">
+                <li>
+                  Bisphosphonates are commonly used in adult patients with
+                  osteoporosis<sup>19</sup>
+                </li>
+              </ul>
+
+              <p class="content__subtitle">
+                Risk of treatment in patients with hypophosphatasia:
+              </p>
+
+              <p class="content__paragraph">
+                <strong
+                  >Based on a study examining bisphophonates in osteoporosis,
+                  the half-life of bisphosphonates was shown to be greater than
+                  10 years and may have detrimental effects on a patient's
+                  condition if a wrongful diagnosis is made. Make sure to rule
+                  out hypophosphatasia before starting patients on
+                  bisphosphonates.<sup>20</sup></strong
+                >
+              </p>
+
+              <ul class="misdiagnosis-list">
+                <li>
+                  The phosphate motifs in bisphosphonates have a similar
+                  conformation to inorganic pyrophosphate (PPi), with the
+                  accumulation of PPi associated with skeletal and systemic
+                  symptoms seen in hypophosphatasia, which may result in a
+                  worsening of presenting symptoms<sup>19,21,22</sup>
+                </li>
+                <li>
+                  Bisphosphonates may directly or indirectly worsen
+                  hypophosphatasia by binding zinc or magnesium, compromising
+                  alkaline phosphatase activity<sup>19,21,22</sup>
+                </li>
+                <li>
+                  Possible increased risk of fracture at growth plate<sup
+                    >19,21,22</sup
+                  >
+                </li>
+                <li>
+                  Increased risk of atypical femoral fractures in adults<sup
+                    >19,21,22</sup
+                  >
+                </li>
+                <li>
+                  Excessively high doses have led to osteopetrosis and
+                  persistent remodeling defects, persisting more than 6 years
+                  after discontinuation<sup>19,21,22</sup>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="content-mobile__row">
+            <div class="wrapper">
+              <h3 class="content__title">
+                Supplements:<br />Vitamin D and calcium
+              </h3>
+              <p class="content__subtitle">Patient populations</p>
+
+              <ul class="misdiagnosis-list">
+                <li>
+                  Vitamin D and calcium supplementation can be used for a myriad
+                  of conditions, ranging from rickets to depression, in adults,
+                  children, and infants<sup>118,21,23</sup>
+                </li>
+              </ul>
+
+              <p class="content__subtitle">Patient populations</p>
+
+              <ul class="misdiagnosis-list">
+                <li>
+                  Hypercalcemia<sup>18,21,23</sup>
+                </li>
+                <li>
+                  Hypercalciuria<sup>18,21,23</sup>
+                </li>
+                <li>
+                  Kidney stones<sup>18,21,23</sup>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="content-desktop">
+          <table class="content-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th colspan="2">Treatments for other similar disorders</th>
+                <th colspan="2">PATIENT POPULATIONS</th>
+                <th colspan="3"
+                  >RISK OF TREATMENT IN PATIENTS WITH HYPOPHOSPHATASIA</th
+                >
+                <th colspan="2"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td colspan="2"
+                  ><h3 class="content__title">Bisphosphonates</h3></td
+                >
+                <td colspan="2">
+                  <ul class="misdiagnosis-list">
+                    <li>
+                      Bisphosphonates are commonly used in adult patients with
+                      osteoporosis<sup>19</sup>
+                    </li>
+                  </ul>
+                </td>
+                <td colspan="3">
+                  <p class="content__paragraph">
+                    <strong
+                      >Based on a study examining bisphophonates in
+                      osteoporosis, the half-life of bisphosphonates was shown
+                      to be greater than 10 years and may have detrimental
+                      effects on a patient's condition if a wrongful diagnosis
+                      is made. Make sure to rule out hypophosphatasia before
+                      starting patients on bisphosphonates.<sup>20</sup></strong
+                    >
+                  </p>
+
+                  <ul class="misdiagnosis-list">
+                    <li>
+                      The phosphate motifs in bisphosphonates have a similar
+                      conformation to inorganic pyrophosphate (PPi), with the
+                      accumulation of PPi associated with skeletal and systemic
+                      symptoms seen in hypophosphatasia, which may result in a
+                      worsening of presenting symptoms<sup>19,21,22</sup>
+                    </li>
+                    <li>
+                      Bisphosphonates may directly or indirectly worsen
+                      hypophosphatasia by binding zinc or magnesium,
+                      compromising alkaline phosphatase activity<sup
+                        >19,21,22</sup
+                      >
+                    </li>
+                    <li>
+                      Possible increased risk of fracture at growth plate<sup
+                        >19,21,22</sup
+                      >
+                    </li>
+                    <li>
+                      Increased risk of atypical femoral fractures in adults<sup
+                        >19,21,22</sup
+                      >
+                    </li>
+                    <li>
+                      Excessively high doses have led to osteopetrosis and
+                      persistent remodeling defects, persisting more than 6
+                      years after discontinuation<sup>19,21,22</sup>
+                    </li>
+                  </ul>
+                </td>
+                <td colspan="2"></td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td colspan="2">
+                  <h3 class="content__title">
+                    Supplements:<br />Vitamin D and calcium
+                  </h3>
+                </td>
+                <td colspan="2">
+                  <ul class="misdiagnosis-list">
+                    <li>
+                      Vitamin D and calcium supplementation can be used for a
+                      myriad of conditions, ranging from rickets to depression,
+                      in adults, children, and infants<sup>7,21,23</sup>
+                    </li>
+                  </ul>
+                </td>
+                <td colspan="3">
+                  <ul class="misdiagnosis-list">
+                    <li>
+                      Hypercalcemia<sup>7,21,23</sup>
+                    </li>
+                    <li>
+                      Hypercalciuria<sup>7,21,23</sup>
+                    </li>
+                    <li>
+                      Kidney stones<sup>7,21,23</sup>
+                    </li>
+                  </ul>
+                </td>
+                <td colspan="2"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </article>
+
+    <article class="weeding-out">
+      <div class="wrapper">
+        <h2 class="weeding-out__title">WEEDING OUT SUSPECTS</h2>
+      </div>
+      <div class="weeding-out__text">
+        <div class="red-string"></div>
+        <p class="weeding-out__text__paragraph">
+          <span>Persistently low alkaline phosphatase</span> differentiates hypophosphatasia
+          from other conditions<sup>1,9,21,24</sup>
         </p>
-    </References>
+        <div class="red-string"></div>
+      </div>
+    </article>
+  </section>
+
+  <section class="persistently">
+    <div class="wrapper">
+      <h2 class="persistently__title">
+        Persistently low ALP may differentiate HPP from other conditions<sup
+          >1</sup
+        >
+      </h2>
+      <p class="persistently__text">
+        While some conditions may lead to transient decreases in ALP, patients
+        with HPP have persistently <span class="color--saffron-mango"
+          >low* ALP levels.<sup>†</sup></span
+        > Persistently low ALP levels should raise suspicion of HPP, especially when
+        coupled with common symptoms of HPP such as musculoskeletal pain and/or weakness,
+        premature tooth loss, or previous nontraumatic fractures.<sup>1,3</sup>
+      </p>
+
+      <ul class="persistently__footnote-list">
+        <li>
+          <sup class="symbol-sup positioned">*</sup>Persistently low alkaline
+          phosphatase can be defined as having 2 exams below normal value at
+          intervals of more than 30 days.<sup>3,24</sup>
+        </li>
+        <li>
+          <sup class="symbol-sup positioned">†</sup>Alkaline phosphatase ranges
+          must be age- and sex-adjusted.<sup>3,26</sup>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="usual-levels">
+    <picture>
+      <source
+        media="(min-width: 1024px)"
+        srcset="/assets/images/flip-desktop.png"
+      />
+      <img src="/assets/images/flip3.png" alt="" class="flip" />
+    </picture>
+    <h2 class="usual-levels__title">ALP Levels<sup>1‡</sup></h2>
+
+    <div class="list-blocks">
+      <div class="title-line"></div>
+      <!-- <div class="title-line2"></div> -->
+      <div class="usual-levels__list">
+        <p class="title">Precipitously low</p>
+
+        <ul>
+          <li>Multiple myeloma or other cancers</li>
+          <li>Cardiac bypass surgery</li>
+          <li>Major trauma or surgery</li>
+          <li>Chemotherapy</li>
+          <li>Transfusion(often massive)</li>
+          <li>Starvation</li>
+          <li>Sepsis/multi-organ/hepatic failure</li>
+        </ul>
+      </div>
+      <div class="usual-levels__list">
+        <p class="title">Transiently low</p>
+
+        <ul>
+          <li>Osteogenesis imperfecta type II</li>
+          <li>Profound hipothyroidism</li>
+          <li>Cushing disease</li>
+          <li>Bisphosphonate therapy</li>
+          <li>Adynamic renal osteodystrophy</li>
+          <li>Milk-alkali syndrom</li>
+          <li>Wilson disease</li>
+          <li>Celiac disease</li>
+          <li>Zinc/magnesium deficiency</li>
+        </ul>
+      </div>
+      <div class="usual-levels__list modifier2">
+        <p class="title">Persistently low</p>
+
+        <ul>
+          <li>Hypophosphatasia</li>
+          <li>Ceidrocranial dysostosis</li>
+          <li>Mseleni joint disease</li>
+        </ul>
+      </div>
+    </div>
+    <p class="disclaimer">
+      <sup>‡</sup>Not an exhaustive list of conditions associated with low
+      levels of ALP.
+    </p>
+  </section>
+
+  <section class="usual-cta">
+    <CTA
+      variation="variant-2"
+      buttonLabel="Identifying HPP"
+      content="Build the case for hypophosphatasia"
+      linkURL="/identifying-hpp/"
+      bypassModal
+    />
+  </section>
+
+  <References>
+    <p>
+      <strong>References:<strong> </strong>1.</strong> McKiernan FE, Berg RL, Fuehrer
+      J. Clinical and radiographic findings in adults with persistent hypophosphatasemia.
+      J Bone Miner Res. 2014;29(7):1651-1660. <strong>2.</strong> Offiah AC, Vockley
+      J, Munns CF, Murotsuki J. Differential diagnosis of perinatal hypophosphatasia:
+      radiologic perspectives. Pediatr Radiol. 2019;49(1):3-22. <strong
+        >3.</strong
+      > Rockman-Greenberg C. Hypophosphatasia. Pediatr Endocrinol Rev. 2013;10(suppl
+      2):380-388. <strong>4.</strong> Weber TJ, Sawyer EK, Moseley S, Odrljin T,
+      Kishnani PS. Burden of disease in adult patients with hypophosphatasia: results
+      from two patient-reported surveys. Metabolism. 2016;65(10):1522-1530. <strong
+        >5.</strong
+      > Sutton RA, Mumm S, Coburn SP, Ericson KL, Whyte MP. “Atypical femoral fractures”
+      during bisphosphonate exposure in adult hypophosphatasia. J Bone Miner Res.
+      2012;27(5):987-994. <strong>6.</strong> Varacallo M, Seaman TJ, Jandu JS, Pizzutillo
+      P. Osteopenia. StatPearls [Internet]. 2022. Accessed March 30, 2023. <a
+        href="https://www.ncbi.nlm.nih.gov/books/NBK499878/"
+        target="_blank">https://www.ncbi.nlm.nih.gov/books/NBK499878/</a
+      >
+      <strong>7.</strong> Shapiro JR, Lewiecki EM. Hypophosphatasia in adults: clinical
+      assessment and treatment considerations. J Bone Miner Res. 2017;32(10):1977-1980.
+      <strong>8.</strong> Desborough R, Nicklin P, Gossiel F, et al. Clinical and
+      biochemical characteristics of adults with hypophosphatasia attending a metabolic
+      bone clinic. Bone. 2021;144:115795. <strong>9.</strong> Bloch-Zupan A. Hypophosphatasia:
+      diagnosis and clinical signs - a dental surgeon perspective. Int J Paediatr
+      Dent. 2016;26(6):426-438. <strong>10.</strong> Macmullan P, McCarthy G. Treatment
+      and management of pseudogout: insights for the clinician. Ther Adv Muscoloskelet
+      Dis. 2012;4(2):121-131. <strong>11.</strong> Rosenthal AK, Ryan LM. Calcium
+      pyrophosphate deposition disease. N Engl J Med. 2016;374(26):2575-2584. <strong
+        >12.</strong
+      > National Institute of Arthritis and Musculoskeletal and Skin Diseases. Fibromyalgia.
+      Accessed March 30, 2023. <a
+        href="https://www.niams.nih.gov/health-topics/fibromyalgia"
+        target="_blank">https://www.niams.nih.gov/health-topics/fibromyalgia</a
+      >
+      <strong>13.</strong> National Institute of Child Health and Human Development.
+      What are the symptoms of osteogenesis imperfecta (OI). 2021. Accessed March
+      30, 2023. <a
+        href="https://www.nichd.nih.gov/health/topics/osteogenesisimp/conditioninfo/symptoms"
+        target="_blank"
+        >https://www.nichd.nih.gov/health/topics/osteogenesisimp/conditioninfo/symptoms</a
+      >
+      <strong>14.</strong> Marini JC, Cabral WA. Osteogenesis imperfecta. In: Thakker
+      RV, Whyte MP, Eisman JA, Igarashi T, eds. Genetics of Bone Biology and Skeletal
+      Disease. Academic Press; 2018;397-420. <strong>15.</strong> Mornet E, Nunes
+      ME. Hypophosphatasia. In: Adam MP, Ardinger HH, Pagon RA, et al, eds. GeneReviews®.
+      University of Washington; 2011. Accessed April 3, 2023. <a
+        href="http://www.ncbi.nlm.nih.gov/books/NBK1150/?report=reader"
+        target="_blank"
+        >http://www.ncbi.nlm.nih.gov/books/NBK1150/?report=reader</a
+      >
+      <strong>16.</strong> Mohn A, De Leonibus C, de Giorgis T, Mornet E, Chiarelli
+      F. Hypophosphatasia in a child with widened anterior fontanelle: lessons learned
+      from late diagnosis and incorrect treatment. Acta Paediatr. 2011;100(7):e43-e46.
+      <strong>17.</strong> Whyte MP, Wenkert D, McAlister WH, et al. Chronic recurrent
+      multifocal osteomyelitis mimicked in childhood hypophosphatasia. J Bone Miner
+      Res. 2009;24:1493-1505. <strong>18.</strong> Shapiro JR, Lewiecki EM. Hypophosphatasia
+      in adults: clinical assessment and treatment considerations. J Bone Miner Res.
+      2017;32(10):1977-1980. <strong>19.</strong> Boyce AM, Tosi LL, Paul SM. Bisphosphonate
+      treatment for children with disabling conditions. PM R. 2014;6(5):427-436.
+      <strong>20.</strong> Stadecker WJ. Bisphosphonates 101: an update for the general
+      dentist. Inside Dentistry. 2008. <strong>21.</strong> Bianchi ML. Hypophosphatasia:
+      an overview of the disease and its treatment. Osteoporos Int. 2015; 26(12):2743-2757.
+      <strong>22.</strong> Choida V, Bubbear JS. Update on the management of hypophosphatasia.
+      Ther Adv Musculoskelet Dis. 2019;11:1759720X19863997.<strong> 23.</strong>
+      Martos-Moreno GA, Calzada J, Couce ML, Argente J. Hypophosphatasia: clinical
+      manifestations, diagnostic recommendations and therapeutic options. An Pediatr
+      (Engl Ed). 2018;88(6):356.e1-356.e11. <strong>24.</strong> Vieira LHR, Peixoto
+      KC, Flósi CL, Fleiuss de Farias ML, Madeira M. Active search of adult patients
+      with persistently low serum alkaline phosphatase levels for diagnosis of hypophosphatasia.
+      Arch Endocrinol Metab. 2021;65(3):289-294.
+      <strong>25.</strong> Bianchi ML, Bishop NJ, Guañabens N, et al; Rare Bone Disease
+      Action Group of the European Calcified Tissue Society. Hypophosphatasia in
+      adolescents and adults: overview of diagnosis and treatment. Osteoporos Int.
+      2020;31(8):1445-1460. <strong>26.</strong> Bishop N, Munns CF, Ozono K. Transformative
+      therapy in hypophosphatasia. Arch Dis Child. 2016;101(6):514-515.<p></p>
+    </p>
+  </References>
 </Layout>
