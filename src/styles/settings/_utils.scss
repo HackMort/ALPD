@@ -253,3 +253,16 @@ $color-value in $colors {
 .text--italic {
     font-style: italic;
 }
+
+.mobile--only {
+    display: block;
+    @media screen and (min-width: 1024px) {
+        display: none;
+    }
+}
+.desktop--only {
+    display: none;
+    @media screen and (min-width: 1024px) {
+        display: block;
+    }
+}

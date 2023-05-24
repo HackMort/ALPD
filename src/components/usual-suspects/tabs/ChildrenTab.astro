@@ -5,7 +5,7 @@ import ModalMobile from "../modals/ModalMobile.astro";
 const data_card_1 = {
   title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
   image: "/assets/images/usual-suspects/Suspect-4.png",
-  subtitle: "Osteogenesis imperfecta",
+  subtitle: "Osteogenesis<br>imperfecta",
   subtitle_secondary: "Mr. Imperfect",
   subtitle_superscript: "2,6,7",
   info: "",
@@ -52,8 +52,8 @@ const data_card_3 = {
 const data_card_4 = {
   title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
   image: "/assets/images/usual-suspects/Suspect-10.png",
-  subtitle: "Idiopathic hypercalcemia",
-  subtitle_secondary: "AKA IDP",
+  subtitle: "Idiopathic<br>hypercalcemia",
+  subtitle_secondary: "IDP",
   subtitle_superscript: "9,10",
   info: "",
   list: [
@@ -206,27 +206,3 @@ const data_card_4 = {
 </section>
 
 <script src="./toggle-modal.js"></script>
-
-<style>
-  .mobile--only {
-    display: block;
-    @media screen and (min-width: 1024px) {
-      display: none;
-    }
-  }
-  .desktop--only {
-    display: none;
-    @media screen and (min-width: 1024px) {
-      display: block;
-    }
-  }
-  .cards__grid_container {
-    display: grid;
-    grid-template-columns: repeat(4, 25%);
-  }
-  .usual-suspect__subtabs {
-    @media screen and (min-width: 1024px) {
-      display: none !important;
-    }
-  }
-</style>
