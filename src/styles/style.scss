@@ -2316,6 +2316,10 @@
                         max-width: 24.8125rem;
                     }
 
+                    @media screen and (min-width: 1024px) and (max-width: 1439px) {
+                        max-width: 32rem;
+                    }
+
                     @media screen and (min-width: 1440px) {
                         margin-left: 6rem;
                     }
