@@ -152,18 +152,19 @@ const internalNavLinks = [
                   </div>
                   <div class="hpp-multisystemic__col">
                     <div class="hpp-multisystemic__definition--media">
-                      <picture>
+                      <!-- <picture>
                         <img
                           class="hpp-multisystemic__definition--photo-bg"
                           src="/assets/images/hpp-profile/patient-photo--bg.png"
                           alt="Patient adults"
                         />
-                      </picture>
+                      </picture> -->
 
                       <picture>
+                        <source media="(min-width: 769px)" srcset="/assets/images/hpp-profile/patient-photo.png">
                         <img
                           class="hpp-multisystemic__definition--photo"
-                          src="/assets/images/hpp-profile/patient-photo.png"
+                          src="/assets/images/hpp-profile/patient-photo-mb.png"
                           alt="Patient adults"
                         />
                       </picture>
@@ -312,7 +313,7 @@ const internalNavLinks = [
                     <p class="hpp-multisystemic__report--content hpp-multisystemic__report--content-after-retrospective-chart">
                       <sup class="symbol-sup">a</sup>Prevalence of neurologic symptoms in adults with hypophosphatasia (N=82) compared with the general US population.<sup>9</sup>
                     </p>
-                    <p class="hpp-multisystemic__report--content">
+                    <p class="hpp-multisystemic__report--content hpp-multisystemic__report--content-after-retrospective-chart">
                       <sup class="symbol-sup">b</sup>Data taken from a retrospective chart review performed on a series of 82 HPP patients.<sup>9</sup>
                     </p>
 
@@ -548,7 +549,7 @@ const internalNavLinks = [
                     <picture>
                       <img
                         class="hpp-multisystemic__definition--photo"
-                        src="/assets/images/hpp-profile/patient-photo-adolescents.png"
+                        src="/assets/images/hpp-profile/patient-photo-adolescents-mb.png"
                         alt="Patient adults"
                       />
                     </picture>
@@ -908,7 +909,7 @@ const internalNavLinks = [
                     <picture>
                       <img
                         class="hpp-multisystemic__definition--photo"
-                        src="/assets/images/hpp-profile/patient-photo-infants.png"
+                        src="/assets/images/hpp-profile/patient-photo-infants-mb.png"
                         alt="Patient adults"
                       />
                     </picture>
@@ -1009,6 +1010,8 @@ const internalNavLinks = [
               </div>
 
               <article class="hpp-multisystemic__curiosities">
+                <div class="red-string red-string--top"></div>
+                <div class="red-string red-string--bottom"></div>
                 <div class="hpp-multisystemic__curiositie">
                   <img
                     class="hpp-multisystemic__curiositie--icon"
