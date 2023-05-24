@@ -2966,7 +2966,7 @@
             padding: 3rem 0 0 0;
             max-width: 22ch;
 
-            @media screen and (min-width: 1024px) {
+            @media screen and (min-width: 1023px) {
                 display: none;
             }
         }
@@ -4258,14 +4258,13 @@
             position: relative;
 
             @media screen and (max-width: 768px) {
-                background-color: $color-floral-white;
                 box-shadow: none;
                 background-image: none;
                 padding: 0;
-                padding-top: 1rem;
             }
 
             @media screen and (max-width: 1023px) {
+
                 &::after {
                     //Tape
                     content: '';
@@ -4282,6 +4281,11 @@
                     left: 50%;
                     transform: translateX(-50%) rotate(-5deg);
                 }
+            }
+
+            @media screen and (max-width: 1023px) {
+                padding-top: 1rem;
+                background-color: $color-floral-white;
             }
         }
 
@@ -4560,7 +4564,7 @@
                 }
             }
 
-            @media screen and (min-width: 769px) {
+            @media screen and (min-width: 1023px) {
 
                 #multisystemic1,
                 #multisystemic2,
@@ -4570,7 +4574,7 @@
             }
 
             &.multisystemic1 {
-                @media screen and (min-width: 1024px) {
+                @media screen and (min-width: 1023px) {
                     background-image: url("/assets/images/hpp-profile/folder-open--tab1.png");
                     background-repeat: no-repeat;
                     background-size: 100%;
@@ -4671,11 +4675,9 @@
                 padding: 0.5rem 1rem;
                 margin-top: 1rem;
                 position: relative;
-
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
-
                 padding-right: 2.25rem;
             }
 
@@ -4692,7 +4694,7 @@
                 height: .9375rem;
             }
 
-            @media screen and (min-width: 1024px) {
+            @media screen and (min-width: 1023px) {
                 display: none;
             }
         }
@@ -4719,6 +4721,14 @@
                     transform: unset;
                     left: unset;
                     top: unset;
+                }
+            }
+
+            .hpp-multisystemic__study--bigger {
+                max-width: 40ch;
+
+                .hpp-multisystemic__study--text {
+                    max-width: 37ch;
                 }
             }
 
