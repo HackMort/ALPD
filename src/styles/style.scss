@@ -3777,13 +3777,17 @@
 
             &--content {
                 font-family: 'Special Elite', cursive;
-                max-width: 73ch;
+                max-width: 32ch;
                 text-align: center;
                 margin: auto;
 
                 &--text-red {
                     color: $color-cinnabar;
                     font-family: inherit;
+                }
+
+                @media screen and (min-width: 1024px) {
+                    max-width: 73ch;
                 }
             }
 
