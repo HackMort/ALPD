@@ -31,12 +31,12 @@ const {
     </div>
 
     <div class="suspect-card_bordered-item card-description-container">
-        <h4 class="suspect-card_subtitle font--special-elite">{subtitle}</h4>
+        <h4 class="suspect-card_subtitle font--special-elite" set:html={subtitle}></h4>
         <h4
             class="suspect-card_subtitle suspect-card_subtitle--secondary font--special-elite"
         >
             <strong>AKA</strong>
-            {subtitle_secondary}<sup>{subtitle_superscript}</sup>
+            <span set:html={subtitle_secondary}></span><sup>{subtitle_superscript}</sup>
         </h4>
 
         <p class="suspect-card__note">{info}</p>
