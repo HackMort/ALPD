@@ -39,18 +39,13 @@ const internalNavLinks = [
     <div class="hpp__profile__red-string-bg">
       <div class="wrapper hpp__profile__content">
         <h2 class="hpp__profile__main-title color--red text--uppercase">
-          Profiling Hypophosphatasia (HPP)
+          profiling HYPOPHOSPHATASIA (HPP)
         </h2>
         <h4 class="hpp__profile__sub-title color--white">
-          Take a look at the case file of hypophosphatasia to learn how it stays
-          hidden and how it may be causing harm to your patients
+          Take a look at the case file of hypophosphatasia to learn how it stays hidden and how it may be causing harm to your patients
         </h4>
         <p class="hpp__profile__paragraph hpp__profile__paragraph--sub">
-          Hypophosphatasia is an inherited, multisystemic, rare metabolic
-          disorder characterized by persistently low age- and sex-adjusted
-          alkaline phosphatase (ALP) activity that may progress over time.<sup
-            >1,2</sup
-          >
+          Hypophosphatasia is an inherited, multisystemic, rare metabolic disorder characterized by persistently low age- and sex-adjusted alkaline phosphatase (ALP) activity that may progress over time.<sup>1,2</sup>
         </p>
       </div>
 
@@ -76,11 +71,7 @@ const internalNavLinks = [
           <p
             class="hpp__profile__paragraph hpp__profile__paragraph--sub hpp__profile__red-frame-disclaimer--content text--center color--black md:color--white"
           >
-            Hypophosphatasia may become debilitating and can cause damage to
-            <span
-              class="hpp__profile__red-frame-disclaimer--text-red color--cinnabar md:color--white"
-              >multiple systems</span
-            > in the body beyond the skeletal system.<sup>3-5</sup>
+            Hypophosphatasia may become debilitating and can can cause damage to <span class="hpp__profile__red-frame-disclaimer--text-red color--cinnabar md:color--white">multiple systems</span> in the body beyond the skeletal system.<sup>3-5</sup>
           </p>
         </div>
       </div>
@@ -89,9 +80,11 @@ const internalNavLinks = [
 
   <!-- Multisystemic Symptoms and Disease Burden -->
   <section id="hpp-multisystemic" class="section hpp-multisystemic">
-    <div class="wrapper">
-      <h2 class="wrapper hpp__profile__title hpp__profile__title--desktop">
-        How hypophosphatasia CAN cause harm
+    <div class="wrapper wrapper--desktop">
+      <h2 class="hpp__profile__title hpp__profile__title--desktop">
+        <div class="wrapper wrapper--mobile">
+          How hypophosphatasia CAN cause harm
+        </div>
       </h2>
       <article class="hpp-multisystemic__tabs">
         <ul role="tablist" class="hpp-multisystemic__tabs--nav">
@@ -111,22 +104,26 @@ const internalNavLinks = [
             >
           </li>
         </ul>
-
-        <div class="wrapper">
-          <h2 class="hpp__profile__title hpp__profile__title--mobile">
-            How hypophosphatasia CAN cause harm
-          </h2>
-
-          <div class="hpp-multisystemic__select">
-            <select
-              name="hpp-multisystemic-select"
-              id="hpp-multisystemic-select"
-              class="hpp-multisystemic__select--input"
-            >
-              <option value="multisystemic1">Adults</option>
-              <option value="multisystemic2">Children/Adolescents</option>
-              <option value="multisystemic3">Neonates/Infants</option>
-            </select>
+        <div class="hpp-multisystemic__title-container hpp-multisystemic__title-container--mobile">
+          <div class="wrapper">
+            <h2 class="hpp__profile__title hpp__profile__title--mobile">
+              How hypophosphatasia CAN cause harm
+            </h2>
+          </div>
+        </div>
+        <div class="hpp-multisystemic__tabs-container">
+          <div class="wrapper wrapper--mobile">
+            <div class="hpp-multisystemic__select">
+              <select
+                name="hpp-multisystemic-select"
+                id="hpp-multisystemic-select"
+                class="hpp-multisystemic__select--input"
+              >
+                <option value="multisystemic1">Adults</option>
+                <option value="multisystemic2">Children/Adolescents</option>
+                <option value="multisystemic3">Neonates/Infants</option>
+              </select>
+            </div>
           </div>
         </div>
 
@@ -139,258 +136,382 @@ const internalNavLinks = [
           aria-hidden="false"
           tabindex="-1"
         >
-          <div class="hpp-multisystemic__bg-paper">
-            <article class="hpp-multisystemic__definition">
-              <div class="hpp-multisystemic__col">
-                <p class="hpp-multisystemic__definition--text">
-                  <span class="hpp-multisystemic__definition--text-red"
-                    >Adults with hypophosphatasia</span
-                  > may experience a full spectrum of symptoms. In addition to the
-                  typical skeletal effects, pain and muscular/metabolic manifestations
-                  are also common in adults with hypophosphatasia, regardless of
-                  age of onset.<sup>6,7*</sup>
-                </p>
-                <p class="hpp-multisystemic__definition--condition">
-                  *Adults may have a history of childhood symptoms.<sup>6</sup>
-                </p>
-                <h3
-                  class="hpp-multisystemic__definition--title hpp-multisystemic__definition--title-desktop hpp-multisystemic__definition--title--no-line"
-                >
-                  Studies of adult patients found:
-                </h3>
-              </div>
-              <div class="hpp-multisystemic__col">
-                <div class="hpp-multisystemic__definition--media">
-                  <picture>
-                    <img
-                      class="hpp-multisystemic__definition--photo-bg"
-                      src="/assets/images/hpp-profile/patient-photo--bg.png"
-                      alt="Patient adults"
-                    />
-                  </picture>
+            <div class="hpp-multisystemic__bg-paper">
+              <div class="wrapper wrapper--mobile">
+                <article class="hpp-multisystemic__definition">
+                  <div class="hpp-multisystemic__col">
+                    <p class="hpp-multisystemic__definition--text">
+                      <span class="hpp-multisystemic__definition--text-red">Adults with hypophosphatasia</span> may experience a full spectrum of symptoms. In addition to the typical skeletal effects, pain and muscular/metabolic manifestations are also common in adults with hypophosphatasia, regardless of age of onset.<sup>6,7*</sup>
+                    </p>
+                    <p class="hpp-multisystemic__definition--condition">
+                      *Adults may have a history of childhood symptoms.<sup>6</sup>
+                    </p>
+                    <h3
+                      class="hpp-multisystemic__definition--title hpp-multisystemic__definition--title-desktop hpp-multisystemic__definition--title--no-line"
+                    >
+                      Studies of adult patients found:
+                    </h3>
+                  </div>
+                  <div class="hpp-multisystemic__col">
+                    <div class="hpp-multisystemic__definition--media">
+                      <picture>
+                        <img
+                          class="hpp-multisystemic__definition--photo-bg"
+                          src="/assets/images/hpp-profile/patient-photo--bg.png"
+                          alt="Patient adults"
+                        />
+                      </picture>
 
-                  <picture>
-                    <img
-                      class="hpp-multisystemic__definition--photo"
-                      src="/assets/images/hpp-profile/patient-photo.png"
-                      alt="Patient adults"
-                    />
-                  </picture>
+                      <picture>
+                        <img
+                          class="hpp-multisystemic__definition--photo"
+                          src="/assets/images/hpp-profile/patient-photo.png"
+                          alt="Patient adults"
+                        />
+                      </picture>
 
-                  <button
-                    class="button button--custom-bg case-files-modal-trigger button--custom-bg--only-mobile"
-                    >View Patient case files</button
+                      <button
+                        class="button button--custom-bg case-files-modal-trigger button--custom-bg--only-mobile"
+                        >View Patient case files</button
+                      >
+
+                      <div class="hpp-multisystemic__definition--button">
+                        <button
+                          class="button button--custom-bg case-files-modal-trigger--desktop button--custom-bg--only-desktop"
+                          >View Patient case files &gt
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="hpp-multisystemic__studies">
+                  <h3
+                    class="hpp-multisystemic__definition--title hpp-multisystemic__definition--title-mobile"
                   >
+                    Studies of adult patients found:
+                  </h3>
+                  <div class="hpp-multisystemic__study">
+                    <h2 class="hpp-multisystemic__study--percentage">95%</h2>
+                    <p class="hpp-multisystemic__study--text">
+                      of patients reported pain and <strong class="hpp-multisystemic__study--text-red">76%</strong> said <strong>bone pain</strong> was severe enough to limit activity<sup>7†</sup>
+                    </p>
+                  </div>
+                  <div class="hpp-multisystemic__study">
+                    <h2 class="hpp-multisystemic__study--percentage">74%</h2>
+                    <p class="hpp-multisystemic__study--text">
+                      of patients reported <strong>inability to climb stairs</strong> and <strong class="hpp-multisystemic__study--text-red">81%</strong> reported <strong>inability to descend stairs</strong><sup>7†</sup>
+                    </p>
+                  </div>
 
-                  <div class="hpp-multisystemic__definition--button">
-                    <button
-                      class="button button--custom-bg case-files-modal-trigger--desktop button--custom-bg--only-desktop"
-                      >View Patient case files &gt
-                    </button>
+                  <div class="hpp-multisystemic__study">
+                    <h2 class="hpp-multisystemic__study--percentage">78%</h2>
+                    <p class="hpp-multisystemic__study--text">
+                      had <strong>difficulty walking</strong><sup>7†</sup>
+                    </p>
+                  </div>
+
+                  <div class="hpp-multisystemic__study--line"></div>
+
+                  <div class="hpp-multisystemic__study hpp-multisystemic__study--bigger">
+                    <h2 class="hpp-multisystemic__study--percentage">&gt50%</h2>
+                    <p
+                      class="hpp-multisystemic__study--text hpp-multisystemic__study--text-red-line"
+                    >
+                      A separate study of patients with hypophosphatasia reported their health problems <strong>negatively affected their physical and mental functioning</strong><sup>8‡</sup>
+                    </p>
+                    <img
+                      src="/assets/images/hpp-profile/study-red-line.png"
+                      alt="Study red line"
+                      class="hpp-multisystemic__study--red-line-img hpp-multisystemic__study--red-line-img--mobile"
+                    />
+                  </div>
+                </article>
+
+                <p
+                  class="hpp-multisystemic__condition"
+                >
+                  <sup class="symbol-sup">†</sup>Data collected from patients and caregivers via 2 survey instruments (web-based and phone interviews) to evaluate patient-reported symptomatology and burden of disease of hypophosphatasia (N=125). The majority of patients in this study (67%) reported pediatric onset of hypophosphatasia symptoms. Of patients reporting adult-onset hypophosphatasia (27%), 50% (17/34) reported history or surgeries, suggestive of pediatric onset of symptoms.<sup>7</sup>
+                </p>
+
+                <p
+                  class="hpp-multisystemic__condition"
+                >
+                  <sup class="symbol-sup">‡</sup>Data from the Global HPP Registry, an observational, longitudinal, multinational, long-term study of patients ≥18 years with a confirmed diagnosis of hypophosphatasia using physician-entered medical record data from consenting patients (N=304).  Of the 304 adults, 33% (~100 patients) had pediatric-onset HPP.<sup>8</sup>
+                </p>
+
+                <article class="hpp-multisystemic__impact">
+                  <h3
+                    class="hpp-multisystemic__impact--title hpp__profile__subhead"
+                  >
+                  The multisystemic impact of hypophosphatasia<sup>1,6</sup>
+                  </h3>
+
+                  <SkeletonDesktop type="adults" />
+                  <SkeletonMobile type="adults" />
+                </article>
+
+                <div class="hpp-multisystemic__report--bg">
+                  <article class="hpp-multisystemic__report">
+                    <h3
+                      class="hpp-multisystemic__report--title hpp__profile__subhead"
+                    >
+                      Selected reported body system signs/symptoms or interventions in adult patients with HPP<sup>6</sup>:
+                    </h3>
+
+                    <picture>
+                      <source
+                        media="(min-width: 769px)"
+                        srcset="/assets/images/hpp-profile/adult-signs-and-symptoms-chart-8m--desktop.png"
+                      />
+                      <img
+                        class="hpp-multisystemic__report--chart"
+                        src="/assets/images/hpp-profile/adult-signs-and-symptoms-chart-8m.png"
+                        alt="FPO IMAGE"
+                      />
+                      <figcaption>Percent of patients</figcaption>
+                    </picture>
+                    <!-- <p class="hpp-multisystemic__report--chart--foot">
+                      Percent of patients
+                    </p> -->
+
+                    <div
+                      class="hpp-multisystemic__study hpp-multisystemic__study--bigger"
+                    >
+                      <p class="hpp-multisystemic__study--head-text">
+                        Observational, multinational, prospective Global HPP Registry study conducted in adults (n=148; ≥18 years) from January 2015 to September 2017.<sup>6</sup>
+                      </p>
+                      <h2 class="hpp-multisystemic__study--percentage">12%</h2>
+                      <p
+                        class="hpp-multisystemic__study--text hpp-multisystemic__study--text-50"
+                      >
+                        of adult patients with hypophosphatasia have a history of <strong>neurologic symptoms<sup>6*</sup></strong>
+                      </p>
+                      <p class="hpp-multisystemic__study--condition">
+                        <sup>*</sup>Neurologic symptoms refer to craniosynostosis, developmental delay, increased intracranial pressure, and seizures.
+                      </p>
+                    </div>
+
+                    <h3
+                      class="hpp-multisystemic__report--title hpp__profile__subhead hpp__profile__subhead--retrospective-chart"
+                    >
+                      A retrospective chart review studied the prevalence of common neurologic symptoms associated with hypophosphatasia<sup>9,a,b</sup>
+                    </h3>
+
+                    <div>
+                      <picture>
+                        <source
+                          media="(min-width: 769px)"
+                          srcset="/assets/images/hpp-profile/adult-signs-and-symptoms-chart-9m--desktop.png"
+                        />
+                        <img
+                          class="hpp-multisystemic__report--chart"
+                          src="/assets/images/hpp-profile/adult-signs-and-symptoms-chart-9m.png"
+                          alt="FPO IMAGE"
+                        />
+                      </picture>
+                    </div>
+
+                    <p class="hpp-multisystemic__report--content hpp-multisystemic__report--content-after-retrospective-chart">
+                      <sup class="symbol-sup">a</sup>Prevalence of neurologic symptoms in adults with hypophosphatasia (N=82) compared with the general US population.<sup>9</sup>
+                    </p>
+                    <p class="hpp-multisystemic__report--content">
+                      <sup class="symbol-sup">b</sup>Data taken from a retrospective chart review performed on a series of 82 HPP patients.<sup>9</sup>
+                    </p>
+
+                    <h2 class="hpp__profile__title hpp__profile__title--blue">
+                      Hypophosphatasia CAN CAUSE INCREASING HARM
+                    </h2>
+
+                    <p class="hpp-multisystemic__report--content--harm">
+                      It’s vital to consider that current symptom presentation may not accurately represent the degree of disease progression. Patients with hypophosphatasia can experience a wide range of unexplained and debilitating symptoms that result in a frustrating journey to find relief. These clinical manifestations can change and accumulate, reflecting disease evolution and progression over time.<sup>1,6,8,9,14-16</sup>
+                    </p>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+            <!-- Prevalence of HPP -->
+            <section id="hpp-prevalence" class="section">
+              <!-- HPP Patients charts -->
+              <div class="hpp-patients__red-string">
+                <picture>
+                  <img
+                    class="hpp-patients__red-pin"
+                    src="/assets/images/hpp-profile/pin.png"
+                    alt="Pin"
+                  />
+                </picture>
+                <p class="hpp-patients__disclaimer">
+                  Reduced alkaline phosphatase levels during childhood may affect peak bone mass later in life<sup>17,18</sup>
+                </p>
+
+                <span class="hpp-patients__red-string1"></span>
+                <span class="hpp-patients__red-string2"></span>
+              </div>
+
+              <div class="hpp-patients__section">
+                <div class="hpp-patients__section--bg-white">
+                  <p class="hpp-patients__section__disclaimer--dk">
+                    Reduced alkaline phosphatase levels during childhood may affect <span>peak bone mass later in life<sup>17,18</sup></span>
+                  </p>
+                  <div class="wrapper wrapper--mobile">
+                    <h5 class="hpp-patients__section__title">
+                      Percent of patients with hypophosphatasia fractures
+                    </h5>
+
+                    <div class="hpp-patients__section__chart">
+                      <!-- Desktop chart -->
+                      <picture>
+                        <img
+                          class="hpp-patients__section__image"
+                          src="/assets/images/hpp-profile/hpp-patients-chart.png"
+                          alt="HPP Profile"
+                        />
+                      </picture>
+
+                      <!-- Mobile chart -->
+                      <div class="hpp-patients__section__chart--mb">
+                        <img
+                          class="hpp-patients__section__image--mb"
+                          src="/assets/images/hpp-profile/chart1-mb.png"
+                          alt="HPP Profile"
+                        />
+                        <p class="hpp-patients__section__text-chart">
+                          Infants and young children (≤5 years)<sup>19,a</sup>
+                        </p>
+                        <img
+                          class="hpp-patients__section__image--mb"
+                          src="/assets/images/hpp-profile/chart2-mb.png"
+                          alt="HPP Profile"
+                        />
+                        <p class="hpp-patients__section__text-chart">
+                          Children and adolescents (5-15 years)<sup>20,b</sup>
+                        </p>
+                        <img
+                          class="hpp-patients__section__image--mb"
+                          src="/assets/images/hpp-profile/chart3-mb.png"
+                          alt="HPP Profile"
+                        />
+                        <p class="hpp-patients__section__text-chart">
+                          Adults  (≥18 years)<sup>7,c</sup>
+                        </p>
+                      </div>
+                    </div>
+
+                    <p
+                      class="hpp-patients__section__content hpp-patients__section__content--dk"
+                    >
+                      <sup>a</sup>Data from a multinational, noninterventional, retrospective chart review study designed to understand the natural history of 48 patients ≤5 years of age with severe perinatal- and infantile-onset HPP. Patients included in the study were those diagnosed with HPP based on at least one of the following: serum biomarker levels (below-normal ALP and above-normal PLP or phosphoethanolamine [PEA]), below-normal ALP and radiographic abnormalities, and/or genetic analysis of the <i class="text--italic">ALPL</i> gene. Additionally, onset of HPP must have occurred prior to 6 months of age based on signs that included at least one of the following: respiratory compromise, rachitic chest deformity, and/or vitamin B<sub>6</sub>-responsive seizures.<sup>19</sup>
+                    </p>
+                    <p
+                      class="hpp-patients__section__content hpp-patients__section__content--dk"
+                    >
+                      <sup>b</sup>Data from a retrospective, multinational, noninterventional natural history study of childhood HPP in patients 5 to 15 years of age (N=32).<sup>20</sup>
+                    </p>
+
+                    <p
+                      class="hpp-patients__section__content hpp-patients__section__content--dk"
+                    >
+                      <sup>c</sup>Combined data from HIPS/HOST, an internet questionnaire and telephone survey that queried demographics, HPP-related illness history, disease progression, and health-related quality of life. One hundred twenty-five adults participated.<sup>7</sup>
+                    </p>
                   </div>
                 </div>
               </div>
-            </article>
-
-            <article class="hpp-multisystemic__studies">
-              <h3
-                class="hpp-multisystemic__definition--title hpp-multisystemic__definition--title-mobile"
+              <p
+                class="hpp-patients__section__content hpp-patients__section__content--mb"
               >
-                Studies of adult patients found:
-              </h3>
-              <div class="hpp-multisystemic__study">
-                <h2 class="hpp-multisystemic__study--percentage">95%</h2>
-                <p class="hpp-multisystemic__study--text">
-                  of patients reported pain and <span
-                    class="hpp-multisystemic__study--text-bold hpp-multisystemic__study--text-red"
-                    >76%</span
-                  > said <span class="hpp-multisystemic__study--text-bold"
-                    >bone pain</span
-                  > was severe enough to limit activity<sup>7†</sup>
-                </p>
-              </div>
+              <sup>a</sup>Data from a multinational, noninterventional, retrospective chart review study designed to understand the natural history of 48 patients ≤5 years of age with severe perinatal- and infantile-onset HPP. Patients included in the study were those diagnosed with HPP based on at least one of the following: serum biomarker levels (below-normal ALP and above-normal PLP or phosphoethanolamine [PEA]), below-normal ALP and radiographic abnormalities, and/or genetic analysis of the <i class="text--italic">ALPL</i> gene. Additionally, onset of HPP must have occurred prior to 6 months of age based on signs that included at least one of the following: respiratory compromise, rachitic chest deformity, and/or vitamin B<sub>6</sub>-responsive seizures.<sup>19</sup>
+              </p>
 
-              <div class="hpp-multisystemic__study">
-                <h2 class="hpp-multisystemic__study--percentage">74%</h2>
-                <p class="hpp-multisystemic__study--text">
-                  of patients reported <span
-                    class="hpp-multisystemic__study--text-bold"
-                    >inability to climb stairs</span
-                  > and <span
-                    class="hpp-multisystemic__study--text-bold hpp-multisystemic__study--text-red"
-                    >81%</span
-                  > reported <span class="hpp-multisystemic__study--text-bold"
-                    >inability to descend stairs
-                  </span><sup>7†</sup>
-                </p>
-              </div>
-
-              <div class="hpp-multisystemic__study">
-                <h2 class="hpp-multisystemic__study--percentage">78%</h2>
-                <p class="hpp-multisystemic__study--text">
-                  had <span class="hpp-multisystemic__study--text-bold"
-                    >difficulty walking</span
-                  ><sup>7†</sup>
-                </p>
-              </div>
-
-              <div class="hpp-multisystemic__study--line"></div>
-
-              <div class="hpp-multisystemic__study">
-                <h2 class="hpp-multisystemic__study--percentage">&gt50%</h2>
-                <p
-                  class="hpp-multisystemic__study--text hpp-multisystemic__study--text-red-line"
-                >
-                  A separate study of patients with hypophosphatasia reported
-                  their health problems <span
-                    class="hpp-multisystemic__study--text-bold"
-                  >
-                    negatively affected their physical and mental functioning
-                  </span><sup>8‡</sup>
-                </p>
-                <img
-                  src="/assets/images/hpp-profile/study-red-line.png"
-                  alt="Study red line"
-                  class="hpp-multisystemic__study--red-line-img hpp-multisystemic__study--red-line-img--mobile"
-                />
-              </div>
-            </article>
-
-            <p
-              class="hpp-multisystemic__condition hpp-multisystemic__condition--dagger"
-            >
-              Data collected from patients and caregivers via 2 survey
-              instruments (web-based and phone interviews) to evaluate
-              patient-reported symptomatology and burden of disease of
-              hypophosphatasia (N=125). The majority of patients in this study
-              (67%) reported pediatric onset of hypophosphatasia symptoms. Of
-              patients reporting adult-onset hypophosphatasia (27%), 50% (17/34)
-              reported history or surgeries, suggestive of pediatric onset of
-              symptoms.<sup>7</sup>
-            </p>
-
-            <p
-              class="hpp-multisystemic__condition hpp-multisystemic__condition--double-dagger"
-            >
-              Data from the Global HPP Registry, an observational, longitudinal,
-              multinational, long-term study of patients ≥18 years with a
-              confirmed diagnosis of hypophosphatasia using physician-entered
-              medical record data from consenting patients (N=304). Of the 304
-              adults, 33% (~100 patients) had pediatric-onset HPP<sup>8</sup>
-            </p>
-
-            <article class="hpp-multisystemic__impact">
-              <h3
-                class="hpp-multisystemic__impact--title hpp__profile__subhead"
+              <p
+                class="hpp-patients__section__content hpp-patients__section__content--mb"
               >
-                The multisystemic impact of hypophosphatasia<sup>1,6</sup>
-              </h3>
+                <sup>b</sup>Data from a retrospective, multinational, noninterventional natural history study of childhood HPP in patients 5 to 15 years of age (N=32).<sup>20</sup>
+              </p>
 
-              <SkeletonDesktop type="adults" />
-              <SkeletonMobile type="adults" />
-            </article>
+              <p
+                class="hpp-patients__section__content hpp-patients__section__content--mb"
+              >
+                <sup>c</sup>Combined data from HIPS/HOST, an internet questionnaire and telephone survey that queried demographics, HPP-related illness history, disease progression, and health-related quality of life. One hundred twenty-five adults participated.<sup>7</sup>
+              </p>
 
-            <div class="hpp-multisystemic__report--bg">
-              <article class="hpp-multisystemic__report">
-                <h3
-                  class="hpp-multisystemic__report--title hpp__profile__subhead"
-                >
-                  Selected reported body system signs/symptoms or interventions
-                  in adult patients with HPP6<sup>6</sup>:
-                </h3>
+              <!-- HPP Patients notes -->
+              <div class="hpp-patients__number-bg">
+                  <div class="hpp-patients__notes">
+                    <div class="wrapper wrapper--mobile">
+                      <div class="hpp-patients__notes--note">
+                        <div class="hpp-patients__notes--red-string red-string"></div>
 
-                <picture>
-                  <source
-                    media="(min-width: 769px)"
-                    srcset="/assets/images/hpp-profile/adult-signs-and-symptoms-chart-8m--desktop.png"
-                  />
-                  <img
-                    class="hpp-multisystemic__report--chart"
-                    src="/assets/images/hpp-profile/adult-signs-and-symptoms-chart-8m.png"
-                    alt="FPO IMAGE"
-                  />
-                </picture>
-                <p class="hpp-multisystemic__report--chart--foot">
-                  Percent of patients
-                </p>
+                        <picture>
+                          <source
+                            media="(min-width: 768px)"
+                            srcset="/assets/images/hpp-profile/pin--desktop.png"
+                          />
+                          <img
+                            class="hpp-patients__notes--pin"
+                            src="/assets/images/hpp-profile/pin.png"
+                            alt="HPP patient note pin"
+                          />
+                        </picture>
 
-                <div
-                  class="hpp-multisystemic__study hpp-multisystemic__study--full-width"
-                >
-                  <p class="hpp-multisystemic__study--head-text">
-                    Observational, multinational, prospective Global HPP
-                    Registry study conducted in adults (n=148; ≥18 years) from
-                    January 2015 to September 2017.<sup>6</sup>
-                  </p>
-                  <h2 class="hpp-multisystemic__study--percentage">12%</h2>
-                  <p
-                    class="hpp-multisystemic__study--text hpp-multisystemic__study--text-50"
-                  >
-                    of adult patients with hypophosphatasia have a history of <span
-                      class="hpp-multisystemic__study--text-bold"
-                      >neurologic symptoms</span
-                    ><sup>6*</sup>
-                  </p>
-                  <p class="hpp-multisystemic__study--condition">
-                    *Neurologic symptoms refer to craniosynostosis,
-                    developmental delay, increased intracranial pressure, and
-                    seizures.
-                  </p>
-                </div>
+                        <p class="hpp-patients__notes--content">
+                          In a meta-analysis of patients* with hypophosphatasia who were followed through adulthood (N=265), there was a <span class="color--red">high risk</span> of fractures (one or more, or multiple), gross motor/ambulatory difficulties, pain, and surgery with increasing age.<sup>21</sup>
+                        </p>
+                        <p class="hpp-patients__notes--note--foot">
+                          <sup>*</sup>Data based on patients with first reported occurrence of HPP manifestations in adulthood (n=43), in utero (n=30), infancy/early childhood (n=101), childhood (n=78), adolescence (n=9), and unreported (n=4).
+                        </p>
+                      </div>
+                    </div>
 
-                <h3
-                  class="wrapper hpp-multisystemic__report--title hpp__profile__subhead"
-                >
-                  A retrospective chart review studied the prevalence of common
-                  neurologic symptoms associated with hypophosphatasia<sup
-                    >9,a,b</sup
-                  >
-                </h3>
+                    <div class="hpp-patients__percentage">
+                      <div class="hpp-patients__percentage--red-string red-string">
+                      </div>
 
-                <div>
-                  <picture>
-                    <source
-                      media="(min-width: 769px)"
-                      srcset="/assets/images/hpp-profile/adult-signs-and-symptoms-chart-9m--desktop.png"
-                    />
-                    <img
-                      class="hpp-multisystemic__report--chart"
-                      src="/assets/images/hpp-profile/adult-signs-and-symptoms-chart-9m.png"
-                      alt="FPO IMAGE"
-                    />
-                  </picture>
-                </div>
+                      <picture>
+                        <source
+                          media="(min-width: 768px)"
+                          srcset="/assets/images/hpp-profile/pin--desktop.png"
+                        />
+                        <img
+                          class="hpp-patients__percentage--pin"
+                          src="/assets/images/hpp-profile/pin.png"
+                          alt="Pin"
+                        />
+                      </picture>
 
-                <p class="hpp-multisystemic__report--content">
-                  <sup class="positioned">a</sup>Prevalence of neurologic
-                  symptoms in adults with hypophosphatasia (N=82) compared with
-                  the general US population.<sup>9</sup>
-                </p>
-                <p class="hpp-multisystemic__report--content">
-                  <sup class="positioned">b</sup>Data taken from a retrospective
-                  chart review performed on a series of 82 HPP patients.<sup
-                    >9</sup
-                  >
-                </p>
+                      <p class="hpp-patients__percentage--text text--center">94%</p>
+                      <p class="hpp-patients__percentage--content">
+                        of patients<sup>*</sup> with at least 1 year of follow-up experienced at least 1 manifestation or event that contributed to <span class="color--red">the clinical burden of hypophosphatasia.<sup>21</sup></span>
+                      </p>
+                      <p class="hpp-patients__percentage--disclaimer">
+                        <sup>*</sup>16.5% (43 patients/cases) had their first reported occurrence of HPP manifestations at 18 years of age or older.
+                      </p>
+                    </div>
+                  </div>
+              </div>
 
-                <h2 class="hpp__profile__title hpp__profile__title--blue">
-                  Hypophosphatasia CAN CAUSE <br /> INCREASING HARM
+              <div class="wrapper wrapper-mobile hpp-patients__content">
+                <h2 class="hpp__profile__title hpp__profile__title--50">
+                  WHY Hypophosphatasia SHOULD REMAIN ON<br> YOUR RADAR
                 </h2>
 
-                <p class="hpp-multisystemic__report--content--harm">
-                  It’s vital to consider that current symptom presentation may
-                  not accurately represent the degree of disease progression.
-                  Patients with hypophosphatasia can experience a wide range of
-                  unexplained and debilitating symptoms that result in a
-                  frustrating journey to find relief. These clinical
-                  manifestations can change and accumulate, reflecting disease
-                  evolution and progression over time.<sup>1,6,8,9,14-16</sup>
-                </p>
-              </article>
-            </div>
-          </div>
-        </section>
+                <div class="hpp-patients__red-frame-disclaimer">
+                  <p
+                    class="hpp-patients__red-frame-disclaimer--content color--white text--center"
+                  >
+                  Severe HPP occurs in 1:300,000 births and milder HPP has been reported by some sources to occur in up to 1:6,370 births. The overall prevalence of all forms of hypophosphatasia is unknown. It is officially classified as a rare disease.<br> Affected individuals may be unrecognized or misdiagnosed. Globally, HPP affects males and females of all ages and appears to be especially prevalent in people of Caucasian descent.<sup>1,22-24</sup>
+                  </p>
+                </div>
 
+                <h2 class="hpp__profile__title">
+                  Proper diagnosis of hypophosphatasia is crucial
+                </h2>
+                <p class="hpp__profile__content">
+                  Misdiagnosing hypophosphatasia can put patients at risk, with some commonly used therapies prescribed for  misdiagnoses negatively impacting their condition.<sup>7</sup>
+                </p>
+              </div>
+            </section>
+        </section>
         <!-- Tab children content -->
         <section
           id="multisystemic2"
@@ -402,25 +523,18 @@ const internalNavLinks = [
           hidden
         >
           <div class="hpp-multisystemic__bg-paper">
-            <article class="hpp-multisystemic__definition">
-              <div class="hpp-multisystemic__col">
-                <p class="hpp-multisystemic__definition--text">
-                  <span class="hpp-multisystemic__definition--text-red"
-                    >Children and adolescents with hypophosphatasia</span
-                  > can experience a wide variety of multisystemic manifestations
-                  and behavioral challenges that impact their quality of life (QoL).<sup
-                    >6<sup></sup>
-                  </sup>
+            <div class="wrapper wrapper--mobile">
+              <article class="hpp-multisystemic__definition">
+                <div class="hpp-multisystemic__col">
                   <p class="hpp-multisystemic__definition--text">
-                    Clinically meaningful impairment in children’s pain, sleep,
-                    and mood was reported in one study using parent ratings.<sup
-                      >6*</sup
-                    >
+                    <span class="color--red">Children and adolescents with hypophosphatasia</span> can experience a wide variety of multisystemic manifestations and behavioral challenges that impact their quality of life (QoL).<sup>6</sup>
+                  </p>
+                  <p class="hpp-multisystemic__definition--text">
+                    Clinically meaningful impairment in children’s pain, sleep, and mood was reported in one study using parent ratings.<sup>6*</sup>
                   </p>
 
                   <span class="hpp-multisystemic__definition--condition">
-                    <sup class="symbol-sup">*</sup>Adults may have a history of
-                    childhood symptoms.
+                    <sup class="symbol-sup">*</sup>Adults may have a history of childhood symptoms.<sup>3,7,10</sup>
                   </span>
 
                   <h3
@@ -458,152 +572,312 @@ const internalNavLinks = [
                     <h3
                       class="hpp-multisystemic__definition--title hpp-multisystemic__definition--title-mobile"
                     >
-                      A study of patients/caregivers of children with
-                      hypophosphatasia showed:
+                      A study of patients/caregivers of children with hypophosphatasia showed:
                     </h3>
-                    <div class="hpp-multisystemic__study">
+                    <div class="hpp-multisystemic__study hpp-multisystemic__study--bigger">
                       <h2 class="hpp-multisystemic__study--percentage">50%</h2>
                       <p class="hpp-multisystemic__study--text">
-                        (15/30) of children had<strong>
-                          clinically<br /> meaningful impairment</strong
-                        > in overall QoL<sup>6</sup>
+                        (15/30) of children had <strong>clinically meaningful impairment</strong> in overall QoL<sup>6</sup>
                       </p>
                     </div>
 
                     <div class="hpp-multisystemic__study">
                       <h2 class="hpp-multisystemic__study--percentage">57%</h2>
                       <p class="hpp-multisystemic__study--text">
-                        (17/30) of the children were classified as <strong
-                          >poor sleepers<sup>6†</sup></strong
-                        >
+                        (17/30) of the children were classified as <strong>poor sleepers<sup>6†</sup></strong>
                       </p>
                     </div>
 
-                    <div class="hpp-multisystemic__study">
+                    <div class="hpp-multisystemic__study hpp-multisystemic__study--bigger">
                       <h2 class="hpp-multisystemic__study--percentage">29%</h2>
                       <p class="hpp-multisystemic__study--text">
-                        (7/24) of school-aged children experienced <strong
-                          >pain that interfered<br /> with daily activities<sup
-                            >6*</sup
-                          ></strong
-                        >
+                        (7/24) of school-aged children experienced <strong>pain that interfered with daily activities<sup>6†</sup></strong>
                       </p>
                     </div>
                   </article>
-                </p>
-              </div>
-              <div class="hpp-multisystemic__col">
-                <div
-                  class="hpp-multisystemic__definition--media hpp-multisystemic__definition--media--adolescents hpp-multisystemic__definition--media--adolescents--desktop"
-                >
-                  <picture>
-                    <img
-                      class="hpp-multisystemic__definition--photo"
-                      src="/assets/images/hpp-profile/patient-photo-adolescents.png"
-                      alt="Patient adults"
-                    />
-                  </picture>
-
-                  <button
-                    class="button button--custom-bg case-files-modal-trigger button--custom-bg--only-mobile"
-                    >View Patient case files</button
+                </div>
+                <div class="hpp-multisystemic__col">
+                  <div
+                    class="hpp-multisystemic__definition--media hpp-multisystemic__definition--media--adolescents hpp-multisystemic__definition--media--adolescents--desktop"
                   >
+                    <picture>
+                      <img
+                        class="hpp-multisystemic__definition--photo"
+                        src="/assets/images/hpp-profile/patient-photo-adolescents.png"
+                        alt="Patient adults"
+                      />
+                    </picture>
 
-                  <div class="hpp-multisystemic__definition--button">
                     <button
-                      class="button button--custom-bg case-files-modal-trigger--desktop button--custom-bg--only-desktop"
-                      >View Patient case files &gt
-                    </button>
+                      class="button button--custom-bg case-files-modal-trigger button--custom-bg--only-mobile"
+                      >View Patient case files</button
+                    >
+
+                    <div class="hpp-multisystemic__definition--button">
+                      <button
+                        class="button button--custom-bg case-files-modal-trigger--desktop button--custom-bg--only-desktop"
+                        >View Patient case files &gt
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </article>
-            <p class="hpp-multisystemic__condition">
-              <sup class="symbol-sup">†</sup>Data from a cross-sectional study,
-              reported by parents of 30 eligible children with HPP (aged 3 to
-              16.6 years).<sup>6</sup>
-            </p>
+              </article>
+              <p class="hpp-multisystemic__condition">
+                <sup class="symbol-sup">†</sup>Data from a cross-sectional study, reported by parents of 30 eligible children with HPP (aged 3 to 16.6 years).<sup>6</sup>
+              </p>
 
-            <article class="hpp-multisystemic__impact">
-              <h3
-                class="hpp-multisystemic__impact--title hpp__profile__subhead"
-              >
-                The multisystemic impact of hypophosphatasia
-              </h3>
+              <article class="hpp-multisystemic__impact">
+                <h3
+                  class="hpp-multisystemic__impact--title hpp__profile__subhead"
+                >
+                  The multisystemic impact of hypophosphatasia<sup>1,6</sup>
+                </h3>
 
-              <section class="skeleton-container__skeleton">
-                <SkeletonDesktop type="infants" />
-                <SkeletonMobile type="infants" />
-              </section>
-            </article>
+                <section class="skeleton-container__skeleton">
+                  <SkeletonDesktop type="infants" />
+                  <SkeletonMobile type="infants" />
+                </section>
+              </article>
 
-            <article class="wrapper hpp-multisystemic__report">
-              <h2
-                class="hpp-multisystemic__report--title hpp__profile__subhead"
-              >
-                Selected reported body system signs/symptoms or interventions in
-                children with HPP<sup>9</sup>:
-              </h2>
+              <article class="wrapper hpp-multisystemic__report">
+                <h2
+                  class="hpp-multisystemic__report--title hpp__profile__subhead"
+                >
+                  Selected reported body system signs/symptoms or interventions in children with HPP<sup>9</sup>:
+                </h2>
 
+                <picture>
+                  <source
+                    media="(min-width: 769px)"
+                    srcset="/assets/images/hpp-profile/adolescents-signs-and-symptoms-chart--desktop.png"
+                  />
+                  <img
+                    class="hpp-multisystemic__report--chart"
+                    src="/assets/images/hpp-profile/adolescents-signs-and-symptoms-chart.png"
+                    alt="FPO IMAGE"
+                  />
+                  <figcaption>Percent of patients</figcaption>
+                </picture>
+
+                <p class="hpp-multisystemic__report--conditions">
+                  Multinational, observational, prospective Global Hypophosphatasia Registry study conducted in children (n=121; &lt;18 years) from January 2015 to September 2017.<sup>9</sup>
+                </p>
+
+                <p
+                  class="hpp-multisystemic__report--conditions hpp-multisystemic__report--conditions-smaller hpp-multisystemic__report--conditions--mt1"
+                >
+                  <sup>a</sup>Excludes patients aged &lt;2 years at enrollment.
+                </p>
+
+                <p class="hpp-multisystemic__report--conditions hpp-multisystemic__report--conditions-smaller">
+                  <sup>b</sup>Excludes patients aged &lt;6 months at enrollment.
+                </p>
+
+                <div
+                  class="hpp-multisystemic__study hpp-multisystemic__study--bigger"
+                >
+                  <h2 class="hpp-multisystemic__study--percentage">~27%</h2>
+                  <p class="hpp-multisystemic__study--text">
+                    of children and adolescents with hypophosphatasia exhibit and have a history of <strong>neurologic symptoms<sup>9*</sup></strong>
+                  </p>
+                  <p class="hpp-multisystemic__study--condition">
+                    <sup>*</sup>Neurologic symptoms refer to craniosynostosis, developmental delay, increased intracranial pressure, and seizures.
+                  </p>
+                </div>
+
+                <h2 class="hpp__profile__title hpp__profile__title--blue">
+                  Hypophosphatasia CAN CAUSE INCREASING HARM
+                </h2>
+
+                <p class="hpp-multisystemic__report--content--harm">
+                  It’s vital to consider that current symptom presentation may not accurately represent the degree of disease progression. Patients with hypophosphatasia can experience a wide range of unexplained and debilitating symptoms that result in a frustrating journey to find relief. These clinical manifestations can change and accumulate, reflecting disease evolution and progression over time.<sup>1,6,9,14-17</sup>
+                </p>
+              </article>
+            </div>
+          </div>
+          <!-- Prevalence of HPP -->
+          <section id="hpp-prevalence" class="section">
+            <!-- HPP Patients charts -->
+            <div class="hpp-patients__red-string">
               <picture>
-                <source
-                  media="(min-width: 769px)"
-                  srcset="/assets/images/hpp-profile/adolescents-signs-and-symptoms-chart--desktop.png"
-                />
                 <img
-                  class="hpp-multisystemic__report--chart"
-                  src="/assets/images/hpp-profile/adolescents-signs-and-symptoms-chart.png"
-                  alt="FPO IMAGE"
+                  class="hpp-patients__red-pin"
+                  src="/assets/images/hpp-profile/pin.png"
+                  alt="Pin"
                 />
               </picture>
-
-              <p class="hpp-multisystemic__report--conditions">
-                Multinational, observational, prospective Global
-                Hypophosphatasia Registry study conducted in children (n=121;
-                &lt18 years) from January 2015 to September 2017.<sup>9</sup>
+              <p class="hpp-patients__disclaimer">
+                Reduced alkaline phosphatase levels during childhood may affect peak bone mass later in life<sup>18,19</sup>
               </p>
 
-              <p
-                class="hpp-multisystemic__report--conditions hpp-multisystemic__report--conditions--mt1"
-              >
-                <sup>a</sup>Excludes patients aged &lt 2 years at enrollment.
-              </p>
+              <span class="hpp-patients__red-string1"></span>
+              <span class="hpp-patients__red-string2"></span>
+            </div>
 
-              <p class="hpp-multisystemic__report--conditions">
-                <sup>b</sup>Excludes patients aged &lt 6 months at enrollment.
-              </p>
-
-              <div
-                class="hpp-multisystemic__study hpp-multisystemic__study--full-width"
-              >
-                <h2 class="hpp-multisystemic__study--percentage">~27%</h2>
-                <p class="hpp-multisystemic__study--text">
-                  of children and adolescents with hypophosphatasia exhibit and
-                  have a history of <strong>neurologic symptoms</strong><sup
-                    >9*</sup
-                  >
+            <div class="hpp-patients__section">
+              <div class="hpp-patients__section--bg-white">
+                <p class="hpp-patients__section__disclaimer--dk">
+                  Reduced alkaline phosphatase levels during childhood may affect <span class="color--red">peak bone mass later in life<sup>18,19</sup></span>
                 </p>
-                <p class="hpp-multisystemic__study--condition">
-                  *Neurologic symptoms refer to craniosynostosis, developmental
-                  delay, increased intracranial pressure, and seizures.
+                <div class="wrapper wrapper--mobile">
+                  <h5 class="hpp-patients__section__title">
+                    Percent of patients with hypophosphatasia fractures
+                  </h5>
+
+                  <div class="hpp-patients__section__chart">
+                    <!-- Desktop chart -->
+                    <picture>
+                      <img
+                        class="hpp-patients__section__image"
+                        src="/assets/images/hpp-profile/hpp-patients-chart.png"
+                        alt="HPP Profile"
+                      />
+                    </picture>
+
+                    <!-- Mobile chart -->
+                    <div class="hpp-patients__section__chart--mb">
+                      <img
+                        class="hpp-patients__section__image--mb"
+                        src="/assets/images/hpp-profile/chart1-mb.png"
+                        alt="HPP Profile"
+                      />
+                      <p class="hpp-patients__section__text-chart">
+                        Infants and young children (≤5 years)<sup>20,a</sup>
+                      </p>
+                      <img
+                        class="hpp-patients__section__image--mb"
+                        src="/assets/images/hpp-profile/chart2-mb.png"
+                        alt="HPP Profile"
+                      />
+                      <p class="hpp-patients__section__text-chart">
+                        Children and adolescents (5-15 years)<sup>21,b</sup>
+                      </p>
+                      <img
+                        class="hpp-patients__section__image--mb"
+                        src="/assets/images/hpp-profile/chart3-mb.png"
+                        alt="HPP Profile"
+                      />
+                      <p class="hpp-patients__section__text-chart">
+                        Adults  (≥18 years)<sup>22,c</sup>
+                      </p>
+                    </div>
+                  </div>
+
+                  <p
+                    class="hpp-patients__section__content hpp-patients__section__content--dk"
+                  >
+                    <sup>a</sup>Data from a multinational, noninterventional, retrospective chart review study designed to understand the natural history of 48 patients ≤5 years of age with severe perinatal- and infantile-onset HPP. Patients included in the study were those diagnosed with HPP based on at least one of the following: serum biomarker levels (below-normal ALP and above-normal PLP or phosphoethanolamine [PEA]), below-normal ALP and radiographic abnormalities, and/or genetic analysis of the <i class="text--italic">ALPL</i> gene. Additionally, onset of HPP must have occurred prior to 6 months of age based on signs that included at least one of the following: respiratory compromise, rachitic chest deformity, and/or vitamin B<sub>6</sub>-responsive seizures.<sup>20</sup>
+                  </p>
+
+                  <p
+                    class="hpp-patients__section__content hpp-patients__section__content--dk"
+                  >
+                    <sup>b</sup>Data from a retrospective, multinational, noninterventional natural history study of childhood HPP in patients 5 to 15 years of age (N=32).<sup>21</sup>
+                  </p>
+
+                  <p
+                    class="hpp-patients__section__content hpp-patients__section__content--dk"
+                  >
+                    <sup>c</sup>Combined data from HIPS/HOST, an internet questionnaire and telephone survey that queried demographics, HPP-related illness history, disease progression, and health-related quality of life. One hundred twenty-five adults participated.<sup>22</sup>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <p
+              class="hpp-patients__section__content hpp-patients__section__content--mb"
+            >
+            <sup>a</sup>Data from a multinational, noninterventional, retrospective chart review study designed to understand the natural history of 48 patients ≤5 years of age with severe perinatal- and infantile-onset HPP. Patients included in the study were those diagnosed with HPP based on at least one of the following: serum biomarker levels (below-normal ALP and above-normal PLP or phosphoethanolamine [PEA]), below-normal ALP and radiographic abnormalities, and/or genetic analysis of the <i class="text--italic">ALPL</i> gene. Additionally, onset of HPP must have occurred prior to 6 months of age based on signs that included at least one of the following: respiratory compromise, rachitic chest deformity, and/or vitamin B<sub>6</sub>-responsive seizures.<sup>20</sup>
+            </p>
+
+            <p
+              class="hpp-patients__section__content hpp-patients__section__content--mb"
+            >
+              <sup>b</sup>Data from a retrospective, multinational, noninterventional natural history study of childhood HPP in patients 5 to 15 years of age (N=32).<sup>21</sup>
+            </p>
+
+            <p
+              class="hpp-patients__section__content hpp-patients__section__content--mb"
+            >
+              <sup>c</sup>Combined data from HIPS/HOST, an internet questionnaire and telephone survey that queried demographics, HPP-related illness history, disease progression, and health-related quality of life. One hundred twenty-five adults participated.<sup>22</sup>
+            </p>
+
+            <!-- HPP Patients notes -->
+            <div class="hpp-patients__number-bg">
+                <div class="hpp-patients__notes">
+                  <div class="wrapper wrapper--mobile">
+                    <div class="hpp-patients__notes--note">
+                      <div class="hpp-patients__notes--red-string red-string"></div>
+
+                      <picture>
+                        <source
+                          media="(min-width: 768px)"
+                          srcset="/assets/images/hpp-profile/pin--desktop.png"
+                        />
+                        <img
+                          class="hpp-patients__notes--pin"
+                          src="/assets/images/hpp-profile/pin.png"
+                          alt="HPP patient note pin"
+                        />
+                      </picture>
+
+                      <p class="hpp-patients__notes--content">
+                        In a meta-analysis of patients* with hypophosphatasia who were followed through adulthood (N=265), there was a <span class="color--red">high risk</span> of fractures (one or more, or multiple), gross motor/ambulatory difficulties, pain, and surgery with increasing age.<sup>7</sup>
+                      </p>
+                      <p class="hpp-patients__notes--note--foot">
+                        <sup>*</sup>Data based on patients with first reported occurrence of HPP manifestations in adulthood (n=43), in utero (n=30), infancy/early childhood (n=101), childhood (n=78), adolescence (n=9), and unreported (n=4).
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="hpp-patients__percentage">
+                    <div class="hpp-patients__percentage--red-string red-string">
+                    </div>
+
+                    <picture>
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="/assets/images/hpp-profile/pin--desktop.png"
+                      />
+                      <img
+                        class="hpp-patients__percentage--pin"
+                        src="/assets/images/hpp-profile/pin.png"
+                        alt="Pin"
+                      />
+                    </picture>
+
+                    <p class="hpp-patients__percentage--text text--center">94%</p>
+                    <p class="hpp-patients__percentage--content">
+                      of patients<sup>*</sup> with at least 1 year of follow-up experienced at least 1 manifestation or event that contributed to the <span class="color--red">clinical burden of hypophosphatasia.<sup>7</sup></span>
+                    </p>
+                    <p class="hpp-patients__percentage--disclaimer">
+                      <sup>*</sup>16.5% (43 patients/cases) had their first reported occurrence of HPP manifestations at 18 years of age or older.
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="wrapper wrapper-mobile hpp-patients__content">
+              <h2 class="hpp__profile__title hpp__profile__title--50">
+                WHY Hypophosphatasia SHOULD REMAIN ON <br>YOUR RADAR
+              </h2>
+
+              <div class="hpp-patients__red-frame-disclaimer">
+                <p
+                  class="hpp-patients__red-frame-disclaimer--content color--white text--center"
+                >
+                Severe HPP occurs in 1:300,000 births and milder HPP has been reported by some sources to occur in up to 1:6,370 births. The overall prevalence of all forms of hypophosphatasia is unknown. It is officially classified as a rare disease. <br>Affected individuals may be unrecognized or misdiagnosed. Globally, HPP affects males and females of all ages and appears to be especially prevalent in people of Caucasian descent.<sup>1,8,12,23</sup>
                 </p>
               </div>
 
-              <h2 class="hpp__profile__title hpp__profile__title--blue">
-                Hypophosphatasia CAN CAUSE INCREASING HARM
+              <h2 class="hpp__profile__title">
+                Proper diagnosis of hypophosphatasia is crucial
               </h2>
-
-              <p class="hpp-multisystemic__report--content--harm">
-                It’s vital to consider that current symptom presentation may not
-                accurately represent the degree of disease progression. Patients
-                with hypophosphatasia can experience a wide range of unexplained
-                and debilitating symptoms that result in a frustrating journey
-                to find relief. These clinical manifestations can change and
-                accumulate, reflecting disease evolution and progression over
-                time.<sup>1,6,9,14-17</sup>
+              <p class="hpp__profile__content">
+                Misdiagnosing hypophosphatasia can put patients at risk, with some commonly used therapies prescribed for  misdiagnoses negatively impacting their condition.<sup>22</sup>
               </p>
-            </article>
-          </div>
+            </div>
+          </section>
         </section>
 
         <!-- Tab neonates/infants content -->
@@ -617,468 +891,363 @@ const internalNavLinks = [
           hidden
         >
           <div class="hpp-multisystemic__bg-paper">
-            <article class="hpp-multisystemic__definition">
-              <div class="hpp-multisystemic__col">
-                <p class="hpp-multisystemic__definition--text">
-                  <span class="hpp-multisystemic__definition--text-red"
-                    >Neonates and infants with hypophosphatasia
-                  </span>
-                  have a high risk of mortality and failure to thrive, making early
-                  and accurate diagnosis critical. <sup>1,6-8</sup>
-                </p>
+            <div class="wrapper wrapper--mobile">
+              <article class="hpp-multisystemic__definition">
+                <div class="hpp-multisystemic__col">
+                  <p class="hpp-multisystemic__definition--text">
+                    <span class="color--red">Neonates and infants with hypophosphatasia</span> have a high risk of mortality and failure to thrive, making early and accurate diagnosis critical.<sup>1,6-8</sup>
+                  </p>
 
-                <h3
-                  class="hpp-multisystemic__definition--title hpp-multisystemic__definition--title-desktop hpp-multisystemic__definition--title-no-line"
-                >
-                  A study of patients/caregivers of infants with
-                  hypophosphatasia showed:
+                  <h3
+                    class="hpp-multisystemic__definition--title hpp-multisystemic__definition--title-desktop hpp-multisystemic__definition--title-no-line"
+                  >
+                    A study of patients/caregivers of infants with hypophosphatasia showed:
+                  </h3>
+
+                  <div
+                    class="hpp-multisystemic__definition--media hpp-multisystemic__definition--media--infants hpp-multisystemic__definition--media--infants--mobile"
+                  >
+                    <picture>
+                      <img
+                        class="hpp-multisystemic__definition--photo"
+                        src="/assets/images/hpp-profile/patient-photo-infants.png"
+                        alt="Patient adults"
+                      />
+                    </picture>
+
+                    <button
+                      class="button button--custom-bg case-files-modal-trigger button--custom-bg--only-mobile"
+                      >View Patient case files</button
+                    >
+
+                    <div class="hpp-multisystemic__definition--button">
+                      <button
+                        class="button button--custom-bg case-files-modal-trigger--desktop button--custom-bg--only-desktop"
+                        >View Patient case files &gt
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="hpp-multisystemic__studies">
+                    <h3
+                      class="hpp-multisystemic__definition--title hpp-multisystemic__definition--title-mobile"
+                    >
+                      A study of patients/caregivers of infants with hypophosphatasia showed:
+                    </h3>
+                    <div class="hpp-multisystemic__study hpp-multisystemic__study--bigger">
+                      <h2 class="hpp-multisystemic__study--percentage">73%</h2>
+                      <p class="hpp-multisystemic__study--text">
+                        of untreated cases of neonatal and infantile hypophosphatasia were <strong>fatal before the age of 5.</strong>
+                      </p>
+                      <p class="hpp-multisystemic__study--text">
+                        <span class="color--red"><strong>58%</strong></span> of cases were <strong>fatal by 1 year of age<sup>9*</sup></strong>
+                      </p>
+                    </div>
+                    <div class="hpp-multisystemic__study hpp-multisystemic__study--bigger">
+                      <h2 class="hpp-multisystemic__study--percentage">64%</h2>
+                      <p class="hpp-multisystemic__study--text">
+                        <strong>required respiratory support,</strong> most commonly invasive ventilation.
+                      </p>
+                      <p class="hpp-multisystemic__study--text">
+                        <span class="color--red"><strong>95%</strong></span> of cases requiring invasive ventilation were <strong>fatal<sup>9*</sup></strong>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="hpp-multisystemic__col">
+                  <div
+                    class="hpp-multisystemic__definition--media hpp-multisystemic__definition--media--infants hpp-multisystemic__definition--media--infants--desktop"
+                  >
+                    <picture>
+                      <img
+                        class="hpp-multisystemic__definition--photo"
+                        src="/assets/images/hpp-profile/patient-photo-infants.png"
+                        alt="Patient adults"
+                      />
+                    </picture>
+
+                    <button
+                      class="button button--custom-bg case-files-modal-trigger button--custom-bg--only-mobile"
+                      >View Patient case files</button
+                    >
+
+                    <div class="hpp-multisystemic__definition--button">
+                      <button
+                        class="button button--custom-bg case-files-modal-trigger--desktop button--custom-bg--only-desktop"
+                        >View Patient case files &gt
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <p
+                class="hpp-multisystemic__condition"
+              >
+                <sup class="symbol-sup">*</sup>Data from a multinational, noninterventional, retrospective chart review study designed to understand the natural history of 48 patients ≤5 years of age with severe perinatal- and infantile-onset hypophosphatasia.
+              </p>
+
+              <div class="hpp-multisystemic__survival">
+                <h3 class="hpp-multisystemic__survival--title">
+                  Overall survival<sup>9</sup>
                 </h3>
 
-                <div
-                  class="hpp-multisystemic__definition--media hpp-multisystemic__definition--media--infants hpp-multisystemic__definition--media--infants--mobile"
-                >
-                  <picture>
-                    <img
-                      class="hpp-multisystemic__definition--photo"
-                      src="/assets/images/hpp-profile/patient-photo-infants.png"
-                      alt="Patient adults"
-                    />
-                  </picture>
-
-                  <button
-                    class="button button--custom-bg case-files-modal-trigger button--custom-bg--only-mobile"
-                    >View Patient case files</button
-                  >
-
-                  <div class="hpp-multisystemic__definition--button">
-                    <button
-                      class="button button--custom-bg case-files-modal-trigger--desktop button--custom-bg--only-desktop"
-                      >View Patient case files &gt
-                    </button>
-                  </div>
-                </div>
-
-                <div class="hpp-multisystemic__studies">
-                  <h3
-                    class="hpp-multisystemic__definition--title hpp-multisystemic__definition--title-mobile"
-                  >
-                    A study of patients/caregivers of infants with
-                    hypophosphatasia showed:
-                  </h3>
-                  <div class="hpp-multisystemic__study">
-                    <h2 class="hpp-multisystemic__study--percentage">73%</h2>
-                    <p class="hpp-multisystemic__study--text">
-                      of untreated cases of neonatal and infantile
-                      hypophosphatasia were <span
-                        class="hpp-multisystemic__study--text-bold"
-                        >fatal before the age of 5.<br /></span
-                      >
-                      <span
-                        class="hpp-multisystemic__study--text-bold hpp-multisystemic__study--text-red"
-                      >
-                        58%</span
-                      > of cases were <span
-                        class="hpp-multisystemic__study--text-bold"
-                        >fatal by 1 year of age<sup>9*</sup></span
-                      >
-                    </p>
-                  </div>
-                  <div class="hpp-multisystemic__study">
-                    <h2 class="hpp-multisystemic__study--percentage">64%</h2>
-                    <p class="hpp-multisystemic__study--text">
-                      <span class="hpp-multisystemic__study--text-bold"
-                        >required respiratory support,
-                      </span> most commonly invasive ventilation.<br />
-                      <span
-                        class="hpp-multisystemic__study--text-bold hpp-multisystemic__study--text-red"
-                        >95%</span
-                      > of cases requiring invasive ventilation were <strong
-                        >fatal<sup>9*</sup></strong
-                      >
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="hpp-multisystemic__col">
-                <div
-                  class="hpp-multisystemic__definition--media hpp-multisystemic__definition--media--infants hpp-multisystemic__definition--media--infants--desktop"
-                >
-                  <picture>
-                    <img
-                      class="hpp-multisystemic__definition--photo"
-                      src="/assets/images/hpp-profile/patient-photo-infants.png"
-                      alt="Patient adults"
-                    />
-                  </picture>
-
-                  <button
-                    class="button button--custom-bg case-files-modal-trigger button--custom-bg--only-mobile"
-                    >View Patient case files</button
-                  >
-
-                  <div class="hpp-multisystemic__definition--button">
-                    <button
-                      class="button button--custom-bg case-files-modal-trigger--desktop button--custom-bg--only-desktop"
-                      >View Patient case files &gt
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <p
-              class="hpp-multisystemic__condition hpp-multisystemic__condition--dagger"
-            >
-              *Data from a multinational, noninterventional, retrospective chart
-              review study designed to understand the natural history of 48
-              patients ≤5 years of age with severe perinatal- and
-              infantile-onset hypophosphatasia.
-            </p>
-
-            <div class="hpp-multisystemic__survival">
-              <h3 class="hpp-multisystemic__survival--title">
-                Overall survival<sup>9</sup>
-              </h3>
-
-              <picture>
-                <source
-                  media="(min-width: 769px)"
-                  srcset="/assets/images/hpp-profile/overall-survival-chart--dk.png"
-                />
-                <img
-                  style="margin-bottom: 2rem;"
-                  src="/assets/images/hpp-profile/overall-survival-chart.png"
-                  alt="Overall survival"
-                />
-              </picture>
-
-              <p>
-                Adapted from Whyte M, et al. Poster presented at: Pediatric
-                Academic Societies and Asian Society for Pediatric Research
-                Joint Meeting; May 3-6, 2014; Vancouver, BC, Canada.
-              </p>
-            </div>
-
-            <article class="hpp-multisystemic__curiosities">
-              <div class="hpp-multisystemic__curiositie">
-                <img
-                  class="hpp-multisystemic__curiositie--icon"
-                  src="/assets/images/hpp-profile/icons/icon_1.png"
-                  alt="Respiratory failure"
-                />
-                <p class="hpp-multisystemic__curiositie--text">
-                  <span class="hpp-multisystemic__curiositie--text--red"
-                    >Respiratory failure</span
-                  > is the most common cause of death in neonates<br
-                    class="lg:hidden"
-                  /> and infants with hypophosphatasia<sup>1,6</sup>
-                </p>
-              </div>
-              <div class="hpp-multisystemic__curiositie">
-                <img
-                  class="hpp-multisystemic__curiositie--icon"
-                  src="/assets/images/hpp-profile/icons/icon_2.png"
-                  alt="Infants experience rickets-like chest deformities"
-                />
-                <p class="hpp-multisystemic__curiositie--text">
-                  Infants often experience rickets-like chest deformity,
-                  fractures, vitamin B<sub>6</sub>–responsive seizures,
-                  craniosynostosis, and failure to thrive<sup>1,8</sup>
-                </p>
-              </div>
-              <div class="hpp-multisystemic__curiositie">
-                <img
-                  class="hpp-multisystemic__curiositie--icon"
-                  src="/assets/images/hpp-profile/icons/icon_3.png"
-                  alt="Skeletal and other multisystemic complications"
-                />
-                <p class="hpp-multisystemic__curiositie--text">
-                  Skeletal and other multisystemic complications can place
-                  significant functional <span
-                    class="hpp-multisystemic__curiositie--text--red"
-                    >burden on patients immediately or later in life<sup
-                      >1,3,10</sup
-                    ></span
-                  >
-                </p>
-              </div>
-              <div class="hpp-multisystemic__curiositie">
-                <img
-                  src="/assets/images/hpp-profile/icons/icon_4.png"
-                  class="hpp-multisystemic__curiositie--icon"
-                  alt="Seizures commonly occur in infants with hypophosphatasia"
-                />
-                <p class="hpp-multisystemic__curiositie--text">
-                  Seizures commonly occur in infants with hypophosphatasia due
-                  to<br class="hidden xs:block" />
-                  altered vitamin B6 metabolism, which is not observed in children
-                  or<br class="hidden xs:block" /> adults with hypophosphatasia<sup
-                    >3</sup
-                  >
-                </p>
-              </div>
-            </article>
-
-            <article>
-              <h2 class="hpp__profile__title hpp__profile__title--blue">
-                Hypophosphatasia CAN CAUSE INCREASING HARM
-              </h2>
-
-              <p class="hpp-multisystemic__report--content--harm">
-                It’s vital to consider that current symptom presentation may not
-                accurately represent the degree of disease progression. Patients
-                with hypophosphatasia can experience a wide range of unexplained
-                and debilitating symptoms that result in a frustrating journey
-                to find relief. These clinical manifestations can change and
-                accumulate, reflecting disease evolution and progression over
-                time.<sup>1,10,12-15</sup>
-              </p>
-            </article>
-          </div>
-        </section>
-      </article>
-
-      <!-- Prevalence of HPP -->
-      <section id="hpp-prevalence" class="section">
-        <!-- HPP Patients charts -->
-        <div class="hpp-patients__red-string">
-          <picture>
-            <img
-              class="hpp-patients__red-pin"
-              src="/assets/images/hpp-profile/pin.png"
-              alt="Pin"
-            />
-          </picture>
-          <p class="wrapper hpp-patients__disclaimer">
-            Reduced alkaline phosphatase levels during childhood may affect peak
-            bone mass later in life<sup>17,18</sup>
-          </p>
-
-          <span class="hpp-patients__red-string1"></span>
-          <span class="hpp-patients__red-string2"></span>
-        </div>
-
-        <div class="hpp-patients__section">
-          <div class="hpp-patients__section--bg-white">
-            <p class="hpp-patients__section__disclaimer--dk">
-              Reduced alkaline phosphatase levels during childhood may affect <span
-                >peak bone mass later in life<sup>18,19</sup></span
-              >
-            </p>
-            <div class="wrapper">
-              <h5 class="hpp-patients__section__title">
-                Percent of patients with hypophosphatasia fractures
-              </h5>
-
-              <div class="hpp-patients__section__chart">
-                <!-- Desktop chart -->
                 <picture>
+                  <source
+                    media="(min-width: 769px)"
+                    srcset="/assets/images/hpp-profile/overall-survival-chart--dk.png"
+                  />
                   <img
-                    class="hpp-patients__section__image"
-                    src="/assets/images/hpp-profile/hpp-patients-chart.png"
-                    alt="HPP Profile"
+                    style="margin-bottom: 2rem;"
+                    src="/assets/images/hpp-profile/overall-survival-chart.png"
+                    alt="Overall survival"
                   />
                 </picture>
 
-                <!-- Mobile chart -->
-                <div class="hpp-patients__section__chart--mb">
+                <p>
+                  Adapted from Whyte M, et al. Poster presented at: Pediatric Academic Societies and Asian Society for Pediatric Research Joint Meeting; May 3-6, 2014; Vancouver, BC, Canada.
+                </p>
+              </div>
+
+              <article class="hpp-multisystemic__curiosities">
+                <div class="hpp-multisystemic__curiositie">
                   <img
-                    class="hpp-patients__section__image--mb"
-                    src="/assets/images/hpp-profile/chart1-mb.png"
-                    alt="HPP Profile"
+                    class="hpp-multisystemic__curiositie--icon"
+                    src="/assets/images/hpp-profile/icons/icon_1.png"
+                    alt="Respiratory failure"
                   />
-                  <p class="hpp-patients__section__text-chart">
-                    Infants and young children (≤5 years)<sup>25a</sup>
-                  </p>
-                  <img
-                    class="hpp-patients__section__image--mb"
-                    src="/assets/images/hpp-profile/chart2-mb.png"
-                    alt="HPP Profile"
-                  />
-                  <p class="hpp-patients__section__text-chart">
-                    Children and adolescents (5-15 years)<sup>26b</sup>
-                  </p>
-                  <img
-                    class="hpp-patients__section__image--mb"
-                    src="/assets/images/hpp-profile/chart3-mb.png"
-                    alt="HPP Profile"
-                  />
-                  <p class="hpp-patients__section__text-chart">
-                    Adults (≥18 years)<sup>7c</sup>
+                  <p class="hpp-multisystemic__curiositie--text">
+                    <span class="color--red">Respiratory failure</span> is the most common cause of death in neonates and infants with hypophosphatasia<sup>1,6</sup>
                   </p>
                 </div>
-              </div>
+                <div class="hpp-multisystemic__curiositie">
+                  <img
+                    class="hpp-multisystemic__curiositie--icon"
+                    src="/assets/images/hpp-profile/icons/icon_2.png"
+                    alt="Infants experience rickets-like chest deformities"
+                  />
+                  <p class="hpp-multisystemic__curiositie--text">
+                    Infants often experience rickets-like chest deformity, fractures, vitamin B<sub>6</sub>-responsive seizures, craniosynostosis, and failure to thrive<sup>1,8</sup>
+                  </p>
+                </div>
+                <div class="hpp-multisystemic__curiositie">
+                  <img
+                    class="hpp-multisystemic__curiositie--icon"
+                    src="/assets/images/hpp-profile/icons/icon_3.png"
+                    alt="Skeletal and other multisystemic complications"
+                  />
+                  <p class="hpp-multisystemic__curiositie--text">
+                    Skeletal and other multisystemic complications can place significant functional <span class="color--red">burden on patients immediately or later in life<sup>1,3,10</sup></span>
+                  </p>
+                </div>
+                <div class="hpp-multisystemic__curiositie">
+                  <img
+                    src="/assets/images/hpp-profile/icons/icon_4.png"
+                    class="hpp-multisystemic__curiositie--icon"
+                    alt="Seizures commonly occur in infants with hypophosphatasia"
+                  />
+                  <p class="hpp-multisystemic__curiositie--text">
+                    Seizures commonly occur in infants with hypophosphatasia due to altered vitamin B<sub>6</sub> metabolism, which is not observed in children or adults with hypophosphatasia<sup>3</sup>
+                  </p>
+                </div>
+              </article>
 
-              <p
-                class="wrapper hpp-patients__section__content hpp-patients__section__content--a hpp-patients__section__content--dk"
-              >
-                Data from a multinational, noninterventional, retrospective
-                chart review study designed to understand the natural history of
-                48 patients ≤5 years of age with severe perinatal- and
-                infantile-onset HPP. Patients included in the study were those
-                diagnosed with HPP based on at least one of the following: serum
-                biomarker levels (below-normal ALP and above-normal PLP or
-                phosphoethanolamine [PEA]), below-normal ALP and radiographic
-                abnormalities, and/or genetic analysis of the ALPL gene.
-                Additionally, onset of HPP must have occurred prior to 6 months
-                of age based on signs that included at least one of the
-                following: respiratory compromise, rachitic chest deformity,
-                and/or vitamin B<sub>6</sub>-responsive seizures.<sup>25</sup>
-              </p>
+              <article>
+                <h2 class="hpp__profile__title hpp__profile__title--blue">
+                  Hypophosphatasia CAN CAUSE INCREASING HARM
+                </h2>
 
-              <p
-                class="wrapper hpp-patients__section__content hpp-patients__section__content--b hpp-patients__section__content--dk"
-              >
-                Data from a retrospective, multinational, noninterventional
-                natural history study of childhood HPP in patients 5 to 15 years
-                of age (N=32).<sup>26</sup>
-              </p>
-
-              <p
-                class="wrapper hpp-patients__section__content hpp-patients__section__content--c hpp-patients__section__content--dk"
-              >
-                Combined data from HIPS/HOST, an internet questionnaire and
-                telephone survey that queried demographics, HPP-related illness
-                history, disease progression, and health-related quality of
-                life. One hundred twenty-five adults
-              </p>
+                <p class="hpp-multisystemic__report--content--harm">
+                  It’s vital to consider that current symptom presentation may not accurately represent the degree of disease progression. Patients with hypophosphatasia can experience a wide range of unexplained and debilitating symptoms that result in a frustrating journey to find relief. These clinical manifestations can change and accumulate, reflecting disease evolution and progression over time.<sup>1,10,12-15</sup>
+                </p>
+              </article>
             </div>
           </div>
-        </div>
-
-        <p
-          class="wrapper hpp-patients__section__content hpp-patients__section__content--a hpp-patients__section__content--mb"
-        >
-          Data from a multinational, noninterventional, retrospective chart
-          review study designed to understand the natural history of 48 patients
-          ≤5 years of age with severe perinatal- and infantile-onset HPP.
-          Patients included in the study were those diagnosed with HPP based on
-          at least one of the following: serum biomarker levels (below-normal
-          ALP and above-normal PLP or phosphoethanolamine [PEA]), below-normal
-          ALP and radiographic abnormalities, and/or genetic analysis of the
-          ALPL gene. Additionally, onset of HPP must have occurred prior to 6
-          months of age based on signs that included at least one of the
-          following: respiratory compromise, rachitic chest deformity, and/or
-          vitamin B<sub>6</sub>-responsive seizures.<sup>25</sup>
-        </p>
-
-        <p
-          class="wrapper hpp-patients__section__content hpp-patients__section__content--b hpp-patients__section__content--mb"
-        >
-          Data from a retrospective, multinational, noninterventional natural
-          history study of childhood HPP in patients 5 to 15 years of age
-          (N=32).<sup>26</sup>
-        </p>
-
-        <p
-          class="wrapper hpp-patients__section__content hpp-patients__section__content--c hpp-patients__section__content--mb"
-        >
-          Combined data from HIPS/HOST, an internet questionnaire and telephone
-          survey that queried demographics, HPP-related illness history, disease
-          progression, and health-related quality of life. One hundred
-          twenty-five adults participated.<sup>7</sup>
-        </p>
-
-        <!-- HPP Patients notes -->
-        <div class="hpp-patients__number-bg">
-          <div class="hpp-patients__notes">
-            <div class="hpp-patients__notes--note">
-              <div class="hpp-patients__notes--red-string red-string"></div>
-
+          <!-- Prevalence of HPP -->
+          <section id="hpp-prevalence" class="section">
+            <!-- HPP Patients charts -->
+            <div class="hpp-patients__red-string">
               <picture>
-                <source
-                  media="(min-width: 768px)"
-                  srcset="/assets/images/hpp-profile/pin--desktop.png"
-                />
                 <img
-                  class="hpp-patients__notes--pin"
-                  src="/assets/images/hpp-profile/pin.png"
-                  alt="HPP patient note pin"
-                />
-              </picture>
-
-              <p class="hpp-patients__notes--content">
-                In a meta-analysis of patients* with hypophosphatasia who were
-                followed through adulthood [N=265], there was a <span
-                  class="color--red">high risk</span
-                > of fractures (one or more, or multiple), gross motor/ambulatory
-                difficulties, pain, and surgery with increasing age.<sup>21</sup
-                >
-                <br />
-                <br />
-                <span class="hpp-patients__notes--note--foot">
-                  Data based on patients with first reported occurrence of HPP
-                  manifestations in adulthood (n=43), in utero (n=30),
-                  infancy/early childhood (n=101), childhood (n=78), adolescence
-                  (n=9), and unreported (n=4).
-                </span>
-              </p>
-            </div>
-
-            <div class="hpp-patients__percentage">
-              <div class="hpp-patients__percentage--red-string red-string">
-              </div>
-
-              <picture>
-                <source
-                  media="(min-width: 768px)"
-                  srcset="/assets/images/hpp-profile/pin--desktop.png"
-                />
-                <img
-                  class="hpp-patients__percentage--pin"
+                  class="hpp-patients__red-pin"
                   src="/assets/images/hpp-profile/pin.png"
                   alt="Pin"
                 />
               </picture>
-
-              <p class="hpp-patients__percentage--text text--center">94%</p>
-              <p class="hpp-patients__percentage--content">
-                of patients* with at least 1 year of follow-up experienced at
-                least 1 manifestation or event that contributed to the <span
-                  class="hpp-patients__percentage--content--text-red"
-                >
-                  clinical burden of hypophosphatasia.<sup>21</sup></span
-                >
+              <p class="hpp-patients__disclaimer">
+                Reduced alkaline phosphatase levels during childhood may affect peak bone mass later in life<sup>16,17</sup>
               </p>
-              <p class="wrapper hpp-patients__percentage--disclaimer">
-                *16.5% (43 patients/cases) had their first reported occurrence
-                of HPP manifestations at 18 years of age or older.
+
+              <span class="hpp-patients__red-string1"></span>
+              <span class="hpp-patients__red-string2"></span>
+            </div>
+
+            <div class="hpp-patients__section">
+              <div class="hpp-patients__section--bg-white">
+                <p class="hpp-patients__section__disclaimer--dk">
+                  Reduced alkaline phosphatase levels during childhood may affect peak bone mass later in life<sup>16,17</sup>
+                </p>
+                <div class="wrapper wrapper--mobile">
+                  <h5 class="hpp-patients__section__title">
+                    Percent of patients with hypophosphatasia fractures
+                  </h5>
+
+                  <div class="hpp-patients__section__chart">
+                    <!-- Desktop chart -->
+                    <picture>
+                      <img
+                        class="hpp-patients__section__image"
+                        src="/assets/images/hpp-profile/hpp-patients-chart.png"
+                        alt="HPP Profile"
+                      />
+                    </picture>
+
+                    <!-- Mobile chart -->
+                    <div class="hpp-patients__section__chart--mb">
+                      <img
+                        class="hpp-patients__section__image--mb"
+                        src="/assets/images/hpp-profile/chart1-mb.png"
+                        alt="HPP Profile"
+                      />
+                      <p class="hpp-patients__section__text-chart">
+                        Infants and young children (≤5 years)<sup>19,a</sup>
+                      </p>
+                      <img
+                        class="hpp-patients__section__image--mb"
+                        src="/assets/images/hpp-profile/chart2-mb.png"
+                        alt="HPP Profile"
+                      />
+                      <p class="hpp-patients__section__text-chart">
+                        Children and adolescents (5-15 years)<sup>20,b</sup>
+                      </p>
+                      <img
+                        class="hpp-patients__section__image--mb"
+                        src="/assets/images/hpp-profile/chart3-mb.png"
+                        alt="HPP Profile"
+                      />
+                      <p class="hpp-patients__section__text-chart">
+                        Adults  (≥18 years)<sup>7,c</sup>
+                      </p>
+                    </div>
+                  </div>
+
+                  <p
+                    class="hpp-patients__section__content hpp-patients__section__content--dk"
+                  >
+                    <sup>a</sup>Data from a multinational, noninterventional, retrospective chart review study designed to understand the natural history of 48 patients ≤5 years of age with severe perinatal- and infantile-onset HPP. Patients included in the study were those diagnosed with HPP based on at least one of the following: serum biomarker levels (below-normal ALP and above-normal PLP or phosphoethanolamine [PEA]), below-normal ALP and radiographic abnormalities, and/or genetic analysis of the <i class="text--italic">ALPL</i> gene. Additionally, onset of HPP must have occurred prior to 6 months of age based on signs that included at least one of the following: respiratory compromise, rachitic chest deformity, and/or vitamin B<sub>6</sub>-responsive seizures.<sup>18</sup>
+                  </p>
+                  <p
+                    class="hpp-patients__section__content hpp-patients__section__content--dk"
+                  >
+                    <sup>b</sup>Data from a retrospective, multinational, noninterventional natural history study of childhood HPP in patients 5 to 15 years of age (N=32).<sup>19</sup>
+                  </p>
+                  <p
+                    class="hpp-patients__section__content hpp-patients__section__content--dk"
+                  >
+                    <sup>c</sup>Combined data from HIPS/HOST, an internet questionnaire and telephone survey that queried demographics, HPP-related illness history, disease progression, and health-related quality of life. One hundred twenty-five adults participated.<sup>20</sup>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <p
+              class="hpp-patients__section__content hpp-patients__section__content--mb"
+            >
+              <sup>a</sup>Data from a multinational, noninterventional, retrospective chart review study designed to understand the natural history of 48 patients ≤5 years of age with severe perinatal- and infantile-onset HPP. Patients included in the study were those diagnosed with HPP based on at least one of the following: serum biomarker levels (below-normal ALP and above-normal PLP or phosphoethanolamine [PEA]), below-normal ALP and radiographic abnormalities, and/or genetic analysis of the <i class="text--italic">ALPL</i> gene. Additionally, onset of HPP must have occurred prior to 6 months of age based on signs that included at least one of the following: respiratory compromise, rachitic chest deformity, and/or vitamin B<sub>6</sub>-responsive seizures.<sup>18</sup>
+            </p>
+
+            <p
+              class="hpp-patients__section__content hpp-patients__section__content--mb"
+            >
+              <sup>b</sup>Data from a retrospective, multinational, noninterventional natural history study of childhood HPP in patients 5 to 15 years of age (N=32).<sup>19</sup>
+            </p>
+
+            <p
+              class="hpp-patients__section__content hpp-patients__section__content--mb"
+            >
+              <sup>c</sup>Combined data from HIPS/HOST, an internet questionnaire and telephone survey that queried demographics, HPP-related illness history, disease progression, and health-related quality of life. One hundred twenty-five adults participated.<sup>20</sup>
+            </p>
+
+            <!-- HPP Patients notes -->
+            <div class="hpp-patients__number-bg">
+                <div class="hpp-patients__notes">
+                  <div class="wrapper wrapper--mobile">
+                    <div class="hpp-patients__notes--note">
+                      <div class="hpp-patients__notes--red-string red-string"></div>
+
+                      <picture>
+                        <source
+                          media="(min-width: 768px)"
+                          srcset="/assets/images/hpp-profile/pin--desktop.png"
+                        />
+                        <img
+                          class="hpp-patients__notes--pin"
+                          src="/assets/images/hpp-profile/pin.png"
+                          alt="HPP patient note pin"
+                        />
+                      </picture>
+
+                      <p class="hpp-patients__notes--content">
+                        In a meta-analysis of patients<sup>*</sup> with hypophosphatasia who were followed through adulthood (N=265), there was a <span class="color--red">high risk</span> of fractures (one or more, or multiple), gross motor/ambulatory difficulties, pain, and surgery with increasing age.<sup>21</sup>
+                      </p>
+                      <p class="hpp-patients__notes--note--foot">
+                        <sup>*</sup>Data based on patients with first reported occurrence of HPP manifestations in adulthood (n=43), in utero (n=30), infancy/early childhood (n=101), childhood (n=78), adolescence (n=9), and unreported (n=4).
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="hpp-patients__percentage">
+                    <div class="hpp-patients__percentage--red-string red-string">
+                    </div>
+
+                    <picture>
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="/assets/images/hpp-profile/pin--desktop.png"
+                      />
+                      <img
+                        class="hpp-patients__percentage--pin"
+                        src="/assets/images/hpp-profile/pin.png"
+                        alt="Pin"
+                      />
+                    </picture>
+
+                    <p class="hpp-patients__percentage--text text--center">94%</p>
+                    <p class="hpp-patients__percentage--content">
+                      of patients<sup>*</sup> with at least 1 year of follow-up experienced at least 1 manifestation or event that contributed to the <span class="color--red">clinical burden of hypophosphatasia.<sup>21</sup></span>
+                    </p>
+                    <p class="hpp-patients__percentage--disclaimer">
+                      <sup>*</sup>16.5% (43 patients/cases) had their first reported occurrence of HPP manifestations at 18 years of age or older.
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="wrapper wrapper-mobile hpp-patients__content">
+              <h2 class="hpp__profile__title hpp__profile__title--50">
+                WHY Hypophosphatasia SHOULD REMAIN ON <br>YOUR RADAR
+              </h2>
+
+              <div class="hpp-patients__red-frame-disclaimer">
+                <p
+                  class="hpp-patients__red-frame-disclaimer--content color--white text--center"
+                >
+                Severe HPP occurs in 1:300,000 births and milder HPP has been reported by some sources to occur in up to 1:6,370 births. The overall prevalence of all forms of hypophosphatasia is unknown. It is officially classified as a rare disease. Affected individuals may be unrecognized or misdiagnosed. Globally, HPP affects males and females of all ages and appears to be especially prevalent in people of Caucasian descent.<sup>1,22-24</sup>
+                </p>
+              </div>
+
+              <h2 class="hpp__profile__title">
+                Proper diagnosis of hypophosphatasia is crucial
+              </h2>
+              <p class="hpp__profile__content">
+                Misdiagnosing hypophosphatasia can put patients at risk, with some commonly used therapies prescribed for  misdiagnoses negatively impacting their condition.<sup>20</sup>
               </p>
             </div>
-          </div>
-        </div>
-
-        <div class="wrapper hpp-patients__content">
-          <h2 class="hpp__profile__title hpp__profile__title--50">
-            WHY Hypophosphatasia SHOULD<br class="hidden md:block" /> REMAIN ON YOUR
-            RADAR
-          </h2>
-
-          <div class="hpp-patients__red-frame-disclaimer">
-            <p
-              class="hpp-patients__red-frame-disclaimer--content color--white text--center"
-            >
-              Severe HPP occurs in 1:300,000 births and milder HPP has been
-              reported by some sources to occur in up to 1:6,370 births. The
-              overall prevalence of all forms of hypophosphatasia is unknown. It
-              is officially classified as a rare disease.Affected individuals
-              may be unrecognized or misdiagnosed. Globally, HPP affects males
-              and females of all ages and appears to be especially prevalent in
-              people of Caucasian descent.<sup>1,22-24</sup>
-            </p>
-          </div>
-
-          <h2 class="hpp__profile__title">
-            Proper diagnosis of hypophosphatasia is crucial
-          </h2>
-          <p class="hpp__profile__content">
-            Misdiagnosing hypophosphatasia can put patients at risk, with some
-            commonly used therapies prescribed for misdiagnoses negatively
-            impacting their condition.18
-          </p>
-        </div>
-
+          </section>
+        </section>
+      </article>
+      <div class="wrapper wrapper--mobile">
         <CTA
           variation="variant-2"
           buttonLabel="Usual Suspects"
@@ -1086,85 +1255,12 @@ const internalNavLinks = [
           linkURL="/usual-suspects/"
           bypassModal
         />
-      </section>
+      </div>
     </div>
   </section>
-
   <References>
     <p>
-      <strong>References: 1.</strong> Rockman-Greenberg C. Hypophosphatasia. Pediatr
-      Endocrinol Rev. 2013;10(suppl 2):380-388. <strong>2.</strong> McKiernan FE,
-      Berg RL, Fuehrer J. Clinical and radiographic findings in adults with persistent
-      hypophosphatasemia. J Bone Miner Res. 2014;29(7):1651-1660. <strong
-        >3.</strong
-      > Bianchi ML, Bishop NJ, Guañabens N, et al; Rare Bone Disease Action Group
-      of the European Calcified Tissue Society. Hypophosphatasia in adolescents and
-      adults: overview of diagnosis and treatment. Osteoporos Int. 2020;31(8):1445-1460.
-      <strong>4.</strong> Yokoi K, Nakajima Y, Shinkai Y, et al. Clinical and genetic
-      aspects of mild hypophosphatasia in Japanese patients. Mol Genet Metab Rep.
-      2019;21:100515.
-      <strong>5.</strong> Hofmann C, Girschick HJ, Mentrup B, et al. Clinical aspects
-      of hypophosphatasia: an update. Clin Rev Bone Miner Metab. 2013;11:60-70. <strong
-        >6.</strong
-      > Baumgartner-Sigl S, Haberlandt E, Mumm S, et al. Pyridoxine-responsive seizures
-      as the first symptom of infantile hypophosphatasia caused by two novel missense
-      mutations (c.677T>C, p.M226T; c.1112C>T, p.T371I) of the tissue-nonspecific
-      alkaline phosphatase gene. Bone. 2007;40(6):1655-1661.
-      <strong>7.</strong> Eade AW, Swannell AJ, Williamson N. Pyrophosphate arthropathy
-      in hypophosphatasia. Ann Rheum Dis. 1981;40(2):164-170. <strong>8.</strong
-      > Hӧgler W, Langman C, Gomes da Silva H, et al. Diagnostic delay is common
-      among patients with hypophosphatasia: initial findings from a longitudinal,
-      prospective, global registry. BMC Musculoskelet Disord. 2019;20(1):80. <strong
-        >9.</strong
-      > Whyte MP, Leung E, Wilcox W, et al. Hypophosphatasia: a retrospective natural
-      history study of the severe perinatal and infantile forms. Poster presented
-      at: 2014 Pediatric Academic Societies and Asian Society for Pediatric Research
-      Joint Meeting; May 3-6, 2014; Vancouver, BC, Canada. <strong>10.</strong> Seefried
-      L, Dahir K, Petryk A, et al. Burden of illness in adults with hypophosphatasia:
-      data from the Global Hypophosphatasia Patient Registry. J Bone Miner Res. 2020;35(11):2171-2178.
-      <strong>11.</strong> Bianchi ML. Hypophosphatasia: an overview of the disease
-      and its treatment. Osteoporos Int. 2015; 26(12):2743-2757. <strong
-        >12.</strong
-      >
-      Colazo JM, Hu JR, Dahir KM, Simmons JH. Neurological symptoms in hypophosphatasia.
-      Osteoporos Int. 2019;30(2):469-480. <strong>13.</strong> Pierpont EI, Simmons
-      JH, Spurlock KJ, Shanley R, Sarafoglou KM. Impact of pediatric hypophosphatasia
-      on behavioral health and quality of life. Orphanet J Rare Dis. 2021;16(1):80.
-      <strong>14.</strong> Rush ET, Moseley S, Petryk A. Burden of disease in pediatric
-      patients with hypophosphatasia: results from the HPP Impact Patient Survey
-      and the HPP Outcomes Study Telephone interview. Orphanet J Rare Dis. 2019;14(1):201.
-      <strong>15.</strong> Salles JP. Hypophosphatasia: biological and clinical aspects,
-      avenues for therapy. Clin Biochem Rev. 2020;41(1):13-27.
-      <strong>16.</strong> Davies JH, Evans BA, Gregory JW. Bone mass acquisition
-      in healthy children. Arch Dis Child. 2005;90(4):373-378. <strong
-        >17.</strong
-      > Maggioli C, Stagi S. Bone modeling, remodeling, and skeletal health in children
-      and adolescents: mineral accrual, assessment and treatment. Ann Pediatr Endocrinol
-      Metab. 2017;22:1-5.
-      <strong>18.</strong> Whyte MP, Leung E, Wilcox WR, et al. Natural history of
-      perinatal and infantile hypophosphatasia: a retrospective study. J Pediatr.
-      2019;209:116-124.e4.
-      <strong>19.</strong> Whyte MP, Madson KL, Munns CF, et al. A retrospective,
-      multi-national, non-interventional, natural history study of the childhood
-      form of hypophosphatasia. Abstract presented at: Endocrine Society’s 97th Annual
-      Meeting and Expo; March 15, 2015; San Diego, CA. <strong>20.</strong> Weber
-      TJ, Sawyer EK, Moseley S, Odrljin T, Kishnani PS. Burden of disease in adult
-      patients with hypophosphatasia: results from two patient-reported surveys.
-      Metabolism. 2016;65(10):1522-1530.
-      <strong>21.</strong> Szabo SM, Tomazos IC, Petryk A, et al. Frequency and age
-      at occurrence of clinical manifestations of disease in patients with hypophosphatasia:
-      a systemic literature review. Orphanet J Rare Dis. 2019;14(1):85. <strong
-        >22.</strong
-      > Mornet E, Yvard A, Taillandier A, Fauvert D, Simon-Bouy B. A molecular-based
-      estimation of the prevalence of hypophosphatasia in the European population.
-      Ann Hum Genet. 2011;75(3):439-445. <strong>23.</strong> Whyte MP. Hypophosphatasia.
-      In: Thakker RV, Whyte MP, Eisman JA, Igarashi T, eds. Genetics of Bone Biology
-      and Skeletal Disease. Academic Press; 2013;337-360. <strong>24.</strong> NORD.
-      Hypophosphatasia. 2022. Accessed March 30, 2023. <a
-        target="_blank"
-        href="https://rarediseases.org/rare-diseases/hypophosphatasia/"
-        >https://rarediseases.org/rare-diseases/hypophosphatasia/</a
-      >
+      <strong>References: 1.</strong> Rockman-Greenberg C. Hypophosphatasia. <i class="text--italic">Pediatr Endocrinol Rev.</i> 2013;10(suppl 2):380-388. <strong>2.</strong> McKiernan FE, Berg RL, Fuehrer J. Clinical and radiographic findings in adults with persistent hypophosphatasemia. <i class="text--italic">J Bone Miner Res.</i> 2014;29(7):1651-1660. <strong>3.</strong> Bianchi ML, Bishop NJ, Guañabens N, et al; Rare Bone Disease Action Group of the European Calcified Tissue Society. Hypophosphatasia in adolescents and adults: overview of diagnosis and treatment. <i class="text--italic">Osteoporos Int.</i> 2020;31(8):1445-1460. <strong>4.</strong> Yokoi K, Nakajima Y, Shinkai Y, et al. Clinical and genetic aspects of mild hypophosphatasia in Japanese patients. <i class="text--italic">Mol Genet Metab Rep.</i> 2019;21:100515. <strong>5.</strong> Hofmann C, Girschick HJ, Mentrup B, et al. Clinical aspects of hypophosphatasia: an update. <i class="text--italic">Clin Rev Bone Miner Metab.</i> 2013;11:60-70. <strong>6.</strong> Baumgartner-Sigl S, Haberlandt E, Mumm S, et al. Pyridoxine-responsive seizures as the first symptom of infantile hypophosphatasia caused by two novel missense mutations (c.677T&gt;C, p.M226T; c.1112C&gt;T, p.T371I) of the tissue-nonspecific alkaline phosphatase gene. <i class="text--italic">Bone.</i> 2007;40(6):1655-1661. <strong>7.</strong> Eade AW, Swannell AJ, Williamson N. Pyrophosphate arthropathy in hypophosphatasia. <i class="text--italic">Ann Rheum Dis.</i> 1981;40(2):164-170. <strong>8.</strong> Hӧgler W, Langman C, Gomes da Silva H, et al. Diagnostic delay is common among patients with hypophosphatasia: initial findings from a longitudinal, prospective, global registry. <i class="text--italic">BMC Musculoskelet Disord.</i> 2019;20(1):80. <strong>9.</strong> Whyte MP, Leung E, Wilcox W, et al. Hypophosphatasia: a retrospective natural history study of the severe perinatal and infantile forms. Poster presented at: 2014 Pediatric Academic Societies and Asian Society for Pediatric Research Joint Meeting; May 3-6, 2014; Vancouver, BC, Canada. <strong>10.</strong> Seefried L, Dahir K, Petryk A, et al. Burden of illness in adults with hypophosphatasia: data from the Global Hypophosphatasia Patient Registry. <i class="text--italic">J Bone Miner Res.</i> 2020;35(11):2171-2178. <strong>11.</strong> Bianchi ML. Hypophosphatasia: an overview of the disease and its treatment. Osteoporos Int. 2015; 26(12):2743-2757. <strong>12.</strong> Colazo JM, Hu JR, Dahir KM, Simmons JH. Neurological symptoms in hypophosphatasia. <i class="text--italic">Osteoporos Int.</i> 2019;30(2):469-480. <strong>13.</strong> Pierpont EI, Simmons JH, Spurlock KJ, Shanley R, Sarafoglou KM. Impact of pediatric hypophosphatasia on behavioral health and quality of life. <i class="text--italic">Orphanet J Rare Dis.</i> 2021;16(1):80. <strong>14.</strong> Rush ET, Moseley S, Petryk A. Burden of disease in pediatric patients with hypophosphatasia: results from the HPP Impact Patient Survey and the HPP Outcomes Study Telephone interview. <i class="text--italic">Orphanet J Rare Dis.</i> 2019;14(1):201. <strong>15.</strong> Salles JP. Hypophosphatasia: biological and clinical aspects, avenues for therapy. <i class="text--italic">Clin Biochem Rev.</i> 2020;41(1):13-27. <strong>16.</strong> Davies JH, Evans BA, Gregory JW. Bone mass acquisition in healthy children. <i class="text--italic">Arch Dis Child.</i> 2005;90(4):373-378. <strong>17.</strong> Maggioli C, Stagi S. Bone modeling, remodeling, and skeletal health in children and adolescents: mineral accrual, assessment and treatment. <i class="text--italic">Ann Pediatr Endocrinol Metab.</i> 2017;22:1-5. <strong>18.</strong> Whyte MP, Leung E, Wilcox WR, et al. Natural history of perinatal and infantile hypophosphatasia: a retrospective study. <i class="text--italic">J Pediatr.</i> 2019;209:116-124.e4. <strong>19.</strong> Whyte MP, Madson KL, Munns CF, et al. A retrospective, multi-national, non-interventional, natural history study of the childhood form of hypophosphatasia. Abstract presented at: Endocrine Society’s 97th Annual Meeting and Expo; March 15, 2015; San Diego, CA. <strong>20.</strong> Weber TJ, Sawyer EK, Moseley S, Odrljin T, Kishnani PS. Burden of disease in adult patients with hypophosphatasia: results from two patient-reported surveys. <i class="text--italic">Metabolism.</i> 2016;65(10):1522-1530. <strong>21.</strong> Szabo SM, Tomazos IC, Petryk A, et al. Frequency and age at occurrence of clinical manifestations of disease in patients with hypophosphatasia: a systemic literature review. <i class="text--italic">Orphanet J Rare Dis.</i> 2019;14(1):85. <strong>22.</strong> Mornet E, Yvard A, Taillandier A, Fauvert D, Simon-Bouy B. A molecular-based estimation of the prevalence of hypophosphatasia in the European population. <i class="text--italic">Ann Hum Genet.</i> 2011;75(3):439-445. <strong>23.</strong> Whyte MP. Hypophosphatasia. In: Thakker RV, Whyte MP, Eisman JA, Igarashi T, eds. <i class="text--italic">Genetics of Bone Biology and Skeletal Disease.</i> Academic Press; 2013;337-360. <strong>24.</strong> NORD. Hypophosphatasia. 2022. Accessed March 30, 2023. <a href="https://rarediseases.org/rare-diseases/hypophosphatasia/" target="_blank">https://rarediseases.org/rare-diseases/hypophosphatasia/</a>
     </p>
   </References>
 </Layout>

@@ -2916,6 +2916,7 @@
         font-family: "veneer", sans-serif;
         font-size: 1.875rem;
         line-height: 2.0625rem;
+        max-width: 24ch;
 
         @include media('tablet') {
             text-align: center;
@@ -2966,10 +2967,10 @@
 
         &--mobile {
             color: $color-blue;
-
             padding: 3rem 0 0 0;
+            max-width: 22ch;
 
-            @media screen and (min-width: 1024px) {
+            @media screen and (min-width: 1023px) {
                 display: none;
             }
         }
@@ -2992,7 +2993,8 @@
     &__subhead {
         font-size: 1.3125rem;
         font-weight: 700;
-        margin: 2rem 0;
+        margin: 2.5rem 0 1.375rem;
+        max-width: 22ch;
         font-family: 'Oswald';
 
         @media screen and (min-width: 769px) {
@@ -3051,7 +3053,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
 
         max-width: 46.625rem;
         margin-left: auto;
@@ -3073,15 +3075,15 @@
         justify-content: center;
         align-items: center;
         background-color: $color-pearl-bush;
-        padding: 2.5rem .5rem;
-        padding-top: 4rem;
-        max-width: 19.8125rem;
+        padding: 3.5rem .5rem 2.5rem;
+        // padding-top: 4rem;
+        max-width: 38ch;
         position: relative;
 
         margin-left: auto;
         margin-right: auto;
 
-        margin-bottom: 4rem;
+        margin-bottom: 2.5rem;
         z-index: 1;
 
         &::before {
@@ -3119,7 +3121,7 @@
             font-weight: 400;
             line-height: 24px;
 
-            max-width: 17.6875rem;
+            max-width: 30ch;
 
             @media screen and (min-width: 768px) {
 
@@ -3193,7 +3195,7 @@
         &__section {
             background-image: url("/assets/images/hpp-profile/frame-polaroid-mb.png");
             background-repeat: no-repeat;
-            background-size: 100% 100%;
+            background-size: 100% 99%;
             position: relative;
 
             margin-left: auto;
@@ -3228,7 +3230,7 @@
             @media screen and (min-width: 768px) {
                 background-image: url("/assets/images/hpp-profile/frame-polaroid.png");
 
-                padding: 3.3rem 2.6rem;
+                padding: 3.3rem 2.3rem;
                 margin-bottom: 6rem;
             }
 
@@ -3254,6 +3256,7 @@
                 margin: 1rem;
                 font-size: 1.125rem;
                 line-height: 25.2px;
+                max-width: 33ch;
 
                 // @media screen and (min-width: 768px) {
                 //     max-width: 90%;
@@ -3266,7 +3269,7 @@
                 justify-content: center;
                 flex-direction: column;
                 align-items: center;
-                margin-bottom: 2rem;
+                // margin-bottom: 2rem;
 
                 &--mb {
                     @media screen and (min-width: 769px) {
@@ -3301,18 +3304,28 @@
 
             &__text-chart {
                 text-align: center;
-                max-width: 10rem;
+                max-width: 20ch;
                 margin: auto;
                 font-size: .875rem;
                 font-weight: 400;
                 line-height: 18px;
+                margin-left: 25%;
+
+                @media screen and (min-width: 769px) {
+                    margin-left: auto;
+                    margin-top: .3125rem;
+                    margin-bottom: 0;
+                    max-width: 20ch;
+                    width: 30%;
+                }
             }
 
             &__content {
                 font-size: .875rem;
+                line-height: 1.3125rem;
                 color: $color-white;
                 position: relative;
-                padding: 0 1rem;
+                padding: 0 1rem 0 2rem;
                 margin: 0 auto;
 
                 &::before {
@@ -3364,6 +3377,13 @@
                         content: 'c';
                     }
                 }
+
+                sup:first-child {
+                    font-size: 0.8em;
+                    left: 1.5rem;
+                    top: 7px;
+                    position: absolute;
+                }
             }
 
             &__disclaimer--dk {
@@ -3398,9 +3418,11 @@
 
         &__disclaimer {
             color: $color-saffron-mango;
-            padding: 3rem 4rem;
+            padding: 3rem 0;
             text-align: center;
             font-family: 'Special Elite', cursive;
+            margin: 0 auto;
+            max-width: 25ch;
 
             @media screen and (min-width: 600px) and (max-width: 768px) {
                 padding: 5rem 2rem;
@@ -3471,13 +3493,14 @@
                 font-size: 1rem;
                 font-family: 'Special Elite', cursive;
                 font-weight: 400;
+                line-height: 1.5rem;
 
                 @media screen and (max-width: 768px) {
                     background-image: none;
                     color: $color-white;
                     z-index: 2;
                     margin: 0;
-                    max-width: 25rem;
+                    max-width: 32ch;
                     padding: 5rem 0;
                     position: relative;
 
@@ -3543,7 +3566,7 @@
             &--red-string {
                 width: calc(100vw * 2);
                 position: absolute;
-                top: 112px;
+                top: 50px;
                 transform: rotate(334deg);
                 left: -50%;
 
@@ -3564,7 +3587,7 @@
                 left: 50%;
                 transform: translateX(-50%);
                 max-width: 4rem;
-                top: 3.625rem;
+                top: 0;
 
                 @media screen and (min-width: 768px) {
                     height: 4rem;
@@ -3577,9 +3600,10 @@
             &--note {
                 background-image: url("/assets/images/hpp-profile/stick-note-mb.png");
                 background-repeat: no-repeat;
-                background-size: contain;
+                background-size: cover;
                 background-position: center;
-                padding: 12rem 3rem 5rem 3rem;
+                padding: 8.9rem 1.875rem 4.75rem;
+                margin: 0 auto;
                 max-width: 23rem;
 
                 @media screen and (min-width: 768px) {
@@ -3600,15 +3624,22 @@
                     font-weight: 400;
                     position: relative;
                     font-family: 'Barlow', sans-serif;
-                    margin-bottom: 1rem;
-
+                    margin-top: 1.5rem;
+                    // margin-bottom: 1rem;
                     line-height: 15.6px;
+                    padding-left: .625rem;
 
-                    &::before {
+                    sup {
+                        top: 5px;
+                        left: 5px;
+                        position: absolute;
+                    }
+
+                    /* &::before {
                         content: '*';
                         position: absolute;
                         left: -5px;
-                    }
+                    } */
                 }
             }
 
@@ -3636,7 +3667,7 @@
             @media screen and (min-width: 769px) {
                 max-width: 35rem;
                 background-image: url(/assets/images/hpp-profile/paper-bg-dk.png);
-                background-size: contain;
+                background-size: cover;
                 padding: 3rem 1rem;
                 margin-top: 12rem;
             }
@@ -3684,16 +3715,23 @@
 
             &--disclaimer {
                 text-align: center;
-                margin-top: 2rem;
+                margin-top: 1rem;
                 margin-bottom: 3rem;
+                margin-left: auto;
+                margin-right: auto;
                 font-weight: 400;
                 font-size: 12px;
                 line-height: 1rem;
+                max-width: 48ch;
 
                 @media screen and (min-width: 769px) {
                     margin-top: 1rem;
                     font-size: .875rem;
                     padding: 0 4rem;
+                }
+
+                sup {
+                    top: 0;
                 }
             }
 
@@ -3716,9 +3754,52 @@
             background-repeat: no-repeat;
             background-position: center left;
             max-width: 100%;
+            margin-top: 4rem;
 
             @media screen and (max-width: 768px) {
                 background-image: none;
+            }
+        }
+
+        &__content {
+            .hpp__profile__title {
+                &:nth-of-type(1) {
+                    max-width: 20ch;
+
+                    @media screen and (min-width: 600px) {
+                        max-width: 32ch;
+
+                        br {
+                            display: none;
+                        }
+                    }
+
+                    @media screen and (min-width: 768px) {
+                        margin-left: auto;
+                        margin-right: auto;
+                        text-align: center;
+                    }
+                }
+
+                &:nth-of-type(2) {
+                    max-width: 33ch;
+                    margin-bottom: .625rem;
+
+                    @media screen and (min-width: 768px) {
+                        margin-left: auto;
+                        margin-right: auto;
+                        text-align: center;
+                    }
+
+                    @media screen and (min-width: 1024px) {
+                        max-width: 100%;
+                    }
+                }
+            }
+
+            .hpp__profile__content {
+                max-width: 33ch;
+                margin-left: 0;
             }
         }
     }
@@ -3770,8 +3851,8 @@
 
             &--text {
                 font-weight: 600;
-                margin-bottom: 2rem;
-
+                margin-bottom: 1rem;
+                max-width: 29ch;
                 font-size: 1.125rem;
                 line-height: 25.2px;
 
@@ -3958,9 +4039,10 @@
 
                     @media screen and (max-width: 768px) {
                         display: block;
-                        margin: 1rem 0 2rem 0;
+                        margin: 0 0 1.5rem 0;
                         font-weight: 600;
                         font-size: 1.125rem;
+                        line-height: 1.575rem;
                     }
                 }
 
@@ -3995,7 +4077,7 @@
             flex-direction: row;
             justify-content: flex-start;
             flex-wrap: wrap;
-            margin-bottom: 2rem;
+            // margin-bottom: 2rem;
 
             @media screen and (min-width: 769px) {
                 justify-content: space-between;
@@ -4018,19 +4100,23 @@
             align-items: flex-start;
             align-items: center;
             text-align: center;
-
-            max-width: 14.6875rem;
+            max-width: 30ch;
             margin-left: auto;
             margin-right: auto;
+            margin-bottom: 1.5625rem;
 
 
 
-            :not(:last-of-type) {
+            /* :not(:last-of-type) {
                 margin-bottom: 3rem;
-            }
+            } */
 
-            &:last-of-type {
-                max-width: 17.6875rem;
+            &--bigger {
+                max-width: 36ch;
+
+                .hpp-multisystemic__study--text {
+                    max-width: 31ch;
+                }
             }
 
             @media screen and (min-width: 769px) {
@@ -4040,6 +4126,12 @@
             @media screen and (min-width: 1024px) {
                 justify-content: flex-start;
                 margin-left: 0;
+            }
+
+            &--text {
+                font-size: 1.125rem;
+                line-height: 1.575rem;
+                max-width: 25ch;
             }
 
             &--text-red-line {
@@ -4113,7 +4205,7 @@
             }
 
             &--line {
-                margin: 2rem 0;
+                margin: 2.4375rem 0 2.5625rem;
                 border-top: 1px solid $color-light-granite-grey;
                 width: 100%;
 
@@ -4128,7 +4220,7 @@
 
             &--red-line-img {
                 margin-top: 1rem;
-                margin-bottom: 1rem;
+                // margin-bottom: 1rem;
 
                 &--mobile {
                     @media screen and (min-width: 769px) {
@@ -4165,41 +4257,17 @@
             box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.25);
             height: 100%;
             width: 100%;
-
-            //margin: 4rem auto 0 auto;
             padding: 0 3rem;
             background-color: $color-cararra;
+            position: relative;
 
             @media screen and (max-width: 768px) {
-                background-color: transparent;
                 box-shadow: none;
                 background-image: none;
                 padding: 0;
             }
-        }
-
-        &__tabs {
-            position: relative;
 
             @media screen and (max-width: 1023px) {
-                background-color: $color-floral-white;
-
-                &::before {
-                    //Tape
-                    content: '';
-                    background-image: url("/assets/images/hpp-profile/tape.png");
-                    background-repeat: no-repeat;
-                    background-size: 100% 100%;
-                    background-position: center;
-                    height: 80px;
-                    width: 13.625rem;
-
-                    position: absolute;
-                    z-index: 2;
-                    top: -19px;
-                    left: 50%;
-                    transform: translateX(-50%) rotate(2deg);
-                }
 
                 &::after {
                     //Tape
@@ -4216,6 +4284,46 @@
                     bottom: -35px;
                     left: 50%;
                     transform: translateX(-50%) rotate(-5deg);
+                }
+            }
+
+            @media screen and (max-width: 1023px) {
+                padding-top: 1rem;
+                background-color: $color-floral-white;
+            }
+        }
+
+        &__tabs {
+            position: relative;
+
+            @media screen and (max-width: 1023px) {
+                .hpp-multisystemic__title-container {
+                    background-color: $color-floral-white;
+                    padding-bottom: 1rem;
+                }
+
+                .hpp-multisystemic__tabs-container {
+                    background-color: $color-floral-white;
+                }
+
+                .hpp-multisystemic__select--input {
+                    margin-top: 0;
+                }
+
+                &::before {
+                    //Tape
+                    content: '';
+                    background-image: url("/assets/images/hpp-profile/tape.png");
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    background-position: center;
+                    height: 80px;
+                    width: 13.625rem;
+                    position: absolute;
+                    z-index: 2;
+                    top: -35px;
+                    left: 50%;
+                    transform: translateX(-50%) rotate(2deg);
                 }
             }
 
@@ -4260,8 +4368,6 @@
                         font-size: 1rem;
                     }
                 }
-
-
             }
 
             #multisystemic1 {
@@ -4305,10 +4411,25 @@
             #multisystemic2 {
                 .hpp-multisystemic__study {
 
-                    margin-bottom: 2rem;
+                    margin-bottom: 2.5rem;
 
-                    &:first-of-type {
+                    /* &:first-of-type {
                         max-width: 17.6875rem;
+                    } */
+
+                    &--bigger:nth-of-type(3) {
+                        max-width: 32ch;
+                    }
+                }
+
+                .hpp-multisystemic__report {
+                    .hpp-multisystemic__study {
+                        margin-top: 2rem;
+                    }
+
+                    .hpp-multisystemic__report--conditions-smaller {
+                        font-size: .8125rem;
+                        line-height: 1.0562rem;
                     }
                 }
 
@@ -4357,16 +4478,25 @@
 
             #multisystemic3 {
                 .hpp-multisystemic__study {
+                    margin-bottom: 2.3125rem;
 
-                    margin-bottom: 2rem;
+                    &--bigger {
+                        .hpp-multisystemic__study--text {
+                            max-width: 32ch;
+                        }
+                    }
 
-                    &:first-of-type {
+                    /* &:first-of-type {
                         max-width: 18.6875rem;
                     }
 
                     &:last-of-type {
                         max-width: 15.6875rem;
-                    }
+                    } */
+                }
+
+                .hpp-multisystemic__condition {
+                    max-width: 41ch;
                 }
 
                 .hpp-multisystemic__condition.hpp-multisystemic__condition--dagger {
@@ -4431,14 +4561,14 @@
 
                         &:last-of-type {
                             .hpp-multisystemic__curiositie--text {
-                                max-width: 20rem;
+                                max-width: 30ch;
                             }
                         }
                     }
                 }
             }
 
-            @media screen and (min-width: 769px) {
+            @media screen and (min-width: 1023px) {
 
                 #multisystemic1,
                 #multisystemic2,
@@ -4448,7 +4578,7 @@
             }
 
             &.multisystemic1 {
-                @media screen and (min-width: 1024px) {
+                @media screen and (min-width: 1023px) {
                     background-image: url("/assets/images/hpp-profile/folder-open--tab1.png");
                     background-repeat: no-repeat;
                     background-size: 100%;
@@ -4470,10 +4600,15 @@
                 background-position: top;
             }
 
+            [role="tabpanel"] {
+                padding-left: 0;
+                padding-right: 0;
+                padding-top: 0;
+            }
         }
 
         &__condition {
-            margin-bottom: 2rem;
+            // margin-bottom: 2rem;
             // margin-left: 4rem;
             // margin-right: 4rem;
             position: relative;
@@ -4482,6 +4617,7 @@
             font-weight: 400;
             line-height: 21px;
             max-width: 289px;
+            padding-left: .625rem;
 
             @media screen and (min-width: 768px) {
                 margin: 0 auto;
@@ -4492,7 +4628,14 @@
                 line-height: 18.2px;
             }
 
-            &--dagger {
+            .symbol-sup {
+                font-size: 0.8em;
+                top: 5px;
+                left: 5px;
+                position: absolute;
+            }
+
+            /* &--dagger {
                 &::before {
                     content: '†';
                     position: absolute;
@@ -4520,7 +4663,7 @@
                         left: -8px;
                     }
                 }
-            }
+            } */
         }
 
         &__select {
@@ -4536,11 +4679,9 @@
                 padding: 0.5rem 1rem;
                 margin-top: 1rem;
                 position: relative;
-
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
-
                 padding-right: 2.25rem;
             }
 
@@ -4557,15 +4698,48 @@
                 height: .9375rem;
             }
 
-            @media screen and (min-width: 1024px) {
+            @media screen and (min-width: 1023px) {
                 display: none;
             }
         }
 
         &__report {
 
+            picture {
+                position: relative;
+            }
+
+            figcaption {
+                color: $color-granite-grey;
+                font-size: 12px;
+                font-weight: 600;
+                line-height: .75rem;
+                transform: rotate(-90deg);
+                position: absolute;
+                left: -35px;
+                top: 37%;
+                text-align: center;
+
+                @media screen and (min-width: 769px) {
+                    position: relative;
+                    transform: unset;
+                    left: unset;
+                    top: unset;
+                }
+            }
+
+            .hpp-multisystemic__study--bigger {
+                max-width: 40ch;
+
+                .hpp-multisystemic__study--text {
+                    max-width: 37ch;
+                }
+            }
+
             &--title {
-                padding: 1rem 0 0.5rem 0 !important;
+                // padding: 1rem 0 0.5rem 0 !important;
+                margin: 1rem 0;
+                max-width: 27ch;
 
                 @media screen and (min-width: 1024px) {
                     font-size: 1.5rem;
@@ -4574,7 +4748,12 @@
             }
 
             &--chart {
-                margin: 2rem 0 1.5rem 0;
+                margin: 0;
+                max-width: 500px;
+
+                @media screen and (min-width: 769px) {
+                    max-width: 100%;
+                }
 
                 @media screen and (min-width: 1024px) {
                     margin-bottom: 0.5rem;
@@ -4590,19 +4769,26 @@
                         display: block;
                     }
                 }
-
             }
 
             &--content {
                 position: relative;
                 font-size: .875rem;
                 line-height: 18.2px;
-
                 text-align: left;
-                margin-bottom: 0.5rem;
+
+                &-after-retrospective-chart {
+                    margin-top: .625rem;
+                    margin-bottom: .75rem;
+                }
 
                 @media screen and (min-width: 768px) {
                     margin-bottom: 0;
+                }
+
+                .symbol-sup {
+                    top: -0.3125rem;
+                    font-size: 0.8em;
                 }
 
                 .positioned {
@@ -4614,7 +4800,9 @@
 
                 &--harm {
                     margin-top: 1rem;
-                    padding-bottom: 5rem;
+                    padding-bottom: 4rem;
+                    max-width: 36ch !important;
+                    margin-left: 0!important;
 
                     @media screen and (min-width: 769px) {
                         width: 50rem;
@@ -4656,6 +4844,48 @@
                 &--mt1 {
                     margin-top: 1rem;
                 }
+
+                sup {
+                    font-size: 0.8em;
+                }
+            }
+
+            .hpp-multisystemic__study {
+                &--head-text {
+                    margin-top: 0;
+                    margin-bottom: 2.5rem;
+                    line-height: 1.3125rem;
+                    max-width: 95%;
+                }
+
+                &--text {
+                    font-size: 1rem;
+                    line-height: 1.4rem;
+                }
+
+                &--condition {
+                    margin-top: 2rem;
+                    max-width: 41ch;
+                    position: relative;
+                    padding-left: .625rem;
+
+                    sup {
+                        top: 10px;
+                        left: 5px;
+                        position: absolute;
+                    }
+                }
+            }
+
+            .hpp__profile__subhead--retrospective-chart {
+                margin-top: 1.5625rem;
+                margin-bottom: 2rem;
+            }
+
+            .hpp__profile__title--blue {
+                padding-top: 0;
+                margin-top: 1.5rem;
+                max-width: 24ch;
             }
         }
 
@@ -4704,6 +4934,22 @@
                 font-weight: 700;
                 margin-top: 2rem;
                 margin-bottom: 1rem;
+            }
+        }
+
+        .wrapper {
+            @media screen and (max-width: 1023px) {
+                &--desktop {
+                    margin: 0;
+                    max-width: 100%;
+                }
+            }
+
+            @media screen and (min-width: 1024px) {
+                &--mobile {
+                    margin: 0;
+                    max-width: 100%;
+                }
             }
         }
 

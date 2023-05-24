@@ -5,7 +5,7 @@ const data = [
     title: 'Neurologic<sup>9</sup>',
     word: 'Neurologic',
     icon: '/assets/images/hpp-profile/skeleton/neurologic-icon-active.svg',
-    text: 'Fatigue, headaches, sleep disturbances, neuropathy, and hearing loss',
+    text: 'Headaches, sleep disturbances, neuropathy, and hearing loss',
     image1: '/assets/images/hpp-profile/skeleton/neurologic-img.png',
     imageAlt1: 'Neurologic image',
     image2: '',
@@ -19,18 +19,18 @@ const data = [
     title: 'Neurologic<sup>3,6,9*</sup>',
     word: 'Neurologic',
     icon: '/assets/images/hpp-profile/skeleton/neurologic-icon-active.svg',
-    text: 'Headache, sleep disturbance, and seizures',
+    text: 'Fatigue, headache, sleep disturbance, and seizures',
     image1: '/assets/images/hpp-profile/skeleton/neurologic-img--infants.png',
     imageAlt1: 'Neurologic image',
     image2: '',
     imageAlt2: '',
-    condition: '<p>*Vitamin B<sub>6</sub>–responsive seizures are most commonly reported in infants.</p>',
+    condition: '<p><sup>*</sup>Vitamin B<sub>6</sub>–responsive seizures are most commonly reported in infants.</p>',
     type: 'infants'
   },
   {
     active: false,
     id: 'dental',
-    title: 'Dental<sup>1,9</sup>',
+    title: 'Dental<sup>1,10,11</sup>',
     word: 'Dental',
     icon: '/assets/images/hpp-profile/skeleton/dental-icon-active.svg',
     text: 'Adult tooth loss, abnormal dentition, and periodontal disease',
@@ -39,13 +39,13 @@ const data = [
     image2: '',
     imageAlt2: '',
     condition:
-            '<p>Periodontal disease particularly in the anterior region in a 27-year-old adult.</p> <p>Reproduced with permission from Bloch-Zupan A. <em>Int Jour Paedtr Dent.</em>2016;26:426-438.</p>',
+            '<p>Periodontal disease particularly in the anterior region in a 27-year-old adult.</p> <p>Reproduced with permission from Bloch-Zupan A. <em>Int J Paediatr Dent.</em> 2016;26(6):426-438.</p>',
     type: 'adults'
   },
   {
     active: false,
     id: 'dental--infants',
-    title: 'Dental<sup>9,10</sup>',
+    title: 'Dental<sup>3,11</sup>',
     word: 'Dental',
     icon: '/assets/images/hpp-profile/skeleton/dental-icon-active.svg',
     text: 'Premature or nontraumatic tooth loss with root intact and caries',
@@ -54,13 +54,13 @@ const data = [
     image2: '',
     imageAlt2: '',
     condition:
-            '<p>Radiograph shows changes in the shape of the crowns and enlarged pulp chambers.</p><p>Reproduced with permission from Reibel A. et al. <em>Orphanet J. Rare Dis.</em> 2009:4-6</p>',
+            '<p>Radiograph shows changes in the shape of the crowns and enlarged pulp chambers.</p><p>RReproduced with permission from Reibel A, et al. <em>Orphanet J Rare Dis.</em> 2009:4-6.</p>',
     type: 'infants'
   },
   {
     active: false,
     id: 'muscular',
-    title: 'Muscular<sup>9,19</sup>',
+    title: 'Muscular<sup>6,10,12</sup>',
     word: 'Muscular',
     icon: '/assets/images/hpp-profile/skeleton/muscular-icon-active.svg',
     text: 'Muscle pain and weakness, muscular hypotonia, reduced grip force, history of abnormal gait, immobility, and tendon calcification',
@@ -111,7 +111,7 @@ const data = [
     image2: '',
     imageAlt2: '',
     condition:
-            '<p>Radiograph of right knee demonstrating meniscal chondrocalcinosis. </p> <p> Reproduced with permission from MacMullan P and McCarthy G. <em>Ther Adv Musculoskel Dis.</em> 2012;4(2):121-131.</p>',
+            '<p>Radiograph of right knee demonstrating meniscal chondrocalcinosis.</p> <p>Reproduced with permission from MacMullan P and McCarthy G. <em>Ther Adv Musculoskel Dis.</em> 2012;4(2):121-131.</p>',
     type: 'adults'
   },
   {
@@ -154,7 +154,7 @@ const data = [
     imageAlt1: 'Renal image',
     image2: '',
     imageAlt2: '',
-    condition: '<p>Renal ultrasound demonstrating nephrocalcinosis (arrows).</p><p>Reproduced with permission from Mohn A, et al. <em>Acta Paediatrica.</em> 100(7), e43-e46.</p>',
+    condition: '<p>Renal ultrasound demonstrating nephrocalcinosis (arrows).</p><p>Reproduced with permission from Mohn A, et al. <em>Acta Paediatr.</em> 2011;100(7):e43-e46.</p>',
     type: 'infants'
   },
   {
@@ -174,7 +174,7 @@ const data = [
   {
     active: false,
     id: 'orthopedic--infants',
-    title: 'Orthopedic/skeletal<sup>1,3,9,14,17</sup>',
+    title: 'Orthopedic/skeletal<sup>11</sup>',
     word: 'Orthopedic/ Skeletal',
     icon: '/assets/images/hpp-profile/skeleton/orthopedic-icon-active.svg',
     text: 'Hypomineralization, skeletal deformities, bowing, short stature, bone pain, rickets, and fractures',
@@ -188,7 +188,7 @@ const data = [
   {
     active: false,
     id: 'developmental--infants',
-    title: 'Developmental/growth<sup>11,13</sup>',
+    title: 'Developmental/growth<sup>11-13</sup>',
     word: 'Developmental/ Growth',
     icon: '/assets/images/hpp-profile/skeleton/developmental-icon-active.svg',
     text: 'Short stature, failure to thrive, poor weight gain, and delayed or missed motor milestones',
@@ -196,7 +196,7 @@ const data = [
     imageAlt1: 'Developmental image',
     image2: '',
     imageAlt2: '',
-    condition: '<p>Flared wrists are indicative of rachitic widening, with rickets associated with short stature and delayed walking.</p> <p>Reproduced with permission from Whyte MP. <em>Genetics of Bone Biology and Skeletal Disease.</em> 2013; 337-360.</p>',
+    condition: '<p>Flared wrists are indicative of rachitic widening, with rickets associated with short stature and delayed walking.</p><p>Reproduced with permission from Whyte MP. <em>Genetics of Bone Biology and Skeletal Disease.</em> 2013; 337-360.</p>',
     type: 'infants'
   }
 ]
