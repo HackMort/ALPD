@@ -5063,8 +5063,8 @@
             }
 
             .hpp-multisystemic__study--bigger {
-                max-width: 40ch;
-
+                margin-left: 0;
+                width: fit-content;
 
                 .hpp-multisystemic__study--text {
                     max-width: 37ch;
@@ -5250,7 +5250,7 @@
                     margin-top: 0;
                     margin-bottom: 2.5rem;
                     line-height: 1.3125rem;
-                    max-width: 95%;
+                    max-width: 40ch;
 
                     @media screen and (min-width: 768px) {
                         max-width: 96ch;
@@ -5266,11 +5266,11 @@
                     margin-top: 2rem;
                     max-width: 41ch;
                     position: relative;
-                    padding-left: .625rem;
+                    padding-left: .0313rem;
 
                     sup {
                         top: 10px;
-                        left: 5px;
+                        left: -5px;
                         position: absolute;
                     }
 
