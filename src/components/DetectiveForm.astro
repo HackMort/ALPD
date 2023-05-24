@@ -135,16 +135,15 @@
   <div
     class="form__control form__control--checkbox"
     data-touched="false"
-    data-required="true"
-    data-is-valid="false"
+    data-required="false"
+    data-is-valid="true"
   >
     <div class="form__control-checkbox">
       <input
         id="sign-me-up"
         type="checkbox"
         name="sign-me-up"
-        required
-        aria-required="true"
+        aria-required="false"
         onblur="validateFormControl(event)"
         onchange="validateFormControl(event)"
       />
@@ -154,7 +153,7 @@
         Alexion thinks may interest me.
       </label>
     </div>
-    <p class="form__control-error">Please select the checkbox</p>
+    <!-- <p class="form__control-error">Please select the checkbox</p> -->
   </div>
 
   <div class="form__submit">
