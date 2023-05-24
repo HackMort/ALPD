@@ -4,17 +4,27 @@
     display: flex;
 
     &--desktop {
-        @media screen and (max-width: 768px) {
-            display: none;
+        display: none;
+
+        @media screen and (min-width: 900px) {
+            display: flex;
+
+            .skeleton__word {
+                z-index: 1;
+            }
         }
     }
 
     &--mobile {
-        display: none;
+        display: flex;
+        flex-direction: column;
 
-        @media screen and (max-width: 768px) {
-            display: flex;
-            flex-direction: column;
+        @media screen and (min-width: 900px) {
+            display: none;
+        }
+
+        .skeleton__content {
+            margin: 0 auto;
         }
     }
 
@@ -192,7 +202,7 @@
             }
 
             .skeleton__line--after2 {
-                width: 25%;
+                width: 24%;
                 top: 21.5rem;
                 left: calc(7.6rem + 7.7rem);
                 z-index: 0;

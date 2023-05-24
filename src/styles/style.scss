@@ -4682,6 +4682,25 @@
                     }
                 }
 
+                @media screen and (min-width: 900px) {
+                    .skeleton--desktop {
+                        display: none;
+                    }
+
+                    .skeleton--mobile {
+                        display: flex;
+                    }
+                }
+
+                @media screen and (min-width: 1200px) {
+                    .skeleton--desktop {
+                        display: flex;
+                    }
+
+                    .skeleton--mobile {
+                        display: none;
+                    }
+                }
 
             }
 
