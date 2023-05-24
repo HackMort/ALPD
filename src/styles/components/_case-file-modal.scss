@@ -73,6 +73,24 @@
 
             height: 5rem;
 
+            margin-bottom: -1px;
+
+            &[data-active-tab="case-link-to-panel-1"] {
+                background-image: url("/assets/images/case-files/modal/nathan-tab-bg-desktop.png");
+            }
+
+            &[data-active-tab="case-link-to-panel-2"] {
+                background-image: url("/assets/images/case-files/modal/anna-tab-bg-desktop.png");
+            }
+
+            &[data-active-tab="case-link-to-panel-3"] {
+                background-image: url("/assets/images/case-files/modal/hannah-tab-bg-desktop.png");
+            }
+
+            &[data-active-tab="case-link-to-panel-4"] {
+                background-image: url("/assets/images/case-files/modal/sarah-tab-bg-desktop.png");
+            }
+
             li {
                 height: auto;
                 // margin-right: 0;
