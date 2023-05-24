@@ -2883,11 +2883,15 @@
             z-index: 2;
             transform: rotate(-28deg) translateX(-50%);
             transform-origin: left;
-            top: 72%;
 
             @media screen and (min-width: 768px) {
                 top: 0.5rem;
                 transform: rotate(5deg) translateX(-50%);
+            }
+
+            @media screen and (max-width: 768px) {
+                left: 25%;
+                transform: rotate(-28deg) translateX(-50%);
             }
         }
     }
