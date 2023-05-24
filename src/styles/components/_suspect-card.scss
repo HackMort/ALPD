@@ -75,10 +75,9 @@
     padding: 1rem;
 
     img {
-        width: 197.86px;
-        height: 240.91px;
-        max-width: 25rem;
-        margin: -1rem auto 0 auto;
+        width: 100%;
+        max-width: 12.375rem;
+        margin: 0 auto 0 auto;
     }
 
     @media screen and (min-width: 1024px) {
@@ -89,13 +88,20 @@
         }
 
         img {
-            max-width: 12.5rem;
+            width: 11.5113rem;
+            height: 15.8956rem;
             margin: -1rem auto 0 auto;
         }
     }
 
     @media screen and (min-width: 1400px) {
         padding: 1rem;
+
+        img {
+            width: 12.3275rem;
+            height: 16.0494rem;
+            margin: -1rem auto 0 auto;
+        }
     }
 }
 
