@@ -5148,6 +5148,10 @@
                     &:nth-of-type(1) {
                         margin-top: .625rem;
                         margin-bottom: .75rem;
+
+                        @media screen and (min-width: 700px) {
+                            margin-bottom: 0;
+                        }
                     }
 
                     @media screen and (min-width: 769px) {
