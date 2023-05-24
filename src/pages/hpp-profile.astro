@@ -82,9 +82,7 @@ const internalNavLinks = [
   <section id="hpp-multisystemic" class="section hpp-multisystemic">
     <div class="wrapper wrapper--desktop">
       <h2 class="hpp__profile__title hpp__profile__title--desktop">
-        <div class="wrapper wrapper--mobile">
           How hypophosphatasia CAN cause harm
-        </div>
       </h2>
       <article class="hpp-multisystemic__tabs">
         <ul role="tablist" class="hpp-multisystemic__tabs--nav">
@@ -184,7 +182,7 @@ const internalNavLinks = [
                     </div>
                   </div>
                 </article>
-                <article class="hpp-multisystemic__studies">
+                <article class="hpp-multisystemic__studies hpp-multisystemic__studies--adults">
                   <h3
                     class="hpp-multisystemic__definition--title hpp-multisystemic__definition--title-mobile"
                   >
@@ -260,7 +258,7 @@ const internalNavLinks = [
 
                     <picture>
                       <source
-                        media="(min-width: 769px)"
+                        media="(min-width: 700px)"
                         srcset="/assets/images/hpp-profile/adult-signs-and-symptoms-chart-8m--desktop.png"
                       />
                       <img
@@ -300,7 +298,7 @@ const internalNavLinks = [
                     <div>
                       <picture>
                         <source
-                          media="(min-width: 769px)"
+                          media="(min-width: 700px)"
                           srcset="/assets/images/hpp-profile/adult-signs-and-symptoms-chart-9m--desktop.png"
                         />
                         <img
@@ -568,7 +566,7 @@ const internalNavLinks = [
                     </div>
                   </div>
 
-                  <article class="hpp-multisystemic__studies">
+                  <article class="hpp-multisystemic__studies hpp-multisystemic__studies--children">
                     <h3
                       class="hpp-multisystemic__definition--title hpp-multisystemic__definition--title-mobile"
                     >
@@ -591,7 +589,7 @@ const internalNavLinks = [
                     <div class="hpp-multisystemic__study hpp-multisystemic__study--bigger">
                       <h2 class="hpp-multisystemic__study--percentage">29%</h2>
                       <p class="hpp-multisystemic__study--text">
-                        (7/24) of school-aged children experienced <strong>pain that interfered with daily activities<sup>6†</sup></strong>
+                        (7/24) of school-aged children experienced <span class="text--only-desktop">higher than average levels of</span> <strong>pain that interfered with daily activities<sup>6†</sup></strong>
                       </p>
                     </div>
                   </article>
@@ -648,7 +646,7 @@ const internalNavLinks = [
 
                 <picture>
                   <source
-                    media="(min-width: 769px)"
+                    media="(min-width: 700px)"
                     srcset="/assets/images/hpp-profile/adolescents-signs-and-symptoms-chart--desktop.png"
                   />
                   <img
@@ -659,22 +657,22 @@ const internalNavLinks = [
                   <figcaption>Percent of patients</figcaption>
                 </picture>
 
-                <p class="hpp-multisystemic__report--conditions">
+                <p class="hpp-multisystemic__report--conditions hpp-multisystemic__report--conditions--children-after-chart">
                   Multinational, observational, prospective Global Hypophosphatasia Registry study conducted in children (n=121; &lt;18 years) from January 2015 to September 2017.<sup>9</sup>
                 </p>
 
                 <p
-                  class="hpp-multisystemic__report--conditions hpp-multisystemic__report--conditions-smaller hpp-multisystemic__report--conditions--mt1"
+                  class="hpp-multisystemic__report--conditions hpp-multisystemic__report--conditions--children-after-chart hpp-multisystemic__report--conditions-smaller hpp-multisystemic__report--conditions--mt1"
                 >
                   <sup>a</sup>Excludes patients aged &lt;2 years at enrollment.
                 </p>
 
-                <p class="hpp-multisystemic__report--conditions hpp-multisystemic__report--conditions-smaller">
+                <p class="hpp-multisystemic__report--conditions hpp-multisystemic__report--conditions--children-after-chart hpp-multisystemic__report--conditions-smaller">
                   <sup>b</sup>Excludes patients aged &lt;6 months at enrollment.
                 </p>
 
                 <div
-                  class="hpp-multisystemic__study hpp-multisystemic__study--bigger"
+                  class="hpp-multisystemic__study hpp-multisystemic__study--bigger hpp-multisystemic__study--bigger-children"
                 >
                   <h2 class="hpp-multisystemic__study--percentage">~27%</h2>
                   <p class="hpp-multisystemic__study--text">
@@ -928,7 +926,7 @@ const internalNavLinks = [
                     </div>
                   </div>
 
-                  <div class="hpp-multisystemic__studies">
+                  <div class="hpp-multisystemic__studies hpp-multisystemic__studies--infants">
                     <h3
                       class="hpp-multisystemic__definition--title hpp-multisystemic__definition--title-mobile"
                     >
@@ -995,7 +993,7 @@ const internalNavLinks = [
 
                 <picture>
                   <source
-                    media="(min-width: 769px)"
+                    media="(min-width: 700px)"
                     srcset="/assets/images/hpp-profile/overall-survival-chart--dk.png"
                   />
                   <img
@@ -1005,7 +1003,7 @@ const internalNavLinks = [
                   />
                 </picture>
 
-                <p>
+                <p class="hpp-multisystemic__survival--footnote">
                   Adapted from Whyte M, et al. Poster presented at: Pediatric Academic Societies and Asian Society for Pediatric Research Joint Meeting; May 3-6, 2014; Vancouver, BC, Canada.
                 </p>
               </div>
@@ -1254,6 +1252,7 @@ const internalNavLinks = [
           content="Learn the risk of misdiagnosis"
           linkURL="/usual-suspects/"
           bypassModal
+          className="cta--hpp-profile"
         />
       </div>
     </div>
