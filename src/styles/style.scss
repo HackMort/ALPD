@@ -3203,13 +3203,13 @@
         &__section {
             background-image: url("/assets/images/hpp-profile/frame-polaroid-mb.png");
             background-repeat: no-repeat;
-            background-size: 100% 99%;
+            background-size: 100% 100%;
             position: relative;
 
             margin-left: auto;
             margin-right: auto;
 
-            padding: 3rem 1.4rem;
+            padding: 2.9rem 1rem 1rem;
 
             margin-top: 3rem;
             margin-bottom: 2rem;
@@ -3235,6 +3235,18 @@
                 }
             }
 
+            @media screen and (min-width: 375px) {
+                padding: 2.9rem 1.5rem 1rem;
+            }
+
+            @media screen and (min-width: 600px) {
+                padding: 2.9rem 2rem 1rem;
+            }
+
+            @media screen and (min-width: 600px) {
+                padding: 2.8rem 2rem 1rem;
+            }
+
             @media screen and (min-width: 768px) {
                 background-image: url("/assets/images/hpp-profile/frame-polaroid.png");
 
@@ -3245,17 +3257,17 @@
             &--bg-white {
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
-                background-color: $color-cararra;
+                background-image: url("/assets/images/hpp-profile/bg_charts_mb.png");
+                // background-color: $color-cararra;
                 width: 100%;
-
                 padding-top: 0.5rem;
                 padding-bottom: 1.5rem;
-
-                box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25);
+                // box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25);
 
                 @media screen and (min-width: 768px) {
-                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
+                    background-image: url("/assets/images/hpp-profile/bg_charts.png");
                     padding-top: 8rem;
                 }
             }
