@@ -5044,7 +5044,7 @@
             figcaption {
                 color: $color-granite-grey;
                 font-size: 12px;
-                font-weight: 600;
+                font-weight: 700;
                 line-height: .75rem;
                 transform: rotate(-90deg);
                 position: absolute;
@@ -5053,6 +5053,7 @@
                 text-align: center;
 
                 @media screen and (min-width: 700px) {
+                    color: $color-carbon;
                     position: relative;
                     transform: unset;
                     left: unset;
