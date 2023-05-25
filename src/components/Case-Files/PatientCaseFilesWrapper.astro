@@ -55,6 +55,10 @@ const {} = Astro.props;
       `#patient-id-${selectedValue}`
     );
     patientCaseFile?.classList.add("active");
+
+    const desktopTablist = document.querySelector('.hpp-multisystemic__tabs--nav')
+    const a = desktopTablist.querySelector(`[href="#${selectedValue}"]`)
+    
     patientDotList?.querySelectorAll("li").forEach((dot) => {
       dot?.classList.remove("active");
     });
