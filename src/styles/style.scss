@@ -2941,6 +2941,7 @@
         @media screen and (min-width: 1024px) {
             font-size: 3.5rem;
             line-height: 56px;
+            max-width: 100%;
         }
     }
 
@@ -3061,7 +3062,7 @@
     }
 
     sup {
-        font-size: 0.6rem;
+        font-size: 0.8rem;
     }
 
     &__image-container {
@@ -3182,6 +3183,38 @@
 
                 z-index: 0;
             }
+
+            @media screen and (min-width: 1700px){
+                top: -25%;
+            }
+
+            @media screen and (min-width: 1800px){
+                top: -30%;
+            }
+
+            @media screen and (min-width: 1900px){
+                top: -35%;
+            }
+
+            @media screen and (min-width: 2000px){
+                top: -40%;
+            }
+
+            @media screen and (min-width: 2100px){
+                top: -45%;
+            }
+
+            @media screen and (min-width: 2200px){
+                top: -50%;
+            }
+
+            @media screen and (min-width: 2400px){
+                top: -55%;
+            }
+
+            @media screen and (min-width: 2600px){
+                top: -65%;
+            }
         }
     }
 
@@ -3210,13 +3243,13 @@
         &__section {
             background-image: url("/assets/images/hpp-profile/frame-polaroid-mb.png");
             background-repeat: no-repeat;
-            background-size: 100% 99%;
+            background-size: 100% 100%;
             position: relative;
 
             margin-left: auto;
             margin-right: auto;
 
-            padding: 3rem 1.4rem;
+            padding: 2.9rem 1rem 1rem;
 
             margin-top: 3rem;
             margin-bottom: 2rem;
@@ -3242,6 +3275,18 @@
                 }
             }
 
+            @media screen and (min-width: 375px) {
+                padding: 2.9rem 1.5rem 1rem;
+            }
+
+            @media screen and (min-width: 600px) {
+                padding: 2.9rem 2rem 1rem;
+            }
+
+            @media screen and (min-width: 600px) {
+                padding: 2.8rem 2rem 1rem;
+            }
+
             @media screen and (min-width: 768px) {
                 background-image: url("/assets/images/hpp-profile/frame-polaroid.png");
 
@@ -3252,17 +3297,17 @@
             &--bg-white {
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
-                background-color: $color-cararra;
+                background-image: url("/assets/images/hpp-profile/bg_charts_mb.png");
+                // background-color: $color-cararra;
                 width: 100%;
-
                 padding-top: 0.5rem;
                 padding-bottom: 1.5rem;
-
-                box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25);
+                // box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25);
 
                 @media screen and (min-width: 768px) {
-                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
+                    background-image: url("/assets/images/hpp-profile/bg_charts.png");
                     padding-top: 8rem;
                 }
             }
@@ -3556,11 +3601,14 @@
             align-items: center;
             margin-bottom: 1rem;
 
-            &--content {
+            @media screen and (min-width: 769px) {
                 background-image: url(/assets/images/red-frame-2.png);
                 background-size: 100% 100%;
                 background-repeat: no-repeat;
                 background-position: center;
+            }
+
+            &--content {
                 max-width: 73ch;
                 padding: 5rem 4rem;
                 font-size: 1rem;
@@ -3647,6 +3695,10 @@
                 transform: rotate(334deg);
                 left: -50%;
 
+                @media screen and (min-width: 428px) {
+                    top: 2.5rem;
+                }
+
                 @media screen and (min-width: 768px) {
                     width: calc(100vw * 2);
                     top: 23px;
@@ -3656,6 +3708,22 @@
 
                 @media screen and (min-width: 769px) {
                     top: 7px;
+                }
+
+                @media screen and (min-width: 1500px) {
+                    top: 5px;
+                }
+
+                @media screen and (min-width: 1550px) {
+                    top: 0;
+                }
+
+                @media screen and (min-width: 1600px) {
+                    top: calc(((100vw - 1500px) / 100) * -5);
+                }
+
+                @media screen and (min-width: 2100px) {
+                    top: calc(((100vw - 1500px) / 100) * -4.5);
                 }
             }
 
@@ -3784,13 +3852,17 @@
 
             &--content {
                 font-family: 'Special Elite', cursive;
-                max-width: 73ch;
+                max-width: 32ch;
                 text-align: center;
                 margin: auto;
 
                 &--text-red {
                     color: $color-cinnabar;
                     font-family: inherit;
+                }
+
+                @media screen and (min-width: 1024px) {
+                    max-width: 73ch;
                 }
             }
 
@@ -3947,14 +4019,14 @@
                     color: $color-red;
                 }
 
-                @media screen and (min-width: 475px) {
-                    max-width: 49ch;
+                @media screen and (min-width: 400px) {
+                    max-width: none;
                     width: 95%;
                 }
 
-                /* @media screen and (min-width: 769px) {
-                    width: 65%;
-                } */
+                @media screen and (min-width: 769px) {
+                    max-width: 49ch;
+                }
 
                 /* @media screen and (min-width: 1024px) {
                     max-width: 31.25rem;
@@ -4556,11 +4628,16 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
+                margin-right: 0;
 
                 a {
                     font-family: 'Special Elite', cursive;
                     background: transparent;
                     border: none;
+                    font-size: 1.5rem;
+                    line-height: 2.1rem;
+                    padding-left: 0;
+                    padding-right: 0;
 
                     &:hover {
                         color: $color-cinnabar;
@@ -4680,6 +4757,25 @@
                     }
                 }
 
+                @media screen and (min-width: 900px) {
+                    .skeleton--desktop {
+                        display: none;
+                    }
+
+                    .skeleton--mobile {
+                        display: flex;
+                    }
+                }
+
+                @media screen and (min-width: 1200px) {
+                    .skeleton--desktop {
+                        display: flex;
+                    }
+
+                    .skeleton--mobile {
+                        display: none;
+                    }
+                }
 
             }
 
@@ -5019,7 +5115,7 @@
             figcaption {
                 color: $color-granite-grey;
                 font-size: 12px;
-                font-weight: 600;
+                font-weight: 700;
                 line-height: .75rem;
                 transform: rotate(-90deg);
                 position: absolute;
@@ -5028,6 +5124,7 @@
                 text-align: center;
 
                 @media screen and (min-width: 700px) {
+                    color: $color-carbon;
                     position: relative;
                     transform: unset;
                     left: unset;
@@ -5037,8 +5134,8 @@
             }
 
             .hpp-multisystemic__study--bigger {
-                max-width: 40ch;
-
+                margin-left: 0;
+                width: fit-content;
 
                 .hpp-multisystemic__study--text {
                     max-width: 37ch;
@@ -5122,6 +5219,10 @@
                     &:nth-of-type(1) {
                         margin-top: .625rem;
                         margin-bottom: .75rem;
+
+                        @media screen and (min-width: 700px) {
+                            margin-bottom: 0;
+                        }
                     }
 
                     @media screen and (min-width: 769px) {
@@ -5180,13 +5281,37 @@
             }
 
             &--bg {
+                position: relative;
+                z-index: 1;
+
+                &-image {
+                    display: none;
+                }
+
                 @media screen and (min-width: 769px) {
-                    background-image: url("/assets/images/hpp-profile/bg-paper-reports.png");
+                    padding: 3rem 0 3rem 2rem;
+                    margin-top: 2rem;
+                    margin-bottom: 7.5rem;
+                    /* background-image: url("/assets/images/hpp-profile/paper-bg-tabs.png");
                     background-repeat: no-repeat;
                     background-size: 100% 100%;
-                    background-position: top left;
-                    padding: 3rem 4rem;
-                    margin-top: 2rem;
+                    background-position: top left; */
+                }
+
+                @media screen and (min-width: 1023px) {
+                    &-image {
+                        display: block;
+                        position: absolute;
+                        max-width: none;
+                        width: calc(100% + 90px);
+                        height: 105%;
+                        z-index: -1;
+                        left: -35px;
+                        top: 0;
+                        transform: rotate(2deg);
+
+                        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    }
                 }
 
                 @media screen and (min-width: 1440px) {
@@ -5220,7 +5345,7 @@
                     margin-top: 0;
                     margin-bottom: 2.5rem;
                     line-height: 1.3125rem;
-                    max-width: 95%;
+                    max-width: 40ch;
 
                     @media screen and (min-width: 768px) {
                         max-width: 96ch;
@@ -5236,11 +5361,11 @@
                     margin-top: 2rem;
                     max-width: 41ch;
                     position: relative;
-                    padding-left: .625rem;
+                    padding-left: .0313rem;
 
                     sup {
                         top: 10px;
-                        left: 5px;
+                        left: -5px;
                         position: absolute;
                     }
 
