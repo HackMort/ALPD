@@ -549,6 +549,14 @@
         }
     }
 
+    .alpd-academy__deficient-pic.md\:mb-1 {
+        @media screen and (min-width: 768px) {
+            margin-right: auto;
+            margin-left: auto;
+            max-width: 831px;
+        }
+    }
+
     .alpd-academy__deficient-paragraph-title {
         font-size: 1.125rem;
         font-weight: 600;
@@ -5141,7 +5149,7 @@
                     margin-top: 1rem;
                     padding-bottom: 4rem;
                     max-width: 36ch !important;
-                    margin-left: 0!important;
+                    margin-left: 0 !important;
 
                     @media screen and (min-width: 425px) {
                         max-width: 63ch !important;

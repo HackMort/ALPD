@@ -6,7 +6,7 @@ import ModalMobile from "../modals/ModalMobile.astro";
 const data_card_1 = {
     title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
     image: "/assets/images/usual-suspects/Suspect-1.png",
-    subtitle: "Osteopenia/Osteoporosis",
+    subtitle: "Osteopenia/<br>Osteoporosis",
     subtitle_secondary: `Oswaldo Porosis`,
     subtitle_superscript: "6-9",
     info: "Note: Patient may have osteopenia as a symptom of hypophosphatasia",
@@ -20,7 +20,7 @@ const data_card_1 = {
 const data_card_2 = {
     title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
     image: "/assets/images/usual-suspects/Suspect-2.png",
-    subtitle: "Chondrocalcinosis/pseudogout",
+    subtitle: "Chondrocalcinosis/<br>pseudogout",
     subtitle_secondary: "Sue Dogout",
     subtitle_superscript: "10,11",
     info: "Note: Patient may have pseudogout as a symptom of hypophosphatasia",
@@ -34,7 +34,7 @@ const data_card_3 = {
     title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
     image: "/assets/images/usual-suspects/Suspect-3.png",
     subtitle: "Fibromyalgia",
-    subtitle_secondary: "Phil “Big Bro” Myalgia",
+    subtitle_secondary: "Phil “Big Bro”<br>Myalgia",
     subtitle_superscript: "12",
     info: "",
     list: ["Fatigue", "Pain", "Muscle and joint stiffness", "Trouble sleeping"],
@@ -44,7 +44,7 @@ const data_card_3 = {
 const data_card_4 = {
     title: "Differential diagnoses for hypophosphatasia with shared symptoms:",
     image: "/assets/images/usual-suspects/Suspect-4.png",
-    subtitle: "Osteogenesis imperfecta",
+    subtitle: "Osteogenesis<br>imperfecta",
     subtitle_secondary: "Mr. Imperfect",
     subtitle_superscript: "2,13,14",
     info: "",
@@ -201,27 +201,3 @@ const data_card_4 = {
 </section>
 
 <script src="./toggle-modal.js"></script>
-
-<style>
-    .mobile--only {
-        display: block;
-        @media screen and (min-width: 1024px) {
-            display: none;
-        }
-    }
-    .desktop--only {
-        display: none;
-        @media screen and (min-width: 1024px) {
-            display: block;
-        }
-    }
-    .cards__grid_container {
-        display: grid;
-        grid-template-columns: repeat(4, 25%);
-    }
-    .usual-suspect__subtabs {
-        @media screen and (min-width: 1024px) {
-            display: none !important;
-        }
-    }
-</style>
