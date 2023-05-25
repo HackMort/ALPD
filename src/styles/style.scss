@@ -3968,14 +3968,14 @@
                     color: $color-red;
                 }
 
-                @media screen and (min-width: 475px) {
-                    max-width: 49ch;
+                @media screen and (min-width: 400px) {
+                    max-width: none;
                     width: 95%;
                 }
 
-                /* @media screen and (min-width: 769px) {
-                    width: 65%;
-                } */
+                @media screen and (min-width: 769px) {
+                    max-width: 49ch;
+                }
 
                 /* @media screen and (min-width: 1024px) {
                     max-width: 31.25rem;
