@@ -5230,13 +5230,35 @@
             }
 
             &--bg {
+                position: relative;
+                z-index: 1;
+
+                &-image {
+                    display: none;
+                }
+
                 @media screen and (min-width: 769px) {
-                    background-image: url("/assets/images/hpp-profile/bg-paper-reports.png");
+                    padding: 3rem 0 3rem 2rem;
+                    margin-top: 2rem;
+                    margin-bottom: 7.5rem;
+                    /* background-image: url("/assets/images/hpp-profile/paper-bg-tabs.png");
                     background-repeat: no-repeat;
                     background-size: 100% 100%;
-                    background-position: top left;
-                    padding: 3rem 4rem;
-                    margin-top: 2rem;
+                    background-position: top left; */
+                }
+
+                @media screen and (min-width: 1023px) {
+                    &-image {
+                        display: block;
+                        position: absolute;
+                        max-width: none;
+                        width: calc(100% + 90px);
+                        height: 105%;
+                        z-index: -1;
+                        left: -35px;
+                        top: 0;
+                        transform: rotate(2deg);
+                    }
                 }
 
                 @media screen and (min-width: 1440px) {
