@@ -3677,6 +3677,22 @@
                 @media screen and (min-width: 769px) {
                     top: 7px;
                 }
+
+                @media screen and (min-width: 1500px) {
+                    top: 5px;
+                }
+
+                @media screen and (min-width: 1550px) {
+                    top: 0;
+                }
+
+                @media screen and (min-width: 1600px) {
+                    top: calc(((100vw - 1500px) / 100) * -5);
+                }
+
+                @media screen and (min-width: 2100px) {
+                    top: calc(((100vw - 1500px) / 100) * -4.5);
+                }
             }
 
             &--pin {
