@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   const currentTarget = prevalenceLink.getAttribute('href')
   const tabsSection = document.getElementById('hpp-multisystemic')
+  if (!tabsSection) {
+    return
+  }
   const tabLinks = tabsSection.querySelectorAll(
     '.hpp-multisystemic__tabs--nav-item a'
   )
