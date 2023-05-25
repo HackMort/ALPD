@@ -65,18 +65,18 @@
               data-required="true"
               data-is-valid="false"
             >
-              <div class="form__control-input stayinput">
+              <div class="form__control-input">
                 <select
                   id="state"
                   name="state"
-                  class="form__control-select"
+                  class="form__control-select stayinput"
                   aria-placeholder="*State"
                   required
                   aria-required="true"
                   onblur="validateFormControl(event)"
                   onchange="validateFormControl(event)"
                 >
-                  <option value="" selected disabled>*State</option>
+                  <option value="" selected>*State</option>
                   <option value="AL">Alabama</option>
                   <option value="AK">Alaska</option>
                   <option value="AZ">Arizona</option>
@@ -182,18 +182,18 @@
               data-required="true"
               data-is-valid="false"
             >
-              <div class="form__control-input stayinput">
+              <div class="form__control-input">
                 <select
                   id="specialty"
                   name="specialty"
-                  class="form__control-select"
+                  class="form__control-select stayinput"
                   aria-placeholder="*Specialty"
                   required
                   aria-required="true"
                   onblur="validateFormControl(event)"
                   onchange="validateFormControl(event)"
                 >
-                  <option value="" selected disabled>*Specialty</option>
+                  <option value="" selected>*Specialty</option>
                   <option value="Dentistry">Dentistry</option>
                   <option value="Endocrinology">Endocrinology</option>
                   <option value="Genetics">Genetics</option>
@@ -387,9 +387,14 @@
           }else{
             errorLabel[6].style.display = 'none';
           }
+          if(inputs[5] === '' ){
+            errorLabel[5].style.display = 'block';
+          }else{
+            errorLabel[5].style.display = 'none';
+          }
         }
 
-            if(errorLabel[0].value!='' &&errorLabel[1].value!='' && errorLabel[2].value!='' && errorLabel[3].value!='' && errorLabel[4].value!='' && errorLabel[5].value!='' && check.checked===true){
+            if(inputs[0].value!='' &&inputs[1].value!='' && inputs[2].value!='' && inputs[3].value!='' && inputs[5].value!='' && check.checked===true){
               for(let item of absolutes){
                 item.style.display = 'none';
               }
