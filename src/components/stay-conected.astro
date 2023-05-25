@@ -365,6 +365,7 @@
         const inputs = document.querySelectorAll('.stayinput');
         const absolutes = document.querySelectorAll('.absolute-item');
         const check = document.querySelector('#terms-and-conditions2');
+        const check2 = document.querySelector('#terms-and-conditions');
         const stayDisplay = document.querySelector(".stay-connected__wrapper");
         const stay = document.querySelector(".stay-connected");
         const tymsg = document.querySelector(".ty-message");
@@ -424,6 +425,7 @@
                               stayDisplay.style.display = 'block';  
                               tymsg.style.display = 'none';  
                               check.checked = false;
+                              check2.checked = false;
                               for(let item of absolutes){
                                 item.style.display = 'block';
                               }  
