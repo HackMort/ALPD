@@ -96,9 +96,10 @@
         &::placeholder{
             font-family: 'Barlow';
             font-style: normal;
-            font-weight: bold;
+            font-weight: 600;
             font-size: 13px;
             line-height: 21px;
+            color: $color-black;
             
             @media screen and (min-width:740px) {
             font-size: 16px;
@@ -154,6 +155,15 @@
         left: 38px;
         }
     }
+    #custom-error2{
+        top: 91%;
+        left: -29px;
+        @media screen and (min-width:740px) {
+        left: 38px;
+        font-size: 14.5px;
+        }
+    }
+    
 
     .red-check{
         margin-top: 25px;
@@ -293,6 +303,23 @@
 
     .modal__close{
         cursor: pointer;
+    }
+}
+
+.ty-message{
+    max-width: 832px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    padding-left: 25px;
+    padding-right: 25px;
+    h2{
+        margin: auto;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    p{
+        font-weight: bold;
     }
 }
 

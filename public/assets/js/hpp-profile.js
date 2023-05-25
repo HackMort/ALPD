@@ -2,15 +2,17 @@ document.addEventListener('DOMContentLoaded', function () {
   const prevalenceLink = document.querySelector(
     '.internal__nav_list li:last-of-type a'
   )
+  if (!prevalenceLink) {
+    return
+  }
   const currentTarget = prevalenceLink.getAttribute('href')
   const tabsSection = document.getElementById('hpp-multisystemic')
+  if (!tabsSection) {
+    return
+  }
   const tabLinks = tabsSection.querySelectorAll(
     '.hpp-multisystemic__tabs--nav-item a'
   )
-
-  if (!prevalenceLink || !tabsSection || !tabLinks) {
-    return
-  }
 
   prevalenceLink.addEventListener('click', setActiveLinkClass)
 
