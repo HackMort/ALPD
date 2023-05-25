@@ -82,9 +82,7 @@ const internalNavLinks = [
   <section id="hpp-multisystemic" class="section hpp-multisystemic">
     <div class="wrapper wrapper--desktop">
       <h2 class="hpp__profile__title hpp__profile__title--desktop">
-        <div class="wrapper wrapper--mobile">
           How hypophosphatasia CAN cause harm
-        </div>
       </h2>
       <article class="hpp-multisystemic__tabs">
         <ul role="tablist" class="hpp-multisystemic__tabs--nav">
@@ -154,18 +152,19 @@ const internalNavLinks = [
                   </div>
                   <div class="hpp-multisystemic__col">
                     <div class="hpp-multisystemic__definition--media">
-                      <picture>
+                      <!-- <picture>
                         <img
                           class="hpp-multisystemic__definition--photo-bg"
                           src="/assets/images/hpp-profile/patient-photo--bg.png"
                           alt="Patient adults"
                         />
-                      </picture>
+                      </picture> -->
 
                       <picture>
+                        <source media="(min-width: 769px)" srcset="/assets/images/hpp-profile/patient-photo.png">
                         <img
                           class="hpp-multisystemic__definition--photo"
-                          src="/assets/images/hpp-profile/patient-photo.png"
+                          src="/assets/images/hpp-profile/patient-photo-mb.png"
                           alt="Patient adults"
                         />
                       </picture>
@@ -184,7 +183,7 @@ const internalNavLinks = [
                     </div>
                   </div>
                 </article>
-                <article class="hpp-multisystemic__studies">
+                <article class="hpp-multisystemic__studies hpp-multisystemic__studies--adults">
                   <h3
                     class="hpp-multisystemic__definition--title hpp-multisystemic__definition--title-mobile"
                   >
@@ -260,7 +259,7 @@ const internalNavLinks = [
 
                     <picture>
                       <source
-                        media="(min-width: 769px)"
+                        media="(min-width: 700px)"
                         srcset="/assets/images/hpp-profile/adult-signs-and-symptoms-chart-8m--desktop.png"
                       />
                       <img
@@ -300,7 +299,7 @@ const internalNavLinks = [
                     <div>
                       <picture>
                         <source
-                          media="(min-width: 769px)"
+                          media="(min-width: 700px)"
                           srcset="/assets/images/hpp-profile/adult-signs-and-symptoms-chart-9m--desktop.png"
                         />
                         <img
@@ -314,7 +313,7 @@ const internalNavLinks = [
                     <p class="hpp-multisystemic__report--content hpp-multisystemic__report--content-after-retrospective-chart">
                       <sup class="symbol-sup">a</sup>Prevalence of neurologic symptoms in adults with hypophosphatasia (N=82) compared with the general US population.<sup>9</sup>
                     </p>
-                    <p class="hpp-multisystemic__report--content">
+                    <p class="hpp-multisystemic__report--content hpp-multisystemic__report--content-after-retrospective-chart">
                       <sup class="symbol-sup">b</sup>Data taken from a retrospective chart review performed on a series of 82 HPP patients.<sup>9</sup>
                     </p>
 
@@ -550,7 +549,7 @@ const internalNavLinks = [
                     <picture>
                       <img
                         class="hpp-multisystemic__definition--photo"
-                        src="/assets/images/hpp-profile/patient-photo-adolescents.png"
+                        src="/assets/images/hpp-profile/patient-photo-adolescents-mb.png"
                         alt="Patient adults"
                       />
                     </picture>
@@ -568,7 +567,7 @@ const internalNavLinks = [
                     </div>
                   </div>
 
-                  <article class="hpp-multisystemic__studies">
+                  <article class="hpp-multisystemic__studies hpp-multisystemic__studies--children">
                     <h3
                       class="hpp-multisystemic__definition--title hpp-multisystemic__definition--title-mobile"
                     >
@@ -591,7 +590,7 @@ const internalNavLinks = [
                     <div class="hpp-multisystemic__study hpp-multisystemic__study--bigger">
                       <h2 class="hpp-multisystemic__study--percentage">29%</h2>
                       <p class="hpp-multisystemic__study--text">
-                        (7/24) of school-aged children experienced <strong>pain that interfered with daily activities<sup>6†</sup></strong>
+                        (7/24) of school-aged children experienced <span class="text--only-desktop">higher than average levels of</span> <strong>pain that interfered with daily activities<sup>6†</sup></strong>
                       </p>
                     </div>
                   </article>
@@ -639,60 +638,62 @@ const internalNavLinks = [
                 </section>
               </article>
 
-              <article class="wrapper hpp-multisystemic__report">
-                <h2
-                  class="hpp-multisystemic__report--title hpp__profile__subhead"
-                >
-                  Selected reported body system signs/symptoms or interventions in children with HPP<sup>9</sup>:
-                </h2>
+              <div class="hpp-multisystemic__report--bg">
+                <article class="wrapper hpp-multisystemic__report">
+                  <h2
+                    class="hpp-multisystemic__report--title hpp__profile__subhead"
+                  >
+                    Selected reported body system signs/symptoms or interventions in children with HPP<sup>9</sup>:
+                  </h2>
 
-                <picture>
-                  <source
-                    media="(min-width: 769px)"
-                    srcset="/assets/images/hpp-profile/adolescents-signs-and-symptoms-chart--desktop.png"
-                  />
-                  <img
-                    class="hpp-multisystemic__report--chart"
-                    src="/assets/images/hpp-profile/adolescents-signs-and-symptoms-chart.png"
-                    alt="FPO IMAGE"
-                  />
-                  <figcaption>Percent of patients</figcaption>
-                </picture>
+                  <picture>
+                    <source
+                      media="(min-width: 700px)"
+                      srcset="/assets/images/hpp-profile/adolescents-signs-and-symptoms-chart--desktop.png"
+                    />
+                    <img
+                      class="hpp-multisystemic__report--chart"
+                      src="/assets/images/hpp-profile/adolescents-signs-and-symptoms-chart.png"
+                      alt="FPO IMAGE"
+                    />
+                    <figcaption>Percent of patients</figcaption>
+                  </picture>
 
-                <p class="hpp-multisystemic__report--conditions">
-                  Multinational, observational, prospective Global Hypophosphatasia Registry study conducted in children (n=121; &lt;18 years) from January 2015 to September 2017.<sup>9</sup>
-                </p>
-
-                <p
-                  class="hpp-multisystemic__report--conditions hpp-multisystemic__report--conditions-smaller hpp-multisystemic__report--conditions--mt1"
-                >
-                  <sup>a</sup>Excludes patients aged &lt;2 years at enrollment.
-                </p>
-
-                <p class="hpp-multisystemic__report--conditions hpp-multisystemic__report--conditions-smaller">
-                  <sup>b</sup>Excludes patients aged &lt;6 months at enrollment.
-                </p>
-
-                <div
-                  class="hpp-multisystemic__study hpp-multisystemic__study--bigger"
-                >
-                  <h2 class="hpp-multisystemic__study--percentage">~27%</h2>
-                  <p class="hpp-multisystemic__study--text">
-                    of children and adolescents with hypophosphatasia exhibit and have a history of <strong>neurologic symptoms<sup>9*</sup></strong>
+                  <p class="hpp-multisystemic__report--conditions hpp-multisystemic__report--conditions--children-after-chart">
+                    Multinational, observational, prospective Global Hypophosphatasia Registry study conducted in children (n=121; &lt;18 years) from January 2015 to September 2017.<sup>9</sup>
                   </p>
-                  <p class="hpp-multisystemic__study--condition">
-                    <sup>*</sup>Neurologic symptoms refer to craniosynostosis, developmental delay, increased intracranial pressure, and seizures.
+
+                  <p
+                    class="hpp-multisystemic__report--conditions hpp-multisystemic__report--conditions--children-after-chart hpp-multisystemic__report--conditions-smaller hpp-multisystemic__report--conditions--mt1"
+                  >
+                    <sup>a</sup>Excludes patients aged &lt;2 years at enrollment.
                   </p>
-                </div>
 
-                <h2 class="hpp__profile__title hpp__profile__title--blue">
-                  Hypophosphatasia CAN CAUSE INCREASING HARM
-                </h2>
+                  <p class="hpp-multisystemic__report--conditions hpp-multisystemic__report--conditions--children-after-chart hpp-multisystemic__report--conditions-smaller">
+                    <sup>b</sup>Excludes patients aged &lt;6 months at enrollment.
+                  </p>
 
-                <p class="hpp-multisystemic__report--content--harm">
-                  It’s vital to consider that current symptom presentation may not accurately represent the degree of disease progression. Patients with hypophosphatasia can experience a wide range of unexplained and debilitating symptoms that result in a frustrating journey to find relief. These clinical manifestations can change and accumulate, reflecting disease evolution and progression over time.<sup>1,6,9,14-17</sup>
-                </p>
-              </article>
+                  <div
+                    class="hpp-multisystemic__study hpp-multisystemic__study--bigger hpp-multisystemic__study--bigger-children"
+                  >
+                    <h2 class="hpp-multisystemic__study--percentage">~27%</h2>
+                    <p class="hpp-multisystemic__study--text">
+                      of children and adolescents with hypophosphatasia exhibit and have a history of <strong>neurologic symptoms<sup>9*</sup></strong>
+                    </p>
+                    <p class="hpp-multisystemic__study--condition">
+                      <sup>*</sup>Neurologic symptoms refer to craniosynostosis, developmental delay, increased intracranial pressure, and seizures.
+                    </p>
+                  </div>
+
+                  <h2 class="hpp__profile__title hpp__profile__title--blue">
+                    Hypophosphatasia CAN CAUSE INCREASING HARM
+                  </h2>
+
+                  <p class="hpp-multisystemic__report--content--harm">
+                    It’s vital to consider that current symptom presentation may not accurately represent the degree of disease progression. Patients with hypophosphatasia can experience a wide range of unexplained and debilitating symptoms that result in a frustrating journey to find relief. These clinical manifestations can change and accumulate, reflecting disease evolution and progression over time.<sup>1,6,9,14-17</sup>
+                  </p>
+                </article>
+              </div>
             </div>
           </div>
           <!-- Prevalence of HPP -->
@@ -910,7 +911,7 @@ const internalNavLinks = [
                     <picture>
                       <img
                         class="hpp-multisystemic__definition--photo"
-                        src="/assets/images/hpp-profile/patient-photo-infants.png"
+                        src="/assets/images/hpp-profile/patient-photo-infants-mb.png"
                         alt="Patient adults"
                       />
                     </picture>
@@ -928,7 +929,7 @@ const internalNavLinks = [
                     </div>
                   </div>
 
-                  <div class="hpp-multisystemic__studies">
+                  <div class="hpp-multisystemic__studies hpp-multisystemic__studies--infants">
                     <h3
                       class="hpp-multisystemic__definition--title hpp-multisystemic__definition--title-mobile"
                     >
@@ -995,7 +996,7 @@ const internalNavLinks = [
 
                 <picture>
                   <source
-                    media="(min-width: 769px)"
+                    media="(min-width: 700px)"
                     srcset="/assets/images/hpp-profile/overall-survival-chart--dk.png"
                   />
                   <img
@@ -1005,12 +1006,14 @@ const internalNavLinks = [
                   />
                 </picture>
 
-                <p>
+                <p class="hpp-multisystemic__survival--footnote">
                   Adapted from Whyte M, et al. Poster presented at: Pediatric Academic Societies and Asian Society for Pediatric Research Joint Meeting; May 3-6, 2014; Vancouver, BC, Canada.
                 </p>
               </div>
 
               <article class="hpp-multisystemic__curiosities">
+                <div class="red-string red-string--top"></div>
+                <div class="red-string red-string--bottom"></div>
                 <div class="hpp-multisystemic__curiositie">
                   <img
                     class="hpp-multisystemic__curiositie--icon"
@@ -1254,6 +1257,7 @@ const internalNavLinks = [
           content="Learn the risk of misdiagnosis"
           linkURL="/usual-suspects/"
           bypassModal
+          className="cta--hpp-profile"
         />
       </div>
     </div>
