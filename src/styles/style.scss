@@ -3183,6 +3183,38 @@
 
                 z-index: 0;
             }
+
+            @media screen and (min-width: 1700px){
+                top: -25%;
+            }
+
+            @media screen and (min-width: 1800px){
+                top: -30%;
+            }
+
+            @media screen and (min-width: 1900px){
+                top: -35%;
+            }
+
+            @media screen and (min-width: 2000px){
+                top: -40%;
+            }
+
+            @media screen and (min-width: 2100px){
+                top: -45%;
+            }
+
+            @media screen and (min-width: 2200px){
+                top: -50%;
+            }
+
+            @media screen and (min-width: 2400px){
+                top: -55%;
+            }
+
+            @media screen and (min-width: 2600px){
+                top: -65%;
+            }
         }
     }
 
