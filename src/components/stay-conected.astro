@@ -269,17 +269,17 @@
           <div
             class="form__control"
             data-touched="false"
-            data-required="false"
-            data-is-valid="true"
+            data-required="true"
+            data-is-valid="false"
           >
             <div
               class="form__control-checkbox form__control-checkbox--last second-check"
             >
               <input
-                id="terms-and-conditions"
+                id="terms-and-conditions2"
                 type="checkbox"
                 name="terms-and-conditions"
-                aria-required="false"
+                aria-required="true"
                 onblur="validateFormControl(event)"
                 onchange="validateFormControl(event)"
               />
@@ -294,6 +294,7 @@
                 By checking this box and submitting this form, I give Alexion permission to provide promotional information to me or otherwise contact me about Alexion products, services, programs, or other topics that Alexion thinks may interest me.
               </label>
             </div>
+            <p class="form__control-error" id="custom-error2">Please select the checkbox</p> 
           </div>
 
           <p class="request-a-rep__terms-text">
@@ -315,9 +316,15 @@
         </div>
       </form>
     </div>
+    <div class="ty-message" style="display: none;">
+      <h2 class="stay-connected__title">
+        Thank you for signing up!
+      </h2>
+      <p style="text-align: center;">We Look forward to continuing our connection on important topics in HPP.</p>
+    </div>
 
     <!-- absolute elements of the stay connected modal -->
-    <picture>
+    <picture class="absolute-item">
       <source
         media="(min-width: 740px)"
         srcset="/assets/images/modal-bottom-desktop.png"
@@ -333,8 +340,8 @@
       x
     </button>
 
-    <div class="red-string"></div>
-    <div class="red-string-2"></div>
+    <div class="red-string absolute-item"></div>
+    <div class="red-string-2 absolute-item"></div>
     <!-- absolute elements of the stay connected modal -->
   </div>
 </div>
@@ -354,22 +361,42 @@
         const modal = document.querySelector("#modal");
         const errorLabel = modal.querySelectorAll('p[class ="form__control-error"]');
         const modalClose = modal.querySelector(".modal__close");
-        const button = modal.querySelector(".button")
-        const inputs = document.querySelectorAll('.stayinput')
+        const button = modal.querySelector(".button");
+        const inputs = document.querySelectorAll('.stayinput');
+        const absolutes = document.querySelectorAll('.absolute-item');
+        const check = document.querySelector('#terms-and-conditions2');
+        const stayDisplay = document.querySelector(".stay-connected__wrapper");
+        const stay = document.querySelector(".stay-connected");
+        const tymsg = document.querySelector(".ty-message");
 
         modalClose.addEventListener("click", () => {
           instance.close();
         });
 
-        button.addEventListener("click", () => {
-
+        button.addEventListener("click", (e) => {
+        e.preventDefault();
         for(let i=0;i<inputs.length;i++){
           if(inputs[i].value === ''){
             
-            errorLabel[i].style.display = 'block'
+            errorLabel[i].style.display = 'block';
+          }else{
+            errorLabel[i].style.display = 'none';
+          }
+          if(check.checked != true ){
+            errorLabel[6].style.display = 'block';
+          }else{
+            errorLabel[6].style.display = 'none';
           }
         }
-            
+
+            if(errorLabel[0].value!='' &&errorLabel[1].value!='' && errorLabel[2].value!='' && errorLabel[3].value!='' && errorLabel[4].value!='' && errorLabel[5].value!='' && check.checked===true){
+              for(let item of absolutes){
+                item.style.display = 'none';
+              }
+              stay.style.backgroundImage = 'url(/assets/images/alp-calculator-bg-mobile.png)';
+              stayDisplay.style.display = 'none';
+              tymsg.style.display = 'block';
+            }
         });
 
         instance = new Fancybox([{ src: "modal" }], {
@@ -381,10 +408,16 @@
           dragToClose: false,
           on: {
                             close: () => {
-
                             errorLabel.forEach((label)=>(label.style.display = 'none'))
                             inputs.forEach((input)=>(input.value = ''))
-
+                            setTimeout(()=>{
+                              stayDisplay.style.display = 'block';  
+                              tymsg.style.display = 'none';  
+                              check.checked = false;
+                              for(let item of absolutes){
+                                item.style.display = 'block';
+                              }  
+                            },100)
                             },
                 }
         });
