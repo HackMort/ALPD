@@ -1268,3 +1268,34 @@ const internalNavLinks = [
     </p>
   </References>
 </Layout>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        const select: HTMLSelectElement = document.querySelector('#hpp-multisystemic-select')
+        const tablist = document.querySelector('[role="tablist"].hpp-multisystemic__tabs--nav')
+        
+        const tabs = Array.from(tablist.querySelectorAll('a'))
+
+        tabs.forEach((tab) => {
+            tab.addEventListener('click', () => {
+                const href = tab.href
+                const tabId = tab.href.substring(href.indexOf('#') + 1)
+
+
+                select.value = tabId
+            })
+        })
+
+        select.addEventListener('change', () => {
+            const tabId = select.value
+
+            const tab = tabs.find((tab) => tab.href.includes(tabId))
+            if (tab) {
+                tab.click()
+            }
+        })
+
+    })
+
+</script>
