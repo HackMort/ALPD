@@ -13,6 +13,10 @@
   scrollbar-width: none;
   height: 3.125rem;
 
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
 }
 
 [role="tablist"] li {
