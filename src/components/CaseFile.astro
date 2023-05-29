@@ -20,7 +20,7 @@ const {
 
 
 <div class="case-file">
-    <img src={path} alt={imgAlt ? imgAlt : " "} class="case-file__image">
+    <a href={link} class="folder-link"><img src={path} alt={imgAlt ? imgAlt : " "} class="case-file__image"></a>
     <p class={`case-file__text ${className ? className : ' '}`}><slot /></p>
     <div class="case-file__anchor-container">
         <a href={link} target={LinkTarget ? LinkTarget : "_self"} class="case-file__anchor">Learn More</a>
