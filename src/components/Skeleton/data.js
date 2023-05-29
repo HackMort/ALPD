@@ -169,7 +169,8 @@ const data = [
     image2: '',
     imageAlt2: '',
     condition: '',
-    type: 'adults'
+    type: 'adults',
+    imageClasses: 'content--fit'
   },
   {
     active: false,
@@ -183,7 +184,8 @@ const data = [
     image2: '',
     imageAlt2: '',
     condition: '',
-    type: 'infants'
+    type: 'infants',
+    imageClasses: 'content--fit'
   },
   {
     active: false,
