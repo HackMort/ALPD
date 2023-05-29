@@ -89,32 +89,39 @@ export function setActiveIternalNavItemOnClick () {
   }
 
   internalNav &&
-  internalNav.addEventListener('click', (e) => {
-    e.preventDefault()
-    const target = e.target
+    internalNav.addEventListener("click", (e) => {
+      e.preventDefault();
+      const target = e.target;
 
-    if (target.tagName === 'A') {
-      const sectionID = target.getAttribute('href')
-      if (sectionID !== '#') {
-        const targetSection = document.querySelector(sectionID)
+      if (target.tagName === "A") {
+        const sectionID = target.getAttribute("href");
+        if (sectionID !== "#") {
+          const targetSection = document.querySelector(sectionID);
 
-        const internalNav = document.querySelector('.internal__nav')
-        const headerInner = document.querySelector('.header__inner')
-        const headerInnerStyles = getComputedStyle(headerInner)
-        const internalNavStyles = getComputedStyle(internalNav)
-        const headerInnerHeight = parseInt(headerInnerStyles.getPropertyValue('height').slice(0, -2))
-        const internalNavHeight = parseInt(internalNavStyles.getPropertyValue('height').slice(0, -2))
+          let marginTop = 430;
 
-        // Scroll to section
-        const totalOffset = targetSection.getBoundingClientRect().top + window.pageYOffset - (internalNavHeight + headerInnerHeight)
+          if (window.pageYOffset > 0) {
+            targetSection.getBoundingClientRect().top <= 0
+              ? (marginTop = 230) //Up
+              : sectionID === "#hpp-prevalence" ||
+                sectionID === "#multidisciplinary-care-team"
+              ? (marginTop = 300)
+              : (marginTop = 350); //Down
+          }
 
-        window.scrollTo({
-          top: totalOffset,
-          behavior: 'smooth'
-        })
+          // Scroll to section
+          const totalOffset =
+            targetSection.getBoundingClientRect().top +
+            window.pageYOffset -
+            marginTop;
+
+          window.scrollTo({
+            top: totalOffset,
+            behavior: "smooth",
+          });
+        }
       }
-    }
-  })
+    });
 }
 
 export function stickyInternalNav (internalNavClass = 'internal__nav', stickyClass = 'is--sticky') {
