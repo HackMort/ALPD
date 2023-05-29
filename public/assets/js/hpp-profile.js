@@ -2,7 +2,12 @@ document.addEventListener('DOMContentLoaded', function () {
   const prevalenceLink = document.querySelector(
     '.internal__nav_list li:last-of-type a'
   )
-  if (!prevalenceLink) {
+
+  const multisystemicLink = document.querySelector(
+    '.internal__nav_list li:nth-child(2) a'
+  )
+
+  if (!prevalenceLink && !multisystemicLink) {
     return
   }
   const currentTarget = prevalenceLink.getAttribute('href')
@@ -15,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
   )
 
   prevalenceLink.addEventListener('click', setActiveLinkClass)
+  multisystemicLink.addEventListener('click', setActiveLinkClass)
 
   tabLinks.forEach((item) => {
     item.addEventListener('click', () => {
@@ -23,13 +29,14 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   })
 
-  function setActiveLinkClass () {
-    const navLinks = document.querySelectorAll('.internal__nav_list li a')
-    navLinks.forEach((item) => {
-      item.parentElement.classList.remove('is--active')
-    })
+  function setActiveLinkClass (event) {
     setTimeout(() => {
-      prevalenceLink.parentElement.classList.add('is--active')
+      const navLinks = document.querySelectorAll('.internal__nav_list li a')
+
+      navLinks.forEach((item) => {
+        item.parentElement.classList.remove('is--active')
+      })
+      event.target.parentElement.classList.add('is--active')
     }, 1000)
   }
 })

@@ -24,7 +24,7 @@ const data = [
     imageAlt1: 'Neurologic image',
     image2: '',
     imageAlt2: '',
-    condition: '<p><sup>*</sup>Vitamin B<sub>6</sub>–responsive seizures are most commonly reported in infants.</p>',
+    condition: '<p><sup class="symbol-sup">*</sup>Vitamin B<sub>6</sub>–responsive seizures are most commonly reported in infants.</p>',
     type: 'infants'
   },
   {
