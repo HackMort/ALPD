@@ -98,15 +98,32 @@ export function setActiveIternalNavItemOnClick () {
         if (sectionID !== "#") {
           const targetSection = document.querySelector(sectionID);
 
-          let marginTop = 430;
+          let marginTop = 0;
 
-          if (window.pageYOffset > 0) {
-            targetSection.getBoundingClientRect().top <= 0
-              ? (marginTop = 230) //Up
-              : sectionID === "#hpp-prevalence" ||
-                sectionID === "#multidisciplinary-care-team"
-              ? (marginTop = 300)
-              : (marginTop = 350); //Down
+          //Is mobile
+          if (window.screen.width < 768) {
+            marginTop = 290;
+
+            if (window.pageYOffset > 0) {
+              targetSection.getBoundingClientRect().top <= 0
+                ? (marginTop = 130) //Up
+                : sectionID === "#hpp-prevalence" ||
+                  sectionID === "#multidisciplinary-care-team"
+                ? (marginTop = 140)
+                : (marginTop = 150); //Down
+            }
+          } else {
+            //Is desktop
+            marginTop = 430;
+
+            if (window.pageYOffset > 0) {
+              targetSection.getBoundingClientRect().top <= 0
+                ? (marginTop = 230) //Up
+                : sectionID === "#hpp-prevalence" ||
+                  sectionID === "#multidisciplinary-care-team"
+                ? (marginTop = 220)
+                : (marginTop = 350); //Down
+            }
           }
 
           // Scroll to section
