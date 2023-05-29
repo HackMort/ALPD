@@ -1,12 +1,24 @@
 .case-file {
     margin-top: 2rem;
-
+.folder-link{
+    width: 201px;
+    margin: auto;
+    @media screen and (min-width:500px) {
+        width: 305px;
+    }
+    @media screen and (min-width:1100px) {
+        width: 27.1875rem;
+    }
+}
     &__image {
         max-width: 201px;
         margin: auto;
 
-        @media screen and (min-width:1000px) {
-            max-width: 27.1875rem;
+        @media screen and (min-width:500px) {
+            max-width: 305px;
+        }
+        @media screen and (min-width:1100px) {
+            max-width: 435px;
         }
     }
 
@@ -165,6 +177,7 @@
             bottom: 7.5rem;
             transform: rotate(355deg);
             width: 1666.19px;
+            z-index: -1;
         }
 
         @media screen and (min-width:1000px) {
