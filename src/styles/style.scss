@@ -4004,6 +4004,14 @@
         .cta {
             padding-top: 2rem;
         }
+
+        [data-target-content-tab] {
+            display: none;
+
+            &.active-tab {
+                display: block;
+            }
+        }
     }
 
     #hpp-multisystemic {

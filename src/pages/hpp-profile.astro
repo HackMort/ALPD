@@ -1106,7 +1106,7 @@ const internalNavLinks = [
 
     <!-- Prevalence of HPP -->
     <section id="hpp-prevalence" class="section">
-        <article data-target="multisystemic1">
+        <article data-target-content-tab="multisystemic1">
             <!-- HPP Patients charts -->
             <div class="hpp-patients__red-string">
                 <picture>
@@ -1478,7 +1478,7 @@ const internalNavLinks = [
             </References>
         </article>
 
-        <article data-target="multisystemic2">
+        <article data-target-content-tab="multisystemic2">
             <!-- HPP Patients charts -->
             <div class="hpp-patients__red-string">
                 <picture>
@@ -1851,7 +1851,7 @@ const internalNavLinks = [
             </References>
         </article>
 
-        <article data-target="multisystemic3">
+        <article data-target-content-tab="multisystemic3">
             <!-- HPP Patients charts -->
             <div class="hpp-patients__red-string">
                 <picture>
@@ -1874,7 +1874,7 @@ const internalNavLinks = [
                 <div class="hpp-patients__section--bg-white">
                     <p class="hpp-patients__section__disclaimer--dk">
                         Reduced alkaline phosphatase levels during childhood may
-                        affect peak bone mass later in life<sup>16,17</sup>
+                        affect <span class="color--red">peak bone mass later in life<sup>16,17</sup></span>
                     </p>
                     <div class="wrapper wrapper--mobile">
                         <h5 class="hpp-patients__section__title">
@@ -2234,6 +2234,25 @@ const internalNavLinks = [
             '[role="tablist"].hpp-multisystemic__tabs--nav'
         );
 
+        const showSelectedTabContent = (tabId: string) => {
+            const contentElements: HTMLElement[] = Array.from(document.querySelectorAll('[data-target-content-tab]'));
+            
+            contentElements.forEach((element) => {
+
+                const targetContentTab = element.dataset.targetContentTab;
+
+                if (targetContentTab && targetContentTab === tabId) {
+                    element.classList.add('active-tab')
+                } else {
+                    element.classList.remove('active-tab')
+                }
+
+            })
+        }
+
+        // Select and show default tab content
+        showSelectedTabContent('multisystemic1')
+
         const tabs = Array.from(tablist.querySelectorAll("a"));
 
         tabs.forEach((tab) => {
@@ -2242,6 +2261,7 @@ const internalNavLinks = [
                 const tabId = tab.href.substring(href.indexOf("#") + 1);
 
                 select.value = tabId;
+                showSelectedTabContent(tabId)
             });
         });
 
@@ -2252,6 +2272,7 @@ const internalNavLinks = [
             if (tab) {
                 tab.click();
             }
+            showSelectedTabContent(tabId)
         });
     });
 </script>
