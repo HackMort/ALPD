@@ -251,6 +251,10 @@
         &--main {
           text-transform: capitalize;
 
+          &-not-capitalize {
+            text-transform: none;
+          }
+
           //Reset the br tag
           br {
             display: none;

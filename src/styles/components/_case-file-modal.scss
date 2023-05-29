@@ -573,6 +573,12 @@
                                     margin-top: 0.5rem;
                                     max-width: 15.25rem;
                                 }
+
+                                &--child {
+                                    &.mw--40ch {
+                                        max-width: 40ch;
+                                    }
+                                }
                             }
                         }
                     }

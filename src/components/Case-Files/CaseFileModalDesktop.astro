@@ -812,8 +812,8 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
                                                     >Currently presents with</span
                                                 >
                                                 <br />
-                                                <span class="patient--main"
-                                                    >mild knock knees</span
+                                                <span class="patient--main patient--main-not-capitalize"
+                                                    >Mild knock knees</span
                                                 >
                                             </p>
                                         </div>
@@ -841,17 +841,13 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
                                         </picture>
                                         <div class="patient">
                                             <p
-                                                class="patient--main patient--color-black"
+                                                class="patient--main patient--main-not-capitalize patient--color-black"
                                             >
                                                 Nontraumatic tooth <br /> loss at
                                                 age 4
                                             </p>
-                                            <p class="patient--child">
-                                                Reproduced with permission <br
-                                                /> from Kiselnikova L, et al.
-                                                <em
-                                                    >Clinical <br /> Case Reports.</em
-                                                > 2020;8(5):911-918
+                                            <p class="patient--child mw--40ch">
+                                                <span class="text--underline">Dental manifestations of hypophosphatasia in children and the effects of enzyme replacement therapy on dental status: A series of clinical cases</span> by Larisa Kiselnikova is licensed under <span class="text--underline">CC BY 4.0.</span>
                                             </p>
                                         </div>
                                     </div>
@@ -1126,7 +1122,7 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
                     const tabs = mainTablist.querySelectorAll("a");
 
                     tabs.forEach((tab) => {
-                        
+
                         if (tab.ariaSelected) {
                             mainTablist.dataset.activeTab = tab.id;
                         }
