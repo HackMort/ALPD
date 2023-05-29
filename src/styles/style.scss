@@ -3266,7 +3266,7 @@
                 width: 12rem;
                 height: 5rem;
 
-                @media screen and (min-width: 769px) {
+                @media screen and (min-width: 768px) {
                     top: -1.5rem;
                     left: 7%;
                     transform: translateX(0);
@@ -3291,7 +3291,13 @@
                 background-image: url("/assets/images/hpp-profile/frame-polaroid.png");
 
                 padding: 3.3rem 2.3rem;
-                margin-bottom: 6rem;
+                // margin-bottom: 6rem;
+            }
+
+            @media screen and (min-width: 1440px) {
+                max-width: 90rem;
+                margin-left: auto;
+                margin-right: auto;
             }
 
             &--bg-white {
@@ -3309,6 +3315,11 @@
 
                     background-image: url("/assets/images/hpp-profile/bg_charts.png");
                     padding-top: 8rem;
+                }
+
+                @media screen and (min-width: 1024px) {
+                    max-width: 95%;
+                    margin: 0 auto;
                 }
             }
 
@@ -3337,7 +3348,7 @@
                 // margin-bottom: 2rem;
 
                 &--mb {
-                    @media screen and (min-width: 769px) {
+                    @media screen and (min-width: 768px) {
                         display: flex;
                         flex-direction: row;
                         justify-content: space-between;
@@ -3353,7 +3364,7 @@
                 margin: auto;
                 display: none;
 
-                @media screen and (min-width: 769px) {
+                @media screen and (min-width: 768px) {
                     display: block;
                 }
 
@@ -3363,7 +3374,7 @@
 
                     display: block;
 
-                    @media screen and (min-width: 769px) {
+                    @media screen and (min-width: 768px) {
                         display: none;
                     }
                 }
@@ -3378,7 +3389,7 @@
                 line-height: 18px;
                 margin-left: 25%;
 
-                @media screen and (min-width: 769px) {
+                @media screen and (min-width: 768px) {
                     margin-left: auto;
                     margin-top: .3125rem;
                     margin-bottom: 0;
@@ -3447,6 +3458,7 @@
                     padding: 0 1rem;
                     max-width: 90%;
                     position: relative;
+                    display: none;
 
                     &:nth-of-type(1) {
                         margin-top: 2rem;
@@ -3460,8 +3472,8 @@
                         color: $color-black;
                     }
 
-                    @media screen and (max-width: 768px) {
-                        display: none;
+                    @media screen and (min-width: 768px) {
+                        display: block;
                     }
 
                     sup:first-child {
@@ -3475,7 +3487,7 @@
                     display: none;
                     margin: auto;
 
-                    @media screen and (max-width: 768px) {
+                    @media screen and (max-width: 767px) {
                         display: block;
                     }
                 }
@@ -3520,16 +3532,15 @@
                 top: 50px;
                 transform: rotate(10deg);
 
+                display: none;
+
                 span {
                     color: $color-cinnabar;
                     font-family: inherit;
                 }
 
-                @media screen and (max-width: 768px) {
-                    display: none;
-                }
-
-                @media screen and (min-width: 769px) and (max-width: 1250px) {
+                @media screen and (min-width: 768px) {
+                    display: block;
                     max-width: 26rem;
                     padding: 3rem 2rem;
                 }
@@ -3544,13 +3555,13 @@
             margin: 0 auto;
             max-width: 25ch;
 
-            @media screen and (min-width: 600px) and (max-width: 768px) {
-                padding: 5rem 2rem;
-            }
+            // @media screen and (min-width: 600px) and (max-width: 768px) {
+            //     padding: 5rem 2rem;
+            // }
 
-            @media screen and (min-width: 600px) and (max-width: 768px) {
-                padding: 3rem 2.1875rem;
-            }
+            // @media screen and (min-width: 600px) and (max-width: 768px) {
+            //     padding: 3rem 2.1875rem;
+            // }
         }
 
         &__red-string {
@@ -3680,6 +3691,22 @@
             display: flex;
             flex-direction: column;
 
+            .wrapper,
+            .md\:wrapper {
+                @media screen and (min-width: 769px) {
+                    flex: 1;
+                }
+
+                @media screen and (min-width: 1024px) {
+                    margin-left: 4rem;
+                    margin-right: auto;
+                }
+
+                @media screen and (min-width: 1366px) {
+                    margin-left: 12rem;
+                }
+            }
+
             &--content {
                 font-family: 'Special Elite', cursive;
 
@@ -3795,7 +3822,7 @@
             @media screen and (min-width: 769px) {
                 flex-direction: row;
                 justify-content: center;
-                @include flex-gap(5rem);
+                // @include flex-gap(5rem);
                 margin: auto;
             }
         }
@@ -3819,6 +3846,10 @@
                 background-size: cover;
                 padding: 3rem 1rem;
                 margin-top: 12rem;
+            }
+
+            @media screen and (min-width: 1366px) {
+                margin-right: 10rem;
             }
 
             &--red-string {
@@ -3906,7 +3937,10 @@
             background-image: url(/assets/images/hpp-profile/number-bg.png);
             background-repeat: no-repeat;
             background-position: center left;
-            max-width: 100%;
+            width: 100%;
+            max-width: 90rem;
+            margin-left: auto;
+            margin-right: auto;
             margin-top: 4rem;
 
             @media screen and (max-width: 768px) {
