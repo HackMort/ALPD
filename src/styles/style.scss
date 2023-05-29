@@ -2897,15 +2897,18 @@
         }
 
         .red-string {
-            position: absolute;
+            position: absolute; 
             z-index: 2;
             transform: rotate(-28deg) translateX(-50%);
             transform-origin: left;
-            top: 72%;
+            top: 18%; 
 
             @media screen and (min-width: 768px) {
                 top: 0.5rem;
                 transform: rotate(5deg) translateX(-50%);
+            }
+            @media screen and (min-width: 1024px) {
+                display: none;
             }
         }
     }
@@ -5127,7 +5130,8 @@
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
-                padding-right: 2.25rem;
+                padding-right: 0;
+                z-index: 8;
             }
 
             &::after {
