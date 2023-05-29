@@ -5037,7 +5037,8 @@
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
-                padding-right: 2.25rem;
+                padding-right: 0;
+                z-index: 8;
             }
 
             &::after {
