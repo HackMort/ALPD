@@ -5,6 +5,24 @@
     height: calc(173px + ((379 - 173) * ((100vw - 320px) / (1440 - 320))));
     max-height: 23.6875rem;
 
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+
+        background: linear-gradient(90.75deg, #000000 1.7%, rgba(0, 0, 0, 0) 67.27%);
+        opacity: 0.65;
+
+        z-index: 2;
+    }
+
+    .red-string {
+        z-index: 3;
+    }
+
     [data-image-hero] {
         height: 100%;
 
@@ -22,6 +40,8 @@
 
         display: flex;
         align-items: center;
+
+        z-index: 3;
 
         @media screen and (min-width: 768px) {
             border-image-slice: 13;
