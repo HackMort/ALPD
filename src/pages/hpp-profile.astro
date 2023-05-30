@@ -223,7 +223,7 @@ const internalNavLinks = [
                                         </picture>
 
                                         <button
-                                            class="button button--custom-bg case-files-modal-trigger button--custom-bg--only-mobile"
+                                            class="button button--custom-bg case-files-modal-trigger button--custom-bg--only-mobile" data-case-file-tab="1"
                                             >View Patient case files</button
                                         >
 
@@ -231,7 +231,7 @@ const internalNavLinks = [
                                             class="hpp-multisystemic__definition--button"
                                         >
                                             <button
-                                                class="button button--custom-bg case-files-modal-trigger--desktop button--custom-bg--only-desktop"
+                                                class="button button--custom-bg case-files-modal-trigger--desktop button--custom-bg--only-desktop" data-case-file-tab="1"
                                                 >View Patient case files &gt
                                             </button>
                                         </div>
@@ -559,7 +559,7 @@ const internalNavLinks = [
                                         </picture>
 
                                         <button
-                                            class="button button--custom-bg case-files-modal-trigger button--custom-bg--only-mobile"
+                                            class="button button--custom-bg case-files-modal-trigger button--custom-bg--only-mobile" data-case-file-tab="3"
                                             >View Patient case files</button
                                         >
 
@@ -567,7 +567,7 @@ const internalNavLinks = [
                                             class="hpp-multisystemic__definition--button"
                                         >
                                             <button
-                                                class="button button--custom-bg case-files-modal-trigger--desktop button--custom-bg--only-desktop"
+                                                class="button button--custom-bg case-files-modal-trigger--desktop button--custom-bg--only-desktop" data-case-file-tab="3"
                                                 >View Patient case files &gt
                                             </button>
                                         </div>
@@ -657,7 +657,7 @@ const internalNavLinks = [
                                         </picture>
 
                                         <button
-                                            class="button button--custom-bg case-files-modal-trigger button--custom-bg--only-mobile"
+                                            class="button button--custom-bg case-files-modal-trigger button--custom-bg--only-mobile" data-case-file-tab="3"
                                             >View Patient case files</button
                                         >
 
@@ -665,7 +665,7 @@ const internalNavLinks = [
                                             class="hpp-multisystemic__definition--button"
                                         >
                                             <button
-                                                class="button button--custom-bg case-files-modal-trigger--desktop button--custom-bg--only-desktop"
+                                                class="button button--custom-bg case-files-modal-trigger--desktop button--custom-bg--only-desktop" data-case-file-tab="3"
                                                 >View Patient case files &gt
                                             </button>
                                         </div>
@@ -852,7 +852,7 @@ const internalNavLinks = [
                                         </picture>
 
                                         <button
-                                            class="button button--custom-bg case-files-modal-trigger button--custom-bg--only-mobile"
+                                            class="button button--custom-bg case-files-modal-trigger button--custom-bg--only-mobile" data-case-file-tab="4"
                                             >View Patient case files</button
                                         >
 
@@ -860,7 +860,7 @@ const internalNavLinks = [
                                             class="hpp-multisystemic__definition--button"
                                         >
                                             <button
-                                                class="button button--custom-bg case-files-modal-trigger--desktop button--custom-bg--only-desktop"
+                                                class="button button--custom-bg case-files-modal-trigger--desktop button--custom-bg--only-desktop" data-case-file-tab="4"
                                                 >View Patient case files &gt
                                             </button>
                                         </div>
@@ -948,7 +948,7 @@ const internalNavLinks = [
                                         </picture>
 
                                         <button
-                                            class="button button--custom-bg case-files-modal-trigger button--custom-bg--only-mobile"
+                                            class="button button--custom-bg case-files-modal-trigger button--custom-bg--only-mobile" data-case-file-tab="4"
                                             >View Patient case files</button
                                         >
 
@@ -956,7 +956,7 @@ const internalNavLinks = [
                                             class="hpp-multisystemic__definition--button"
                                         >
                                             <button
-                                                class="button button--custom-bg case-files-modal-trigger--desktop button--custom-bg--only-desktop"
+                                                class="button button--custom-bg case-files-modal-trigger--desktop button--custom-bg--only-desktop" data-case-file-tab="4"
                                                 >View Patient case files &gt
                                             </button>
                                         </div>
@@ -2235,7 +2235,7 @@ const internalNavLinks = [
 
         const showSelectedTabContent = (tabId: string) => {
             const contentElements: HTMLElement[] = Array.from(document.querySelectorAll('[data-target-content-tab]'));
-            
+
             contentElements.forEach((element) => {
 
                 const targetContentTab = element.dataset.targetContentTab;
