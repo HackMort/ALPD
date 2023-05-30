@@ -64,6 +64,13 @@ const { type } = Astro.props;
         .querySelector(`.${type} .navigation__item.next`)
         .classList.remove("hidden");
     }
+    const fancyboxSlide = document.querySelector('.fancybox__container[aria-modal="true"] .fancybox__slide')
+    if(fancyboxSlide) {
+      fancyboxSlide.scroll({
+          top: 0,
+          behavior: "smooth"
+      });
+    }
   }
 
   function navigationHandle(links: any, modalArticles: any, type: string) {
