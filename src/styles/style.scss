@@ -2862,6 +2862,7 @@
 
     [data-target-content-tab] {
         display: none;
+        position: relative;
 
         &.active-tab {
             display: block;
@@ -4012,7 +4013,9 @@
 
     #hpp-prevalence {
         position: relative;
-        margin-top: 5rem;
+        @media screen and (min-width: 1024px) {
+            margin-top: 3rem;
+        }
 
         .cta {
             padding-top: 2rem;
@@ -4029,6 +4032,11 @@
 
     .hpp-multisystemic {
         margin-top: 2rem;
+        margin-bottom: 4rem;
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 0;
+        }
 
         &__definition {
             display: flex;
