@@ -488,16 +488,16 @@
 
             .skeleton__line--before {
                 top: 37.2rem;
-                left: 50%;
+                left: 37%;
             }
 
             .skeleton__line--after {
                 display: none;
-                width: 4.8rem;
-                top: 8.1rem;
-                left: 10.1rem;
+                width: 136px;
+                top: 459px;
+                left: 705px;
                 z-index: 0;
-                transform: rotate(45deg);
+                transform: rotate(90deg);
                 transform-origin: left;
             }
 
@@ -882,7 +882,7 @@
 
         &--infants {
             height: fit-content;
-            min-height: 520px;
+            min-height: auto;
             padding: 2rem 1.5rem;
             margin-top: 23px;
 
