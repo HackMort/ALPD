@@ -2860,6 +2860,14 @@
 
 .hpp__profile {
 
+    [data-target-content-tab] {
+        display: none;
+
+        &.active-tab {
+            display: block;
+        }
+    }
+
     &__hero {
         .common-page-hero__title {
             position: absolute;
@@ -4008,14 +4016,6 @@
 
         .cta {
             padding-top: 2rem;
-        }
-
-        [data-target-content-tab] {
-            display: none;
-
-            &.active-tab {
-                display: block;
-            }
         }
     }
 
