@@ -5,7 +5,7 @@ const data = [
     title: 'Neurologic<sup>9</sup>',
     word: 'Neurologic',
     icon: '/assets/images/hpp-profile/skeleton/neurologic-icon-active.svg',
-    text: 'Headaches, sleep disturbances, neuropathy, and hearing loss',
+    text: 'Fatigue, headaches, sleep disturbances, neuropathy, and hearing loss',
     image1: '/assets/images/hpp-profile/skeleton/neurologic-img.png',
     imageAlt1: 'Neurologic image',
     image2: '',
@@ -39,7 +39,7 @@ const data = [
     image2: '',
     imageAlt2: '',
     condition:
-            '<p>Periodontal disease particularly in the anterior region in a 27-year-old adult.</p> <p>Reproduced with permission from Bloch-Zupan A. <em>Int J Paediatr Dent.</em> 2016;26(6):426-438.</p>',
+            '<p>Disclaimer: This image is not taken from a hypophosphatasia (HPP) patient.</p>',
     type: 'adults'
   },
   {
@@ -111,7 +111,7 @@ const data = [
     image2: '',
     imageAlt2: '',
     condition:
-            '<p>Radiograph of right knee demonstrating meniscal chondrocalcinosis.</p> <p>Reproduced with permission from MacMullan P and McCarthy G. <em>Ther Adv Musculoskel Dis.</em> 2012;4(2):121-131.</p>',
+            '<p>Disclaimer: This image is not taken from a hypophosphatasia (HPP) patient.</p>',
     type: 'adults'
   },
   {
