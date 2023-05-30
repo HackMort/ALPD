@@ -199,7 +199,7 @@ const data = [
     imageAlt2: '',
     condition: '',
     type: 'infants'
-  }
+  } 
 ]
 
 export default data
