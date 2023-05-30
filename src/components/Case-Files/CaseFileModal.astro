@@ -4,7 +4,7 @@ import PinchToZoom from "../Pinch-to-zoom.astro";
 import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
 ---
 
-<div id="case-files-modal-template" style="display: none;">
+<div id="case-files-modal-template" data-active-case="1" style="display: none;">
   <div class="case__files_modal" id="case-files-modal">
     <button data-fancybox-close class="case__files_modal_close-button">X</button
     >
@@ -799,7 +799,25 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
         trapFocus: false,
         closeButton: false,
         height: "auto",
+        on: {
+          reveal: this.goToTab,
+          destroy: this.resetTabs
+        }
       });
+    }
+
+    goToTab() {
+      const caseFileMobileModal = document.querySelector('#case-files-modal-template')
+      const dataActiveCase = caseFileMobileModal.dataset.activeCase
+      const patientButton = document.querySelector(`.patients_dots_list__button[data-patient="${dataActiveCase}"]`)
+      if (patientButton) {
+        patientButton.click()
+      }
+    }
+
+    resetTabs() {
+      const caseFileMobileModal = document.querySelector('#case-files-modal-template')
+      caseFileMobileModal.dataset.activeCase = 1
     }
 
     close() {
@@ -811,8 +829,13 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
     const openCaseFilesModal = new casFileModal();
     const buttons = document.querySelectorAll(".case-files-modal-trigger");
     buttons.forEach((button) => {
-      button.addEventListener("click", () => {
+      button.addEventListener("click", (event) => {
         event.preventDefault();
+        const caseFileMobileModal = document.querySelector('#case-files-modal-template')
+        let dataTab = event.target.dataset.caseFileTab
+        if(dataTab) {
+            caseFileMobileModal.dataset.activeCase = dataTab
+        }
         openCaseFilesModal.open();
       });
     });
