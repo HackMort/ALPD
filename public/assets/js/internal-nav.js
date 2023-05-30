@@ -84,37 +84,65 @@ export function highlightActiveInternalNavOnScroll (headerInnerHeight) {
 */
 export function setActiveIternalNavItemOnClick () {
   const internalNav = document.querySelector('.internal__nav')
+
   if (!internalNav) {
     return
   }
 
   internalNav &&
-  internalNav.addEventListener('click', (e) => {
-    e.preventDefault()
-    const target = e.target
+    internalNav.addEventListener('click', (e) => {
+      e.preventDefault()
+      const target = e.target
+      const isActive = target.parentElement.classList.contains('is--active')
 
-    if (target.tagName === 'A') {
-      const sectionID = target.getAttribute('href')
-      if (sectionID !== '#') {
-        const targetSection = document.querySelector(sectionID)
+      if (!isActive) {
+        if (target.tagName === 'A') {
+          const sectionID = target.getAttribute('href')
+          if (sectionID !== '#') {
+            const targetSection = document.querySelector(sectionID)
 
-        const internalNav = document.querySelector('.internal__nav')
-        const headerInner = document.querySelector('.header__inner')
-        const headerInnerStyles = getComputedStyle(headerInner)
-        const internalNavStyles = getComputedStyle(internalNav)
-        const headerInnerHeight = parseInt(headerInnerStyles.getPropertyValue('height').slice(0, -2))
-        const internalNavHeight = parseInt(internalNavStyles.getPropertyValue('height').slice(0, -2))
+            let marginTop = 0
 
-        // Scroll to section
-        const totalOffset = targetSection.getBoundingClientRect().top + window.pageYOffset - (internalNavHeight + headerInnerHeight)
+            // Is mobile
+            if (window.screen.width < 768) {
+              marginTop = 290
 
-        window.scrollTo({
-          top: totalOffset,
-          behavior: 'smooth'
-        })
+              if (window.pageYOffset > 0) {
+                targetSection.getBoundingClientRect().top <= 0
+                  ? (marginTop = 130) // Up
+                  : sectionID === '#hpp-prevalence' ||
+                          sectionID === '#multidisciplinary-care-team'
+                    ? (marginTop = 140)
+                    : (marginTop = 150) // Down
+              }
+            } else {
+              // Is desktop
+              marginTop = 430
+
+              if (window.pageYOffset > 0) {
+                targetSection.getBoundingClientRect().top <= 0
+                  ? (marginTop = 230) // Up
+                  : sectionID === '#hpp-prevalence' ||
+                          sectionID === '#multidisciplinary-care-team'
+                    ? (marginTop = 220)
+                    : (marginTop = 350) // Down
+              }
+            }
+
+            // Scroll to section
+            const totalOffset =
+                    targetSection.getBoundingClientRect().top +
+                    window.pageYOffset -
+                    marginTop
+
+            window.scrollTo({
+              top: totalOffset,
+              behavior: 'smooth'
+            })
+          }
+        }
       }
-    }
-  })
+    })
 }
 
 export function stickyInternalNav (internalNavClass = 'internal__nav', stickyClass = 'is--sticky') {
