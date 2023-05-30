@@ -14,74 +14,51 @@ import CaseFileModal from "../components/Case-Files/CaseFileModal.astro";
 import CaseFileModalDesktop from "../components/Case-Files/CaseFileModalDesktop.astro";
 
 export interface Props {
-  title: string;
-  pageClass?: string;
-  showHeader?: boolean;
-  showFooter?: boolean;
-  showISI?: boolean;
+    title: string;
+    pageClass?: string;
+    showHeader?: boolean;
+    showFooter?: boolean;
+    showISI?: boolean;
 }
 
 const {
-  title,
-  pageClass,
-  showHeader = true,
-  showISI = false,
-  showFooter = true,
+    title,
+    pageClass,
+    showHeader = true,
+    showISI = false,
+    showFooter = true,
 } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <!-- TypeKit Font Includes: Oswald & Veener Fonts -->
-    <script src="/assets/js/validate.js" type="module"></script>
-    <script src="/assets/js/redirect.js" type="module"></script>
-    <link rel="stylesheet" href="https://use.typekit.net/hfp3usx.css" />
-    <title>{title}</title>
-  </head>
-  <body class={pageClass}>
-    {showHeader && <Header />}
-    <main class="main">
-      <slot />
-    </main>
-    {showISI && <ISI />}
-    {showFooter && <Footer />}
-    <StayConnected />
-    <AlpCalculator />
-    <CaseFileModal />
-    <div class="case__files_modal_wrapper">
-      <CaseFileModalDesktop />
-    </div>
-    <CookieBanner />
-  </body>
-  <script src="/assets/js/script.js" type="module"></script>
-  <script is:inline src="/assets/js/forms.js"></script>
-  <slot name="scripts" />
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const target = window.location.hash;
-      if (!target) return;
-      const targetSection = document.querySelector(target);
-      if (!target && !targetSection) {
-        return;
-      }
-      let marginTop = window.innerWidth < 768 ? 350 : 400;
-
-      window.addEventListener("resize", () => {
-        marginTop = window.innerWidth < 768 ? 350 : 400;
-      });
-      const totalOffset =
-        targetSection.getBoundingClientRect().top +
-        window.pageYOffset -
-        marginTop;
-      window.scrollTo({
-        top: totalOffset,
-        behavior: "smooth",
-      });
-    });
-  </script>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <!-- TypeKit Font Includes: Oswald & Veener Fonts -->
+        <script src="/assets/js/validate.js" type="module"></script>
+        <script src="/assets/js/redirect.js" type="module"></script>
+        <link rel="stylesheet" href="https://use.typekit.net/hfp3usx.css" />
+        <title>{title}</title>
+    </head>
+    <body class={pageClass}>
+        {showHeader && <Header />}
+        <main class="main">
+            <slot />
+        </main>
+        {showISI && <ISI />}
+        {showFooter && <Footer />}
+        <StayConnected />
+        <AlpCalculator />
+        <CaseFileModal />
+        <div class="case__files_modal_wrapper">
+            <CaseFileModalDesktop />
+        </div>
+        <CookieBanner />
+    </body>
+    <script src="/assets/js/script.js" type="module"></script>
+    <script is:inline src="/assets/js/forms.js"></script>
+    <slot name="scripts" />
 </html>
