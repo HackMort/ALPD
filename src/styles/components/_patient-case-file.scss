@@ -272,6 +272,28 @@
           padding: .25rem .5rem;
         }
 
+        &--anna-rad-1 {
+          p, small {
+            display: none;
+          }
+
+          .patient--delay-color {
+            display: block;
+            text-transform: unset;
+          }
+        }
+
+        &--anna-rad-2 {
+
+          p {
+            color: #0e0e0e;
+
+            br  {
+              display: none;
+            }
+          }
+        }
+
       }
     }
   }

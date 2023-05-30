@@ -574,6 +574,20 @@
                                     max-width: 15.25rem;
                                 }
 
+                                &--anna-rad {
+                                    .patient--delay-color {
+                                        display: none;
+                                    }
+
+                                    p {
+                                        max-width: 30ch;
+                                    }
+
+                                    small {
+                                        max-width: 40ch;
+                                    }
+                                }
+
                                 &--child {
                                     &.mw--40ch {
                                         max-width: 40ch;
