@@ -23,6 +23,10 @@
         display: flex;
         align-items: center;
 
+        @media screen and (min-width: 768px) {
+            border-image-slice: 13;
+        }
+
         @media screen and (min-width: 1440px) {
             left: calc(var(--wrapper-margin) / 2);
         }
@@ -33,7 +37,7 @@
 
         h1 {
             font-family: "veneer", sans-serif;
-            color: #ca4c40;
+            color: #ff0000;
             text-transform: uppercase;
             line-height: 100%;
             font-weight: 500;
@@ -43,7 +47,7 @@
             font-size: 1.75rem;
 
             @media screen and (min-width: 768px) {
-                font-size: 3.5rem;
+                font-size: 4rem;
             }
         }
     }
