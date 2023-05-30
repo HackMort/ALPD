@@ -227,6 +227,18 @@
       z-index: 2;
     }
   }
+
+  &--anna-2 {
+    picture {
+      max-width: 129px;
+      background-color: $color-white;
+    }
+
+    img {
+      max-width: 68px;
+      margin: 0 auto;
+    }
+  }
 }
 
 .fancybox--pinch-to-zoom {
@@ -287,6 +299,7 @@
 
           p {
             color: #0e0e0e;
+            text-transform: unset;
 
             br  {
               display: none;
@@ -328,7 +341,16 @@
             text-transform: unset;
           }
         }
+      }
 
+      &--anna-2 {
+        picture {
+          max-width: 90%!important;
+        }
+
+        img {
+          max-width: 100%;
+        }
       }
     }
   }
