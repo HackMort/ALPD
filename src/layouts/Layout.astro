@@ -60,5 +60,28 @@ const {
   </body>
   <script src="/assets/js/script.js" type="module"></script>
   <script is:inline src="/assets/js/forms.js"></script>
-  <slot name="scripts"/>
+  <slot name="scripts" />
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const target = window.location.hash;
+      if (!target) return;
+      const targetSection = document.querySelector(target);
+      if (!target && !targetSection) {
+        return;
+      }
+      let marginTop = window.innerWidth < 768 ? 350 : 400;
+
+      window.addEventListener("resize", () => {
+        marginTop = window.innerWidth < 768 ? 350 : 400;
+      });
+      const totalOffset =
+        targetSection.getBoundingClientRect().top +
+        window.pageYOffset -
+        marginTop;
+      window.scrollTo({
+        top: totalOffset,
+        behavior: "smooth",
+      });
+    });
+  </script>
 </html>
