@@ -882,8 +882,9 @@
 
         &--infants {
             height: fit-content;
-            min-height: 400px;
+            min-height: 520px;
             padding: 2rem 1.5rem;
+            margin-top: 23px;
 
             .skeleton__content--img {
                 img {
@@ -931,6 +932,10 @@
             @include flex-gap(1rem);
             font-weight: 400;
             padding-top: 0.5rem;
+
+            p {
+                font-weight: 400;
+            }
         }
 
         &--img {
@@ -958,6 +963,7 @@
                 font-size: .75rem;
                 font-weight: 400;
                 line-height: .975rem;
+                margin-bottom: 0.75rem;
 
                 @media screen and (max-width: 768px) {
                     &:not(:last-of-type) {
@@ -1060,5 +1066,11 @@
                 background-color: $color-red;
             }
         }
+    }
+}
+
+#orthopedic--infants{
+    @media screen and (max-width: 1200px) {
+    margin-top: 24px;
     }
 }

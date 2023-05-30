@@ -573,6 +573,26 @@
                                     margin-top: 0.5rem;
                                     max-width: 15.25rem;
                                 }
+
+                                &--anna-rad {
+                                    .patient--delay-color {
+                                        display: none;
+                                    }
+
+                                    p {
+                                        max-width: 30ch;
+                                    }
+
+                                    small {
+                                        max-width: 40ch;
+                                    }
+                                }
+
+                                &--child {
+                                    &.mw--40ch {
+                                        max-width: 40ch;
+                                    }
+                                }
                             }
                         }
                     }
@@ -684,6 +704,16 @@
 
             }
 
+        }
+    }
+
+    .patients.mobile--version {
+        .patient {
+            &--hannah-mobile {
+                .patient--main-not-capitalize {
+                    display: none;
+                }
+            }
         }
     }
 
