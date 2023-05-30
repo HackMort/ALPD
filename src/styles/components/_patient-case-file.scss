@@ -227,6 +227,18 @@
       z-index: 2;
     }
   }
+
+  &--anna-2 {
+    picture {
+      max-width: 129px;
+      background-color: $color-white;
+    }
+
+    img {
+      max-width: 68px;
+      margin: 0 auto;
+    }
+  }
 }
 
 .fancybox--pinch-to-zoom {
@@ -251,6 +263,14 @@
         &--main {
           text-transform: capitalize;
 
+          &-not-capitalize {
+            text-transform: none;
+
+            .text--capitalize {
+              text-transform: capitalize;
+            }
+          }
+
           //Reset the br tag
           br {
             display: none;
@@ -268,6 +288,73 @@
           padding: .25rem .5rem;
         }
 
+        &--anna-rad-1 {
+          p, small {
+            display: none;
+          }
+
+          .patient--delay-color {
+            display: block;
+            text-transform: unset;
+          }
+        }
+
+        &--anna-rad-2 {
+
+          p {
+            color: #0e0e0e;
+            text-transform: unset;
+
+            br  {
+              display: none;
+            }
+          }
+        }
+
+        &--hannah-mobile {
+          p {
+            display: none;
+
+            &.patient--main-not-capitalize {
+              display: block;
+            }
+          }
+
+          &-2 {
+            p {
+              max-width: 16ch;
+            }
+          }
+        }
+
+        &--anna-mobile-1 {
+          p {
+            text-transform: unset;
+            max-width: 20ch;
+          }
+
+          &.patient--small {
+            display: none;
+          }
+        }
+
+        &--anna-mobile-2 {
+          p {
+            color: $color-black;
+            max-width: 13ch;
+            text-transform: unset;
+          }
+        }
+      }
+
+      &--anna-2 {
+        picture {
+          max-width: 90%!important;
+        }
+
+        img {
+          max-width: 100%;
+        }
       }
     }
   }

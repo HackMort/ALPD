@@ -3,7 +3,7 @@ import PinchToZoom from "../Pinch-to-zoom.astro";
 import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
 ---
 
-<div id="case-files-modal-template-desktop" style="display: none;">
+<div id="case-files-modal-template-desktop" data-active-tab="1" style="display: none;">
     <div class="case__files_modal --desktop" id="case-files-modal--desktop">
         <button data-fancybox-close class="case__files_modal_close-button"
             >×</button
@@ -539,16 +539,16 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
                                                 alt=""
                                             />
                                         </picture>
-                                        <div class="patient">
+                                        <div class="patient patient--anna-rad patient--anna-rad-1">
                                             <p class="patient--delay-color">
-                                                Delayed eruption of permanent
-                                                teeth
+                                                Delayed eruption of permanent teeth
                                             </p>
-                                            <small
-                                                >Reproduced with permission from
-                                                Kiselnikova L, et al. Clin Case
-                                                Rep. 2020;8(5):911-918.</small
-                                            >
+                                            <p>
+                                                Radiograph showing enlarged pulp chambers and shape abnormalities.
+                                            </p>
+                                            <small>
+                                                <span class="text--underline">Dental manifestations of hypophosphatasia in children and the effects of enzyme replacement therapy on dental status: A series of clinical cases</span> by Larisa Kiselnikova is licensed under <span class="text--underline">CC BY 4.0.</span>
+                                            </small>
                                         </div>
                                     </div>
                                 </PinchToZoom>
@@ -556,8 +556,8 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
                                     id="pt-2-desktop-image-2"
                                     useDefaultButton={false}
                                 >
-                                    <div class="rad__thumbnail">
-                                        <picture style="max-width: 96px;">
+                                    <div class="rad__thumbnail rad__thumbnail--anna-2">
+                                        <picture>
                                             <button
                                                 data-panzoom-action="zoomToFull"
                                                 data-content-id="pt-2-desktop-image-2"
@@ -572,7 +572,7 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
                                                 alt=""
                                             />
                                         </picture>
-                                        <div class="patient">
+                                        <div class="patient patient--anna-rad patient--anna-rad-2">
                                             <p>
                                                 Early loss of baby teeth with <br
                                                 /> root intact
@@ -812,8 +812,8 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
                                                     >Currently presents with</span
                                                 >
                                                 <br />
-                                                <span class="patient--main"
-                                                    >mild knock knees</span
+                                                <span class="patient--main patient--main-not-capitalize"
+                                                    ><span class="text--capitalize">m</span>ild knock knees</span
                                                 >
                                             </p>
                                         </div>
@@ -841,17 +841,13 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
                                         </picture>
                                         <div class="patient">
                                             <p
-                                                class="patient--main patient--color-black"
+                                                class="patient--main patient--main-not-capitalize patient--color-black"
                                             >
                                                 Nontraumatic tooth <br /> loss at
                                                 age 4
                                             </p>
-                                            <p class="patient--child">
-                                                Reproduced with permission <br
-                                                /> from Kiselnikova L, et al.
-                                                <em
-                                                    >Clinical <br /> Case Reports.</em
-                                                > 2020;8(5):911-918
+                                            <p class="patient--child mw--40ch">
+                                                <span class="text--underline">Dental manifestations of hypophosphatasia in children and the effects of enzyme replacement therapy on dental status: A series of clinical cases</span> by Larisa Kiselnikova is licensed under <span class="text--underline">CC BY 4.0.</span>
                                             </p>
                                         </div>
                                     </div>
@@ -1099,8 +1095,26 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
                         height: "auto",
                         mainClass: "case-files-modal--destkop",
                         dragToClose: false,
+                        on: {
+                            reveal: this.goToTab,
+                            destroy: this.resetTabs
+                        }
                     }
                 );
+            }
+
+            goToTab() {
+                const caseFileDesktopModal = document.querySelector('#case-files-modal-template-desktop')
+                const dataActiveTab = caseFileDesktopModal.dataset.activeTab
+                const newActiveTab = document.querySelector(`#case-link-to-panel-${dataActiveTab}`)
+                if(newActiveTab) {
+                    newActiveTab.click()
+                }
+            }
+
+            resetTabs() {
+                const caseFileDesktopModal = document.querySelector('#case-files-modal-template-desktop')
+                caseFileDesktopModal.dataset.activeTab = 1
             }
 
             close() {
@@ -1116,8 +1130,13 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
             const customTabLinks = document.querySelectorAll("[data-tab-id]");
 
             buttons.forEach((button) => {
-                button.addEventListener("click", () => {
+                button.addEventListener("click", (event) => {
                     event.preventDefault();
+                    const caseFileDesktopModal = document.querySelector('#case-files-modal-template-desktop')
+                    let dataTab = event.target.dataset.caseFileTab
+                    if(dataTab) {
+                        caseFileDesktopModal.dataset.activeTab = dataTab
+                    }
                     openCaseFilesModal.open();
 
                     const mainTablist: HTMLListElement = document.querySelector(
@@ -1126,7 +1145,7 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
                     const tabs = mainTablist.querySelectorAll("a");
 
                     tabs.forEach((tab) => {
-                        
+
                         if (tab.ariaSelected) {
                             mainTablist.dataset.activeTab = tab.id;
                         }
