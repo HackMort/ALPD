@@ -294,6 +294,41 @@
           }
         }
 
+        &--hannah-mobile {
+          p {
+            display: none;
+
+            &.patient--main-not-capitalize {
+              display: block;
+            }
+          }
+
+          &-2 {
+            p {
+              max-width: 16ch;
+            }
+          }
+        }
+
+        &--anna-mobile-1 {
+          p {
+            text-transform: unset;
+            max-width: 20ch;
+          }
+
+          &.patient--small {
+            display: none;
+          }
+        }
+
+        &--anna-mobile-2 {
+          p {
+            color: $color-black;
+            max-width: 13ch;
+            text-transform: unset;
+          }
+        }
+
       }
     }
   }

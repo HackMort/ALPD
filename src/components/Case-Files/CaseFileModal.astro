@@ -359,7 +359,7 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
             </ul>
             <div class="zoom-wrapper">
               <PinchToZoom id="pt-2-image-1" useDefaultButton={false}>
-                <div class="rad__thumbnail" style="max-width: 286px;">
+                <div class="rad__thumbnail" style="max-width: 305px;">
                   <picture>
                     <button
                       data-panzoom-action="zoomToFull"
@@ -374,13 +374,15 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
                       alt=""
                     />
                   </picture>
-                  <div class="patient">
+                  <div class="patient patient--anna-mobile-1">
                     <p>
-                      Delayed eruption of permanent teeth
-                    </p>                    
+                      Radiograph showing enlarged pulp chambers and shape abnormalities.
+                    </p>
                   </div>
-                  <p  class="patient--small">
-                    <small>Reproduced with permission from Kiselnikova L, et al. <em>Clin Case Rep.</em> 2020;8(5):911-918.</small>
+                  <p  class="patient--small patient--anna-mobile-1">
+                    <small>
+                      <span class="text--underline">Dental manifestations of hypophosphatasia in children and the effects of enzyme replacement therapy on dental status: A series of clinical cases</span> by Larisa Kiselnikova is licensed under <span class="text--underline">CC BY 4.0.</span>
+                    </small>
                   </p>
                 </div>
               </PinchToZoom>
@@ -400,7 +402,7 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
                       alt=""
                     />
                   </picture>
-                  <div class="patient">
+                  <div class="patient patient--anna-mobile-2">
                     <p>Early loss of baby teeth with root intact</p>
                   </div>
                 </div>
@@ -578,8 +580,9 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
                       alt=""
                     />
                   </picture>
-                  <div class="patient">
+                  <div class="patient patient--hannah-mobile">
                     <p><span class="zoom-text">Currently presents with </span>mild knock knees</p>
+                    <p class="patient--main-not-capitalize">Mild knock knees</p>
                   </div>
                 </div>
               </PinchToZoom>
@@ -599,16 +602,15 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
                       alt=""
                     />
                   </picture>
-                  <div class="patient">
-                    <p class="patient--color-black">Nontraumatic tooth loss at age 4</p>
+                  <div class="patient patient--hannah-mobile-2">
+                    <p class="patient--color-black patient--main-not-capitalize">Nontraumatic tooth loss at age 4</p>
                   </div>
                 </div>
               </PinchToZoom>
             </div>
 
             <p class="pt-3-image-1--permissions">
-              Reproduced with permission from Kiselnikova L, et al. Clinical
-              Case Reports. 2020;8(5):911-918.
+              <span class="text--underline">Dental manifestations of hypophosphatasia in children and the effects of enzyme replacement therapy on dental status: A series of clinical cases</span> by Larisa Kiselnikova is licensed under <span class="text--underline">CC BY 4.0.</span>
             </p>
           </Fragment>
           <Fragment slot="notes">
