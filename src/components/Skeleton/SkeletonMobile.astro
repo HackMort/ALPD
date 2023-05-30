@@ -56,11 +56,13 @@ const { type } = Astro.props;
                                 <img
                                     src={section.image1}
                                     alt={section.imageAlt1}
+                                    class={section.imageClasses || ''}
                                 />
                                 {section.image2 && (
                                     <img
                                         src={section.image2}
                                         alt={section.imageAlt2}
+                                        class={section.imageClasses || ''}
                                     />
                                 )}
                             </div>

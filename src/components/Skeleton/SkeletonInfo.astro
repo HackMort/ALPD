@@ -30,9 +30,9 @@ const { type, data } = Astro.props;
                     <div class="skeleton__content--body">
                         <p set:html={item.text} />
                         <div class="skeleton__content--img">
-                            <img src={item.image1} alt={item.image1Alt} />
+                            <img src={item.image1} alt={item.image1Alt} class={item.imageClasses || ''}/>
                             {item.image2 && (
-                                <img src={item.image2} alt={item.image2Alt} />
+                                <img src={item.image2} alt={item.image2Alt} class={item.imageClasses || ''}/>
                             )}
                         </div>
                         <div
