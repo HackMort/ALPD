@@ -220,7 +220,7 @@
             position: absolute;
             left: 50%;
 
-            transform: translateX(-50%) rotate(17deg);
+            transform: translateX(-50%) rotate(12deg);
 
             top: 24px;
 
@@ -370,6 +370,7 @@
             bottom: 256px;
             transform: rotateZ(-10deg);
         }
+
         [data-misdiagnosis-id='usual-suspects_tab1'],
         [data-misdiagnosis-id='usual-suspects_tab2'],
         [data-misdiagnosis-id='usual-suspects_tab3'] {
