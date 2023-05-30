@@ -19,7 +19,7 @@ const data = [
     title: 'Neurologic<sup>3,6,9*</sup>',
     word: 'Neurologic',
     icon: '/assets/images/hpp-profile/skeleton/neurologic-icon-active.svg',
-    text: 'Fatigue, headache, sleep disturbance, and seizures',
+    text: 'Headache, sleep disturbance, and seizures',
     image1: '/assets/images/hpp-profile/skeleton/neurologic-img--infants.png',
     imageAlt1: 'Neurologic image',
     image2: '',
@@ -54,7 +54,7 @@ const data = [
     image2: '',
     imageAlt2: '',
     condition:
-            '<p>Radiograph shows changes in the shape of the crowns and enlarged pulp chambers.</p><p>RReproduced with permission from Reibel A, et al. <em>Orphanet J Rare Dis.</em> 2009:4-6.</p>',
+            '<p style="max-width: 293px;">Radiograph shows changes in the shape of the crowns and enlarged pulp chambers.</p> <p  style="max-width: 293px;"><span style="text-decoration:underline;">Orodental phenotype and genotype findings in all subtypes of hypophosphatasia</span> by Amélie Reibel is licensed under <span style="text-decoration:underline;">CC BY 2.0</span>.</p>',
     type: 'infants'
   },
   {
@@ -96,7 +96,7 @@ const data = [
     imageAlt1: 'Respiratory image',
     image2: '',
     imageAlt2: '',
-    condition: ' <p>“Bell-shape” configuration of the soft thorax will predispose to respiratory disease.</p> <p>Reproduced with permission from Whyte MP. Hypophosphatasia: nature’s window on alkaline phosphatase function in humans. In: <em>Principles of Bone Biology.</em> 3rd ed. Academic Press; 2008:1573-1598.</p>',
+    condition: '',
     type: 'infants'
   },
   {
@@ -125,8 +125,7 @@ const data = [
     imageAlt1: 'Rheumatic image',
     image2: '',
     imageAlt2: '',
-    condition:
-            '',
+    condition: '',
     type: 'infants'
   },
   {
@@ -149,12 +148,12 @@ const data = [
     title: 'Renal<sup>9,11,13</sup>',
     word: 'Renal',
     icon: '/assets/images/hpp-profile/skeleton/renal-icon-active.svg',
-    text: 'Hypercalcemia, nephrocalcinosis, and hypercalciuria',
+    text: '<p style="max-width:282px;">Hypercalcemia, nephrocalcinosis, and hypercalciuria</p>',
     image1: '/assets/images/hpp-profile/skeleton/renal-img--infants.png',
     imageAlt1: 'Renal image',
     image2: '',
     imageAlt2: '',
-    condition: '<p>Renal ultrasound demonstrating nephrocalcinosis (arrows).</p><p>Reproduced with permission from Mohn A, et al. <em>Acta Paediatr.</em> 2011;100(7):e43-e46.</p>',
+    condition: '<p style="max-width:298px;">Disclaimer: This image is not taken from a hypophosphatasia (HPP) patient.</p>',
     type: 'infants'
   },
   {
@@ -178,7 +177,7 @@ const data = [
     title: 'Orthopedic/skeletal<sup>11</sup>',
     word: 'Orthopedic/ Skeletal',
     icon: '/assets/images/hpp-profile/skeleton/orthopedic-icon-active.svg',
-    text: 'Hypomineralization, skeletal deformities, bowing, short stature, bone pain, rickets, and fractures',
+    text: '<div style="max-width:243px;">Hypomineralization, skeletal deformities, bowing, short stature, bone pain, rickets, and fractures</div>',
     image1: '/assets/images/hpp-profile/skeleton/orthopedic-img--infants.png',
     imageAlt1: 'Orthopedic image',
     image2: '',
@@ -193,12 +192,12 @@ const data = [
     title: 'Developmental/growth<sup>11-13</sup>',
     word: 'Developmental/ Growth',
     icon: '/assets/images/hpp-profile/skeleton/developmental-icon-active.svg',
-    text: 'Short stature, failure to thrive, poor weight gain, and delayed or missed motor milestones',
+    text: '<div style="max-width:243px;">Short stature, failure to thrive, poor weight gain, and delayed or missed motor milestones</div>',
     image1: '/assets/images/hpp-profile/skeleton/developmental-img.png',
     imageAlt1: 'Developmental image',
     image2: '',
     imageAlt2: '',
-    condition: '<p>Flared wrists are indicative of rachitic widening, with rickets associated with short stature and delayed walking.</p><p>Reproduced with permission from Whyte MP. <em>Genetics of Bone Biology and Skeletal Disease.</em> 2013; 337-360.</p>',
+    condition: '',
     type: 'infants'
   }
 ]

@@ -882,8 +882,9 @@
 
         &--infants {
             height: fit-content;
-            min-height: 400px;
+            min-height: 520px;
             padding: 2rem 1.5rem;
+            margin-top: 23px;
 
             .skeleton__content--img {
                 img {
@@ -1065,5 +1066,11 @@
                 background-color: $color-red;
             }
         }
+    }
+}
+
+#orthopedic--infants{
+    @media screen and (max-width: 1200px) {
+    margin-top: 24px;
     }
 }
