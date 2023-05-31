@@ -99,6 +99,12 @@ import ModalAdultsDesktop from "./ModalAdultsDesktop.astro";
     }
 
     closingModal() {
+      document
+        .querySelector(`.navigation__item.prev.adults`)
+        .classList.add("hidden");
+      document
+        .querySelector(`.navigation__item.next.adults`)
+        .classList.remove("hidden");
       const modalArticles = document.querySelectorAll(
         `.modal__grids_article.adults`
       );

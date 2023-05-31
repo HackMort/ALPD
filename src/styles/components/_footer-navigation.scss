@@ -22,6 +22,10 @@
 
     &_link {
       color: $color-white;
+
+      &:hover {
+        color: $color-red;
+      }
     }
 
   }

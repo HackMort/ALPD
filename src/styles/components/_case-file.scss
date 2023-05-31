@@ -1,15 +1,29 @@
 .case-file {
     margin-top: 2rem;
-.folder-link{
-    width: 201px;
-    margin: auto;
-    @media screen and (min-width:500px) {
-        width: 305px;
+
+    .folder-link {
+        width: 201px;
+        margin: auto;
+
+        @media screen and (min-width:500px) {
+            width: 305px;
+        }
+
+        @media screen and (min-width:1100px) {
+            width: 27.1875rem;
+        }
+
+        &:hover {
+            &~.case-file__anchor-container {
+    
+                .case-file__anchor,
+                span {
+                    color: $color-red;
+                }
+            }
+        }
     }
-    @media screen and (min-width:1100px) {
-        width: 27.1875rem;
-    }
-}
+
     &__image {
         max-width: 201px;
         margin: auto;
@@ -17,6 +31,7 @@
         @media screen and (min-width:500px) {
             max-width: 305px;
         }
+
         @media screen and (min-width:1100px) {
             max-width: 435px;
         }
@@ -61,6 +76,14 @@
             position: relative;
             z-index: 2;
         }
+
+        &:hover {
+            color: $color-red;
+
+            &~span {
+                color: $color-red;
+            }
+        }
     }
 
     &__anchor-container {
@@ -92,6 +115,7 @@
         padding-bottom: 12.2369rem;
 
     }
+
     @media screen and (min-width:768px) {
         padding-top: 3.75rem;
     }
