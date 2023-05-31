@@ -54,6 +54,9 @@
                 position: relative;
                 z-index: 1;
             }
+            @media screen and (min-width: 1440px) {
+                width: 46rem;
+            }
 
             @media screen and (min-width: 1380px) {
                 margin-right: -80px;

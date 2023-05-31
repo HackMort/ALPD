@@ -6218,3 +6218,36 @@
 
 
 /* ------------------------------- Site Map page ------------------------------------------ */
+
+/* ------------------------------- enter site ------------------------------------------ */
+.modifier-enter{
+        #email{
+            @media screen and (min-width: 1440px) {
+                width: 75%;
+            }
+        }
+
+        .form__control-checkbox .form__control-label{
+            @media screen and (min-width: 1440px) {
+                font-size: 14px;
+                max-width: 397px;
+            }
+        }
+
+        .mx-1{
+            text-transform: lowercase;
+            @media screen and (min-width: 1400px) {
+            margin-left: 2rem;
+            margin-right: 2rem;
+            font-size: 13px;
+            }
+        }
+
+        .form__control-file .form__control-input-file{
+            @media screen and (min-width: 1400px) {
+                padding-left: 35px;
+                padding-right: 35px;
+                }
+        }
+}
+/* ------------------------------- enter site ------------------------------------------ */
