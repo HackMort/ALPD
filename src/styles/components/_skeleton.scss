@@ -888,7 +888,6 @@
 
         display: none;
         flex-direction: column;
-        @include flex-gap(1rem);
 
         &--infants {
             height: fit-content;
@@ -938,7 +937,7 @@
         &--body {
             display: flex;
             flex-direction: column;
-            @include flex-gap(1rem);
+            @include flex-gap(0.5rem);
             font-weight: 400;
             padding-top: 0.5rem;
 
