@@ -816,6 +816,15 @@
                     transition: display 0.3s ease-in-out;
                 }
             }
+
+            &[data-word="developmental--infants"] {
+
+                .skeleton__line--before {
+                    width: 100%;
+                }
+
+                
+            }
         }
     }
 
@@ -875,14 +884,13 @@
         border: 1px solid $color-red;
         padding: 1.5rem;
         position: relative;
+        background-color: #f4f4f2;
 
         display: none;
         flex-direction: column;
-        @include flex-gap(1rem);
 
         &--infants {
             height: fit-content;
-            // min-height: 520px;
             padding: 2rem 1.5rem;
             margin-top: 23px;
 
@@ -929,7 +937,7 @@
         &--body {
             display: flex;
             flex-direction: column;
-            @include flex-gap(1rem);
+            @include flex-gap(0.5rem);
             font-weight: 400;
             padding-top: 0.5rem;
 
@@ -1073,4 +1081,34 @@
     @media screen and (max-width: 1200px) {
     margin-top: 24px;
     }
+}
+
+#developmental--infants-content {
+    padding-bottom: 4rem;
+}
+
+#renal--infants-content {
+    padding-bottom: 4.5rem;
+}
+
+#developmental--infants-content::after {
+    content: "";
+    width: 50%;
+    height: 1px;
+    background-color: #CF1C0A;
+    position: absolute;
+    bottom: -36.7%;
+    left: -1px;
+}
+
+#developmental--infants-content::before {
+    content: "";
+    width: 41.6%;
+    height: 1px;
+    background-color: #CF1C0A;
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform-origin: top left;
+    transform: rotate(90deg);
 }
