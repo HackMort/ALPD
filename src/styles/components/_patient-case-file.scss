@@ -345,6 +345,12 @@
             text-transform: unset;
           }
         }
+
+        &--hannah-family {
+          small {
+            display: none;
+          }
+        }
       }
 
       &--anna-2 {
