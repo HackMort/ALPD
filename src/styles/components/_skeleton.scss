@@ -488,16 +488,16 @@
 
             .skeleton__line--before {
                 top: 37.2rem;
-                left: 37%;
+                left: 50%;
             }
 
             .skeleton__line--after {
                 display: none;
-                width: 136px;
-                top: 459px;
-                left: 705px;
+                width: 4.8rem;
+                top: 8.1rem;
+                left: 10.1rem;
                 z-index: 0;
-                transform: rotate(90deg);
+                transform: rotate(45deg);
                 transform-origin: left;
             }
 
@@ -816,6 +816,15 @@
                     transition: display 0.3s ease-in-out;
                 }
             }
+
+            &[data-word="developmental--infants"] {
+
+                .skeleton__line--before {
+                    width: 100%;
+                }
+
+                
+            }
         }
     }
 
@@ -875,6 +884,7 @@
         border: 1px solid $color-red;
         padding: 1.5rem;
         position: relative;
+        background-color: #f4f4f2;
 
         display: none;
         flex-direction: column;
@@ -882,7 +892,7 @@
 
         &--infants {
             height: fit-content;
-            min-height: auto;
+            min-height: 520px;
             padding: 2rem 1.5rem;
             margin-top: 23px;
 
@@ -1073,4 +1083,26 @@
     @media screen and (max-width: 1200px) {
     margin-top: 24px;
     }
+}
+
+#developmental--infants-content::after {
+    content: "";
+    width: 50%;
+    height: 1px;
+    background-color: #CF1C0A;
+    position: absolute;
+    bottom: -10.4%;
+    left: -1px;
+}
+
+#developmental--infants-content::before {
+    content: "";
+    width: 14.6%;
+    height: 1px;
+    background-color: #CF1C0A;
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform-origin: top left;
+    transform: rotate(90deg);
 }
