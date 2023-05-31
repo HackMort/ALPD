@@ -13,7 +13,7 @@ const getOffsetTop = () =>
   new Promise((resolve) => {
     setTimeout(() => {
       resolve(window.innerWidth < 768 ? 220 : (window.innerWidth >= 768 && window.innerWidth < 1100) ? 330 : 350)
-    }, 250)
+    }, 1000)
   })
 
 /**
