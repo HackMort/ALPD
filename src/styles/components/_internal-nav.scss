@@ -114,6 +114,10 @@
                 font-size: 1.5rem;
                 line-height: 36px;
             }
+
+            &:hover {
+                color: $color-red;
+            }
         }
     }
 }
