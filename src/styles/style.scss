@@ -6223,7 +6223,7 @@
 .modifier-enter{
         #email{
             @media screen and (min-width: 1024px) {
-                width: 85%;
+                width: 75%;
             }
         }
 
@@ -6238,17 +6238,16 @@
         .mx-1{
             text-transform: lowercase;
             @media screen and (min-width: 1024px) {
-            /* margin-left: 2rem;
-            margin-right: 2rem; */
-            //font-size: 13px;
+            margin-left: 2rem;
+            margin-right: 2rem;
+            font-size: 13px;
             }
         }
 
         .form__control-file .form__control-input-file{
             @media screen and (min-width: 1024px) {
-               /*  padding-left: 35px;
-                padding-right: 35px; */
-                
+                padding-left: 35px;
+                padding-right: 35px;
                 }
         }
 }
