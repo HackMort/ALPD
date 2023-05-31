@@ -5783,10 +5783,26 @@
             font-size: .875rem;
             line-height: 18.2px;
 
+            list-style-type: none;
+
             .positioned {
                 position: absolute;
                 left: -7px;
                 top: 7px;
+
+                &:last-of-type {
+                    top: 5px;
+                }
+            }
+
+            &:last-of-type {
+                .positioned {
+                    top: 4.5px;
+
+                    @media screen and (min-width: 768px) {
+                        top: -0.5em;
+                    }
+                }
             }
         }
 
@@ -5800,7 +5816,9 @@
                 position: initial;
 
                 .positioned {
-                    position: initial;
+                    position: relative;
+                    left: initial;
+                    top: initial;
                 }
             }
         }
