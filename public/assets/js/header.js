@@ -38,7 +38,7 @@ function MainMenu (menuClass = 'main__navigation', currentPageClass = 'current-p
     return
   }
   const mobileQuery = window.matchMedia('(max-width: 1199px)')
-  const currentPage = window.location.pathname.replace(/\/+$/, '') // Remove trailing slash if any, this is needed in order to work in the Dev Server.
+  const currentPage = window.location.pathname.replace(/\/+$/, '') || '/' // Remove trailing slash if any, this is needed in order to work in the Dev Server.
   const parentMenuItemClass = 'has__sub_menu'
   const subMenuItemClass = 'nav__sub_menu_item_link'
   const toggleClass = 'is--open'
@@ -50,6 +50,7 @@ function MainMenu (menuClass = 'main__navigation', currentPageClass = 'current-p
         parent.classList.add(currentPageClass)
       }
     }
+
     item.addEventListener('click', (e) => {
       if (!mobileQuery.matches) {
         return
