@@ -49,7 +49,7 @@ const data = [
     word: 'Dental',
     icon: '/assets/images/hpp-profile/skeleton/dental-icon-active.svg',
     text: '<div style="@media screen and (min-width:1200px){max-width: 304px;font-size: 18px;}">Premature or nontraumatic tooth loss with root intact and caries</div>',
-    image1:'/assets/images/hpp-profile/skeleton/dental-xray-one.png',
+    image1: '/assets/images/hpp-profile/skeleton/dental-xray-one.png',
     imageAlt1: 'Dental x-ray one',
     image2: '',
     imageAlt2: '',
@@ -68,7 +68,7 @@ const data = [
     imageAlt1: 'Muscular image',
     image2: '',
     imageAlt2: '',
-    condition: '<p>Reduced grip force assessed by digital hand dynamometer.</p> <p>Reproduced with permission from Jandl NM, et al. <em>Calcif Tissue Int.</em> 2021;108(3):288-301.</p>',
+    condition: '<p>Disclaimer: This image is not taken from a hypophosphatasia (HPP) patient.</p>',
     type: 'adults'
   },
   {
@@ -153,7 +153,7 @@ const data = [
     imageAlt1: 'Renal image',
     image2: '',
     imageAlt2: '',
-    condition: '<p style="max-width:298px;">Disclaimer: This image is not taken from a hypophosphatasia (HPP) patient.</p>',
+    condition: '<p>Disclaimer: This image is not taken from a hypophosphatasia (HPP) patient.</p>',
     type: 'infants'
   },
   {
@@ -182,7 +182,7 @@ const data = [
     imageAlt1: 'Orthopedic image',
     image2: '',
     imageAlt2: '',
-    condition: '', 
+    condition: '',
     type: 'infants',
     imageClasses: 'content--fit'
   },
@@ -199,7 +199,7 @@ const data = [
     imageAlt2: '',
     condition: '',
     type: 'infants'
-  } 
+  }
 ]
 
 export default data
