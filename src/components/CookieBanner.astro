@@ -24,7 +24,7 @@
   window.addEventListener("resize", setOffsetOfBody);
 
   cookieButton.addEventListener("click", function (e) {
-    showCookieBanner();
+    hiddenCookieBanner();
     setCookieConsent();
   });
 
@@ -38,6 +38,11 @@
     cookie.classList.remove("hidden");
     setOffsetOfBody()
     // body.style.paddingTop = `0`;
+  }
+
+  function hiddenCookieBanner() {
+    cookie.classList.add("hidden");
+    body.style.paddingTop = `0`;
   }
 
   function setCookieConsent() {
