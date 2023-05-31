@@ -1,4 +1,4 @@
-<div class="cookie">
+<div class="cookie hidden">
   <div class="wrapper cookie__content">
     <p class="cookie__text">
       We use cookies to give you the best online experience. By using our
@@ -24,17 +24,23 @@
   window.addEventListener("resize", setOffsetOfBody);
 
   cookieButton.addEventListener("click", function (e) {
-    hideCookieBanner();
+    hiddenCookieBanner();
     setCookieConsent();
   });
 
   function checkCookie() {
-    if (localStorage.getItem("cookieConsent") === "true") {
-      hideCookieBanner();
+    if (!localStorage.getItem("cookieConsent")) {
+      showCookieBanner();
     }
   }
 
-  function hideCookieBanner() {
+  function showCookieBanner() {
+    cookie.classList.remove("hidden");
+    setOffsetOfBody()
+    // body.style.paddingTop = `0`;
+  }
+
+  function hiddenCookieBanner() {
     cookie.classList.add("hidden");
     body.style.paddingTop = `0`;
   }
