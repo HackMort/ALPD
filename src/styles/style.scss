@@ -4013,6 +4013,7 @@
 
     #hpp-prevalence {
         position: relative;
+
         @media screen and (min-width: 1024px) {
             margin-top: 3rem;
         }
@@ -6218,3 +6219,39 @@
 
 
 /* ------------------------------- Site Map page ------------------------------------------ */
+
+/* ------------------------------- enter site ------------------------------------------ */
+.modifier-enter {
+    #email {
+        @media screen and (min-width: 1024px) {
+            width: 84%;
+        }
+    }
+
+    .form__control-checkbox .form__control-label {
+        @media screen and (min-width: 1024px) {
+            /* font-size: 14px;
+                max-width: 397px; */
+            max-width: 426px;
+        }
+    }
+
+    .mx-1 {
+        text-transform: lowercase;
+
+        @media screen and (min-width: 1024px) {
+            margin-left: 1rem;
+            margin-right: 1rem;
+            font-size: 13px;
+        }
+    }
+
+    .form__control-file .form__control-input-file {
+        @media screen and (min-width: 1024px) {
+            padding-left: 35px;
+            padding-right: 35px;
+        }
+    }
+}
+
+/* ------------------------------- enter site ------------------------------------------ */
