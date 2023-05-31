@@ -892,7 +892,6 @@
 
         &--infants {
             height: fit-content;
-            min-height: 520px;
             padding: 2rem 1.5rem;
             margin-top: 23px;
 
@@ -1085,19 +1084,23 @@
     }
 }
 
+#developmental--infants-content {
+    padding-bottom: 4rem;
+}
+
 #developmental--infants-content::after {
     content: "";
     width: 50%;
     height: 1px;
     background-color: #CF1C0A;
     position: absolute;
-    bottom: -10.4%;
+    bottom: -22.7%;
     left: -1px;
 }
 
 #developmental--infants-content::before {
     content: "";
-    width: 14.6%;
+    width: 28.6%;
     height: 1px;
     background-color: #CF1C0A;
     position: absolute;
