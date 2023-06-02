@@ -270,3 +270,8 @@ $color-value in $colors {
 .content--fit {
     max-width: fit-content !important;
 }
+
+.full-screen {
+    width: 100vw;
+    height: 100vh;
+}
