@@ -1,12 +1,16 @@
 ---
-import EnterSite from "../components/EnterSite.astro";
 import Layout from "../layouts/Layout.astro";
-
-type Props = {};
-
-const {} = Astro.props;
 ---
 
-<Layout title="Enter-Site" showHeader={false} showISI={false} showFooter={false}>
-  <EnterSite />
+<Layout
+    title="Enter-Site"
+    showHeader={false}
+    showISI={false}
+    showFooter={false}
+>
+    <iframe
+        class="full-screen"
+        id="alpd"
+        src="https://main.d1mfcoaeirtvif.amplifyapp.com/?key=det3ct"
+        allow="fullscreen; camera; microphone; autoplay;"></iframe>
 </Layout>
