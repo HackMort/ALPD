@@ -2,7 +2,12 @@ import { defineConfig } from 'astro/config'
 
 function sanitizeAstroComponentEntryFilenameToJs (filename) {
   const name = filename.split('.')[0]
-  const sanitized = name.replace(/([A-Z])/g, '-$1').toLowerCase().slice(1)
+
+  let sanitized = name
+  if (/[A-Z]/.test(name)) {
+    sanitized = name.replace(/([A-Z])/g, '-$1').toLowerCase().slice(1)
+  }
+
   return `${sanitized}.js`
 }
 
@@ -58,11 +63,18 @@ export default defineConfig({
             * @returns {string} - The generated file name.
             */
           entryFileNames: (entry) => {
-            let name = entry.moduleIds[0].split('/').pop().split('?')[0] // Extract the file name from the module ID
-            const isAstroFile = name.includes('.astro') // Check if it is an Astro file
+            console.log(entry)
+            let name = 'assets/js/[name].[hash].js'
+            const moduleIds = entry.moduleIds
 
-            if (isAstroFile) {
-              name = sanitizeAstroComponentEntryFilenameToJs(name)
+            if (moduleIds && moduleIds.length > 0) {
+              name = moduleIds[0].split('/').pop().split('?')[0] // Extract the file name from the module ID
+
+              const isAstroFile = name.includes('.astro') // Check if it is an Astro file
+
+              if (isAstroFile) {
+                name = sanitizeAstroComponentEntryFilenameToJs(name)
+              }
             }
 
             return `assets/js/${name}`
