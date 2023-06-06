@@ -1,5 +1,11 @@
 import { defineConfig } from 'astro/config'
 
+function sanitizeAstroComponentEntryFilenameToJs (filename) {
+  const name = filename.split('.')[0]
+  const sanitized = name.replace(/([A-Z])/g, '-$1').toLowerCase().slice(1)
+  return `${sanitized}.js`
+}
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://my-site.com', // Modify as you need
@@ -45,10 +51,23 @@ export default defineConfig({
                 return name
             }
           },
+          /**
+            * Function that generates the file name for entry files.
+            *
+            * @param {Object} entry - The object representing the entry file.
+            * @returns {string} - The generated file name.
+            */
+          entryFileNames: (entry) => {
+            let name = entry.moduleIds[0].split('/').pop().split('?')[0] // Extract the file name from the module ID
+            const isAstroFile = name.includes('.astro') // Check if it is an Astro file
 
-          entryFileNames: 'assets/js/[name].[hash].js'
+            if (isAstroFile) {
+              name = sanitizeAstroComponentEntryFilenameToJs(name)
+            }
+
+            return `assets/js/${name}`
+          }
           // chunkFileNames: 'assets/js/[name].[hash].js'
-          // assetFileNames: 'assets/css/[name][extname]'
         }
       }
     }
