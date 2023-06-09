@@ -5,3 +5,7 @@ const recurrentVisitor = window.localStorage.getItem('recurrent-visitor') === 't
 if (!recurrentVisitor && !currentHref.includes(enterSiteURL) && window.location.pathname !== '/validate/') {
   window.location.href = enterSiteURL
 }
+
+if (currentHref.includes(enterSiteURL)) {
+  window.localStorage.setItem('recurrent-visitor', 'true')
+}
