@@ -484,8 +484,7 @@ import References from "../components/References.astro";
                                 graphicDesc.innerHTML = "0 - 14 days Female";
 
                                 if (
-                                    alpValue.value == 273 ||
-                                    alpValue.value == 90 ||
+                                    
                                     alpValue.value === ""
                                 ) {
                                     alpHigh.innerHTML = "High = over 273 U/L";
@@ -497,7 +496,7 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
-                                } else if (alpValue.value < 90) {
+                                } else if (alpValue.value <= 90) {
                                     alpHigh.innerHTML = "High = over 273 U/L";
                                     alpNormal.innerHTML = "Normal = 90-273 U/L";
                                     alpLow.innerHTML = "Low = under 90 U/L";
@@ -509,13 +508,13 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                 } else if (
                                     alpValue.value > 90 &&
-                                    alpValue.value < 273
+                                    alpValue.value <= 273
                                 ) {
                                     alpHigh.innerHTML = "High = over 273 U/L";
                                     alpNormal.innerHTML = "Normal = 90-273 U/L";
                                     alpLow.innerHTML = "Low = under 90 U/L";
                                     alpNormal.style.fontWeight = "bold";
-                                    alpNormal.style.color = "#617D44";
+                                    alpNormal.style.color = "gray";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
                                     alpLow.style.fontWeight = "400";
@@ -525,7 +524,7 @@ import References from "../components/References.astro";
                                     alpNormal.innerHTML = "Normal = 90-273 U/L";
                                     alpLow.innerHTML = "Low = under 90 U/L";
                                     alpHigh.style.fontWeight = "bold";
-                                    alpHigh.style.color = "#617D44";
+                                    alpHigh.style.color = "red";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                     alpNormal.style.fontWeight = "400";
@@ -550,13 +549,11 @@ import References from "../components/References.astro";
                                     "15 days - 1 year Female";
 
                                 if (
-                                    alpValue.value == 518 ||
-                                    alpValue.value == 134 ||
+                                    
                                     alpValue.value === ""
                                 ) {
                                     alpHigh.innerHTML = "High = over 518 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 134-518 U/L";
+                                    alpNormal.innerHTML = "Normal = 134-518 U/L";
                                     alpLow.innerHTML = "Low = under 134 U/L";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
@@ -564,10 +561,9 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
-                                } else if (alpValue.value < 134) {
+                                } else if (alpValue.value <= 134) {
                                     alpHigh.innerHTML = "High = over 518 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 134-518 U/L";
+                                    alpNormal.innerHTML = "Normal = 134-518 U/L";
                                     alpLow.innerHTML = "Low = under 134 U/L";
                                     alpLow.style.fontWeight = "bold";
                                     alpLow.style.color = "#617D44";
@@ -577,25 +573,23 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                 } else if (
                                     alpValue.value > 134 &&
-                                    alpValue.value < 518
+                                    alpValue.value <= 518
                                 ) {
                                     alpHigh.innerHTML = "High = over 518 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 134-518 U/L";
+                                    alpNormal.innerHTML = "Normal = 134-518 U/L";
                                     alpLow.innerHTML = "Low = under 134 U/L";
                                     alpNormal.style.fontWeight = "bold";
-                                    alpNormal.style.color = "#617D44";
+                                    alpNormal.style.color = "gray";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                 } else if (alpValue.value > 518) {
                                     alpHigh.innerHTML = "High = over 518 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 134-518 U/L";
+                                    alpNormal.innerHTML = "Normal = 134-518 U/L";
                                     alpLow.innerHTML = "Low = under 134 U/L";
                                     alpHigh.style.fontWeight = "bold";
-                                    alpHigh.style.color = "#617D44";
+                                    alpHigh.style.color = "red";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                     alpNormal.style.fontWeight = "400";
@@ -619,13 +613,11 @@ import References from "../components/References.astro";
                                 graphicDesc.innerHTML = "1 - 10 years Female";
 
                                 if (
-                                    alpValue.value == 369 ||
-                                    alpValue.value == 156 ||
+                                    
                                     alpValue.value === ""
                                 ) {
                                     alpHigh.innerHTML = "High = over 369 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 156-369 U/L";
+                                    alpNormal.innerHTML = "Normal = 156-369 U/L";
                                     alpLow.innerHTML = "Low = under 156 U/L";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
@@ -633,10 +625,9 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
-                                } else if (alpValue.value < 156) {
+                                } else if (alpValue.value <= 156) {
                                     alpHigh.innerHTML = "High = over 369 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 156-369 U/L";
+                                    alpNormal.innerHTML = "Normal = 156-369 U/L";
                                     alpLow.innerHTML = "Low = under 156 U/L";
                                     alpLow.style.fontWeight = "bold";
                                     alpLow.style.color = "#617D44";
@@ -646,25 +637,23 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                 } else if (
                                     alpValue.value > 156 &&
-                                    alpValue.value < 369
+                                    alpValue.value <= 369
                                 ) {
                                     alpHigh.innerHTML = "High = over 369 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 156-369 U/L";
+                                    alpNormal.innerHTML = "Normal = 156-369 U/L";
                                     alpLow.innerHTML = "Low = under 156 U/L";
                                     alpNormal.style.fontWeight = "bold";
-                                    alpNormal.style.color = "#617D44";
+                                    alpNormal.style.color = "gray";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                 } else if (alpValue.value > 369) {
                                     alpHigh.innerHTML = "High = over 369 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 156-369 U/L";
+                                    alpNormal.innerHTML = "Normal = 156-369 U/L";
                                     alpLow.innerHTML = "Low = under 156 U/L";
                                     alpHigh.style.fontWeight = "bold";
-                                    alpHigh.style.color = "#617D44";
+                                    alpHigh.style.color = "red";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                     alpNormal.style.fontWeight = "400";
@@ -688,13 +677,11 @@ import References from "../components/References.astro";
                                 graphicDesc.innerHTML = "10 - 13 years Female";
 
                                 if (
-                                    alpValue.value == 460 ||
-                                    alpValue.value == 141 ||
+                                    
                                     alpValue.value === ""
                                 ) {
                                     alpHigh.innerHTML = "High = over 460 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 141-460 U/L";
+                                    alpNormal.innerHTML = "Normal = 141-460 U/L";
                                     alpLow.innerHTML = "Low = under 141 U/L";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
@@ -702,10 +689,9 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
-                                } else if (alpValue.value < 141) {
+                                } else if (alpValue.value <= 141) {
                                     alpHigh.innerHTML = "High = over 460 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 141-460 U/L";
+                                    alpNormal.innerHTML = "Normal = 141-460 U/L";
                                     alpLow.innerHTML = "Low = under 141 U/L";
                                     alpLow.style.fontWeight = "bold";
                                     alpLow.style.color = "#617D44";
@@ -715,25 +701,23 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                 } else if (
                                     alpValue.value > 141 &&
-                                    alpValue.value < 460
+                                    alpValue.value <= 460
                                 ) {
                                     alpHigh.innerHTML = "High = over 460 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 141-460 U/L";
+                                    alpNormal.innerHTML = "Normal = 141-460 U/L";
                                     alpLow.innerHTML = "Low = under 141 U/L";
                                     alpNormal.style.fontWeight = "bold";
-                                    alpNormal.style.color = "#617D44";
+                                    alpNormal.style.color = "gray";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                 } else if (alpValue.value > 460) {
                                     alpHigh.innerHTML = "High = over 460 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 141-460 U/L";
+                                    alpNormal.innerHTML = "Normal = 141-460 U/L";
                                     alpLow.innerHTML = "Low = under 141 U/L";
                                     alpHigh.style.fontWeight = "bold";
-                                    alpHigh.style.color = "#617D44";
+                                    alpHigh.style.color = "red";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                     alpNormal.style.fontWeight = "400";
@@ -757,8 +741,7 @@ import References from "../components/References.astro";
                                 graphicDesc.innerHTML = "13 - 15 years Female";
 
                                 if (
-                                    alpValue.value == 280 ||
-                                    alpValue.value == 62 ||
+                                    
                                     alpValue.value === ""
                                 ) {
                                     alpHigh.innerHTML = "High = over 280 U/L";
@@ -770,7 +753,7 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
-                                } else if (alpValue.value < 62) {
+                                } else if (alpValue.value <= 62) {
                                     alpHigh.innerHTML = "High = over 280 U/L";
                                     alpNormal.innerHTML = "Normal = 62-280 U/L";
                                     alpLow.innerHTML = "Low = under 62 U/L";
@@ -782,13 +765,13 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                 } else if (
                                     alpValue.value > 62 &&
-                                    alpValue.value < 280
+                                    alpValue.value <= 280
                                 ) {
                                     alpHigh.innerHTML = "High = over 280 U/L";
                                     alpNormal.innerHTML = "Normal = 62-280 U/L";
                                     alpLow.innerHTML = "Low = under 62 U/L";
                                     alpNormal.style.fontWeight = "bold";
-                                    alpNormal.style.color = "#617D44";
+                                    alpNormal.style.color = "gray";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
                                     alpLow.style.fontWeight = "400";
@@ -798,7 +781,7 @@ import References from "../components/References.astro";
                                     alpNormal.innerHTML = "Normal = 62-280 U/L";
                                     alpLow.innerHTML = "Low = under 62 U/L";
                                     alpHigh.style.fontWeight = "bold";
-                                    alpHigh.style.color = "#617D44";
+                                    alpHigh.style.color = "red";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                     alpNormal.style.fontWeight = "400";
@@ -820,8 +803,7 @@ import References from "../components/References.astro";
                                 graphicDesc.innerHTML = "15 - 17 years Female";
 
                                 if (
-                                    alpValue.value == 128 ||
-                                    alpValue.value == 54 ||
+                                    
                                     alpValue.value === ""
                                 ) {
                                     alpHigh.innerHTML = "High = over 128 U/L";
@@ -833,7 +815,7 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
-                                } else if (alpValue.value < 54) {
+                                } else if (alpValue.value <= 54) {
                                     alpHigh.innerHTML = "High = over 128 U/L";
                                     alpNormal.innerHTML = "Normal = 54-128 U/L";
                                     alpLow.innerHTML = "Low = under 54 U/L";
@@ -845,13 +827,13 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                 } else if (
                                     alpValue.value > 54 &&
-                                    alpValue.value < 128
+                                    alpValue.value <= 128
                                 ) {
                                     alpHigh.innerHTML = "High = over 128 U/L";
                                     alpNormal.innerHTML = "Normal = 54-128 U/L";
                                     alpLow.innerHTML = "Low = under 54 U/L";
                                     alpNormal.style.fontWeight = "bold";
-                                    alpNormal.style.color = "#617D44";
+                                    alpNormal.style.color = "gray";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
                                     alpLow.style.fontWeight = "400";
@@ -861,7 +843,7 @@ import References from "../components/References.astro";
                                     alpNormal.innerHTML = "Normal = 54-128 U/L";
                                     alpLow.innerHTML = "Low = under 54 U/L";
                                     alpHigh.style.fontWeight = "bold";
-                                    alpHigh.style.color = "#617D44";
+                                    alpHigh.style.color = "red";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                     alpNormal.style.fontWeight = "400";
@@ -885,8 +867,7 @@ import References from "../components/References.astro";
                                 graphicDesc.innerHTML = "17 - 19 years Female";
 
                                 if (
-                                    alpValue.value == 95 ||
-                                    alpValue.value == 48 ||
+                                    
                                     alpValue.value === ""
                                 ) {
                                     alpHigh.innerHTML = "High = over 95 U/L";
@@ -898,7 +879,7 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
-                                } else if (alpValue.value < 48) {
+                                } else if (alpValue.value <= 48) {
                                     alpHigh.innerHTML = "High = over 95 U/L";
                                     alpNormal.innerHTML = "Normal = 48-95 U/L";
                                     alpLow.innerHTML = "Low = under 48 U/L";
@@ -910,13 +891,13 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                 } else if (
                                     alpValue.value > 48 &&
-                                    alpValue.value < 95
+                                    alpValue.value <= 95
                                 ) {
                                     alpHigh.innerHTML = "High = over 95 U/L";
                                     alpNormal.innerHTML = "Normal = 48-95 U/L";
                                     alpLow.innerHTML = "Low = under 48 U/L";
                                     alpNormal.style.fontWeight = "bold";
-                                    alpNormal.style.color = "#617D44";
+                                    alpNormal.style.color = "gray";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
                                     alpLow.style.fontWeight = "400";
@@ -926,7 +907,7 @@ import References from "../components/References.astro";
                                     alpNormal.innerHTML = "Normal = 48-95 U/L";
                                     alpLow.innerHTML = "Low = under 48 U/L";
                                     alpHigh.style.fontWeight = "bold";
-                                    alpHigh.style.color = "#617D44";
+                                    alpHigh.style.color = "red";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                     alpNormal.style.fontWeight = "400";
@@ -950,8 +931,7 @@ import References from "../components/References.astro";
                                 graphicDesc.innerHTML = "Adult Female";
 
                                 if (
-                                    alpValue.value == 120 ||
-                                    alpValue.value == 40 ||
+                                    
                                     alpValue.value === ""
                                 ) {
                                     alpHigh.innerHTML = "High = over 120 U/L";
@@ -963,7 +943,7 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
-                                } else if (alpValue.value < 40) {
+                                } else if (alpValue.value <= 40) {
                                     alpHigh.innerHTML = "High = over 120 U/L";
                                     alpNormal.innerHTML = "Normal = 40-120 U/L";
                                     alpLow.innerHTML = "Low = under 40 U/L";
@@ -975,13 +955,13 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                 } else if (
                                     alpValue.value > 40 &&
-                                    alpValue.value < 120
+                                    alpValue.value <= 120
                                 ) {
                                     alpHigh.innerHTML = "High = over 120 U/L";
                                     alpNormal.innerHTML = "Normal = 40-120 U/L";
                                     alpLow.innerHTML = "Low = under 40 U/L";
                                     alpNormal.style.fontWeight = "bold";
-                                    alpNormal.style.color = "#617D44";
+                                    alpNormal.style.color = "gray";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
                                     alpLow.style.fontWeight = "400";
@@ -991,7 +971,7 @@ import References from "../components/References.astro";
                                     alpNormal.innerHTML = "Normal = 40-120 U/L";
                                     alpLow.innerHTML = "Low = under 40 U/L";
                                     alpHigh.style.fontWeight = "bold";
-                                    alpHigh.style.color = "#617D44";
+                                    alpHigh.style.color = "red";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                     alpNormal.style.fontWeight = "400";
@@ -1016,8 +996,7 @@ import References from "../components/References.astro";
                                 graphicDesc.innerHTML = "0 - 14 days Male";
 
                                 if (
-                                    alpValue.value == 273 ||
-                                    alpValue.value == 90 ||
+                                    
                                     alpValue.value === ""
                                 ) {
                                     alpHigh.innerHTML = "High = over 273 U/L";
@@ -1029,7 +1008,7 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
-                                } else if (alpValue.value < 90) {
+                                } else if (alpValue.value <= 90) {
                                     alpHigh.innerHTML = "High = over 273 U/L";
                                     alpNormal.innerHTML = "Normal = 90-273 U/L";
                                     alpLow.innerHTML = "Low = under 90 U/L";
@@ -1041,13 +1020,13 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                 } else if (
                                     alpValue.value > 90 &&
-                                    alpValue.value < 273
+                                    alpValue.value <= 273
                                 ) {
                                     alpHigh.innerHTML = "High = over 273 U/L";
                                     alpNormal.innerHTML = "Normal = 90-273 U/L";
                                     alpLow.innerHTML = "Low = under 90 U/L";
                                     alpNormal.style.fontWeight = "bold";
-                                    alpNormal.style.color = "#617D44";
+                                    alpNormal.style.color = "gray";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
                                     alpLow.style.fontWeight = "400";
@@ -1057,7 +1036,7 @@ import References from "../components/References.astro";
                                     alpNormal.innerHTML = "Normal = 90-273 U/L";
                                     alpLow.innerHTML = "Low = under 90 U/L";
                                     alpHigh.style.fontWeight = "bold";
-                                    alpHigh.style.color = "#617D44";
+                                    alpHigh.style.color = "red";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                     alpNormal.style.fontWeight = "400";
@@ -1081,13 +1060,11 @@ import References from "../components/References.astro";
                                 graphicDesc.innerHTML = "15 days - 1 year Male";
 
                                 if (
-                                    alpValue.value == 518 ||
-                                    alpValue.value == 134 ||
+                                    
                                     alpValue.value === ""
                                 ) {
                                     alpHigh.innerHTML = "High = over 518 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 134-518 U/L";
+                                    alpNormal.innerHTML = "Normal = 134-518 U/L";
                                     alpLow.innerHTML = "Low = under 134 U/L";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
@@ -1095,10 +1072,9 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
-                                } else if (alpValue.value < 134) {
+                                } else if (alpValue.value <= 134) {
                                     alpHigh.innerHTML = "High = over 518 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 134-518 U/L";
+                                    alpNormal.innerHTML = "Normal = 134-518 U/L";
                                     alpLow.innerHTML = "Low = under 134 U/L";
                                     alpLow.style.fontWeight = "bold";
                                     alpLow.style.color = "#617D44";
@@ -1108,25 +1084,23 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                 } else if (
                                     alpValue.value > 134 &&
-                                    alpValue.value < 518
+                                    alpValue.value <= 518
                                 ) {
                                     alpHigh.innerHTML = "High = over 518 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 134-518 U/L";
+                                    alpNormal.innerHTML = "Normal = 134-518 U/L";
                                     alpLow.innerHTML = "Low = under 134 U/L";
                                     alpNormal.style.fontWeight = "bold";
-                                    alpNormal.style.color = "#617D44";
+                                    alpNormal.style.color = "gray";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                 } else if (alpValue.value > 518) {
                                     alpHigh.innerHTML = "High = over 518 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 134-518 U/L";
+                                    alpNormal.innerHTML = "Normal = 134-518 U/L";
                                     alpLow.innerHTML = "Low = under 134 U/L";
                                     alpHigh.style.fontWeight = "bold";
-                                    alpHigh.style.color = "#617D44";
+                                    alpHigh.style.color = "red";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                     alpNormal.style.fontWeight = "400";
@@ -1150,13 +1124,11 @@ import References from "../components/References.astro";
                                 graphicDesc.innerHTML = "1 - 10 years Male";
 
                                 if (
-                                    alpValue.value == 369 ||
-                                    alpValue.value == 158 ||
+                                    
                                     alpValue.value === ""
                                 ) {
                                     alpHigh.innerHTML = "High = over 369 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 158-369 U/L";
+                                    alpNormal.innerHTML = "Normal = 158-369 U/L";
                                     alpLow.innerHTML = "Low = under 158 U/L";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
@@ -1164,10 +1136,9 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
-                                } else if (alpValue.value < 158) {
+                                } else if (alpValue.value <= 158) {
                                     alpHigh.innerHTML = "High = over 369 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 158-369 U/L";
+                                    alpNormal.innerHTML = "Normal = 158-369 U/L";
                                     alpLow.innerHTML = "Low = under 158 U/L";
                                     alpLow.style.fontWeight = "bold";
                                     alpLow.style.color = "#617D44";
@@ -1177,25 +1148,23 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                 } else if (
                                     alpValue.value > 158 &&
-                                    alpValue.value < 369
+                                    alpValue.value <= 369
                                 ) {
                                     alpHigh.innerHTML = "High = over 369 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 158-369 U/L";
+                                    alpNormal.innerHTML = "Normal = 158-369 U/L";
                                     alpLow.innerHTML = "Low = under 158 U/L";
                                     alpNormal.style.fontWeight = "bold";
-                                    alpNormal.style.color = "#617D44";
+                                    alpNormal.style.color = "gray";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                 } else if (alpValue.value > 369) {
                                     alpHigh.innerHTML = "High = over 369 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 158-369 U/L";
+                                    alpNormal.innerHTML = "Normal = 158-369 U/L";
                                     alpLow.innerHTML = "Low = under 158 U/L";
                                     alpHigh.style.fontWeight = "bold";
-                                    alpHigh.style.color = "#617D44";
+                                    alpHigh.style.color = "red";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                     alpNormal.style.fontWeight = "400";
@@ -1219,13 +1188,11 @@ import References from "../components/References.astro";
                                 graphicDesc.innerHTML = "10 - 13 years Male";
 
                                 if (
-                                    alpValue.value == 480 ||
-                                    alpValue.value == 141 ||
+                                    
                                     alpValue.value === ""
                                 ) {
                                     alpHigh.innerHTML = "High = over 480 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 141-480 U/L";
+                                    alpNormal.innerHTML = "Normal = 141-480 U/L";
                                     alpLow.innerHTML = "Low = under 141 U/L";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
@@ -1233,10 +1200,9 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
-                                } else if (alpValue.value < 141) {
+                                } else if (alpValue.value <= 141) {
                                     alpHigh.innerHTML = "High = over 480 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 141-480 U/L";
+                                    alpNormal.innerHTML = "Normal = 141-480 U/L";
                                     alpLow.innerHTML = "Low = under 141 U/L";
                                     alpLow.style.fontWeight = "bold";
                                     alpLow.style.color = "#617D44";
@@ -1246,25 +1212,23 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                 } else if (
                                     alpValue.value > 141 &&
-                                    alpValue.value < 480
+                                    alpValue.value <= 480
                                 ) {
                                     alpHigh.innerHTML = "High = over 480 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 141-480 U/L";
+                                    alpNormal.innerHTML = "Normal = 141-480 U/L";
                                     alpLow.innerHTML = "Low = under 141 U/L";
                                     alpNormal.style.fontWeight = "bold";
-                                    alpNormal.style.color = "#617D44";
+                                    alpNormal.style.color = "gray";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                 } else if (alpValue.value > 480) {
                                     alpHigh.innerHTML = "High = over 480 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 141-480 U/L";
+                                    alpNormal.innerHTML = "Normal = 141-480 U/L";
                                     alpLow.innerHTML = "Low = under 141 U/L";
                                     alpHigh.style.fontWeight = "bold";
-                                    alpHigh.style.color = "#617D44";
+                                    alpHigh.style.color = "red";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                     alpNormal.style.fontWeight = "400";
@@ -1288,13 +1252,11 @@ import References from "../components/References.astro";
                                 graphicDesc.innerHTML = "13 - 15 years Male";
 
                                 if (
-                                    alpValue.value == 517 ||
-                                    alpValue.value == 127 ||
+                                    
                                     alpValue.value === ""
                                 ) {
                                     alpHigh.innerHTML = "High = over 517 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 127-517 U/L";
+                                    alpNormal.innerHTML = "Normal = 127-517 U/L";
                                     alpLow.innerHTML = "Low = under 127 U/L";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
@@ -1302,10 +1264,9 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
-                                } else if (alpValue.value < 127) {
+                                } else if (alpValue.value <= 127) {
                                     alpHigh.innerHTML = "High = over 517 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 127-517 U/L";
+                                    alpNormal.innerHTML = "Normal = 127-517 U/L";
                                     alpLow.innerHTML = "Low = under 127 U/L";
                                     alpLow.style.fontWeight = "bold";
                                     alpLow.style.color = "#617D44";
@@ -1315,25 +1276,23 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                 } else if (
                                     alpValue.value > 127 &&
-                                    alpValue.value < 517
+                                    alpValue.value <= 517
                                 ) {
                                     alpHigh.innerHTML = "High = over 517 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 127-517 U/L";
+                                    alpNormal.innerHTML = "Normal = 127-517 U/L";
                                     alpLow.innerHTML = "Low = under 127 U/L";
                                     alpNormal.style.fontWeight = "bold";
-                                    alpNormal.style.color = "#617D44";
+                                    alpNormal.style.color = "gray";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                 } else if (alpValue.value > 517) {
                                     alpHigh.innerHTML = "High = over 517 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 127-517 U/L";
+                                    alpNormal.innerHTML = "Normal = 127-517 U/L";
                                     alpLow.innerHTML = "Low = under 127 U/L";
                                     alpHigh.style.fontWeight = "bold";
-                                    alpHigh.style.color = "#617D44";
+                                    alpHigh.style.color = "red";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                     alpNormal.style.fontWeight = "400";
@@ -1357,8 +1316,7 @@ import References from "../components/References.astro";
                                 graphicDesc.innerHTML = "15 - 17 years Male";
 
                                 if (
-                                    alpValue.value == 365 ||
-                                    alpValue.value == 89 ||
+                                    
                                     alpValue.value === ""
                                 ) {
                                     alpHigh.innerHTML = "High = over 365 U/L";
@@ -1370,7 +1328,7 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
-                                } else if (alpValue.value < 89) {
+                                } else if (alpValue.value <= 89) {
                                     alpHigh.innerHTML = "High = over 365 U/L";
                                     alpNormal.innerHTML = "Normal = 89-365 U/L";
                                     alpLow.innerHTML = "Low = under 89 U/L";
@@ -1382,13 +1340,13 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                 } else if (
                                     alpValue.value > 89 &&
-                                    alpValue.value < 365
+                                    alpValue.value <= 365
                                 ) {
                                     alpHigh.innerHTML = "High = over 365 U/L";
                                     alpNormal.innerHTML = "Normal = 89-365 U/L";
                                     alpLow.innerHTML = "Low = under 89 U/L";
                                     alpNormal.style.fontWeight = "bold";
-                                    alpNormal.style.color = "#617D44";
+                                    alpNormal.style.color = "gray";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
                                     alpLow.style.fontWeight = "400";
@@ -1398,7 +1356,7 @@ import References from "../components/References.astro";
                                     alpNormal.innerHTML = "Normal = 89-365 U/L";
                                     alpLow.innerHTML = "Low = under 89 U/L";
                                     alpHigh.style.fontWeight = "bold";
-                                    alpHigh.style.color = "#617D44";
+                                    alpHigh.style.color = "red";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                     alpNormal.style.fontWeight = "400";
@@ -1422,8 +1380,7 @@ import References from "../components/References.astro";
                                 graphicDesc.innerHTML = "17 - 19 years Male";
 
                                 if (
-                                    alpValue.value == 164 ||
-                                    alpValue.value == 59 ||
+                                    
                                     alpValue.value === ""
                                 ) {
                                     alpHigh.innerHTML = "High = over 164 U/L";
@@ -1435,7 +1392,7 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
-                                } else if (alpValue.value < 59) {
+                                } else if (alpValue.value <= 59) {
                                     alpHigh.innerHTML = "High = over 164 U/L";
                                     alpNormal.innerHTML = "Normal = 59-164 U/L";
                                     alpLow.innerHTML = "Low = under 59 U/L";
@@ -1447,13 +1404,13 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                 } else if (
                                     alpValue.value > 59 &&
-                                    alpValue.value < 164
+                                    alpValue.value <= 164
                                 ) {
                                     alpHigh.innerHTML = "High = over 164 U/L";
                                     alpNormal.innerHTML = "Normal = 59-164 U/L";
                                     alpLow.innerHTML = "Low = under 59 U/L";
                                     alpNormal.style.fontWeight = "bold";
-                                    alpNormal.style.color = "#617D44";
+                                    alpNormal.style.color = "gray";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
                                     alpLow.style.fontWeight = "400";
@@ -1463,7 +1420,7 @@ import References from "../components/References.astro";
                                     alpNormal.innerHTML = "Normal = 59-164 U/L";
                                     alpLow.innerHTML = "Low = under 59 U/L";
                                     alpHigh.style.fontWeight = "bold";
-                                    alpHigh.style.color = "#617D44";
+                                    alpHigh.style.color = "red";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                     alpNormal.style.fontWeight = "400";
@@ -1487,8 +1444,7 @@ import References from "../components/References.astro";
                                 graphicDesc.innerHTML = "Adult Male";
 
                                 if (
-                                    alpValue.value == 120 ||
-                                    alpValue.value == 40 ||
+                                    
                                     alpValue.value === ""
                                 ) {
                                     alpHigh.innerHTML = "High = over 120 U/L";
@@ -1500,7 +1456,7 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
-                                } else if (alpValue.value < 40) {
+                                } else if (alpValue.value <= 40) {
                                     alpHigh.innerHTML = "High = over 120 U/L";
                                     alpNormal.innerHTML = "Normal = 40-120 U/L";
                                     alpLow.innerHTML = "Low = under 40 U/L";
@@ -1512,13 +1468,13 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                 } else if (
                                     alpValue.value > 40 &&
-                                    alpValue.value < 120
+                                    alpValue.value <= 120
                                 ) {
                                     alpHigh.innerHTML = "High = over 120 U/L";
                                     alpNormal.innerHTML = "Normal = 40-120 U/L";
                                     alpLow.innerHTML = "Low = under 40 U/L";
                                     alpNormal.style.fontWeight = "bold";
-                                    alpNormal.style.color = "#617D44";
+                                    alpNormal.style.color = "gray";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
                                     alpLow.style.fontWeight = "400";
@@ -1528,7 +1484,7 @@ import References from "../components/References.astro";
                                     alpNormal.innerHTML = "Normal = 40-120 U/L";
                                     alpLow.innerHTML = "Low = under 40 U/L";
                                     alpHigh.style.fontWeight = "bold";
-                                    alpHigh.style.color = "#617D44";
+                                    alpHigh.style.color = "red";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                     alpNormal.style.fontWeight = "400";
@@ -1676,8 +1632,7 @@ import References from "../components/References.astro";
                                 graphicDesc.innerHTML = "0 - 14 days Female";
 
                                 if (
-                                    alpValue.value == 273 ||
-                                    alpValue.value == 90 ||
+                                    
                                     alpValue.value === ""
                                 ) {
                                     alpHigh.innerHTML = "High = over 273 U/L";
@@ -1689,7 +1644,7 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
-                                } else if (alpValue.value < 90) {
+                                } else if (alpValue.value <= 90) {
                                     alpHigh.innerHTML = "High = over 273 U/L";
                                     alpNormal.innerHTML = "Normal = 90-273 U/L";
                                     alpLow.innerHTML = "Low = under 90 U/L";
@@ -1701,13 +1656,13 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                 } else if (
                                     alpValue.value > 90 &&
-                                    alpValue.value < 273
+                                    alpValue.value <= 273
                                 ) {
                                     alpHigh.innerHTML = "High = over 273 U/L";
                                     alpNormal.innerHTML = "Normal = 90-273 U/L";
                                     alpLow.innerHTML = "Low = under 90 U/L";
                                     alpNormal.style.fontWeight = "bold";
-                                    alpNormal.style.color = "#617D44";
+                                    alpNormal.style.color = "gray";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
                                     alpLow.style.fontWeight = "400";
@@ -1717,7 +1672,7 @@ import References from "../components/References.astro";
                                     alpNormal.innerHTML = "Normal = 90-273 U/L";
                                     alpLow.innerHTML = "Low = under 90 U/L";
                                     alpHigh.style.fontWeight = "bold";
-                                    alpHigh.style.color = "#617D44";
+                                    alpHigh.style.color = "red";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                     alpNormal.style.fontWeight = "400";
@@ -1742,13 +1697,11 @@ import References from "../components/References.astro";
                                     "15 days - 1 year Female";
 
                                 if (
-                                    alpValue.value == 518 ||
-                                    alpValue.value == 134 ||
+                                    
                                     alpValue.value === ""
                                 ) {
                                     alpHigh.innerHTML = "High = over 518 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 134-518 U/L";
+                                    alpNormal.innerHTML = "Normal = 134-518 U/L";
                                     alpLow.innerHTML = "Low = under 134 U/L";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
@@ -1756,10 +1709,9 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
-                                } else if (alpValue.value < 134) {
+                                } else if (alpValue.value <= 134) {
                                     alpHigh.innerHTML = "High = over 518 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 134-518 U/L";
+                                    alpNormal.innerHTML = "Normal = 134-518 U/L";
                                     alpLow.innerHTML = "Low = under 134 U/L";
                                     alpLow.style.fontWeight = "bold";
                                     alpLow.style.color = "#617D44";
@@ -1769,25 +1721,23 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                 } else if (
                                     alpValue.value > 134 &&
-                                    alpValue.value < 518
+                                    alpValue.value <= 518
                                 ) {
                                     alpHigh.innerHTML = "High = over 518 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 134-518 U/L";
+                                    alpNormal.innerHTML ="Normal = 134-518 U/L";
                                     alpLow.innerHTML = "Low = under 134 U/L";
                                     alpNormal.style.fontWeight = "bold";
-                                    alpNormal.style.color = "#617D44";
+                                    alpNormal.style.color = "gray";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                 } else if (alpValue.value > 518) {
                                     alpHigh.innerHTML = "High = over 518 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 134-518 U/L";
+                                    alpNormal.innerHTML = "Normal = 134-518 U/L";
                                     alpLow.innerHTML = "Low = under 134 U/L";
                                     alpHigh.style.fontWeight = "bold";
-                                    alpHigh.style.color = "#617D44";
+                                    alpHigh.style.color = "red";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                     alpNormal.style.fontWeight = "400";
@@ -1811,13 +1761,11 @@ import References from "../components/References.astro";
                                 graphicDesc.innerHTML = "1 - 10 years Female";
 
                                 if (
-                                    alpValue.value == 369 ||
-                                    alpValue.value == 156 ||
+                                    
                                     alpValue.value === ""
                                 ) {
                                     alpHigh.innerHTML = "High = over 369 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 156-369 U/L";
+                                    alpNormal.innerHTML = "Normal = 156-369 U/L";
                                     alpLow.innerHTML = "Low = under 156 U/L";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
@@ -1825,10 +1773,9 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
-                                } else if (alpValue.value < 156) {
+                                } else if (alpValue.value <= 156) {
                                     alpHigh.innerHTML = "High = over 369 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 156-369 U/L";
+                                    alpNormal.innerHTML = "Normal = 156-369 U/L";
                                     alpLow.innerHTML = "Low = under 156 U/L";
                                     alpLow.style.fontWeight = "bold";
                                     alpLow.style.color = "#617D44";
@@ -1838,25 +1785,23 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                 } else if (
                                     alpValue.value > 156 &&
-                                    alpValue.value < 369
+                                    alpValue.value <= 369
                                 ) {
                                     alpHigh.innerHTML = "High = over 369 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 156-369 U/L";
+                                    alpNormal.innerHTML = "Normal = 156-369 U/L";
                                     alpLow.innerHTML = "Low = under 156 U/L";
                                     alpNormal.style.fontWeight = "bold";
-                                    alpNormal.style.color = "#617D44";
+                                    alpNormal.style.color = "gray";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                 } else if (alpValue.value > 369) {
                                     alpHigh.innerHTML = "High = over 369 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 156-369 U/L";
+                                    alpNormal.innerHTML = "Normal = 156-369 U/L";
                                     alpLow.innerHTML = "Low = under 156 U/L";
                                     alpHigh.style.fontWeight = "bold";
-                                    alpHigh.style.color = "#617D44";
+                                    alpHigh.style.color = "red";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                     alpNormal.style.fontWeight = "400";
@@ -1880,13 +1825,11 @@ import References from "../components/References.astro";
                                 graphicDesc.innerHTML = "10 - 13 years Female";
 
                                 if (
-                                    alpValue.value == 460 ||
-                                    alpValue.value == 141 ||
+                                    
                                     alpValue.value === ""
                                 ) {
                                     alpHigh.innerHTML = "High = over 460 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 141-460 U/L";
+                                    alpNormal.innerHTML = "Normal = 141-460 U/L";
                                     alpLow.innerHTML = "Low = under 141 U/L";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
@@ -1894,10 +1837,9 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
-                                } else if (alpValue.value < 141) {
+                                } else if (alpValue.value <= 141) {
                                     alpHigh.innerHTML = "High = over 460 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 141-460 U/L";
+                                    alpNormal.innerHTML = "Normal = 141-460 U/L";
                                     alpLow.innerHTML = "Low = under 141 U/L";
                                     alpLow.style.fontWeight = "bold";
                                     alpLow.style.color = "#617D44";
@@ -1907,25 +1849,23 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                 } else if (
                                     alpValue.value > 141 &&
-                                    alpValue.value < 460
+                                    alpValue.value <= 460
                                 ) {
                                     alpHigh.innerHTML = "High = over 460 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 141-460 U/L";
+                                    alpNormal.innerHTML = "Normal = 141-460 U/L";
                                     alpLow.innerHTML = "Low = under 141 U/L";
                                     alpNormal.style.fontWeight = "bold";
-                                    alpNormal.style.color = "#617D44";
+                                    alpNormal.style.color = "gray";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                 } else if (alpValue.value > 460) {
                                     alpHigh.innerHTML = "High = over 460 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 141-460 U/L";
+                                    alpNormal.innerHTML = "Normal = 141-460 U/L";
                                     alpLow.innerHTML = "Low = under 141 U/L";
                                     alpHigh.style.fontWeight = "bold";
-                                    alpHigh.style.color = "#617D44";
+                                    alpHigh.style.color = "red";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                     alpNormal.style.fontWeight = "400";
@@ -1949,8 +1889,7 @@ import References from "../components/References.astro";
                                 graphicDesc.innerHTML = "13 - 15 years Female";
 
                                 if (
-                                    alpValue.value == 280 ||
-                                    alpValue.value == 62 ||
+                                    
                                     alpValue.value === ""
                                 ) {
                                     alpHigh.innerHTML = "High = over 280 U/L";
@@ -1962,7 +1901,7 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
-                                } else if (alpValue.value < 62) {
+                                } else if (alpValue.value <= 62) {
                                     alpHigh.innerHTML = "High = over 280 U/L";
                                     alpNormal.innerHTML = "Normal = 62-280 U/L";
                                     alpLow.innerHTML = "Low = under 62 U/L";
@@ -1974,13 +1913,13 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                 } else if (
                                     alpValue.value > 62 &&
-                                    alpValue.value < 280
+                                    alpValue.value <= 280
                                 ) {
                                     alpHigh.innerHTML = "High = over 280 U/L";
                                     alpNormal.innerHTML = "Normal = 62-280 U/L";
                                     alpLow.innerHTML = "Low = under 62 U/L";
                                     alpNormal.style.fontWeight = "bold";
-                                    alpNormal.style.color = "#617D44";
+                                    alpNormal.style.color = "gray";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
                                     alpLow.style.fontWeight = "400";
@@ -1990,7 +1929,7 @@ import References from "../components/References.astro";
                                     alpNormal.innerHTML = "Normal = 62-280 U/L";
                                     alpLow.innerHTML = "Low = under 62 U/L";
                                     alpHigh.style.fontWeight = "bold";
-                                    alpHigh.style.color = "#617D44";
+                                    alpHigh.style.color = "red";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                     alpNormal.style.fontWeight = "400";
@@ -2012,8 +1951,7 @@ import References from "../components/References.astro";
                                 graphicDesc.innerHTML = "15 - 17 years Female";
 
                                 if (
-                                    alpValue.value == 128 ||
-                                    alpValue.value == 54 ||
+                                    
                                     alpValue.value === ""
                                 ) {
                                     alpHigh.innerHTML = "High = over 128 U/L";
@@ -2025,7 +1963,7 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
-                                } else if (alpValue.value < 54) {
+                                } else if (alpValue.value <= 54) {
                                     alpHigh.innerHTML = "High = over 128 U/L";
                                     alpNormal.innerHTML = "Normal = 54-128 U/L";
                                     alpLow.innerHTML = "Low = under 54 U/L";
@@ -2037,13 +1975,13 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                 } else if (
                                     alpValue.value > 54 &&
-                                    alpValue.value < 128
+                                    alpValue.value <= 128
                                 ) {
                                     alpHigh.innerHTML = "High = over 128 U/L";
                                     alpNormal.innerHTML = "Normal = 54-128 U/L";
                                     alpLow.innerHTML = "Low = under 54 U/L";
                                     alpNormal.style.fontWeight = "bold";
-                                    alpNormal.style.color = "#617D44";
+                                    alpNormal.style.color = "gray";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
                                     alpLow.style.fontWeight = "400";
@@ -2053,7 +1991,7 @@ import References from "../components/References.astro";
                                     alpNormal.innerHTML = "Normal = 54-128 U/L";
                                     alpLow.innerHTML = "Low = under 54 U/L";
                                     alpHigh.style.fontWeight = "bold";
-                                    alpHigh.style.color = "#617D44";
+                                    alpHigh.style.color = "red";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                     alpNormal.style.fontWeight = "400";
@@ -2077,8 +2015,7 @@ import References from "../components/References.astro";
                                 graphicDesc.innerHTML = "17 - 19 years Female";
 
                                 if (
-                                    alpValue.value == 95 ||
-                                    alpValue.value == 48 ||
+                                    
                                     alpValue.value === ""
                                 ) {
                                     alpHigh.innerHTML = "High = over 95 U/L";
@@ -2090,7 +2027,7 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
-                                } else if (alpValue.value < 48) {
+                                } else if (alpValue.value <= 48) {
                                     alpHigh.innerHTML = "High = over 95 U/L";
                                     alpNormal.innerHTML = "Normal = 48-95 U/L";
                                     alpLow.innerHTML = "Low = under 48 U/L";
@@ -2102,13 +2039,13 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                 } else if (
                                     alpValue.value > 48 &&
-                                    alpValue.value < 95
+                                    alpValue.value <= 95
                                 ) {
                                     alpHigh.innerHTML = "High = over 95 U/L";
                                     alpNormal.innerHTML = "Normal = 48-95 U/L";
                                     alpLow.innerHTML = "Low = under 48 U/L";
                                     alpNormal.style.fontWeight = "bold";
-                                    alpNormal.style.color = "#617D44";
+                                    alpNormal.style.color = "gray";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
                                     alpLow.style.fontWeight = "400";
@@ -2118,7 +2055,7 @@ import References from "../components/References.astro";
                                     alpNormal.innerHTML = "Normal = 48-95 U/L";
                                     alpLow.innerHTML = "Low = under 48 U/L";
                                     alpHigh.style.fontWeight = "bold";
-                                    alpHigh.style.color = "#617D44";
+                                    alpHigh.style.color = "red";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                     alpNormal.style.fontWeight = "400";
@@ -2142,8 +2079,7 @@ import References from "../components/References.astro";
                                 graphicDesc.innerHTML = "Adult Female";
 
                                 if (
-                                    alpValue.value == 120 ||
-                                    alpValue.value == 40 ||
+                                    
                                     alpValue.value === ""
                                 ) {
                                     alpHigh.innerHTML = "High = over 120 U/L";
@@ -2155,7 +2091,7 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
-                                } else if (alpValue.value < 40) {
+                                } else if (alpValue.value <= 40) {
                                     alpHigh.innerHTML = "High = over 120 U/L";
                                     alpNormal.innerHTML = "Normal = 40-120 U/L";
                                     alpLow.innerHTML = "Low = under 40 U/L";
@@ -2167,13 +2103,13 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                 } else if (
                                     alpValue.value > 40 &&
-                                    alpValue.value < 120
+                                    alpValue.value <= 120
                                 ) {
                                     alpHigh.innerHTML = "High = over 120 U/L";
                                     alpNormal.innerHTML = "Normal = 40-120 U/L";
                                     alpLow.innerHTML = "Low = under 40 U/L";
                                     alpNormal.style.fontWeight = "bold";
-                                    alpNormal.style.color = "#617D44";
+                                    alpNormal.style.color = "gray";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
                                     alpLow.style.fontWeight = "400";
@@ -2183,7 +2119,7 @@ import References from "../components/References.astro";
                                     alpNormal.innerHTML = "Normal = 40-120 U/L";
                                     alpLow.innerHTML = "Low = under 40 U/L";
                                     alpHigh.style.fontWeight = "bold";
-                                    alpHigh.style.color = "#617D44";
+                                    alpHigh.style.color = "red";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                     alpNormal.style.fontWeight = "400";
@@ -2208,8 +2144,7 @@ import References from "../components/References.astro";
                                 graphicDesc.innerHTML = "0 - 14 days Male";
 
                                 if (
-                                    alpValue.value == 273 ||
-                                    alpValue.value == 90 ||
+                                    
                                     alpValue.value === ""
                                 ) {
                                     alpHigh.innerHTML = "High = over 273 U/L";
@@ -2221,7 +2156,7 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
-                                } else if (alpValue.value < 90) {
+                                } else if (alpValue.value <= 90) {
                                     alpHigh.innerHTML = "High = over 273 U/L";
                                     alpNormal.innerHTML = "Normal = 90-273 U/L";
                                     alpLow.innerHTML = "Low = under 90 U/L";
@@ -2233,13 +2168,13 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                 } else if (
                                     alpValue.value > 90 &&
-                                    alpValue.value < 273
+                                    alpValue.value <= 273
                                 ) {
                                     alpHigh.innerHTML = "High = over 273 U/L";
                                     alpNormal.innerHTML = "Normal = 90-273 U/L";
                                     alpLow.innerHTML = "Low = under 90 U/L";
                                     alpNormal.style.fontWeight = "bold";
-                                    alpNormal.style.color = "#617D44";
+                                    alpNormal.style.color = "gray";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
                                     alpLow.style.fontWeight = "400";
@@ -2249,7 +2184,7 @@ import References from "../components/References.astro";
                                     alpNormal.innerHTML = "Normal = 90-273 U/L";
                                     alpLow.innerHTML = "Low = under 90 U/L";
                                     alpHigh.style.fontWeight = "bold";
-                                    alpHigh.style.color = "#617D44";
+                                    alpHigh.style.color = "red";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                     alpNormal.style.fontWeight = "400";
@@ -2273,13 +2208,11 @@ import References from "../components/References.astro";
                                 graphicDesc.innerHTML = "15 days - 1 year Male";
 
                                 if (
-                                    alpValue.value == 518 ||
-                                    alpValue.value == 134 ||
+                                    
                                     alpValue.value === ""
                                 ) {
                                     alpHigh.innerHTML = "High = over 518 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 134-518 U/L";
+                                    alpNormal.innerHTML = "Normal = 134-518 U/L";
                                     alpLow.innerHTML = "Low = under 134 U/L";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
@@ -2287,10 +2220,9 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
-                                } else if (alpValue.value < 134) {
+                                } else if (alpValue.value <= 134) {
                                     alpHigh.innerHTML = "High = over 518 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 134-518 U/L";
+                                    alpNormal.innerHTML = "Normal = 134-518 U/L";
                                     alpLow.innerHTML = "Low = under 134 U/L";
                                     alpLow.style.fontWeight = "bold";
                                     alpLow.style.color = "#617D44";
@@ -2300,25 +2232,23 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                 } else if (
                                     alpValue.value > 134 &&
-                                    alpValue.value < 518
+                                    alpValue.value <= 518
                                 ) {
                                     alpHigh.innerHTML = "High = over 518 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 134-518 U/L";
+                                    alpNormal.innerHTML = "Normal = 134-518 U/L";
                                     alpLow.innerHTML = "Low = under 134 U/L";
                                     alpNormal.style.fontWeight = "bold";
-                                    alpNormal.style.color = "#617D44";
+                                    alpNormal.style.color = "gray";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                 } else if (alpValue.value > 518) {
                                     alpHigh.innerHTML = "High = over 518 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 134-518 U/L";
+                                    alpNormal.innerHTML = "Normal = 134-518 U/L";
                                     alpLow.innerHTML = "Low = under 134 U/L";
                                     alpHigh.style.fontWeight = "bold";
-                                    alpHigh.style.color = "#617D44";
+                                    alpHigh.style.color = "red";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                     alpNormal.style.fontWeight = "400";
@@ -2342,13 +2272,11 @@ import References from "../components/References.astro";
                                 graphicDesc.innerHTML = "1 - 10 years Male";
 
                                 if (
-                                    alpValue.value == 369 ||
-                                    alpValue.value == 158 ||
+                                    
                                     alpValue.value === ""
                                 ) {
                                     alpHigh.innerHTML = "High = over 369 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 158-369 U/L";
+                                    alpNormal.innerHTML = "Normal = 158-369 U/L";
                                     alpLow.innerHTML = "Low = under 158 U/L";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
@@ -2356,10 +2284,9 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
-                                } else if (alpValue.value < 158) {
+                                } else if (alpValue.value <= 158) {
                                     alpHigh.innerHTML = "High = over 369 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 158-369 U/L";
+                                    alpNormal.innerHTML = "Normal = 158-369 U/L";
                                     alpLow.innerHTML = "Low = under 158 U/L";
                                     alpLow.style.fontWeight = "bold";
                                     alpLow.style.color = "#617D44";
@@ -2369,25 +2296,23 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                 } else if (
                                     alpValue.value > 158 &&
-                                    alpValue.value < 369
+                                    alpValue.value <= 369
                                 ) {
                                     alpHigh.innerHTML = "High = over 369 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 158-369 U/L";
+                                    alpNormal.innerHTML = "Normal = 158-369 U/L";
                                     alpLow.innerHTML = "Low = under 158 U/L";
                                     alpNormal.style.fontWeight = "bold";
-                                    alpNormal.style.color = "#617D44";
+                                    alpNormal.style.color = "gray";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                 } else if (alpValue.value > 369) {
                                     alpHigh.innerHTML = "High = over 369 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 158-369 U/L";
+                                    alpNormal.innerHTML = "Normal = 158-369 U/L";
                                     alpLow.innerHTML = "Low = under 158 U/L";
                                     alpHigh.style.fontWeight = "bold";
-                                    alpHigh.style.color = "#617D44";
+                                    alpHigh.style.color = "red";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                     alpNormal.style.fontWeight = "400";
@@ -2411,13 +2336,11 @@ import References from "../components/References.astro";
                                 graphicDesc.innerHTML = "10 - 13 years Male";
 
                                 if (
-                                    alpValue.value == 480 ||
-                                    alpValue.value == 141 ||
+                                    
                                     alpValue.value === ""
                                 ) {
                                     alpHigh.innerHTML = "High = over 480 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 141-480 U/L";
+                                    alpNormal.innerHTML = "Normal = 141-480 U/L";
                                     alpLow.innerHTML = "Low = under 141 U/L";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
@@ -2425,10 +2348,9 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
-                                } else if (alpValue.value < 141) {
+                                } else if (alpValue.value <= 141) {
                                     alpHigh.innerHTML = "High = over 480 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 141-480 U/L";
+                                    alpNormal.innerHTML = "Normal = 141-480 U/L";
                                     alpLow.innerHTML = "Low = under 141 U/L";
                                     alpLow.style.fontWeight = "bold";
                                     alpLow.style.color = "#617D44";
@@ -2438,25 +2360,23 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                 } else if (
                                     alpValue.value > 141 &&
-                                    alpValue.value < 480
+                                    alpValue.value <= 480
                                 ) {
                                     alpHigh.innerHTML = "High = over 480 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 141-480 U/L";
+                                    alpNormal.innerHTML = "Normal = 141-480 U/L";
                                     alpLow.innerHTML = "Low = under 141 U/L";
                                     alpNormal.style.fontWeight = "bold";
-                                    alpNormal.style.color = "#617D44";
+                                    alpNormal.style.color = "gray";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                 } else if (alpValue.value > 480) {
                                     alpHigh.innerHTML = "High = over 480 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 141-480 U/L";
+                                    alpNormal.innerHTML = "Normal = 141-480 U/L";
                                     alpLow.innerHTML = "Low = under 141 U/L";
                                     alpHigh.style.fontWeight = "bold";
-                                    alpHigh.style.color = "#617D44";
+                                    alpHigh.style.color = "red";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                     alpNormal.style.fontWeight = "400";
@@ -2480,13 +2400,11 @@ import References from "../components/References.astro";
                                 graphicDesc.innerHTML = "13 - 15 years Male";
 
                                 if (
-                                    alpValue.value == 517 ||
-                                    alpValue.value == 127 ||
+                                    
                                     alpValue.value === ""
                                 ) {
                                     alpHigh.innerHTML = "High = over 517 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 127-517 U/L";
+                                    alpNormal.innerHTML = "Normal = 127-517 U/L";
                                     alpLow.innerHTML = "Low = under 127 U/L";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
@@ -2494,10 +2412,9 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
-                                } else if (alpValue.value < 127) {
+                                } else if (alpValue.value <= 127) {
                                     alpHigh.innerHTML = "High = over 517 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 127-517 U/L";
+                                    alpNormal.innerHTML = "Normal = 127-517 U/L";
                                     alpLow.innerHTML = "Low = under 127 U/L";
                                     alpLow.style.fontWeight = "bold";
                                     alpLow.style.color = "#617D44";
@@ -2507,25 +2424,23 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                 } else if (
                                     alpValue.value > 127 &&
-                                    alpValue.value < 517
+                                    alpValue.value <= 517
                                 ) {
                                     alpHigh.innerHTML = "High = over 517 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 127-517 U/L";
+                                    alpNormal.innerHTML = "Normal = 127-517 U/L";
                                     alpLow.innerHTML = "Low = under 127 U/L";
                                     alpNormal.style.fontWeight = "bold";
-                                    alpNormal.style.color = "#617D44";
+                                    alpNormal.style.color = "gray";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                 } else if (alpValue.value > 517) {
                                     alpHigh.innerHTML = "High = over 517 U/L";
-                                    alpNormal.innerHTML =
-                                        "Normal = 127-517 U/L";
+                                    alpNormal.innerHTML = "Normal = 127-517 U/L";
                                     alpLow.innerHTML = "Low = under 127 U/L";
                                     alpHigh.style.fontWeight = "bold";
-                                    alpHigh.style.color = "#617D44";
+                                    alpHigh.style.color = "red";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                     alpNormal.style.fontWeight = "400";
@@ -2549,8 +2464,7 @@ import References from "../components/References.astro";
                                 graphicDesc.innerHTML = "15 - 17 years Male";
 
                                 if (
-                                    alpValue.value == 365 ||
-                                    alpValue.value == 89 ||
+                                    
                                     alpValue.value === ""
                                 ) {
                                     alpHigh.innerHTML = "High = over 365 U/L";
@@ -2562,7 +2476,7 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
-                                } else if (alpValue.value < 89) {
+                                } else if (alpValue.value <= 89) {
                                     alpHigh.innerHTML = "High = over 365 U/L";
                                     alpNormal.innerHTML = "Normal = 89-365 U/L";
                                     alpLow.innerHTML = "Low = under 89 U/L";
@@ -2574,13 +2488,13 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                 } else if (
                                     alpValue.value > 89 &&
-                                    alpValue.value < 365
+                                    alpValue.value <= 365
                                 ) {
                                     alpHigh.innerHTML = "High = over 365 U/L";
                                     alpNormal.innerHTML = "Normal = 89-365 U/L";
                                     alpLow.innerHTML = "Low = under 89 U/L";
                                     alpNormal.style.fontWeight = "bold";
-                                    alpNormal.style.color = "#617D44";
+                                    alpNormal.style.color = "gray";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
                                     alpLow.style.fontWeight = "400";
@@ -2590,7 +2504,7 @@ import References from "../components/References.astro";
                                     alpNormal.innerHTML = "Normal = 89-365 U/L";
                                     alpLow.innerHTML = "Low = under 89 U/L";
                                     alpHigh.style.fontWeight = "bold";
-                                    alpHigh.style.color = "#617D44";
+                                    alpHigh.style.color = "red";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                     alpNormal.style.fontWeight = "400";
@@ -2614,8 +2528,7 @@ import References from "../components/References.astro";
                                 graphicDesc.innerHTML = "17 - 19 years Male";
 
                                 if (
-                                    alpValue.value == 164 ||
-                                    alpValue.value == 59 ||
+                                    
                                     alpValue.value === ""
                                 ) {
                                     alpHigh.innerHTML = "High = over 164 U/L";
@@ -2627,7 +2540,7 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
-                                } else if (alpValue.value < 59) {
+                                } else if (alpValue.value <= 59) {
                                     alpHigh.innerHTML = "High = over 164 U/L";
                                     alpNormal.innerHTML = "Normal = 59-164 U/L";
                                     alpLow.innerHTML = "Low = under 59 U/L";
@@ -2639,13 +2552,13 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                 } else if (
                                     alpValue.value > 59 &&
-                                    alpValue.value < 164
+                                    alpValue.value <= 164
                                 ) {
                                     alpHigh.innerHTML = "High = over 164 U/L";
                                     alpNormal.innerHTML = "Normal = 59-164 U/L";
                                     alpLow.innerHTML = "Low = under 59 U/L";
                                     alpNormal.style.fontWeight = "bold";
-                                    alpNormal.style.color = "#617D44";
+                                    alpNormal.style.color = "gray";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
                                     alpLow.style.fontWeight = "400";
@@ -2655,7 +2568,7 @@ import References from "../components/References.astro";
                                     alpNormal.innerHTML = "Normal = 59-164 U/L";
                                     alpLow.innerHTML = "Low = under 59 U/L";
                                     alpHigh.style.fontWeight = "bold";
-                                    alpHigh.style.color = "#617D44";
+                                    alpHigh.style.color = "red";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                     alpNormal.style.fontWeight = "400";
@@ -2679,8 +2592,7 @@ import References from "../components/References.astro";
                                 graphicDesc.innerHTML = "Adult Male";
 
                                 if (
-                                    alpValue.value == 120 ||
-                                    alpValue.value == 40 ||
+                                    
                                     alpValue.value === ""
                                 ) {
                                     alpHigh.innerHTML = "High = over 120 U/L";
@@ -2692,7 +2604,7 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
-                                } else if (alpValue.value < 40) {
+                                } else if (alpValue.value <= 40) {
                                     alpHigh.innerHTML = "High = over 120 U/L";
                                     alpNormal.innerHTML = "Normal = 40-120 U/L";
                                     alpLow.innerHTML = "Low = under 40 U/L";
@@ -2704,13 +2616,13 @@ import References from "../components/References.astro";
                                     alpNormal.style.color = "black";
                                 } else if (
                                     alpValue.value > 40 &&
-                                    alpValue.value < 120
+                                    alpValue.value <= 120
                                 ) {
                                     alpHigh.innerHTML = "High = over 120 U/L";
                                     alpNormal.innerHTML = "Normal = 40-120 U/L";
                                     alpLow.innerHTML = "Low = under 40 U/L";
                                     alpNormal.style.fontWeight = "bold";
-                                    alpNormal.style.color = "#617D44";
+                                    alpNormal.style.color = "gray";
                                     alpHigh.style.fontWeight = "400";
                                     alpHigh.style.color = "black";
                                     alpLow.style.fontWeight = "400";
@@ -2720,7 +2632,7 @@ import References from "../components/References.astro";
                                     alpNormal.innerHTML = "Normal = 40-120 U/L";
                                     alpLow.innerHTML = "Low = under 40 U/L";
                                     alpHigh.style.fontWeight = "bold";
-                                    alpHigh.style.color = "#617D44";
+                                    alpHigh.style.color = "red";
                                     alpLow.style.fontWeight = "400";
                                     alpLow.style.color = "black";
                                     alpNormal.style.fontWeight = "400";
