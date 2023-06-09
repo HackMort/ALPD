@@ -61,9 +61,9 @@ import References from "../components/References.astro";
                     <div class="progress-1"><p class="bar-gray">100</p></div>
                 </div>
                 <div class="bar-2">
+                    <div class="dashed-line"></div>
                     <div class="progress-2">
-                        <p class="bar-green">100</p><div class="dashed-line">
-                        </div>
+                        <p class="bar-green">100</p>
                     </div>
                 </div>
 
@@ -369,6 +369,7 @@ import References from "../components/References.astro";
                 const alpLow = document.querySelector(".low-alp");
                 const errorAge = document.querySelector("#errorAge");
                 const errorSex = document.querySelector("#errorSex");
+                const dashedLine = document.querySelector('.dashed-line')
 
                 let graphicCounter = 0;
 
@@ -1535,6 +1536,22 @@ import References from "../components/References.astro";
                                 }
                             }
                             chDisclaimer.style.marginTop = "0px";
+
+                            const elementBar1 = document.querySelector('.bar-1')
+                            const elementBar1Height = elementBar1.scrollHeight
+                            const bar2Content = nbar2.textContent
+                            let compareValue = parseInt(alpValue.value)
+                            if(!alpValue.value) {
+                                compareValue = parseInt(bar2Content)
+                            }
+                            if(compareValue > 600) {
+                                compareValue = 600
+                            } else if(compareValue < 0) {
+                                compareValue = 0
+                            }
+
+                            compareValue = (compareValue * elementBar1Height) / 600
+                            dashedLine.style.top = `${compareValue}px`
                         });
 
                         nextButton.addEventListener("click", () => {
@@ -2719,6 +2736,21 @@ import References from "../components/References.astro";
                             } else {
                                 compareButton.style.backgroundColor = "#CF1C0A";
                             }
+                            const elementBar1 = document.querySelector('.bar-1')
+                            const elementBar1Height = elementBar1.scrollHeight
+                            const bar2Content = nbar2.textContent
+                            let compareValue = parseInt(alpValue.value)
+                            if(!alpValue.value) {
+                                compareValue = parseInt(bar2Content)
+                            }
+                            if(compareValue > 600) {
+                                compareValue = 600
+                            } else if(compareValue < 0) {
+                                compareValue = 0
+                            }
+
+                            compareValue = (compareValue * elementBar1Height) / 600
+                            dashedLine.style.top = `${compareValue}px`
                         });
 
                         nextButton.addEventListener("click", () => {
