@@ -1,6 +1,10 @@
 .usual-supect__list_modal--mobile {
     background-color: $color-folder;
 
+    sup {
+        font-size: 65%;
+    }
+
     .usual-supect__list_modal {
         &_wrapper {
             padding: 0 1rem;
