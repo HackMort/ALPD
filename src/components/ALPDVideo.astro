@@ -1,67 +1,70 @@
 ---
-import DetectiveForm from './DetectiveForm.astro';
+import DetectiveForm from "./DetectiveForm.astro";
 ---
 
 <article class="alpd-video">
-    <div class="alpd-video__wrapper">
-        <div class="alpd-video__assets-container">
-            <picture class="asset__notebook">
-                <img src="/assets/images/alpd-video/notebook-desktop.png" alt="">
-            </picture>
-            <picture class="asset__folder">
-                <source srcset="/assets/images/alpd-video/folder-desktop.png" media="(min-width: 768px)">
-                <img src="/assets/images/alpd-video/folder-mobile.png" alt="">
-            </picture>
-            <picture class="asset__backpack">
-                <img src="/assets/images/alpd-video/bakpack-desktop.png" alt="">
-            </picture>
-            <picture class="asset__pic">
-                <img src="/assets/images/alpd-video/pic.png" alt="">
-            </picture>
-
-        </div>
-        <div class="alpd-video__container">
-            <div class="video">
-                <button class="video__play-button" data-playing="false"></button>
-                <picture>
-                    <source srcset="/assets/images/alpd-video/video-poster-desktop.png" media="(min-width: 768px)">
-                    <source srcset="/assets/images/alpd-video/video-poster-tablet.png" media="(min-width: 500px)">
-                    <img src="/assets/images/alpd-video/video-poster-mobile.png" alt="">
-                </picture>
-            </div>
-            <div class="alpd-form__container">
-                <div class="wrapper">
-                    <img class="alpd-form__paperclip" src="/assets/images/alpd-video/paperclip-desktop.png" alt="">
-                    <div class="alpd-form__container-header">
-                        <button class="alpd-form__close">x</button>
-                        <h2 class="alpd-form__title">
-                            <span class="font-size--34px md:font-size--36px">THE ALPD:</span><br class="md:hidden"> Internal investigations unit<br><span class="color--red md:color--black">needs <span class="text--underline">your help</span> solving a case.</span>
-                        </h2>
-                        <h3 class="alpd-form__subtitle">
-                            Enter your info below to immerse yourself into the investigation and find the culprit.
-                        </h3>
-                    </div>
-                    <DetectiveForm />
-                </div>
-            </div>
-        </div>
+  <div class="alpd-video__wrapper">
+    <div class="alpd-video__assets-container">
+      <picture class="asset__notebook">
+        <img src="/assets/images/alpd-video/notebook-desktop.png" alt="" />
+      </picture>
+      <picture class="asset__folder">
+        <source
+          srcset="/assets/images/alpd-video/folder-desktop.png"
+          media="(min-width: 768px)"
+        />
+        <img src="/assets/images/alpd-video/folder-mobile.png" alt="" />
+      </picture>
+      <picture class="asset__backpack">
+        <img src="/assets/images/alpd-video/bakpack-desktop.png" alt="" />
+      </picture>
+      <picture class="asset__pic">
+        <img src="/assets/images/alpd-video/pic.png" alt="" />
+      </picture>
     </div>
+    <div class="alpd-video__container">
+      <div class="video">
+        <button class="video__play-button" data-playing="false"></button>
+        <picture>
+          <source
+            srcset="/assets/images/alpd-video/video-poster-desktop.png"
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="/assets/images/alpd-video/video-poster-tablet.png"
+            media="(min-width: 500px)"
+          />
+          <img src="/assets/images/alpd-video/video-poster-mobile.png" alt="" />
+        </picture>
+      </div>
+      <div class="alpd-form__container">
+
+        <button class="alpd-form__close">x</button>
+
+        <iframe
+          class="full-screen iframe"
+          id="alpd"
+          src="https://main.d1mfcoaeirtvif.amplifyapp.com/?key=det3ct"
+          allow="fullscreen; camera; microphone; autoplay;"></iframe>
+      </div>
+    </div>
+  </div>
 </article>
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const playButton = document.querySelector('.video__play-button');
+  document.addEventListener("DOMContentLoaded", () => {
+    const playButton = document.querySelector(".video__play-button");
 
-        playButton.addEventListener('click', () => {
-            const component = document.querySelector('.alpd-video')
-            // component.classList.toggle('alpd-video--playing')
-            component.classList.toggle('alpd-video--showing-form')
+    playButton.addEventListener("click", () => {
+      const component = document.querySelector(".alpd-video");
+      // component.classList.toggle('alpd-video--playing')
+      component.classList.toggle("alpd-video--showing-form");
 
-            const closeForm = document.querySelector('.alpd-form__close')
+      const closeForm = document.querySelector(".alpd-form__close");
 
-            closeForm.addEventListener('click', () => {
-                component.classList.remove('alpd-video--showing-form')
-            })
-        })
-    })
+      closeForm.addEventListener("click", () => {
+        component.classList.remove("alpd-video--showing-form");
+      });
+    });
+  });
 </script>
