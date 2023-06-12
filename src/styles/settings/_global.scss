@@ -6,62 +6,54 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-}
+h6 {}
 
-h1 {
+h1 {}
 
-}
+h2 {}
 
-h2 {
-}
+h3 {}
 
-h3 {
-}
+h4 {}
 
-h4 {
-}
+h5 {}
 
-h5 {
-}
-
-p {
-}
+p {}
 
 label a,
 p a {
-  color: $color-black;
-  text-decoration: underline;
-  font-weight: bold;
+    color: $color-black;
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 small {
-  font-size: 0.75rem;
-  line-height: .8788rem;
+    font-size: 0.75rem;
+    line-height: .8788rem;
 }
 
 ul li {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 ul li::marker {
-  display: none;
+    display: none;
 }
 
 main {
-  ul li {
-    list-style-type: disc;
-  }
+    ul li {
+        list-style-type: disc;
+    }
 
-  ul li::marker {
-    color: $color-black;
-  }
+    ul li::marker {
+        color: $color-black;
+    }
 }
 
 sup.symbol-sup {
-  font-size: inherit;
-  line-height: 0;
-  top: initial;
+    font-size: inherit;
+    line-height: 0;
+    top: initial;
 }
 
 .red-string-wrapper {
