@@ -3563,7 +3563,7 @@
                 padding: 3rem 4rem;
                 margin: auto;
                 position: absolute;
-                right: 13px;
+                right: 45px;
                 top: 50px;
                 transform: rotate(10deg);
 
@@ -4658,6 +4658,7 @@
                 .hpp-multisystemic__title-container {
                     background-color: $color-floral-white;
                     padding-bottom: 1rem;
+                    margin-bottom: -1px;
                 }
 
                 .hpp-multisystemic__tabs-container {
@@ -4693,12 +4694,11 @@
                 background-color: transparent;
                 overflow: hidden;
                 margin: auto;
-                padding: 1% 0 0 0;
+                padding: 1% 0 0 35px;
                 height: auto;
 
                 @media screen and (max-width: 1023px) {
                     display: none;
-                    margin-left: 0;
                 }
             }
 
@@ -4725,6 +4725,14 @@
                     //Area selected
                     &[aria-selected='true'] {
                         border-bottom: 5px solid $color-cinnabar !important;
+                    }
+
+                    &[href='#usual-suspects_tab3'] {
+                        margin-left: -55px;
+                    }
+
+                    &[href='#multisystemic3'] {
+                        margin-left: -55px;
                     }
 
                     @media screen and (max-width: 1000px) {
@@ -5165,7 +5173,7 @@
                 text-overflow: ellipsis;
                 white-space: nowrap;
                 padding-right: 0;
-                z-index: 8;
+                z-index: 1;
             }
 
             &::after {
