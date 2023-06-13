@@ -4694,8 +4694,12 @@
                 background-color: transparent;
                 overflow: hidden;
                 margin: auto;
-                padding: 1% 0 0 40px;
+                padding: 1% 0 0 35px;
                 height: auto;
+
+                @media screen and (max-width: 1023px) {
+                    display: none;
+                }
             }
 
             &--nav-item {
@@ -4721,6 +4725,10 @@
                     //Area selected
                     &[aria-selected='true'] {
                         border-bottom: 5px solid $color-cinnabar !important;
+                    }
+
+                    &[href='#usual-suspects_tab3'] {
+                        margin-left: -55px;
                     }
 
                     @media screen and (max-width: 1000px) {
