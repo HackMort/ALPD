@@ -54,7 +54,7 @@ const data = [
     image2: '',
     imageAlt2: '',
     condition:
-            '<p style="max-width: 293px;">Radiograph shows changes in the shape of the crowns and enlarged pulp chambers.</p> <p  style="max-width: 293px;"><span style="text-decoration:underline;">Orodental phenotype and genotype findings in all subtypes of hypophosphatasia</span> by Amélie Reibel is licensed under <span style="text-decoration:underline;">CC BY 2.0</span>.</p>',
+            '<p>Radiograph shows changes in the shape of the crowns and enlarged pulp chambers.</p> <p><span style="text-decoration:underline;">Orodental phenotype and genotype findings in all subtypes of hypophosphatasia</span> by Amélie Reibel is licensed under <span style="text-decoration:underline;">CC BY 2.0</span>.</p>',
     type: 'infants'
   },
   {
