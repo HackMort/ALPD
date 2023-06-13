@@ -3015,7 +3015,8 @@
         &--mobile {
             color: $color-blue;
             padding: 3rem 0 0 0;
-            max-width: 22ch;
+            max-width: 21.9375rem;
+            margin: auto auto 1rem;
 
             @media screen and (min-width: 768px) {
                 max-width: 100%;
