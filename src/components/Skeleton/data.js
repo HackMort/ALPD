@@ -68,7 +68,7 @@ const data = [
     imageAlt1: 'Muscular image',
     image2: '',
     imageAlt2: '',
-    condition: '<p>Disclaimer: This image is not taken from a hypophosphatasia (HPP) patient.</p>',
+    condition: '<p>Reduced grip force assessed by digital hand dynamometer</p> <p>Reproduced with permission from Jandl NM, et al. <em>Calcif Tissue Int.</em> 2021;108(3):288-301.</p>',
     type: 'adults'
   },
   {
