@@ -4544,14 +4544,16 @@
                 background-position: top;
                 mix-blend-mode: multiply;
 
-                height: 9.0625rem;
+                height: 11.5rem;
+                padding-left: 15px;
+                padding-right: 15px;
 
                 @media screen and (max-width: 768px) {
                     font-size: 4.5rem;
                 }
 
                 @media screen and (min-width: 1024px) {
-                    font-size: 5.125rem;
+                    font-size: 4rem;
                     align-items: center;
                     padding-bottom: 0;
                 }
@@ -5383,8 +5385,7 @@
 
             &--bg {
                 position: relative;
-                z-index: 1;
-
+                
                 &-image {
                     display: none;
                 }
@@ -5400,6 +5401,7 @@
                 }
 
                 @media screen and (min-width: 1023px) {
+                    z-index: 1;
                     &-image {
                         display: block;
                         position: absolute;
