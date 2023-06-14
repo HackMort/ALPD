@@ -38,10 +38,6 @@ export function highlightActiveInternalNavOnScroll (headerInnerHeight) {
         // Distance between the top of the section and the top of the viewport
         const sectionTop = entry.boundingClientRect.top
 
-        // Get the position of the active item in the internal navigation
-        const internalNavWidth = internalNav.offsetWidth
-        const activeLiPosition = activeLi.offsetLeft
-
         // Validate if the section that are in viewport and is closer of the top of the viewport
         if (
           entry.isIntersecting &&
@@ -62,8 +58,8 @@ export function highlightActiveInternalNavOnScroll (headerInnerHeight) {
             activeLi.classList.add('is--active')
           }
 
-          // Scroll the internal navigation to the active item
-          internalNav.scrollLeft = activeLiPosition - internalNavWidth / 2
+          // Call the function
+          scrollToLeft(internalNav, activeLi)
         }
       })
     },
@@ -105,7 +101,7 @@ export function setActiveIternalNavItemOnClick () {
 
             // Is mobile
             if (window.screen.width < 768) {
-              marginTop = 290
+              marginTop = 215
 
               if (window.pageYOffset > 0) {
                 targetSection.getBoundingClientRect().top <= 0
@@ -185,4 +181,14 @@ export function setNavTopPosition (internalNavClass = 'internal__nav', headerInn
     const headerInnerHeight = headerInnerStyles.getPropertyValue('height')
     internalNav.style.setProperty('--nav-top-position', headerInnerHeight)
   }
+}
+
+function scrollToLeft (nav, activeLi) {
+  // Get the position of the active item in the internal navigation
+  const internalNavWidth = nav.offsetWidth
+  const activeLiPosition = activeLi.offsetLeft
+  const activeLiWidth = activeLi.offsetWidth
+
+  // Scroll the internal navigation to the active item
+  nav.scrollLeft = activeLiPosition + activeLiWidth - internalNavWidth
 }

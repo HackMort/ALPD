@@ -43,10 +43,12 @@
         position: relative;
 
         overflow-x: scroll;
+        scroll-behavior: smooth;
 
         &::-webkit-scrollbar {
             display: none;
         }
+
 
         @media screen and (min-width: 768px) {
             padding-top: 3rem;
