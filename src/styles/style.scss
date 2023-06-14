@@ -645,6 +645,8 @@
 
                     line-height: 100%;
 
+                    white-space: nowrap;
+
                     &::before {
                         display: none;
                     }
