@@ -90,7 +90,7 @@
             }
 
             .skeleton__line--after {
-                width: 7.1rem;
+                width: 7.15rem;
                 top: 2.7rem;
                 left: 6.9rem;
                 z-index: 0;
@@ -101,7 +101,7 @@
             .skeleton__line--after2 {
                 width: 25%;
                 top: 6.5rem;
-                left: calc(6.4rem + 6.5rem);
+                left: calc(6.5rem + 6.5rem);
                 z-index: 0;
                 
             }
@@ -255,7 +255,6 @@
                 left: 50%;
             }
         }
-
 
         &[data-word="neurologic--infants"] {
             .skeleton__point {
@@ -804,17 +803,17 @@
 
             .skeleton__line--before {
                 display: block;
-                background-color: $color-red;
+                outline-color: $color-red;
                 transition: all 0.3s ease-in-out;
             }
 
             .skeleton__line--after {
-                background-color: $color-red;
+                outline-color: $color-red;
                 transition: all 0.3s ease-in-out;
             }
 
             .skeleton__line--after2 {
-                background-color: $color-red;
+                outline-color: $color-red;
                 transition: all 0.3s ease-in-out;
             }
 
@@ -838,8 +837,6 @@
                 .skeleton__line--before {
                     width: 100%;
                 }
-
-                
             }
         }
     }
@@ -1005,8 +1002,9 @@
 
     &__line {
         width: 100%;
-        height: 1px;
-        background-color: $color-carbon;
+        //height: 1px;
+        outline: 0.01px solid $color-carbon;
+        //background-color: $color-carbon;
         position: absolute;
 
         &--before {
@@ -1014,7 +1012,7 @@
         }
 
         &:hover {
-            background-color: $color-red;
+            outline-color: $color-red;
         }
     }
 
