@@ -18,9 +18,6 @@ export function highlightActiveInternalNavOnScroll (headerInnerHeight) {
     return
   }
 
-  const activeLi =
-            document.querySelector('.internal__nav_list_item.is--active') ||
-            internalNavItems[0]
   const sections = document.querySelectorAll('.section')
   const headerHeight =
             screen.width > 768
@@ -29,7 +26,7 @@ export function highlightActiveInternalNavOnScroll (headerInnerHeight) {
   const sectionObserverOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.15
+    threshold: 0.1
   }
   const sectionObserver = new window.IntersectionObserver(
     (entries, observer) => {
@@ -39,19 +36,14 @@ export function highlightActiveInternalNavOnScroll (headerInnerHeight) {
         const sectionTop = entry.boundingClientRect.top
 
         // Validate if the section that are in viewport and is closer of the top of the viewport
-        if (
-          entry.isIntersecting &&
-                        sectionTop <= headerHeight &&
-                        sectionTop >= 0
-        ) {
+        if (entry.isIntersecting && sectionTop <= headerHeight && sectionTop >= 0) {
           const sectionId = entry.target.getAttribute('id')
+
           internalNavItems.forEach((item) => {
             item.classList.remove('is--active')
           })
 
-          let activeLi = document.querySelector(
-                            `.internal__nav_list_item a[href="#${sectionId}"]`
-          )
+          let activeLi = document.querySelector(`.internal__nav_list_item a[href="#${sectionId}"]`)
 
           if (activeLi) {
             activeLi = activeLi.parentElement
@@ -101,27 +93,33 @@ export function setActiveIternalNavItemOnClick () {
 
             // Is mobile
             if (window.screen.width < 768) {
-              marginTop = 215
+              marginTop = 220
 
               if (window.pageYOffset > 0) {
-                targetSection.getBoundingClientRect().top <= 0
-                  ? (marginTop = 130) // Up
-                  : sectionID === '#hpp-prevalence' ||
-                          sectionID === '#multidisciplinary-care-team'
-                    ? (marginTop = 140)
-                    : (marginTop = 150) // Down
+                if (targetSection.getBoundingClientRect().top <= 0) {
+                  (marginTop = 130) // Up
+                } else {
+                  if (sectionID === '#hpp-prevalence' || sectionID === '#multidisciplinary-care-team') {
+                    marginTop = 140
+                  } else {
+                    marginTop = 150
+                  }
+                }
               }
             } else {
               // Is desktop
               marginTop = 430
 
               if (window.pageYOffset > 0) {
-                targetSection.getBoundingClientRect().top <= 0
-                  ? (marginTop = 230) // Up
-                  : sectionID === '#hpp-prevalence' ||
-                          sectionID === '#multidisciplinary-care-team'
-                    ? (marginTop = 220)
-                    : (marginTop = 350) // Down
+                if (targetSection.getBoundingClientRect().top <= 0) {
+                  marginTop = 230 // Up
+                } else {
+                  if (sectionID === '#hpp-prevalence' || sectionID === '#multidisciplinary-care-team') {
+                    marginTop = 220
+                  } else {
+                    marginTop = 230
+                  }
+                }
               }
             }
 
