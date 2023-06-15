@@ -545,7 +545,7 @@
         }
 
         .alpd-academy__symptoms-list {
-            margin-bottom: 2rem;
+            margin-bottom: 4rem;
         }
     }
 
@@ -554,6 +554,12 @@
             margin-right: auto;
             margin-left: auto;
             max-width: 831px;
+        }
+    }
+
+    .alpd-academy__deficient-img {
+        @media screen and (min-width: 1024px) {
+            margin-top: -60px;
         }
     }
 
@@ -3017,7 +3023,8 @@
         &--mobile {
             color: $color-blue;
             padding: 3rem 0 0 0;
-            max-width: 22ch;
+            max-width: 21.9375rem;
+            margin: auto auto 1rem;
 
             @media screen and (min-width: 768px) {
                 max-width: 100%;
@@ -3111,6 +3118,7 @@
         max-width: 46.625rem;
         margin-left: auto;
         margin-right: auto;
+        margin-top: 7rem;
 
         position: relative;
 
@@ -3265,8 +3273,8 @@
             margin: 0 0 1rem 0;
             position: absolute;
             z-index: 0;
-            top: 41px;
-            left: -105px;
+            top: -11px;
+            left: -99px;
             color: $color-brown;
         }
     }
@@ -3905,17 +3913,19 @@
 
             &--text {
                 color: $color-red;
-                font-size: 3.625rem;
-                font-weight: 700;
+                font-size: 5.125rem;
+                font-weight: 500;
                 text-align: center;
                 padding: 3.5rem;
-                font-family: 'Oswald', sans-serif;
-                margin: 3rem 0 0 0;
+                font-family: 'Veneer', sans-serif;
+                margin: 4rem 0 0 0;
 
                 background-image: url(/assets/images/hpp-profile/fingerprint.png);
                 background-repeat: no-repeat;
-                background-size: contain;
+                background-size: auto;
                 background-position: center;
+
+                mix-blend-mode: multiply;
             }
 
             &--content {
@@ -4533,15 +4543,18 @@
                 background-repeat: no-repeat;
                 background-size: contain;
                 background-position: top;
+                mix-blend-mode: multiply;
 
-                height: 9.0625rem;
+                height: 11.5rem;
+                padding-left: 15px;
+                padding-right: 15px;
 
                 @media screen and (max-width: 768px) {
                     font-size: 4.5rem;
                 }
 
                 @media screen and (min-width: 1024px) {
-                    font-size: 5.125rem;
+                    font-size: 4rem;
                     align-items: center;
                     padding-bottom: 0;
                 }
@@ -5373,8 +5386,7 @@
 
             &--bg {
                 position: relative;
-                z-index: 1;
-
+                
                 &-image {
                     display: none;
                 }
@@ -5390,6 +5402,7 @@
                 }
 
                 @media screen and (min-width: 1023px) {
+                    z-index: 1;
                     &-image {
                         display: block;
                         position: absolute;
