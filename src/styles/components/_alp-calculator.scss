@@ -1055,4 +1055,35 @@
         }
     } */
 
+
+    &__indicator {
+        max-width: fit-content;
+        margin: 3rem auto 0 2rem;
+        position: relative;
+
+        display: none;
+
+        ::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -8%;
+            transform: translatey(-50%);
+            width: 0;
+            height: 0;
+            border: 16px solid;
+            border-color: transparent transparent transparent #FF4713;
+        }
+
+        p {
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1.5rem;
+            color: $color-white;
+            padding: 2px;
+            margin-left: 10px;
+            text-align: center;
+        }
+    }
+
 }

@@ -28,6 +28,10 @@ import References from "../components/References.astro";
             reference ranges.
         </p>
 
+        <div class="alp-calculator__indicator" id="indicator">
+            <p class="indicator-text" id="indicator-text"></p>
+        </div>
+
         <div class="comparisson-block">
             <div class="alp-calculator__graphic">
                 <p class="graphic-top-text">
@@ -89,7 +93,7 @@ import References from "../components/References.astro";
                             required
                             aria-required="true"
                             onblur="validateFormControl(event)"
-                                                        onchange="validateFormControl(event)"
+                            onchange="validateFormControl(event)"
                         >
                             <option value="" selected>*Age</option>
                             <option value="0-14 days">0 - 14 days</option>
@@ -2796,10 +2800,154 @@ import References from "../components/References.astro";
                                 chDisclaimer2.style.margin = "auto";
                                 activeText3.style.marginLeft = "0";
                             }
+
+                            //Clean the indicator
+                            const indicatorContainer = document.querySelector("#indicator")
+                            const indicator = document.querySelector('#indicator-text')
+
+                            indicatorContainer.style = 'display: none;'
+                            indicator.innerHTML = ''
+                            indicator.style.backgroundColor = 'none'
+
                         },
                     },
                 });
+
+                const getAlpLevel = () => {
+                    const indicatorContainer = document.querySelector("#indicator")
+                    const indicator = document.querySelector('#indicator-text')
+                    const compareButton = document.querySelector('#compare')
+
+                    const alpLevelsRanges  = {
+                        "0-14 days" : {
+                            'Male': {
+                                "High" : 273,
+                                "Low" : 90,
+                            },
+                            'Female': {
+                                "High" : 273,
+                                "Low" : 90,
+                            }
+                        },
+                        "15 days - 1 year" : {
+                            'Male': {
+                                "High" : 518,
+                                "Low" : 134,
+                            },
+                            'Female': {
+                                "High" : 518,
+                                "Low" : 134,
+                            }
+                        },
+                        "1-10 years" : {
+                            'Male': {
+                                "High" : 369,
+                                "Low" : 158,
+                            },
+                            'Female': {
+                                "High" : 369,
+                                "Low" : 158,
+                            }
+                        },
+                        "10 -< 13 years" : {
+                            'Male': {
+                                "High" : 480,
+                                "Low" : 141,
+                            },
+                            'Female': {
+                                "High" : 460,
+                                "Low" : 141,
+                            }
+                        },
+                        "13 -< 15 years" : {
+                            'Male': {
+                                "High" : 517,
+                                "Low" : 127,
+                            },
+                            'Female': {
+                                "High" : 280,
+                                "Low" : 62,
+                            }
+                        },
+                        "15 -< 17 years" : {
+                            'Male': {
+                                "High" : 365,
+                                "Low" : 89,
+                            },
+                            'Female': {
+                                "High" : 128,
+                                "Low" : 54,
+                            }
+                        },
+                        "17 -< 19 years" : {
+                            'Male': {
+                                "High" : 164,
+                                "Low" : 59,
+                            },
+                            'Female': {
+                                "High" : 95,
+                                "Low" : 48,
+                            }
+                        },
+                        "Adult" : {
+                            'Male': {
+                                "High" : 120,
+                                "Low" : 40,
+                            },
+                            'Female': {
+                                "High" : 120,
+                                "Low" : 40,
+                            }
+                        },
+                    }
+
+                    compareButton.addEventListener('click' , () => {
+                        const alpLevelValue = document.querySelector('#alp-value').value
+                        const alpAgeValue = document.querySelector('#age-value').value
+                        const alpGenderValue = document.querySelector('#sex-value').value
+
+                        const ageError = document.querySelector('#errorAge').style.display == 'block' ? true : false
+                        const sexError = document.querySelector('#errorSex').style.display == 'block' ? true : false
+
+                        // Validate if there are errors in the form
+                        if(ageError || sexError) {
+                            return
+                        } else {
+                            indicatorContainer.style = 'display: block;'
+                        
+                            if(alpLevelValue == '' || alpLevelValue == null) {
+                                indicator.innerHTML = `Unknown ALP level. <br/> <span style='color:#617d44'>Low ALP may indicate HPP. <span>`
+                                indicator.style.color = '#1F1511'
+                                indicator.style.backgroundColor = 'transparent'
+                                return
+                            } 
+
+                            const alpLevel = alpLevelsRanges[alpAgeValue][alpGenderValue]
+
+                            if(alpLevelValue > alpLevel.High) {
+                                indicator.innerHTML = `ALP Level of ${alpLevelValue} is <br/> considered High`
+                                indicator.style.backgroundColor = '#fd0000'
+                                indicator.style.color = '#fff'
+                            } else if (alpLevelValue > alpLevel.Low && alpLevelValue <= alpLevel.High) {
+                                indicator.innerHTML = `ALP Level of ${alpLevelValue} is <br/> considered Normal`
+                                indicator.style.backgroundColor = '#bbbdbf'
+                                indicator.style.color = '#fff'
+                            } else if (alpLevelValue <= alpLevel.Low) {
+                                indicator.innerHTML = `ALP Level of ${alpLevelValue} is <br/> considered Low`
+                                indicator.style.backgroundColor = '#617d44'
+                                indicator.style.color = '#fff'
+                            } else {
+                                indicator.innerHTML = `Please enter a valid ALP Level`
+                                indicator.style.color = '#1F1511'
+                            }
+
+                        }
+                    })
+                }
+
+                getAlpLevel()
             });
         });
+
     }
 </script>
