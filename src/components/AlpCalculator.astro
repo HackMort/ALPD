@@ -2925,15 +2925,15 @@ import References from "../components/References.astro";
                             const alpLevel = alpLevelsRanges[alpAgeValue][alpGenderValue]
 
                             if(alpLevelValue > alpLevel.High) {
-                                indicator.innerHTML = `ALP Level of ${alpLevelValue} is considered High`
+                                indicator.innerHTML = `ALP Level of ${alpLevelValue} is <br/> considered High`
                                 indicator.style.backgroundColor = '#fd0000'
                                 indicator.style.color = '#fff'
                             } else if (alpLevelValue > alpLevel.Low && alpLevelValue <= alpLevel.High) {
-                                indicator.innerHTML = `ALP Level of ${alpLevelValue} is considered Normal`
+                                indicator.innerHTML = `ALP Level of ${alpLevelValue} is <br/> considered Normal`
                                 indicator.style.backgroundColor = '#bbbdbf'
                                 indicator.style.color = '#fff'
                             } else if (alpLevelValue <= alpLevel.Low) {
-                                indicator.innerHTML = `ALP Level of ${alpLevelValue} is considered Low`
+                                indicator.innerHTML = `ALP Level of ${alpLevelValue} is <br/> considered Low`
                                 indicator.style.backgroundColor = '#617d44'
                                 indicator.style.color = '#fff'
                             } else {
