@@ -88,46 +88,42 @@ export function setActiveIternalNavItemOnClick () {
           const sectionID = target.getAttribute('href')
           if (sectionID !== '#') {
             const targetSection = document.querySelector(sectionID)
+            const siteHeader = document.querySelector('.site__header')
+            const internalNav = document.querySelector('.internal__nav')
+            const headerQuery = window.matchMedia('(min-width: 1100px)')
+            const navQuery = window.matchMedia('(min-width: 768px)')
+            const firstSectionQuery = window.matchMedia('(min-width: 1321px')
+            const navHeight = navQuery.matches ? 116 : 56
+            const headerHeight = headerQuery.matches ? 88 : 73.07
+            let topNavigationPadding = 0
 
-            let marginTop = 0
-
-            // Is mobile
-            if (window.screen.width < 768) {
-              marginTop = 220
-
-              if (window.pageYOffset > 0) {
-                if (targetSection.getBoundingClientRect().top <= 0) {
-                  (marginTop = 130) // Up
-                } else {
-                  if (sectionID === '#hpp-prevalence' || sectionID === '#multidisciplinary-care-team') {
-                    marginTop = 140
-                  } else {
-                    marginTop = 150
-                  }
-                }
-              }
+            if (!siteHeader.classList.contains('is--sticky')) {
+              topNavigationPadding += headerHeight * 2
             } else {
-              // Is desktop
-              marginTop = 430
+              topNavigationPadding += headerHeight
+            }
 
-              if (window.pageYOffset > 0) {
-                if (targetSection.getBoundingClientRect().top <= 0) {
-                  marginTop = 230 // Up
-                } else {
-                  if (sectionID === '#hpp-prevalence' || sectionID === '#multidisciplinary-care-team') {
-                    marginTop = 220
-                  } else {
-                    marginTop = 230
-                  }
-                }
-              }
+            if (!internalNav.classList.contains('is--sticky')) {
+              topNavigationPadding += navHeight * 2
+            } else {
+              topNavigationPadding += navHeight
             }
 
             // Scroll to section
-            const totalOffset =
+            let totalOffset =
                     targetSection.getBoundingClientRect().top +
                     window.pageYOffset -
-                    marginTop
+                    topNavigationPadding
+
+            if (!firstSectionQuery.matches) {
+              if (totalOffset <= topNavigationPadding) {
+                totalOffset += navHeight
+              }
+            } else {
+              if (totalOffset <= (topNavigationPadding + navHeight)) {
+                totalOffset += navHeight
+              }
+            }
 
             window.scrollTo({
               top: totalOffset,
