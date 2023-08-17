@@ -93,7 +93,9 @@ export function setActiveIternalNavItemOnClick () {
             const headerQuery = window.matchMedia('(min-width: 1100px)')
             const navQuery = window.matchMedia('(min-width: 768px)')
             const firstSectionQuery = window.matchMedia('(min-width: 1321px')
+            const firstSectionMobileQuery = window.matchMedia('(min-width: 768px')
             const navHeight = navQuery.matches ? 116 : 56
+            const navMargin = 24
             const headerHeight = headerQuery.matches ? 88 : 73.07
             let topNavigationPadding = 0
 
@@ -115,13 +117,24 @@ export function setActiveIternalNavItemOnClick () {
                     window.pageYOffset -
                     topNavigationPadding
 
-            if (!firstSectionQuery.matches) {
-              if (totalOffset <= topNavigationPadding) {
-                totalOffset += navHeight
+            if (firstSectionMobileQuery.matches) {
+              if (!firstSectionQuery.matches) {
+                if (totalOffset <= topNavigationPadding) {
+                  totalOffset += navHeight
+                }
+              } else {
+                if (totalOffset <= (topNavigationPadding + navHeight)) {
+                  totalOffset += navHeight
+                }
               }
             } else {
               if (totalOffset <= (topNavigationPadding + navHeight)) {
                 totalOffset += navHeight
+
+                // Check if browser is Chrome or Edge
+                if (window.navigator.userAgent.indexOf('Chrome')) {
+                  totalOffset -= navMargin
+                }
               }
             }
 
