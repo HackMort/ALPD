@@ -412,7 +412,6 @@ import References from "../components/References.astro";
                         if (graphicCounter === 1) {
                             graphicSection.style.display = "flex";
                             graphicSection.style.marginTop = "2rem";
-                            graphicSection.style.marginTop = "1.5rem";
                             compareButton.style.marginBottom = "10px";
                             form.style.maxWidth = "326px";
                             form.style.marginRight = "0";
@@ -1582,7 +1581,7 @@ import References from "../components/References.astro";
                             "url('/assets/images/alp-calculator-bg-mobile.png')";
                         compareButton.style.marginBottom = "47px";
                         graphicSection.style.display = "block";
-                        graphicSection.style.marginTop = "1.5rem";
+                        graphicSection.style.marginTop = "2rem";
                         chDisclaimer.style.marginTop = "-10px";
                         compareButton.addEventListener("click", (e) => {
                             e.preventDefault();
@@ -1602,7 +1601,7 @@ import References from "../components/References.astro";
                                 graphicSection.style.display = "block";
                                 errorSex.style.display = "none";
                                 errorAge.style.display = "none";
-                                graphicSection.style.marginTop = "1.5rem";
+                                graphicSection.style.marginTop = "2rem";
                                 compareButton.style.marginBottom = "32px";
                                 deactiveText1.style.display = "block";
                                 deactiveText2.style.display = "block";
@@ -2914,13 +2913,13 @@ import References from "../components/References.astro";
                             return
                         } else {
                             indicatorContainer.style = 'display: block;'
-                        
+
                             if(alpLevelValue == '' || alpLevelValue == null) {
                                 indicator.innerHTML = `Unknown ALP level. <br/> <span style='color:#617d44'>Low ALP may indicate HPP. <span>`
                                 indicator.style.color = '#1F1511'
                                 indicator.style.backgroundColor = 'transparent'
                                 return
-                            } 
+                            }
 
                             const alpLevel = alpLevelsRanges[alpAgeValue][alpGenderValue]
 
