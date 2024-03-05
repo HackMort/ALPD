@@ -4,12 +4,262 @@ import PinchToZoom from "../Pinch-to-zoom.astro";
 import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
 ---
 
-<div id="case-files-modal-template" data-active-case="1" style="display: none;">
+<div id="case-files-modal-template" data-active-case="5" style="display: none;">
   <div class="case__files_modal" id="case-files-modal">
     <button data-fancybox-close class="case__files_modal_close-button">X</button
     >
     <div class="case__files_modal_wrapper">
       <PatientCaseFilesWrapper>
+        <PatientCaseFile
+          id="5"
+          name="Betty"
+          age={65}
+          gender="F"
+          description="A 65-year-old female with chronic bone pain and no history of fractures has gone undiagnosed since childhood. Does Betty’s file remind you of any of your current patients?"
+          photo="/assets/images/case-files/betty/photo-betty-mobile.png"
+        >
+          <Fragment slot="medical">
+            <ul>
+              <li class="item">Reports chronic pain, fatigue, and a history of depression</li>
+              <li class="item">Age 54: Diagnosed with osteoporosis</li>
+              <li class="item">Taking bone agent for ~11 years with periodic treatment breaks and no change in bone mineral density</li>
+            </ul>
+          </Fragment>
+          <Fragment slot="family">
+            <ul>
+              <li class="item">Father: Osteoporosis</li>
+              <li class="item">Sibling: Osteoporosis with atypical femoral fracture, prescribed bisphosphonates</li>
+            </ul>
+          </Fragment>
+          <Fragment slot="symptoms">
+            <ul>
+              <li class="item">Bone pain</li>
+              <li class="item">Fatigue</li>
+              <li class="item">Abnormal gait</li>
+            </ul>
+          </Fragment>
+          <Fragment slot="medications">
+            <ul>
+              <li class="item">Taking bone agent for ~11 years with periodic treatment breaks</li>
+              <li class="item">Reports of self-medicating daily with NSAIDs</li>
+            </ul>
+          </Fragment>
+          <Fragment slot="results">
+            <h4 class="results__title">CMP test results from:</h4>
+            <h5>Today</h5>
+            <table class="result-table">
+              <thead>
+                <tr>
+                  <th colspan="2">TEST</th>
+                  <th>RESULT</th>
+                  <th>FLAG</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="2">Calcium, mg/dL</td>
+                  <td>8.6</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td colspan="2">Protein, g/dL</td>
+                  <td>7.3</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td colspan="2">Albumin, g/dL</td>
+                  <td>3.8</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td colspan="2">Alkaline phosphatase, IU/L</td>
+                  <td>23</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h5>1 year ago</h5>
+            <table class="result-table">
+              <thead>
+                <tr>
+                  <th colspan="2">TEST</th>
+                  <th>RESULT</th>
+                  <th>FLAG</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="2">Calcium, mg/dL</td>
+                  <td>9.9</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td colspan="2">Protein, g/dL</td>
+                  <td>7.1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td colspan="2">Albumin, g/dL</td>
+                  <td>4.7</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td colspan="2">Alkaline phosphatase, IU/L</td>
+                  <td>24</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <h5>11 years ago</h5>
+            <table class="result-table">
+              <thead>
+                <tr>
+                  <th colspan="2">TEST</th>
+                  <th>RESULT</th>
+                  <th>FLAG</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="2">Calcium, mg/dL</td>
+                  <td>9.2</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td colspan="2">Protein, g/dL</td>
+                  <td>6.9</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td colspan="2">Albumin, g/dL</td>
+                  <td>3.6</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td colspan="2">Alkaline phosphatase, IU/L</td>
+                  <td>26</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <ul>
+              <li class="item">High vitamin B<sub>6</sub> level shown at test 1 year ago and today</li>
+            </ul>
+            <div class="thumbnails_group">
+              <PinchToZoom id="pt-5-image-1" useDefaultButton={false}>
+                <div class="rad__thumbnail">
+                  <picture>
+                    <button
+                      data-panzoom-action="zoomToFull"
+                      data-content-id="pt-5-image-1"
+                      class="button button--pinch-to-zoom"></button>
+                      <source
+                      srcset="/assets/images/case-files/betty/betty-rad-desktop.png"
+                      media="(min-width: 768px)"
+                      />
+                      <img
+                          src="/assets/images/case-files/betty/betty-rad-mobile.png"
+                          alt=""
+                      />
+                  </picture>
+                  <div class="patient">
+                    <p>X-ray of right hip osteoporosis, age 54</p>
+                  </div>
+                </div>
+              </PinchToZoom>
+              <PinchToZoom id="pt-5-image-2" useDefaultButton={false}>
+                <div class="rad__thumbnail">
+                  <picture>
+                    <button
+                      data-panzoom-action="zoomToFull"
+                      data-content-id="pt-5-image-2"
+                      class="button button--pinch-to-zoom"></button>
+                      <source
+                      srcset="/assets/images/case-files/betty/betty-dexa1-desktop.png"
+                      media="(min-width: 768px)"
+                      />
+                      <img
+                          src="/assets/images/case-files/betty/betty-dexa1-mobile.png"
+                          alt=""
+                      />
+                  </picture>
+                  <div class="patient">
+                    <p>DEXA result summary of right hip, age 65</p>
+                  </div>
+                </div>
+              </PinchToZoom>
+              <PinchToZoom id="pt-5-image-3" useDefaultButton={false}>
+                <div class="rad__thumbnail">
+                  <picture>
+                    <button
+                      data-panzoom-action="zoomToFull"
+                      data-content-id="pt-5-image-3"
+                      class="button button--pinch-to-zoom"></button>
+                      <source
+                      srcset="/assets/images/case-files/betty/betty-dexa2-desktop.png"
+                      media="(min-width: 768px)"
+                      />
+                      <img
+                          src="/assets/images/case-files/betty/betty-dexa2-mobile.png"
+                          alt=""
+                      />
+                  </picture>
+                  <div class="patient">
+                    <p>DEXA result summary of right hip, age 54</p>
+                  </div>
+                </div>
+              </PinchToZoom>
+              <PinchToZoom id="pt-5-image-4" useDefaultButton={false}>
+                <div class="rad__thumbnail">
+                  <picture>
+                    <button
+                      data-panzoom-action="zoomToFull"
+                      data-content-id="pt-5-image-4"
+                      class="button button--pinch-to-zoom"></button>
+                      <source
+                      srcset="/assets/images/case-files/betty/betty-dexa3-desktop.png"
+                      media="(min-width: 768px)"
+                      />
+                      <img
+                          src="/assets/images/case-files/betty/betty-dexa3-mobile.png"
+                          alt=""
+                      />
+                  </picture>
+                  <div class="patient">
+                    <p>DEXA result summary of lumbar spine, age 65</p>
+                  </div>
+                </div>
+              </PinchToZoom>
+              <PinchToZoom id="pt-5-image-5" useDefaultButton={false}>
+                <div class="rad__thumbnail">
+                  <picture>
+                    <button
+                      data-panzoom-action="zoomToFull"
+                      data-content-id="pt-5-image-5"
+                      class="button button--pinch-to-zoom"></button>
+                      <source
+                      srcset="/assets/images/case-files/betty/betty-dexa4-desktop.png"
+                      media="(min-width: 768px)"
+                      />
+                      <img
+                          src="/assets/images/case-files/betty/betty-dexa4-mobile.png"
+                          alt=""
+                      />
+                  </picture>
+                  <div class="patient">
+                    <p>DEXA result summary of lumbar spine, age 54</p>
+                  </div>
+                </div>
+              </PinchToZoom>
+            </div>
+          </Fragment>
+          <Fragment slot="notes">
+            <ul>
+              <li class="item">Referred by podiatrist to orthopedist for chronic foot pain</li>
+              <li class="item">No fracture found on imaging</li>
+            </ul>
+          </Fragment>
+        </PatientCaseFile>
         <PatientCaseFile
           id="1"
           name="Nathan"
@@ -811,7 +1061,7 @@ import PatientCaseFilesWrapper from "./PatientCaseFilesWrapper.astro";
 
     resetTabs() {
       const caseFileMobileModal = document.querySelector('#case-files-modal-template')
-      caseFileMobileModal.dataset.activeCase = 1
+      caseFileMobileModal.dataset.activeCase = 5
     }
 
     close() {

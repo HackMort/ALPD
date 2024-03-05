@@ -63,7 +63,7 @@
             height: auto;
             padding: 0;
 
-            background-image: url("/assets/images/case-files/modal/nathan-tab-bg-desktop.png");
+            background-image: url("/assets/images/case-files/modal/betty-tab-bg-desktop.png");
             background-repeat: no-repeat;
             background-position: left center;
             background-size: 100% 100%;
@@ -89,6 +89,10 @@
 
             &[data-active-tab="case-link-to-panel-4"] {
                 background-image: url("/assets/images/case-files/modal/sarah-tab-bg-desktop.png");
+            }
+
+            &[data-active-tab="case-link-to-panel-5"] {
+                background-image: url("/assets/images/case-files/modal/betty-tab-bg-desktop.png");
             }
 
             li {
@@ -734,6 +738,486 @@
     #patient-id-4 {
         .profile__pic {
             top: -40px;
+        }
+    }
+
+    .patient__case {
+        &#patient-id-5 {
+            .grid_header {
+                height: 200px;
+            }
+
+            .profile__pic {
+                left: -10px;
+                top: -35px;
+                width: 195px;
+                height: 275px;
+            }
+
+            .accordion__item {
+                padding-bottom: 8px;
+            }
+
+            .accordion__item_content {
+                margin-top: 5px;
+
+                .item {
+                    line-height: 140%;
+                }
+            }
+
+            [aria-expanded="true"] {
+                .accordion__item_content {
+                    padding-bottom: 16px;
+                }
+            }
+        }
+
+        #acc-medications-5 {
+            .accordion__item_content {
+                .item {
+                    max-width: 25ch;
+
+                    @media screen and (min-width: 400px) {
+                        max-width: unset;
+                    }
+                }
+            }
+        }
+
+        #acc-results-5 {
+            .accordion__item_content {
+                h4 {
+                    margin-bottom: 0;
+                    line-height: 140%;
+                }
+
+                h5 {
+                    margin-bottom: 8px;
+                    margin-top: 8px;
+                    line-height: 140%;
+                }
+
+                table + h5 {
+                    margin-top: 26px;
+                }
+
+                .result-table {
+                    th {
+                        line-height: 150%;
+                    }
+
+                    td {
+                        line-height: 150%;
+
+                        &:first-child {
+                            padding-left: 8px;
+                            padding-right: 0;
+                        }
+
+                        &:nth-child(2) {
+                            line-height: 140%;
+                        }
+                    }
+                }
+
+                .item {
+                    margin-left: 13px;
+                    max-width: 30ch;
+
+                    @media screen and (min-width: 400px) {
+                        max-width: unset;
+                    }
+                }
+
+                .thumbnails_group {
+                    display: grid;
+                    grid-template-areas: "rad rad"
+                                        "dexa1 dexa2"
+                                        "dexa3 dexa4";
+                    justify-content: space-between;
+
+                    @media screen and (min-width: 550px) {
+                        grid-template-areas: "rad dexa1 dexa2"
+                                             "rad dexa3 dexa4";
+                    }
+                }
+
+                #pt-5-image-1,
+                #pt-5-image-2,
+                #pt-5-image-3,
+                #pt-5-image-4,
+                #pt-5-image-5 {
+                    .patient {
+                        p {
+                          font-size: 14px;
+                          line-height: 130%;
+                          margin-bottom: 12px;
+                        }
+                    }
+                }
+
+                #pt-5-image-1 {
+                    width: 140px !important;
+                    padding-right: 0;
+
+                    img {
+                        margin: 0;
+                    }
+                }
+
+                #pt-5-image-2,
+                #pt-5-image-3,
+                #pt-5-image-4,
+                #pt-5-image-5 {
+                    width: 140px !important;
+                    padding-right: 0;
+                    padding-bottom: 0;
+
+                    .patient {
+                        p {
+                            margin-bottom: 4px;
+                        }
+                    }
+
+                    .rad__thumbnail {
+                        picture {
+                            img {
+                                margin: 0;
+                                max-width: 135px;
+                            }
+                        }
+                    }
+                }
+
+                #pt-5-image-2,
+                #pt-5-image-3 {
+                    .rad__thumbnail {
+                        picture {
+                            img {
+                                max-height: 81px;
+                            }
+                        }
+                    }
+                }
+
+                #pt-5-image-4,
+                #pt-5-image-5 {
+                    .rad__thumbnail {
+                        picture {
+                            img {
+                                max-height: 87px;
+                            }
+                        }
+                    }
+                }
+
+                #pt-5-image-2,
+                #pt-5-image-3,
+                #pt-5-image-4,
+                #pt-5-image-5 {
+                    .rad__thumbnail {
+                        picture {
+                            .button {
+                                width: 38.7px;
+                                height: 40.5px;
+                                bottom: 7px;
+                                right: 11px;
+
+                                &::before {
+                                    left: 0;
+                                    top: 0;
+                                    width: 26px;
+                                    height: 26px;
+                                    right: 0;
+                                    bottom: 0;
+                                    margin: auto;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                #pt-5-image-1 {
+                    grid-area: rad;
+                }
+
+                #pt-5-image-2 {
+                    grid-area: dexa1;
+
+                    .rad__thumbnail {
+                        picture {
+                            .button {
+                                bottom: 9px;
+                                right: 14px;
+                            }
+                        }
+                    }
+                }
+
+                #pt-5-image-3 {
+                    grid-area: dexa2;
+                }
+
+                #pt-5-image-4 {
+                    grid-area: dexa3;
+
+                    .rad__thumbnail {
+                        picture {
+                            .button {
+                                bottom: 8px;
+                                right: 17px;
+                            }
+                        }
+                    }
+                }
+
+                #pt-5-image-5 {
+                    grid-area: dexa4;
+
+                    .rad__thumbnail {
+                        picture {
+                            .button {
+                                right: 17px;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    #case-p-panel-5 {
+        height: 1000px;
+
+        .--col-middle {
+            .info_content {
+                height: auto;
+            }
+        }
+    }
+
+    #case-betty-65 {
+        .patient__info_grid_photo {
+            img {
+                top: -40px;
+                width: 291px;
+                height: 300px;
+
+                @media screen and (min-width: 1200px) {
+                    top: -50px;
+                    width: 291px;
+                    height: 387px;
+                }
+            }
+        }
+
+        .item {
+            line-height: 140%;
+            font-size: 18.06px;
+            max-width: 37ch;
+        }
+
+        #tab-medical-betty-65 {
+            .item {
+                max-width: 35ch;
+            }
+        }
+
+        #tab-results-betty-65 {
+            .item {
+                max-width: 100%;
+            }
+        }
+
+        .thumbnails {
+            display: grid;
+            grid-template-areas: "rad dexa1 dexa2"
+                                "rad dexa3 dexa4";
+            justify-content: space-between;
+
+            .patient {
+                p {
+                    line-height: 130%;
+                    max-width: 18ch;
+                }
+            }
+
+            .rad__thumbnail {
+                picture {
+                    img {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+
+        #pt-5-desktop-image-2,
+        #pt-5-desktop-image-3,
+        #pt-5-desktop-image-4,
+        #pt-5-desktop-image-5 {
+            .rad__thumbnail {
+                picture {
+                    .button {
+                        background-color: rgba(14,14,14,0.3);
+                        width: 38.7px;
+                        height: 40.5px;
+                        bottom: 10px;
+                        right: 11px;
+
+                        &::before {
+                            left: 0;
+                            top: 0;
+                            width: 23.5px;
+                            height: 23.7px;
+                            right: 0;
+                            bottom: 0;
+                            margin: auto;
+                        }
+                    }
+                }
+            }
+        }
+
+        #pt-5-desktop-image-4,
+        #pt-5-desktop-image-5 {
+            .rad__thumbnail {
+                picture {
+                    .button {
+                        right: 13px;
+                        bottom: 9px;
+                    }
+                }
+            }
+        }
+
+        #pt-5-desktop-image-1 {
+            grid-area: rad;
+
+            .patient {
+                p {
+                    max-width: 13ch;
+                }
+            }
+        }
+
+        #pt-5-desktop-image-2 {
+            grid-area: dexa1;
+        }
+
+        #pt-5-desktop-image-3 {
+            grid-area: dexa2;
+        }
+
+        #pt-5-desktop-image-4 {
+            grid-area: dexa3;
+        }
+
+        #pt-5-desktop-image-5 {
+            grid-area: dexa4;
+        }
+
+
+    }
+
+}
+
+#fancybox-clone-pt-5-image-1.fancybox--pinch-to-zoom {
+    .pinch-to-zoom.f-panzoom {
+        .rad__thumbnail {
+            .patient {
+                p {
+                    max-width: 20ch;
+                    font-size: 12px;
+                    line-height: 130%;
+                    font-weight: 400;
+                    text-transform: unset;
+                }
+            }
+        }
+    }
+}
+
+#fancybox-clone-pt-5-image-2.fancybox--pinch-to-zoom,
+#fancybox-clone-pt-5-image-3.fancybox--pinch-to-zoom,
+#fancybox-clone-pt-5-image-4.fancybox--pinch-to-zoom,
+#fancybox-clone-pt-5-image-5.fancybox--pinch-to-zoom {
+    .pinch-to-zoom.f-panzoom {
+        .rad__thumbnail {
+            .patient {
+                top: 5px;
+                left: 8%;
+
+                p {
+                    color: $color-black;
+                    font-size: 12px;
+                    line-height: 130%;
+                    font-weight: 400;
+                    text-transform: unset;
+                }
+            }
+        }
+    }
+}
+
+#fancybox-clone-pt-5-image-4.fancybox--pinch-to-zoom,
+#fancybox-clone-pt-5-image-5.fancybox--pinch-to-zoom {
+    .pinch-to-zoom.f-panzoom {
+        .rad__thumbnail {
+            .patient {
+                top: 2px;
+                left: 11%;
+            }
+        }
+    }
+}
+
+#fancybox-clone-pt-5-desktop-image-1.fancybox--pinch-to-zoom {
+    .pinch-to-zoom.f-panzoom {
+        .rad__thumbnail {
+            .patient {
+                p {
+                    max-width: 24ch;
+                    font-size: 14px;
+                    line-height: 150%;
+                    font-weight: 400;
+                    text-transform: unset;
+                }
+            }
+        }
+    }
+}
+
+#fancybox-clone-pt-5-desktop-image-2.fancybox--pinch-to-zoom,
+#fancybox-clone-pt-5-desktop-image-3.fancybox--pinch-to-zoom,
+#fancybox-clone-pt-5-desktop-image-4.fancybox--pinch-to-zoom,
+#fancybox-clone-pt-5-desktop-image-5.fancybox--pinch-to-zoom {
+    .pinch-to-zoom.f-panzoom {
+        .rad__thumbnail {
+            .patient {
+                top: 8px;
+                left: 5%;
+
+                p {
+                    color: $color-black;
+                    font-size: 14px;
+                    line-height: 150%;
+                    font-weight: 400;
+                    text-transform: unset;
+                }
+            }
+        }
+    }
+}
+
+#fancybox-clone-pt-5-desktop-image-4.fancybox--pinch-to-zoom,
+#fancybox-clone-pt-5-desktop-image-5.fancybox--pinch-to-zoom {
+    .pinch-to-zoom.f-panzoom {
+        .rad__thumbnail {
+            .patient {
+                top: 2px;
+            }
         }
     }
 }

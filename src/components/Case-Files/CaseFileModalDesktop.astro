@@ -3,7 +3,7 @@ import PinchToZoom from "../Pinch-to-zoom.astro";
 import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
 ---
 
-<div id="case-files-modal-template-desktop" data-active-tab="1" style="display: none;">
+<div id="case-files-modal-template-desktop" data-active-tab="5" style="display: none;">
     <div class="case__files_modal --desktop" id="case-files-modal--desktop">
         <button data-fancybox-close class="case__files_modal_close-button"
             >×</button
@@ -12,10 +12,18 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
             <ul role="tablist" class="case-files__main-tabs">
                 <li role="presentation">
                     <a
+                        href="#case-p-panel-5"
+                        role="tab"
+                        id="case-link-to-panel-5"
+                        aria-selected="true">Betty, 65</a
+                    >
+                </li>
+                <li role="presentation">
+                    <a
                         href="#case-p-panel-1"
                         role="tab"
                         id="case-link-to-panel-1"
-                        aria-selected="true">Nathan, 57</a
+                        >Nathan, 57</a
                     >
                 </li>
                 <li role="presentation">
@@ -45,11 +53,340 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
             </ul>
             <div class="section-cases">
                 <section
+                    id="case-p-panel-5"
+                    role="tabpanel"
+                    aria-labelledby="case-p-panel-5"
+                    aria-hidden="false"
+                    tabindex="-5"
+                >
+                    <PatientCaseFileDesktop
+                        name="Betty"
+                        age={65}
+                        gender="Female"
+                        description="A 65-year-old female with chronic bone pain and no history of fractures has gone undiagnosed since childhood. Does Betty’s file remind you of any of your current patients?"
+                        photo="/assets/images/case-files/betty/photo-betty-desktop.png"
+                    >
+                        <Fragment slot="medical">
+                            <ul>
+                                <li class="item">
+                                    Reports chronic pain, fatigue, and a history of depression
+                                </li>
+                                <li class="item">
+                                    Age 54: Diagnosed with osteoporosis
+                                </li>
+                                <li class="item">Taking bone agent for ~11 years with periodic treatment breaks and no change in bone mineral density</li>
+                            </ul>
+                        </Fragment>
+                        <Fragment slot="family">
+                            <ul>
+                                <li class="item">Father: Osteoporosis</li>
+                                <li class="item">Sibling: Osteoporosis with atypical femoral fracture, prescribed bisphosphonates</li>
+                            </ul>
+                        </Fragment>
+                        <Fragment slot="symptoms">
+                            <ul>
+                                <li class="item">Bone pain</li>
+                                <li class="item">Fatigue</li>
+                                <li class="item">Abnormal gait</li>
+                            </ul>
+                        </Fragment>
+                        <Fragment slot="medications">
+                            <ul>
+                                <li class="item">Taking bone agent for ~11 years with periodic treatment breaks</li>
+                                <li class="item">Reports of self-medicating daily with NSAIDs</li>
+                            </ul>
+                        </Fragment>
+                        <Fragment slot="results">
+                            <h4 class="results__title">
+                                CMP test results from:
+                            </h4>
+                            <div class="table__tabs">
+                                <ul
+                                    role="tablist"
+                                    class="modal__table_tabs_list"
+                                >
+                                    <li role="presentation">
+                                        <a
+                                            href="#tab-table-1"
+                                            role="tab"
+                                            id="tab-link-table-1"
+                                            class="modal__inner_tab_link"
+                                            aria-selected="true">Today</a
+                                        >
+                                    </li>
+                                    <li role="presentation">
+                                        <a
+                                            href="#tab-table-2"
+                                            role="tab"
+                                            id="tab-link-table-2"
+                                            class="modal__inner_tab_link"
+                                            tabindex="-1">1 year ago</a
+                                        >
+                                    </li>
+                                    <li role="presentation">
+                                        <a
+                                            href="#tab-table-3"
+                                            role="tab"
+                                            id="tab-link-table-3"
+                                            class="modal__inner_tab_link"
+                                            tabindex="-1">11 years ago</a
+                                        >
+                                    </li>
+                                </ul>
+                                <section
+                                    id="tab-table-1"
+                                    role="tabpanel"
+                                    aria-labelledby="tab-table-1"
+                                    aria-hidden="false"
+                                    tabindex="-1"
+                                >
+                                    <div class="acc-table">
+                                        <div class="first-column">
+                                            <h3>TEST</h3>
+                                            <p>Calcium, mg/dL</p>
+                                            <p>Protein, g/dL</p>
+                                            <p>Albumin, g/dL</p>
+                                            <p>Alkaline phosphatase, IU/L</p>
+                                        </div>
+                                        <div class="second-column">
+                                            <h3>RESULT</h3>
+                                            <p>8.6</p>
+                                            <p>7.3</p>
+                                            <p>3.8</p>
+                                            <p>23</p>
+                                        </div>
+                                        <div class="second-column last-child">
+                                            <h3>FLAG</h3>
+                                            <p>&nbsp;</p>
+                                            <p>&nbsp;</p>
+                                            <p>&nbsp;</p>
+                                            <p>&nbsp;</p>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section
+                                    id="tab-table-2"
+                                    role="tabpanel"
+                                    aria-labelledby="tab-table-2"
+                                    aria-hidden="true"
+                                    tabindex="-1"
+                                    hidden
+                                >
+                                    <div class="acc-table">
+                                        <div class="first-column">
+                                            <h3>TEST</h3>
+                                            <p>Calcium, mg/dL</p>
+                                            <p>Protein, g/dL</p>
+                                            <p>Albumin, g/dL</p>
+                                            <p>Alkaline phosphatase, IU/L</p>
+                                        </div>
+                                        <div class="second-column">
+                                            <h3>RESULT</h3>
+                                            <p>9.9</p>
+                                            <p>7.1</p>
+                                            <p>4.7</p>
+                                            <p>24</p>
+                                        </div>
+                                        <div class="second-column last-child">
+                                            <h3>FLAG</h3>
+                                            <p>&nbsp;</p>
+                                            <p>&nbsp;</p>
+                                            <p>&nbsp;</p>
+                                            <p>&nbsp;</p>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section
+                                    id="tab-table-3"
+                                    role="tabpanel"
+                                    aria-labelledby="tab-table-3"
+                                    aria-hidden="true"
+                                    tabindex="-1"
+                                    hidden
+                                >
+                                    <div class="acc-table">
+                                        <div class="first-column">
+                                            <h3>TEST</h3>
+                                            <p>Calcium, mg/dL</p>
+                                            <p>Protein, g/dL</p>
+                                            <p>Albumin, g/dL</p>
+                                            <p>Alkaline phosphatase, IU/L</p>
+                                        </div>
+                                        <div class="second-column">
+                                            <h3>RESULT</h3>
+                                            <p>9.2</p>
+                                            <p>6.9</p>
+                                            <p>3.6</p>
+                                            <p>26</p>
+                                        </div>
+                                        <div class="second-column last-child">
+                                            <h3>FLAG</h3>
+                                            <p>&nbsp;</p>
+                                            <p>&nbsp;</p>
+                                            <p>&nbsp;</p>
+                                            <p>&nbsp;</p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <ul>
+                                <li class="item">
+                                    High vitamin B<sub>6</sub> level shown at test 1 year ago and today
+                                </li>
+                            </ul>
+                            <div class="thumbnails">
+                                <PinchToZoom
+                                    id="pt-5-desktop-image-1"
+                                    useDefaultButton={false}
+                                >
+                                    <div class="rad__thumbnail">
+                                        <picture>
+                                            <button
+                                                data-panzoom-action="zoomToFull"
+                                                data-content-id="pt-5-desktop-image-1"
+                                                class="button button--pinch-to-zoom"
+                                            ></button>
+                                            <source
+                                                srcset="/assets/images/case-files/betty/betty-rad-desktop.png"
+                                                media="(min-width: 768px)"
+                                            />
+                                            <img
+                                                src="/assets/images/case-files/betty/betty-rad-mobile.png"
+                                                alt=""
+                                            />
+                                        </picture>
+                                        <div class="patient">
+                                            <p>
+                                                X-ray of right hip osteoporosis, age 54
+                                            </p>
+                                        </div>
+                                    </div>
+                                </PinchToZoom>
+                                <PinchToZoom
+                                    id="pt-5-desktop-image-2"
+                                    useDefaultButton={false}
+                                >
+                                    <div class="rad__thumbnail">
+                                        <picture>
+                                            <button
+                                                data-panzoom-action="zoomToFull"
+                                                data-content-id="pt-5-desktop-image-2"
+                                                class="button button--pinch-to-zoom"
+                                            ></button>
+                                            <source
+                                                srcset="/assets/images/case-files/betty/betty-dexa1-desktop.png"
+                                                media="(min-width: 768px)"
+                                            />
+                                            <img
+                                                src="/assets/images/case-files/betty/betty-dexa1-mobile.png"
+                                                alt=""
+                                            />
+                                        </picture>
+                                        <div class="patient">
+                                            <p>
+                                                DEXA result summary of right hip, age 65
+                                            </p>
+                                        </div>
+                                    </div>
+                                </PinchToZoom>
+                                <PinchToZoom
+                                    id="pt-5-desktop-image-3"
+                                    useDefaultButton={false}
+                                >
+                                    <div class="rad__thumbnail">
+                                        <picture>
+                                            <button
+                                                data-panzoom-action="zoomToFull"
+                                                data-content-id="pt-5-desktop-image-3"
+                                                class="button button--pinch-to-zoom"
+                                            ></button>
+                                            <source
+                                                srcset="/assets/images/case-files/betty/betty-dexa2-desktop.png"
+                                                media="(min-width: 768px)"
+                                            />
+                                            <img
+                                                src="/assets/images/case-files/betty/betty-dexa2-mobile.png"
+                                                alt=""
+                                            />
+                                        </picture>
+                                        <div class="patient">
+                                            <p>
+                                                DEXA result summary of right hip, age 54
+                                            </p>
+                                        </div>
+                                    </div>
+                                </PinchToZoom>
+                                <PinchToZoom
+                                    id="pt-5-desktop-image-4"
+                                    useDefaultButton={false}
+                                >
+                                    <div class="rad__thumbnail">
+                                        <picture>
+                                            <button
+                                                data-panzoom-action="zoomToFull"
+                                                data-content-id="pt-5-desktop-image-4"
+                                                class="button button--pinch-to-zoom"
+                                            ></button>
+                                            <source
+                                                srcset="/assets/images/case-files/betty/betty-dexa3-desktop.png"
+                                                media="(min-width: 768px)"
+                                            />
+                                            <img
+                                                src="/assets/images/case-files/betty/betty-dexa3-mobile.png"
+                                                alt=""
+                                            />
+                                        </picture>
+                                        <div class="patient">
+                                            <p>
+                                                DEXA result summary of lumbar spine, age 65
+                                            </p>
+                                        </div>
+                                    </div>
+                                </PinchToZoom>
+                                <PinchToZoom
+                                    id="pt-5-desktop-image-5"
+                                    useDefaultButton={false}
+                                >
+                                    <div class="rad__thumbnail">
+                                        <picture>
+                                            <button
+                                                data-panzoom-action="zoomToFull"
+                                                data-content-id="pt-5-desktop-image-5"
+                                                class="button button--pinch-to-zoom"
+                                            ></button>
+                                            <source
+                                                srcset="/assets/images/case-files/betty/betty-dexa4-desktop.png"
+                                                media="(min-width: 768px)"
+                                            />
+                                            <img
+                                                src="/assets/images/case-files/betty/betty-dexa4-mobile.png"
+                                                alt=""
+                                            />
+                                        </picture>
+                                        <div class="patient">
+                                            <p>
+                                                DEXA result summary of lumbar spine, age 54
+                                            </p>
+                                        </div>
+                                    </div>
+                                </PinchToZoom>
+                            </div>
+                        </Fragment>
+                        <Fragment slot="notes">
+                            <ul>
+                                <li class="item">Referred by podiatrist to orthopedist for chronic foot pain</li>
+                                <li class="item">No fracture found on imaging</li>
+                            </ul>
+                        </Fragment>
+                    </PatientCaseFileDesktop>
+                </section><!-- panel Betty -->
+                <section
                     id="case-p-panel-1"
                     role="tabpanel"
                     aria-labelledby="case-p-panel-1"
-                    aria-hidden="false"
+                    aria-hidden="true"
                     tabindex="-1"
+                    hidden
                 >
                     <PatientCaseFileDesktop
                         name="Nathan"
@@ -1106,7 +1443,7 @@ import PatientCaseFileDesktop from "./PatientCaseFileDesktop.astro";
 
             resetTabs() {
                 const caseFileDesktopModal = document.querySelector('#case-files-modal-template-desktop')
-                caseFileDesktopModal.dataset.activeTab = 1
+                caseFileDesktopModal.dataset.activeTab = 5
             }
 
             close() {
