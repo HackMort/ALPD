@@ -743,6 +743,17 @@
 
     .patient__case {
         &#patient-id-5 {
+            .grid_header {
+                height: 200px;
+            }
+
+            .profile__pic {
+                left: -10px;
+                top: -35px;
+                width: 195px;
+                height: 275px;
+            }
+
             .accordion__item {
                 padding-bottom: 8px;
             }
@@ -988,6 +999,20 @@
     }
 
     #case-betty-65 {
+        .patient__info_grid_photo {
+            img {
+                top: -40px;
+                width: 291px;
+                height: 300px;
+
+                @media screen and (min-width: 1200px) {
+                    top: -50px;
+                    width: 291px;
+                    height: 387px;
+                }
+            }
+        }
+
         .item {
             line-height: 140%;
             font-size: 18.06px;
